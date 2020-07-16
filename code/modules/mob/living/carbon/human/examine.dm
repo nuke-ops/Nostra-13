@@ -151,6 +151,12 @@
 
 	var/list/msg = list()
 
+	if(client && client.prefs)
+		if(client.prefs.toggles & VERB_CONSENT)
+			. += "[t_His] player has allowed lewd verbs.\n"
+		else
+			. += "[t_His] player has not allowed lewd verbs.\n"
+
 	var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 	var/list/disabled = list()
 	for(var/X in bodyparts)
@@ -388,9 +394,14 @@
 		. += "<span class='info'><b>Traits:</b> [traitstring]</span>"
 
 	SEND_SIGNAL(src, COMSIG_PARENT_EXAMINE, user, .) //This also handles flavor texts now
+	var/invisible_man = skipface || get_visible_name() == "Unknown" // SKYRAT EDIT -- BEGIN
+	if(!invisible_man)
+		if(client)
+			. += "OOC Notes: <a href='?src=[REF(src)];skyrat_ooc_notes=1'>\[View\]</a>" // SKYRAT EDIT -- END
+	//SKYRAT EDIT - admin lookup on records/extra flavor
+
 
 	. += "*---------*</span>"
-
 /mob/living/proc/status_effect_examines(pronoun_replacement) //You can include this in any mob's examine() to show the examine texts of status effects!
 	var/list/dat = list()
 	if(!pronoun_replacement)
