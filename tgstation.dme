@@ -3494,7 +3494,6 @@
 #include "modular_citadel\code\modules\reagents\objects\clothes.dm"
 #include "modular_citadel\code\modules\reagents\objects\items.dm"
 #include "modular_nostration\code\_onclick\hud\parallax.dm"
-#include "modular_nostration\code\modules\mining\machine_bluespaceminer.dm"
 #include "modular_nostration\code\modules\client\preferences_toggles.dm"
 #include "modular_nostration\code\modules\mining\machine_bluespaceminer.dm"
 #include "modular_nostration\code\modules\mob\living\carbon\human\human.dm"
