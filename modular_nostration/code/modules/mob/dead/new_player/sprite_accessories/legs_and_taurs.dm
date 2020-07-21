@@ -20,7 +20,7 @@
 *******************************************/
 
 /datum/sprite_accessory/taur
-	icon = 'modular_citadel/icons/mob/mam_taur.dmi'
+	icon = 'modular_nostration/icons/mob/mam_taur.dmi'
 	center = TRUE
 	dimension_x = 64
 	color_src = MATRIXED
@@ -84,6 +84,11 @@
 	icon_state = "drider"
 	color_src = MUTCOLORS
 	extra = TRUE
+/datum/sprite_accessory/taur/drider1
+	name = "Drider-alt"
+	icon_state = "drider1"
+	color_src = MUTCOLORS
+	extra = TRUE
 
 /datum/sprite_accessory/taur/eevee
 	name = "Eevee"
@@ -135,10 +140,5 @@
 	name = "Feline"
 	icon_state = "feline"
 	taur_mode = STYLE_PAW_TAURIC
-	color_src = MUTCOLORS
-	extra = TRUE
-/datum/sprite_accessory/taur/drider1
-	name = "Drider-alt"
-	icon_state = "spider_s"
 	color_src = MUTCOLORS
 	extra = TRUE
