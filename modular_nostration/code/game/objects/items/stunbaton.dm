@@ -236,6 +236,7 @@
 	desc = "not actually sharp, this sword is functionally identical to a stunbaton"
 	icon_state = "stunsword"
 	item_state = "sword"
+	block_parry_data = /datum/block_parry_data/captain_saber
 
 /obj/item/melee/baton/stunsword/get_belt_overlay()
 	if(istype(loc, /obj/item/storage/belt/sabre))
