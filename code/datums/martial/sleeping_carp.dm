@@ -37,14 +37,14 @@
 					"<span class='userdanger'>[A] [atk_verb]s you!</span>", null, null, A)
 	to_chat(A, "<span class='danger'>You [atk_verb] [D]!</span>")
 	if(prob(10))
-		crit_damage += (damage*2 + 15)
+		crit_damage += (damage*4 + 10)
 		playsound(get_turf(D), 'sound/weapons/bite.ogg', 50, TRUE, -1)
 		D.visible_message("<span class='warning'>[D] staggers as the blow strikes them with inhuman force!</span>", "<span class='userdanger'>You are struck with incredible precision by [A]!</span>")
 		log_combat(A, D, "critcal strong punched (Sleeping Carp)")//log it here because a critical can swing for 40 force and it's important for the sake of how hard they hit
 	else
 		playsound(get_turf(D), 'sound/weapons/punch1.ogg', 25, TRUE, -1)
 		log_combat(A, D, "strong punched (Sleeping Carp)")//so as to not double up on logging
-	D.apply_damage((damage + 15) + crit_damage, BRUTE, affecting)
+	D.apply_damage((damage + 10) + crit_damage, BRUTE, affecting)
 	return TRUE
 
 ///Crashing Wave Kick: Harm Disarm combo, throws people seven tiles backwards
@@ -68,12 +68,12 @@
 	if((D.mobility_flags & MOBILITY_STAND))
 		D.apply_damage(damage, BRUTE, BODY_ZONE_HEAD)
 		D.DefaultCombatKnockdown(50, override_hardstun = 0.01, override_stamdmg = 0)
-		D.apply_damage(damage + 35, STAMINA, BODY_ZONE_HEAD) //A cit specific change form the tg port to really punish anyone who tries to stand up
+		D.apply_damage(damage + 25, STAMINA, BODY_ZONE_HEAD) //A cit specific change form the tg port to really punish anyone who tries to stand up
 		D.visible_message("<span class='warning'>[A] kicks [D] in the head, sending them face first into the floor!</span>", \
 					"<span class='userdanger'>You are kicked in the head by [A], sending you crashing to the floor!</span>", "<span class='hear'>You hear a sickening sound of flesh hitting flesh!</span>", COMBAT_MESSAGE_RANGE, A)
 	else
-		D.apply_damage(damage*0.5, BRUTE, BODY_ZONE_HEAD)
-		D.apply_damage(damage + 35, STAMINA, BODY_ZONE_HEAD)
+		D.apply_damage(damage*1.3, BRUTE, BODY_ZONE_HEAD)
+		D.apply_damage(damage + 25, STAMINA, BODY_ZONE_HEAD)
 		D.drop_all_held_items()
 		D.visible_message("<span class='warning'>[A] kicks [D] in the head!</span>", \
 					"<span class='userdanger'>You are kicked in the head by [A]!</span>", "<span class='hear'>You hear a sickening sound of flesh hitting flesh!</span>", COMBAT_MESSAGE_RANGE, A)
@@ -89,7 +89,7 @@
 
 /datum/martial_art/the_sleeping_carp/harm_act(mob/living/carbon/human/A, mob/living/carbon/human/D)
 	add_to_streak("H",D)
-	var/damage = (damage_roll(A,D) + 5)
+	var/damage = (damage_roll(A,D) + 3)
 	var/stunthreshold = A.dna.species.punchstunthreshold
 	if(check_streak(A,D))
 		return TRUE
