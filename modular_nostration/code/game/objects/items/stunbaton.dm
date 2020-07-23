@@ -235,6 +235,7 @@
 	name = "stunsword"
 	desc = "not actually sharp, this sword is functionally identical to a stunbaton"
 	icon_state = "stunsword"
+	item_flags = ITEM_CAN_BLOCK|ITEM_CAN_PARRY
 	item_state = "sword"
 	block_parry_data = /datum/block_parry_data/captain_saber
 
