@@ -52,7 +52,7 @@
 	vore_default_mode = DM_DIGEST
 
 /mob/living/simple_animal/hostile/alien
-	vore_flags = FEEDING
+	vore_flags = DEVOURABLE | DIGESTABLE | FEEDING
 	vore_default_mode = DM_DIGEST
 
 /mob/living/simple_animal/hostile/bear
@@ -60,7 +60,7 @@
 	vore_default_mode = DM_DIGEST
 
 /mob/living/simple_animal/hostile/poison/giant_spider
-	vore_flags = FEEDING
+	vore_flags = DEVOURABLE | DIGESTABLE | FEEDING
 	vore_default_mode = DM_DIGEST
 
 /mob/living/simple_animal/hostile/retaliate/poison/snake
@@ -68,11 +68,11 @@
 	vore_default_mode = DM_DIGEST
 
 /mob/living/simple_animal/hostile/gorilla
-	vore_flags = FEEDING
+	vore_flags = DEVOURABLE | DIGESTABLE | FEEDING
 	vore_default_mode = DM_DIGEST
 
 /mob/living/simple_animal/hostile/asteroid/goliath
-	vore_flags = FEEDING
+	vore_flags = DEVOURABLE | DIGESTABLE | FEEDING
 	vore_default_mode = DM_DIGEST
 
 /mob/living/simple_animal/hostile/carp
