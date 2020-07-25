@@ -10,7 +10,7 @@
 	help_verb = /mob/living/carbon/human/proc/CQC_help
  Updated upstream
 	block_chance = 50
-=======
+
 	block_chance = 45
  Stashed changes
 	pugilist = TRUE
@@ -55,7 +55,7 @@
 		D.apply_damage(damage, BRUTE)
  Updated upstream
 		D.DefaultCombatKnockdown(75)
-=======
+
 		D.DefaultCombatKnockdown(100)
  Stashed changes
 		log_combat(A, D, "slammed (CQC)")
@@ -73,7 +73,7 @@
 		D.SetSleeping(150)
  Updated upstream
 		D.apply_damage(damage + 3, BRUTE)
-=======
+
 		D.apply_damage(damage + 5, BRUTE)
  Stashed changes
 		var/atom/throw_target = get_edge_target_turf(D, A.dir)
@@ -86,7 +86,7 @@
 		D.Dizzy(damage)
  Updated upstream
 		D.apply_damage(damage + 10, BRUTE)
-=======
+
 		D.apply_damage(damage + 13, BRUTE)
  Stashed changes
 		log_combat(A, D, "kicked (CQC)")
@@ -109,7 +109,7 @@
 		return FALSE
  Updated upstream
 	var/damage = (damage_roll(A,D) + 8)
-=======
+
 	var/damage = (damage_roll(A,D) + 13)
  Stashed changes
 	if(!D.stat)
@@ -137,7 +137,7 @@
 		D.apply_damage(damage + 40, STAMINA)
  Updated upstream
 		D.apply_damage(damage + 10, BRUTE)
-=======
+
 		D.apply_damage(damage + 12, BRUTE)
  Stashed changes
 	return TRUE
@@ -209,7 +209,7 @@
 			D.Dizzy(damage)
  Updated upstream
 			D.apply_damage(damage*2 + 15, STAMINA)
-=======
+
 			D.apply_damage(damage*2 + 20, STAMINA)
  Stashed changes
 			D.apply_damage(damage*1.3, BRUTE)
@@ -226,7 +226,7 @@
 							"<span class='userdanger'>[A] puts you into a chokehold!</span>")
  Updated upstream
 		D.SetSleeping(190)
-=======
+
 		D.SetSleeping(100)
  Stashed changes
 		restraining = FALSE
