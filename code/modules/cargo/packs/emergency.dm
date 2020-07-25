@@ -285,6 +285,16 @@
 	crate_name = "eva jetpacks crate"
 	crate_type = /obj/structure/closet/crate/secure
 
+/datum/supply_pack/emergency/syndicate
+	name = "NULL_ENTRY"
+	desc = "(*!&@#!#@*$"
+	hidden = TRUE
+	cost = 14000
+	contains = list(/obj/item/weapon/storage/box/syndicate)
+	crate_name = "emergency crate"
+	crate_type = /obj/structure/closet/crate/internals
+	dangerous = TRUE
+
 /datum/supply_pack/emergency/specialops
 	name = "Special Ops Supplies"
 	desc = "(*!&@#NEED SOMETHING TO DEAL WITH THE GREYTIDE, HUH OPERATIVE? WELL, THIS LITTLE ORDER CAN HELP YOU OUT IN A PINCH. CONTAINS A BOX OF FIVE EMP GRENADES, THREE SMOKEBOMBS, AN INCENDIARY GRENADE, AND A \"SLEEPY PEN\" FULL OF NICE TOXINS!#@*$"
