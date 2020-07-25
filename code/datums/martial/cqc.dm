@@ -8,11 +8,11 @@
 	name = "CQC"
 	id = MARTIALART_CQC
 	help_verb = /mob/living/carbon/human/proc/CQC_help
-<<<<<<< Updated upstream
+ Updated upstream
 	block_chance = 50
 =======
 	block_chance = 45
->>>>>>> Stashed changes
+ Stashed changes
 	pugilist = TRUE
 	var/old_grab_state = null
 
@@ -53,11 +53,11 @@
 						  	"<span class='userdanger'>[A] slams you into the ground!</span>")
 		playsound(get_turf(A), 'sound/weapons/slam.ogg', 50, 1, -1)
 		D.apply_damage(damage, BRUTE)
-<<<<<<< Updated upstream
+ Updated upstream
 		D.DefaultCombatKnockdown(75)
 =======
 		D.DefaultCombatKnockdown(100)
->>>>>>> Stashed changes
+ Stashed changes
 		log_combat(A, D, "slammed (CQC)")
 	return TRUE
 
@@ -71,11 +71,11 @@
 					  		"<span class='userdanger'>[A] kicks your head, knocking you out!</span>")
 		playsound(get_turf(A), 'sound/weapons/genhit1.ogg', 50, 1, -1)
 		D.SetSleeping(150)
-<<<<<<< Updated upstream
+ Updated upstream
 		D.apply_damage(damage + 3, BRUTE)
 =======
 		D.apply_damage(damage + 5, BRUTE)
->>>>>>> Stashed changes
+ Stashed changes
 		var/atom/throw_target = get_edge_target_turf(D, A.dir)
 		D.throw_at(throw_target, 1, 14, A)
 		D.adjustOrganLoss(ORGAN_SLOT_BRAIN, damage + 8, 110)
@@ -84,11 +84,11 @@
 							"<span class='userdanger'>[A] kicks you!</span>")
 		playsound(get_turf(A), 'sound/weapons/cqchit1.ogg', 50, 1, -1)
 		D.Dizzy(damage)
-<<<<<<< Updated upstream
+ Updated upstream
 		D.apply_damage(damage + 10, BRUTE)
 =======
 		D.apply_damage(damage + 13, BRUTE)
->>>>>>> Stashed changes
+ Stashed changes
 		log_combat(A, D, "kicked (CQC)")
 	return TRUE
 
@@ -107,11 +107,11 @@
 		return
 	if(!can_use(A))
 		return FALSE
-<<<<<<< Updated upstream
+ Updated upstream
 	var/damage = (damage_roll(A,D) + 8)
 =======
 	var/damage = (damage_roll(A,D) + 13)
->>>>>>> Stashed changes
+ Stashed changes
 	if(!D.stat)
 		log_combat(A, D, "restrained (CQC)")
 		D.visible_message("<span class='warning'>[A] locks [D] into a restraining position!</span>", \
@@ -135,11 +135,11 @@
 		if(I && D.temporarilyRemoveItemFromInventory(I))
 			A.put_in_hands(I)
 		D.apply_damage(damage + 40, STAMINA)
-<<<<<<< Updated upstream
+ Updated upstream
 		D.apply_damage(damage + 10, BRUTE)
 =======
 		D.apply_damage(damage + 12, BRUTE)
->>>>>>> Stashed changes
+ Stashed changes
 	return TRUE
 
 /datum/martial_art/cqc/grab_act(mob/living/carbon/human/A, mob/living/carbon/human/D)
@@ -207,11 +207,11 @@
 			D.drop_all_held_items()
 			D.Jitter(2)
 			D.Dizzy(damage)
-<<<<<<< Updated upstream
+ Updated upstream
 			D.apply_damage(damage*2 + 15, STAMINA)
 =======
 			D.apply_damage(damage*2 + 20, STAMINA)
->>>>>>> Stashed changes
+ Stashed changes
 			D.apply_damage(damage*1.3, BRUTE)
 		else
 			D.visible_message("<span class='danger'>[A] strikes [D] in the chest!</span>", \
@@ -224,11 +224,11 @@
 		log_combat(A, D, "knocked out (Chokehold)(CQC)")
 		D.visible_message("<span class='danger'>[A] puts [D] into a chokehold!</span>", \
 							"<span class='userdanger'>[A] puts you into a chokehold!</span>")
-<<<<<<< Updated upstream
+ Updated upstream
 		D.SetSleeping(190)
 =======
 		D.SetSleeping(100)
->>>>>>> Stashed changes
+ Stashed changes
 		restraining = FALSE
 		if(A.grab_state < GRAB_NECK)
 			A.setGrabState(GRAB_NECK)
