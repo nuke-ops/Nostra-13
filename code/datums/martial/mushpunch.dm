@@ -4,9 +4,9 @@
 
 /datum/martial_art/mushpunch/harm_act(mob/living/carbon/human/A, mob/living/carbon/human/D)
 	var/atk_verb
-	var/damage = (damage_roll(A,D)*3)
+	var/damage = (damage_roll(A,D)*4)
 	to_chat(A, "<span class='spider'>You begin to wind up an attack...</span>")
-	if(!do_after(A, 25, target = D))
+	if(!do_after(A, 10, target = D))
 		to_chat(A, "<span class='spider'><b>Your attack was interrupted!</b></span>")
 		return TRUE //martial art code was a mistake
 	A.do_attack_animation(D, ATTACK_EFFECT_PUNCH)
@@ -16,8 +16,8 @@
 	D.apply_damage(damage, BRUTE) //KAPOW
 	playsound(D, 'sound/effects/meteorimpact.ogg', 25, 1, -1)
 	var/throwtarget = get_edge_target_turf(A, get_dir(A, get_step_away(D, A)))
-	D.throw_at(throwtarget, 4, 2, A)//So stuff gets tossed around at the same time.
-	D.DefaultCombatKnockdown(20)
+	D.throw_at(throwtarget, 6, 2, A)//So stuff gets tossed around at the same time.
+	D.DefaultCombatKnockdown(35)
 	if(atk_verb)
 		log_combat(A, D, "[atk_verb] (Mushroom Punch)")
 	return TRUE

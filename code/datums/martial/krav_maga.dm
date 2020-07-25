@@ -117,7 +117,7 @@
 	playsound(get_turf(A), 'sound/effects/hit_punch.ogg', 50, 1, -1)
 	if(D.losebreath <= 6)
 		D.losebreath = clamp(D.losebreath + 5, 0, 10)
-	D.adjustOxyLoss(damage + 5)
+	D.adjustOxyLoss(damage + 6)
 	log_combat(A, D, "quickchoked")
 	return TRUE
 
@@ -127,7 +127,7 @@
 				  	"<span class='userdanger'>[A] karate chops your neck, rendering you unable to speak!</span>")
 	playsound(get_turf(A), 'sound/effects/hit_punch.ogg', 50, 1, -1)
 	D.apply_damage(damage, BRUTE)
-	if(D.silent <= 10)
+	if(D.silent <= 15)
 		D.silent = clamp(D.silent + 10, 0, 10)
 	log_combat(A, D, "neck chopped")
 	return TRUE
@@ -147,7 +147,7 @@
 	var/picked_hit_type = pick("punches", "kicks")
 	var/bonus_damage = damage_roll(A,D)
 	if(!CHECK_MOBILITY(D, MOBILITY_STAND))
-		bonus_damage += 10
+		bonus_damage += 12
 		picked_hit_type = "stomps on"
 	D.apply_damage(bonus_damage, BRUTE, affecting, armor_block)
 	if(picked_hit_type == "kicks" || picked_hit_type == "stomps on")
@@ -174,7 +174,11 @@
 		to_chat(A, "<span class='danger'>You jab [D]!</span>")
 		A.do_attack_animation(D, ATTACK_EFFECT_PUNCH)
 		playsound(D, 'sound/effects/hit_punch.ogg', 50, TRUE, -1)
+<<<<<<< Updated upstream
 		D.apply_damage(damage*2 + 11, STAMINA, affecting, armor_block)
+=======
+		D.apply_damage(damage*3 + 15, STAMINA, affecting, armor_block)
+>>>>>>> Stashed changes
 		log_combat(A, D, "punched nonlethally")
 	else
 		D.visible_message("<span class='danger'>[A] reprimands [D]!</span>", \
@@ -182,7 +186,11 @@
 		to_chat(A, "<span class='danger'>You stomp [D]!</span>")
 		A.do_attack_animation(D, ATTACK_EFFECT_KICK)
 		playsound(D, 'sound/effects/hit_punch.ogg', 50, TRUE, -1)
+<<<<<<< Updated upstream
 		D.apply_damage(damage*2 + 11, STAMINA, affecting, armor_block)
+=======
+		D.apply_damage(damage*3 + 20, STAMINA, affecting, armor_block)
+>>>>>>> Stashed changes
 		log_combat(A, D, "stomped nonlethally")
 	if(damage >= stunthreshold)
 		D.visible_message("<span class='warning'>[D] sputters and recoils in pain!</span>", "<span class='userdanger'>You recoil in pain as you are jabbed in a nerve!</span>")
