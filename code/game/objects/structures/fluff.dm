@@ -193,18 +193,6 @@
 	density = TRUE
 	deconstructible = FALSE
 
-/obj/structure/fluff/railing
-	name = "railing"
-	desc = "Basic railing meant to protect idiots like you from falling."
-	icon = 'icons/obj/fluff.dmi'
-	icon_state = "railing"
-	density = TRUE
-	anchored = TRUE
-	deconstructible = FALSE
-
-/obj/structure/fluff/railing/corner
-	icon_state = "railing_corner"
-	density = FALSE
 
 /obj/structure/fluff/beach_towel
 	name = "beach towel"
