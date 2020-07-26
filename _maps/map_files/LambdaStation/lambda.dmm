@@ -21548,7 +21548,6 @@
 /obj/machinery/status_display/ai{
 	pixel_y = 32
 	},
-/obj/item/card/id/captains_spare,
 /turf/open/floor/wood,
 /area/crew_quarters/heads/captain/private)
 "aNh" = (

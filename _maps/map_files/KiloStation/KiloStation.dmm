@@ -12602,7 +12602,6 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/card/id/captains_spare,
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/captain)
 "ave" = (
@@ -80896,9 +80895,6 @@
 /obj/item/folder{
 	pixel_x = 4;
 	pixel_y = 4
-	},
-/obj/item/storage/pill_bottle/dice{
-	pixel_x = -4
 	},
 /obj/item/pen/red{
 	pixel_x = 4;
