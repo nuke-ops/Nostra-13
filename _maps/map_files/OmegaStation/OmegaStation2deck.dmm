@@ -949,9 +949,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "co" = (
-/obj/item/twohanded/required/kirbyplants{
-	icon_state = "plant-22"
-	},
+/obj/item/kirbyplants,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "cp" = (
@@ -2322,9 +2320,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
-/obj/item/twohanded/required/kirbyplants{
-	icon_state = "plant-04"
-	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
 "fT" = (
@@ -3575,7 +3570,6 @@
 /area/science/robotics/lab)
 "jx" = (
 /obj/structure/table,
-/obj/item/storage/pill_bottle/dice,
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = -24
@@ -5554,9 +5548,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
-/obj/item/twohanded/required/kirbyplants{
-	icon_state = "plant-04"
-	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
 "uz" = (
@@ -6002,9 +5993,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
-/obj/item/twohanded/required/kirbyplants{
-	icon_state = "plant-04"
-	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
 "xu" = (
@@ -6031,9 +6019,6 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
-	},
-/obj/item/twohanded/required/kirbyplants{
-	icon_state = "plant-04"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
@@ -8358,9 +8343,6 @@
 /turf/open/openspace,
 /area/science/robotics/lab)
 "Oi" = (
-/obj/item/twohanded/required/kirbyplants{
-	icon_state = "plant-21"
-	},
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
@@ -8406,9 +8388,6 @@
 /turf/open/floor/hull,
 /area/asteroid/nearstation)
 "OH" = (
-/obj/item/twohanded/required/kirbyplants{
-	icon_state = "plant-21"
-	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
