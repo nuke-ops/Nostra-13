@@ -4653,7 +4653,7 @@
 /area/security/brig)
 "aih" = (
 /obj/docking_port/stationary{
-	area_type = /area/shuttle/cargo/CargoElevator;
+	area_type = /area/shuttle/cargo/elevator;
 	dheight = 0;
 	dir = 4;
 	dwidth = 2;
