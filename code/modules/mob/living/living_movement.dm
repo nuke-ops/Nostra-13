@@ -70,8 +70,6 @@
 			return
 	remove_movespeed_modifier(/datum/movespeed_modifier/bulky_drag)
 
-/mob/living/canZMove(dir, turf/target)
-	return can_zTravel(target, dir) && (movement_type & FLYING)
 
 /mob/living/Move(atom/newloc, direct)
 	if (buckled && buckled.loc != newloc) //not updating position
@@ -122,12 +120,10 @@
 		update_mobility() //if the mob was asleep inside a container and then got forceMoved out we need to make them fall.
 
 /mob/living/proc/update_z(new_z) // 1+ to register, null to unregister
-	if(isnull(new_z) && audiovisual_redirect)
-		return
 	if (registered_z != new_z)
 		if (registered_z)
 			SSmobs.clients_by_zlevel[registered_z] -= src
-		if (client || audiovisual_redirect)
+		if (client)
 			if (new_z)
 				SSmobs.clients_by_zlevel[new_z] += src
 				for (var/I in length(SSidlenpcpool.idle_mobs_by_zlevel[new_z]) to 1 step -1) //Backwards loop because we're removing (guarantees optimal rather than worst-case performance), it's fine to use .len here but doesn't compile on 511
@@ -149,3 +145,6 @@
 	if(!CHECK_MOBILITY(src, MOBILITY_MOVE))
 		return FALSE
 	return ..()
+//shades
+/mob/living/canZMove(dir, turf/target)
+	return can_zTravel(target, dir) && (movement_type & FLYING | FLOATING)
