@@ -42127,7 +42127,7 @@
 	height = 3;
 	id = "Mining_Second_Deck";
 	name = "Mining Second Deck";
-	roundstart_template = /datum/map_template/shuttle/cargo/mining_elevator;
+	roundstart_template = /datum/map_template/shuttle/cargo/elevator;
 	width = 3
 	},
 /turf/open/floor/plating,
