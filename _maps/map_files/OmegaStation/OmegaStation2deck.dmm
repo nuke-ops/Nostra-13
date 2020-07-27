@@ -8595,7 +8595,7 @@
 /area/maintenance/bar)
 "Qa" = (
 /obj/docking_port/stationary{
-	area_type = /area/shuttle/cargo/elevator;
+	area_type = /area/shuttle/cargo/CargoElevator
 	dheight = 0;
 	dir = 4;
 	dwidth = 2;
