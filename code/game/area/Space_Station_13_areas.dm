@@ -1594,20 +1594,215 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambientsounds = SPACE
 	blob_allowed = FALSE //While part of the station, what good will it do you?
 
-/area/shuttle/cargo/CargoElevator
-	name = "cargo elevator"
-	has_gravity = FALSE
-/area/shuttle/cargo/MiningElevator
-	name = "mining elevator"
-	has_gravity = FALSE
-
-/area/oldomega
+/area/quartermaster/miningdock/airless/no_grav
+	name = "Mining Dock"
+	icon_state = "mining"
+	dynamic_lighting = DYNAMIC_LIGHTING_IFSTARLIGHT
 	power_light = FALSE
 	power_equip = FALSE
 	power_environ = FALSE
-	blob_allowed = FALSE
+	valid_territory = FALSE
+	outdoors = TRUE
+	ambientsounds = SPACE
+	blob_allowed = FALSE //While part of the station, what good will it do you?
 
-/area/oldomega/FirstDeck
-	name = "Old station first deck"
-/area/oldomega/SecondDeck
-	name = "Old station second deck"
+/area/janitor/aux
+	name = "Auxiliary Custodial Closet"
+	icon_state = "janitor"
+	flags_1 = NONE
+
+/area/hydroponics/lobby
+	name = "Hydroponics Lobby"
+	icon_state = "hydro"
+
+//Storage
+
+/area/storage/emergency/generic
+	name = "Emergency Storage"
+	icon_state = "emergencystorage"
+
+//Construction
+
+/area/construction
+	name = "Construction Area"
+	icon_state = "yellow"
+	ambientsounds = ENGINEERING
+
+/area/construction/secondary
+	name = "Secondary Construction Area"
+	icon_state = "yellow"
+
+/area/construction/minisat_exterior
+	name = "Minisat Exterior"
+	icon_state = "yellow"
+
+/area/construction/mining/aux_base
+	name = "Auxiliary Base Construction"
+	icon_state = "yellow"
+
+/area/construction/mining/aux_base/closet
+	name = "Auxiliary Closet Construction"
+	icon_state = "yellow"
+
+/area/construction/supplyshuttle
+	name = "Supply Shuttle"
+	icon_state = "yellow"
+
+/area/construction/quarters
+	name = "Engineers' Quarters"
+	icon_state = "yellow"
+
+/area/construction/qmaint
+	name = "Maintenance"
+	icon_state = "yellow"
+
+/area/construction/hallway
+	name = "Hallway"
+	icon_state = "yellow"
+
+/area/construction/solars
+	name = "Solar Panels"
+	icon_state = "yellow"
+
+/area/construction/solarscontrol
+	name = "Solar Panel Control"
+	icon_state = "yellow"
+
+/area/construction/storage
+	name = "Construction Site Storage"
+	icon_state = "yellow"
+
+/area/construction/storage/wing
+	name = "Storage Wing"
+	icon_state = "storage_wing"
+
+//Routers
+
+/area/router
+	name = "Router"
+	icon_state = "yellow"
+	ambientsounds = ENGINEERING
+
+/area/router/service
+	name = "Service Router"
+	icon_state = "green"
+
+/area/router/public
+	name = "Public Router"
+	icon_state = "yellow"
+
+/area/router/sec
+	name = "Security Router"
+	icon_state = "blue"
+
+/area/router/medsci
+	name = "MedSci Router"
+	icon_state = "yellow"
+
+/area/router/eva
+	name = "EVA Router"
+	icon_state = "yellow"
+
+/area/router/air
+	name = "Airbridge Router"
+	icon_state = "red"
+
+/area/router/eng
+	name = "Engineering Router"
+	icon_state = "yellow"
+
+/area/router/aux
+	name = "Routing System"
+	icon_state = "yellow"
+	requires_power = FALSE
+	has_gravity = STANDARD_GRAVITY
+	always_unpowered = TRUE
+	dynamic_lighting = DYNAMIC_LIGHTING_IFSTARLIGHT
+	power_light = FALSE
+	power_equip = FALSE
+	power_environ = FALSE
+	valid_territory = FALSE
+	outdoors = TRUE
+	ambientsounds = SPACE
+	blob_allowed = FALSE //While part of the station, what good will it do you?
+
+/area/shuttle/cargo/CargoElevator
+	name = "cargo elevator"
+	has_gravity = FALSE
+
+/area/oldomega/HigherHall
+	requires_power = FALSE
+	power_light = FALSE
+	power_equip = FALSE
+	power_environ = FALSE
+	name = "Old station Higher Hall"
+
+/area/oldomega/LowerHall
+	requires_power = FALSE
+	power_light = FALSE
+	power_equip = FALSE
+	power_environ = FALSE
+	name = "Old station Lower Hall"
+
+/area/oldomega/OldAtmos
+	requires_power = FALSE
+	power_light = FALSE
+	power_equip = FALSE
+	power_environ = FALSE
+	name = "Old station Atmospherics"
+
+/area/oldomega/OldMedbay
+	requires_power = FALSE
+	power_light = FALSE
+	power_equip = FALSE
+	power_environ = FALSE
+	name = "Old station Med Bay"
+
+/area/oldomega/LowerMaint
+	requires_power = FALSE
+	power_light = FALSE
+	power_equip = FALSE
+	power_environ = FALSE
+	name = "Old station Lower Maintenace"
+
+/area/oldomega/OldSolars
+	requires_power = FALSE
+	power_light = FALSE
+	power_equip = FALSE
+	power_environ = FALSE
+	name = "Old station Solars"
+
+/area/oldomega/HigherMaint
+	requires_power = FALSE
+	power_light = FALSE
+	power_equip = FALSE
+	power_environ = FALSE
+	name = "Old station Higher Maintenace"
+
+/area/oldomega/TransitCenter
+	requires_power = FALSE
+	power_light = FALSE
+	power_equip = FALSE
+	power_environ = FALSE
+	name = "Old station Transit Center"
+
+/area/oldomega/OldStorage
+	requires_power = FALSE
+	power_light = FALSE
+	power_equip = FALSE
+	power_environ = FALSE
+	name = "Old station Storage"
+
+/area/oldomega/OldOffice
+	requires_power = FALSE
+	power_light = FALSE
+	power_equip = FALSE
+	power_environ = FALSE
+	name = "Old station Office"
+
+/area/oldomega/OldEngi
+	requires_power = FALSE
+	power_light = FALSE
+	power_equip = FALSE
+	power_environ = FALSE
+	name = "Old station Engineering"
