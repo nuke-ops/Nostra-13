@@ -6,7 +6,6 @@
 // To be removed on step_ conversion
 // All this work to prevent a second bump
 /atom/movable/Move(atom/newloc, direct=0)
-	set waitfor = FALSE			//n o
 	. = FALSE
 	if(!newloc || newloc == loc)
 		return
@@ -53,7 +52,6 @@
 ////////////////////////////////////////
 
 /atom/movable/Move(atom/newloc, direct)
-	set waitfor = FALSE			//n o
 	var/atom/movable/pullee = pulling
 	var/turf/T = loc
 	if(!moving_from_pull)
