@@ -11,7 +11,7 @@
 		#include "map_files\OmegaStation\OmegaStation_nostration.dmm"
 		#include "map_files\PubbyStation\PubbyStation_nostration.dmm"
 		#include "map_files\BoxStation\BoxStation_nostration.dmm"
-		#include "map_files\LambdaStation\lambda_nostration.dmm"
+		#include "map_files\LambdaStation\lambda.dmm"
 
 		#ifdef TRAVISBUILDING
 			#include "templates.dm"
