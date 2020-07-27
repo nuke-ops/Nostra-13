@@ -145,6 +145,3 @@
 	if(!CHECK_MOBILITY(src, MOBILITY_MOVE))
 		return FALSE
 	return ..()
-//shades
-/mob/living/canZMove(dir, turf/target)
-	return can_zTravel(target, dir) && (movement_type & FLYING | FLOATING)
