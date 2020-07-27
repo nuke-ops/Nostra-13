@@ -3508,6 +3508,7 @@
 #include "modular_citadel\code\modules\reagents\objects\clothes.dm"
 #include "modular_citadel\code\modules\reagents\objects\items.dm"
 #include "modular_nostration\code\_onclick\hud\parallax.dm"
+#include "modular_nostration\code\game\area\Space_Station_13_areas.dm"
 #include "modular_nostration\code\game\objects\items\stunbaton.dm"
 #include "modular_nostration\code\game\objects\items\weaponry.dm"
 #include "modular_nostration\code\game\objects\items\storage\backpack.dm"

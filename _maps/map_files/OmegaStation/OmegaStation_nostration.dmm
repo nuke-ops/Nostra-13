@@ -7763,11 +7763,6 @@
 	},
 /turf/open/floor/plating,
 /area/quartermaster/storage)
-"amF" = (
-/obj/structure/lattice,
-/obj/structure/lattice/catwalk,
-/turf/open/space/basic,
-/area/space)
 "amG" = (
 /obj/structure/table,
 /obj/item/clothing/mask/gas,
@@ -81410,7 +81405,7 @@ aaa
 aaa
 aaa
 aaa
-aff
+sdX
 aac
 aad
 aad
@@ -81667,7 +81662,7 @@ aaa
 aaa
 aaa
 aaa
-aff
+sdX
 aac
 aad
 aad
@@ -99670,7 +99665,7 @@ aaa
 aaa
 aaa
 aaa
-amF
+amH
 aaa
 sdX
 ant
@@ -101726,7 +101721,7 @@ aaa
 aaa
 aaa
 aaa
-amF
+amH
 aaa
 aaa
 aaa
@@ -101736,7 +101731,7 @@ aaa
 aaa
 aaa
 aaa
-amF
+amH
 aad
 aad
 aad
