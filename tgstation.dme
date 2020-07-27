@@ -3499,6 +3499,8 @@
 #include "modular_nostration\code\game\objects\items\stunbaton.dm"
 #include "modular_nostration\code\game\objects\items\weaponry.dm"
 #include "modular_nostration\code\game\objects\items\storage\backpack.dm"
+#include "modular_nostration\code\game\objects\items\storage\uplink_kits.dm"
+#include "modular_nostration\code\modules\cargo\packs\emergency.dm"
 #include "modular_nostration\code\game\objects\structures\railings.dm"
 #include "modular_nostration\code\game\turfs\openspace\openspace.dm"
 #include "modular_nostration\code\game\turfs\simulated\hull.dm"
