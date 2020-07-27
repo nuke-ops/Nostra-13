@@ -29460,7 +29460,6 @@
 	pixel_x = -30;
 	pixel_y = 1
 	},
-/obj/item/card/id/captains_spare,
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/captain/private)
 "bfz" = (
@@ -62222,6 +62221,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
+/obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/heads/hor)
 "ctf" = (
@@ -64182,22 +64182,10 @@
 	},
 /area/crew_quarters/heads/hor)
 "cwQ" = (
-/obj/item/paper_bin{
-	pixel_y = 7
+/obj/structure/closet/secure_closet/RD,
+/obj/machinery/keycard_auth{
+	pixel_y = -24
 	},
-/obj/structure/table,
-/obj/machinery/newscaster{
-	pixel_y = -30
-	},
-/obj/item/stamp/rd{
-	pixel_x = 3;
-	pixel_y = -2
-	},
-/obj/item/folder/white{
-	pixel_x = 9;
-	pixel_y = -1
-	},
-/obj/item/pen,
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
@@ -64224,10 +64212,7 @@
 	},
 /area/crew_quarters/heads/hor)
 "cwS" = (
-/obj/structure/closet/secure_closet/RD,
-/obj/machinery/keycard_auth{
-	pixel_y = -24
-	},
+/obj/machinery/suit_storage_unit/rd,
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
@@ -64240,19 +64225,34 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = -32
 	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -29
+	},
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
 /area/crew_quarters/heads/hor)
 "cwU" = (
-/obj/structure/filingcabinet/chestdrawer,
+/obj/item/paper_bin{
+	pixel_y = 7
+	},
+/obj/structure/table,
+/obj/machinery/newscaster{
+	pixel_y = -30
+	},
+/obj/item/stamp/rd{
+	pixel_x = 3;
+	pixel_y = -2
+	},
+/obj/item/folder/white{
+	pixel_x = 9;
+	pixel_y = -1
+	},
+/obj/item/pen,
 /obj/machinery/airalarm{
 	dir = 8;
 	pixel_x = 24
-	},
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -29
 	},
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
@@ -74423,7 +74423,6 @@
 	c_tag = "Toxins - Launch Area";
 	network = list("ss13","rd")
 	},
-/obj/machinery/suit_storage_unit/rd,
 /obj/effect/turf_decal/bot{
 	dir = 1
 	},

@@ -8607,7 +8607,6 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
-/obj/item/storage/pill_bottle/dice,
 /obj/item/toy/cards/deck,
 /turf/open/floor/plasteel,
 /area/crew_quarters/bar)
@@ -16804,7 +16803,6 @@
 /area/bridge)
 "aKw" = (
 /obj/structure/table,
-/obj/item/storage/pill_bottle/dice,
 /obj/item/toy/cards/deck,
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -19429,7 +19427,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/airless,
-/area/crew_quarters/fitness/cogpool)
+/area/space/nearstation)
 "aPS" = (
 /obj/machinery/holopad,
 /turf/open/floor/plasteel/white,
@@ -31910,7 +31908,6 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/obj/item/storage/pill_bottle/dice,
 /obj/item/toy/cards/deck,
 /turf/open/floor/plasteel/white/corner{
 	dir = 1
@@ -43277,7 +43274,6 @@
 "bOR" = (
 /obj/structure/table/wood,
 /obj/item/pinpointer/nuke,
-/obj/item/card/id/captains_spare,
 /obj/item/hand_tele,
 /obj/item/disk/nuclear,
 /obj/structure/cable{
