@@ -106,7 +106,7 @@
 					  	"<span class='userdanger'>[A] leg sweeps you!</span>")
 	playsound(get_turf(A), 'sound/effects/hit_kick.ogg', 50, 1, -1)
 	D.apply_damage(damage, STAMINA, affecting, armor_block)
-	D.DefaultCombatKnockdown(80, override_hardstun = 1, override_stamdmg = 0)
+	D.DefaultCombatKnockdown(50, override_hardstun = 1, override_stamdmg = 0)
 	log_combat(A, D, "leg sweeped")
 	return TRUE
 
@@ -115,7 +115,7 @@
 	D.visible_message("<span class='warning'>[A] pounds [D] on the chest!</span>", \
 				  	"<span class='userdanger'>[A] slams your chest! You can't breathe!</span>")
 	playsound(get_turf(A), 'sound/effects/hit_punch.ogg', 50, 1, -1)
-	if(D.losebreath <= 10)
+	if(D.losebreath <= 6)
 		D.losebreath = clamp(D.losebreath + 5, 0, 10)
 	D.adjustOxyLoss(damage + 5)
 	log_combat(A, D, "quickchoked")
@@ -174,7 +174,7 @@
 		to_chat(A, "<span class='danger'>You jab [D]!</span>")
 		A.do_attack_animation(D, ATTACK_EFFECT_PUNCH)
 		playsound(D, 'sound/effects/hit_punch.ogg', 50, TRUE, -1)
-		D.apply_damage(damage*2 + 15, STAMINA, affecting, armor_block)
+		D.apply_damage(damage*2 + 11, STAMINA, affecting, armor_block)
 		log_combat(A, D, "punched nonlethally")
 	else
 		D.visible_message("<span class='danger'>[A] reprimands [D]!</span>", \
@@ -182,7 +182,7 @@
 		to_chat(A, "<span class='danger'>You stomp [D]!</span>")
 		A.do_attack_animation(D, ATTACK_EFFECT_KICK)
 		playsound(D, 'sound/effects/hit_punch.ogg', 50, TRUE, -1)
-		D.apply_damage(damage*2 + 20, STAMINA, affecting, armor_block)
+		D.apply_damage(damage*2 + 11, STAMINA, affecting, armor_block)
 		log_combat(A, D, "stomped nonlethally")
 	if(damage >= stunthreshold)
 		D.visible_message("<span class='warning'>[D] sputters and recoils in pain!</span>", "<span class='userdanger'>You recoil in pain as you are jabbed in a nerve!</span>")
@@ -223,8 +223,8 @@
 /obj/item/clothing/gloves/krav_maga/combatglovesplus
 	name = "combat gloves plus"
 	desc = "These tactical gloves are fireproof and shock resistant, and using nanochip technology it teaches you the powers of krav maga."
-	icon_state = "combat"
-	item_state = "blackgloves"
+	icon_state = "fightglovesblack"
+	item_state = "fightglovesblack"
 	siemens_coefficient = 0
 	permeability_coefficient = 0.05
 	strip_delay = 80
@@ -233,4 +233,4 @@
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 	resistance_flags = NONE
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 50)
+	armor = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 50)

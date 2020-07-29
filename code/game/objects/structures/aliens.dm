@@ -134,7 +134,8 @@
 		blacklisted_turfs = typecacheof(list(
 			/turf/open/space,
 			/turf/open/chasm,
-			/turf/open/lava))
+			/turf/open/lava,
+			/turf/open/openspace))
 
 
 	last_expand = world.time + rand(growth_cooldown_low, growth_cooldown_high)
@@ -249,7 +250,7 @@
 /obj/structure/alien/egg/attack_alien(mob/living/carbon/alien/user)
 	return attack_hand(user)
 
-/obj/structure/alien/egg/attack_hand(mob/living/user)
+/obj/structure/alien/egg/attack_hand(mob/living/user, act_intent = user.a_intent, unarmed_attack_flags)
 	. = ..()
 	if(.)
 		return

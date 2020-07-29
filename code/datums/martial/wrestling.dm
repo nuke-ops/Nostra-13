@@ -151,7 +151,7 @@
 	D.forceMove(A.loc)
 	D.setDir(get_dir(D, A))
 
-	D.Stun(80)
+	D.Stun(60)
 	A.visible_message("<span class = 'danger'><B>[A] starts spinning around with [D]!</B></span>")
 	A.emote("scream")
 
@@ -215,11 +215,17 @@
 
 /datum/martial_art/wrestling/proc/FlipAnimation(mob/living/carbon/human/D)
 	set waitfor = FALSE
+	var/transform_before
+	var/laying_before
 	if (D)
+		transform_before = D.transform
+		laying_before = D.lying
 		animate(D, transform = matrix(180, MATRIX_ROTATE), time = 1, loop = 0)
 	sleep(15)
 	if (D)
-		animate(D, transform = null, time = 1, loop = 0)
+		if(transform_before && laying_before == D.lying) //animate calls sleep so this should be fine and stop a bug with transforms
+			D.transform = transform_before
+			animate(D, transform = null, time = 1, loop = 0)
 
 /datum/martial_art/wrestling/proc/slam(mob/living/carbon/human/A, mob/living/carbon/human/D)
 	if(!D)
@@ -306,15 +312,15 @@
 		playsound(A.loc, "swing_hit", 50, 1)
 		if (!D.stat)
 			D.emote("scream")
-			D.DefaultCombatKnockdown(40)
+			D.DefaultCombatKnockdown(30)
 
 			switch(rand(1,3))
 				if (2)
-					D.apply_damage(damage + 25, BRUTE)
+					D.apply_damage(damage + 15, BRUTE)
 				if (3)
 					D.ex_act(EXPLODE_LIGHT)
 				else
-					D.apply_damage(damage + 15, BRUTE)
+					D.apply_damage(damage + 12, BRUTE)
 		else
 			D.ex_act(EXPLODE_LIGHT)
 
@@ -362,7 +368,7 @@
 
 	A.visible_message("<span class = 'danger'><B>[A] roundhouse-kicks [D]!</B></span>")
 	playsound(A.loc, "swing_hit", 50, 1)
-	D.apply_damage(damage + 15, STAMINA)
+	D.apply_damage(damage + 10, STAMINA)
 
 	var/turf/T = get_edge_target_turf(A, get_dir(A, get_step_away(D, A)))
 	if (T && isturf(T))
@@ -415,11 +421,17 @@
 			to_chat(A, "You can't drop onto [D] from here!")
 			return FALSE
 
+		var/transform_before
+		var/laying_before
 		if(A)
+			transform_before = A.transform
+			laying_before = A.lying
 			animate(A, transform = matrix(90, MATRIX_ROTATE), time = 1, loop = 0)
 		sleep(10)
 		if(A)
-			animate(A, transform = null, time = 1, loop = 0)
+			if(transform_before && laying_before == A.lying) //if they suddenly dropped to the floor between this period, don't revert their animation
+				animate(A, transform = null, time = 1, loop = 0)
+				A.transform = transform_before
 
 		A.forceMove(D.loc)
 
@@ -431,9 +443,9 @@
 			if (prob(33) || D.stat)
 				D.ex_act(EXPLODE_LIGHT)
 			else
-				D.apply_damage(damage + 25, BRUTE)
+				D.apply_damage(damage + 20, BRUTE)
 		else
-			D.apply_damage(damage + 25, BRUTE)
+			D.apply_damage(damage + 20, BRUTE)
 
 		D.DefaultCombatKnockdown(40)
 
@@ -463,7 +475,7 @@
 	A.start_pulling(D)
 	D.visible_message("<span class='danger'>[A] gets [D] in a cinch!</span>", \
 								"<span class='userdanger'>[A] gets [D] in a cinch!</span>")
-	D.Stun(rand(60,100))
+	D.Stun(rand(30,60))
 	log_combat(A, D, "cinched")
 	return TRUE
 

@@ -34,7 +34,7 @@
 		data = mind.martial_art.block_parry_data
 		method = MARTIAL_PARRY
 		tool = mind.martial_art
-	else if(combat_flags & COMBAT_FLAG_UNARMED_PARRY)
+	else if((combat_flags & COMBAT_FLAG_UNARMED_PARRY) && check_unarmed_parry_activation_special())
 		data = block_parry_data
 		method = UNARMED_PARRY
 		tool = src
@@ -92,6 +92,12 @@
 	for(var/obj/item/I in held_items - get_active_held_item())
 		if(I.can_active_parry())
 			return I
+
+/**
+  * Check if we can unarmed parry
+  */
+/mob/living/proc/check_unarmed_parry_activation_special()
+	return TRUE
 
 /**
   * Called via timer when the parry sequence ends.
@@ -250,7 +256,7 @@
 	var/datum/block_parry_data/data = get_parry_data()
 	if(data.parry_sounds)
 		playsound(src, pick(data.parry_sounds), 75)
-	visible_message("<span class='danger'>[src] parries \the [attack_text][length(effect_text)? ", [english_list(effect_text)] [attacker]" : ""]!</span>")
+	visible_message("<span class='danger'>[src] parries [attack_text][length(effect_text)? ", [english_list(effect_text)] [attacker]" : ""]!</span>")
 
 /// Run counterattack if any
 /mob/living/proc/run_parry_countereffects(atom/object, damage, attack_text, attack_type, armour_penetration, mob/attacker, def_zone, list/return_list = list(), parry_efficiency)

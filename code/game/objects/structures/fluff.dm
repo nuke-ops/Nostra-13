@@ -110,7 +110,7 @@
 	desc = "Space Jesus is my copilot."
 	icon_state = "driverseat"
 
-/obj/structure/fluff/bus/passable/seat/driver/attack_hand(mob/user)
+/obj/structure/fluff/bus/passable/seat/driver/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
 	playsound(src, 'sound/items/carhorn.ogg', 50, 1)
 	. = ..()
 
@@ -193,18 +193,6 @@
 	density = TRUE
 	deconstructible = FALSE
 
-/obj/structure/fluff/railing
-	name = "railing"
-	desc = "Basic railing meant to protect idiots like you from falling."
-	icon = 'icons/obj/fluff.dmi'
-	icon_state = "railing"
-	density = TRUE
-	anchored = TRUE
-	deconstructible = FALSE
-
-/obj/structure/fluff/railing/corner
-	icon_state = "railing_corner"
-	density = FALSE
 
 /obj/structure/fluff/beach_towel
 	name = "beach towel"
