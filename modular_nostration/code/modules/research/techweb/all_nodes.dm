@@ -1,7 +1,7 @@
-/datum/techweb_node/adv_mining
+/datum/techweb_node/bluemining
 	id = "bluespace_mining"
 	display_name = "Bluespace Mining Technology"
-	description = "Harness the power of bluespace to make materials out of nothing. Slowly."
-	prereq_ids = list("practical_bluespace", "adv_mining")
+	description = "Through the power of Bluespace-Assisted A.S.S Compression it is possible to mine resources."
+	prereq_ids = list("practical_bluespace", "bluemining")
 	design_ids = list("bluespace_miner")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
