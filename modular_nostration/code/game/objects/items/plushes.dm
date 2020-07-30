@@ -37,7 +37,7 @@
 /obj/item/toy/plush/derpyslimeplushie
 	name = "derpy slime plushie"
 	desc = "Squish UwU"
-	icon = "modular_nostration/icons/obj/plushes.dmi"
+	icon = "modular_nostration/icons/obj/plushes64.dmi"
 	icon_state = "DerpySlime"
 	attack_verb = list("Squished")
 	gender = FEMALE
@@ -46,7 +46,7 @@
 /obj/item/toy/plush/kittyinacrystalbox	
 	name = "kitty in a crystal box plushie"
 	desc = "A cute toy that resembles an even cuter bee."
-	icon = "modular_nostration/icons/obj/plushes.dmi"
+	icon = "modular_nostration/icons/obj/plushes64.dmi"
 	icon_state = "Kitty"
 	attack_verb = list("stung")
 	gender = FEMALE
