@@ -53435,11 +53435,6 @@
 /turf/open/floor/plating,
 /area/maintenance/port)
 "dfh" = (
-/obj/machinery/power/apc{
-	areastring = "/area/science/circuit";
-	name = "Circuitry Lab APC";
-	pixel_x = 30
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -60141,6 +60136,14 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/carpet,
 /area/crew_quarters/theatre)
+"wUG" = (
+/obj/machinery/power/apc{
+	areastring = "/area/science/circuit";
+	name = "Circuitry Lab APC";
+	pixel_x = 26
+	},
+/turf/open/floor/plasteel/white,
+/area/science/circuit)
 "wUY" = (
 /obj/structure/table,
 /obj/item/stack/packageWrap,
@@ -110500,7 +110503,7 @@ bSl
 bUq
 flc
 vPE
-bXs
+wUG
 bVt
 dfh
 jSO
