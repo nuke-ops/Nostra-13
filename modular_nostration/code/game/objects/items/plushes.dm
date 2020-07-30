@@ -1,7 +1,7 @@
 /obj/item/toy/plush/vergashplushie
 	name = "Vergash plushie"
 	desc = "the wonders of a horned lizard with more than just horns."
-	icon = "modular_nostration/icons/obj/Items/Plushes.dmi"
+	icon = "modular_nostration/icons/obj/items/Plushes.dmi"
 	icon_state = "Vergash"
 	attack_verb = list("sucked")
 	gender = FEMALE
@@ -10,7 +10,7 @@
 /obj/item/toy/plush/nekoplushie
 	name = "Shiro Neko plushie"
 	desc = "combat neko deployed."
-	icon = "modular_nostration/icons/obj/Items/Plushes.dmi"
+	icon = "modular_nostration/icons/obj/items/Plushes.dmi"
 	icon_state = "Shiro"
 	attack_verb = list("clawed")
 	gender = FEMALE
@@ -19,7 +19,7 @@
 /obj/item/toy/plush/rpgsnek
 	name = "RPGsnek plushie"
 	desc = "a snake ,just a sake."
-	icon = "modular_nostration/icons/obj/Items/Plushes.dmi"
+	icon = "modular_nostration/icons/obj/items/Plushes.dmi"
 	icon_state = "RPGSnek"
 	attack_verb = list("Licked")
 	gender = MALE
@@ -28,7 +28,7 @@
 /obj/item/toy/plush/moth
 	name = "moth plushie"
 	desc = "That's not a bee..."
-	icon = "modular_nostration/icons/obj/Items/Plushes.dmi"
+	icon = "modular_nostration/icons/obj/items/Plushes.dmi"
 	icon_state = "LampAddict"
 	attack_verb = list("stung")
 	gender = MALE
@@ -37,7 +37,7 @@
 /obj/item/toy/plush/derpyslimeplushie
 	name = "derpy slime plushie"
 	desc = "Squish UwU"
-	icon = "modular_nostration/icons/obj/Items/Plushes.dmi"
+	icon = "modular_nostration/icons/obj/items/Plushes.dmi"
 	icon_state = "DerpySlime"
 	attack_verb = list("Squished")
 	gender = FEMALE
@@ -46,7 +46,7 @@
 /obj/item/toy/plush/kittyinacrystalbox	
 	name = "kitty in a crystal box plushie"
 	desc = "A cute toy that resembles an even cuter bee."
-	icon = "modular_nostration/icons/obj/Items/Plushes.dmi"
+	icon = "modular_nostration/icons/obj/items/Plushes.dmi"
 	icon_state = "Kitty"
 	attack_verb = list("stung")
 	gender = FEMALE
