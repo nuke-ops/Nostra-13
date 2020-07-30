@@ -23,7 +23,7 @@
 	icon_state = "RPGSnek"
 	attack_verb = list("Licked")
 	gender = MALE
-	squeak_override = list('modular_nostration/sound/interaction/under_moan_f2.ogg' = 1)
+	squeak_override = list('modular_nostration/sound/interactions/under_moan_f2.ogg' = 1)
 
 /obj/item/toy/plush/moth
 	name = "moth plushie"
