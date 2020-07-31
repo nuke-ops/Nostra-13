@@ -58763,6 +58763,20 @@
 	icon_state = "wood-broken5"
 	},
 /area/maintenance/bar)
+"tmy" = (
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "bridge blast";
+	name = "bridge blast door"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/bridge)
 "tmO" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -88615,7 +88629,7 @@ aJn
 aJq
 aJq
 aOE
-aPS
+tmy
 aRi
 aSu
 aTU
