@@ -1,3 +1,4 @@
+//travis doesnt like this, i like it but i don't like travis
 /mob/living/ShiftMiddleClickOn(atom/A)
 	var/obj/item/gun/G = get_active_held_item()
 	if(istype(G, /obj/item/gun))
