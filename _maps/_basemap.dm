@@ -6,11 +6,11 @@
 	#ifdef ALL_MAPS
 		#include "map_files\Mining\Lavaland.dmm"
 		#include "map_files\debug\runtimestation.dmm"
-		#include "map_files\Deltastation\DeltaStation2.dmm"
-		#include "map_files\MetaStation\MetaStation.dmm"
-		#include "map_files\OmegaStation\OmegaStation.dmm"
-		#include "map_files\PubbyStation\PubbyStation.dmm"
-		#include "map_files\BoxStation\BoxStation.dmm"
+		#include "map_files\Deltastation\DeltaStation2_nostration.dmm"
+		#include "map_files\MetaStation\MetaStation_nostration.dmm"
+		#include "map_files\OmegaStation\OmegaStation_nostration.dmm"
+		#include "map_files\PubbyStation\PubbyStation_nostration.dmm"
+		#include "map_files\BoxStation\BoxStation_nostration.dmm"
 		#include "map_files\LambdaStation\lambda.dmm"
 
 		#ifdef TRAVISBUILDING

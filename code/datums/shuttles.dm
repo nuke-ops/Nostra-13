@@ -104,6 +104,9 @@
 			rack.AddComponent(/datum/component/magnetic_catch)
 
 //Whatever special stuff you want
+/datum/map_template/shuttle/proc/post_load(obj/docking_port/mobile/M)
+	return
+		
 /datum/map_template/shuttle/proc/on_bought()
 	return
 
@@ -617,7 +620,7 @@
 /datum/map_template/shuttle/snowdin/mining
 	suffix = "mining"
 	name = "Snowdin Mining Elevator"
-
+	
 /datum/map_template/shuttle/snowdin/excavation
 	suffix = "excavation"
 	name = "Snowdin Excavation Elevator"
