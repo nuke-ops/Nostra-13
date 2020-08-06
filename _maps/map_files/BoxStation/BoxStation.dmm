@@ -53435,11 +53435,6 @@
 /turf/open/floor/plating,
 /area/maintenance/port)
 "dfh" = (
-/obj/machinery/power/apc{
-	areastring = "/area/science/circuit";
-	name = "Circuitry Lab APC";
-	pixel_x = 30
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -58768,6 +58763,20 @@
 	icon_state = "wood-broken5"
 	},
 /area/maintenance/bar)
+"tmy" = (
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "bridge blast";
+	name = "bridge blast door"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/bridge)
 "tmO" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -60141,6 +60150,14 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/carpet,
 /area/crew_quarters/theatre)
+"wUG" = (
+/obj/machinery/power/apc{
+	areastring = "/area/science/circuit";
+	name = "Circuitry Lab APC";
+	pixel_x = 26
+	},
+/turf/open/floor/plasteel/white,
+/area/science/circuit)
 "wUY" = (
 /obj/structure/table,
 /obj/item/stack/packageWrap,
@@ -88612,7 +88629,7 @@ aJn
 aJq
 aJq
 aOE
-aPS
+tmy
 aRi
 aSu
 aTU
@@ -110500,7 +110517,7 @@ bSl
 bUq
 flc
 vPE
-bXs
+wUG
 bVt
 dfh
 jSO
