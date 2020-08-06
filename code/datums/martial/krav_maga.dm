@@ -182,11 +182,7 @@
 		to_chat(A, "<span class='danger'>You stomp [D]!</span>")
 		A.do_attack_animation(D, ATTACK_EFFECT_KICK)
 		playsound(D, 'sound/effects/hit_punch.ogg', 50, TRUE, -1)
- Updated upstream
-		D.apply_damage(damage*2 + 11, STAMINA, affecting, armor_block)
-
 		D.apply_damage(damage*3 + 20, STAMINA, affecting, armor_block)
- Stashed changes
 		log_combat(A, D, "stomped nonlethally")
 	if(damage >= stunthreshold)
 		D.visible_message("<span class='warning'>[D] sputters and recoils in pain!</span>", "<span class='userdanger'>You recoil in pain as you are jabbed in a nerve!</span>")
