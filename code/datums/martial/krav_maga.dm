@@ -174,11 +174,7 @@
 		to_chat(A, "<span class='danger'>You jab [D]!</span>")
 		A.do_attack_animation(D, ATTACK_EFFECT_PUNCH)
 		playsound(D, 'sound/effects/hit_punch.ogg', 50, TRUE, -1)
- Updated upstream
-		D.apply_damage(damage*2 + 11, STAMINA, affecting, armor_block)
-
 		D.apply_damage(damage*3 + 15, STAMINA, affecting, armor_block)
- Stashed changes
 		log_combat(A, D, "punched nonlethally")
 	else
 		D.visible_message("<span class='danger'>[A] reprimands [D]!</span>", \
