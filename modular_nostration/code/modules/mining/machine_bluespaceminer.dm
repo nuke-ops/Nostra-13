@@ -2,7 +2,7 @@
 	name = "bluespace mining machine"
 	desc = "A machine that uses the magic of Bluespace to slowly generate materials and add them to a linked ore silo."
 	icon = 'modular_nostration/icons/obj/machines/mining_machines.dmi'
-	icon_state = "bspacem"
+	icon_state = "bsminer"
 	density = TRUE
 	circuit = /obj/item/circuitboard/machine/bluespace_miner
 	layer = BELOW_OBJ_LAYER
@@ -37,4 +37,19 @@
 	if(!mat_container || panel_open || !powered())
 		return
 	var/datum/material/ore = pick(ore_rates)
-	mat_container.insert_amount_mat((ore_rates[ore] * 1000), ore)
+	mat_container.bsm_insert((ore_rates[ore] * 1000), ore)
+
+/datum/component/material_container/proc/bsm_insert(amt, var/datum/material/mat)
+	if(!istype(mat))
+		mat = SSmaterials.GetMaterialRef(mat)
+	if(amt > 0 && has_space(amt))
+		var/total_amount_saved = total_amount
+		if(mat)
+			materials[mat] += amt
+			total_amount += amt
+		else
+			for(var/i in materials)
+				materials[i] += amt
+				total_amount += amt
+		return (total_amount - total_amount_saved)
+	return FALSE
