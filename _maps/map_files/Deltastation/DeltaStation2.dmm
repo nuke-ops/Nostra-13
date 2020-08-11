@@ -510,7 +510,7 @@
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = -24;
-	
+	pixel_y = 0
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1

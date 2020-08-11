@@ -9475,14 +9475,8 @@
 /obj/structure/sign/warning/nosmoking{
 	pixel_y = 30
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 4
-	},
-/turf/open/floor/plasteel/white,
-/area/janitor)
+/turf/open/floor/plasteel/dark,
+/area/medical/sleeper)
 "asN" = (
 /obj/machinery/airalarm{
 	dir = 4;
@@ -9567,20 +9561,10 @@
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "asY" = (
-/obj/structure/table,
-/obj/item/crowbar,
-/obj/item/clothing/neck/stethoscope,
-/obj/item/reagent_containers/spray/cleaner,
 /obj/structure/sign/warning/nosmoking{
 	pixel_y = 30
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/yellow{
-	dir = 4
-	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "ata" = (
 /turf/open/floor/wood,
@@ -58789,20 +58773,6 @@
 	icon_state = "wood-broken5"
 	},
 /area/maintenance/bar)
-"tmy" = (
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/machinery/door/poddoor/preopen{
-	id = "bridge blast";
-	name = "bridge blast door"
-	},
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
-/area/bridge)
 "tmO" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -60176,14 +60146,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/carpet,
 /area/crew_quarters/theatre)
-"wUG" = (
-/obj/machinery/power/apc{
-	areastring = "/area/science/circuit";
-	name = "Circuitry Lab APC";
-	pixel_x = 26
-	},
-/turf/open/floor/plasteel/white,
-/area/science/circuit)
 "wUY" = (
 /obj/structure/table,
 /obj/item/stack/packageWrap,
@@ -88654,7 +88616,7 @@ aJn
 aJq
 aJq
 aOE
-tmy
+aPS
 aRi
 aSu
 aTU
@@ -91253,7 +91215,7 @@ bqH
 aJq
 aJq
 gnf
-asM
+bCv
 bDJ
 bCt
 bGD
@@ -95619,7 +95581,7 @@ bEe
 bhh
 bBL
 bvj
-bAl
+asM
 bAl
 bvh
 bzS
@@ -110542,7 +110504,7 @@ bSl
 bUq
 flc
 vPE
-wUG
+bXs
 bVt
 dfh
 jSO
