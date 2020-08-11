@@ -101,29 +101,29 @@ GLOBAL_VAR_INIT(miscreants_allowed, FALSE)
 		set category = "Admin"
 		if(!src.holder)	return
 		message_admins("[key_name_admin(usr)] manually reloaded mentors")
-/*
-/mob/living/carbon/has_penis() // Skyrat Change
+
+/mob/living/carbon/proc/has_penis()
 	var/obj/item/organ/genital/G = getorganslot(ORGAN_SLOT_PENIS)
 	if(G && istype(G, /obj/item/organ/genital/penis))
 		return TRUE
 	return FALSE
 
-/mob/living/carbon/has_balls() // Skyrat Change
+/mob/living/carbon/proc/has_balls()
 	var/obj/item/organ/genital/G = getorganslot(ORGAN_SLOT_TESTICLES)
 	if(G && istype(G, /obj/item/organ/genital/testicles))
 		return TRUE
 	return FALSE
 
-/mob/living/carbon/has_vagina() // Skyrat Change
+/mob/living/carbon/proc/has_vagina()
 	if(getorganslot(ORGAN_SLOT_VAGINA))
 		return TRUE
 	return FALSE
 
-/mob/living/carbon/has_breasts() // Skyrat Change
+/mob/living/carbon/proc/has_breasts()
 	if(getorganslot(ORGAN_SLOT_BREASTS))
 		return TRUE
 	return FALSE
-*/
+
 /mob/living/carbon/proc/is_groin_exposed(list/L)
 	if(!L)
 		L = get_equipped_items()
