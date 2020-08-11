@@ -35,16 +35,8 @@
 
 	ui = SStgui.try_update_ui(user, src, ui)
 	if (!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "NtosMain")
 		ui.set_autoupdate(TRUE)
-=======
-		var/datum/asset/assets = get_asset_datum(/datum/asset/simple/headers)
-		assets.send(user)
-		assets = get_asset_datum(/datum/asset/simple/arcade)
-		assets.send(user)
-		ui = new(user, src, ui_key, "NtosMain", "NtOS Main menu", 400, 500, master_ui, state)
->>>>>>> master
 		ui.open()
 		ui.send_asset(get_asset_datum(/datum/asset/simple/headers))
 

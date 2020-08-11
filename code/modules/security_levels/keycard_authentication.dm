@@ -41,11 +41,7 @@ GLOBAL_DATUM_INIT(keycard_events, /datum/events, new)
 /obj/machinery/keycard_auth/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "KeycardAuth", name)
-=======
-		ui = new(user, src, ui_key, "KeycardAuth", name, ui_x, ui_y, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/keycard_auth/ui_data()

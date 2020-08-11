@@ -62,12 +62,7 @@
 /obj/item/paper_bin/attack_paw(mob/user)
 	return attack_hand(user)
 
-<<<<<<< HEAD
 /obj/item/paper_bin/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
-=======
-//ATTACK HAND IGNORING PARENT RETURN VALUE
-/obj/item/paper_bin/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
->>>>>>> master
 	if(user.lying)
 		return
 	if(bin_pen)
@@ -153,11 +148,7 @@
 	papertype = /obj/item/paper/natural
 	resistance_flags = FLAMMABLE
 
-<<<<<<< HEAD
 /obj/item/paper_bin/bundlenatural/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
-=======
-/obj/item/paper_bin/bundlenatural/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
->>>>>>> master
 	..()
 	if(total_paper < 1)
 		qdel(src)

@@ -2,12 +2,9 @@
  * tgui state: self_state
  *
  * Only checks that the user and src_object are the same.
-<<<<<<< HEAD
  *
  * Copyright (c) 2020 Aleksej Komarov
  * SPDX-License-Identifier: MIT
-=======
->>>>>>> master
  */
 
 GLOBAL_DATUM_INIT(self_state, /datum/ui_state/self_state, new)

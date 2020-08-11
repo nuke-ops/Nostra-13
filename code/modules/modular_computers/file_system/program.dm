@@ -31,22 +31,10 @@
 	var/available_on_ntnet = 1
 	/// Whether the program can be downloaded from SyndiNet (accessible via emagging the computer). Set to 1 to enable.
 	var/available_on_syndinet = 0
-<<<<<<< HEAD
 	/// Name of the tgui interface
 	var/tgui_id
 	/// Example: "something.gif" - a header image that will be rendered in computer's UI when this program is running at background. Images are taken from /icons/program_icons. Be careful not to use too large images!
 	var/ui_header = null
-=======
-	/// ID of TGUI interface
-	var/tgui_id
-	/// Default size of TGUI window, in pixels
-	var/ui_x = 575
-	var/ui_y = 700
-	/// Example: "something.gif" - a header image that will be rendered in computer's UI when this program is running at background. Images are taken from /icons/program_icons. Be careful not to use too large images!
-	var/ui_header = null
-	///Assets specific to programs
-	var/list/special_assets = list()
->>>>>>> master
 
 /datum/computer_file/program/New(obj/item/modular_computer/comp = null)
 	..()
@@ -76,29 +64,23 @@
 /datum/computer_file/program/proc/generate_network_log(text)
 	if(computer)
 		return computer.add_log(text)
-	return FALSE
+	return 0
 
 /datum/computer_file/program/proc/is_supported_by_hardware(hardware_flag = 0, loud = 0, mob/user = null)
 	if(!(hardware_flag & usage_flags))
 		if(loud && computer && user)
-<<<<<<< HEAD
 			to_chat(user, "<span class='danger'>\The [computer] flashes a \"Hardware Error - Incompatible software\" warning.</span>")
 		return 0
 	return 1
-=======
-			to_chat(user, "<span class='danger'>\The [computer] flashes an \"Hardware Error - Incompatible software\" warning.</span>")
-		return FALSE
-	return TRUE
->>>>>>> master
 
 /datum/computer_file/program/proc/get_signal(specific_action = 0)
 	if(computer)
 		return computer.get_ntnet_status(specific_action)
-	return FALSE
+	return 0
 
 // Called by Process() on device that runs us, once every tick.
 /datum/computer_file/program/proc/process_tick()
-	return TRUE
+	return 1
 
 // Check if the user can run program. Only humans can operate computer. Automatically called in run_program()
 // User has to wear their ID for ID Scan to work.
@@ -156,7 +138,7 @@
 // This is performed on program startup. May be overridden to add extra logic. Remember to include ..() call. Return 1 on success, 0 on failure.
 // When implementing new program based device, use this to run the program.
 /datum/computer_file/program/proc/run_program(mob/living/user)
-	if(can_run(user, TRUE))
+	if(can_run(user, 1))
 		if(requires_ntnet && network_destination)
 			generate_network_log("Connection opened to [network_destination].")
 		program_state = PROGRAM_STATE_ACTIVE
@@ -187,17 +169,7 @@
 /datum/computer_file/program/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui && tgui_id)
-<<<<<<< HEAD
 		ui = new(user, src, tgui_id, filedesc)
-=======
-		var/datum/asset/assets = get_asset_datum(/datum/asset/simple/headers)
-		assets.send(user)
-		for(var/i in special_assets)
-			assets = get_asset_datum(i)
-			assets.send(user)
-
-		ui = new(user, src, ui_key, tgui_id, filedesc, ui_x, ui_y, state = state)
->>>>>>> master
 		ui.open()
 		ui.send_asset(get_asset_datum(/datum/asset/simple/headers))
 

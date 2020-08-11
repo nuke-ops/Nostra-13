@@ -6,17 +6,9 @@
 	network_destination = "ship scanner"
 	size = 6
 	tgui_id = "NtosShipping"
-<<<<<<< HEAD
 	///Account used for creating barcodes.
 	var/datum/bank_account/payments_acc
 	///The amount which the tagger will receive for the sale.
-=======
-	ui_x = 450
-	ui_y = 350
-	///Account used for creating barcodes.
-	var/datum/bank_account/payments_acc
-	///The amount which the tagger will recieve for the sale.
->>>>>>> master
 	var/percent_cut = 20
 
 /datum/computer_file/program/shipping/ui_data(mob/user)

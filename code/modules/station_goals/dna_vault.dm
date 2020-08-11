@@ -178,11 +178,7 @@
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		roll_powers(user)
-<<<<<<< HEAD
 		ui = new(user, src, "DnaVault", name)
-=======
-		ui = new(user, src, ui_key, "DnaVault", name, ui_x, ui_y, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/dna_vault/proc/roll_powers(mob/user)

@@ -86,20 +86,12 @@
 
 	/// A hat won't cover your face, but a shirt covering your chest will cover your... you know, chest
 	var/scars_covered_by_clothes = TRUE
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
-=======
-	/// Descriptions for the locations on the limb for scars to be assigned, just cosmetic
-	var/list/specific_locations = list("general area")
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
 	/// So we know if we need to scream if this limb hits max damage
 	var/last_maxed
 	/// How much generic bleedstacks we have on this bodypart
 	var/generic_bleedstacks
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
 	/// If we have a gauze wrapping currently applied (not including splints)
 	var/obj/item/stack/current_gauze
-=======
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
 
 /obj/item/bodypart/examine(mob/user)
 	. = ..()
@@ -191,11 +183,7 @@
 //Applies brute and burn damage to the organ. Returns 1 if the damage-icon states changed at all.
 //Damage will not exceed max_damage using this proc
 //Cannot apply negative damage
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
 /obj/item/bodypart/proc/receive_damage(brute = 0, burn = 0, stamina = 0, blocked = 0, updating_health = TRUE, required_status = null, wound_bonus = 0, bare_wound_bonus = 0, sharpness = SHARP_NONE) // maybe separate BRUTE_SHARP and BRUTE_OTHER eventually somehow hmm
-=======
-/obj/item/bodypart/proc/receive_damage(brute = 0, burn = 0, stamina = 0, blocked = 0, updating_health = TRUE, required_status = null, wound_bonus = 0, bare_wound_bonus = 0, sharpness = FALSE) // maybe separate BRUTE_SHARP and BRUTE_OTHER eventually somehow hmm
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
 	if(owner && (owner.status_flags & GODMODE))
 		return FALSE	//godmode
 	var/dmg_mlt = CONFIG_GET(number/damage_multiplier)
@@ -216,7 +204,6 @@
 		if(ALIEN_BODYPART,LARVA_BODYPART) //aliens take some additional burn //nothing can burn with so much snowflake code around
 			burn *= 1.2
 
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
 	/*
 	// START WOUND HANDLING
 	*/
@@ -275,18 +262,6 @@
 
 	//back to our regularly scheduled program, we now actually apply damage if there's room below limb damage cap
 
-=======
-	var/wounding_type = (brute > burn ? WOUND_BRUTE : WOUND_BURN)
-	var/wounding_dmg = max(brute, burn)
-	if(wounding_type == WOUND_BRUTE && sharpness)
-		wounding_type = WOUND_SHARP
-	// i know this is effectively the same check as above but i don't know if those can null the damage by rounding and want to be safe
-	if(owner && wounding_dmg > 4 && wound_bonus != CANT_WOUND)
-		// if you want to make tox wounds or some other type, this will need to be expanded and made more modular
-		// handle all our wounding stuff
-		check_wounding(wounding_type, wounding_dmg, wound_bonus, bare_wound_bonus)
-
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
 	var/can_inflict = max_damage - get_damage()
 
 	var/total_damage = brute + burn
@@ -298,13 +273,6 @@
 	if(can_inflict <= 0)
 		return FALSE
 
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
-=======
-	for(var/i in wounds)
-		var/datum/wound/W = i
-		W.receive_damage(wounding_type, wounding_dmg, wound_bonus)
-
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
 	brute_dam += brute
 	burn_dam += burn
 
@@ -324,7 +292,6 @@
 	update_disabled()
 	return update_bodypart_damage_state()
 
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
 /// Allows us to roll for and apply a wound without actually dealing damage. Used for aggregate wounding power with pellet clouds
 /obj/item/bodypart/proc/painless_wound_roll(wounding_type, phantom_wounding_dmg, wound_bonus, bare_wound_bonus, sharpness=SHARP_NONE)
 	if(!owner || phantom_wounding_dmg <= WOUND_MINIMUM_DAMAGE || wound_bonus == CANT_WOUND)
@@ -377,16 +344,6 @@
   *
   * Arguments:
   * * woundtype- Either WOUND_BLUNT, WOUND_SLASH, WOUND_PIERCE, or WOUND_BURN based on the attack type.
-=======
-/**
-  * check_wounding() is where we handle rolling for, selecting, and applying a wound if we meet the criteria
-  *
-  * We generate a "score" for how woundable the attack was based on the damage and other factors discussed in [check_wounding_mods()], then go down the list from most severe to least severe wounds in that category.
-  * We can promote a wound from a lesser to a higher severity this way, but we give up if we have a wound of the given type and fail to roll a higher severity, so no sidegrades/downgrades
-  *
-  * Arguments:
-  * * woundtype- Either WOUND_SHARP, WOUND_BRUTE, or WOUND_BURN based on the attack type.
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
   * * damage- How much damage is tied to this attack, since wounding potential scales with damage in an attack (see: WOUND_DAMAGE_EXPONENT)
   * * wound_bonus- The wound_bonus of an attack
   * * bare_wound_bonus- The bare_wound_bonus of an attack
@@ -395,7 +352,6 @@
 	// actually roll wounds if applicable
 	if(HAS_TRAIT(owner, TRAIT_EASYLIMBDISABLE))
 		damage *= 1.5
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
 	else
 		damage = min(damage, WOUND_MAX_CONSIDERED_DAMAGE)
 
@@ -414,21 +370,6 @@
 			if(clothes_check.armor.getRating("wound"))
 				bare_wound_bonus = 0
 				break
-=======
-
-	var/base_roll = rand(1, round(damage ** WOUND_DAMAGE_EXPONENT))
-	var/injury_roll = base_roll
-	injury_roll += check_woundings_mods(woundtype, damage, wound_bonus, bare_wound_bonus)
-	var/list/wounds_checking
-
-	switch(woundtype)
-		if(WOUND_SHARP)
-			wounds_checking = WOUND_LIST_CUT
-		if(WOUND_BRUTE)
-			wounds_checking = WOUND_LIST_BONE
-		if(WOUND_BURN)
-			wounds_checking = WOUND_LIST_BURN
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
 
 	//cycle through the wounds of the relevant category from the most severe down
 	for(var/PW in wounds_checking)
@@ -443,7 +384,6 @@
 					replaced_wound = existing_wound
 
 		if(initial(possible_wound.threshold_minimum) < injury_roll)
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
 			var/datum/wound/new_wound
 			if(replaced_wound)
 				new_wound = replaced_wound.replace_wound(possible_wound)
@@ -453,27 +393,13 @@
 				new_wound.apply_wound(src)
 				log_wound(owner, new_wound, damage, wound_bonus, bare_wound_bonus, base_roll)
 			return new_wound
-=======
-			if(replaced_wound)
-				var/datum/wound/new_wound = replaced_wound.replace_wound(possible_wound)
-				log_wound(owner, new_wound, damage, wound_bonus, bare_wound_bonus, base_roll)
-			else
-				var/datum/wound/new_wound = new possible_wound
-				new_wound.apply_wound(src)
-				log_wound(owner, new_wound, damage, wound_bonus, bare_wound_bonus, base_roll)
-			return
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
 
 // try forcing a specific wound, but only if there isn't already a wound of that severity or greater for that type on this bodypart
 /obj/item/bodypart/proc/force_wound_upwards(specific_woundtype, smited = FALSE)
 	var/datum/wound/potential_wound = specific_woundtype
 	for(var/i in wounds)
 		var/datum/wound/existing_wound = i
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
 		if(existing_wound.wound_type == initial(potential_wound.wound_type))
-=======
-		if(existing_wound.type in (initial(potential_wound.wound_type)))
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
 			if(existing_wound.severity < initial(potential_wound.severity)) // we only try if the existing one is inferior to the one we're trying to force
 				existing_wound.replace_wound(potential_wound, smited)
 			return
@@ -481,7 +407,6 @@
 	var/datum/wound/new_wound = new potential_wound
 	new_wound.apply_wound(src, smited = smited)
 
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
 /**
   * check_wounding_mods() is where we handle the various modifiers of a wound roll
   *
@@ -492,17 +417,10 @@
   * Arguments:
   * * It's the same ones on [receive_damage]
   */
-=======
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
 /obj/item/bodypart/proc/check_woundings_mods(wounding_type, damage, wound_bonus, bare_wound_bonus)
 	var/armor_ablation = 0
 	var/injury_mod = 0
 
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
-=======
-	//var/bwb = 0
-
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
 	if(owner && ishuman(owner))
 		var/mob/living/carbon/human/H = owner
 		var/list/clothing = H.clothingonpart(src)
@@ -510,11 +428,7 @@
 			var/obj/item/clothing/C = c
 			// unlike normal armor checks, we tabluate these piece-by-piece manually so we can also pass on appropriate damage the clothing's limbs if necessary
 			armor_ablation += C.armor.getRating("wound")
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
 			if(wounding_type == WOUND_SLASH)
-=======
-			if(wounding_type == WOUND_SHARP)
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
 				C.take_damage_zone(body_zone, damage, BRUTE, armour_penetration)
 			else if(wounding_type == WOUND_BURN && damage >= 10) // lazy way to block freezing from shredding clothes without adding another var onto apply_damage()
 				C.take_damage_zone(body_zone, damage, BURN, armour_penetration)
@@ -530,11 +444,7 @@
 		injury_mod += W.threshold_penalty
 
 	var/part_mod = -wound_resistance
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
 	if(get_damage(TRUE) >= max_damage)
-=======
-	if(is_disabled())
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
 		part_mod += disabled_wound_penalty
 
 	injury_mod += part_mod
@@ -587,19 +497,11 @@
 			return BODYPART_DISABLED_WOUND
 	if(can_dismember() && !HAS_TRAIT(owner, TRAIT_NODISMEMBER))
 		. = disabled //inertia, to avoid limbs healing 0.1 damage and being re-enabled
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
 		if(get_damage(TRUE) >= max_damage * (HAS_TRAIT(owner, TRAIT_EASYLIMBDISABLE) ? 0.6 : 1)) //Easy limb disable disables the limb at 40% health instead of 0%
 			if(!last_maxed)
 				owner.emote("scream")
 				last_maxed = TRUE
 			if(!is_organic_limb() || stamina_dam >= max_damage)
-=======
-		if((get_damage(TRUE) >= max_damage) || (HAS_TRAIT(owner, TRAIT_EASYLIMBDISABLE) && (get_damage(TRUE) >= (max_damage * 0.6)))) //Easy limb disable disables the limb at 40% health instead of 0%
-			if(!last_maxed)
-				owner.emote("scream")
-				last_maxed = TRUE
-			if(!is_organic_limb())
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
 				return BODYPART_DISABLED_DAMAGE
 		else if(disabled && (get_damage(TRUE) <= (max_damage * 0.8))) // reenabled at 80% now instead of 50% as of wounds update
 			last_maxed = FALSE
@@ -953,7 +855,6 @@
 /obj/item/bodypart/proc/get_wound_type(checking_type)
 	if(isnull(wounds))
 		return
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
 	for(var/i in wounds)
 		if(istype(i, checking_type))
 			return i
@@ -977,25 +878,11 @@
 	if(!LAZYLEN(wounds) && current_gauze && !replaced)
 		owner.visible_message("<span class='notice'>\The [current_gauze] on [owner]'s [name] fall away.</span>", "<span class='notice'>The [current_gauze] on your [name] fall away.</span>")
 		QDEL_NULL(current_gauze)
-=======
-	for(var/thing in wounds)
-		var/datum/wound/W = thing
-		if(istype(W, checking_type))
-			return W
-
-/// very rough start for updating efficiency and other stats on a body part whenever a wound is gained/lost
-/obj/item/bodypart/proc/update_wounds()
-	var/dam_mul = 1 //initial(wound_damage_multiplier)
-	// we can only have one wound per type, but remember there's multiple types
-	for(var/datum/wound/W in wounds)
-		dam_mul *= W.damage_mulitplier_penalty
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm
 	wound_damage_multiplier = dam_mul
 	update_disabled()
 
 /obj/item/bodypart/proc/get_bleed_rate()
 	if(status != BODYPART_ORGANIC) // maybe in the future we can bleed oil from aug parts, but not now
-<<<<<<< HEAD:code/modules/surgery/bodyparts/_bodyparts.dm
 		return
 	var/bleed_rate = 0
 	if(generic_bleedstacks > 0)
@@ -1047,23 +934,3 @@
 	if(current_gauze.absorption_capacity < 0)
 		owner.visible_message("<span class='danger'>\The [current_gauze] on [owner]'s [name] fall away in rags.</span>", "<span class='warning'>\The [current_gauze] on your [name] fall away in rags.</span>", vision_distance=COMBAT_MESSAGE_RANGE)
 		QDEL_NULL(current_gauze)
-=======
-		return
-	var/bleed_rate = 0
-	if(generic_bleedstacks > 0)
-		bleed_rate++
-	if(brute_dam >= 40)
-		bleed_rate += (brute_dam * 0.008)
-
-	//We want an accurate reading of .len
-	listclearnulls(embedded_objects)
-	for(var/obj/item/embeddies in embedded_objects)
-		if(!embeddies.isEmbedHarmless())
-			bleed_rate += 0.5
-
-	for(var/thing in wounds)
-		var/datum/wound/W = thing
-		bleed_rate += W.blood_flow
-
-	return bleed_rate
->>>>>>> master:code/modules/surgery/bodyparts/bodyparts.dm

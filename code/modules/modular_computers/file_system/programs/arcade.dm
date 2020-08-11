@@ -7,11 +7,6 @@
 	network_destination = "arcade network"
 	size = 6
 	tgui_id = "NtosArcade"
-<<<<<<< HEAD
-=======
-	ui_x = 450
-	ui_y = 350
->>>>>>> master
 
 	///Returns TRUE if the game is being played.
 	var/game_active = TRUE
@@ -30,10 +25,7 @@
 
 /datum/computer_file/program/arcade/proc/game_check(mob/user)
 	sleep(5)
-<<<<<<< HEAD
 	//user?.mind?.adjust_experience(/datum/skill/gaming, 1) No gaming(TM) Yet
-=======
->>>>>>> master
 	if(boss_hp <= 0)
 		heads_up = "You have crushed [boss_name]! Rejoice!"
 		playsound(computer.loc, 'sound/arcade/win.ogg', 50, TRUE, extrarange = -3, falloff = 10)
@@ -42,10 +34,7 @@
 		if(istype(computer))
 			computer.update_icon()
 		ticket_count += 1
-<<<<<<< HEAD
 		//user?.mind?.adjust_experience(/datum/skill/gaming, 50)
-=======
->>>>>>> master
 		sleep(10)
 	else if(player_hp <= 0 || player_mp <= 0)
 		heads_up = "You have been defeated... how will the station survive?"
@@ -54,10 +43,7 @@
 		program_icon_state = "arcade_off"
 		if(istype(computer))
 			computer.update_icon()
-<<<<<<< HEAD
 		//user?.mind?.adjust_experience(/datum/skill/gaming, 10)
-=======
->>>>>>> master
 		sleep(10)
 
 /datum/computer_file/program/arcade/proc/enemy_check(mob/user)
@@ -88,7 +74,6 @@
 	pause_state = FALSE
 	game_check()
 
-<<<<<<< HEAD
 /datum/computer_file/program/arcade/ui_assets(mob/user)
 	return list(
 		get_asset_datum(/datum/asset/simple/arcade),
@@ -96,16 +81,6 @@
 
 /datum/computer_file/program/arcade/ui_data(mob/user)
 	var/list/data = get_header_data()
-=======
-/datum/computer_file/program/arcade/ui_interact(mob/user, ui_key, datum/tgui/ui, force_open, datum/tgui/master_ui, datum/ui_state/state)
-	. = ..()
-	var/datum/asset/assets = get_asset_datum(/datum/asset/simple/arcade)
-	assets.send(user)
-
-/datum/computer_file/program/arcade/ui_data(mob/user)
-	var/list/data = get_header_data()
-
->>>>>>> master
 	data["Hitpoints"] = boss_hp
 	data["PlayerHitpoints"] = player_hp
 	data["PlayerMP"] = player_mp
@@ -123,20 +98,13 @@
 	if(computer)
 		printer = computer.all_components[MC_PRINT]
 
-<<<<<<< HEAD
 	//var/gamerSkillLevel = usr.mind?.get_skill_level(/datum/skill/gaming)
 	//var/gamerSkill = usr.mind?.get_skill_modifier(/datum/skill/gaming, SKILL_RANDS_MODIFIER)
-=======
->>>>>>> master
 	switch(action)
 		if("Attack")
 			var/attackamt = 0 //Spam prevention.
 			if(pause_state == FALSE)
-<<<<<<< HEAD
 				attackamt = rand(2,6)// + rand(0, gamerSkill)
-=======
-				attackamt = rand(2,6)
->>>>>>> master
 			pause_state = TRUE
 			heads_up = "You attack for [attackamt] damage."
 			playsound(computer.loc, 'sound/arcade/hit.ogg', 50, TRUE, extrarange = -3, falloff = 10)
@@ -149,15 +117,10 @@
 			var/healamt = 0 //More Spam Prevention.
 			var/healcost = 0
 			if(pause_state == FALSE)
-<<<<<<< HEAD
 				healamt = rand(6,8)// + rand(0, gamerSkill)
 				var/maxPointCost = 3
 				//if(gamerSkillLevel >= SKILL_LEVEL_JOURNEYMAN)
 				//	maxPointCost = 2
-=======
-				healamt = rand(6,8)
-				var/maxPointCost = 3
->>>>>>> master
 				healcost = rand(1, maxPointCost)
 			pause_state = TRUE
 			heads_up = "You heal for [healamt] damage."
@@ -171,11 +134,7 @@
 		if("Recharge_Power")
 			var/rechargeamt = 0 //As above.
 			if(pause_state == FALSE)
-<<<<<<< HEAD
 				rechargeamt = rand(4,7)// + rand(0, gamerSkill)
-=======
-				rechargeamt = rand(4, 7)
->>>>>>> master
 			pause_state = TRUE
 			heads_up = "You regain [rechargeamt] magic power."
 			playsound(computer.loc, 'sound/arcade/mana.ogg', 50, TRUE, extrarange = -3, falloff = 10)

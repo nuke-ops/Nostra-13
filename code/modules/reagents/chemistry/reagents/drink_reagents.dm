@@ -1087,7 +1087,6 @@
 	if(M.getToxLoss() && prob(30))
 		M.adjustToxLoss(-1, 0)
 	..()
-<<<<<<< HEAD
 	. = TRUE
 
 // i googled "natural coagulant" and a couple of results came up for banana peels, so after precisely 30 more seconds of research, i now dub grinding banana peels good for your blood
@@ -1108,6 +1107,3 @@
 	taste_description = "bitter powder"
 	glass_name = "glass of banana peel powder"
 	description = "You took a banana peel... pulped it... baked it... Where are you going with this?"
-=======
-	. = TRUE
->>>>>>> master

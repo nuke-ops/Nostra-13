@@ -66,14 +66,7 @@
 		return
 	..()
 
-<<<<<<< HEAD
 /obj/item/papercutter/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
-=======
-/obj/item/papercutter/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
-	. = ..()
-	if(.)
-		return
->>>>>>> master
 	add_fingerprint(user)
 	if(!storedcutter)
 		to_chat(user, "<span class='notice'>The cutting blade is gone! You can't use [src] now.</span>")

@@ -180,11 +180,7 @@
 /obj/machinery/chem_dispenser/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "ChemDispenser", name)
-=======
-		ui = new(user, src, ui_key, "ChemDispenser", name, 565, 550, master_ui, state)
->>>>>>> master
 		if(user.hallucinating())
 			ui.set_autoupdate(FALSE) //to not ruin the immersion by constantly changing the fake chemicals
 		ui.open()

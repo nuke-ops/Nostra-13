@@ -229,11 +229,7 @@
 
 	ui = SStgui.try_update_ui(user, src, ui)
 	if (!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "ComputerFabricator")
-=======
-		ui = new(user, src, ui_key, "ComputerFabricator", "Personal Computer Vendor", ui_x, ui_y, state = state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/lapvend/attackby(obj/item/I, mob/user)

@@ -154,11 +154,7 @@
 		else
 			new /mob/living/simple_animal/hostile/shark/laser(loc)
 
-<<<<<<< HEAD
 /obj/machinery/pool/filter/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
-=======
-/obj/machinery/pool/filter/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
->>>>>>> master
 	to_chat(user, "You search the filter.")
 	for(var/obj/O in contents)
 		O.forceMove(loc)

@@ -9,32 +9,17 @@
 	network_destination = "cyborg remote monitoring"
 	size = 5
 	tgui_id = "NtosCyborgRemoteMonitor"
-<<<<<<< HEAD
-=======
-	ui_x = 600
-	ui_y = 800
->>>>>>> master
 
 /datum/computer_file/program/borg_monitor/ui_data(mob/user)
 	var/list/data = get_header_data()
 
 	data["card"] = FALSE
-<<<<<<< HEAD
 	if(checkID())
-=======
-	if(computer.GetID())
->>>>>>> master
 		data["card"] = TRUE
 
 	data["cyborgs"] = list()
 	for(var/mob/living/silicon/robot/R in GLOB.silicon_mobs)
-<<<<<<< HEAD
 		if(!evaluate_borg(R))
-=======
-		if((get_turf(computer)).z != (get_turf(R)).z)
-			continue
-		if(R.scrambledcodes)
->>>>>>> master
 			continue
 
 		var/list/upgrade
@@ -47,11 +32,7 @@
 
 		var/list/cyborg_data = list(
 			name = R.name,
-<<<<<<< HEAD
 			locked_down = R.lockcharge,
-=======
-			locked_down = R.locked_down,
->>>>>>> master
 			status = R.stat,
 			shell_discon = shell,
 			charge = R.cell ? round(R.cell.percent()) : null,
@@ -71,17 +52,12 @@
 			var/mob/living/silicon/robot/R = locate(params["ref"]) in GLOB.silicon_mobs
 			if(!istype(R))
 				return
-<<<<<<< HEAD
 			var/ID = checkID()
-=======
-			var/obj/item/card/id/ID = computer.GetID()
->>>>>>> master
 			if(!ID)
 				return
 			var/message = stripped_input(usr, message = "Enter message to be sent to remote cyborg.", title = "Send Message")
 			if(!message)
 				return
-<<<<<<< HEAD
 			to_chat(R, "<br><br><span class='notice'>Message from [ID] -- \"[message]\"</span><br>")
 			SEND_SOUND(R, 'sound/machines/twobeep_high.ogg')
 			if(R.connected_ai)
@@ -126,10 +102,3 @@
 
 /datum/computer_file/program/borg_monitor/syndicate/checkID()
 	return "\[CLASSIFIED\]" //no ID is needed for the syndicate version's message function, and the borg will see "[CLASSIFIED]" as the message sender.
-=======
-			to_chat(R, "<br><br><span class='notice'>Message from [ID.registered_name] -- \"[message]\"</span><br>")
-			SEND_SOUND(R, 'sound/machines/twobeep_high.ogg')
-			if(R.connected_ai)
-				to_chat(R.connected_ai, "<br><br><span class='notice'>Message from [ID.registered_name] to [R] -- \"[message]\"</span><br>")
-				SEND_SOUND(R.connected_ai, 'sound/machines/twobeep_high.ogg')
->>>>>>> master

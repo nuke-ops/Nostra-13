@@ -1,15 +1,9 @@
 /**
-<<<<<<< HEAD
  * Base state and helpers for states. Just does some sanity checks,
  * implement a proper state for in-depth checks.
  *
  * Copyright (c) 2020 Aleksej Komarov
  * SPDX-License-Identifier: MIT
-=======
- * tgui states
- *
- * Base state and helpers for states. Just does some sanity checks, implement a state for in-depth checks.
->>>>>>> master
  */
 
 /**
@@ -120,12 +114,8 @@
  * return UI_state The state of the UI.
  */
 /mob/living/proc/shared_living_ui_distance(atom/movable/src_object, viewcheck = TRUE)
-<<<<<<< HEAD
 	// If the object is obscured, close it.
 	if(viewcheck && !(src_object in view(src)))
-=======
-	if(viewcheck && !(src_object in view(src))) // If the object is obscured, close it.
->>>>>>> master
 		return UI_CLOSE
 	var/dist = get_dist(src_object, src)
 	// Open and interact if 1-0 tiles away.

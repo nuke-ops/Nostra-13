@@ -146,11 +146,7 @@
 /obj/machinery/computer/pandemic/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "Pandemic", name)
-=======
-		ui = new(user, src, ui_key, "Pandemic", name, 520, 550, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/computer/pandemic/ui_data(mob/user)

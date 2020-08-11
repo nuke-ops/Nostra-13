@@ -15,11 +15,7 @@
 /obj/machinery/chem_dispenser/chem_synthesizer/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "ChemDebugSynthesizer", name)
-=======
-		ui = new(user, src, ui_key, "ChemDebugSynthesizer", name, 390, 330, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/chem_dispenser/chem_synthesizer/ui_act(action, params)

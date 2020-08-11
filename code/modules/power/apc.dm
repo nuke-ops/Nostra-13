@@ -837,7 +837,6 @@
 
 // attack with hand - remove cell (if cover open) or interact with the APC
 
-<<<<<<< HEAD
 /obj/machinery/power/apc/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
 	if(isethereal(user))
 		var/mob/living/carbon/human/H = user
@@ -879,12 +878,6 @@
 				else
 					to_chat(H, "<span class='warning'>You can't transfer power to the APC!</span>")
 			return
-=======
-/obj/machinery/power/apc/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
-	. = ..()
-	if(.)
-		return
->>>>>>> master
 	if(opened && (!issilicon(user)))
 		if(cell)
 			user.visible_message("[user] removes \the [cell] from [src]!","<span class='notice'>You remove \the [cell].</span>")
@@ -897,28 +890,15 @@
 	if((stat & MAINT) && !opened) //no board; no interface
 		return
 
-<<<<<<< HEAD
 /obj/machinery/power/apc/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "Apc", name)
-=======
-/obj/machinery/power/apc/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
-										datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
-
-	if(!ui)
-		ui = new(user, src, ui_key, "Apc", name, 480, 460, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/power/apc/ui_data(mob/user)
 	var/list/data = list(
 		"locked" = locked,
-<<<<<<< HEAD
-=======
-		"lock_nightshift" = nightshift_requires_auth,
->>>>>>> master
 		"failTime" = failure_timer,
 		"isOperating" = operating,
 		"externalPower" = main_status,
@@ -1029,25 +1009,7 @@
 		. = UI_INTERACTIVE
 
 /obj/machinery/power/apc/ui_act(action, params)
-<<<<<<< HEAD
 	if(..() || !can_use(usr, 1) || (locked && area.hasSiliconAccessInArea(usr, PRIVILEDGES_SILICON|PRIVILEDGES_DRONE) && !failure_timer && action != "toggle_nightshift") || (integration_cog && (is_servant_of_ratvar(usr))))
-=======
-	if(..() || !can_use(usr, 1))
-		return
-	if(failure_timer)
-		if(action == "reboot")
-			failure_timer = 0
-			update_icon()
-			update()
-	if(action == "hijack" && can_use(usr, 1)) //don't need auth for hijack button
-		hijack(usr)
-		return
-	var/authorized = (!locked || area.hasSiliconAccessInArea(usr, PRIVILEDGES_SILICON|PRIVILEDGES_DRONE) || (integration_cog && (is_servant_of_ratvar(usr))))
-	if((action == "toggle_nightshift") && (!nightshift_requires_auth || authorized))
-		toggle_nightshift_lights()
-		return TRUE
-	if(!authorized)
->>>>>>> master
 		return
 	switch(action)
 		if("lock")

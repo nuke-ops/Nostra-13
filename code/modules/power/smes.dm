@@ -21,11 +21,6 @@
 	density = TRUE
 	use_power = NO_POWER_USE
 	circuit = /obj/item/circuitboard/machine/smes
-<<<<<<< HEAD
-=======
-	ui_x = 340
-	ui_y = 350
->>>>>>> master
 
 	var/capacity = 5e6 // maximum charge
 	var/charge = 0 // actual charge
@@ -211,9 +206,6 @@
 	if(panel_open)
 		return
 
-	if(panel_open)
-		return
-
 	if(outputting)
 		. += "smes-op1"
 	else
@@ -327,11 +319,7 @@
 /obj/machinery/power/smes/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "Smes", name)
-=======
-		ui = new(user, src, ui_key, "Smes", name, ui_x, ui_y, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/power/smes/ui_data()

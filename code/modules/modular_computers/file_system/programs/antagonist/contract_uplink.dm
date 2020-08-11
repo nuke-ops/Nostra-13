@@ -9,11 +9,6 @@
 	unsendable = 1
 	undeletable = 1
 	tgui_id = "SyndContractor"
-<<<<<<< HEAD
-=======
-	ui_x = 500
-	ui_y = 600
->>>>>>> master
 	var/error = ""
 	var/info_screen = TRUE
 	var/assigned = FALSE
@@ -25,10 +20,7 @@
 /datum/computer_file/program/contract_uplink/ui_act(action, params)
 	if(..())
 		return TRUE
-<<<<<<< HEAD
 
-=======
->>>>>>> master
 	var/mob/living/user = usr
 	var/obj/item/computer_hardware/hard_drive/small/syndicate/hard_drive = computer.all_components[MC_HDD]
 
@@ -48,7 +40,6 @@
 			// Bake their data right into the hard drive, or we don't allow non-antags gaining access to an unused
 			// contract system.
 			// We also create their contracts at this point.
-<<<<<<< HEAD
 			if (traitor_data)
 				// Only play greet sound, and handle contractor hub when assigning for the first time.
 				if (!traitor_data.contractor_hub)
@@ -58,16 +49,6 @@
 
 				// Stops any topic exploits such as logging in multiple times on a single system.
 				if (!assigned)
-=======
-			if(traitor_data)
-				// Only play greet sound, and handle contractor hub when assigning for the first time.
-				if(!traitor_data.contractor_hub)
-					user.playsound_local(user, 'sound/effects/contractstartup.ogg', 100, FALSE)
-					traitor_data.contractor_hub = new
-					traitor_data.contractor_hub.create_hub_items()
-				// Stops any topic exploits such as logging in multiple times on a single system.
-				if(!assigned)
->>>>>>> master
 					traitor_data.contractor_hub.create_contracts(traitor_data.owner)
 
 					hard_drive.traitor_data = traitor_data
@@ -78,13 +59,8 @@
 				error = "UNAUTHORIZED USER"
 			return TRUE
 		if("PRG_call_extraction")
-<<<<<<< HEAD
 			if (hard_drive.traitor_data.contractor_hub.current_contract.status != CONTRACT_STATUS_EXTRACTING)
 				if (hard_drive.traitor_data.contractor_hub.current_contract.handle_extraction(user))
-=======
-			if(hard_drive.traitor_data.contractor_hub.current_contract.status != CONTRACT_STATUS_EXTRACTING)
-				if(hard_drive.traitor_data.contractor_hub.current_contract.handle_extraction(user))
->>>>>>> master
 					user.playsound_local(user, 'sound/effects/confirmdropoff.ogg', 100, TRUE)
 					hard_drive.traitor_data.contractor_hub.current_contract.status = CONTRACT_STATUS_EXTRACTING
 
@@ -95,10 +71,7 @@
 			else
 				user.playsound_local(user, 'sound/machines/uplinkerror.ogg', 50)
 				error = "Already extracting... Place the target into the pod. If the pod was destroyed, this contract is no longer possible."
-<<<<<<< HEAD
 
-=======
->>>>>>> master
 			return TRUE
 		if("PRG_contract_abort")
 			var/contract_id = hard_drive.traitor_data.contractor_hub.current_contract.id
@@ -107,16 +80,10 @@
 			hard_drive.traitor_data.contractor_hub.assigned_contracts[contract_id].status = CONTRACT_STATUS_ABORTED
 
 			program_icon_state = "contracts"
-<<<<<<< HEAD
 
 			return TRUE
 		if("PRG_redeem_TC")
 			if (hard_drive.traitor_data.contractor_hub.contract_TC_to_redeem)
-=======
-			return TRUE
-		if("PRG_redeem_TC")
-			if(hard_drive.traitor_data.contractor_hub.contract_TC_to_redeem)
->>>>>>> master
 				var/obj/item/stack/telecrystal/crystals = new /obj/item/stack/telecrystal(get_turf(user),
 															hard_drive.traitor_data.contractor_hub.contract_TC_to_redeem)
 				if(ishuman(user))
@@ -132,11 +99,7 @@
 			else
 				user.playsound_local(user, 'sound/machines/uplinkerror.ogg', 50)
 			return TRUE
-<<<<<<< HEAD
 		if ("PRG_clear_error")
-=======
-		if("PRG_clear_error")
->>>>>>> master
 			error = ""
 			return TRUE
 		if("PRG_set_first_load_finished")
@@ -145,18 +108,11 @@
 		if("PRG_toggle_info")
 			info_screen = !info_screen
 			return TRUE
-<<<<<<< HEAD
 		if ("buy_hub")
 			if (hard_drive.traitor_data.owner.current == user)
 				var/item = params["item"]
 
 				for (var/datum/contractor_item/hub_item in hard_drive.traitor_data.contractor_hub.hub_items)
-=======
-		if("buy_hub")
-			if(hard_drive.traitor_data.owner.current == user)
-				var/item = params["item"]
-				for(var/datum/contractor_item/hub_item in hard_drive.traitor_data.contractor_hub.hub_items)
->>>>>>> master
 					if (hub_item.name == item)
 						hub_item.handle_purchase(hard_drive.traitor_data.contractor_hub, user)
 			else
@@ -168,19 +124,12 @@
 	var/screen_to_be = null
 
 	data["first_load"] = first_load
-<<<<<<< HEAD
 
 	if (hard_drive && hard_drive.traitor_data != null)
 		var/datum/antagonist/traitor/traitor_data = hard_drive.traitor_data
 		data += get_header_data()
 
 		if (traitor_data.contractor_hub.current_contract)
-=======
-	if(hard_drive && hard_drive.traitor_data != null)
-		var/datum/antagonist/traitor/traitor_data = hard_drive.traitor_data
-		data += get_header_data()
-		if(traitor_data.contractor_hub.current_contract)
->>>>>>> master
 			data["ongoing_contract"] = TRUE
 			screen_to_be = "single_contract"
 			if (traitor_data.contractor_hub.current_contract.status == CONTRACT_STATUS_EXTRACTING)
@@ -191,23 +140,16 @@
 		else
 			data["ongoing_contract"] = FALSE
 			data["extraction_enroute"] = FALSE
-<<<<<<< HEAD
 
-=======
->>>>>>> master
 		data["logged_in"] = TRUE
 		data["station_name"] = GLOB.station_name
 		data["redeemable_tc"] = traitor_data.contractor_hub.contract_TC_to_redeem
 		data["earned_tc"] = traitor_data.contractor_hub.contract_TC_payed_out
 		data["contracts_completed"] = traitor_data.contractor_hub.contracts_completed
 		data["contract_rep"] = traitor_data.contractor_hub.contract_rep
-<<<<<<< HEAD
 
 		data["info_screen"] = info_screen
 
-=======
-		data["info_screen"] = info_screen
->>>>>>> master
 		data["error"] = error
 
 		for (var/datum/contractor_item/hub_item in traitor_data.contractor_hub.hub_items)
@@ -250,15 +192,10 @@
 				direction = "???"
 
 			data["dropoff_direction"] = direction
-<<<<<<< HEAD
 
 	else
 		data["logged_in"] = FALSE
 
-=======
-	else
-		data["logged_in"] = FALSE
->>>>>>> master
 	program_icon_state = screen_to_be
 	update_computer_icon()
 	return data

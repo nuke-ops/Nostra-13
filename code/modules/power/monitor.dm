@@ -11,11 +11,6 @@
 	active_power_usage = 100
 	circuit = /obj/item/circuitboard/computer/powermonitor
 	tgui_id = "PowerMonitor"
-<<<<<<< HEAD
-=======
-	ui_x = 550
-	ui_y = 700
->>>>>>> master
 
 	var/obj/structure/cable/attached_wire
 	var/obj/machinery/power/apc/local_apc
@@ -90,11 +85,7 @@
 /obj/machinery/computer/monitor/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "PowerMonitor", name)
-=======
-		ui = new(user, src, ui_key, "PowerMonitor", name, ui_x, ui_y, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/computer/monitor/ui_data()

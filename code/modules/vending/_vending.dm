@@ -501,10 +501,10 @@ GLOBAL_LIST_EMPTY(vending_products)
 						C.bleed(150)
 						var/obj/item/bodypart/l_leg/l = C.get_bodypart(BODY_ZONE_L_LEG)
 						if(l)
-							l.receive_damage(brute=200)
+							l.receive_damage(brute=200, updating_health=TRUE)
 						var/obj/item/bodypart/r_leg/r = C.get_bodypart(BODY_ZONE_R_LEG)
 						if(r)
-							r.receive_damage(brute=200)
+							r.receive_damage(brute=200, updating_health=TRUE)
 						if(l || r)
 							C.visible_message("<span class='danger'>[C]'s legs shatter with a sickening crunch!</span>", \
 								"<span class='userdanger'>Your legs shatter with a sickening crunch!</span>")
@@ -530,12 +530,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 						for(var/i in C.bodyparts)
 							var/obj/item/bodypart/squish_part = i
 							if(squish_part.is_organic_limb())
-<<<<<<< HEAD
 								var/type_wound = pick(list(/datum/wound/blunt/critical, /datum/wound/blunt/severe, /datum/wound/blunt/moderate))
-=======
-								//var/type_wound = pick(WOUND_LIST_BONE)
-								var/type_wound = pick(list(/datum/wound/brute/bone/critical, /datum/wound/brute/bone/severe, /datum/wound/brute/bone/critical, /datum/wound/brute/bone/severe, /datum/wound/brute/bone/moderate))
->>>>>>> master
 								squish_part.force_wound_upwards(type_wound)
 							else
 								squish_part.receive_damage(brute=30)
@@ -685,13 +680,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 /obj/machinery/vending/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "Vending")
-=======
-		var/datum/asset/assets = get_asset_datum(/datum/asset/spritesheet/vending)
-		assets.send(user)
-		ui = new(user, src, ui_key, "Vending", ui_key, 450, 600, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/vending/ui_static_data(mob/user)

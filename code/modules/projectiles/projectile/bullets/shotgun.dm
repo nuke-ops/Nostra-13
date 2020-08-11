@@ -14,27 +14,13 @@
 	sharpness = SHARP_NONE
 	wound_bonus = 80
 
-/obj/item/projectile/bullet/shotgun_slug/executioner
-	name = "executioner slug" // admin only, can dismember limbs
-	sharpness = TRUE
-	wound_bonus = 0
-
-/obj/item/projectile/bullet/shotgun_slug/pulverizer
-	name = "pulverizer slug" // admin only, can crush bones
-	sharpness = FALSE
-	wound_bonus = 0
-
 /obj/item/projectile/bullet/shotgun_beanbag
 	name = "beanbag slug"
 	damage = 10
 	stamina = 70
 	wound_bonus = 20
-<<<<<<< HEAD
 	sharpness = SHARP_NONE
 	embedding = null
-=======
-	sharpness = FALSE
->>>>>>> master
 
 /obj/item/projectile/bullet/incendiary/shotgun
 	name = "incendiary slug"
@@ -105,15 +91,10 @@
 
 /obj/item/projectile/bullet/pellet/shotgun_buckshot
 	name = "buckshot pellet"
-<<<<<<< HEAD
 	damage = 7.5
 	wound_bonus = 5
 	bare_wound_bonus = 5
 	wound_falloff_tile = -2.5 // low damage + additional dropoff will already curb wounding potential anything past point blank
-=======
-	damage = 12.5
-	wound_bonus = -10
->>>>>>> master
 
 /obj/item/projectile/bullet/pellet/shotgun_rubbershot
 	name = "rubbershot pellet"

@@ -92,14 +92,7 @@
 	else
 		. = ..()
 
-<<<<<<< HEAD
 /obj/machinery/power/floodlight/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
-=======
-/obj/machinery/power/floodlight/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
-	. = ..()
-	if(.)
-		return
->>>>>>> master
 	var/current = setting
 	if(current == 1)
 		current = light_setting_list.len

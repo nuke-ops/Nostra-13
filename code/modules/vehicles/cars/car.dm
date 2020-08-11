@@ -57,11 +57,7 @@
 		return FALSE
 	return ..()
 
-<<<<<<< HEAD
 /obj/vehicle/sealed/car/on_attack_hand(mob/living/user, act_intent = user.a_intent, unarmed_attack_flags)
-=======
-/obj/vehicle/sealed/car/attack_hand(mob/living/user, act_intent = user.a_intent, unarmed_attack_flags)
->>>>>>> master
 	. = ..()
 	if(!(car_traits & CAN_KIDNAP))
 		return

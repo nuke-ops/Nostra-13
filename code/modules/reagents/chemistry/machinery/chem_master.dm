@@ -163,14 +163,7 @@
 /obj/machinery/chem_master/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "ChemMaster", name)
-=======
-		var/datum/asset/assets = get_asset_datum(/datum/asset/spritesheet/simple/pills)
-		assets.send(user)
-
-		ui = new(user, src, ui_key, "ChemMaster", name, 520, 550, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/chem_master/ui_data(mob/user)

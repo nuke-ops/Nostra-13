@@ -36,10 +36,6 @@
 	var/custom_head
 
 	wound_resistance = 10
-<<<<<<< HEAD
-=======
-	specific_locations = list("left eyebrow", "cheekbone", "neck", "throat", "jawline", "entire face")
->>>>>>> master
 	scars_covered_by_clothes = FALSE
 
 /obj/item/bodypart/head/can_dismember(obj/item/I)

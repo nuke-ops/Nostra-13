@@ -185,11 +185,7 @@
 /obj/machinery/rnd/bepis/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "Bepis", name)
-=======
-		ui = new(user, src, ui_key, "Bepis", name, 500, 480, master_ui, state)
->>>>>>> master
 		ui.open()
 	RefreshParts()
 

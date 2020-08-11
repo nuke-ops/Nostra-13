@@ -9,9 +9,6 @@
 	density = TRUE
 	pressure_resistance = 5*ONE_ATMOSPHERE
 
-	var/ui_x = 335
-	var/ui_y = 415
-
 /obj/structure/ore_box/attackby(obj/item/W, mob/user, params)
 	if (istype(W, /obj/item/stack/ore))
 		user.transferItemToLoc(W, src)
@@ -36,12 +33,6 @@
 /obj/structure/ore_box/examine(mob/living/user)
 	if(Adjacent(user) && istype(user))
 		ui_interact(user)
-<<<<<<< HEAD
-=======
-	. = ..()
-
-/obj/structure/ore_box/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
->>>>>>> master
 	. = ..()
 
 /obj/structure/ore_box/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
@@ -67,11 +58,7 @@
 /obj/structure/ore_box/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "OreBox", name)
-=======
-		ui = new(user, src, ui_key, "OreBox", name, ui_x, ui_y, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/structure/ore_box/ui_data()

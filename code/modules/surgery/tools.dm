@@ -248,13 +248,8 @@
 	sharpness = SHARP_EDGED
 	tool_behaviour = TOOL_SAW
 	toolspeed = 1
-<<<<<<< HEAD
 	wound_bonus = 5
 	bare_wound_bonus = 10
-=======
-	wound_bonus = 10
-	bare_wound_bonus = 15
->>>>>>> master
 
 /obj/item/circular_saw/Initialize()
 	. = ..()

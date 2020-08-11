@@ -2304,10 +2304,7 @@
 	metabolization_rate = 0.75 * REAGENTS_METABOLISM // 5u (WOUND_DETERMINATION_CRITICAL) will last for ~17 ticks
 	/// Whether we've had at least WOUND_DETERMINATION_SEVERE (2.5u) of determination at any given time. No damage slowdown immunity or indication we're having a second wind if it's just a single moderate wound
 	var/significant = FALSE
-<<<<<<< HEAD
 	self_consuming = TRUE
-=======
->>>>>>> master
 
 /datum/reagent/determination/on_mob_end_metabolize(mob/living/carbon/M)
 	if(significant)
@@ -2341,10 +2338,6 @@
 	color = "#E6E6DA"
 	taste_mult = 0
 
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 /datum/reagent/hairball
 	name = "Hairball"
 	description = "A bundle of keratinous bits and fibers, not easily digestible."
@@ -2392,8 +2385,4 @@
 			M.reagents.del_reagent(/datum/reagent/hairball)
 			return
 	..()
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> master

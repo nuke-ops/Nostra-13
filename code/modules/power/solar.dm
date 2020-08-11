@@ -346,11 +346,7 @@
 /obj/machinery/power/solar_control/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "SolarControl", name)
-=======
-		ui = new(user, src, ui_key, "SolarControl", name, 380, 230, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/power/solar_control/ui_data()

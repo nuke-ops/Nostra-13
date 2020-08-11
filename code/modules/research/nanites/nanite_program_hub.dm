@@ -66,11 +66,7 @@
 /obj/machinery/nanite_program_hub/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "NaniteProgramHub", name)
-=======
-		ui = new(user, src, ui_key, "NaniteProgramHub", name, ui_x, ui_y, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/nanite_program_hub/ui_data()

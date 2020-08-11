@@ -86,11 +86,7 @@
 /obj/item/nanite_remote/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "NaniteRemote", name)
-=======
-		ui = new(user, src, ui_key, "NaniteRemote", name, 420, 500, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/item/nanite_remote/ui_data()

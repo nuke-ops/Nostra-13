@@ -837,8 +837,4 @@
 /datum/chemical_reaction/cellulose_carbonization
 	results = list(/datum/reagent/carbon = 1)
 	required_reagents = list(/datum/reagent/cellulose = 1)
-<<<<<<< HEAD
 	required_temp = 512
-=======
-	required_temp = 512
->>>>>>> master

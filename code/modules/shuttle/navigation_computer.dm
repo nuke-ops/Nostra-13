@@ -29,11 +29,7 @@
 	. = ..()
 	GLOB.navigation_computers -= src
 
-<<<<<<< HEAD
 /obj/machinery/computer/camera_advanced/shuttle_docker/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
-=======
-/obj/machinery/computer/camera_advanced/shuttle_docker/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
->>>>>>> master
 	if(jammed)
 		to_chat(user, "<span class='warning'>The Syndicate is jamming the console!</span>")
 		return

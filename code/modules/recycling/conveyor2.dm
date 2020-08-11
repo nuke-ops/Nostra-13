@@ -174,14 +174,7 @@ GLOBAL_LIST_EMPTY(conveyors_by_id)
 		return ..()
 
 // attack with hand, move pulled object onto conveyor
-<<<<<<< HEAD
 /obj/machinery/conveyor/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
-=======
-/obj/machinery/conveyor/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
-	. = ..()
-	if(.)
-		return
->>>>>>> master
 	user.Move_Pulled(src)
 
 // make the conveyor broken

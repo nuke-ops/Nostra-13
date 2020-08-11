@@ -5,11 +5,6 @@
 	var/obj/item/disk/nanite_program/disk
 	icon_screen = "nanite_chamber_control"
 	circuit = /obj/item/circuitboard/computer/nanite_chamber_control
-<<<<<<< HEAD
-=======
-	ui_x = 380
-	ui_y = 570
->>>>>>> master
 
 /obj/machinery/computer/nanite_chamber_control/Initialize()
 	. = ..()
@@ -31,11 +26,7 @@
 /obj/machinery/computer/nanite_chamber_control/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "NaniteChamberControl", name)
-=======
-		ui = new(user, src, ui_key, "NaniteChamberControl", name, ui_x, ui_y, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/computer/nanite_chamber_control/ui_data()

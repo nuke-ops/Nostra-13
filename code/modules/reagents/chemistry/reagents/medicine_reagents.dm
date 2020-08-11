@@ -145,13 +145,8 @@
 		M.adjustToxLoss(-power, 0, TRUE) //heals TOXINLOVERs
 		M.adjustCloneLoss(-power, 0)
 		for(var/i in M.all_wounds)
-<<<<<<< HEAD
 			var/datum/wound/iter_wound = i
 			iter_wound.on_xadone(power)
-=======
-			var/datum/wound/W = i
-			W.on_xadone(power)
->>>>>>> master
 		REMOVE_TRAIT(M, TRAIT_DISFIGURED, TRAIT_GENERIC) //fixes common causes for disfiguration
 		. = 1
 	metabolization_rate = REAGENTS_METABOLISM * (0.00001 * (M.bodytemperature ** 2) + 0.5)
@@ -201,13 +196,8 @@
 		M.adjustToxLoss(-power, 0, TRUE)
 		M.adjustCloneLoss(-power, 0)
 		for(var/i in M.all_wounds)
-<<<<<<< HEAD
 			var/datum/wound/iter_wound = i
 			iter_wound.on_xadone(power)
-=======
-			var/datum/wound/W = i
-			W.on_xadone(power)
->>>>>>> master
 		REMOVE_TRAIT(M, TRAIT_DISFIGURED, TRAIT_GENERIC)
 		. = 1
 	..()
@@ -482,14 +472,9 @@
 		else if(method in list(PATCH, TOUCH))
 			M.adjustBruteLoss(-1 * reac_volume)
 			M.adjustFireLoss(-1 * reac_volume)
-<<<<<<< HEAD
 			for(var/i in C.all_wounds)
 				var/datum/wound/iter_wound = i
 				iter_wound.on_synthflesh(reac_volume)
-=======
-			for(var/datum/wound/burn/burn_wound in C.all_wounds)
-				burn_wound.regenerate_flesh(reac_volume)
->>>>>>> master
 			if(show_message)
 				to_chat(M, "<span class='danger'>You feel your burns and bruises healing! It stings like hell!</span>")
 			SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "painful_medicine", /datum/mood_event/painful_medicine)
@@ -1609,7 +1594,6 @@
 		to_chat(C, "[pick(GLOB.wisdoms)]") //give them a random wisdom
 	..()
 
-<<<<<<< HEAD
 // helps bleeding wounds clot faster
 /datum/reagent/medicine/coagulant
 	name = "Sanguirite"
@@ -1663,12 +1647,3 @@
 	name = "Synthi-Sanguirite"
 	description = "A synthetic coagulant used to help bleeding wounds clot faster. Not quite as effective as name brand Sanguirite, especially on patients with lots of cuts."
 	clot_coeff_per_wound = 0.8
-=======
-// handled in cut wounds process
-/datum/reagent/medicine/coagulant
-	name = "Sanguirite"
-	description = "A coagulant used to help open cuts clot faster."
-	reagent_state = LIQUID
-	color = "#bb2424"
-	metabolization_rate = 0.25 * REAGENTS_METABOLISM
->>>>>>> master

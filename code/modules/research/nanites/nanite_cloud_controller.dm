@@ -60,11 +60,7 @@
 /obj/machinery/computer/nanite_cloud_controller/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "NaniteCloudControl", name)
-=======
-		ui = new(user, src, ui_key, "NaniteCloudControl", name, ui_x, ui_y, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/computer/nanite_cloud_controller/ui_data()

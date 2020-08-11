@@ -19,14 +19,9 @@
 	ricochet_chance = 50
 	ricochet_auto_aim_angle = 10
 	ricochet_auto_aim_range = 3
-<<<<<<< HEAD
 	wound_bonus = -20
 	bare_wound_bonus = 10
 	embedding = list(embed_chance=15, fall_chance=2, jostle_chance=2, ignore_throwspeed_threshold=TRUE, pain_stam_pct=0.4, pain_mult=3, jostle_pain_mult=5, rip_time=10)
-=======
-	wound_bonus = -35
-	sharpness = TRUE
->>>>>>> master
 
 /obj/item/projectile/bullet/c38/match
 	name = ".38 Match bullet"

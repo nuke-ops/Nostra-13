@@ -263,11 +263,7 @@ GLOBAL_VAR_INIT(hhmysteryRoomNumber, 1337)
 /turf/closed/indestructible/hoteldoor/attack_tk(mob/user)
 	return //need to be close.
 
-<<<<<<< HEAD
 /turf/closed/indestructible/hoteldoor/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
-=======
-/turf/closed/indestructible/hoteldoor/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
->>>>>>> master
 	promptExit(user)
 
 /turf/closed/indestructible/hoteldoor/attack_animal(mob/user)

@@ -15,18 +15,18 @@
 	var/inside_flavor						// Flavor text description of inside sight/sound/smells/feels.
 	var/vore_sound = 'sound/vore/pred/swallow_01.ogg'	// Sound when ingesting someone
 	var/vore_verb = "ingest"				// Verb for eating with this in messages
-	var/human_prey_swallow_time = 5 SECONDS		// Time in deciseconds to swallow /mob/living/carbon/human
+	var/human_prey_swallow_time = 10 SECONDS		// Time in deciseconds to swallow /mob/living/carbon/human
 	var/nonhuman_prey_swallow_time = 5 SECONDS		// Time in deciseconds to swallow anything else
 	var/emoteTime = 30 SECONDS				// How long between stomach emotes at prey
-	var/digest_brute = 1					// Brute damage per tick in digestion mode
-	var/digest_burn = 2						// Burn damage per tick in digestion mode
+	var/digest_brute = 0					// Brute damage per tick in digestion mode
+	var/digest_burn = 1						// Burn damage per tick in digestion mode
 	var/digest_tickrate = 9					// Modulus this of air controller tick number to iterate gurgles on
-	var/immutable = TRUE					// Prevents this belly from being deleted
-	var/escapable = TRUE					// Belly can be resisted out of at any time
-	var/escapetime = 20 SECONDS				// Deciseconds, how long to escape this belly
+	var/immutable = FALSE					// Prevents this belly from being deleted
+	var/escapable = FALSE					// Belly can be resisted out of at any time
+	var/escapetime = 60 SECONDS				// Deciseconds, how long to escape this belly
 	var/digestchance = 0					// % Chance of stomach beginning to digest if prey struggles
 //	var/silenced = FALSE					// Will the heartbeat/fleshy internal loop play?
-	var/escapechance = 15 					// % Chance of prey beginning to escape if prey struggles.
+	var/escapechance = 0 					// % Chance of prey beginning to escape if prey struggles.
 
 	var/datum/belly/transferlocation = null	// Location that the prey is released if they struggle and get dropped off.
 	var/transferchance = 0 					// % Chance of prey being transferred to transfer location when resisting

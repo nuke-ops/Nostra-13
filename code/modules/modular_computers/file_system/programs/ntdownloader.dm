@@ -11,11 +11,6 @@
 	available_on_ntnet = 0
 	ui_header = "downloader_finished.gif"
 	tgui_id = "NtosNetDownloader"
-<<<<<<< HEAD
-=======
-	ui_x = 480
-	ui_y = 735
->>>>>>> master
 
 	var/datum/computer_file/program/downloaded_file = null
 	var/hacked_download = 0
@@ -148,11 +143,7 @@
 	data["disk_size"] = hard_drive.max_capacity
 	data["disk_used"] = hard_drive.used_capacity
 	var/list/all_entries[0]
-<<<<<<< HEAD
 	for(var/A in main_repo)
-=======
-	for(var/A in SSnetworks.station_network.available_station_software)
->>>>>>> master
 		var/datum/computer_file/program/P = A
 		// Only those programs our user can run will show in the list
 		if(!P.can_run(user,transfer = 1) || hard_drive.find_file_by_name(P.filename))
@@ -165,15 +156,9 @@
 			"size" = P.size,
 		)))
 	data["hackedavailable"] = FALSE
-<<<<<<< HEAD
 	if(emagged) // If we are running on emagged computer we have access to some "bonus" software
 		var/list/hacked_programs[0]
 		for(var/S in antag_repo)
-=======
-	if(computer.obj_flags & EMAGGED) // If we are running on emagged computer we have access to some "bonus" software
-		var/list/hacked_programs[0]
-		for(var/S in SSnetworks.station_network.available_antag_software)
->>>>>>> master
 			var/datum/computer_file/program/P = S
 			if(hard_drive.find_file_by_name(P.filename))
 				continue
@@ -200,7 +185,6 @@
 /datum/computer_file/program/ntnetdownload/kill_program(forced)
 	abort_file_download()
 	return ..(forced)
-<<<<<<< HEAD
 
 ////////////////////////
 //Syndicate Downloader//
@@ -222,5 +206,3 @@
 	. = ..()
 	main_repo = SSnetworks.station_network.available_antag_software
 	antag_repo = null
-=======
->>>>>>> master

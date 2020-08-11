@@ -7,19 +7,10 @@
 	requires_ntnet = FALSE
 	size = 4
 	tgui_id = "NtosCrewManifest"
-<<<<<<< HEAD
 
 /datum/computer_file/program/crew_manifest/ui_static_data(mob/user)
 	var/list/data = list()
 	data["manifest"] = GLOB.data_core.get_manifest_tg()
-=======
-	ui_x = 400
-	ui_y = 480
-
-/datum/computer_file/program/crew_manifest/ui_static_data(mob/user)
-	var/list/data = list()
-	data["manifest"] = GLOB.data_core.get_manifest()
->>>>>>> master
 	return data
 
 /datum/computer_file/program/crew_manifest/ui_data(mob/user)
@@ -48,15 +39,9 @@
 			if(computer && printer) //This option should never be called if there is no printer
 				var/contents = {"<h4>Crew Manifest</h4>
 								<br>
-<<<<<<< HEAD
 								[GLOB.data_core ? GLOB.data_core.get_manifest() : ""]
 								"}
 				if(!printer.print_text(contents,text("crew manifest ([])", STATION_TIME_TIMESTAMP("hh:mm:ss", world.time))))
-=======
-								[GLOB.data_core ? GLOB.data_core.get_manifest_html(0) : ""]
-								"}
-				if(!printer.print_text(contents,text("crew manifest ([])", station_time_timestamp())))
->>>>>>> master
 					to_chat(usr, "<span class='notice'>Hardware error: Printer was unable to print the file. It may be out of paper.</span>")
 					return
 				else

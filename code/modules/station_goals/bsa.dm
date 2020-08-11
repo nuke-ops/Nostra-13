@@ -226,11 +226,7 @@
 /obj/machinery/computer/bsa_control/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "BluespaceArtillery", name)
-=======
-		ui = new(user, src, ui_key, "BluespaceArtillery", name, ui_x, ui_y, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/computer/bsa_control/ui_data()

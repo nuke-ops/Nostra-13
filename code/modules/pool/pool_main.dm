@@ -177,11 +177,7 @@
 	else
 		return ..()
 
-<<<<<<< HEAD
 /turf/open/pool/on_attack_hand(mob/living/user, act_intent = user.a_intent, unarmed_attack_flags)
-=======
-/turf/open/pool/attack_hand(mob/living/user, act_intent = user.a_intent, unarmed_attack_flags)
->>>>>>> master
 	. = ..()
 	if(.)
 		return

@@ -6,11 +6,6 @@
 	network_destination = "atmos scan"
 	size = 4
 	tgui_id = "NtosAtmos"
-<<<<<<< HEAD
-=======
-	ui_x = 300
-	ui_y = 350
->>>>>>> master
 
 /datum/computer_file/program/atmosscan/ui_data(mob/user)
 	var/list/data = get_header_data()
@@ -18,7 +13,6 @@
 	var/turf/T = get_turf(ui_host())
 	if(T)
 		var/datum/gas_mixture/environment = T.return_air()
-<<<<<<< HEAD
 		var/list/env_gases = environment.get_gases()
 		var/pressure = environment.return_pressure()
 		var/total_moles = environment.total_moles()
@@ -29,18 +23,6 @@
 				var/gas_level = environment.get_moles(id)/total_moles
 				if(gas_level > 0)
 					airlist += list(list("name" = "[GLOB.meta_gas_names[id]]", "percentage" = round(gas_level*100, 0.01)))
-=======
-		var/list/env_gases = environment.gases
-		var/pressure = environment.return_pressure()
-		var/total_moles = environment.total_moles()
-		data["AirPressure"] = round(pressure,0.1)
-		data["AirTemp"] = round(environment.temperature-T0C)
-		if (total_moles)
-			for(var/id in env_gases)
-				var/gas_level = env_gases[id][MOLES]/total_moles
-				if(gas_level > 0)
-					airlist += list(list("name" = "[env_gases[id][GAS_META][META_GAS_NAME]]", "percentage" = round(gas_level*100, 0.01)))
->>>>>>> master
 		data["AirData"] = airlist
 	return data
 

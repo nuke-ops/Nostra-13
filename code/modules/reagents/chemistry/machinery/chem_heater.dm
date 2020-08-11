@@ -92,11 +92,7 @@
 /obj/machinery/chem_heater/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "ChemHeater", name)
-=======
-		ui = new(user, src, ui_key, "ChemHeater", name, 300, 400, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /obj/machinery/chem_heater/ui_data()
