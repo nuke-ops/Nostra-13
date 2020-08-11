@@ -53,17 +53,12 @@
 		if(victim)
 			LAZYADD(victim.all_scars, src)
 
-<<<<<<< HEAD
 	if(victim && victim.get_biological_state() == BIO_JUST_BONE)
 		description = pick(strings(BONE_SCAR_FILE, W.scar_keyword)) || "general disfigurement"
 	else
 		description = pick(strings(FLESH_SCAR_FILE, W.scar_keyword)) || "general disfigurement"
 
 	precise_location = pick(strings(SCAR_LOC_FILE, limb.body_zone))
-=======
-	description = pick(W.scarring_descriptions)
-	precise_location = pick(limb.specific_locations)
->>>>>>> master
 	switch(W.severity)
 		if(WOUND_SEVERITY_MODERATE)
 			visibility = 2
@@ -71,12 +66,9 @@
 			visibility = 3
 		if(WOUND_SEVERITY_CRITICAL)
 			visibility = 5
-<<<<<<< HEAD
 		if(WOUND_SEVERITY_LOSS)
 			visibility = 7
 			precise_location = "amputation"
-=======
->>>>>>> master
 
 /// Used when we finalize a scar from a healing cut
 /datum/scar/proc/lazy_attach(obj/item/bodypart/BP, datum/wound/W)
@@ -86,18 +78,11 @@
 		LAZYADD(victim.all_scars, src)
 
 /// Used to "load" a persistent scar
-<<<<<<< HEAD
 /datum/scar/proc/load(obj/item/bodypart/BP, version, description, specific_location, severity=WOUND_SEVERITY_SEVERE)
 	if(!(BP.body_zone in applicable_zones) || !BP.is_organic_limb())
 		qdel(src)
 		return
 
-=======
-/datum/scar/proc/load(obj/item/bodypart/BP, description, specific_location, severity=WOUND_SEVERITY_SEVERE)
-	if(!(BP.body_zone in applicable_zones))
-		qdel(src)
-		return
->>>>>>> master
 	limb = BP
 	src.severity = severity
 	LAZYADD(limb.scars, src)
@@ -113,11 +98,8 @@
 			visibility = 3
 		if(WOUND_SEVERITY_CRITICAL)
 			visibility = 5
-<<<<<<< HEAD
 		if(WOUND_SEVERITY_LOSS)
 			visibility = 7
-=======
->>>>>>> master
 	return TRUE
 
 /// What will show up in examine_more() if this scar is visible
@@ -130,18 +112,12 @@
 		if(WOUND_SEVERITY_MODERATE)
 			msg = "<span class='tinynotice'>[msg]</span>"
 		if(WOUND_SEVERITY_SEVERE)
-<<<<<<< HEAD
 			msg = "<span class='smallnoticeital'>[msg]</span>"
 		if(WOUND_SEVERITY_CRITICAL)
 			msg = "<span class='smallnoticeital'><b>[msg]</b></span>"
 		if(WOUND_SEVERITY_LOSS)
 			msg = "[victim.p_their(TRUE)] [limb.name] [description]." // different format
 			msg = "<span class='notice'><i><b>[msg]</b></i></span>"
-=======
-			msg = "<span class='smallnotice'>[msg]</span>"
-		if(WOUND_SEVERITY_CRITICAL)
-			msg = "<span class='smallnotice'><b>[msg]</b></span>"
->>>>>>> master
 	return "\t[msg]"
 
 /// Whether a scar can currently be seen by the viewer
@@ -154,21 +130,12 @@
 	if(!ishuman(victim) || isobserver(viewer) || victim == viewer)
 		return TRUE
 
-<<<<<<< HEAD
 	var/mob/living/carbon/human/human_victim = victim
 	if(istype(limb, /obj/item/bodypart/head))
 		if((human_victim.wear_mask && (human_victim.wear_mask.flags_inv & HIDEFACE)) || (human_victim.head && (human_victim.head.flags_inv & HIDEFACE)))
 			return FALSE
 	else if(limb.scars_covered_by_clothes)
 		var/num_covers = LAZYLEN(human_victim.clothingonpart(limb))
-=======
-	var/mob/living/carbon/human/H = victim
-	if(istype(limb, /obj/item/bodypart/head))
-		if((H.wear_mask && (H.wear_mask.flags_inv & HIDEFACE)) || (H.head && (H.head.flags_inv & HIDEFACE)))
-			return FALSE
-	else if(limb.scars_covered_by_clothes)
-		var/num_covers = LAZYLEN(H.clothingonpart(limb))
->>>>>>> master
 		if(num_covers + get_dist(viewer, victim) >= visibility)
 			return FALSE
 
@@ -177,13 +144,9 @@
 /// Used to format a scar to safe in preferences for persistent scars
 /datum/scar/proc/format()
 	if(!fake)
-<<<<<<< HEAD
 		return "[SCAR_CURRENT_VERSION]|[limb.body_zone]|[description]|[precise_location]|[severity]"
 
 /// Used to format a scar to safe in preferences for persistent scars
 /datum/scar/proc/format_amputated(body_zone)
 	description = pick(list("is several skintone shades paler than the rest of the body", "is a gruesome patchwork of artificial flesh", "has a large series of attachment scars at the articulation points"))
 	return "[SCAR_CURRENT_VERSION]|[body_zone]|[description]|amputated|[WOUND_SEVERITY_LOSS]"
-=======
-		return "[limb.body_zone]|[description]|[precise_location]|[severity]"
->>>>>>> master
