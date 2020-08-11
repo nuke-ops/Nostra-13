@@ -42,20 +42,11 @@
 	name = "Top Hat"
 	path = /obj/item/clothing/head/that
 
-<<<<<<< HEAD
 /datum/gear/head/maidband
 	name = "Maid headband"
 	path= /obj/item/clothing/head/maid
 
 /datum/gear/head/flakhelm
-=======
-/datum/gear/maidband
-	name = "Maid headband"
-	category = SLOT_HEAD
-	path= /obj/item/clothing/head/maid
-
-/datum/gear/flakhelm
->>>>>>> master
 	name = "Flak Helmet"
 	path = /obj/item/clothing/head/flakhelm
 	cost = 2

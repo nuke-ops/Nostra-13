@@ -12,10 +12,6 @@
 
 /datum/gear/hands/dice
 	name = "Dice bag"
-<<<<<<< HEAD
-=======
-	category = SLOT_HANDS
->>>>>>> master
 	path = /obj/item/storage/box/dice
 
 /datum/gear/hands/eightball

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /datum/gear/backpack
 	category = LOADOUT_CATEGORY_BACKPACK
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_GENERAL
@@ -10,14 +9,6 @@
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_TOYS
 
 /datum/gear/backpack/tennis
-=======
-/datum/gear/plushbox
-	name = "Plushie Choice Box"
-	category = SLOT_IN_BACKPACK
-	path = /obj/item/choice_beacon/box/plushie
-
-/datum/gear/tennis
->>>>>>> master
 	name = "Classic Tennis Ball"
 	path = /obj/item/toy/tennis
 	subcategory = LOADOUT_SUBCATEGORY_BACKPACK_TOYS
@@ -107,3 +98,7 @@
 	name = "A diamond ring box"
 	path = /obj/item/storage/fancy/ringbox/diamond
 	cost = 5
+
+/datum/gear/backpack/necklace//this is here because loadout doesn't support proper accessories
+	name = "A renameable necklace"
+	path = /obj/item/clothing/accessory/necklace
