@@ -1,0 +1,19 @@
+import { NtosWindow } from '../layouts';
+import { PowerMonitorContent } from './PowerMonitor';
+
+export const NtosPowerMonitor = () => {
+  return (
+<<<<<<< HEAD
+    <NtosWindow
+      width={550}
+      height={700}
+      resizable>
+=======
+    <NtosWindow resizable>
+>>>>>>> master
+      <NtosWindow.Content scrollable>
+        <PowerMonitorContent />
+      </NtosWindow.Content>
+    </NtosWindow>
+  );
+};
