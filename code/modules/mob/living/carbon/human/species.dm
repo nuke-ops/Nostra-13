@@ -74,11 +74,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/datum/outfit/outfit_important_for_life // A path to an outfit that is important for species life e.g. plasmaman outfit
 
 	// species-only traits. Can be found in DNA.dm
-<<<<<<< HEAD
 	var/list/species_traits = list(HAS_FLESH,HAS_BONE) //by default they can scar and have bones/flesh unless set to something else
-=======
-	var/list/species_traits = list(CAN_SCAR) //by default they can scar unless set to something else
->>>>>>> master
 	// generic traits tied to having the species
 	var/list/inherent_traits = list()
 	var/inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
@@ -1463,11 +1459,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		target.grabbedby(user)
 		return 1
 
-<<<<<<< HEAD
 /datum/species/proc/harm(mob/living/carbon/human/user, mob/living/carbon/human/target, datum/martial_art/attacker_style, attackchain_flags = NONE)
-=======
-/datum/species/proc/harm(mob/living/carbon/human/user, mob/living/carbon/human/target, datum/martial_art/attacker_style, unarmed_attack_flags = NONE)
->>>>>>> master
 	if(!attacker_style && HAS_TRAIT(user, TRAIT_PACIFISM))
 		to_chat(user, "<span class='warning'>You don't want to harm [target]!</span>")
 		return FALSE
@@ -1479,11 +1471,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			target_message = "<span class='warning'>[target] blocks your attack!</span>")
 		return FALSE
 
-<<<<<<< HEAD
 	if(!(attackchain_flags & ATTACK_IS_PARRY_COUNTERATTACK))
-=======
-	if(!(unarmed_attack_flags & UNARMED_ATTACK_PARRY))
->>>>>>> master
 		if(HAS_TRAIT(user, TRAIT_PUGILIST))//CITADEL CHANGE - makes punching cause staminaloss but funny martial artist types get a discount
 			user.adjustStaminaLossBuffered(1.5)
 		else
@@ -1525,11 +1513,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		var/obj/item/bodypart/affecting = target.get_bodypart(ran_zone(user.zone_selected))
 
 		var/miss_chance = 100//calculate the odds that a punch misses entirely. considers stamina and brute damage of the puncher. punches miss by default to prevent weird cases
-<<<<<<< HEAD
 		if(attackchain_flags & ATTACK_IS_PARRY_COUNTERATTACK)
-=======
-		if(unarmed_attack_flags & UNARMED_ATTACK_PARRY)
->>>>>>> master
 			miss_chance = 0
 		else
 			if(user.dna.species.punchdamagelow)
@@ -1716,11 +1700,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 /datum/species/proc/spec_hitby(atom/movable/AM, mob/living/carbon/human/H)
 	return
 
-<<<<<<< HEAD
 /datum/species/proc/spec_attack_hand(mob/living/carbon/human/M, mob/living/carbon/human/H, datum/martial_art/attacker_style, act_intent, attackchain_flags)
-=======
-/datum/species/proc/spec_attack_hand(mob/living/carbon/human/M, mob/living/carbon/human/H, datum/martial_art/attacker_style, act_intent, unarmed_attack_flags)
->>>>>>> master
 	if(!istype(M))
 		return
 	CHECK_DNA_AND_SPECIES(M)
@@ -1740,11 +1720,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			grab(M, H, attacker_style)
 
 		if("harm")
-<<<<<<< HEAD
 			harm(M, H, attacker_style, attackchain_flags)
-=======
-			harm(M, H, attacker_style, unarmed_attack_flags)
->>>>>>> master
 
 		if("disarm")
 			disarm(M, H, attacker_style)
@@ -1990,11 +1966,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		target.ShoveOffBalance(SHOVE_OFFBALANCE_DURATION)
 		log_combat(user, target, "shoved", append_message)
 
-<<<<<<< HEAD
 /datum/species/proc/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/H, forced = FALSE, spread_damage = FALSE, wound_bonus = 0, bare_wound_bonus = 0, sharpness = SHARP_NONE)
-=======
-/datum/species/proc/apply_damage(damage, damagetype = BRUTE, def_zone = null, blocked, mob/living/carbon/human/H, forced = FALSE, spread_damage = FALSE, wound_bonus = 0, bare_wound_bonus = 0, sharpness = FALSE)
->>>>>>> master
 	SEND_SIGNAL(H, COMSIG_MOB_APPLY_DAMGE, damage, damagetype, def_zone, wound_bonus, bare_wound_bonus, sharpness) // make sure putting wound_bonus here doesn't screw up other signals or uses for this signal
 	var/hit_percent = (100-(blocked+armor))/100
 	hit_percent = (hit_percent * (100-H.physiology.damage_resistance))/100
@@ -2313,29 +2285,20 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		return mutant_bodyparts[tail_type] || mutant_bodyparts[wagging_type]
 
 /datum/species/proc/is_wagging_tail(mob/living/carbon/human/H)
-<<<<<<< HEAD
 	return mutant_bodyparts[wagging_type]
-=======
-	return mutant_bodyparts["waggingtail_lizard"]
->>>>>>> master
 
 /datum/species/proc/start_wagging_tail(mob/living/carbon/human/H)
 	if(tail_type && wagging_type)
 		if(mutant_bodyparts[tail_type])
 			mutant_bodyparts[wagging_type] = mutant_bodyparts[tail_type]
 			mutant_bodyparts -= tail_type
-<<<<<<< HEAD
 			if(tail_type == "tail_lizard") //special lizard thing
-=======
-			if(mutant_bodyparts["spines"] || mutant_bodyparts["waggingspines"]) //special lizard thing
->>>>>>> master
 				mutant_bodyparts["waggingspines"] = mutant_bodyparts["spines"]
 				mutant_bodyparts -= "spines"
 			H.update_body()
 
 /datum/species/proc/stop_wagging_tail(mob/living/carbon/human/H)
 	if(tail_type && wagging_type)
-<<<<<<< HEAD
 		if(mutant_bodyparts[wagging_type])
 			mutant_bodyparts[tail_type] = mutant_bodyparts[wagging_type]
 			mutant_bodyparts -= wagging_type
@@ -2343,11 +2306,3 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				mutant_bodyparts["spines"] = mutant_bodyparts["waggingspines"]
 				mutant_bodyparts -= "waggingspines"
 			H.update_body()
-=======
-		mutant_bodyparts[tail_type] = mutant_bodyparts[wagging_type]
-		mutant_bodyparts -= wagging_type
-		if(mutant_bodyparts["spines"] || mutant_bodyparts["waggingspines"]) //special lizard thing
-			mutant_bodyparts["spines"] = mutant_bodyparts["waggingspines"]
-			mutant_bodyparts -= "waggingspines"
-		H.update_body()
->>>>>>> master

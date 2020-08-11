@@ -296,11 +296,7 @@
 /datum/action/innate/swap_body/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "SlimeBodySwapper", name)
-=======
-		ui = new(user, src, ui_key, "SlimeBodySwapper", name, 400, 400, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /datum/action/innate/swap_body/ui_data(mob/user)

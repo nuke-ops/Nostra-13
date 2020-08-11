@@ -52,52 +52,5 @@
 	to_chat(victim, "<span class='danger'>[bomb] was boobytrapped!</span>")
 	return TRUE
 
-<<<<<<< HEAD
 /mob/living/simple_animal/hostile/guardian/bomb/proc/on_failure(atom/bomb)
 	to_chat(src, "<span class='danger'><b>Failure! Your trap didn't catch anyone this time.</span></B>")
-=======
-
-/obj/guardian_bomb/proc/disguise(obj/A)
-	A.forceMove(src)
-	stored_obj = A
-	opacity = A.opacity
-	anchored = A.anchored
-	density = A.density
-	appearance = A.appearance
-	addtimer(CALLBACK(src, .proc/disable), 600)
-
-/obj/guardian_bomb/proc/disable()
-	stored_obj.forceMove(get_turf(src))
-	to_chat(spawner, "<span class='danger'><B>Failure! Your trap didn't catch anyone this time.</span></B>")
-	qdel(src)
-
-/obj/guardian_bomb/proc/detonate(mob/living/user)
-	if(isliving(user))
-		if(user != spawner && user != spawner.summoner && !spawner.hasmatchingsummoner(user))
-			to_chat(user, "<span class='danger'><B>[src] was boobytrapped!</span></B>")
-			to_chat(spawner, "<span class='danger'><B>Success! Your trap caught [user]</span></B>")
-			var/turf/T = get_turf(src)
-			stored_obj.forceMove(T)
-			playsound(T,'sound/effects/explosion2.ogg', 200, 1)
-			new /obj/effect/temp_visual/explosion(T)
-			user.ex_act(EXPLODE_HEAVY)
-			qdel(src)
-		else
-			to_chat(user, "<span class='holoparasite'>[src] glows with a strange <font color=\"[spawner.guardiancolor]\">light</font>, and you don't touch it.</span>")
-
-/obj/guardian_bomb/Bump(atom/A)
-	detonate(A)
-	..()
-
-/obj/guardian_bomb/attackby(mob/living/user)
-	detonate(user)
-
-//ATTACK HAND IGNORING PARENT RETURN VALUE
-/obj/guardian_bomb/attack_hand(mob/living/user, act_intent = user.a_intent, unarmed_attack_flags)
-	detonate(user)
-
-/obj/guardian_bomb/examine(mob/user)
-	. = stored_obj.examine(user)
-	if(get_dist(user,src)<=2)
-		. += "<span class='holoparasite'>It glows with a strange <font color=\"[spawner.guardiancolor]\">light</font>!</span>"
->>>>>>> master

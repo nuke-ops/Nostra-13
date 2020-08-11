@@ -25,11 +25,7 @@
 /datum/notificationpanel/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-<<<<<<< HEAD
 		ui = new(user, src, "NotificationPreferences")
-=======
-		ui = new(user, src, ui_key, "NotificationPreferences", "Notification Preferences", 270, 360, master_ui, state)
->>>>>>> master
 		ui.open()
 
 /datum/notificationpanel/ui_data(mob/user)

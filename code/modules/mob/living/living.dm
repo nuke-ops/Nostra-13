@@ -129,6 +129,7 @@
 				to_chat(src, "<span class='warning'>[L] is holding someone at gunpoint, you cannot push past.</span>")
 			return TRUE
 		//END OF SKYRAT CHANGES
+		
 	//CIT CHANGES START HERE - makes it so resting stops you from moving through standing folks without a short delay
 		if(!CHECK_MOBILITY(src, MOBILITY_STAND) && CHECK_MOBILITY(L, MOBILITY_STAND))
 			var/origtargetloc = L.loc
@@ -833,12 +834,8 @@
 	else
 		throw_alert("gravity", /obj/screen/alert/weightless)
 	if(!override && !is_flying())
-<<<<<<< HEAD
 		INVOKE_ASYNC(src, /atom/movable.proc/float, !has_gravity)
 
-=======
-		float(!has_gravity)
->>>>>>> master
 /mob/living/float(on)
 	if(throwing)
 		return

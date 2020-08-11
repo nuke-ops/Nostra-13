@@ -105,12 +105,7 @@
 /mob/living/carbon/attack_drone(mob/living/simple_animal/drone/user)
 	return //so we don't call the carbon's attack_hand().
 
-<<<<<<< HEAD
 /mob/living/carbon/on_attack_hand(mob/living/carbon/human/user, act_intent, unarmed_attack_flags)
-=======
-//ATTACK HAND IGNORING PARENT RETURN VALUE
-/mob/living/carbon/attack_hand(mob/living/carbon/human/user, act_intent, unarmed_attack_flags)
->>>>>>> master
 	. = ..()
 	if(.) //was the attack blocked?
 		return
@@ -130,16 +125,10 @@
 				if(S.next_step(user, act_intent))
 					return TRUE
 
-<<<<<<< HEAD
 	for(var/i in all_wounds)
 		var/datum/wound/W = i
 		if(W.try_handling(user))
 			return TRUE
-=======
-	for(var/datum/wound/W in all_wounds)
-		if(W.try_handling(user))
-			return 1
->>>>>>> master
 
 /mob/living/carbon/attack_paw(mob/living/carbon/monkey/M)
 
@@ -479,7 +468,6 @@
 	var/obj/item/bodypart/limb = get_bodypart(zone)
 	if(!limb)
 		return
-<<<<<<< HEAD
 
 /mob/living/carbon/send_item_attack_message(obj/item/I, mob/living/user, hit_area, obj/item/bodypart/hit_bodypart, totitemdamage)
 	var/message_verb = "attacked"
@@ -512,5 +500,3 @@
 	visible_message("<span class='danger'>[attack_message]</span>",\
 		"<span class='userdanger'>[attack_message_local]</span>", null, COMBAT_MESSAGE_RANGE)
 	return TRUE
-=======
->>>>>>> master
