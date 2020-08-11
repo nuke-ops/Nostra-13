@@ -92,22 +92,8 @@
 	if(!all_wounds || !(user.a_intent == INTENT_HELP || user == src))
 		return ..()
 
-<<<<<<< HEAD
 	for(var/i in shuffle(all_wounds))
 		var/datum/wound/W = i
-=======
-	// The following priority/nonpriority searching is so that if we have two wounds on a limb that use the same item for treatment (gauze can bandage cuts AND splint broken bones),
-	// we prefer whichever wound is not already treated (ignore the splinted broken bone for the open cut). If there's no priority wounds that this can treat, go through the
-	// non-priority ones randomly.
-	var/list/nonpriority_wounds = list()
-	for(var/datum/wound/W in shuffle(all_wounds))
-		if(!W.treat_priority)
-			nonpriority_wounds += W
-		else if(W.treat_priority && W.try_treating(I, user))
-			return 1
-
-	for(var/datum/wound/W in shuffle(nonpriority_wounds))
->>>>>>> master
 		if(W.try_treating(I, user))
 			return 1
 
@@ -1214,7 +1200,6 @@
 /**
   * generate_fake_scars()- for when you want to scar someone, but you don't want to hurt them first. These scars don't count for temporal scarring (hence, fake)
   *
-<<<<<<< HEAD
   * If you want a specific wound scar, pass that wound type as the second arg, otherwise you can pass a list like WOUND_LIST_SLASH to generate a random cut scar.
   *
   * Arguments:
@@ -1225,18 +1210,6 @@
 	for(var/i in 1 to num_scars)
 		var/datum/scar/scaries = new
 		var/obj/item/bodypart/scar_part = pick(bodyparts)
-=======
-  * If you want a specific wound scar, pass that wound type as the second arg, otherwise you can pass a list like WOUND_LIST_CUT to generate a random cut scar.
-  *
-  * Arguments:
-  * * num_scars- A number for how many scars you want to add
-  * * forced_type- Which wound or category of wounds you want to choose from, WOUND_LIST_BONE, WOUND_LIST_CUT, or WOUND_LIST_BURN (or some combination). If passed a list, picks randomly from the listed wounds. Defaults to all 3 types
-  */
-/mob/living/carbon/proc/generate_fake_scars(num_scars, forced_type)
-	for(var/i in 1 to num_scars)
-		var/datum/scar/S = new
-		var/obj/item/bodypart/BP = pick(bodyparts)
->>>>>>> master
 
 		var/wound_type
 		if(forced_type)
@@ -1245,7 +1218,6 @@
 			else
 				wound_type = forced_type
 		else
-<<<<<<< HEAD
 			wound_type = pick(GLOB.global_all_wound_types)
 
 		var/datum/wound/phantom_wound = new wound_type
@@ -1260,11 +1232,3 @@
   */
 /mob/living/carbon/proc/get_biological_state()
 	return BIO_FLESH_BONE
-=======
-			wound_type = pick(WOUND_LIST_BONE + WOUND_LIST_CUT + WOUND_LIST_BURN)
-
-		var/datum/wound/W = new wound_type
-		S.generate(BP, W)
-		S.fake = TRUE
-		QDEL_NULL(W)
->>>>>>> master

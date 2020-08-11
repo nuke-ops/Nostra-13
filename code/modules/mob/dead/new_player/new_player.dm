@@ -568,18 +568,6 @@
 		client.prefs.scars_list["[cur_scar_index]"] = valid_scars
 		client.prefs.save_character()
 	client.prefs.copy_to(H)
-	var/cur_scar_index = client.prefs.scars_index
-	if(client.prefs.persistent_scars && client.prefs.scars_list["[cur_scar_index]"])
-		var/scar_string = client.prefs.scars_list["[cur_scar_index]"]
-		var/valid_scars = ""
-		for(var/scar_line in splittext(scar_string, ";"))
-			if(H.load_scar(scar_line))
-				valid_scars += "[scar_line];"
-
-		client.prefs.scars_list["[cur_scar_index]"] = valid_scars
-		client.prefs.save_character()
-
-	client.prefs.copy_to(H)
 	H.dna.update_dna_identity()
 	if(mind)
 		if(transfer_after)

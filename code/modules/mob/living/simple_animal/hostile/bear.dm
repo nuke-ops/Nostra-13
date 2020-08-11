@@ -33,11 +33,7 @@
 	melee_damage_upper = 15
 	wound_bonus = -5
 	bare_wound_bonus = 10 // BEAR wound bonus am i right
-<<<<<<< HEAD
 	sharpness = SHARP_EDGED
-=======
-	sharpness = TRUE
->>>>>>> master
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "claw"
 	attack_sound = 'sound/weapons/bladeslice.ogg'

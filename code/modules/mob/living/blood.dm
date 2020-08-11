@@ -14,12 +14,8 @@
 		var/obj/item/bodypart/BP = X
 		temp_bleed += BP.get_bleed_rate()
 		BP.generic_bleedstacks = max(0, BP.generic_bleedstacks - 1)
-<<<<<<< HEAD
 	if(temp_bleed)
 		bleed(temp_bleed)
-=======
-	bleed(temp_bleed)
->>>>>>> master
 
 	//Blood regeneration if there is some space
 	if(blood_volume < BLOOD_VOLUME_NORMAL)
@@ -37,12 +33,9 @@
 /mob/living/carbon/human/handle_blood()
 
 	if(NOBLOOD in dna.species.species_traits || bleedsuppress || (HAS_TRAIT(src, TRAIT_FAKEDEATH)))
-<<<<<<< HEAD
 		return
 
 	if(HAS_TRAIT(src, TRAIT_NOMARROW)) //Bloodsuckers don't need to be here.
-=======
->>>>>>> master
 		return
 
 	if(bodytemperature >= TCRYO && !(HAS_TRAIT(src, TRAIT_HUSK))) //cryosleep or husked people do not pump the blood.
@@ -69,13 +62,6 @@
 		//Effects of bloodloss
 		var/word = pick("dizzy","woozy","faint")
 		switch(blood_volume)
-<<<<<<< HEAD
-=======
-			if(BLOOD_VOLUME_EXCESS to BLOOD_VOLUME_MAX_LETHAL)
-				if(prob(15))
-					to_chat(src, "<span class='userdanger'>Blood starts to tear your skin apart. You're going to burst!</span>")
-					gib()
->>>>>>> master
 			if(BLOOD_VOLUME_MAXIMUM to BLOOD_VOLUME_EXCESS)
 				if(prob(10))
 					to_chat(src, "<span class='warning'>You feel terribly bloated.</span>")
