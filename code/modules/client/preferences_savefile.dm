@@ -732,9 +732,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	vorepref = sanitize_text(S["vore_pref"], "Ask")
 	if(!length(vorepref)) vorepref = "Ask"
-	extremepref 					= sanitize_text(S["extremepref"], "No") //god has forsaken me
+	extremepref					= sanitize_text(S["extremepref"], "No") //god has forsaken me
 	if(!length(extremepref)) extremepref = "No"
-	extremeharm 					= sanitize_text(S["extremeharm"], "No")
+	extremeharm					= sanitize_text(S["extremeharm"], "No")
 	if(!length(extremeharm)) extremeharm = "No"
 
 	persistent_scars = sanitize_integer(persistent_scars)
