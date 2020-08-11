@@ -478,4 +478,3 @@
 // Living signals
 
 #define COMSIG_LIVING_UPDATED_MOBILITY "living_updated_mobility" //from base of (/mob/living/proc/update_mobility): (mobility_flags)
-

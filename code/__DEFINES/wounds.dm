@@ -1,3 +1,4 @@
+
 #define WOUND_DAMAGE_EXPONENT	1.225
 
 /// an attack must do this much damage after armor in order to roll for being a wound (incremental pressure damage need not apply)
@@ -7,7 +8,6 @@
 /// any damage dealt over this is ignored for damage rolls unless the target has the frail quirk (35^1.4=145)
 #define WOUND_MAX_CONSIDERED_DAMAGE	35
 
-#define WOUND_DAMAGE_EXPONENT	1.4
 
 #define WOUND_SEVERITY_TRIVIAL	0 // for jokey/meme wounds like stubbed toe, no standard messages/sounds or second winds
 #define WOUND_SEVERITY_MODERATE	1
@@ -23,9 +23,6 @@
 #define WOUND_PIERCE	3
 /// any concentrated burn attack (lasers really). rolls for burning wounds
 #define WOUND_BURN		4
-#define WOUND_BRUTE	0
-#define WOUND_SHARP	1
-#define WOUND_BURN	2
 
 // How much determination reagent to add each time someone gains a new wound in [/datum/wound/proc/second_wind()]
 #define WOUND_DETERMINATION_MODERATE	1

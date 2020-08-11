@@ -151,6 +151,8 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 
 #define isclown(A) (istype(A, /mob/living/simple_animal/hostile/retaliate/clown))
 
+//Misc mobs
+
 #define isterrorspider(A) (istype((A), /mob/living/simple_animal/hostile/poison/terror_spider)) //skyrat change
 
 #define isobserver(A) (istype(A, /mob/dead/observer))
