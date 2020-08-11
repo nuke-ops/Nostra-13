@@ -12,11 +12,6 @@ export const Uplink = (props, context) => {
   const { telecrystals } = data;
   return (
     <Window
-<<<<<<< HEAD
-      width={620}
-      height={580}
-=======
->>>>>>> master
       theme="syndicate"
       resizable>
       <Window.Content scrollable>

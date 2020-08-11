@@ -25,14 +25,7 @@ const damageTypes = [
 
 export const Cryo = () => {
   return (
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/Cryo.js
-    <Window
-      width={400}
-      height={550}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master:tgui-next/packages/tgui/interfaces/Cryo.js
       <Window.Content scrollable>
         <CryoContent />
       </Window.Content>

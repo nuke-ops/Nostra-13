@@ -5,14 +5,7 @@ import { NtosWindow } from '../layouts';
 
 export const NtosCyborgRemoteMonitor = (props, context) => {
   return (
-<<<<<<< HEAD
-    <NtosWindow
-      width={600}
-      height={800}
-      resizable>
-=======
     <NtosWindow resizable>
->>>>>>> master
       <NtosWindow.Content scrollable>
         <NtosCyborgRemoteMonitorContent />
       </NtosWindow.Content>

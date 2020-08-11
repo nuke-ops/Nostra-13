@@ -21,14 +21,7 @@ export const NaniteProgramHub = (props, context) => {
     && programs[selectedCategory]
     || [];
   return (
-<<<<<<< HEAD
-    <Window
-      width={500}
-      height={700}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Section
           title="Program Disk"

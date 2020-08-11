@@ -5,10 +5,7 @@
  */
 
 import { classes, pureComponentHooks } from 'common/react';
-<<<<<<< HEAD:tgui/packages/tgui/components/Flex.js
-=======
 import { IS_IE8 } from '../byond';
->>>>>>> master:tgui-next/packages/tgui/components/Flex.js
 import { Box, unit } from './Box';
 
 export const computeFlexProps = props => {
@@ -25,17 +22,10 @@ export const computeFlexProps = props => {
   return {
     className: classes([
       'Flex',
-<<<<<<< HEAD:tgui/packages/tgui/components/Flex.js
-      Byond.IS_LTE_IE10 && (
-        direction === 'column'
-          ? 'Flex--iefix--column'
-          : 'Flex--iefix'
-=======
       IS_IE8 && (
         direction === 'column'
           ? 'Flex--ie8--column'
           : 'Flex--ie8'
->>>>>>> master:tgui-next/packages/tgui/components/Flex.js
       ),
       inline && 'Flex--inline',
       spacing > 0 && 'Flex--spacing--' + spacing,
@@ -73,11 +63,7 @@ export const computeFlexItemProps = props => {
   return {
     className: classes([
       'Flex__item',
-<<<<<<< HEAD:tgui/packages/tgui/components/Flex.js
-      Byond.IS_LTE_IE10 && 'Flex__item--iefix',
-=======
       IS_IE8 && 'Flex__item--ie8',
->>>>>>> master:tgui-next/packages/tgui/components/Flex.js
       className,
     ]),
     style: {

@@ -6,15 +6,7 @@ import { Window } from '../layouts';
 
 export const RemoteRobotControl = (props, context) => {
   return (
-<<<<<<< HEAD
-    <Window
-      title="Remote Robot Control"
-      width={500}
-      height={500}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <RemoteRobotControlContent />
       </Window.Content>
@@ -27,10 +19,7 @@ export const RemoteRobotControlContent = (props, context) => {
   const {
     robots = [],
   } = data;
-<<<<<<< HEAD
-=======
 
->>>>>>> master
   if (!robots.length) {
     return (
       <Section>
@@ -40,10 +29,7 @@ export const RemoteRobotControlContent = (props, context) => {
       </Section>
     );
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> master
   return robots.map(robot => {
     return (
       <Section

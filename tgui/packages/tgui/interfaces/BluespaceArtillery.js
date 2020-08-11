@@ -12,13 +12,7 @@ export const BluespaceArtillery = (props, context) => {
     target,
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      width={400}
-      height={220}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         {!!notice && (
           <NoticeBox>

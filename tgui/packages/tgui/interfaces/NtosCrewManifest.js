@@ -1,35 +1,18 @@
-<<<<<<< HEAD
-import { map } from 'common/collections';
-import { useBackend } from '../backend';
-import { Button, Section, Table } from '../components';
-=======
 import { useBackend } from '../backend';
 import { Button, Section, Table } from '../components';
 import { map } from 'common/collections';
->>>>>>> master
 import { NtosWindow } from '../layouts';
 
 export const NtosCrewManifest = (props, context) => {
   const { act, data } = useBackend(context);
-<<<<<<< HEAD
-=======
 
->>>>>>> master
   const {
     have_printer,
     manifest = {},
   } = data;
-<<<<<<< HEAD
-  return (
-    <NtosWindow
-      width={400}
-      height={480}
-      resizable>
-=======
 
   return (
     <NtosWindow resizable>
->>>>>>> master
       <NtosWindow.Content scrollable>
         <Section
           title="Crew Manifest"

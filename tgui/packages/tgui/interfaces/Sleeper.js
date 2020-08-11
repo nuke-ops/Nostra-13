@@ -1,31 +1,4 @@
 import { useBackend } from '../backend';
-<<<<<<< HEAD
-import { AnimatedNumber, Box, Section, LabeledList, Button, ProgressBar } from '../components';
-import { Fragment } from 'inferno';
-import { Window } from '../layouts';
-
-const damageTypes = [
-  {
-    label: 'Brute',
-    type: 'bruteLoss',
-  },
-  {
-    label: 'Burn',
-    type: 'fireLoss',
-  },
-  {
-    label: 'Toxin',
-    type: 'toxLoss',
-  },
-  {
-    label: 'Oxygen',
-    type: 'oxyLoss',
-  },
-];
-
-export const Sleeper = (props, context) => {
-  const { act, data } = useBackend(context);
-=======
 import { Box, Section, LabeledList, Button, ProgressBar, AnimatedNumber } from '../components';
 import { Fragment } from 'inferno';
 import { Window } from '../layouts';
@@ -33,16 +6,12 @@ import { Window } from '../layouts';
 export const Sleeper = (props, context) => {
   const { act, data } = useBackend(context);
 
->>>>>>> master
   const {
     open,
     occupant = {},
     occupied,
   } = data;
-<<<<<<< HEAD
-=======
 
->>>>>>> master
   const preSortChems = data.chems || [];
   const chems = preSortChems.sort((a, b) => {
     const descA = a.name.toLowerCase();
@@ -67,12 +36,6 @@ export const Sleeper = (props, context) => {
     }
     return 0;
   });
-<<<<<<< HEAD
-  return (
-    <Window
-      width={310}
-      height={465}>
-=======
 
   const damageTypes = [
     {
@@ -95,7 +58,6 @@ export const Sleeper = (props, context) => {
 
   return (
     <Window>
->>>>>>> master
       <Window.Content>
         <Section
           title={occupant.name ? occupant.name : 'No Occupant'}
@@ -168,13 +130,8 @@ export const Sleeper = (props, context) => {
           </LabeledList.Item>
         </Section>
         <Section
-<<<<<<< HEAD
-          title="Medicines"
-          minHeight="205px"
-=======
           title="Inject Chemicals"
           minHeight="105px"
->>>>>>> master
           buttons={(
             <Button
               icon={open ? 'door-open' : 'door-closed'}
@@ -186,20 +143,12 @@ export const Sleeper = (props, context) => {
               key={chem.name}
               icon="flask"
               content={chem.name}
-<<<<<<< HEAD
-              disabled={!occupied || !chem.allowed}
-              width="140px"
-              onClick={() => act('inject', {
-                chem: chem.id,
-              })} />
-=======
               disabled={!(occupied && chem.allowed)}
               width="140px"
               onClick={() => act('inject', {
                 chem: chem.id,
               })}
             />
->>>>>>> master
           ))}
         </Section>
         <Section

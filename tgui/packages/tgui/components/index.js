@@ -14,10 +14,6 @@ export { Collapsible } from './Collapsible';
 export { ColorBox } from './ColorBox';
 export { Dimmer } from './Dimmer';
 export { Divider } from './Divider';
-<<<<<<< HEAD:tgui/packages/tgui/components/index.js
-export { DraggableControl } from './DraggableControl';
-=======
->>>>>>> master:tgui-next/packages/tgui/components/index.js
 export { Dropdown } from './Dropdown';
 export { Flex } from './Flex';
 export { Grid } from './Grid';
@@ -36,7 +32,3 @@ export { Table } from './Table';
 export { TextArea } from './TextArea';
 export { Tabs } from './Tabs';
 export { Tooltip } from './Tooltip';
-<<<<<<< HEAD:tgui/packages/tgui/components/index.js
-export { TimeDisplay } from './TimeDisplay';
-=======
->>>>>>> master:tgui-next/packages/tgui/components/index.js

@@ -8,14 +8,7 @@ export const GulagItemReclaimer = (props, context) => {
     mobs = [],
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      width={325}
-      height={400}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         {mobs.length === 0 && (
           <NoticeBox>

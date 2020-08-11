@@ -15,14 +15,7 @@ export const NtosRoboControl = (props, context) => {
     has_id,
   } = data;
   return (
-<<<<<<< HEAD
-    <NtosWindow
-      width={550}
-      height={550}
-      resizable>
-=======
     <NtosWindow resizable>
->>>>>>> master
       <NtosWindow.Content scrollable>
         <Section title="Robot Control Console">
           <LabeledList>

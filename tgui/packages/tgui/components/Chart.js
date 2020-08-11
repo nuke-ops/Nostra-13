@@ -123,9 +123,5 @@ const Stub = props => null;
 
 // IE8: No inline svg support
 export const Chart = {
-<<<<<<< HEAD:tgui/packages/tgui/components/Chart.js
-  Line: Byond.IS_LTE_IE8 ? Stub : LineChart,
-=======
   Line: IS_IE8 ? Stub : LineChart,
->>>>>>> master:tgui-next/packages/tgui/components/Chart.js
 };

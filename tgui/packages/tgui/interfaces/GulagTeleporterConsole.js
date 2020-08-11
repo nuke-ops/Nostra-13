@@ -19,13 +19,7 @@ export const GulagTeleporterConsole = (props, context) => {
     prisoner = {},
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      width={350}
-      height={295}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         <Section
           title="Teleporter Console"

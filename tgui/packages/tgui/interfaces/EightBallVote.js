@@ -9,13 +9,7 @@ export const EightBallVote = (props, context) => {
     shaking,
   } = data;
   return (
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/EightBallVote.js
-    <Window
-      width={400}
-      height={600}>
-=======
     <Window>
->>>>>>> master:tgui-next/packages/tgui/interfaces/EightBallVote.js
       <Window.Content>
         {!shaking && (
           <NoticeBox>

@@ -10,6 +10,7 @@ export const NaniteDiskBox = (props, context) => {
     has_program,
     disk,
   } = data;
+
   if (!has_disk) {
     return (
       <NoticeBox>
@@ -17,6 +18,7 @@ export const NaniteDiskBox = (props, context) => {
       </NoticeBox>
     );
   }
+
   if (!has_program) {
     return (
       <NoticeBox>
@@ -24,6 +26,7 @@ export const NaniteDiskBox = (props, context) => {
       </NoticeBox>
     );
   }
+
   return (
     <NaniteInfoBox program={disk} />
   );
@@ -31,6 +34,7 @@ export const NaniteDiskBox = (props, context) => {
 
 export const NaniteInfoBox = (props, context) => {
   const { program } = props;
+
   const {
     name,
     desc,
@@ -48,7 +52,9 @@ export const NaniteInfoBox = (props, context) => {
     timer_trigger,
     timer_trigger_delay,
   } = program;
+
   const extra_settings = program.extra_settings || [];
+
   return (
     <Section
       title={name}
@@ -159,16 +165,18 @@ export const NaniteInfoBox = (props, context) => {
 export const NaniteCloudBackupList = (props, context) => {
   const { act, data } = useBackend(context);
   const cloud_backups = data.cloud_backups || [];
-  return cloud_backups.map(backup => (
-    <Button
-      fluid
-      key={backup.cloud_id}
-      content={"Backup #" + backup.cloud_id}
-      textAlign="center"
-      onClick={() => act('set_view', {
-        view: backup.cloud_id,
-      })} />
-  ));
+  return (
+    cloud_backups.map(backup => (
+      <Button
+        fluid
+        key={backup.cloud_id}
+        content={"Backup #" + backup.cloud_id}
+        textAlign="center"
+        onClick={() => act('set_view', {
+          view: backup.cloud_id,
+        })} />
+    ))
+  );
 };
 
 export const NaniteCloudBackupDetails = (props, context) => {
@@ -179,7 +187,9 @@ export const NaniteCloudBackupDetails = (props, context) => {
     has_program,
     cloud_backup,
   } = data;
+
   const can_rule = (disk && disk.can_rule) || false;
+
   if (!cloud_backup) {
     return (
       <NoticeBox>
@@ -187,7 +197,9 @@ export const NaniteCloudBackupDetails = (props, context) => {
       </NoticeBox>
     );
   }
+
   const cloud_programs = data.cloud_programs || [];
+
   return (
     <Section
       title={"Backup #" + current_view}
@@ -217,13 +229,13 @@ export const NaniteCloudBackupDetails = (props, context) => {
             )}>
             <Section>
               <NaniteInfoBox program={program} />
-              {(!!can_rule || !!program.has_rules) && (
+              {!!can_rule && (
                 <Section
                   mt={-2}
                   title="Rules"
                   level={2}
-                  buttons={(!!can_rule
-                    && <Button
+                  buttons={(
+                    <Button
                       icon="plus"
                       content="Add Rule from Disk"
                       color="good"
@@ -233,7 +245,7 @@ export const NaniteCloudBackupDetails = (props, context) => {
                   )}>
                   {program.has_rules ? (
                     rules.map(rule => (
-                      <Box key={rule.display}>
+                      <Fragment key={rule.display}>
                         <Button
                           icon="minus-circle"
                           color="bad"
@@ -241,8 +253,8 @@ export const NaniteCloudBackupDetails = (props, context) => {
                             program_id: program.id,
                             rule_id: rule.id,
                           })} />
-                        {` ${rule.display}`}
-                      </Box>
+                        {rule.display}
+                      </Fragment>
                     ))
                   ) : (
                     <Box color="bad">
@@ -266,15 +278,9 @@ export const NaniteCloudControl = (props, context) => {
     current_view,
     new_backup_id,
   } = data;
+
   return (
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/NaniteCloudControl.js
-    <Window
-      width={375}
-      height={700}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master:tgui-next/packages/tgui/interfaces/NaniteCloudControl.js
       <Window.Content scrollable>
         <Section
           title="Program Disk"

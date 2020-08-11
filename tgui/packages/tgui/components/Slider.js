@@ -6,21 +6,14 @@
 
 import { clamp01, keyOfMatchingRange, scale } from 'common/math';
 import { classes } from 'common/react';
-<<<<<<< HEAD
-=======
 import { IS_IE8 } from '../byond';
->>>>>>> master
 import { computeBoxClassName, computeBoxProps } from './Box';
 import { DraggableControl } from './DraggableControl';
 import { NumberInput } from './NumberInput';
 
 export const Slider = props => {
   // IE8: I don't want to support a yet another component on IE8.
-<<<<<<< HEAD
-  if (Byond.IS_LTE_IE8) {
-=======
   if (IS_IE8) {
->>>>>>> master
     return (
       <NumberInput {...props} />
     );

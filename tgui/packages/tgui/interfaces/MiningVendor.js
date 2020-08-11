@@ -9,14 +9,7 @@ export const MiningVendor = (props, context) => {
     ...data.product_records,
   ];
   return (
-<<<<<<< HEAD
-    <Window
-      width={425}
-      height={600}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Section title="User">
           {data.user && (
@@ -34,11 +27,7 @@ export const MiningVendor = (props, context) => {
             </Box>
           )}
         </Section>
-<<<<<<< HEAD
-        <Section title="Equipment">
-=======
         <Section title="Equipment" >
->>>>>>> master
           <Table>
             {inventory.map((product => {
               return (

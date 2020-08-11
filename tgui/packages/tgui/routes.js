@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-/**
- * @file
- * @copyright 2020 Aleksej Komarov
- * @license MIT
- */
-
-import { selectBackend } from './backend';
-import { selectDebug } from './debug';
-=======
->>>>>>> master
 import { Window } from './layouts';
 
 const requireInterface = require.context('./interfaces', false, /\.js$/);
@@ -28,29 +17,6 @@ const routingError = (type, name) => () => {
   );
 };
 
-<<<<<<< HEAD
-const SuspendedWindow = () => {
-  return (
-    <Window resizable>
-      <Window.Content scrollable />
-    </Window>
-  );
-};
-
-export const getRoutedComponent = state => {
-  const { suspended, config } = selectBackend(state);
-  if (suspended) {
-    return SuspendedWindow;
-  }
-  if (process.env.NODE_ENV !== 'production') {
-    const debug = selectDebug(state);
-    // Show a kitchen sink
-    if (debug.kitchenSink) {
-      return require('./debug/KitchenSink').KitchenSink;
-    }
-  }
-  const name = config?.interface;
-=======
 export const getRoutedComponent = state => {
   if (process.env.NODE_ENV !== 'production') {
     // Show a kitchen sink
@@ -59,7 +25,6 @@ export const getRoutedComponent = state => {
     }
   }
   const name = state.config?.interface;
->>>>>>> master
   let esModule;
   try {
     esModule = requireInterface(`./${name}.js`);

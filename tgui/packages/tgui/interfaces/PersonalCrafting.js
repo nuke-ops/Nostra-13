@@ -58,15 +58,7 @@ export const PersonalCrafting = (props, context) => {
   const shownRecipes = recipes
     .filter(recipe => recipe.category === tab);
   return (
-<<<<<<< HEAD
-    <Window
-      title="Crafting Menu"
-      width={700}
-      height={800}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         {!!busy && (
           <Dimmer fontSize="32px">
@@ -97,10 +89,7 @@ export const PersonalCrafting = (props, context) => {
                     selected={category.name === tab}
                     onClick={() => {
                       setTab(category.name);
-<<<<<<< HEAD
-=======
                       // Backend expects `0` or '' to indicate no subcategory
->>>>>>> master
                       act('set_category', {
                         category: category.category,
                         subcategory: category.subcategory,

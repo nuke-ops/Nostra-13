@@ -2,13 +2,6 @@ import { useBackend } from '../backend';
 import { Section, LabeledList, Button, Box } from '../components';
 import { Window } from '../layouts';
 
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/SlimeBodySwapper.js
-const statusMap = {
-  Dead: "bad",
-  Unconscious: "average",
-  Conscious: "good",
-};
-=======
 export const BodyEntry = (props, context) => {
   const { body, swapFunc } = props;
 
@@ -17,16 +10,13 @@ export const BodyEntry = (props, context) => {
     Unconscious: "average",
     Conscious: "good",
   };
->>>>>>> master:tgui-next/packages/tgui/interfaces/SlimeBodySwapper.js
 
-const occupiedMap = {
-  owner: "You Are Here",
-  stranger: "Occupied",
-  available: "Swap",
-};
+  const occupiedMap = {
+    owner: "You Are Here",
+    stranger: "Occupied",
+    available: "Swap",
+  };
 
-export const BodyEntry = (props, context) => {
-  const { body, swapFunc } = props;
   return (
     <Section
       title={(
@@ -63,21 +53,13 @@ export const BodyEntry = (props, context) => {
 
 export const SlimeBodySwapper = (props, context) => {
   const { act, data } = useBackend(context);
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/SlimeBodySwapper.js
-=======
 
->>>>>>> master:tgui-next/packages/tgui/interfaces/SlimeBodySwapper.js
   const {
     bodies = [],
   } = data;
+
   return (
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/SlimeBodySwapper.js
-    <Window
-      width={400}
-      height={400}>
-=======
     <Window>
->>>>>>> master:tgui-next/packages/tgui/interfaces/SlimeBodySwapper.js
       <Window.Content scrollable>
         <Section>
           {bodies.map(body => (

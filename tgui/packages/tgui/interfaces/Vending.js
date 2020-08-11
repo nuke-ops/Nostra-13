@@ -10,27 +10,6 @@ const VendingRow = (props, context) => {
     productStock,
     custom,
   } = props;
-<<<<<<< HEAD
-  const {
-    onstation,
-    department,
-    user,
-  } = data;
-  const free = (
-    !onstation
-    || product.price === 0
-    || (
-      !product.premium
-      && department
-      && user
-      && department === user.department
-    )
-  );
-  return (
-    <Table.Row>
-      <Table.Cell collapsing>
-        {product.base64 && (
-=======
   const to_pay = (!product.premium
     ? Math.round(product.price * data.cost_mult)
     : product.price
@@ -48,18 +27,13 @@ const VendingRow = (props, context) => {
     <Table.Row>
       <Table.Cell collapsing>
         {product.base64 ? (
->>>>>>> master
           <img
             src={`data:image/jpeg;base64,${product.img}`}
             style={{
               'vertical-align': 'middle',
               'horizontal-align': 'middle',
             }} />
-<<<<<<< HEAD
-        ) || (
-=======
         ) : (
->>>>>>> master
           <span
             className={classes([
               'vending32x32',
@@ -76,14 +50,6 @@ const VendingRow = (props, context) => {
       </Table.Cell>
       <Table.Cell collapsing textAlign="center">
         <Box
-<<<<<<< HEAD
-          color={(
-            custom && 'good'
-            || productStock <= 0 && 'bad'
-            || productStock <= (product.max_amount / 2) && 'average'
-            || 'good'
-          )}>
-=======
           color={custom
             ? 'good'
             : productStock <= 0
@@ -91,7 +57,6 @@ const VendingRow = (props, context) => {
               : productStock <= (product.max_amount / 2)
                 ? 'average'
                 : 'good'}>
->>>>>>> master
           {productStock} in stock
         </Box>
       </Table.Cell>
@@ -107,15 +72,6 @@ const VendingRow = (props, context) => {
           <Button
             fluid
             disabled={(
-<<<<<<< HEAD
-              productStock === 0
-              || !free && (
-                !data.user
-                || product.price > data.user.cash
-              )
-            )}
-            content={free ? 'FREE' : product.price + ' cr'}
-=======
               data.stock[product.namename] === 0
                 || (
                   !free
@@ -126,7 +82,6 @@ const VendingRow = (props, context) => {
                 )
             )}
             content={!free ? pay_text : 'FREE'}
->>>>>>> master
             onClick={() => act('vend', {
               'ref': product.ref,
             })} />
@@ -138,55 +93,6 @@ const VendingRow = (props, context) => {
 
 export const Vending = (props, context) => {
   const { act, data } = useBackend(context);
-<<<<<<< HEAD
-  const {
-    user,
-    onstation,
-    product_records = [],
-    coin_records = [],
-    hidden_records = [],
-    stock,
-  } = data;
-  let inventory;
-  let custom = false;
-  if (data.vending_machine_input) {
-    inventory = data.vending_machine_input || [];
-    custom = true;
-  }
-  else {
-    inventory = [
-      ...product_records,
-      ...coin_records,
-    ];
-    if (data.extended_inventory) {
-      inventory = [
-        ...inventory,
-        ...hidden_records,
-      ];
-    }
-  }
-  // Just in case we still have undefined values in the list
-  inventory = inventory.filter(item => !!item);
-  return (
-    <Window
-      title="Vending Machine"
-      width={450}
-      height={600}
-      resizable>
-      <Window.Content scrollable>
-        {!!onstation && (
-          <Section title="User">
-            {user && (
-              <Box>
-                Welcome, <b>{user.name}</b>,
-                {' '}
-                <b>{user.job || 'Unemployed'}</b>!
-                <br />
-                Your balance is <b>{user.cash} credits</b>.
-              </Box>
-            ) || (
-              <Box color="light-grey">
-=======
   let inventory;
   let custom = false;
   if (data.vending_machine_input) {
@@ -219,29 +125,20 @@ export const Vending = (props, context) => {
               </Box>
             ) || (
               <Box color="light-gray">
->>>>>>> master
                 No registered ID card!<br />
                 Please contact your local HoP!
               </Box>
             )}
           </Section>
         )}
-<<<<<<< HEAD
-        <Section title="Products">
-=======
         <Section title="Products" >
->>>>>>> master
           <Table>
             {inventory.map(product => (
               <VendingRow
                 key={product.name}
                 custom={custom}
                 product={product}
-<<<<<<< HEAD
-                productStock={stock[product.name]} />
-=======
                 productStock={data.stock[product.name]} />
->>>>>>> master
             ))}
           </Table>
         </Section>

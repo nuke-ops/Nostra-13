@@ -1,14 +1,7 @@
 import { createSearch } from 'common/string';
-<<<<<<< HEAD
-import { resolveAsset } from '../assets';
-import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Flex, Icon, Input, Section } from '../components';
-import { Window } from '../layouts';
-=======
 import { Box, Button, Input, Section } from '../components';
 import { Window } from '../layouts';
 import { useBackend, useLocalState } from '../backend';
->>>>>>> master
 
 const PATTERN_DESCRIPTOR = / \[(?:ghost|dead)\]$/;
 const PATTERN_NUMBER = / \(([0-9]+)\)$/;
@@ -51,11 +44,7 @@ const BasicSection = (props, context) => {
           key={thing.name}
           content={thing.name.replace(PATTERN_DESCRIPTOR, "")}
           onClick={() => act("orbit", {
-<<<<<<< HEAD
-            ref: thing.ref,
-=======
             name: thing.name,
->>>>>>> master
           })} />
       ))}
     </Section>
@@ -70,11 +59,7 @@ const OrbitedButton = (props, context) => {
     <Button
       color={color}
       onClick={() => act("orbit", {
-<<<<<<< HEAD
-        ref: thing.ref,
-=======
         name: thing.name,
->>>>>>> master
       })}>
       {thing.name}
       {thing.orbiters && (
@@ -82,11 +67,7 @@ const OrbitedButton = (props, context) => {
           {"("}{thing.orbiters}{" "}
           <Box
             as="img"
-<<<<<<< HEAD
-            src={resolveAsset('ghost.png')}
-=======
             src="ghost.png"
->>>>>>> master
             opacity={0.7} />
           {")"}
         </Box>
@@ -130,42 +111,13 @@ export const Orbit = (props, context) => {
         .filter(searchFor(searchText))
         .sort(compareNumberedText)[0];
       if (member !== undefined) {
-<<<<<<< HEAD
-        act("orbit", { ref: member.ref });
-=======
         act("orbit", { name: member.name });
->>>>>>> master
         break;
       }
     }
   };
 
   return (
-<<<<<<< HEAD
-    <Window
-      title="Orbit"
-      width={350}
-      height={700}>
-      <Window.Content scrollable>
-        <Section>
-          <Flex>
-            <Flex.Item>
-              <Icon
-                name="search"
-                mr={1} />
-            </Flex.Item>
-            <Flex.Item grow={1}>
-              <Input
-                placeholder="Search..."
-                autoFocus
-                fluid
-                value={searchText}
-                onInput={(_, value) => setSearchText(value)}
-                onEnter={(_, value) => orbitMostRelevant(value)} />
-            </Flex.Item>
-          </Flex>
-        </Section>
-=======
     <Window>
       <Window.Content scrollable>
         <Section>
@@ -177,7 +129,6 @@ export const Orbit = (props, context) => {
             onEnter={(_, value) => orbitMostRelevant(value)} />
         </Section>
 
->>>>>>> master
         {antagonists.length > 0 && (
           <Section title="Ghost-Visible Antagonists">
             {sortedAntagonists.map(([name, antags]) => (

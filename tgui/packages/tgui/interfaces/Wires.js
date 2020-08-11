@@ -8,13 +8,7 @@ export const Wires = (props, context) => {
   const wires = data.wires || [];
   const statuses = data.status || [];
   return (
-<<<<<<< HEAD
-    <Window
-      width={350}
-      height={150 + wires.length * 30}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         <Section>
           <LabeledList>

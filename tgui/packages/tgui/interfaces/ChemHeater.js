@@ -18,14 +18,7 @@ export const ChemHeater = (props, context) => {
     currentpH,
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      width={275}
-      height={320}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Section
           title="Thermostat"

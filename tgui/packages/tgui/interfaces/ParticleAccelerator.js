@@ -11,13 +11,7 @@ export const ParticleAccelerator = (props, context) => {
     strength,
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      width={350}
-      height={185}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         <Section>
           <LabeledList>

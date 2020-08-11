@@ -6,13 +6,7 @@ import { Window } from '../layouts';
 export const ThermoMachine = (props, context) => {
   const { act, data } = useBackend(context);
   return (
-<<<<<<< HEAD
-    <Window
-      width={300}
-      height={230}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         <Section title="Status">
           <LabeledList>

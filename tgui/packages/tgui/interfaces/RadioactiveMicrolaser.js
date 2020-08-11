@@ -14,15 +14,7 @@ export const RadioactiveMicrolaser = (props, context) => {
     cooldown,
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      title="Radioactive Microlaser"
-      width={320}
-      height={335}
-      theme="syndicate">
-=======
     <Window theme="syndicate">
->>>>>>> master
       <Window.Content>
         <Section>
           <LabeledList>

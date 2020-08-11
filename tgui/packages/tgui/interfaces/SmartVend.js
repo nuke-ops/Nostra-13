@@ -6,14 +6,7 @@ import { Window } from '../layouts';
 export const SmartVend = (props, context) => {
   const { act, data } = useBackend(context);
   return (
-<<<<<<< HEAD
-    <Window
-      width={440}
-      height={550}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Section
           title="Storage"

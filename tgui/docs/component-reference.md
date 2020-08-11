@@ -30,11 +30,6 @@ Make sure to add new items to this list if you document new components.
   - [`Icon`](#icon)
   - [`Input`](#input)
   - [`Knob`](#knob)
-<<<<<<< HEAD:tgui/docs/component-reference.md
-  - [`LabeledControls`](#labeledcontrols)
-  - [`LabeledControls.Item`](#labeledcontrolsitem)
-=======
->>>>>>> master:tgui-next/README.md
   - [`LabeledList`](#labeledlist)
   - [`LabeledList.Item`](#labeledlistitem)
   - [`LabeledList.Divider`](#labeledlistdivider)
@@ -244,7 +239,7 @@ A ghetto checkbox, made entirely using existing Button API.
 
 ### `Button.Confirm`
 
-A button with an extra confirmation step, using native button component.
+A button with a an extra confirmation step, using native button component.
 
 **Props:**
 
@@ -257,7 +252,6 @@ A button with an extra confirmation step, using native button component.
 A button that turns into an input box after the first click. Turns back into a
 button after the user hits enter, defocuses, or hits escape. Enter and defocus
 commit, while escape cancels.
-<<<<<<< HEAD:tgui/docs/component-reference.md
 
 **Props:**
 
@@ -270,20 +264,6 @@ defocuses the input or presses enter
 blank when hitting enter or defocusing. If left undefined, will cancel the
 change on a blank defocus/enter
 
-=======
-
-**Props:**
-
-- See inherited props: [Box](#box)
-- `fluid`: fill availible horizontal space
-- `onCommit: (e, value) => void`: function that is called after the user
-defocuses the input or presses enter
-- `currentValue: string`: default string to display when the input is shown
-- `defaultValue: string`: default value emitted if the user leaves the box
-blank when hitting enter or defocusing. If left undefined, will cancel the
-change on a blank defocus/enter
-
->>>>>>> master:tgui-next/README.md
 ### `ByondUi`
 
 Displays a BYOND UI element on top of the browser, and leverages browser's
@@ -293,19 +273,11 @@ interface.
 
 Example (button):
 
-<<<<<<< HEAD:tgui/docs/component-reference.md
-```jsx
-<ByondUi
-  params={{
-    id: 'test_button', // optional, can be auto-generated
-    parent: 'some_container', // optional, defaults to the current window
-=======
 ```
 <ByondUi
   params={{
     id: 'test_button', // optional, can be auto-generated
     parent: config.window,
->>>>>>> master:tgui-next/README.md
     type: 'button',
     text: 'Hello, world!',
   }} />
@@ -313,18 +285,11 @@ Example (button):
 
 Example (map):
 
-<<<<<<< HEAD:tgui/docs/component-reference.md
-```jsx
-<ByondUi
-  params={{
-    id: 'test_map',
-=======
 ```
 <ByondUi
   params={{
     id: 'test_map',
     parent: config.window,
->>>>>>> master:tgui-next/README.md
     type: 'map',
   }} />
 ```
@@ -342,15 +307,9 @@ in [BYOND controls and parameters guide](https://secure.byond.com/docs/ref/skinp
 
 Displays contents when open, acts as a fluid button when closed. Click to
 toggle, closed by default.
-<<<<<<< HEAD:tgui/docs/component-reference.md
 
 **Props:**
 
-=======
-
-**Props:**
-
->>>>>>> master:tgui-next/README.md
 - See inherited props: [Box](#box)
 - `children: any` - What is collapsed when closed
 - `title: string` - Text to display on the button for collapsing
@@ -625,27 +584,6 @@ the input, or successfully enter a number.
 - `onDrag: (e, value) => void` - An event, which fires about every 500ms
 when you drag the input up and down, on release and on manual editing.
 
-<<<<<<< HEAD:tgui/docs/component-reference.md
-### `LabeledControls`
-
-LabeledControls is a horizontal grid, that is designed to hold various
-controls, like [Knobs](#knob) or small [Buttons](#button). Every item in
-this grid is labeled at the bottom.
-
-**Props:**
-
-- See inherited props: [Box](#box)
-- `children: LabeledControls.Item` - Items to render.
-
-### `LabeledControls.Item`
-
-**Props:**
-
-- See inherited props: [Box](#box)
-- `label: string` - Item label.
-
-=======
->>>>>>> master:tgui-next/README.md
 ### `LabeledList`
 
 LabeledList is a continuous, vertical list of text and other content, where
@@ -1024,10 +962,6 @@ Example:
 - `className: string` - Applies a CSS class to the element.
 - `theme: string` - A name of the theme.
   - For a list of themes, see `packages/tgui/styles/themes`.
-<<<<<<< HEAD:tgui/docs/component-reference.md
-- `title: string` - Window title.
-=======
->>>>>>> master:tgui-next/README.md
 - `resizable: boolean` - Controls resizability of the window.
 - `children: any` - Child elements, which are rendered directly inside the
 window. If you use a [Dimmer](#dimmer) or [Modal](#modal) in your UI,

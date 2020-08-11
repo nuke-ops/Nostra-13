@@ -21,13 +21,7 @@ export const Canister = (props, context) => {
     restricted,
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      width={300}
-      height={232}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         <Section
           title="Canister"

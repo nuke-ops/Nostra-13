@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-/**
- * Copyright (c) 2020 Aleksej Komarov
- * SPDX-License-Identifier: MIT
- */
-
-=======
->>>>>>> master
 @use 'sass:color';
 @use 'sass:meta';
 
@@ -17,10 +9,7 @@
 @use '../base.scss' with (
   $color-bg: #1b3443,
   $color-bg-grad-spread: 6%,
-<<<<<<< HEAD
-=======
   $border-radius: 2px,
->>>>>>> master
 );
 
 .theme-malfunction {

@@ -5,14 +5,7 @@ import { Window } from '../layouts';
 
 export const NaniteChamberControl = (props, context) => {
   return (
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/NaniteChamberControl.js
-    <Window
-      width={380}
-      height={570}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master:tgui-next/packages/tgui/interfaces/NaniteChamberControl.js
       <Window.Content scrollable>
         <NaniteChamberControlContent />
       </Window.Content>

@@ -13,13 +13,7 @@ export const Teleporter = (props, context) => {
     target,
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      width={470}
-      height={140}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         <Section>
           {!power_station && (

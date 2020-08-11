@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-/**
- * @file
- * @copyright 2020 LetterN (https://github.com/LetterN)
- * @license MIT
- */
-import { Fragment } from 'inferno';
-import { Window } from '../layouts';
-import { useBackend, useSharedState } from '../backend';
-=======
 import { Fragment } from 'inferno';
 import { Window } from '../layouts';
 import { useBackend, useSharedState } from '../backend';
 import { callByond } from '../byond';
->>>>>>> master
 import { Button, LabeledList, NoticeBox, Section, Tabs, Input } from '../components';
 
 // This is the entrypoint, don't mind the others
@@ -33,22 +22,12 @@ export const TelecommsPDALog = (props, context) => {
     setTab,
   ] = useSharedState(context, 'tab', 'pdalog-servers');
   const valid = (selected && selected.status && authenticated);
-<<<<<<< HEAD
-  if (hack_status) {
-    return ( // should have used en -> jp unicode -> other encoding method->utf8
-      <Window
-        theme="ntos"
-        resizable
-        width={727}
-        height={510}>
-=======
   // if (!valid || data.hacking) { // a sanity check.
   //   setTab('pdalog-servers');
   // }
   if (hack_status) {
     return ( // should have used en -> jp unicode -> other encoding method->utf8
       <Window theme="ntos" resizable>
->>>>>>> master
         <Window.Content scrollable>
           <NoticeBox>
             <b>
@@ -224,24 +203,6 @@ export const TelecommsPDALog = (props, context) => {
             <Section>
               {(servers && servers.length) ? (
                 <LabeledList>
-<<<<<<< HEAD
-                  {servers.map(server => (
-                    <LabeledList.Item
-                      key={server.name}
-                      label={`${server.ref}`}
-                      buttons={(
-                        <Button
-                          content="Connect"
-                          selected={data.selected
-                            && (server.ref === data.selected.ref)}
-                          onClick={() => act('viewmachine', {
-                            'value': server.id,
-                          })} />
-                      )}>
-                      {`${server.name} (${server.id})`}
-                    </LabeledList.Item>
-                  ))}
-=======
                   {servers.map(server => {
                     return (
                       <LabeledList.Item
@@ -260,7 +221,6 @@ export const TelecommsPDALog = (props, context) => {
                       </LabeledList.Item>
                     );
                   })}
->>>>>>> master
                 </LabeledList>
               ) : (
                 '404 Servers not found. Have you tried scanning the network?'
@@ -268,15 +228,6 @@ export const TelecommsPDALog = (props, context) => {
             </Section>
           ) : (
             <Fragment>
-<<<<<<< HEAD
-              {(tab === "pdalog-message" && authenticated) && (
-                <TeleLogs />
-              )}
-              {(tab === "pdalog-reqmsg" && authenticated) && (
-                <TeleLogs msgs_log />
-              )}
-              {(tab === "pdalog-custommsg" && authenticated) && (
-=======
               {tab === "pdalog-message" && (
                 <TeleLogs />
               )}
@@ -284,7 +235,6 @@ export const TelecommsPDALog = (props, context) => {
                 <TeleLogs msgs_log />
               )}
               {tab === "pdalog-custommsg" && (
->>>>>>> master
                 <CustomMsg />
               )}
             </Fragment>
@@ -298,11 +248,7 @@ export const TelecommsPDALog = (props, context) => {
 // They're the same, so merged it into this. Idea stolen from cargonia
 export const TeleLogs = (props, context) => {
   const {
-<<<<<<< HEAD
-    msgs_log = false, // <TeleLogs msgs_log/>
-=======
     msgs_log = false, // <tlog msgs_log/>
->>>>>>> master
   } = props;
   const { act, data } = useBackend(context);
   const {
@@ -333,83 +279,6 @@ export const TeleLogs = (props, context) => {
       <Section
         title="Messages"
         level={2}>
-<<<<<<< HEAD
-        {log_to_use?.map(message => (
-          <Section key={message.ref}>
-            <LabeledList>
-              <LabeledList.Item
-                label={msgs_log ? "Sending Dep." : "Sender"}
-                buttons={(
-                  <Button
-                    content="Delete"
-                    onClick={() => act('del_log', {
-                      'ref': message.ref,
-                    })}
-                  />
-                )}>
-                {message.sender}
-              </LabeledList.Item>
-              <LabeledList.Item
-                label={msgs_log ? "Receiving Dep." : "Recipient"}>
-                {message.recipient}
-              </LabeledList.Item>
-              <LabeledList.Item
-                label="Message"
-                buttons={(
-                  !!message.picture && ( // don't send img over req
-                    <Button // Had to use _act for this.
-                      content="Image"
-                      icon="image"
-                      onClick={() => Byond.topic({
-                        'src': message.ref,
-                        'photo': 1,
-                      })}
-                    />
-                  )
-                )}>
-                {message.message}
-              </LabeledList.Item>
-              {!!msgs_log && (
-                <Fragment>
-                  <LabeledList.Item
-                    label="Stamp"
-                    color={message.stamp !== "Unstamped" ? (
-                      'label'
-                    ) : (
-                      'bad'
-                    )}
-                    bold={message.stamp !== 'Unstamped'}>
-                    {message.stamp}
-                  </LabeledList.Item>
-                  <LabeledList.Item
-                    label="ID Authentication"
-                    color={message.auth !== "Unauthenticated" ? (
-                      'good'
-                    ) : (
-                      'bad'
-                    )}>
-                    {message.auth}
-                  </LabeledList.Item>
-                  <LabeledList.Item
-                    label="Priority"
-                    color={(message.priority in prioritycolorMap) ? (
-                      prioritycolorMap[message.priority]
-                    ) : (
-                      'good'
-                    )}
-                    bold={message.priority === 'Extreme'}>
-                    {message.priority === 'Extreme' ? (
-                      `!!${message.priority}!!`
-                    ) : (
-                      message.priority
-                    )}
-                  </LabeledList.Item>
-                </Fragment>
-              )}
-            </LabeledList>
-          </Section>
-        ))}
-=======
         {log_to_use?.map(message => {
           return (
             <Section key={message.ref}>
@@ -487,7 +356,6 @@ export const TeleLogs = (props, context) => {
             </Section>
           );
         })}
->>>>>>> master
       </Section>
     </Section>
   );

@@ -2,16 +2,10 @@ import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { Button, Dropdown, Grid, Input, LabeledList, NoticeBox, NumberInput, Section } from '../components';
 import { Window } from '../layouts';
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/NaniteProgrammer.js
-
-export const NaniteCodes = (props, context) => {
-  const { act, data } = useBackend(context);
-=======
 
 export const NaniteCodes = (props, context) => {
   const { act, data } = useBackend(context);
 
->>>>>>> master:tgui-next/packages/tgui/interfaces/NaniteProgrammer.js
   return (
     <Section
       title="Codes"
@@ -234,14 +228,7 @@ export const NaniteExtraBoolean = (props, context) => {
 
 export const NaniteProgrammer = (props, context) => {
   return (
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/NaniteProgrammer.js
-    <Window
-      width={420}
-      height={550}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master:tgui-next/packages/tgui/interfaces/NaniteProgrammer.js
       <Window.Content scrollable>
         <NaniteProgrammerContent />
       </Window.Content>
@@ -264,6 +251,7 @@ export const NaniteProgrammerContent = (props, context) => {
     has_extra_settings,
     extra_settings = {},
   } = data;
+
   if (!has_disk) {
     return (
       <NoticeBox textAlign="center">
@@ -271,6 +259,7 @@ export const NaniteProgrammerContent = (props, context) => {
       </NoticeBox>
     );
   }
+
   if (!has_program) {
     return (
       <Section
@@ -283,6 +272,7 @@ export const NaniteProgrammerContent = (props, context) => {
         )} />
     );
   }
+
   return (
     <Section
       title={name}

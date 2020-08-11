@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-/**
- * @file
- * @copyright 2020 Aleksej Komarov
- * @license MIT
- */
-
-import { resolveAsset } from '../assets';
-=======
->>>>>>> master
 import { useBackend } from '../backend';
 import { Box, Button } from '../components';
 import { refocusLayout } from './Layout';
@@ -15,22 +5,12 @@ import { Window } from './Window';
 
 export const NtosWindow = (props, context) => {
   const {
-<<<<<<< HEAD
-    title,
-    width = 575,
-    height = 700,
-=======
->>>>>>> master
     resizable,
     theme = 'ntos',
     children,
   } = props;
   const { act, data } = useBackend(context);
   const {
-<<<<<<< HEAD
-    PC_device_theme,
-=======
->>>>>>> master
     PC_batteryicon,
     PC_showbatteryicon,
     PC_batterypercent,
@@ -42,12 +22,6 @@ export const NtosWindow = (props, context) => {
   } = data;
   return (
     <Window
-<<<<<<< HEAD
-      title={title}
-      width={width}
-      height={height}
-=======
->>>>>>> master
       theme={theme}
       resizable={resizable}>
       <div className="NtosWindow">
@@ -61,12 +35,7 @@ export const NtosWindow = (props, context) => {
               {PC_stationtime}
             </Box>
             <Box inline italic mr={2} opacity={0.33}>
-<<<<<<< HEAD
-              {PC_device_theme === 'ntos' && 'NtOS'}
-              {PC_device_theme === 'syndicate' && 'Syndix'}
-=======
               NtOS
->>>>>>> master
             </Box>
           </div>
           <div className="NtosHeader__right">
@@ -74,22 +43,14 @@ export const NtosWindow = (props, context) => {
               <Box key={header.icon} inline mr={1}>
                 <img
                   className="NtosHeader__icon"
-<<<<<<< HEAD
-                  src={resolveAsset(header.icon)} />
-=======
                   src={header.icon} />
->>>>>>> master
               </Box>
             ))}
             <Box inline>
               {PC_ntneticon && (
                 <img
                   className="NtosHeader__icon"
-<<<<<<< HEAD
-                  src={resolveAsset(PC_ntneticon)} />
-=======
                   src={PC_ntneticon} />
->>>>>>> master
               )}
             </Box>
             {!!PC_showbatteryicon && PC_batteryicon && (
@@ -97,11 +58,7 @@ export const NtosWindow = (props, context) => {
                 {PC_batteryicon && (
                   <img
                     className="NtosHeader__icon"
-<<<<<<< HEAD
-                    src={resolveAsset(PC_batteryicon)} />
-=======
                     src={PC_batteryicon} />
->>>>>>> master
                 )}
                 {PC_batterypercent && (
                   PC_batterypercent
@@ -112,11 +69,7 @@ export const NtosWindow = (props, context) => {
               <Box inline mr={1}>
                 <img
                   className="NtosHeader__icon"
-<<<<<<< HEAD
-                  src={resolveAsset(PC_apclinkicon)} />
-=======
                   src={PC_apclinkicon} />
->>>>>>> master
               </Box>
             )}
             {!!PC_showexitprogram && (

@@ -4,10 +4,7 @@ import { Window } from '../layouts';
 
 export const NotificationPreferences = (props, context) => {
   const { act, data } = useBackend(context);
-<<<<<<< HEAD
-=======
 
->>>>>>> master
   const ignoresPreSort = data.ignore || [];
   const ignores = ignoresPreSort.sort((a, b) => {
     const descA = a.desc.toLowerCase();
@@ -20,18 +17,9 @@ export const NotificationPreferences = (props, context) => {
     }
     return 0;
   });
-<<<<<<< HEAD
-  return (
-    <Window
-      title="Notification Preferences"
-      width={270}
-      height={360}
-      resizable>
-=======
 
   return (
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Section title="Ghost Role Notifications">
           {ignores.map(ignore => (

@@ -26,14 +26,7 @@ export const ChemDispenser = (props, context) => {
     || data.beakerContents
     || [];
   return (
-<<<<<<< HEAD
-    <Window
-      width={565}
-      height={620}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Section
           title="Status"
@@ -93,11 +86,7 @@ export const ChemDispenser = (props, context) => {
                 key={recipe.name}
                 icon="tint"
                 width="129.5px"
-<<<<<<< HEAD
-                lineHeight={1.75}
-=======
                 lineHeight="21px"
->>>>>>> master
                 content={recipe.name}
                 onClick={() => act('dispense_recipe', {
                   recipe: recipe.name,
@@ -130,11 +119,7 @@ export const ChemDispenser = (props, context) => {
                 key={chemical.id}
                 icon="tint"
                 width="129.5px"
-<<<<<<< HEAD
-                lineHeight={1.75}
-=======
                 lineHeight="21px"
->>>>>>> master
                 content={chemical.title}
                 onClick={() => act('dispense', {
                   reagent: chemical.id,

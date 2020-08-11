@@ -1,13 +1,4 @@
 /**
-<<<<<<< HEAD
- * @file
- * @copyright 2020 Aleksej Komarov
- * @license MIT
- */
-
-/**
-=======
->>>>>>> master
  * Limits a number to the range between 'min' and 'max'.
  */
 export const clamp = (value, min, max) => {

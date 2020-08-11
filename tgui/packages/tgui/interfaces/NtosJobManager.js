@@ -4,14 +4,7 @@ import { NtosWindow } from '../layouts';
 
 export const NtosJobManager = (props, context) => {
   return (
-<<<<<<< HEAD
-    <NtosWindow
-      width={400}
-      height={620}
-      resizable>
-=======
     <NtosWindow resizable>
->>>>>>> master
       <NtosWindow.Content scrollable>
         <NtosJobManagerContent />
       </NtosWindow.Content>
@@ -21,20 +14,14 @@ export const NtosJobManager = (props, context) => {
 
 export const NtosJobManagerContent = (props, context) => {
   const { act, data } = useBackend(context);
-<<<<<<< HEAD
-=======
 
->>>>>>> master
   const {
     authed,
     cooldown,
     slots = [],
     prioritized = [],
   } = data;
-<<<<<<< HEAD
-=======
 
->>>>>>> master
   if (!authed) {
     return (
       <NoticeBox>
@@ -42,10 +29,7 @@ export const NtosJobManagerContent = (props, context) => {
       </NoticeBox>
     );
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> master
   return (
     <Section>
       {cooldown > 0 && (
@@ -80,12 +64,8 @@ export const NtosJobManagerContent = (props, context) => {
                 checked={slot.total > 0 && prioritized.includes(slot.title)}
                 onClick={() => act('PRG_priority', {
                   target: slot.title,
-<<<<<<< HEAD
-                })} />
-=======
                 })}
               />
->>>>>>> master
             </Table.Cell>
             <Table.Cell collapsing>
               {slot.current} / {slot.total}
@@ -96,23 +76,15 @@ export const NtosJobManagerContent = (props, context) => {
                 disabled={!slot.status_open}
                 onClick={() => act('PRG_open_job', {
                   target: slot.title,
-<<<<<<< HEAD
-                })} />
-=======
                 })}
               />
->>>>>>> master
               <Button
                 content="Close"
                 disabled={!slot.status_close}
                 onClick={() => act('PRG_close_job', {
                   target: slot.title,
-<<<<<<< HEAD
-                })} />
-=======
                 })}
               />
->>>>>>> master
             </Table.Cell>
           </Table.Row>
         ))}

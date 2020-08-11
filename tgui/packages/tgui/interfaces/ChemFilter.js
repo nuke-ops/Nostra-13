@@ -51,14 +51,7 @@ export const ChemFilter = (props, context) => {
   const [leftName, setLeftName] = useLocalState(context, 'leftName', '');
   const [rightName, setRightName] = useLocalState(context, 'rightName', '');
   return (
-<<<<<<< HEAD
-    <Window
-      width={500}
-      height={300}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Flex spacing={1}>
           <Flex.Item grow={1}>

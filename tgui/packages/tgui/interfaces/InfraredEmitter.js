@@ -9,13 +9,7 @@ export const InfraredEmitter = (props, context) => {
     visible,
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      width={225}
-      height={110}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         <Section>
           <LabeledList>

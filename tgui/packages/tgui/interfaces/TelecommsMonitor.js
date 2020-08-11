@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-/**
- * @file
- * @copyright 2020 LetterN (https://github.com/LetterN)
- * @license MIT
- */
-=======
->>>>>>> master
 import { Fragment } from 'inferno';
 import { Window } from '../layouts';
 import { useBackend, useSharedState } from '../backend';
@@ -27,22 +19,12 @@ export const TelecommsMonitor = (props, context) => {
     setTab,
   ] = useSharedState(context, 'tab', 'network-entity');
   const operational = (selected && selected.status);
-<<<<<<< HEAD
-
-  return (
-    <Window
-      theme="ntos"
-      resizable
-      width={575}
-      height={400}>
-=======
   // if (!selected) { // some sanity checks.
   //   setTab("network-entity");
   // }
 
   return (
     <Window theme="ntos" resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Fragment>
           {!!notice && (
@@ -145,19 +127,11 @@ export const TelecommsMonitor = (props, context) => {
                         selected.netspeed*0.30,
                       ],
                       average: [ // 30-70%
-<<<<<<< HEAD
-                        selected.netspeed*0.31,
-                        selected.traffic*0.70,
-                      ],
-                      bad: [ // 70-100%
-                        selected.netspeed*0.71,
-=======
                         selected.netspeed*0.30,
                         selected.traffic*0.70,
                       ],
                       bad: [ // 30-100%
                         selected.netspeed*0.70,
->>>>>>> master
                         Infinity,
                       ],
                     }}>
@@ -219,22 +193,6 @@ export const TelecommsMonitor = (props, context) => {
                 level={3}>
                 {(operational && selected_servers) ? (
                   <LabeledList>
-<<<<<<< HEAD
-                    {selected_servers.map(server => (
-                      <LabeledList.Item
-                        key={server.name}
-                        label={server.ref}
-                        buttons={(
-                          <Button
-                            content="Connect"
-                            onClick={() => act('viewmachine', {
-                              'value': server.id,
-                            })} />
-                        )}>
-                        {`${server.name} (${server.id})`}
-                      </LabeledList.Item>
-                    ))}
-=======
                     {selected_servers.map(server => {
                       return (
                         <LabeledList.Item
@@ -251,7 +209,6 @@ export const TelecommsMonitor = (props, context) => {
                         </LabeledList.Item>
                       );
                     })}
->>>>>>> master
                   </LabeledList>
                 ) : (
                   !operational ? (
@@ -266,24 +223,6 @@ export const TelecommsMonitor = (props, context) => {
             <Section title="Detected Network Entities">
               {(servers && servers.length) ? (
                 <LabeledList>
-<<<<<<< HEAD
-                  {servers.map(server => (
-                    <LabeledList.Item
-                      key={server.name}
-                      label={server.ref}
-                      buttons={(
-                        <Button
-                          content="Connect"
-                          selected={selected
-                              && (server.ref === selected.ref)}
-                          onClick={() => act('viewmachine', {
-                            'value': server.id,
-                          })} />
-                      )}>
-                      {`${server.name} (${server.id})`}
-                    </LabeledList.Item>
-                  ))}
-=======
                   {servers.map(server => {
                     return (
                       <LabeledList.Item
@@ -302,7 +241,6 @@ export const TelecommsMonitor = (props, context) => {
                       </LabeledList.Item>
                     );
                   })}
->>>>>>> master
                 </LabeledList>
               ) : (
                 '404 Servers not found. Have you tried scanning the network?'

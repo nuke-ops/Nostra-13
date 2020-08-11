@@ -13,14 +13,7 @@ export const MedicalKiosk = (props, context) => {
     active_status_4,
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      width={575}
-      height={420}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Flex mb={1}>
           <Flex.Item mr={1}>
@@ -104,13 +97,7 @@ const MedicalKioskScanButton = (props, context) => {
           tooltipPosition="right"
           content={name}
           onClick={() => {
-<<<<<<< HEAD
-            if (!paid) {
-              act(`beginScan_${index}`);
-            }
-=======
             act(`beginScan_${index}`);
->>>>>>> master
             setScanIndex(index);
           }} />
       </Flex.Item>
@@ -260,15 +247,8 @@ const MedicalKioskScanResults3 = (props, context) => {
     clone_health,
     brain_damage,
     brain_health,
-<<<<<<< HEAD
-    rad_contamination_status,
-    rad_contamination_value,
-    rad_sickness_status,
-    rad_sickness_value,
-=======
     rad_status,
     rad_value,
->>>>>>> master
     trauma_status,
   } = data;
   return (
@@ -302,29 +282,12 @@ const MedicalKioskScanResults3 = (props, context) => {
         </LabeledList.Item>
         <LabeledList.Divider />
         <LabeledList.Item
-<<<<<<< HEAD
-          label="Radiation Sickness Status">
-          {rad_sickness_status}
-        </LabeledList.Item>
-        <LabeledList.Item
-          label="Radiation Sickness Percentage">
-          {rad_sickness_value}%
-        </LabeledList.Item>
-        <LabeledList.Item
-          label="Radiation Contamination Status">
-          {rad_contamination_status}
-        </LabeledList.Item>
-        <LabeledList.Item
-          label="Radiation Contamination Percentage">
-          {rad_contamination_value}%
-=======
           label="Radiation Status">
           {rad_status}
         </LabeledList.Item>
         <LabeledList.Item
           label="Irradiation Percentage">
           {rad_value}%
->>>>>>> master
         </LabeledList.Item>
       </LabeledList>
     </Section>

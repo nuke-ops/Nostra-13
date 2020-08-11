@@ -60,15 +60,7 @@ const HealthStat = props => {
 
 export const CrewConsole = () => {
   return (
-<<<<<<< HEAD
-    <Window
-      title="Crew Monitor"
-      width={800}
-      height={600}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Section minHeight="540px">
           <CrewTable />

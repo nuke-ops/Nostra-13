@@ -7,10 +7,7 @@
 import { clamp } from 'common/math';
 import { classes, pureComponentHooks } from 'common/react';
 import { Component, createRef } from 'inferno';
-<<<<<<< HEAD:tgui/packages/tgui/components/NumberInput.js
-=======
 import { IS_IE8 } from '../byond';
->>>>>>> master:tgui-next/packages/tgui/components/NumberInput.js
 import { AnimatedNumber } from './AnimatedNumber';
 import { Box } from './Box';
 
@@ -171,11 +168,7 @@ export class NumberInput extends Component {
     const renderContentElement = value => (
       <div
         className="NumberInput__content"
-<<<<<<< HEAD:tgui/packages/tgui/components/NumberInput.js
-        unselectable={Byond.IS_LTE_IE8}>
-=======
         unselectable={IS_IE8}>
->>>>>>> master:tgui-next/packages/tgui/components/NumberInput.js
         {value + (unit ? ' ' + unit : '')}
       </div>
     );

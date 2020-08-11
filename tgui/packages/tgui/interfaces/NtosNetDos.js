@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import { Fragment } from 'inferno';
-import { useBackend } from '../backend';
-import { Box, Button, LabeledList, NoticeBox, Section } from '../components';
-import { NtosWindow } from '../layouts';
-
-export const NtosNetDos = (props, context) => {
-  return (
-    <NtosWindow
-      width={400}
-      height={250}
-      theme="syndicate">
-=======
 import { Section, Button, LabeledList, Box, NoticeBox } from "../components";
 import { useBackend } from "../backend";
 import { createLogger } from "../logging";
@@ -20,7 +7,6 @@ import { NtosWindow } from "../layouts";
 export const NtosNetDos = (props, context) => {
   return (
     <NtosWindow theme="syndicate">
->>>>>>> master
       <NtosWindow.Content>
         <NtosNetDosContent />
       </NtosWindow.Content>

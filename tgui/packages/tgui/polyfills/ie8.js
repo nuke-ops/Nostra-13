@@ -1,7 +1,6 @@
 /**
- * @file
- * @copyright 2013 Andrea Giammarchi, WebReflection
- * @license MIT
+ * Copyright (c) 2013 Andrea Giammarchi @WebReflection
+ * SPDX-License-Identifier: MIT
  */
 
 /* eslint-disable */

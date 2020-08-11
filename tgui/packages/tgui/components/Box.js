@@ -9,39 +9,17 @@ import { createVNode } from 'inferno';
 import { ChildFlags, VNodeFlags } from 'inferno-vnode-flags';
 import { CSS_COLORS } from '../constants';
 
-<<<<<<< HEAD:tgui/packages/tgui/components/Box.js
-=======
 const UNIT_PX = 12;
 
->>>>>>> master:tgui-next/packages/tgui/components/Box.js
 /**
  * Coverts our rem-like spacing unit into a CSS unit.
  */
 export const unit = value => {
   if (typeof value === 'string') {
-    // Transparently convert pixels into rem units
-    if (value.endsWith('px') && !Byond.IS_LTE_IE8) {
-      return parseFloat(value) / 12 + 'rem';
-    }
     return value;
   }
   if (typeof value === 'number') {
-    if (Byond.IS_LTE_IE8) {
-      return value * 12 + 'px';
-    }
-    return value + 'rem';
-  }
-};
-
-/**
- * Same as `unit`, but half the size for integers numbers.
- */
-export const halfUnit = value => {
-  if (typeof value === 'string') {
-    return unit(value);
-  }
-  if (typeof value === 'number') {
-    return unit(value * 0.5);
+    return (value * UNIT_PX) + 'px';
   }
 };
 
@@ -112,17 +90,7 @@ const styleMapperByPropName = {
   maxHeight: mapUnitPropTo('max-height', unit),
   fontSize: mapUnitPropTo('font-size', unit),
   fontFamily: mapRawPropTo('font-family'),
-<<<<<<< HEAD:tgui/packages/tgui/components/Box.js
-  lineHeight: (style, value) => {
-    if (!isFalsy(value)) {
-      style['line-height'] = typeof value === 'number'
-        ? value
-        : unit(value);
-    }
-  },
-=======
   lineHeight: mapRawPropTo('line-height'),
->>>>>>> master:tgui-next/packages/tgui/components/Box.js
   opacity: mapRawPropTo('opacity'),
   textAlign: mapRawPropTo('text-align'),
   verticalAlign: mapRawPropTo('vertical-align'),

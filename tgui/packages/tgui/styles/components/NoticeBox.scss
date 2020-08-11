@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-/**
- * Copyright (c) 2020 Aleksej Komarov
- * SPDX-License-Identifier: MIT
- */
-
 @use 'sass:color';
-@use '../base.scss';
-=======
-@use 'sass:color';
->>>>>>> master
 @use '../colors.scss';
 @use '../functions.scss' as *;
 
@@ -25,13 +15,8 @@ $bg-map: colors.$bg-map !default;
     rgba(0, 0, 0, 1),
     rgba(255, 255, 255, 1));
 
-<<<<<<< HEAD
-  padding: 0.33em 0.5em;
-  margin-bottom: 0.5em;
-=======
   padding: 4px 6px;
   margin-bottom: 6px;
->>>>>>> master
   box-shadow: none;
   font-weight: bold;
   font-style: italic;
@@ -40,15 +25,9 @@ $bg-map: colors.$bg-map !default;
   background-image: repeating-linear-gradient(
     -45deg,
     transparent,
-<<<<<<< HEAD
-    transparent base.em(10px),
-    $color-stripes base.em(10px),
-    $color-stripes base.em(20px));
-=======
     transparent 10px,
     $color-stripes 10px,
     $color-stripes 20px);
->>>>>>> master
 }
 
 @mixin box-color($color) {

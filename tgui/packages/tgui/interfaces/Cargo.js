@@ -14,14 +14,7 @@ export const Cargo = (props, context) => {
   const cart = data.cart || [];
   const requests = data.requests || [];
   return (
-<<<<<<< HEAD
-    <Window
-      width={780}
-      height={750}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <CargoStatus />
         <Tabs>

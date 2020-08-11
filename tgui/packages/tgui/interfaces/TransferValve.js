@@ -11,13 +11,7 @@ export const TransferValve = (props, context) => {
     valve,
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      width={310}
-      height={320}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         <Section>
           <LabeledList>

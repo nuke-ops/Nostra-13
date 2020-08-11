@@ -9,11 +9,6 @@ export const MalfunctionModulePicker = (props, context) => {
   } = data;
   return (
     <Window
-<<<<<<< HEAD
-      width={620}
-      height={525}
-=======
->>>>>>> master
       theme="malfunction"
       resizable>
       <Window.Content scrollable>

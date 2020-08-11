@@ -64,11 +64,6 @@ export class FakeTerminal extends Component {
 export const SyndContractor = (props, context) => {
   return (
     <NtosWindow
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/SyndContractor.js
-      width={500}
-      height={600}
-=======
->>>>>>> master:tgui-next/packages/tgui/interfaces/SyndContractor.js
       theme="syndicate"
       resizable>
       <NtosWindow.Content scrollable>
@@ -397,14 +392,10 @@ const HubTab = (props, context) => {
             buttons={(
               <Fragment>
                 {limited && (
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/SyndContractor.js
-                  <Box inline bold mr={1}>
-=======
                   <Box
                     inline
                     bold
                     mr={1}>
->>>>>>> master:tgui-next/packages/tgui/interfaces/SyndContractor.js
                     {item.limited} remaining
                   </Box>
                 )}

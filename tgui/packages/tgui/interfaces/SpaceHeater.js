@@ -6,13 +6,7 @@ import { Window } from '../layouts';
 export const SpaceHeater = (props, context) => {
   const { act, data } = useBackend(context);
   return (
-<<<<<<< HEAD
-    <Window
-      width={400}
-      height={305}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         <Section
           title="Power"

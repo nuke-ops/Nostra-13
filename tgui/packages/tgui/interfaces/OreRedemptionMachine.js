@@ -1,11 +1,6 @@
 import { toTitleCase } from 'common/string';
-<<<<<<< HEAD
-import { Fragment } from 'inferno';
-import { useBackend, useLocalState } from '../backend';
-=======
 import { Component, Fragment } from 'inferno';
 import { useBackend } from '../backend';
->>>>>>> master
 import { BlockQuote, Box, Button, NumberInput, Section, Table } from '../components';
 import { Window } from '../layouts';
 
@@ -19,15 +14,7 @@ export const OreRedemptionMachine = (props, context) => {
     hasDisk,
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      title="Ore Redemption Machine"
-      width={440}
-      height={550}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Section>
           <BlockQuote mb={1}>
@@ -111,50 +98,6 @@ export const OreRedemptionMachine = (props, context) => {
   );
 };
 
-<<<<<<< HEAD
-
-const MaterialRow = (props, context) => {
-  const { material, onRelease } = props;
-
-  const [
-    amount,
-    setAmount,
-  ] = useLocalState(context, "amount" + material.name, 1);
-
-  const amountAvailable = Math.floor(material.amount);
-  return (
-    <Table.Row>
-      <Table.Cell>
-        {toTitleCase(material.name).replace('Alloy', '')}
-      </Table.Cell>
-      <Table.Cell collapsing textAlign="right">
-        <Box mr={2} color="label" inline>
-          {material.value && material.value + ' cr'}
-        </Box>
-      </Table.Cell>
-      <Table.Cell collapsing textAlign="right">
-        <Box mr={2} color="label" inline>
-          {amountAvailable} sheets
-        </Box>
-      </Table.Cell>
-      <Table.Cell collapsing>
-        <NumberInput
-          width="32px"
-          step={1}
-          stepPixelSize={5}
-          minValue={1}
-          maxValue={50}
-          value={amount}
-          onChange={(e, value) => setAmount(value)} />
-        <Button
-          disabled={amountAvailable < 1}
-          content="Release"
-          onClick={() => onRelease(amount)} />
-      </Table.Cell>
-    </Table.Row>
-  );
-};
-=======
 class MaterialRow extends Component {
   constructor() {
     super();
@@ -202,4 +145,3 @@ class MaterialRow extends Component {
     );
   }
 }
->>>>>>> master

@@ -13,15 +13,7 @@ export const LanguageMenu = (props, context) => {
     unknown_languages = [],
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      title="Language Menu"
-      width={700}
-      height={600}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Section title="Known Languages">
           <LabeledList>
@@ -99,13 +91,9 @@ export const LanguageMenu = (props, context) => {
                   {' '}
                   Key: ,{language.key}
                   {' '}
-<<<<<<< HEAD
-                  {!!language.shadow && '(gained from mob)'}
-=======
                   {language.can_understand
                     ? 'Can understand.'
                     : 'Cannot understand.'}
->>>>>>> master
                   {' '}
                   {language.can_speak
                     ? 'Can speak.'

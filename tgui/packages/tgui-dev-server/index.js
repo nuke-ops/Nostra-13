@@ -1,9 +1,3 @@
-/**
- * @file
- * @copyright 2020 Aleksej Komarov
- * @license MIT
- */
-
 import { setupWebpack, getWebpackConfig } from './webpack.js';
 import { reloadByondCache } from './reloader.js';
 

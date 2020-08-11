@@ -24,19 +24,11 @@ const NukeKeypad = (props, context) => {
                 fluid
                 bold
                 key={key}
-<<<<<<< HEAD
-                mb="6px"
-                content={key}
-                textAlign="center"
-                fontSize="40px"
-                lineHeight={1.25}
-=======
                 mb={1}
                 content={key}
                 textAlign="center"
                 fontSize="40px"
                 lineHeight="50px"
->>>>>>> master
                 width="55px"
                 className={classes([
                   'NuclearBomb__Button',
@@ -61,22 +53,11 @@ export const NuclearBomb = (props, context) => {
     status2,
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      width={350}
-      height={442}
-      theme="retro">
-      <Window.Content>
-        <Box m="6px">
-          <Box
-            mb="6px"
-=======
     <Window theme="retro">
       <Window.Content>
         <Box m={1}>
           <Box
             mb={1}
->>>>>>> master
             className="NuclearBomb__displayBox">
             {status1}
           </Box>
@@ -90,17 +71,10 @@ export const NuclearBomb = (props, context) => {
               <Button
                 icon="eject"
                 fontSize="24px"
-<<<<<<< HEAD
-                lineHeight={1}
-                textAlign="center"
-                width="43px"
-                ml="6px"
-=======
                 lineHeight="23px"
                 textAlign="center"
                 width="43px"
                 ml={1}
->>>>>>> master
                 mr="3px"
                 mt="3px"
                 className="NuclearBomb__Button NuclearBomb__Button--keypad"
@@ -111,11 +85,7 @@ export const NuclearBomb = (props, context) => {
             <Flex.Item>
               <NukeKeypad />
             </Flex.Item>
-<<<<<<< HEAD
-            <Flex.Item ml="6px" width="129px">
-=======
             <Flex.Item ml={1} width="129px">
->>>>>>> master
               <Box>
                 <Button
                   fluid
@@ -123,13 +93,8 @@ export const NuclearBomb = (props, context) => {
                   content="ARM"
                   textAlign="center"
                   fontSize="28px"
-<<<<<<< HEAD
-                  lineHeight={1.1}
-                  mb="6px"
-=======
                   lineHeight="32px"
                   mb={1}
->>>>>>> master
                   className="NuclearBomb__Button NuclearBomb__Button--C"
                   onClick={() => act('arm')} />
                 <Button
@@ -138,11 +103,7 @@ export const NuclearBomb = (props, context) => {
                   content="ANCHOR"
                   textAlign="center"
                   fontSize="28px"
-<<<<<<< HEAD
-                  lineHeight={1.1}
-=======
                   lineHeight="32px"
->>>>>>> master
                   className="NuclearBomb__Button NuclearBomb__Button--E"
                   onClick={() => act('anchor')} />
                 <Box

@@ -2,11 +2,6 @@ import { Component, createRef } from 'inferno';
 import { useBackend } from '../backend';
 import { Box, Button } from '../components';
 import { Window } from '../layouts';
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/Canvas.js
-
-const PX_PER_UNIT = 28;
-=======
->>>>>>> master:tgui-next/packages/tgui/interfaces/Canvas.js
 
 class PaintCanvas extends Component {
   constructor(props) {
@@ -63,14 +58,16 @@ class PaintCanvas extends Component {
     const {
       res = 1,
       value,
+      px_per_unit = 28,
       ...rest
     } = this.props;
-    const [width, height] = getImageSize(value);
+    const x_size = value.length * px_per_unit;
+    const y_size = x_size !== 0 ? value[0].length * px_per_unit : 0;
     return (
       <canvas
         ref={this.canvasRef}
-        width={(width * PX_PER_UNIT) || 300}
-        height={(height * PX_PER_UNIT) || 300}
+        width={x_size || 300}
+        height={y_size || 300}
         {...rest}
         onClick={e => this.clickwrapper(e)}>
         Canvas failed to render.
@@ -79,27 +76,10 @@ class PaintCanvas extends Component {
   }
 }
 
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/Canvas.js
-const getImageSize = value => {
-  const width = value.length;
-  const height = width !== 0 ? value[0].length : 0;
-  return [width, height];
-};
-
-export const Canvas = (props, context) => {
-  const { act, data } = useBackend(context);
-  const [width, height] = getImageSize(data.grid);
-  return (
-    <Window
-      width={Math.min(400, width * PX_PER_UNIT * 32 + 24)}
-      height={Math.min(400, height * PX_PER_UNIT * 32 + 24)}
-      resizable>
-=======
 export const Canvas = (props, context) => {
   const { act, data } = useBackend(context);
   return (
     <Window resizable>
->>>>>>> master:tgui-next/packages/tgui/interfaces/Canvas.js
       <Window.Content scrollable>
         <Box textAlign="center">
           <PaintCanvas

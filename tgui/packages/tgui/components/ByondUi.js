@@ -7,10 +7,7 @@
 import { shallowDiffers } from 'common/react';
 import { debounce } from 'common/timer';
 import { Component, createRef } from 'inferno';
-<<<<<<< HEAD
-=======
 import { callByond, IS_IE8 } from '../byond';
->>>>>>> master
 import { createLogger } from '../logging';
 import { computeBoxProps } from './Box';
 
@@ -31,24 +28,16 @@ const createByondUiElement = elementId => {
     render: params => {
       logger.log(`rendering '${id}'`);
       byondUiStack[index] = id;
-<<<<<<< HEAD
-      Byond.winset(id, params);
-=======
       callByond('winset', {
         ...params,
         id,
       });
->>>>>>> master
     },
     unmount: () => {
       logger.log(`unmounting '${id}'`);
       byondUiStack[index] = null;
-<<<<<<< HEAD
-      Byond.winset(id, {
-=======
       callByond('winset', {
         id,
->>>>>>> master
         parent: '',
       });
     },
@@ -62,12 +51,8 @@ window.addEventListener('beforeunload', () => {
     if (typeof id === 'string') {
       logger.log(`unmounting '${id}' (beforeunload)`);
       byondUiStack[index] = null;
-<<<<<<< HEAD
-      Byond.winset(id, {
-=======
       callByond('winset', {
         id,
->>>>>>> master
         parent: '',
       });
     }
@@ -98,11 +83,7 @@ export class ByondUi extends Component {
     this.byondUiElement = createByondUiElement(props.params?.id);
     this.handleResize = debounce(() => {
       this.forceUpdate();
-<<<<<<< HEAD
-    }, 100);
-=======
     }, 500);
->>>>>>> master
   }
 
   shouldComponentUpdate(nextProps) {
@@ -120,29 +101,16 @@ export class ByondUi extends Component {
 
   componentDidMount() {
     // IE8: It probably works, but fuck you anyway.
-<<<<<<< HEAD
-    if (Byond.IS_LTE_IE10) {
-      return;
-    }
-    window.addEventListener('resize', this.handleResize);
-    this.componentDidUpdate();
-    this.handleResize();
-=======
     if (IS_IE8) {
       return;
     }
     window.addEventListener('resize', this.handleResize);
     return this.componentDidUpdate();
->>>>>>> master
   }
 
   componentDidUpdate() {
     // IE8: It probably works, but fuck you anyway.
-<<<<<<< HEAD
-    if (Byond.IS_LTE_IE10) {
-=======
     if (IS_IE8) {
->>>>>>> master
       return;
     }
     const {
@@ -151,10 +119,6 @@ export class ByondUi extends Component {
     const box = getBoundingBox(this.containerRef.current);
     logger.log('bounding box', box);
     this.byondUiElement.render({
-<<<<<<< HEAD
-      parent: window.__windowId__,
-=======
->>>>>>> master
       ...params,
       pos: box.pos[0] + ',' + box.pos[1],
       size: box.size[0] + 'x' + box.size[1],
@@ -163,11 +127,7 @@ export class ByondUi extends Component {
 
   componentWillUnmount() {
     // IE8: It probably works, but fuck you anyway.
-<<<<<<< HEAD
-    if (Byond.IS_LTE_IE10) {
-=======
     if (IS_IE8) {
->>>>>>> master
       return;
     }
     window.removeEventListener('resize', this.handleResize);
@@ -175,33 +135,22 @@ export class ByondUi extends Component {
   }
 
   render() {
-<<<<<<< HEAD
-    const { params, ...rest } = this.props;
-=======
     const {
       parent,
       params,
       ...rest
     } = this.props;
->>>>>>> master
     const type = params?.type;
     const boxProps = computeBoxProps(rest);
     return (
       <div
         ref={this.containerRef}
         {...boxProps}>
-<<<<<<< HEAD
-        {/* Filler */}
-        <div style={{ 'min-height': '22px' }} />
-=======
         {type === 'button' && <ButtonMock />}
->>>>>>> master
       </div>
     );
   }
 }
-<<<<<<< HEAD
-=======
 
 const ButtonMock = () => (
   <div
@@ -209,4 +158,3 @@ const ButtonMock = () => (
       'min-height': '22px',
     }} />
 );
->>>>>>> master

@@ -1,26 +1,12 @@
-<<<<<<< HEAD
-import { classes } from 'common/react';
-import { resolveAsset } from '../assets';
-import { useBackend } from '../backend';
-import { Box, Button, Flex, Icon, NoticeBox, Section } from '../components';
-=======
 import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { classes } from 'common/react';
 import { Box, Button, LabeledList, NoticeBox, Section, Table, Flex, Icon } from '../components';
->>>>>>> master
 import { NtosWindow } from '../layouts';
 
 export const NtosRadar = (props, context) => {
   return (
-<<<<<<< HEAD
-    <NtosWindow
-      width={800}
-      height={600}
-      theme="ntos">
-=======
     <NtosWindow theme="ntos">
->>>>>>> master
       <NtosRadarContent />
     </NtosWindow>
   );
@@ -34,14 +20,9 @@ export const NtosRadarContent = (props, context) => {
     target = [],
     scanning,
   } = data;
-<<<<<<< HEAD
-  return (
-    <Flex
-=======
 
   return (
     <Flex 
->>>>>>> master
       direction={"row"}
       hight="100%">
       <Flex.Item
@@ -86,13 +67,7 @@ export const NtosRadarContent = (props, context) => {
       </Flex.Item>
       <Flex.Item
         style={{
-<<<<<<< HEAD
-          'background-image': 'url("'
-            + resolveAsset('ntosradarbackground.png')
-            + '")',
-=======
           'background-image': 'url("ntosradarbackground.png")',
->>>>>>> master
           'background-position': 'center',
           'background-repeat': 'no-repeat',
           'top': '20px',
@@ -115,36 +90,23 @@ export const NtosRadarContent = (props, context) => {
           )
           : !!target.userot && (
             <Box as="img"
-<<<<<<< HEAD
-              src={resolveAsset(target.arrowstyle)}
-=======
               src={target.arrowstyle}
->>>>>>> master
               position="absolute"
               top="20px"
               left="243px"
               style={{
                 'transform': `rotate(${target.rot}deg)`,
-<<<<<<< HEAD
-              }} />
-=======
               }}
             />
->>>>>>> master
           ) || (
             <Icon
               name={target.pointer}
               position="absolute"
               size={2}
               color={target.color}
-<<<<<<< HEAD
-              top={((target.locy * 10) + 19) + 'px'}
-              left={((target.locx * 10) + 16) + 'px'} />
-=======
               top={((target.locy * 10) + 29) + 'px'}
               left={((target.locx * 10) + 16) + 'px'}
             />
->>>>>>> master
           )}
       </Flex.Item>
     </Flex>

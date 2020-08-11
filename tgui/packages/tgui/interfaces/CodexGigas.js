@@ -52,13 +52,7 @@ const SUFFIXES = [
 export const CodexGigas = (props, context) => {
   const { act, data } = useBackend(context);
   return (
-<<<<<<< HEAD
-    <Window
-      width={450}
-      height={450}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         <Section>
           {data.name}

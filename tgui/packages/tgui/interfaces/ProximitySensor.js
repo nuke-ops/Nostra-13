@@ -12,13 +12,7 @@ export const ProximitySensor = (props, context) => {
     sensitivity,
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      width={250}
-      height={185}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         <Section>
           <LabeledList>

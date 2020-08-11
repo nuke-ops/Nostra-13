@@ -12,14 +12,7 @@ export const Holodeck = (props, context) => {
     program,
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      width={400}
-      height={500}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Section
           title="Default Programs"

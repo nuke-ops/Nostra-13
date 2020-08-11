@@ -8,14 +8,7 @@ export const AtmosControlConsole = (props, context) => {
   const { act, data } = useBackend(context);
   const sensors = data.sensors || [];
   return (
-<<<<<<< HEAD
-    <Window
-      width={500}
-      height={315}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Section
           title={!!data.tank && sensors[0]?.long_name}>

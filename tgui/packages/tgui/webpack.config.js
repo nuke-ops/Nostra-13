@@ -1,9 +1,3 @@
-/**
- * @file
- * @copyright 2020 Aleksej Komarov
- * @license MIT
- */
-
 const webpack = require('webpack');
 const path = require('path');
 const BuildNotifierPlugin = require('webpack-build-notifier');
@@ -144,10 +138,6 @@ module.exports = (env = {}, argv) => {
           ie8: true,
           output: {
             ascii_only: true,
-<<<<<<< HEAD:tgui/packages/tgui/webpack.config.js
-            comments: false,
-=======
->>>>>>> master:tgui-next/packages/tgui/webpack.config.js
           },
         },
       }),

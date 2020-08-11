@@ -10,14 +10,7 @@ const logScale = value => Math.log2(16 + Math.max(0, value)) - 4;
 
 export const NtosSupermatterMonitor = (props, context) => {
   return (
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/NtosSupermatterMonitor.js
-    <NtosWindow
-      width={600}
-      height={350}
-      resizable>
-=======
     <NtosWindow resizable>
->>>>>>> master:tgui-next/packages/tgui/interfaces/NtosSupermatterMonitor.js
       <NtosWindow.Content scrollable>
         <NtosSupermatterMonitorContent />
       </NtosWindow.Content>

@@ -5,13 +5,7 @@ import { Window } from '../layouts';
 export const AtmosMixer = (props, context) => {
   const { act, data } = useBackend(context);
   return (
-<<<<<<< HEAD
-    <Window
-      width={370}
-      height={165}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         <Section>
           <LabeledList>

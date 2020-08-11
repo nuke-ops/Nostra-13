@@ -5,14 +5,7 @@ import { Window } from '../layouts';
 
 export const StationAlertConsole = () => {
   return (
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/StationAlertConsole.js
-    <Window
-      width={325}
-      height={500}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master:tgui-next/packages/tgui/interfaces/StationAlertConsole.js
       <Window.Content scrollable>
         <StationAlertConsoleContent />
       </Window.Content>

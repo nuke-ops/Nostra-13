@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-/**
- * @file
- * @copyright 2020 LetterN (https://github.com/LetterN)
- * @license MIT
- */
-=======
->>>>>>> master
 import { Fragment } from 'inferno';
 import { Window } from '../layouts';
 import { useBackend } from '../backend';
@@ -33,14 +25,7 @@ export const TelecommsInteraction = (props, context) => {
     isbus = false,
   } = machine;
   return (
-<<<<<<< HEAD
-    <Window
-      resizable
-      width={520}
-      height={500}>
-=======
     <Window resizable>
->>>>>>> master
       <Window.Content scrollable>
         <Fragment>
           {!!notice && (
@@ -121,11 +106,7 @@ export const TelecommsInteraction = (props, context) => {
                           'toggle': true,
                         })}
                       />
-<<<<<<< HEAD
-                      {!!machine.chang_frequency && (
-=======
                       {machine.chang_frequency ? (
->>>>>>> master
                         <NumberInput
                           animate
                           unit="kHz"
@@ -138,11 +119,8 @@ export const TelecommsInteraction = (props, context) => {
                           onChange={(e, value) => act('frequency', {
                             'adjust': value,
                           })} />
-<<<<<<< HEAD
-=======
                       ) : (
                         ''
->>>>>>> master
                       )}
                     </LabeledList.Item>
                   )}
@@ -193,23 +171,6 @@ export const TelecommsInteraction = (props, context) => {
                   title="Linked Network Entities"
                   level={2}>
                   <LabeledList>
-<<<<<<< HEAD
-                    {links.map(entity => (
-                      <LabeledList.Item
-                        key={entity.name}
-                        label={entity.ref}
-                        buttons={(
-                          <Button
-                            content="Remove"
-                            onClick={() => act('unlink', {
-                              'value': entity.ref,
-                            })}
-                          />
-                        )}>
-                        {`${entity.name} (${entity.id})`}
-                      </LabeledList.Item>
-                    ))}
-=======
                     {links.map(entity => {
                       return (
                         <LabeledList.Item
@@ -227,7 +188,6 @@ export const TelecommsInteraction = (props, context) => {
                         </LabeledList.Item>
                       );
                     })}
->>>>>>> master
                   </LabeledList>
                 </Section>
                 <Section

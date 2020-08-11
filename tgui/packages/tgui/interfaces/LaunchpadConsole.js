@@ -197,14 +197,7 @@ export const LaunchpadConsole = (props, context) => {
     selected_id,
   } = data;
   return (
-<<<<<<< HEAD:tgui/packages/tgui/interfaces/LaunchpadConsole.js
-    <Window
-      width={475}
-      height={260}
-      resizable>
-=======
     <Window resizable>
->>>>>>> master:tgui-next/packages/tgui/interfaces/Launchpad.js
       <Window.Content scrollable>
         {launchpads.length === 0 && (
           <NoticeBox>

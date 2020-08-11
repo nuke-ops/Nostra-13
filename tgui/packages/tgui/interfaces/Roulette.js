@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-import { classes } from 'common/react';
-import { useBackend, useLocalState } from '../backend';
-import { Box, Button, Grid, NumberInput } from '../components';
-import { Window } from '../layouts';
-=======
 import { classes } from "common/react";
 import { useBackend } from "../backend";
 import { Box, Button, Grid, NumberInput } from "../components";
 import { Component } from "inferno";
 import { Window } from "../layouts";
->>>>>>> master
 
 const getNumberColor = number => {
   if (number === 0) {
@@ -237,161 +230,6 @@ export const RouletteBoard = (props, context) => {
   );
 };
 
-<<<<<<< HEAD
-export const RouletteBetTable = (props, context) => {
-  const { act, data } = useBackend(context);
-
-  const [
-    customBet,
-    setCustomBet,
-  ] = useLocalState(context, 'customBet', 500);
-
-  let {
-    BetType,
-  } = data;
-
-  if (BetType.startsWith('s')) {
-    BetType = BetType.substring(1, BetType.length);
-  }
-
-  return (
-    <table className="Roulette__lowertable">
-      <tr>
-        <th
-          className={classes([
-            'Roulette',
-            'Roulette__lowertable--cell',
-            'Roulette__lowertable--header',
-          ])}>
-          Last Spun:
-        </th>
-        <th
-          className={classes([
-            'Roulette',
-            'Roulette__lowertable--cell',
-            'Roulette__lowertable--header',
-          ])}>
-          Current Bet:
-        </th>
-      </tr>
-      <tr>
-        <td className={classes([
-          'Roulette',
-          'Roulette__lowertable--cell',
-          'Roulette__lowertable--spinresult',
-          'Roulette__lowertable--spinresult-' + getNumberColor(data.LastSpin),
-        ])}>
-          {data.LastSpin}
-        </td>
-        <td className={classes([
-          'Roulette',
-          'Roulette__lowertable--cell',
-          'Roulette__lowertable--betscell',
-        ])}>
-          <Box
-            bold
-            mt={1}
-            mb={1}
-            fontSize="25px"
-            textAlign="center">
-            {data.BetAmount} cr on {BetType}
-          </Box>
-          <Box ml={1} mr={1}>
-            <Button
-              fluid
-              content="Bet 10 cr"
-              onClick={() => act('ChangeBetAmount', {
-                amount: 10,
-              })}
-            />
-            <Button
-              fluid
-              content="Bet 50 cr"
-              onClick={() => act('ChangeBetAmount', {
-                amount: 50,
-              })}
-            />
-            <Button
-              fluid
-              content="Bet 100 cr"
-              onClick={() => act('ChangeBetAmount', {
-                amount: 100,
-              })}
-            />
-            <Button
-              fluid
-              content="Bet 500 cr"
-              onClick={() => act('ChangeBetAmount', {
-                amount: 500,
-              })}
-            />
-            <Grid>
-              <Grid.Column>
-                <Button
-                  fluid
-                  content="Bet custom amount..."
-                  onClick={() => act('ChangeBetAmount', {
-                    amount: customBet,
-                  })}
-                />
-              </Grid.Column>
-              <Grid.Column size={0.1}>
-                <NumberInput
-                  value={customBet}
-                  minValue={0}
-                  maxValue={1000}
-                  step={10}
-                  stepPixelSize={4}
-                  width="40px"
-                  onChange={(e, value) => setCustomBet(value)}
-                />
-              </Grid.Column>
-            </Grid>
-          </Box>
-        </td>
-      </tr>
-      <tr>
-        <td colSpan="2">
-          <Box
-            bold
-            m={1}
-            fontSize="14px"
-            textAlign="center">
-            Swipe an ID card with a connected account to spin!
-          </Box>
-        </td>
-      </tr>
-      <tr>
-        <td className="Roulette__lowertable--cell">
-          <Box inline bold mr={1}>
-            House Balance:
-          </Box>
-          <Box inline>
-            {data.HouseBalance ? data.HouseBalance + ' cr': "None"}
-          </Box>
-        </td>
-        <td className="Roulette__lowertable--cell">
-          <Button
-            fluid
-            content={data.IsAnchored ? "Bolted" : "Unbolted"}
-            m={1}
-            color="transparent"
-            textAlign="center"
-            onClick={() => act('anchor')}
-          />
-        </td>
-      </tr>
-    </table>
-  );
-};
-
-export const Roulette = (props, context) => {
-  return (
-    <Window
-      width={603}
-      height={475}
-      theme="cardtable">
-=======
 export class RouletteBetTable extends Component {
   constructor() {
     super();
@@ -552,7 +390,6 @@ export class RouletteBetTable extends Component {
 export const Roulette = (props, context) => {
   return (
     <Window theme="cardtable">
->>>>>>> master
       <Window.Content>
         <RouletteBoard />
         <RouletteBetTable />

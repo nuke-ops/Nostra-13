@@ -12,13 +12,7 @@ export const AirlockElectronics = (props, context) => {
   const regions = data.regions || [];
   const accesses = data.accesses || [];
   return (
-<<<<<<< HEAD
-    <Window
-      width={420}
-      height={485}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         <Section title="Main">
           <LabeledList>

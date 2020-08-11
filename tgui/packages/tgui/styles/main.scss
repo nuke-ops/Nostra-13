@@ -1,8 +1,3 @@
-/**
- * Copyright (c) 2020 Aleksej Komarov
- * SPDX-License-Identifier: MIT
- */
-
 @use 'sass:meta';
 @use './base.scss';
 
@@ -13,14 +8,10 @@
 @include meta.load-css('./atomic/candystripe.scss');
 @include meta.load-css('./atomic/color.scss');
 @include meta.load-css('./atomic/debug-layout.scss');
-<<<<<<< HEAD:tgui/packages/tgui/styles/main.scss
-@include meta.load-css('./atomic/outline.scss');
-=======
 @include meta.load-css('./atomic/display.scss');
 @include meta.load-css('./atomic/margin.scss');
 @include meta.load-css('./atomic/outline.scss');
 @include meta.load-css('./atomic/position.scss');
->>>>>>> master:tgui-next/packages/tgui/styles/main.scss
 @include meta.load-css('./atomic/text.scss');
 
 // Components

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-/**
- * @file
- * @copyright 2020 LetterN (https://github.com/LetterN)
- * @license MIT
- */
-=======
->>>>>>> master
 import { Fragment } from 'inferno';
 import { Window } from '../layouts';
 import { useBackend, useSharedState } from '../backend';
@@ -25,19 +17,11 @@ export const TelecommsLogBrowser = (props, context) => {
     setTab,
   ] = useSharedState(context, 'tab', 'servers');
   const operational = (selected && selected.status);
-<<<<<<< HEAD
-  return (
-    <Window
-      theme="ntos"
-      width={575}
-      height={400}>
-=======
   // if (!operational) { // some sanity checks.
   //   setTab("servers");
   // }
   return (
     <Window theme="ntos">
->>>>>>> master
       <Window.Content scrollable>
         <Fragment>
           {!!notice && (
@@ -133,44 +117,6 @@ export const TelecommsLogBrowser = (props, context) => {
           {(tab === "messages" && operational) ? (
             <Section title="Logs">
               {(operational && selected_logs) ? (
-<<<<<<< HEAD
-                selected_logs.map(logs => (
-                  <Section
-                    level={4}
-                    key={logs.ref}>
-                    <LabeledList>
-                      <LabeledList.Item
-                        label="Filename"
-                        buttons={(
-                          <Button
-                            content="Delete"
-                            onClick={() => act('delete', {
-                              'value': logs.ref,
-                            })} />
-                        )}>
-                        {logs.name}
-                      </LabeledList.Item>
-                      <LabeledList.Item label="Data type">
-                        {logs.input_type}
-                      </LabeledList.Item>
-                      {logs.source && (
-                        <LabeledList.Item label="Source">
-                          {`[${logs.source.name}]
-                          (Job: [${logs.source.job}])`}
-                        </LabeledList.Item>
-                      )}
-                      {logs.race && (
-                        <LabeledList.Item label="Class">
-                          {logs.race}
-                        </LabeledList.Item>
-                      )}
-                      <LabeledList.Item label="Contents">
-                        {logs.message}
-                      </LabeledList.Item>
-                    </LabeledList>
-                  </Section>
-                ))
-=======
                 selected_logs.map(logs => {
                   return (
                     <Section
@@ -209,7 +155,6 @@ export const TelecommsLogBrowser = (props, context) => {
                     </Section>
                   );
                 })
->>>>>>> master
               ) : (
                 "No server selected!"
               )}
@@ -218,24 +163,6 @@ export const TelecommsLogBrowser = (props, context) => {
             <Section>
               {(servers && servers.length) ? (
                 <LabeledList>
-<<<<<<< HEAD
-                  {servers.map(server => (
-                    <LabeledList.Item
-                      key={server.name}
-                      label={`${server.ref}`}
-                      buttons={(
-                        <Button
-                          content="Connect"
-                          selected={data.selected
-                          && (server.ref === data.selected.ref)}
-                          onClick={() => act('viewmachine', {
-                            'value': server.id,
-                          })} />
-                      )}>
-                      {`${server.name} (${server.id})`}
-                    </LabeledList.Item>
-                  ))}
-=======
                   {servers.map(server => {
                     return (
                       <LabeledList.Item
@@ -254,7 +181,6 @@ export const TelecommsLogBrowser = (props, context) => {
                       </LabeledList.Item>
                     );
                   })}
->>>>>>> master
                 </LabeledList>
               ) : (
                 '404 Servers not found. Have you tried scanning the network?'

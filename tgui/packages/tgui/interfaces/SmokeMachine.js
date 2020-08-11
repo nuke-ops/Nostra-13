@@ -15,13 +15,7 @@ export const SmokeMachine = (props, context) => {
     maxSetting = [],
   } = data;
   return (
-<<<<<<< HEAD
-    <Window
-      width={350}
-      height={350}>
-=======
     <Window>
->>>>>>> master
       <Window.Content>
         <Section title="Dispersal Tank"
           buttons={(

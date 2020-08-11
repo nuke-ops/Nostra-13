@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-/**
- * Copyright (c) 2020 Aleksej Komarov
- * SPDX-License-Identifier: MIT
- */
-
-@use '../base.scss';
-
-$color: rgba(255, 255, 255, 0.1) !default;
-$thickness: base.em(2px) !default;
-$spacing: 0.5em;
-=======
 $color: rgba(255, 255, 255, 0.1) !default;
 $thickness: 2px !default;
 $spacing: 6px;
->>>>>>> master
 
 .Divider--horizontal {
   margin: $spacing 0;
