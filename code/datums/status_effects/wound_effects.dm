@@ -117,12 +117,7 @@
 
 /datum/status_effect/wound/on_creation(mob/living/new_owner, incoming_wound)
 	. = ..()
-<<<<<<< HEAD
 	linked_wound = incoming_wound
-=======
-	var/datum/wound/W = incoming_wound
-	linked_wound = W
->>>>>>> master
 	linked_limb = linked_wound.limb
 
 /datum/status_effect/wound/on_remove()
@@ -144,15 +139,9 @@
 
 
 // bones
-<<<<<<< HEAD
 /datum/status_effect/wound/blunt
 
 /datum/status_effect/wound/blunt/interact_speed_modifier()
-=======
-/datum/status_effect/wound/bone
-
-/datum/status_effect/wound/bone/interact_speed_modifier()
->>>>>>> master
 	var/mob/living/carbon/C = owner
 
 	if(C.get_active_hand() == linked_limb)
@@ -161,11 +150,7 @@
 
 	return 1
 
-<<<<<<< HEAD
 /datum/status_effect/wound/blunt/action_cooldown_mod()
-=======
-/datum/status_effect/wound/bone/nextmove_modifier()
->>>>>>> master
 	var/mob/living/carbon/C = owner
 
 	if(C.get_active_hand() == linked_limb)
@@ -173,7 +158,6 @@
 
 	return 1
 
-<<<<<<< HEAD
 /datum/status_effect/wound/blunt/moderate
 	id = "disjoint"
 /datum/status_effect/wound/blunt/severe
@@ -202,26 +186,6 @@
 /datum/status_effect/wound/pierce/critical
 	id = "rupture"
 
-=======
-/datum/status_effect/wound/bone/moderate
-	id = "disjoint"
-/datum/status_effect/wound/bone/severe
-	id = "hairline"
-
-/datum/status_effect/wound/bone/critical
-	id = "compound"
-
-// cuts
-/datum/status_effect/wound/cut/moderate
-	id = "abrasion"
-
-/datum/status_effect/wound/cut/severe
-	id = "laceration"
-
-/datum/status_effect/wound/cut/critical
-	id = "avulsion"
-
->>>>>>> master
 // burns
 /datum/status_effect/wound/burn/moderate
 	id = "seconddeg"
