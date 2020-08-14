@@ -3546,7 +3546,7 @@
 #include "modular_citadel\code\modules\reagents\objects\items.dm"
 #include "modular_nostration\code\datums\ai_laws.dm"
 #include "modular_nostration\code\datums\shuttles.dm"
-#include "modular_nostration\code\game\area\Space_station_13_areas.dm"
+#include "modular_nostration\code\game\area\Space_Station_13_areas.dm"
 #include "modular_nostration\code\game\objects\items\plushes.dm"
 #include "modular_nostration\code\game\objects\items\circuitboards\machine_circuitboards.dm"
 #include "modular_nostration\code\game\objects\items\storage\uplink_kits.dm"
