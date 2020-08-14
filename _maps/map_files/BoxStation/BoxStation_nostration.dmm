@@ -3120,7 +3120,11 @@
 /turf/open/floor/plasteel/dark,
 /area/security/execution/transfer)
 "agg" = (
-/obj/structure/closet/secure_closet/injection,
+/obj/structure/closet/secure_closet/injection{
+	req_access = null;
+	req_access_txt = "3";
+	req_one_access = null
+	},
 /obj/structure/cable,
 /obj/machinery/power/apc{
 	areastring = "/area/security/execution/transfer";
@@ -56575,7 +56579,6 @@
 	},
 /area/maintenance/bar)
 "mqZ" = (
-/obj/structure/reagent_dispensers/keg/aphro/strong,
 /obj/item/reagent_containers/glass/beaker,
 /turf/open/floor/plating,
 /area/maintenance/bar)
