@@ -224,7 +224,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	var/needs_update = savefile_needs_update(S)
 	if(needs_update == -2)		//fatal, can't load any data
 		return 0
-	
+
 	. = TRUE
 
 	//general preferences
@@ -443,7 +443,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		return 0
 
 	. = TRUE
-	
+
 	//Species
 	var/species_id
 	S["species"]			>> species_id
@@ -732,9 +732,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	vorepref = sanitize_text(S["vore_pref"], "Ask")
 	if(!length(vorepref)) vorepref = "Ask"
-	extremepref 					= sanitize_text(S["extremepref"], "No") //god has forsaken me
+	extremepref					= sanitize_text(S["extremepref"], "No") //god has forsaken me
 	if(!length(extremepref)) extremepref = "No"
-	extremeharm 					= sanitize_text(S["extremeharm"], "No")
+	extremeharm					= sanitize_text(S["extremeharm"], "No")
 	if(!length(extremeharm)) extremeharm = "No"
 
 	persistent_scars = sanitize_integer(persistent_scars)
@@ -815,7 +815,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["vore_pref"], vorepref)
 	WRITE_FILE(S["extremepref"], extremepref)
 	WRITE_FILE(S["extremeharm"], extremeharm)
-
+	
 	WRITE_FILE(S["feature_mcolor"]					, features["mcolor"])
 	WRITE_FILE(S["feature_lizard_tail"]				, features["tail_lizard"])
 	WRITE_FILE(S["feature_human_tail"]				, features["tail_human"])
