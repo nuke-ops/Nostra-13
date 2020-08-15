@@ -277,6 +277,7 @@
 /obj/structure/sign/directions/engineering{
 	dir = 4;
 	icon_state = "direction_eng";
+	pixel_x = 0;
 	pixel_y = 40
 	},
 /turf/open/floor/plasteel,
@@ -391,6 +392,7 @@
 /obj/structure/sign/directions/supply{
 	dir = 4;
 	icon_state = "direction_supply";
+	pixel_x = 0;
 	pixel_y = 28
 	},
 /turf/open/floor/plasteel,
@@ -464,6 +466,7 @@
 /obj/structure/sign/directions/supply{
 	dir = 4;
 	icon_state = "direction_supply";
+	pixel_x = 0;
 	pixel_y = 32
 	},
 /obj/structure/sign/directions/evac{
@@ -491,6 +494,7 @@
 	},
 /obj/structure/sign/directions/evac{
 	dir = 4;
+	pixel_x = 0;
 	pixel_y = 40
 	},
 /turf/open/floor/plasteel/white/corner{
@@ -549,6 +553,7 @@
 /obj/structure/sign/directions/supply{
 	dir = 4;
 	icon_state = "direction_supply";
+	pixel_x = 0;
 	pixel_y = 36
 	},
 /obj/structure/sign/directions/engineering{
@@ -592,6 +597,8 @@
 /obj/structure/sign/directions/security{
 	dir = 8;
 	icon_state = "direction_sec";
+	pixel_x = 0;
+	pixel_y = 0
 	},
 /obj/structure/sign/directions/command{
 	dir = 8;
@@ -18905,6 +18912,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/storage/primary)
+"ihL" = (
+/mob/living/simple_animal/opossum,
+/turf/open/floor/plating,
+/area/maintenance/aft/secondary)
 "ihX" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -24046,6 +24057,10 @@
 "luo" = (
 /turf/open/floor/plasteel/white,
 /area/science/misc_lab)
+"lwl" = (
+/mob/living/simple_animal/opossum/poppy,
+/turf/open/floor/plating,
+/area/engine/engineering)
 "lwH" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -83459,7 +83474,7 @@ tRe
 tRe
 tRe
 bWf
-bVa
+ihL
 kXG
 sqx
 owj
@@ -98017,7 +98032,7 @@ xUL
 xUL
 dKF
 ijZ
-ijZ
+lwl
 bnU
 oJa
 cNE
