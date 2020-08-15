@@ -181,7 +181,7 @@ window "infowindow"
 		text-color = #e0e0e0
 		background-color = #40628a
 		saved-params = "is-checked"
-		text = "Forum"
+		text = "Discord"
 		command = "forum"
 	elem "github"
 		type = BUTTON
