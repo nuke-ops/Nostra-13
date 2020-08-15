@@ -64,8 +64,6 @@ export class FakeTerminal extends Component {
 export const SyndContractor = (props, context) => {
   return (
     <NtosWindow
-      width={500}
-      height={600}
       theme="syndicate"
       resizable>
       <NtosWindow.Content scrollable>
@@ -394,7 +392,10 @@ const HubTab = (props, context) => {
             buttons={(
               <Fragment>
                 {limited && (
-                  <Box inline bold mr={1}>
+                  <Box
+                    inline
+                    bold
+                    mr={1}>
                     {item.limited} remaining
                   </Box>
                 )}

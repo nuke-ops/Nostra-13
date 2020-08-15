@@ -6,9 +6,7 @@ import { Window } from '../layouts';
 export const VaultController = (props, context) => {
   const { act, data } = useBackend(context);
   return (
-    <Window
-      width={300}
-      height={120}>
+    <Window>
       <Window.Content>
         <Section
           title="Lock Status: "
@@ -29,7 +27,7 @@ export const VaultController = (props, context) => {
                   bad: [-Infinity, 0.30],
                 }}>
                 {toFixed(data.stored / 1000) + ' / '
-                  + toFixed(data.max / 1000) + ' kW'}
+              + toFixed(data.max / 1000) + ' kW'}
               </ProgressBar>
             </LabeledList.Item>
           </LabeledList>

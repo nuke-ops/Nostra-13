@@ -7,6 +7,7 @@
 import { map, zipWith } from 'common/collections';
 import { pureComponentHooks } from 'common/react';
 import { Component, createRef } from 'inferno';
+import { IS_IE8 } from '../byond';
 import { Box } from './Box';
 
 const normalizeData = (data, scale, rangeX, rangeY) => {
@@ -122,5 +123,5 @@ const Stub = props => null;
 
 // IE8: No inline svg support
 export const Chart = {
-  Line: Byond.IS_LTE_IE8 ? Stub : LineChart,
+  Line: IS_IE8 ? Stub : LineChart,
 };

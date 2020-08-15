@@ -1,9 +1,3 @@
-/**
- * @file
- * @copyright 2020 Aleksej Komarov
- * @license MIT
- */
-
 import { compose } from './fp';
 
 /**
@@ -67,33 +61,5 @@ export const applyMiddleware = (...middlewares) => {
       ...store,
       dispatch,
     };
-  };
-};
-
-/**
- * Combines reducers by running them in their own object namespaces as
- * defined in reducersObj paramter.
- *
- * Main difference from redux/combineReducers is that it preserves keys
- * in the state that are not present in the reducers object. This function
- * is also more flexible than the redux counterpart.
- */
-export const combineReducers = reducersObj => {
-  const keys = Object.keys(reducersObj);
-  let hasChanged = false;
-  return (prevState, action) => {
-    const nextState = { ...prevState };
-    for (let key of keys) {
-      const reducer = reducersObj[key];
-      const prevDomainState = prevState[key];
-      const nextDomainState = reducer(prevDomainState, action);
-      if (prevDomainState !== nextDomainState) {
-        hasChanged = true;
-        nextState[key] = nextDomainState;
-      }
-    }
-    return hasChanged
-      ? nextState
-      : prevState;
   };
 };

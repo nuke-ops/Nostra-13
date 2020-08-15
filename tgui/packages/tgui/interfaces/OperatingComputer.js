@@ -25,10 +25,7 @@ const damageTypes = [
 export const OperatingComputer = (props, context) => {
   const [tab, setTab] = useSharedState(context, 'tab', 1);
   return (
-    <Window
-      width={350}
-      height={470}
-      resizable>
+    <Window resizable>
       <Window.Content scrollable>
         <Tabs>
           <Tabs.Tab

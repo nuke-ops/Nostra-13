@@ -1,9 +1,3 @@
-/**
- * @file
- * @copyright 2020 Aleksej Komarov
- * @license MIT
- */
-
 import { createLogger } from 'common/logging.js';
 import fs from 'fs';
 import { createRequire } from 'module';

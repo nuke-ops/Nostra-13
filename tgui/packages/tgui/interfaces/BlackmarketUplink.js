@@ -1,5 +1,5 @@
 import { useBackend } from '../backend';
-import { AnimatedNumber, Box, Button, Flex, Modal, Section, Tabs } from '../components';
+import { AnimatedNumber, Box, Button, Flex, Modal, Section, Table, Tabs } from '../components';
 import { formatMoney } from '../format';
 import { Window } from '../layouts';
 
@@ -15,8 +15,6 @@ export const BlackMarketUplink = (props, context) => {
   } = data;
   return (
     <Window
-      width={600}
-      height={480}
       theme="hackerman"
       resizable>
       <ShipmentSelector />

@@ -5,6 +5,7 @@ import { Window } from '../layouts';
 
 export const NaniteCodes = (props, context) => {
   const { act, data } = useBackend(context);
+
   return (
     <Section
       title="Codes"
@@ -227,10 +228,7 @@ export const NaniteExtraBoolean = (props, context) => {
 
 export const NaniteProgrammer = (props, context) => {
   return (
-    <Window
-      width={420}
-      height={550}
-      resizable>
+    <Window resizable>
       <Window.Content scrollable>
         <NaniteProgrammerContent />
       </Window.Content>
@@ -253,6 +251,7 @@ export const NaniteProgrammerContent = (props, context) => {
     has_extra_settings,
     extra_settings = {},
   } = data;
+
   if (!has_disk) {
     return (
       <NoticeBox textAlign="center">
@@ -260,6 +259,7 @@ export const NaniteProgrammerContent = (props, context) => {
       </NoticeBox>
     );
   }
+
   if (!has_program) {
     return (
       <Section
@@ -272,6 +272,7 @@ export const NaniteProgrammerContent = (props, context) => {
         )} />
     );
   }
+
   return (
     <Section
       title={name}

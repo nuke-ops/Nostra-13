@@ -342,6 +342,9 @@
 /atom/movable/fov_holder/onTransitZ()
 	return
 
+/atom/movable/fov_holder/shuttleRotate()
+	return
+
 /// Prevents people from moving these after creation, because they shouldn't be.
 /atom/movable/fov_holder/forceMove(atom/destination, no_tp=FALSE, harderforce = FALSE)
 	if(harderforce)

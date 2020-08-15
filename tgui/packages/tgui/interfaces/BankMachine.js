@@ -10,14 +10,11 @@ export const BankMachine = (props, context) => {
     station_name,
   } = data;
   return (
-    <Window
-      width={335}
-      height={160}>
+    <Window>
       <Window.Content>
         <Section title={station_name + ' Vault'}>
           <LabeledList>
-            <LabeledList.Item
-              label="Current Balance"
+            <LabeledList.Item label="Current Balance"
               buttons={(
                 <Button
                   icon={siphoning ? 'times' : 'sync'}

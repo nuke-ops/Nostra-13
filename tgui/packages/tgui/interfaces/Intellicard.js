@@ -16,10 +16,7 @@ export const Intellicard = (props, context) => {
   } = data;
   const offline = isDead || isBraindead;
   return (
-    <Window
-      width={500}
-      height={500}
-      resizable>
+    <Window resizable>
       <Window.Content scrollable>
         <Section
           title={name || "Empty Card"}

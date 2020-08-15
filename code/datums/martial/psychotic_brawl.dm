@@ -21,7 +21,7 @@
 			atk_verb = "helped"
 		if(2)
 			A.emote("cry")
-			A.Stun(20)
+			A.Stun(15)
 			atk_verb = "cried looking at"
 		if(3)
 			if(A.grab_state >= GRAB_AGGRESSIVE)
@@ -45,12 +45,12 @@
 			D.visible_message("<span class='danger'>[A] [atk_verb] [D]!</span>", \
 					  "<span class='userdanger'>[A] [atk_verb] you!</span>")
 			playsound(get_turf(D), 'sound/weapons/punch1.ogg', 40, 1, -1)
-			D.apply_damage(damage*1.5, BRUTE, BODY_ZONE_HEAD)
+			D.apply_damage(damage*1.3, BRUTE, BODY_ZONE_HEAD)
 			A.apply_damage(damage, BRUTE, BODY_ZONE_HEAD)
 			if(!istype(D.head,/obj/item/clothing/head/helmet/) && !istype(D.head,/obj/item/clothing/head/hardhat))
 				D.adjustOrganLoss(ORGAN_SLOT_BRAIN, damage)
-			A.Stun(rand(10,45))
-			D.DefaultCombatKnockdown(rand(5,30))//CIT CHANGE - makes stuns from martial arts always use Knockdown instead of Stun for the sake of consistency
+			A.Stun(rand(10,30))
+			D.DefaultCombatKnockdown(rand(3,20))//CIT CHANGE - makes stuns from martial arts always use Knockdown instead of Stun for the sake of consistency
 		if(5,6)
 			A.do_attack_animation(D, ATTACK_EFFECT_PUNCH)
 			atk_verb = pick("punches", "kicks", "hits", "slams into")
@@ -60,7 +60,7 @@
 			playsound(get_turf(D), 'sound/effects/meteorimpact.ogg', 25, 1, -1)
 			var/throwtarget = get_edge_target_turf(A, get_dir(A, get_step_away(D, A)))
 			D.throw_at(throwtarget, 4, 2, A)//So stuff gets tossed around at the same time.
-			D.DefaultCombatKnockdown(60)
+			D.DefaultCombatKnockdown(50)
 		if(7,8)
 			return FALSE
 

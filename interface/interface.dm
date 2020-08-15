@@ -19,7 +19,7 @@
 	return
 
 /client/verb/forum()
-	set name = "forum"
+	set name = "discord"
 	set desc = "Visit the forum."
 	set hidden = 1
 	var/forumurl = CONFIG_GET(string/forumurl)

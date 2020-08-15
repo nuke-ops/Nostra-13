@@ -13,9 +13,7 @@ export const EmergencyShuttleConsole = (props, context) => {
     authorizations = [],
   } = data;
   return (
-    <Window
-      width={400}
-      height={350}>
+    <Window>
       <Window.Content>
         <Section>
           <Box
@@ -102,6 +100,15 @@ export const EmergencyShuttleConsole = (props, context) => {
                   No Active Authorizations
                 </Box>
               )}
+              {authorizations.map(authorization => (
+                <Box
+                  key={authorization.name}
+                  bold
+                  fontSize="16px"
+                  className="candystripe">
+                  {authorization.name} ({authorization.job})
+                </Box>
+              ))}
             </Section>
           </Section>
         </Section>

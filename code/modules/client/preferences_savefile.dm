@@ -722,6 +722,21 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["silicon_flavor_text"]			= copytext(features["silicon_flavor_text"], 1, MAX_FLAVOR_LEN)
 	features["ooc_notes"]			= copytext(features["ooc_notes"], 1, MAX_FLAVOR_LEN)
 
+	skyrat_ooc_notes				= sanitize_text(S["skyrat_ooc_notes"])
+
+	erppref = sanitize_text(S["erp_pref"], "Ask")
+	if(!length(erppref)) erppref = "Ask"
+
+	nonconpref = sanitize_text(S["noncon_pref"], "Ask")
+	if(!length(nonconpref)) nonconpref = "Ask"
+
+	vorepref = sanitize_text(S["vore_pref"], "Ask")
+	if(!length(vorepref)) vorepref = "Ask"
+	extremepref					= sanitize_text(S["extremepref"], "No") //god has forsaken me
+	if(!length(extremepref)) extremepref = "No"
+	extremeharm					= sanitize_text(S["extremeharm"], "No")
+	if(!length(extremeharm)) extremeharm = "No"
+
 	persistent_scars = sanitize_integer(persistent_scars)
 	scars_list["1"] = sanitize_text(scars_list["1"])
 	scars_list["2"] = sanitize_text(scars_list["2"])
@@ -794,6 +809,13 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["security_records"]		, security_records)
 	WRITE_FILE(S["medical_records"]			, medical_records)
 
+	WRITE_FILE(S["skyrat_ooc_notes"], skyrat_ooc_notes)
+	WRITE_FILE(S["erp_pref"], erppref)
+	WRITE_FILE(S["noncon_pref"], nonconpref)
+	WRITE_FILE(S["vore_pref"], vorepref)
+	WRITE_FILE(S["extremepref"], extremepref)
+	WRITE_FILE(S["extremeharm"], extremeharm)
+	
 	WRITE_FILE(S["feature_mcolor"]					, features["mcolor"])
 	WRITE_FILE(S["feature_lizard_tail"]				, features["tail_lizard"])
 	WRITE_FILE(S["feature_human_tail"]				, features["tail_human"])

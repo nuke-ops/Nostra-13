@@ -6,6 +6,7 @@
 
 import { keyOfMatchingRange, scale } from 'common/math';
 import { classes } from 'common/react';
+import { IS_IE8 } from '../byond';
 import { computeBoxClassName, computeBoxProps } from './Box';
 import { DraggableControl } from './DraggableControl';
 import { NumberInput } from './NumberInput';
@@ -13,7 +14,7 @@ import { NumberInput } from './NumberInput';
 export const Knob = props => {
   // IE8: I don't want to support a yet another component on IE8.
   // IE8: It also can't handle SVG.
-  if (Byond.IS_LTE_IE8) {
+  if (IS_IE8) {
     return (
       <NumberInput {...props} />
     );

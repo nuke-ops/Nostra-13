@@ -1,10 +1,11 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
-import { Box, Button, Icon, Input, Section, Table } from '../components';
+import { Box, Button, Section, Input, Table, Icon } from '../components';
+import { Fragment } from 'inferno';
 import { NtosWindow } from '../layouts';
 
 export const NtosNetChat = (props, context) => {
   const { act, data } = useBackend(context);
+
   const {
     can_admin,
     adminmode,
@@ -16,15 +17,17 @@ export const NtosNetChat = (props, context) => {
     clients = [],
     messages = [],
   } = data;
+
   const in_channel = (active_channel !== null);
   const authorized = (authed || adminmode);
+
   return (
-    <NtosWindow
-      width={900}
-      height={675}>
+    <NtosWindow>
       <NtosWindow.Content>
-        <Section height="600px">
-          <Table height="580px">
+        <Section
+          height="600px">
+          <Table
+            height="580px">
             <Table.Row>
               <Table.Cell
                 verticalAlign="top"
@@ -101,6 +104,7 @@ export const NtosNetChat = (props, context) => {
                     )
                   )}
                 </Box>
+
                 <Input
                   fluid
                   selfClear

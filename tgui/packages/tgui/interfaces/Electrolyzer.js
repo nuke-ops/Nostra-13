@@ -1,14 +1,12 @@
 import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
-import { Button, LabeledList, ProgressBar, Section } from '../components';
+import { Box, Button, LabeledList, NumberInput, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
 
 export const Electrolyzer = (props, context) => {
   const { act, data } = useBackend(context);
   return (
-    <Window
-      width={400}
-      height={305}>
+    <Window>
       <Window.Content>
         <Section
           title="Power"

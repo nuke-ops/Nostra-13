@@ -17,10 +17,7 @@ export const AutomatedAnnouncement = (props, context) => {
     newhead,
   } = data;
   return (
-    <Window
-      title="Automated Announcement System"
-      width={500}
-      height={225}>
+    <Window>
       <Window.Content>
         <Section
           title="Arrival Announcement"

@@ -1,16 +1,8 @@
-/**
- * Copyright (c) 2020 Arturlang
- * SPDX-License-Identifier: MIT
- */
-
 @use 'sass:color';
 @use 'sass:meta';
 
 @use '../colors.scss' with (
   $primary: #B18B25,
-  $good: #CFBA47,
-  $average: #5F380E,
-  $bad: #5F380E,
   $fg-map-keys: (),
   $bg-map-keys: (),
 );
@@ -26,23 +18,23 @@
 
   // Components
   @include meta.load-css('../components/Button.scss', $with: (
-    'color-default': #5F380E, //wrong.
+    'color-default': colors.$primary,
     'color-disabled': #2D1400,
     'color-selected': #CFBA47,
-    'color-caution': #FFAE42, //yellow-orange
-    'color-danger': #f0ff23, //yellow
+    'color-caution': #FFAE42,
+    'color-danger': #f0ff23,
   ));
   @include meta.load-css('../components/Input.scss', $with: (
-    'border-color': #CFBA47,
+    'border-color': #8faa2e,
   ));
   @include meta.load-css('../components/NoticeBox.scss', $with: (
     'color-background': #886a09,
   ));
   @include meta.load-css('../components/NumberInput.scss', $with: (
-    'border-color': #CFBA47,
+    'border-color': #87ce87,
   ));
   @include meta.load-css('../components/ProgressBar.scss', $with: (
-    'color-background': #2D1400, // 'border-color': #170800
+    'color-background': rgba(0, 0, 0, 0.5),
   ));
   @include meta.load-css('../components/Section.scss');
   @include meta.load-css('../components/Tooltip.scss', $with: (
@@ -53,12 +45,11 @@
   @include meta.load-css('../layouts/Layout.scss');
   @include meta.load-css('../layouts/Window.scss');
   @include meta.load-css('../layouts/TitleBar.scss', $with: (
-    'color-text': #CFBA47,
-    'color-background': #2D1400, // 'border-color': #170800
-    'color-shadow-core': #170800,
+    'color-background': #775b0f,
   ));
 
   .Layout__content {
-    background-image: none; // fa-gear with a color of #CFBA47
+    background-image: none;
+
   }
 }

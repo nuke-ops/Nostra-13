@@ -1,10 +1,4 @@
-/**
- * Copyright (c) 2020 Aleksej Komarov
- * SPDX-License-Identifier: MIT
- */
-
 @use 'sass:color';
-@use '../base.scss';
 @use '../colors.scss';
 
 $color-title: #ffffff !default;
@@ -14,7 +8,7 @@ $color-separator: colors.$primary !default;
 
 .Section {
   position: relative;
-  margin-bottom: 0.5em;
+  margin-bottom: 6px;
   // IE8: Does not support rgba colors
   background-color: color.adjust(
     $color-background,
@@ -31,52 +25,42 @@ $color-separator: colors.$primary !default;
 
 .Section__title {
   position: relative;
-  padding: 0.5em;
-  border-bottom: base.em(2px) solid $color-separator;
+  padding: 6px;
+  border-bottom: 2px solid $color-separator;
 }
 
 .Section__titleText {
-  font-size: base.em(14px);
+  font-size: 14px;
   font-weight: bold;
 }
 
 .Section__buttons {
   position: absolute;
   display: inline-block;
-  right: 0.5em;
-  margin-top: base.em(-1px);
+  right: 6px;
+  margin-top: -1px;
 }
 
 .Section__content {
-  padding: 0.66em 0.5em;
-}
-
-.Section--fill {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.Section--fill .Section__content {
-  flex-grow: 1;
+  padding: 8px 6px;
 }
 
 .Section--level--1 .Section__titleText {
-  font-size: base.em(14px);
+  font-size: 14px;
 }
 
 .Section--level--2 .Section__titleText {
-  font-size: base.em(13px);
+  font-size: 13px;
 }
 
 .Section--level--3 .Section__titleText {
-  font-size: base.em(12px);
+  font-size: 12px;
 }
 
 .Section--level--2,
 .Section--level--3 {
   background-color: transparent;
   box-shadow: none;
-  margin-left: -0.5em;
-  margin-right: -0.5em;
+  margin-left: -6px;
+  margin-right: -6px;
 }

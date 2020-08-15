@@ -5,10 +5,7 @@ import { Window } from '../layouts';
 
 export const AiRestorer = () => {
   return (
-    <Window
-      width={370}
-      height={360}
-      resizable>
+    <Window resizable>
       <Window.Content scrollable>
         <AiRestorerContent />
       </Window.Content>

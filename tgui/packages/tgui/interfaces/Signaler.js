@@ -1,6 +1,6 @@
-import { toFixed } from 'common/math';
+import { Grid, NumberInput, Button, Section } from '../components';
 import { useBackend } from '../backend';
-import { Button, Grid, NumberInput, Section } from '../components';
+import { toFixed } from 'common/math';
 import { Window } from '../layouts';
 
 export const Signaler = (props, context) => {
@@ -11,10 +11,9 @@ export const Signaler = (props, context) => {
     minFrequency,
     maxFrequency,
   } = data;
+
   return (
-    <Window
-      width={280}
-      height={132}>
+    <Window>
       <Window.Content>
         <Section>
           <Grid>

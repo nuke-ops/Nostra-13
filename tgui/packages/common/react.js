@@ -1,10 +1,4 @@
 /**
- * @file
- * @copyright 2020 Aleksej Komarov
- * @license MIT
- */
-
-/**
  * Helper for conditionally adding/removing classes in React
  *
  * @param {any[]} classNames

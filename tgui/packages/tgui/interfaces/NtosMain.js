@@ -23,21 +23,13 @@ const PROGRAM_ICONS = {
 export const NtosMain = (props, context) => {
   const { act, data } = useBackend(context);
   const {
-    device_theme,
     programs = [],
     has_light,
     light_on,
     comp_light_color,
   } = data;
   return (
-    <NtosWindow
-      title={device_theme === 'syndicate'
-        && 'Syndix Main Menu'
-        || 'NtOS Main Menu'}
-      theme={device_theme}
-      width={400}
-      height={500}
-      resizable>
+    <NtosWindow resizable>
       <NtosWindow.Content scrollable>
         {!!has_light && (
           <Section>
@@ -63,6 +55,7 @@ export const NtosMain = (props, context) => {
                 <Table.Cell>
                   <Button
                     fluid
+                    lineHeight="24px"
                     color="transparent"
                     icon={PROGRAM_ICONS[program.name]
                       || 'window-maximize-o'}
@@ -74,6 +67,7 @@ export const NtosMain = (props, context) => {
                 <Table.Cell collapsing width="18px">
                   {!!program.running && (
                     <Button
+                      lineHeight="24px"
                       color="transparent"
                       icon="times"
                       tooltip="Close program"

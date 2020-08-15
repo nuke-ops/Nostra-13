@@ -1,8 +1,3 @@
-/**
- * @file
- * @copyright 2020 LetterN (https://github.com/LetterN)
- * @license MIT
- */
 import { Fragment } from 'inferno';
 import { Window } from '../layouts';
 import { useBackend } from '../backend';
@@ -30,10 +25,7 @@ export const TelecommsInteraction = (props, context) => {
     isbus = false,
   } = machine;
   return (
-    <Window
-      resizable
-      width={520}
-      height={500}>
+    <Window resizable>
       <Window.Content scrollable>
         <Fragment>
           {!!notice && (
@@ -114,7 +106,7 @@ export const TelecommsInteraction = (props, context) => {
                           'toggle': true,
                         })}
                       />
-                      {!!machine.chang_frequency && (
+                      {machine.chang_frequency ? (
                         <NumberInput
                           animate
                           unit="kHz"
@@ -127,6 +119,8 @@ export const TelecommsInteraction = (props, context) => {
                           onChange={(e, value) => act('frequency', {
                             'adjust': value,
                           })} />
+                      ) : (
+                        ''
                       )}
                     </LabeledList.Item>
                   )}
@@ -177,21 +171,23 @@ export const TelecommsInteraction = (props, context) => {
                   title="Linked Network Entities"
                   level={2}>
                   <LabeledList>
-                    {links.map(entity => (
-                      <LabeledList.Item
-                        key={entity.name}
-                        label={entity.ref}
-                        buttons={(
-                          <Button
-                            content="Remove"
-                            onClick={() => act('unlink', {
-                              'value': entity.ref,
-                            })}
-                          />
-                        )}>
-                        {`${entity.name} (${entity.id})`}
-                      </LabeledList.Item>
-                    ))}
+                    {links.map(entity => {
+                      return (
+                        <LabeledList.Item
+                          key={entity.name}
+                          label={entity.ref}
+                          buttons={(
+                            <Button
+                              content="Remove"
+                              onClick={() => act('unlink', {
+                                'value': entity.ref,
+                              })}
+                            />
+                          )}>
+                          {`${entity.name} (${entity.id})`}
+                        </LabeledList.Item>
+                      );
+                    })}
                   </LabeledList>
                 </Section>
                 <Section

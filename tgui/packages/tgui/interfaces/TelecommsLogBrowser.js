@@ -1,8 +1,3 @@
-/**
- * @file
- * @copyright 2020 LetterN (https://github.com/LetterN)
- * @license MIT
- */
 import { Fragment } from 'inferno';
 import { Window } from '../layouts';
 import { useBackend, useSharedState } from '../backend';
@@ -22,11 +17,11 @@ export const TelecommsLogBrowser = (props, context) => {
     setTab,
   ] = useSharedState(context, 'tab', 'servers');
   const operational = (selected && selected.status);
+  // if (!operational) { // some sanity checks.
+  //   setTab("servers");
+  // }
   return (
-    <Window
-      theme="ntos"
-      width={575}
-      height={400}>
+    <Window theme="ntos">
       <Window.Content scrollable>
         <Fragment>
           {!!notice && (
@@ -122,42 +117,44 @@ export const TelecommsLogBrowser = (props, context) => {
           {(tab === "messages" && operational) ? (
             <Section title="Logs">
               {(operational && selected_logs) ? (
-                selected_logs.map(logs => (
-                  <Section
-                    level={4}
-                    key={logs.ref}>
-                    <LabeledList>
-                      <LabeledList.Item
-                        label="Filename"
-                        buttons={(
-                          <Button
-                            content="Delete"
-                            onClick={() => act('delete', {
-                              'value': logs.ref,
-                            })} />
-                        )}>
-                        {logs.name}
-                      </LabeledList.Item>
-                      <LabeledList.Item label="Data type">
-                        {logs.input_type}
-                      </LabeledList.Item>
-                      {logs.source && (
-                        <LabeledList.Item label="Source">
-                          {`[${logs.source.name}]
-                          (Job: [${logs.source.job}])`}
+                selected_logs.map(logs => {
+                  return (
+                    <Section
+                      level={4}
+                      key={logs.ref}>
+                      <LabeledList>
+                        <LabeledList.Item
+                          label="Filename"
+                          buttons={(
+                            <Button
+                              content="Delete"
+                              onClick={() => act('delete', {
+                                'value': logs.ref,
+                              })} />
+                          )}>
+                          {logs.name}
                         </LabeledList.Item>
-                      )}
-                      {logs.race && (
-                        <LabeledList.Item label="Class">
-                          {logs.race}
+                        <LabeledList.Item label="Data type">
+                          {logs.input_type}
                         </LabeledList.Item>
-                      )}
-                      <LabeledList.Item label="Contents">
-                        {logs.message}
-                      </LabeledList.Item>
-                    </LabeledList>
-                  </Section>
-                ))
+                        {logs.source && (
+                          <LabeledList.Item label="Source">
+                            {`[${logs.source.name}]
+                            (Job: [${logs.source.job}])`}
+                          </LabeledList.Item>
+                        )}
+                        {logs.race && (
+                          <LabeledList.Item label="Class">
+                            {logs.race}
+                          </LabeledList.Item>
+                        )}
+                        <LabeledList.Item label="Contents">
+                          {logs.message}
+                        </LabeledList.Item>
+                      </LabeledList>
+                    </Section>
+                  );
+                })
               ) : (
                 "No server selected!"
               )}
@@ -166,22 +163,24 @@ export const TelecommsLogBrowser = (props, context) => {
             <Section>
               {(servers && servers.length) ? (
                 <LabeledList>
-                  {servers.map(server => (
-                    <LabeledList.Item
-                      key={server.name}
-                      label={`${server.ref}`}
-                      buttons={(
-                        <Button
-                          content="Connect"
-                          selected={data.selected
-                          && (server.ref === data.selected.ref)}
-                          onClick={() => act('viewmachine', {
-                            'value': server.id,
-                          })} />
-                      )}>
-                      {`${server.name} (${server.id})`}
-                    </LabeledList.Item>
-                  ))}
+                  {servers.map(server => {
+                    return (
+                      <LabeledList.Item
+                        key={server.name}
+                        label={`${server.ref}`}
+                        buttons={(
+                          <Button
+                            content="Connect"
+                            selected={data.selected
+                            && (server.ref === data.selected.ref)}
+                            onClick={() => act('viewmachine', {
+                              'value': server.id,
+                            })} />
+                        )}>
+                        {`${server.name} (${server.id})`}
+                      </LabeledList.Item>
+                    );
+                  })}
                 </LabeledList>
               ) : (
                 '404 Servers not found. Have you tried scanning the network?'

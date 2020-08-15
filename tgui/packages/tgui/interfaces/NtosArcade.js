@@ -1,4 +1,3 @@
-import { resolveAsset } from '../assets';
 import { useBackend } from '../backend';
 import { AnimatedNumber, Box, Button, Grid, LabeledList, ProgressBar, Section } from '../components';
 import { NtosWindow } from '../layouts';
@@ -6,9 +5,7 @@ import { NtosWindow } from '../layouts';
 export const NtosArcade = (props, context) => {
   const { act, data } = useBackend(context);
   return (
-    <NtosWindow
-      width={450}
-      height={350}>
+    <NtosWindow>
       <NtosWindow.Content>
         <Section
           title="Outbomb Cuban Pete Ultra"
@@ -74,7 +71,7 @@ export const NtosArcade = (props, context) => {
                   inline
                   width="156px"
                   textAlign="center">
-                  <img src={resolveAsset(data.BossID)} />
+                  <img src={data.BossID} />
                 </Section>
               </Grid.Column>
             </Grid>

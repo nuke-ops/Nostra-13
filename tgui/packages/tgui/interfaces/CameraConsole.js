@@ -50,10 +50,7 @@ export const CameraConsole = (props, context) => {
     nextCameraName,
   ] = prevNextCamera(cameras, activeCamera);
   return (
-    <Window
-      width={870}
-      height={708}
-      resizable>
+    <Window resizable>
       <div className="CameraConsole__left">
         <Window.Content scrollable>
           <CameraConsoleContent />
@@ -84,6 +81,7 @@ export const CameraConsole = (props, context) => {
           className="CameraConsole__map"
           params={{
             id: mapRef,
+            parent: config.window,
             type: 'map',
           }} />
       </div>

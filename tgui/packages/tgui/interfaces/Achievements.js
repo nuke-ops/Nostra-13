@@ -12,11 +12,7 @@ export const Achievements = (props, context) => {
   const achievements = data.achievements
     .filter(x => x.category === selectedCategory);
   return (
-    <Window
-      title="Achievements"
-      width={540}
-      height={680}
-      resizable>
+    <Window resizable>
       <Window.Content scrollable>
         <Tabs>
           {categories.map(category => (

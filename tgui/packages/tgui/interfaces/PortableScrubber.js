@@ -1,16 +1,17 @@
 import { useBackend } from '../backend';
-import { Button, Section } from '../components';
+import { Fragment } from 'inferno';
+import { Box, Section, LabeledList, Button, AnimatedNumber, NumberInput } from '../components';
 import { getGasLabel } from '../constants';
 import { Window } from '../layouts';
 import { PortableBasicInfo } from './common/PortableAtmos';
 
 export const PortableScrubber = (props, context) => {
   const { act, data } = useBackend(context);
+
   const filter_types = data.filter_types || [];
+
   return (
-    <Window
-      width={320}
-      height={350}>
+    <Window>
       <Window.Content>
         <PortableBasicInfo />
         <Section title="Filters">

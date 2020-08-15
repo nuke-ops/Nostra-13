@@ -5,10 +5,7 @@ import { Window } from '../layouts';
 
 export const NaniteRemote = (props, context) => {
   return (
-    <Window
-      width={420}
-      height={500}
-      resizable>
+    <Window resizable>
       <Window.Content scrollable>
         <NaniteRemoteContent />
       </Window.Content>
@@ -54,7 +51,7 @@ export const NaniteRemoteContent = (props, context) => {
             icon="lock"
             content="Lock Interface"
             onClick={() => act('lock')} />
-        )}>
+        )} >
         <LabeledList>
           <LabeledList.Item label="Name">
             <Input
@@ -69,7 +66,7 @@ export const NaniteRemoteContent = (props, context) => {
               content="Save"
               onClick={() => act('save')} />
           </LabeledList.Item>
-          <LabeledList.Item label={comms ? "Comm Code" : "Signal Code"}>
+          <LabeledList.Item label={comms ? "Comm Code" : "Signal Code"} >
             <NumberInput
               value={code}
               minValue={0}
@@ -138,7 +135,7 @@ export const NaniteRemoteContent = (props, context) => {
             {saved_settings.map(setting => (
               <Table.Row
                 key={setting.id}
-                className="candystripe">
+                className="candystripe" >
                 <Table.Cell bold color="label">
                   {setting.name}:
                 </Table.Cell>

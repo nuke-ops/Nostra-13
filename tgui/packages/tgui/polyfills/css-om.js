@@ -1,11 +1,6 @@
 /**
  * CSS Object Model patches
- *
  * Adapted from: https://github.com/shawnbot/aight
- *
- * @file
- * @copyright 2020 Aleksej Komarov
- * @license MIT
  */
 
 /* eslint-disable */
