@@ -492,15 +492,15 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/yellowsiding/corner{
-	icon_state = "yellowcornersiding";
-	dir = 8
+	dir = 8;
+	icon_state = "yellowcornersiding"
 	},
 /area/crew_quarters/fitness/pool)
 "aba" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/firealarm{
 	dir = 4;
-	pixel_x = -24;
+	pixel_x = -24
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -509,8 +509,8 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/yellowsiding{
-	icon_state = "yellowsiding";
-	dir = 4
+	dir = 4;
+	icon_state = "yellowsiding"
 	},
 /area/crew_quarters/fitness/pool)
 "abb" = (
@@ -603,8 +603,8 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/yellowsiding{
-	icon_state = "yellowsiding";
-	dir = 8
+	dir = 8;
+	icon_state = "yellowsiding"
 	},
 /area/crew_quarters/fitness/pool)
 "abn" = (
@@ -618,8 +618,8 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/yellowsiding{
-	icon_state = "yellowsiding";
-	dir = 4
+	dir = 4;
+	icon_state = "yellowsiding"
 	},
 /area/crew_quarters/fitness/pool)
 "abo" = (
@@ -703,8 +703,8 @@
 	name = "pool camera"
 	},
 /turf/open/floor/plasteel/yellowsiding{
-	icon_state = "yellowsiding";
-	dir = 4
+	dir = 4;
+	icon_state = "yellowsiding"
 	},
 /area/crew_quarters/fitness/pool)
 "abv" = (
@@ -723,8 +723,8 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/yellowsiding{
-	icon_state = "yellowsiding";
-	dir = 8
+	dir = 8;
+	icon_state = "yellowsiding"
 	},
 /area/crew_quarters/fitness/pool)
 "aby" = (
@@ -764,8 +764,8 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/yellowsiding{
-	icon_state = "yellowsiding";
-	dir = 4
+	dir = 4;
+	icon_state = "yellowsiding"
 	},
 /area/crew_quarters/fitness/pool)
 "abC" = (
@@ -903,8 +903,8 @@
 	pixel_x = -23
 	},
 /turf/open/floor/plasteel/yellowsiding{
-	icon_state = "yellowsiding";
-	dir = 4
+	dir = 4;
+	icon_state = "yellowsiding"
 	},
 /area/crew_quarters/fitness/pool)
 "abP" = (
@@ -971,8 +971,8 @@
 	pixel_x = -26
 	},
 /turf/open/floor/plasteel/yellowsiding/corner{
-	icon_state = "yellowcornersiding";
-	dir = 4
+	dir = 4;
+	icon_state = "yellowcornersiding"
 	},
 /area/crew_quarters/fitness/pool)
 "abW" = (
@@ -981,8 +981,8 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/yellowsiding{
-	icon_state = "yellowsiding";
-	dir = 1
+	dir = 1;
+	icon_state = "yellowsiding"
 	},
 /area/crew_quarters/fitness/pool)
 "abX" = (
@@ -994,8 +994,8 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/yellowsiding/corner{
-	icon_state = "yellowcornersiding";
-	dir = 1
+	dir = 1;
+	icon_state = "yellowcornersiding"
 	},
 /area/crew_quarters/fitness/pool)
 "abY" = (
@@ -64484,8 +64484,8 @@
 /area/library)
 "cel" = (
 /obj/structure/chair/sofa/right{
-	icon_state = "sofaend_right";
-	dir = 8
+	dir = 8;
+	icon_state = "sofaend_right"
 	},
 /obj/structure/sign/painting/library{
 	pixel_x = 32
@@ -125972,7 +125972,6 @@
 /turf/open/floor/plating,
 /area/chapel/office)
 "ijB" = (
-/obj/structure/reagent_dispensers/keg/aphro/strong,
 /obj/item/reagent_containers/glass/beaker,
 /turf/open/floor/plating,
 /area/crew_quarters/abandoned_gambling_den)
@@ -127766,8 +127765,8 @@
 /area/science/mixing)
 "xER" = (
 /obj/structure/chair/sofa/left{
-	icon_state = "sofaend_left";
-	dir = 8
+	dir = 8;
+	icon_state = "sofaend_left"
 	},
 /turf/open/floor/wood,
 /area/library)

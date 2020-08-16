@@ -151,12 +151,6 @@
 
 	var/list/msg = list()
 
-	if(client && client.prefs)
-		if(client.prefs.toggles & VERB_CONSENT)
-			. += "[t_His] player has allowed lewd verbs.\n"
-		else
-			. += "[t_His] player has not allowed lewd verbs.\n"
-
 	var/list/missing = list(BODY_ZONE_HEAD, BODY_ZONE_CHEST, BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 	var/list/disabled = list()
 	for(var/X in bodyparts)
@@ -169,8 +163,9 @@
 				msg += "<B>[t_He] [t_has] \a [icon2html(I, user)] [I] stuck to [t_his] [BP.name]!</B>\n"
 			else
 				msg += "<B>[t_He] [t_has] \a [icon2html(I, user)] [I] embedded in [t_his] [BP.name]!</B>\n"
-		for(var/datum/wound/W in BP.wounds)
-			msg += "[W.get_examine_description(user)]\n"
+		for(var/i in BP.wounds)
+			var/datum/wound/iter_wound = i
+			msg += "[iter_wound.get_examine_description(user)]\n"
 
 	for(var/X in disabled)
 		var/obj/item/bodypart/BP = X
@@ -255,7 +250,7 @@
 			msg += "[t_He] look[p_s()] extremely disgusted.\n"
 
 	var/apparent_blood_volume = blood_volume
-	if(skin_tone == "albino")
+	if(dna.species.use_skintones && skin_tone == "albino")
 		apparent_blood_volume -= 150 // enough to knock you down one tier
 	switch(apparent_blood_volume)
 		if(BLOOD_VOLUME_OKAY to BLOOD_VOLUME_SAFE)
@@ -276,7 +271,12 @@
 				bleeding_limbs += BP
 
 		var/num_bleeds = LAZYLEN(bleeding_limbs)
-		var/bleed_text = "<B>[t_He] [t_is] bleeding from [t_his]"
+		var/list/bleed_text
+		if(appears_dead)
+			bleed_text = list("<span class='deadsay'><B>Blood is visible in [t_his] open")
+		else
+			bleed_text = list("<B>[t_He] [t_is] bleeding from [t_his]")
+
 		switch(num_bleeds)
 			if(1 to 2)
 				bleed_text += " [bleeding_limbs[1].name][num_bleeds == 2 ? " and [bleeding_limbs[2].name]" : ""]"
@@ -286,8 +286,15 @@
 					bleed_text += " [BP.name],"
 				bleed_text += " and [bleeding_limbs[num_bleeds].name]"
 
-		bleed_text += "!</B>\n"
-		msg += bleed_text
+
+		if(appears_dead)
+			bleed_text += ", but it has pooled and is not flowing.</span></B>\n"
+		else
+			if(reagents.has_reagent(/datum/reagent/toxin/heparin))
+				bleed_text += " incredibly quickly"
+
+			bleed_text += "!</B>\n"
+		msg += bleed_text.Join()
 
 	if(reagents.has_reagent(/datum/reagent/teslium))
 		msg += "[t_He] [t_is] emitting a gentle blue glow!\n"
@@ -363,7 +370,6 @@
 		if(digitalcamo)
 			msg += "[t_He] [t_is] moving [t_his] body in an unnatural and blatantly inhuman manner.\n"
 
-
 	var/scar_severity = 0
 	for(var/i in all_scars)
 		var/datum/scar/S = i
@@ -372,7 +378,7 @@
 
 	switch(scar_severity)
 		if(1 to 2)
-			msg += "<span class='smallnotice'>[t_He] [t_has] visible scarring, you can look again to take a closer look...</span>\n"
+			msg += "<span class='smallnoticeital'>[t_He] [t_has] visible scarring, you can look again to take a closer look...</span>\n"
 		if(3 to 4)
 			msg += "<span class='notice'><i>[t_He] [t_has] several bad scars, you can look again to take a closer look...</i></span>\n"
 		if(5 to 6)
@@ -387,7 +393,7 @@
 		for(var/datum/gunpoint/GP in gunpointed)
 			msg += "<b>[GP.source.name] [GP.source.p_are()] holding [t_him] at gunpoint with [GP.aimed_gun.name]!</b>\n"
 	//Skyrat changes end
-
+	
 	if (length(msg))
 		. += "<span class='warning'>[msg.Join("")]</span>"
 
@@ -444,14 +450,9 @@
 		. += "<span class='info'><b>Traits:</b> [traitstring]</span>"
 
 	SEND_SIGNAL(src, COMSIG_PARENT_EXAMINE, user, .) //This also handles flavor texts now
-	var/invisible_man = skipface || get_visible_name() == "Unknown" // SKYRAT EDIT -- BEGIN
-	if(!invisible_man)
-		if(client)
-			. += "OOC Notes: <a href='?src=[REF(src)];skyrat_ooc_notes=1'>\[View\]</a>" // SKYRAT EDIT -- END
-	//SKYRAT EDIT - admin lookup on records/extra flavor
-
 
 	. += "*---------*</span>"
+
 /mob/living/proc/status_effect_examines(pronoun_replacement) //You can include this in any mob's examine() to show the examine texts of status effects!
 	var/list/dat = list()
 	if(!pronoun_replacement)
