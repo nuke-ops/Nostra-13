@@ -3545,6 +3545,7 @@
 #include "modular_citadel\code\modules\reagents\chemistry\recipes\fermi.dm"
 #include "modular_citadel\code\modules\reagents\objects\clothes.dm"
 #include "modular_citadel\code\modules\reagents\objects\items.dm"
+#include "modular_nostration\code\_onclick\hud\screen_objects.dm"
 #include "modular_nostration\code\datums\ai_laws.dm"
 #include "modular_nostration\code\datums\shuttles.dm"
 #include "modular_nostration\code\game\area\Space_Station_13_areas.dm"
