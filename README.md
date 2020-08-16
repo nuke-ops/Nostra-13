@@ -1,5 +1,5 @@
 ## [No]St[r]ation
-Based and maintained from /tg/station.
+Based and maintained from Citadel.
 
 [![Build Status](https://api.travis-ci.org/nuke-ops/Nostration-13.png)](https://travis-ci.org/nuke-ops/Nostration-13) 
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/nuke-ops/Nostration-13.svg)](http://isitmaintained.com/project/nuke-ops/Nostration-13 "Percentage of issues still open")  
