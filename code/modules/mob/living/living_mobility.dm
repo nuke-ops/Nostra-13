@@ -173,6 +173,4 @@
 		else
 			remove_movespeed_modifier(/datum/movespeed_modifier/limbless)
 
-	SEND_SIGNAL(src, COMSIG_LIVING_UPDATED_MOBILITY, mobility_flags) //Skyrat change
-
 	return mobility_flags
