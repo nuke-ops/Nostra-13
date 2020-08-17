@@ -18,6 +18,7 @@
 	var/light_oxyheal = -1
 	var/light_burnheal = -1
 	var/light_bruteheal = -1
+	languagewhitelist = list("Sylvan") //Skyrat change - species language whitelist
 
 	species_type = "plant"
 

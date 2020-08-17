@@ -8,7 +8,7 @@
 	name = "CQC"
 	id = MARTIALART_CQC
 	help_verb = /mob/living/carbon/human/proc/CQC_help
-	block_chance = 50
+	block_chance = 75
 	pugilist = TRUE
 	var/old_grab_state = null
 
@@ -49,7 +49,7 @@
 						  	"<span class='userdanger'>[A] slams you into the ground!</span>")
 		playsound(get_turf(A), 'sound/weapons/slam.ogg', 50, 1, -1)
 		D.apply_damage(damage, BRUTE)
-		D.DefaultCombatKnockdown(75)
+		D.DefaultCombatKnockdown(120)
 		log_combat(A, D, "slammed (CQC)")
 	return TRUE
 
@@ -62,17 +62,17 @@
 		D.visible_message("<span class='warning'>[A] kicks [D]'s head, knocking [D.p_them()] out!</span>", \
 					  		"<span class='userdanger'>[A] kicks your head, knocking you out!</span>")
 		playsound(get_turf(A), 'sound/weapons/genhit1.ogg', 50, 1, -1)
-		D.SetSleeping(150)
-		D.apply_damage(damage + 3, BRUTE)
+		D.SetSleeping(300)
+		D.apply_damage(damage + 5, BRUTE)
 		var/atom/throw_target = get_edge_target_turf(D, A.dir)
 		D.throw_at(throw_target, 1, 14, A)
-		D.adjustOrganLoss(ORGAN_SLOT_BRAIN, damage + 8, 110)
+		D.adjustOrganLoss(ORGAN_SLOT_BRAIN, damage + 10, 150)
 	else
 		D.visible_message("<span class='warning'>[A] kicks [D]!</span>", \
 							"<span class='userdanger'>[A] kicks you!</span>")
 		playsound(get_turf(A), 'sound/weapons/cqchit1.ogg', 50, 1, -1)
 		D.Dizzy(damage)
-		D.apply_damage(damage + 10, BRUTE)
+		D.apply_damage(damage + 15, BRUTE)
 		log_combat(A, D, "kicked (CQC)")
 	return TRUE
 
@@ -91,15 +91,15 @@
 		return
 	if(!can_use(A))
 		return FALSE
-	var/damage = (damage_roll(A,D) + 8)
+	var/damage = (damage_roll(A,D) + 15)
 	if(!D.stat)
 		log_combat(A, D, "restrained (CQC)")
 		D.visible_message("<span class='warning'>[A] locks [D] into a restraining position!</span>", \
 							"<span class='userdanger'>[A] locks you into a restraining position!</span>")
 		D.apply_damage(damage, STAMINA)
-		D.Stun(60)
+		D.Stun(100)
 		restraining = TRUE
-		addtimer(VARSET_CALLBACK(src, restraining, FALSE), 40, TIMER_UNIQUE)
+		addtimer(VARSET_CALLBACK(src, restraining, FALSE), 50, TIMER_UNIQUE)
 	return TRUE
 
 /datum/martial_art/cqc/proc/Consecutive(mob/living/carbon/human/A, mob/living/carbon/human/D)
@@ -114,8 +114,8 @@
 		var/obj/item/I = D.get_active_held_item()
 		if(I && D.temporarilyRemoveItemFromInventory(I))
 			A.put_in_hands(I)
-		D.apply_damage(damage + 40, STAMINA)
-		D.apply_damage(damage + 10, BRUTE)
+		D.apply_damage(damage + 45, STAMINA)
+		D.apply_damage(damage + 20, BRUTE)
 	return TRUE
 
 /datum/martial_art/cqc/grab_act(mob/living/carbon/human/A, mob/living/carbon/human/D)
@@ -143,9 +143,9 @@
 	log_combat(A, D, "attacked (CQC)")
 	A.do_attack_animation(D)
 	var/picked_hit_type = pick("CQC'd", "Big Bossed")
-	var/bonus_damage = (damage_roll(A,D) + 5)
+	var/bonus_damage = (damage_roll(A,D) + 7)
 	if(!CHECK_MOBILITY(D, MOBILITY_STAND))
-		bonus_damage += 2
+		bonus_damage += 5
 		picked_hit_type = "stomps on"
 	D.apply_damage(bonus_damage, BRUTE)
 	if(picked_hit_type == "kicks" || picked_hit_type == "stomps on")
@@ -160,7 +160,7 @@
 							"<span class='userdanger'>[A] leg sweeps you!</span>")
 		playsound(get_turf(A), 'sound/effects/hit_kick.ogg', 50, 1, -1)
 		D.apply_damage(bonus_damage, BRUTE)
-		D.DefaultCombatKnockdown(50)
+		D.DefaultCombatKnockdown(60)
 		log_combat(A, D, "sweeped (CQC)")
 	return TRUE
 
@@ -175,7 +175,7 @@
 		return TRUE
 	if(CHECK_MOBILITY(D, MOBILITY_MOVE) || !restraining)
 		A.do_attack_animation(D, ATTACK_EFFECT_PUNCH)
-		if(damage >= stunthreshold)
+		if(damage >= stunthreshold)	
 			I = D.get_active_held_item()
 			D.visible_message("<span class='warning'>[A] strikes [D]'s jaw with their hand!</span>", \
 							"<span class='userdanger'>[A] strikes your jaw, disorienting you!</span>")
@@ -183,20 +183,20 @@
 			D.drop_all_held_items()
 			D.Jitter(2)
 			D.Dizzy(damage)
-			D.apply_damage(damage*2 + 15, STAMINA)
-			D.apply_damage(damage*1.3, BRUTE)
+			D.apply_damage(damage*2 + 20, STAMINA)
+			D.apply_damage(damage*0.5, BRUTE)
 		else
 			D.visible_message("<span class='danger'>[A] strikes [D] in the chest!</span>", \
 							"<span class='userdanger'>[A] strikes in chest!</span>")
 			playsound(D, 'sound/weapons/cqchit1.ogg', 25, 1, -1)
-			D.apply_damage(damage + 10, STAMINA)
-			D.apply_damage(damage*1.3, BRUTE)
+			D.apply_damage(damage + 15, STAMINA)
+			D.apply_damage(damage*0.5, BRUTE)
 		log_combat(A, D, "disarmed (CQC)", "[I ? " grabbing \the [I]" : ""]")
 	if(restraining && A.pulling == D)
 		log_combat(A, D, "knocked out (Chokehold)(CQC)")
 		D.visible_message("<span class='danger'>[A] puts [D] into a chokehold!</span>", \
 							"<span class='userdanger'>[A] puts you into a chokehold!</span>")
-		D.SetSleeping(190)
+		D.SetSleeping(400)
 		restraining = FALSE
 		if(A.grab_state < GRAB_NECK)
 			A.setGrabState(GRAB_NECK)

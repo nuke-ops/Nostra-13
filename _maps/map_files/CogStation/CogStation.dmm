@@ -8607,7 +8607,7 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1
 	},
-/obj/item/storage/pill_bottle/dice,
+/obj/item/storage/box/dice,
 /obj/item/toy/cards/deck,
 /turf/open/floor/plasteel,
 /area/crew_quarters/bar)
@@ -15686,9 +15686,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/port/fore)
 "aIv" = (
-/obj/machinery/cryopod{
-	dir = 8
-	},
+/obj/machinery/cryopod/tele,
 /turf/open/floor/circuit/green,
 /area/crew_quarters/cryopod)
 "aIw" = (
@@ -16543,13 +16541,11 @@
 	name = "Research Sector"
 	})
 "aJW" = (
-/obj/machinery/cryopod{
-	dir = 8
-	},
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/machinery/cryopod/tele,
 /turf/open/floor/circuit/green,
 /area/crew_quarters/cryopod)
 "aJX" = (
@@ -16804,7 +16800,7 @@
 /area/bridge)
 "aKw" = (
 /obj/structure/table,
-/obj/item/storage/pill_bottle/dice,
+/obj/item/storage/box/dice,
 /obj/item/toy/cards/deck,
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -21254,6 +21250,9 @@
 /obj/machinery/atmospherics/pipe/simple/orange/hidden{
 	dir = 6
 	},
+/obj/machinery/computer/cryopod{
+	pixel_y = 28
+	},
 /turf/open/floor/circuit/green,
 /area/crew_quarters/cryopod)
 "aTM" = (
@@ -21832,9 +21831,6 @@
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/fitness/cogpool)
 "aVg" = (
-/obj/machinery/computer/cryopod{
-	pixel_y = 28
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -31910,7 +31906,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/obj/item/storage/pill_bottle/dice,
+/obj/item/storage/box/dice,
 /obj/item/toy/cards/deck,
 /turf/open/floor/plasteel/white/corner{
 	dir = 1
@@ -71905,6 +71901,10 @@
 /obj/machinery/atmospherics/pipe/manifold/supplymain/visible,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+"ePg" = (
+/obj/machinery/cryopod/tele,
+/turf/open/floor/circuit/green,
+/area/crew_quarters/cryopod)
 "eTZ" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 4
@@ -102504,7 +102504,7 @@ aaa
 aaU
 aHY
 aIv
-aIv
+ePg
 aJW
 aHY
 aRQ

@@ -196,9 +196,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		S["horn_color"]			>> features["horns_color"]
 
 	if(current_version < 33)
-		features["flavor_text"] = html_encode(features["flavor_text"])
-		features["silicon_flavor_text"] = html_encode(features["silicon_flavor_text"])
-		features["ooc_notes"] = html_encode(features["ooc_notes"])
+		features["flavor_text"]			= strip_html_simple(features["flavor_text"], MAX_FLAVOR_LEN, TRUE)
+		features["silicon_flavor_text"]			= strip_html_simple(features["silicon_flavor_text"], MAX_FLAVOR_LEN, TRUE)
+		features["ooc_notes"]			= strip_html_simple(features["ooc_notes"], MAX_FLAVOR_LEN, TRUE)
 
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
 	if(!ckey)
@@ -241,6 +241,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["windowflash"]		>> windowflashing
 	S["be_special"] 		>> be_special
 
+	//SKYRAT CHANGES BEGIN
+	S["see_chat_emotes"] 	>> see_chat_emotes
+	S["appear_in_round_end_report"]	>> appear_in_round_end_report
+	//SKYRAT CHANGES END
 
 	S["default_slot"]		>> default_slot
 	S["chat_toggles"]		>> chat_toggles
@@ -325,6 +329,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	no_tetris_storage		= sanitize_integer(no_tetris_storage, 0, 1, initial(no_tetris_storage))
 	key_bindings 			= sanitize_islist(key_bindings, list())
 	modless_key_bindings 	= sanitize_islist(modless_key_bindings, list())
+
+	//SKYRAT CHANGES BEGIN
+	see_chat_emotes	= sanitize_integer(see_chat_emotes, 0, 1, initial(see_chat_emotes))
+	appear_in_round_end_report	= sanitize_integer(appear_in_round_end_report, 0, 1, initial(appear_in_round_end_report))
+	//SKYRAT CHANGES END
 
 	verify_keybindings_valid()		// one of these days this will runtime and you'll be glad that i put it in a different proc so no one gets their saves wiped
 
@@ -413,6 +422,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["preferred_chaos"], preferred_chaos)
 	WRITE_FILE(S["auto_ooc"], auto_ooc)
 	WRITE_FILE(S["no_tetris_storage"], no_tetris_storage)
+
+	//SKYRAT CHANGES BEGIN
+	WRITE_FILE(S["see_chat_emotes"], see_chat_emotes)
+	WRITE_FILE(S["appear_in_round_end_report"], appear_in_round_end_report)
+	//SKYRAT CHANGES END
 
 	return 1
 
@@ -527,6 +541,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	//Quirks
 	S["all_quirks"]			>> all_quirks
+	//SKYRAT ADDITION - additional language
+	S["language"]			>> language
+	//
 
 	//Records
 	S["security_records"]			>>			security_records
@@ -722,21 +739,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["silicon_flavor_text"]			= copytext(features["silicon_flavor_text"], 1, MAX_FLAVOR_LEN)
 	features["ooc_notes"]			= copytext(features["ooc_notes"], 1, MAX_FLAVOR_LEN)
 
-	skyrat_ooc_notes				= sanitize_text(S["skyrat_ooc_notes"])
-
-	erppref = sanitize_text(S["erp_pref"], "Ask")
-	if(!length(erppref)) erppref = "Ask"
-
-	nonconpref = sanitize_text(S["noncon_pref"], "Ask")
-	if(!length(nonconpref)) nonconpref = "Ask"
-
-	vorepref = sanitize_text(S["vore_pref"], "Ask")
-	if(!length(vorepref)) vorepref = "Ask"
-	extremepref					= sanitize_text(S["extremepref"], "No") //god has forsaken me
-	if(!length(extremepref)) extremepref = "No"
-	extremeharm					= sanitize_text(S["extremeharm"], "No")
-	if(!length(extremeharm)) extremeharm = "No"
-
 	persistent_scars = sanitize_integer(persistent_scars)
 	scars_list["1"] = sanitize_text(scars_list["1"])
 	scars_list["2"] = sanitize_text(scars_list["2"])
@@ -809,13 +811,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["security_records"]		, security_records)
 	WRITE_FILE(S["medical_records"]			, medical_records)
 
-	WRITE_FILE(S["skyrat_ooc_notes"], skyrat_ooc_notes)
-	WRITE_FILE(S["erp_pref"], erppref)
-	WRITE_FILE(S["noncon_pref"], nonconpref)
-	WRITE_FILE(S["vore_pref"], vorepref)
-	WRITE_FILE(S["extremepref"], extremepref)
-	WRITE_FILE(S["extremeharm"], extremeharm)
-	
 	WRITE_FILE(S["feature_mcolor"]					, features["mcolor"])
 	WRITE_FILE(S["feature_lizard_tail"]				, features["tail_lizard"])
 	WRITE_FILE(S["feature_human_tail"]				, features["tail_human"])
@@ -877,6 +872,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	//Quirks
 	WRITE_FILE(S["all_quirks"]			, all_quirks)
+	//SKYRAT ADDITION - additional language
+	WRITE_FILE(S["language"]			, language)
+	//
 
 	WRITE_FILE(S["vore_flags"]			, vore_flags)
 	WRITE_FILE(S["vore_taste"]			, vore_taste)

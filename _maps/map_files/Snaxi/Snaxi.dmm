@@ -6957,9 +6957,9 @@
 	name = "west facing firelock"
 	},
 /obj/machinery/door/window/southleft{
+	dir = 8;
 	name = "Test Chamber";
-	req_access_txt = "55";
-	dir = 8
+	req_access_txt = "55"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "xenobio2";
@@ -6975,9 +6975,9 @@
 	dir = 10
 	},
 /obj/machinery/door/window/southleft{
+	dir = 4;
 	name = "Test Chamber";
-	req_access_txt = "55";
-	dir = 4
+	req_access_txt = "55"
 	},
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
@@ -10506,11 +10506,9 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/fore)
 "dij" = (
-/obj/item/kirbyplants{
-	icon_state = "plant-10"
-	},
-/turf/open/floor/carpet,
-/area/bridge)
+/obj/machinery/cryopod/tele,
+/turf/open/floor/plasteel,
+/area/hallway/secondary/exit/departure_lounge)
 "diD" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -27997,8 +27995,8 @@
 /area/engine/engineering)
 "nSX" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
-	name = "Gas to Cooling Loop";
-	dir = 1
+	dir = 1;
+	name = "Gas to Cooling Loop"
 	},
 /turf/open/floor/plating,
 /area/engine/atmospherics_engine)
@@ -30144,8 +30142,8 @@
 /area/quartermaster/storage)
 "pfb" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
-	name = "Gas to Cooling Loop";
-	dir = 1
+	dir = 1;
+	name = "Gas to Cooling Loop"
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
@@ -61036,7 +61034,7 @@ ash
 kMc
 iRy
 nsi
-eue
+eLX
 eLX
 iEa
 hLg
@@ -77544,7 +77542,7 @@ cTD
 buZ
 pmE
 buZ
-old
+buZ
 hXF
 cTD
 oGU
@@ -78053,7 +78051,7 @@ uBa
 uBa
 uBa
 uBa
-qHO
+rqE
 lbp
 vPQ
 hhz
@@ -78099,7 +78097,7 @@ bVu
 ckb
 mXC
 clV
-dij
+vxi
 vxi
 nmN
 cDm
@@ -78824,7 +78822,7 @@ daX
 uBa
 uBa
 uBa
-qHO
+rqE
 lbp
 ceA
 jAb
@@ -81905,7 +81903,7 @@ wcB
 unA
 jPI
 wrh
-jPI
+dij
 bok
 rqE
 rqE
@@ -86052,7 +86050,7 @@ tRe
 avT
 avT
 bPn
-lfs
+cAe
 jbc
 aet
 cjA
