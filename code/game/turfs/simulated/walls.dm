@@ -6,7 +6,8 @@
 	icon = 'icons/turf/walls/wall.dmi'
 	icon_state = "wall"
 	explosion_block = 1
-
+	flags_1 = DEFAULT_RICOCHET_1
+	flags_ricochet = RICOCHET_HARD
 	thermal_conductivity = WALL_HEAT_TRANSFER_COEFFICIENT
 	heat_capacity = 312500 //a little over 5 cm thick , 312500 for 1 m by 2.5 m by 0.25 m plasteel wall
 
@@ -125,16 +126,25 @@
 		dismantle_wall(1)
 		return
 
-/turf/closed/wall/attack_hulk(mob/user, does_attack_animation = 0)
-	..(user, 1)
+/turf/closed/wall/attack_hulk(mob/living/carbon/user)
+	..()
+	var/obj/item/bodypart/arm = user.hand_bodyparts[user.active_hand_index]
+	if(!arm)
+		return
+	if(arm.disabled)
+		return
 	if(prob(hardness))
-		playsound(src, 'sound/effects/meteorimpact.ogg', 100, 1)
+		playsound(src, 'sound/effects/meteorimpact.ogg', 100, TRUE)
 		user.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ), forced = "hulk")
+		hulk_recoil(arm, user)
 		dismantle_wall(1)
+
 	else
-		playsound(src, 'sound/effects/bang.ogg', 50, 1)
+		playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
 		add_dent(WALL_DENT_HIT)
-		to_chat(user, text("<span class='notice'>You punch the wall.</span>"))
+		user.visible_message("<span class='danger'>[user] smashes \the [src]!</span>", \
+					"<span class='danger'>You smash \the [src]!</span>", \
+					"<span class='hear'>You hear a booming smash!</span>")
 	return TRUE
 
 /turf/closed/wall/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)

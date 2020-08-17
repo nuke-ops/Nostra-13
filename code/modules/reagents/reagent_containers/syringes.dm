@@ -16,6 +16,7 @@
 	custom_materials = list(/datum/material/iron=10, /datum/material/glass=20)
 	reagent_flags = TRANSPARENT
 	custom_price = PRICE_CHEAP_AS_FREE
+	sharpness = SHARP_POINTY
 
 /obj/item/reagent_containers/syringe/Initialize()
 	. = ..()
@@ -53,8 +54,14 @@
 /obj/item/reagent_containers/syringe/attackby(obj/item/I, mob/user, params)
 	return
 
-/obj/item/reagent_containers/syringe/afterattack(atom/target, mob/user , proximity)
+/obj/item/reagent_containers/syringe/attack()
+	return			// no bludgeoning.
+
+/obj/item/reagent_containers/syringe/afterattack(atom/target, mob/user, proximity)
 	. = ..()
+	INVOKE_ASYNC(src, .proc/attempt_inject, target, user, proximity)
+
+/obj/item/reagent_containers/syringe/proc/attempt_inject(atom/target, mob/user, proximity)
 	if(busy)
 		return
 	if(!proximity)

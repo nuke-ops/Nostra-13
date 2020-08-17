@@ -28,35 +28,14 @@
 		return
 	if(!isabductor(user))
 		return
-	user.set_machine(src)
-	var/box_css = {"
-	<style>
-	a.box.gland {
-		float: left;
-		width: 20px;
-		height: 20px;
-		margin: 5px;
-		border-width: 1px;
-		border-style: solid;
-		border-color: rgba(0,0,0,.2);
-		text-align: center;
-		}
-	</style>"}
-	var/dat = ""
-	var/item_count = 0
-	for(var/i=1,i<=gland_colors.len,i++)
-		item_count++
-		var/g_color = gland_colors[i]
-		var/amount = amounts[i]
-		dat += "<a class='box gland' style='background-color:[g_color]' href='?src=[REF(src)];dispense=[i]'>[amount]</a>"
-		if(item_count == 4) // Four boxes per line
-			dat +="</br></br>"
-			item_count = 0
-	var/datum/browser/popup = new(user, "glands", "Gland Dispenser", 200, 200)
-	popup.add_head_content(box_css)
-	popup.set_content(dat)
-	popup.open()
-	return
+
+	switch(action)
+		if("dispense")
+			var/gland_id = text2num(params["gland_id"])
+			if(!gland_id)
+				return
+			Dispense(gland_id)
+			return TRUE
 
 /obj/machinery/abductor/gland_dispenser/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/organ/heart/gland))
@@ -67,15 +46,6 @@
 				amounts[i]++
 	else
 		return ..()
-
-/obj/machinery/abductor/gland_dispenser/Topic(href, href_list)
-	if(..())
-		return
-	usr.set_machine(src)
-
-	if(href_list["dispense"])
-		Dispense(text2num(href_list["dispense"]))
-	updateUsrDialog()
 
 /obj/machinery/abductor/gland_dispenser/proc/Dispense(count)
 	if(amounts[count]>0)

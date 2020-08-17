@@ -144,6 +144,10 @@
 #define WINGCOLOR		26
 #define CAN_SCAR		27 // If this species can be scarred (fleshy)
 
+/// Used for determining which wounds are applicable to this species.
+#define HAS_FLESH	28 /// if we have flesh (can suffer slash/piercing/burn wounds, requires they don't have NOBLOOD)
+#define HAS_BONE	29 /// if we have bones (can suffer bone wounds)
+
 //organ slots
 #define ORGAN_SLOT_BRAIN "brain"
 #define ORGAN_SLOT_APPENDIX "appendix"
@@ -172,6 +176,7 @@
 #define ORGAN_SLOT_VAGINA "vagina"
 #define ORGAN_SLOT_TESTICLES "testicles"
 #define ORGAN_SLOT_BREASTS "breasts"
+#define ORGAN_SLOT_PARASITES "parasite" //skyrat change
 
 ////organ defines
 #define STANDARD_ORGAN_THRESHOLD 	100

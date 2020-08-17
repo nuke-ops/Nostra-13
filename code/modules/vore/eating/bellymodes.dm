@@ -128,9 +128,9 @@
 					play_sound = pick(pred_digest)
 				if(M.stat != DEAD)
 					if(owner.nutrition >= NUTRITION_LEVEL_STARVING && (M.health < M.maxHealth))
-						M.adjustBruteLoss(-3)
-						M.adjustFireLoss(-3)
-						owner.adjust_nutrition(-5)
+						M.adjustBruteLoss(-1)
+						M.adjustFireLoss(-2)
+						owner.adjust_nutrition(-10)
 
 	//for when you just want people to squelch around
 		if(DM_NOISY)

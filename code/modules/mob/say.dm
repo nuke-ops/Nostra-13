@@ -20,8 +20,13 @@
 	if(GLOB.say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
 		return
-	clear_typing_indicator()		// clear it immediately!
-	say(message)
+	//SKYRAT EDIT
+	set_typing_indicator(FALSE)
+	//END OF SKYRAT EDIT
+	if(message)
+		say(message)
+	//clear_typing_indicator()		// clear it immediately! //SKYRAT EDIT
+	//say(message)	//SKYRAT EDIT
 
 /mob/verb/me_typing_indicator()
 	set name = "me_indicator"
@@ -43,9 +48,17 @@
 	if(GLOB.say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
 		return
+	
+	if(length(message) > MAX_MESSAGE_LEN)
+		to_chat(usr, message)
+		to_chat(usr, "<span class='danger'>^^^----- The preceeding message has been DISCARDED for being over the maximum length of [MAX_MESSAGE_LEN]. It has NOT been sent! -----^^^</span>")
+		return
 
 	message = trim(copytext_char(sanitize(message), 1, MAX_MESSAGE_LEN))
-	clear_typing_indicator()		// clear it immediately!
+	//SKYRAT EDIT
+	set_typing_indicator(FALSE)
+	//END OF SKYRAT EDIT
+	//clear_typing_indicator()		// clear it immediately! //Skyrat edit
 
 	usr.emote("me",1,message,TRUE)
 
@@ -146,6 +159,7 @@
 		return MODE_WHISPER
 	else if(key == ";")
 		return MODE_HEADSET
+
 	else if((length(message) > (length(key) + 1)) && (key in GLOB.department_radio_prefixes))
 		var/key_symbol = lowertext(message[length(key) + 1])
 		return GLOB.department_radio_keys[key_symbol]
