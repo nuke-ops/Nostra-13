@@ -167,7 +167,10 @@
 		qdel(src)
 	return TRUE
 
-/obj/item/gps/computer/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+/obj/item/gps/computer/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+	. = ..()
+	if(.)
+		return
 	attack_self(user)
 
 //Bed

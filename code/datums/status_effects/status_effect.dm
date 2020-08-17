@@ -90,11 +90,12 @@
 		return
 	duration = world.time + original_duration
 
-/**
-  * Multiplied to clickdelays
-  */
-/datum/status_effect/proc/action_cooldown_mod()
+//clickdelay/nextmove modifiers!
+/datum/status_effect/proc/nextmove_modifier()
 	return 1
+
+/datum/status_effect/proc/nextmove_adjust()
+	return 0
 
 ////////////////
 // ALERT HOOK //

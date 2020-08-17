@@ -5,7 +5,7 @@
 
 	face_atom(A)
 
-	if(!CheckActionCooldown())
+	if(next_move > world.time) // in the year 2000...
 		return
 
 	if(!modifiers["catcher"] && A.IsObscured())
@@ -16,8 +16,9 @@
 		return M.click_action(A,src,params)
 
 	if(restrained())
-		DelayNextAction(CLICK_CD_HANDCUFFED)
-		return RestrainedClickOn(A)
+		changeNext_move(CLICK_CD_HANDCUFFED)   //Doing shit in cuffs shall be vey slow
+		RestrainedClickOn(A)
+		return
 
 	if(in_throw_mode)
 		throw_item(A)//todo: make it plausible to lightly toss items via right-click
@@ -35,14 +36,13 @@
 	//User itself, current loc, and user inventory
 	if(A in DirectAccess())
 		if(W)
-			return W.rightclick_melee_attack_chain(src, A, params)
+			W.rightclick_melee_attack_chain(src, A, params)
 		else
-			if(!AltUnarmedAttack(A, TRUE))
-				. = UnarmedAttack(A, TRUE, a_intent)
-				if(!(. & NO_AUTO_CLICKDELAY_HANDLING) && ismob(A))
-					DelayNextAction(CLICK_CD_MELEE)
-				return
-			return
+			if(ismob(A))
+				changeNext_move(CLICK_CD_MELEE)
+			if(!AltUnarmedAttack(A))
+				UnarmedAttack(A)
+		return
 
 	//Can't reach anything else in lockers or other weirdness
 	if(!loc.AllowClick())
@@ -51,25 +51,23 @@
 	//Standard reach turf to turf or reaching inside storage
 	if(CanReach(A,W))
 		if(W)
-			return W.rightclick_melee_attack_chain(src, A, params)
+			W.rightclick_melee_attack_chain(src, A, params)
 		else
-			if(!AltUnarmedAttack(A, TRUE))
-				. = UnarmedAttack(A, TRUE, a_intent)
-				if(!(. & NO_AUTO_CLICKDELAY_HANDLING) && ismob(A))
-					DelayNextAction(CLICK_CD_MELEE)
-				return
-			return
+			if(ismob(A))
+				changeNext_move(CLICK_CD_MELEE)
+			if(!AltUnarmedAttack(A,1))
+				UnarmedAttack(A,1)
 	else
 		if(W)
 			if(!W.altafterattack(A, src, FALSE, params))
-				return W.afterattack(A, src, FALSE, params)
+				W.afterattack(A, src, FALSE, params)
 		else
-			if(!AltRangedAttack(A, params))
-				return RangedAttack(A, params)
+			if(!AltRangedAttack(A,params))
+				RangedAttack(A,params)
 
 /mob/proc/AltUnarmedAttack(atom/A, proximity_flag)
 	if(ismob(A))
-		DelayNextAction(CLICK_CD_MELEE)
+		changeNext_move(CLICK_CD_MELEE)
 	return FALSE
 
 /mob/proc/AltRangedAttack(atom/A, params)

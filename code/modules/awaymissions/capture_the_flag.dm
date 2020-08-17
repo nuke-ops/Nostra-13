@@ -53,7 +53,8 @@
 				to_chat(M, "<span class='userdanger'>\The [src] has been returned to base!</span>")
 		STOP_PROCESSING(SSobj, src)
 
-/obj/item/ctf/on_attack_hand(mob/living/user, act_intent = user.a_intent, unarmed_attack_flags)
+//ATTACK HAND IGNORING PARENT RETURN VALUE
+/obj/item/ctf/attack_hand(mob/living/user, act_intent = user.a_intent, unarmed_attack_flags)
 	if(!is_ctf_target(user) && !anyonecanpickup)
 		to_chat(user, "Non players shouldn't be moving the flag!")
 		return
@@ -678,7 +679,10 @@
 /obj/machinery/control_point/attackby(mob/user, params)
 	capture(user)
 
-/obj/machinery/control_point/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+/obj/machinery/control_point/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+	. = ..()
+	if(.)
+		return
 	capture(user)
 
 /obj/machinery/control_point/proc/capture(mob/user)

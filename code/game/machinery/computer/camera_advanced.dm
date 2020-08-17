@@ -103,7 +103,10 @@
 		return FALSE
 	return ..()
 
-/obj/machinery/computer/camera_advanced/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+/obj/machinery/computer/camera_advanced/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+	. = ..()
+	if(.)
+		return
 	if(current_user)
 		to_chat(user, "The console is already in use!")
 		return

@@ -77,7 +77,8 @@
 /obj/item/defibrillator/ui_action_click()
 	toggle_paddles()
 
-/obj/item/defibrillator/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+//ATTACK HAND IGNORING PARENT RETURN VALUE
+/obj/item/defibrillator/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
 	if(loc == user)
 		if(slot_flags == ITEM_SLOT_BACK)
 			if(user.get_item_by_slot(SLOT_BACK) == src)

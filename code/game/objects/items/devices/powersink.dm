@@ -97,7 +97,10 @@ GLOBAL_LIST_EMPTY(power_sinks)
 /obj/item/powersink/attack_ai()
 	return
 
-/obj/item/powersink/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+/obj/item/powersink/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+	. = ..()
+	if(.)
+		return
 	switch(mode)
 		if(DISCONNECTED)
 			..()

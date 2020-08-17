@@ -198,6 +198,10 @@
 /obj/item/gun_control/CanItemAutoclick()
 	return TRUE
 
+/obj/item/gun_control/attack_obj(obj/O, mob/living/user)
+	user.changeNext_move(CLICK_CD_MELEE)
+	O.attacked_by(src, user)
+
 /obj/item/gun_control/attack(mob/living/M, mob/living/user)
 	M.lastattacker = user.real_name
 	M.lastattackerckey = user.ckey

@@ -107,7 +107,10 @@
 			stat |= BROKEN
 			update_icon()
 
-/obj/machinery/pdapainter/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+/obj/machinery/pdapainter/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+	. = ..()
+	if(.)
+		return
 
 	if(!storedpda)
 		to_chat(user, "<span class='notice'>[src] is empty.</span>")

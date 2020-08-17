@@ -73,8 +73,8 @@
 /obj/item/organ/liver/proc/sizeMoveMod(value, mob/living/carbon/C)
 	if(cachedmoveCalc == value)
 		return
-	C.action_cooldown_mod /= cachedmoveCalc
-	C.action_cooldown_mod *= value
+	C.next_move_modifier /= cachedmoveCalc
+	C.next_move_modifier *= value
 	cachedmoveCalc = value
 
 /obj/item/organ/liver/fly

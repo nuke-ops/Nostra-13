@@ -28,10 +28,12 @@
 		queue_smooth_neighbors(src)
 	return ..()
 
-/obj/structure/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+/obj/structure/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
 	. = ..()
+	if(.)
+		return
 	if(structureclimber && structureclimber != user)
-		user.DelayNextAction(CLICK_CD_MELEE)
+		user.changeNext_move(CLICK_CD_MELEE)
 		user.do_attack_animation(src)
 		structureclimber.DefaultCombatKnockdown(40)
 		structureclimber.visible_message("<span class='warning'>[structureclimber] has been knocked off [src].", "You're knocked off [src]!", "You see [structureclimber] get knocked off [src].</span>")

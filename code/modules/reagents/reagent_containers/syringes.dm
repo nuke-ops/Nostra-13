@@ -42,7 +42,8 @@
 	mode = !mode
 	update_icon()
 
-/obj/item/reagent_containers/syringe/on_attack_hand()
+//ATTACK HAND IGNORING PARENT RETURN VALUE
+/obj/item/reagent_containers/syringe/attack_hand()
 	. = ..()
 	update_icon()
 

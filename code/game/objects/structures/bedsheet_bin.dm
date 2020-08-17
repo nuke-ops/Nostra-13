@@ -311,7 +311,10 @@ LINEN BINS
 /obj/structure/bedsheetbin/attack_paw(mob/user)
 	return attack_hand(user)
 
-/obj/structure/bedsheetbin/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+/obj/structure/bedsheetbin/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+	. = ..()
+	if(.)
+		return
 	if(user.incapacitated())
 		return
 	if(amount >= 1)

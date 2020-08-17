@@ -91,7 +91,10 @@
 	else
 		return ..()
 
-/obj/structure/janitorialcart/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+/obj/structure/janitorialcart/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+	. = ..()
+	if(.)
+		return
 
 	var/list/items = list()
 	if(mybag)

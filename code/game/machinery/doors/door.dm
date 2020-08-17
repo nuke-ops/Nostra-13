@@ -140,7 +140,10 @@
 			do_animate("deny")
 	return
 
-/obj/machinery/door/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+/obj/machinery/door/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+	. = ..()
+	if(.)
+		return
 	return try_to_activate_door(user)
 
 /obj/machinery/door/attack_tk(mob/user)

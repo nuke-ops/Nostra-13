@@ -28,7 +28,8 @@
 			fold_in(force = 1)
 			DefaultCombatKnockdown(200)
 
-/mob/living/silicon/pai/on_attack_hand(mob/living/carbon/human/user)
+//ATTACK HAND IGNORING PARENT RETURN VALUE
+/mob/living/silicon/pai/attack_hand(mob/living/carbon/human/user)
 	switch(user.a_intent)
 		if(INTENT_HELP)
 			visible_message("<span class='notice'>[user] gently pats [src] on the head, eliciting an off-putting buzzing from its holographic field.</span>",

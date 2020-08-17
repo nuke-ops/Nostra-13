@@ -37,7 +37,10 @@
 		MA.pixel_y = 12
 		. += H
 
-/obj/structure/headpike/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+/obj/structure/headpike/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+	. = ..()
+	if(.)
+		return
 	to_chat(user, "<span class='notice'>You take down [src].</span>")
 	if(victim)
 		victim.forceMove(drop_location())

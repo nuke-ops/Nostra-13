@@ -60,7 +60,10 @@
 /obj/effect/portal/attack_tk(mob/user)
 	return
 
-/obj/effect/portal/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+/obj/effect/portal/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+	. = ..()
+	if(.)
+		return
 	if(get_turf(user) == get_turf(src))
 		teleport(user)
 	if(Adjacent(user))

@@ -70,7 +70,7 @@ Difficulty: Medium
 
 /obj/item/melee/transforming/cleaving_saw/miner/attack(mob/living/target, mob/living/carbon/human/user)
 	target.add_stun_absorption("miner", 10, INFINITY)
-	. = ..()
+	..()
 	target.stun_absorption -= "miner"
 
 /obj/item/projectile/kinetic/miner
@@ -86,8 +86,8 @@ Difficulty: Medium
 
 /mob/living/simple_animal/hostile/megafauna/blood_drunk_miner/adjustHealth(amount, updating_health = TRUE, forced = FALSE)
 	var/adjustment_amount = amount * 0.1
-	if(world.time + adjustment_amount > next_action)
-		DelayNextAction(adjustment_amount, considered_action = FALSE, flush = TRUE) //attacking it interrupts it attacking, but only briefly
+	if(world.time + adjustment_amount > next_move)
+		changeNext_move(adjustment_amount) //attacking it interrupts it attacking, but only briefly
 	. = ..()
 
 /mob/living/simple_animal/hostile/megafauna/blood_drunk_miner/death()
@@ -109,7 +109,7 @@ Difficulty: Medium
 /mob/living/simple_animal/hostile/megafauna/blood_drunk_miner/AttackingTarget()
 	if(QDELETED(target))
 		return
-	if(!CheckActionCooldown() || !Adjacent(target)) //some cheating
+	if(next_move > world.time || !Adjacent(target)) //some cheating
 		INVOKE_ASYNC(src, .proc/quick_attack_loop)
 		return
 	face_atom(target)
@@ -125,8 +125,8 @@ Difficulty: Medium
 					adjustHealth(-(L.maxHealth * 0.5))
 			L.gib()
 			return TRUE
-	miner_saw.melee_attack_chain(src, target, null, ATTACK_IGNORE_CLICKDELAY)
-	FlushCurrentAction()
+	changeNext_move(CLICK_CD_MELEE)
+	miner_saw.melee_attack_chain(src, target)
 	if(guidance)
 		adjustHealth(-2)
 	transform_weapon()
@@ -161,19 +161,19 @@ Difficulty: Medium
 		face_atom(target)
 		new /obj/effect/temp_visual/dir_setting/firing_effect(loc, dir)
 		Shoot(target)
-		DelayNextAction(CLICK_CD_RANGE, flush = TRUE)
+		changeNext_move(CLICK_CD_RANGE)
 
 //I'm still of the belief that this entire proc needs to be wiped from existence.
 //  do not take my touching of it to be endorsement of it. ~mso
 /mob/living/simple_animal/hostile/megafauna/blood_drunk_miner/proc/quick_attack_loop()
-	while(!QDELETED(target) && !CheckActionCooldown()) //this is done this way because next_move can change to be sooner while we sleep.
+	while(!QDELETED(target) && next_move <= world.time) //this is done this way because next_move can change to be sooner while we sleep.
 		stoplag(1)
-	sleep((next_action - world.time) * 1.5) //but don't ask me what the fuck this is about
+	sleep((next_move - world.time) * 1.5) //but don't ask me what the fuck this is about
 	if(QDELETED(target))
 		return
-	if(dashing || !CheckActionCooldown() || !Adjacent(target))
-		if(dashing && next_action <= world.time)
-			SetNextAction(1, considered_action = FALSE, immediate = FALSE, flush = TRUE)
+	if(dashing || next_move > world.time || !Adjacent(target))
+		if(dashing && next_move <= world.time)
+			next_move = world.time + 1
 		INVOKE_ASYNC(src, .proc/quick_attack_loop) //lets try that again.
 		return
 	AttackingTarget()

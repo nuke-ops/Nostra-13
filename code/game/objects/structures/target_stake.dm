@@ -48,7 +48,10 @@
 		handle_density()
 		to_chat(user, "<span class='notice'>You slide the target into the stake.</span>")
 
-/obj/structure/target_stake/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+/obj/structure/target_stake/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+	. = ..()
+	if(.)
+		return
 	if(pinned_target)
 		removeTarget(user)
 

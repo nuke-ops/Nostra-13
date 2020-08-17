@@ -106,7 +106,8 @@
 		START_PROCESSING(SSobj, src)
 	update_icon()
 
-/obj/item/pizzabox/on_attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
+//ATTACK HAND IGNORING PARENT RETURN VALUE
+/obj/item/pizzabox/attack_hand(mob/user, act_intent = user.a_intent, unarmed_attack_flags)
 	if(user.get_inactive_held_item() != src)
 		return ..()
 	if(open)
