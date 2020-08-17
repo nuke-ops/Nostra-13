@@ -3569,6 +3569,7 @@
 #include "modular_nostration\code\game\objects\structures\railings.dm"
 #include "modular_nostration\code\game\turfs\openspace\openspace.dm"
 #include "modular_nostration\code\game\turfs\simulated\hull.dm"
+#include "modular_nostration\code\modules\admin\verbs\fix_air.dm"
 #include "modular_nostration\code\modules\cargo\console.dm"
 #include "modular_nostration\code\modules\cargo\packs\emergency.dm"
 #include "modular_nostration\code\modules\client\preferences_toggles.dm"
