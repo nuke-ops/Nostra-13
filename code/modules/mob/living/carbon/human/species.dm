@@ -113,6 +113,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 	/// Our default override for typing indicator state
 	var/typing_indicator_state
+	//SKYRAT SNOWFLAKE
+	var/list/languagewhitelist = list()
 
 ///////////
 // PROCS //
@@ -123,6 +125,9 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	if(!limbs_id)	//if we havent set a limbs id to use, just use our own id
 		limbs_id = id
 	..()
+
+	//update our mutant bodyparts to include unlocked ones
+	mutant_bodyparts += GLOB.unlocked_mutant_parts
 
 /proc/generate_selectable_species(clear = FALSE)
 	if(clear)

@@ -98,6 +98,11 @@
 	config_entry_value = 6
 	min_val = 1
 
+/datum/config_entry/number/ecult_scaling_coeff		//how much does the amount of players get divided by to determine e_cult
+	config_entry_value = 6
+	integer = FALSE
+	min_val = 1
+
 /datum/config_entry/number/security_scaling_coeff	//how much does the amount of players get divided by to determine open security officer positions
 	config_entry_value = 8
 	min_val = 1
@@ -369,6 +374,8 @@
 	min_val = 0
 
 /datum/config_entry/flag/allow_random_events	// Enables random events mid-round when set
+
+/datum/config_entry/flag/admin_disk_inactive_msg //Allows admins to globally disable ingame logs for this crap
 
 /datum/config_entry/number/events_min_time_mul	// Multipliers for random events minimal starting time and minimal players amounts
 	config_entry_value = 1

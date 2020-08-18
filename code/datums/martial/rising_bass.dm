@@ -78,7 +78,7 @@
 	return TRUE
 
 /datum/martial_art/the_rising_bass/proc/sideKick(mob/living/carbon/human/A, mob/living/carbon/human/D)
-	var/damage = (damage_roll(A,D)*1.5)
+	var/damage = (damage_roll(A,D)*0.5)
 	if(CHECK_MOBILITY(D, MOBILITY_STAND))
 		var/dir = A.dir & (NORTH | SOUTH) ? pick(EAST, WEST) : pick(NORTH, SOUTH)
 		var/oppdir = dir == NORTH ? SOUTH : dir == SOUTH ? NORTH : dir == EAST ? WEST : EAST
@@ -89,7 +89,7 @@
 						  "<span class='userdanger'>[A] kicks you in the side, forcing you to step away!</span>")
 		playsound(get_turf(A), 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 		D.apply_damage(damage, BRUTE, BODY_ZONE_CHEST)
-		D.DefaultCombatKnockdown(50, override_hardstun = 1, override_stamdmg = damage)
+		D.DefaultCombatKnockdown(60, override_hardstun = 1, override_stamdmg = damage)
 		var/L = !checkfordensity(H,D) ? (!checkfordensity(K,D) ? D.loc : K) : H
 		D.forceMove(L)
 		log_combat(A, D, "side kicked (Rising Bass)")
@@ -106,11 +106,11 @@
 					  "<span class='userdanger'>[A] flips you over their shoulder, slamming you into the ground!</span>")
 	playsound(get_turf(A), 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 	D.emote("scream")
-	D.apply_damage(damage + 7, BRUTE, BODY_ZONE_CHEST)
-	D.apply_damage(damage + 7, BRUTE, BODY_ZONE_HEAD)
+	D.apply_damage(damage + 10, BRUTE, BODY_ZONE_CHEST)
+	D.apply_damage(damage + 10, BRUTE, BODY_ZONE_HEAD)
 	if(damage >= stunthreshold)
-		D.Sleeping(45)
-	D.DefaultCombatKnockdown(210, override_hardstun = 1, override_stamdmg = 40)
+		D.Sleeping(60)
+	D.DefaultCombatKnockdown(300, override_hardstun = 1, override_stamdmg = 50)
 	D.forceMove(L)
 	log_combat(A, D, "shoulder flipped (Rising Bass)")
 	return TRUE
@@ -127,14 +127,14 @@
 		D.throw_at(F, 10, 1)
 		D.apply_damage(damage, BRUTE, BODY_ZONE_CHEST)
 		D.DefaultCombatKnockdown(90, override_hardstun = 1, override_stamdmg = damage*2)
-		D.confused += min(damage, 15)
+		D.confused += min(damage, 20)
 		log_combat(A, D, "repulse punched (Rising Bass)")
-		repulsecool = world.time + 2 SECONDS
+		repulsecool = world.time + 3 SECONDS
 		return TRUE
 	return FALSE
 
 /datum/martial_art/the_rising_bass/proc/footSmash(mob/living/carbon/human/A, mob/living/carbon/human/D)
-	var/damage = (damage_roll(A,D)*1.3)
+	var/damage = (damage_roll(A,D)*0.5)
 	if(CHECK_MOBILITY(D, MOBILITY_STAND))
 		A.do_attack_animation(D, ATTACK_EFFECT_KICK)
 		D.visible_message("<span class='warning'>[A] smashes their foot down on [D]'s foot!</span>", \
@@ -171,13 +171,13 @@
 		D.visible_message("<span class='danger'>[A] trips [D]!</span>", \
 					"<span class='userdanger'>You're tripped by [A]!</span>", "<span class='hear'>You hear something thump against the floor!</span>", COMBAT_MESSAGE_RANGE, A)
 		to_chat(A, "<span class='danger'>You trip [D]!</span>")
-		D.DefaultCombatKnockdown(7, override_hardstun = 0.03, override_stamdmg = damage)
+		D.DefaultCombatKnockdown(10, override_hardstun = 0.01, override_stamdmg = damage)
 		D.Dizzy(damage)
 	else
 		D.visible_message("<span class='danger'>[A] jabs [D] in the stomach!</span>", \
 					"<span class='userdanger'>You're jabbed in the stomach by [A]!</span>", "<span class='hear'>You hear a sickening sound of flesh hitting flesh!</span>", COMBAT_MESSAGE_RANGE, A)
 		to_chat(A, "<span class='danger'>You jab [D] in the stomach!</span>")
-		D.apply_damage(damage*2 + 8, STAMINA)
+		D.apply_damage(damage*2 + 10, STAMINA)
 		D.disgust = min(damage, 20)
 	playsound(D, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 	return TRUE

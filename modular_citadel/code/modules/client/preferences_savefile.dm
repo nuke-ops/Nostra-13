@@ -14,6 +14,30 @@
 	features["mcolor2"]	= sanitize_hexcolor(features["mcolor2"], 6, FALSE)
 	features["mcolor3"]	= sanitize_hexcolor(features["mcolor3"], 6, FALSE)
 
+	// SKYRAT CHANGE START
+	S["enable_personal_chat_color"]			>> enable_personal_chat_color
+	S["personal_chat_color"]			>> personal_chat_color
+	skyrat_ooc_notes = sanitize_text(S["skyrat_ooc_notes"])
+	skyrat_ooc_notes = strip_html_simple(skyrat_ooc_notes, MAX_FLAVOR_LEN, TRUE)
+	erppref = sanitize_text(S["erp_pref"], "Ask")
+	if(!length(erppref)) erppref = "Ask"
+	nonconpref = sanitize_text(S["noncon_pref"], "Ask")
+	if(!length(nonconpref)) nonconpref = "Ask"
+	vorepref = sanitize_text(S["vore_pref"], "Ask")
+	if(!length(vorepref)) vorepref = "Ask"
+	extremepref = sanitize_text(S["extremepref"], "No") //god has forsaken me
+	if(!length(extremepref))
+		extremepref = "No"
+	extremeharm = sanitize_text(S["extremeharm"], "No")
+	if(!length(extremeharm) || (extremepref = "No"))
+		extremeharm = "No"
+	enable_personal_chat_color	= sanitize_integer(enable_personal_chat_color, 0, 1, initial(enable_personal_chat_color))
+	personal_chat_color	= sanitize_hexcolor(personal_chat_color, 6, 1, "#FFFFFF")
+	//Moves over the previous OOC notes to our ooc notes
+	if(length(features["ooc_notes"]) > length(skyrat_ooc_notes))
+		skyrat_ooc_notes = features["ooc_notes"]
+		features["ooc_notes"] = ""
+	//END OF SKYRAT CHANGES
 
 /datum/preferences/proc/cit_character_pref_save(savefile/S)
 	//ipcs
@@ -37,3 +61,12 @@
 	WRITE_FILE(S["feature_flavor_text"], features["flavor_text"])
 	WRITE_FILE(S["silicon_feature_flavor_text"], features["silicon_flavor_text"])
 
+	//skyrat stuff
+	WRITE_FILE(S["skyrat_ooc_notes"], skyrat_ooc_notes)
+	WRITE_FILE(S["erp_pref"], erppref)
+	WRITE_FILE(S["noncon_pref"], nonconpref)
+	WRITE_FILE(S["vore_pref"], vorepref)
+	WRITE_FILE(S["extremepref"], extremepref)
+	WRITE_FILE(S["extremeharm"], extremeharm)
+	WRITE_FILE(S["enable_personal_chat_color"], enable_personal_chat_color)
+	WRITE_FILE(S["personal_chat_color"], personal_chat_color)

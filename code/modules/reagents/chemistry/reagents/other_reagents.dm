@@ -883,7 +883,7 @@
 	if(istype(O, /obj/item/stack/sheet/metal))
 		var/obj/item/stack/sheet/metal/M = O
 		reac_volume = min(reac_volume, M.amount)
-		new/obj/item/stack/tile/bronze(get_turf(M), reac_volume)
+		new/obj/item/stack/sheet/bronze(get_turf(M), reac_volume)
 		M.use(reac_volume)
 
 /datum/reagent/nitrogen
@@ -2197,6 +2197,12 @@
 		M.emote("nya")
 	if(prob(20))
 		to_chat(M, "<span class = 'notice'>[pick("Headpats feel nice.", "The feeling of a hairball...", "Backrubs would be nice.", "Whats behind those doors?")]</span>")
+	if(ishuman(M) && !(M.client?.prefs.cit_toggles & NO_APHRO))
+		var/mob/living/carbon/human/H = M
+		var/list/adjusted = H.adjust_arousal(2,aphro = TRUE)
+		for(var/g in adjusted)
+			var/obj/item/organ/genital/G = g
+			to_chat(M, "<span class='userlove'>You feel like playing with your [G.name]!</span>")
 	..()
 
 /datum/reagent/preservahyde
@@ -2330,6 +2336,32 @@
 			wounded_part.heal_damage(0.25, 0.25)
 		M.adjustStaminaLoss(-0.25*REM) // the more wounds, the more stamina regen
 	..()
+
+datum/reagent/eldritch
+	name = "Eldritch Essence"
+	description = "Strange liquid that defies the laws of physics"
+	taste_description = "Ag'hsj'saje'sh"
+	color = "#1f8016"
+
+/datum/reagent/eldritch/on_mob_life(mob/living/carbon/M)
+	if(IS_HERETIC(M))
+		M.drowsyness = max(M.drowsyness-5, 0)
+		M.AdjustAllImmobility(-40, FALSE)
+		M.adjustStaminaLoss(-15, FALSE)
+		M.adjustToxLoss(-3, FALSE)
+		M.adjustOxyLoss(-3, FALSE)
+		M.adjustBruteLoss(-3, FALSE)
+		M.adjustFireLoss(-3, FALSE)
+		if(ishuman(M) && M.blood_volume < BLOOD_VOLUME_NORMAL)
+			M.blood_volume += 3
+	else
+		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3, 150)
+		M.adjustToxLoss(2, FALSE)
+		M.adjustFireLoss(2, FALSE)
+		M.adjustOxyLoss(2, FALSE)
+		M.adjustBruteLoss(2, FALSE)
+	holder.remove_reagent(type, 1)
+	return TRUE
 
 /datum/reagent/cellulose
 	name = "Cellulose Fibers"

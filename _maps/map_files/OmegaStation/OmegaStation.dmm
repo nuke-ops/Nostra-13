@@ -22885,7 +22885,7 @@
 	department = "Genetics";
 	name = "Genetics RC";
 	pixel_x = 28;
-	pixel_y = 0
+	
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/genetics)
@@ -31927,7 +31927,6 @@
 /obj/machinery/requests_console{
 	department = "Virology";
 	name = "Virology RC";
-	pixel_x = 0;
 	pixel_y = -32;
 	receive_ore_updates = 1
 	},
@@ -41442,6 +41441,21 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/atmos)
+"oFq" = (
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/cryopod/tele,
+/turf/open/floor/plasteel/dark,
+/area/crew_quarters/dorms)
 "oGc" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 6
@@ -83025,7 +83039,7 @@ atP
 auT
 avY
 awQ
-axG
+oFq
 axG
 bxJ
 aAH

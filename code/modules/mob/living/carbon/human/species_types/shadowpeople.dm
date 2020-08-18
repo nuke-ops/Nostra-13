@@ -14,6 +14,7 @@
 
 	dangerous_existence = 1
 	mutanteyes = /obj/item/organ/eyes/night_vision
+	languagewhitelist = list("Shadowtongue") //Skyrat change - species language whitelist
 
 	species_type = "shadow"
 

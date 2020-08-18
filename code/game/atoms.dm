@@ -70,6 +70,10 @@
 	/// A luminescence-shifted value of the last color calculated for chatmessage overlays
 	var/chat_color_darkened
 
+	//skyrat edit - custom examine icon
+	var/examine_icon
+	var/examine_icon_state
+	//
 	///Mobs that are currently do_after'ing this atom, to be cleared from on Destroy()
 	var/list/targeted_by
 
@@ -339,8 +343,10 @@
 		. = override.Join("")
 
 ///Generate the full examine string of this atom (including icon for goonchat)
+//skyrat change - custom examine icons
 /atom/proc/get_examine_string(mob/user, thats = FALSE)
-	return "[icon2html(src, user)] [thats? "That's ":""][get_examine_name(user)]"
+	return "[icon2html(examine_icon ? examine_icon : src, user, examine_icon_state ? examine_icon_state : icon_state)] [thats? "That's ":""][get_examine_name(user)]"
+//end changes (yeah the whole proc was modified)
 
 /atom/proc/examine(mob/user)
 	. = list("[get_examine_string(user, TRUE)].")
@@ -1121,3 +1127,11 @@
 				max_grav = max(G.setting,max_grav)
 			return max_grav
 	return SSmapping.level_trait(T.z, ZTRAIT_GRAVITY)
+
+/**
+  * Causes effects when the atom gets hit by a rust effect from heretics
+  *
+  * Override this if you want custom behaviour in whatever gets hit by the rust
+  */
+/atom/proc/rust_heretic_act()
+	return 

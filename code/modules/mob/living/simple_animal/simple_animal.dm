@@ -146,6 +146,8 @@
 	var/bare_wound_bonus = 0
 	//If the attacks from this are sharp
 	var/sharpness = SHARP_NONE
+	//Generic flags
+	var/simple_mob_flags = NONE
 
 /mob/living/simple_animal/Initialize()
 	. = ..()
@@ -350,9 +352,10 @@
 		return 1
 
 /mob/living/simple_animal/proc/drop_loot()
-	if(loot.len)
-		for(var/i in loot)
-			new i(loc)
+	if(!length(loot))
+		return
+	for(var/i in loot)
+		new i(loc)
 
 /mob/living/simple_animal/death(gibbed)
 	movement_type &= ~FLYING

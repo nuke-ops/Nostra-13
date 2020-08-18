@@ -25,6 +25,7 @@
 	disliked_food = GRAIN | DAIRY
 	liked_food = GROSS | MEAT
 	inert_mutation = FIREBREATH
+	languagewhitelist = list("Draconic") //Skyrat change - species language whitelist
 	species_language_holder = /datum/language_holder/lizard
 
 	tail_type = "tail_lizard"
@@ -52,6 +53,7 @@
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,DIGITIGRADE)
 	inherent_traits = list(TRAIT_CHUNKYFINGERS)
 	mutantlungs = /obj/item/organ/lungs/ashwalker
+	mutanteyes = /obj/item/organ/eyes/night_vision
 	burnmod = 0.9
 	brutemod = 0.9
 	species_language_holder = /datum/language_holder/lizard/ash
