@@ -56644,13 +56644,13 @@
 /area/crew_quarters/theatre)
 "mNi" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/machinery/power/apc{
-	areastring = "/area/science/circuit";
-	name = "Circuitry Lab APC";
-	pixel_x = -25
-	},
 /obj/structure/cable{
 	icon_state = "2-8"
+	},
+/obj/machinery/power/apc{
+	areastring = "/area/science/circuit";
+	name = "Circuit Lab APC";
+	pixel_x = -26
 	},
 /turf/open/floor/plasteel/white,
 /area/science/circuit)
