@@ -35711,6 +35711,12 @@
 	},
 /obj/item/analyzer,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/item/pipe_dispenser{
+	icon = 'modular_nostration/icons/obj/tools.dmi';
+	icon_state = "sci_rpd";
+	lefthand_file = 'modular_nostration/icons/mob/inhands/equipment/tools_lefthand.dmi';
+	righthand_file = 'modular_nostration/icons/mob/inhands/equipment/tools_righthand.dmi'
+	},
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "bGA" = (
@@ -38282,7 +38288,7 @@
 /obj/machinery/sparker/toxmix{
 	pixel_x = 25
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/toxins_mixing_output{
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 4
 	},
 /turf/open/floor/engine/vacuum,
@@ -38625,10 +38631,12 @@
 /area/science/mixing)
 "bNu" = (
 /obj/machinery/door/airlock/research/glass/incinerator/toxmix_exterior,
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/engine,
 /area/science/mixing)
 "bNv" = (
 /obj/machinery/door/airlock/research/glass/incinerator/toxmix_interior,
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/engine,
 /area/science/mixing)
 "bNw" = (
@@ -38896,7 +38904,7 @@
 	dir = 8
 	},
 /obj/structure/sign/nanotrasen{
-	pixel_x = 28
+	pixel_x = 29
 	},
 /turf/open/floor/plasteel,
 /area/science/misc_lab)
@@ -56644,13 +56652,13 @@
 /area/crew_quarters/theatre)
 "mNi" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/machinery/power/apc{
-	areastring = "/area/science/circuit";
-	name = "Circuitry Lab APC";
-	pixel_x = -25
-	},
 /obj/structure/cable{
 	icon_state = "2-8"
+	},
+/obj/machinery/power/apc{
+	areastring = "/area/science/circuit";
+	name = "Circuit Lab APC";
+	pixel_x = -26
 	},
 /turf/open/floor/plasteel/white,
 /area/science/circuit)
@@ -56722,7 +56730,8 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/light_switch{
-	pixel_x = -20
+	pixel_x = -20;
+	pixel_y = -4
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
