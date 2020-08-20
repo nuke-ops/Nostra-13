@@ -38635,7 +38635,9 @@
 /turf/open/floor/engine,
 /area/science/mixing)
 "bNv" = (
-/obj/machinery/door/airlock/research/glass/incinerator/toxmix_interior,
+/obj/machinery/door/airlock/research/glass/incinerator/toxmix_interior{
+	state_open = 1
+	},
 /obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/engine,
 /area/science/mixing)
