@@ -285,7 +285,6 @@
 /obj/structure/sign/directions/engineering{
 	dir = 4;
 	icon_state = "direction_eng";
-	pixel_x = 0;
 	pixel_y = 40
 	},
 /turf/open/floor/plasteel,
@@ -400,7 +399,6 @@
 /obj/structure/sign/directions/supply{
 	dir = 4;
 	icon_state = "direction_supply";
-	pixel_x = 0;
 	pixel_y = 28
 	},
 /turf/open/floor/plasteel,
@@ -474,7 +472,6 @@
 /obj/structure/sign/directions/supply{
 	dir = 4;
 	icon_state = "direction_supply";
-	pixel_x = 0;
 	pixel_y = 32
 	},
 /obj/structure/sign/directions/evac{
@@ -502,7 +499,6 @@
 	},
 /obj/structure/sign/directions/evac{
 	dir = 4;
-	pixel_x = 0;
 	pixel_y = 40
 	},
 /turf/open/floor/plasteel/white/corner{
@@ -569,7 +565,6 @@
 /obj/structure/sign/directions/supply{
 	dir = 4;
 	icon_state = "direction_supply";
-	pixel_x = 0;
 	pixel_y = 36
 	},
 /obj/structure/sign/directions/engineering{
@@ -613,8 +608,6 @@
 /obj/structure/sign/directions/security{
 	dir = 8;
 	icon_state = "direction_sec";
-	pixel_x = 0;
-	pixel_y = 0
 	},
 /obj/structure/sign/directions/command{
 	dir = 8;

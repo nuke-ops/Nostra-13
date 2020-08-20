@@ -252,7 +252,7 @@ CHECK_RANDOMIZER
 # SERVER ss13.example.com:2506
 
 ## discord address
-# DISCORDURL https://discord.gg/Jx7A7dW
+# DISCORDURL https://discord.gg/bxgeRPq
 
 ## Wiki address
 # WIKIURL https://katlin.dog/citadel-wiki
