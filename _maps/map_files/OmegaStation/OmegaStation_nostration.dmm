@@ -12213,7 +12213,11 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/closed/wall/rust,
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Maintenance Hatch";
+	req_access_txt = "12"
+	},
+/turf/open/floor/plating,
 /area/maintenance/starboard)
 "atr" = (
 /obj/machinery/camera{
@@ -42867,11 +42871,11 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
 "fOd" = (
+/obj/effect/turf_decal/bot,
+/obj/structure/closet/firecloset,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/effect/turf_decal/bot,
-/obj/structure/closet/firecloset,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit)
 "fRb" = (
@@ -43425,6 +43429,16 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/crew_quarters/toilet/restrooms)
+"hSX" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/hallway/secondary/exit)
 "hUG" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -45634,6 +45648,10 @@
 /obj/machinery/door/airlock/public/glass{
 	name = "Departure Lounge"
 	},
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit)
 "qKD" = (
@@ -45748,6 +45766,10 @@
 /area/engine/atmos)
 "rbS" = (
 /obj/structure/closet/emcloset,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit)
 "rfI" = (
@@ -46411,6 +46433,10 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard)
 "sHe" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Maintenance Hatch";
 	req_access_txt = "12"
@@ -48675,12 +48701,11 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
-/obj/machinery/power/apc{
-	name = "Escape hall APC";
-	pixel_x = 27
-	},
 /obj/structure/cable/white{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/auto_name{
+	pixel_x = 27
 	},
 /turf/open/floor/plasteel/white/corner{
 	dir = 1
@@ -48954,6 +48979,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+"vwH" = (
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/hallway/secondary/exit)
 "vwM" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
@@ -97145,7 +97177,7 @@ aRz
 bhk
 aRz
 aXJ
-aRz
+sHe
 wZU
 blM
 sIv
@@ -97916,7 +97948,7 @@ vxx
 aXK
 sHb
 sGA
-sHe
+aRz
 wZU
 blM
 bsJ
@@ -100751,8 +100783,8 @@ sHB
 dPc
 nvd
 axW
-blZ
-blM
+vwH
+hSX
 azb
 azb
 azb
