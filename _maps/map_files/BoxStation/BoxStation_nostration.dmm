@@ -35713,7 +35713,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/item/pipe_dispenser{
 	icon = 'modular_nostration/icons/obj/tools.dmi';
-	icon_state = "sci_rpd"
+	icon_state = "sci_rpd";
+	lefthand_file = 'modular_nostration/icons/mob/inhands/equipment/tools_lefthand.dmi';
+	righthand_file = 'modular_nostration/icons/mob/inhands/equipment/tools_righthand.dmi'
 	},
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
