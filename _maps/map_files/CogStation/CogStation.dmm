@@ -71901,6 +71901,10 @@
 /obj/machinery/atmospherics/pipe/manifold/supplymain/visible,
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+"ePg" = (
+/obj/machinery/cryopod/tele,
+/turf/open/floor/circuit/green,
+/area/crew_quarters/cryopod)
 "eTZ" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 4
@@ -102500,7 +102504,7 @@ aaa
 aaU
 aHY
 aIv
-aIv
+ePg
 aJW
 aHY
 aRQ
