@@ -4,8 +4,6 @@
 	icon = 'modular_nostration/icons/obj/plushes.dmi'
 	icon_state = "Shiro"
 	attack_verb = list("clawed")
-	var/stuffed = TRUE //If the plushie has stuffing in it
-	var/obj/item/grenade/grenade //You can remove the stuffing from a plushie and add a grenade to it for *nefarious uses*
 	gender = FEMALE
 	squeak_override = list('modular_citadel/sound/voice/nya.ogg' = 1)
 	var/can_random_spawn = TRUE			//if this is FALSE, don't spawn this for random plushies.
