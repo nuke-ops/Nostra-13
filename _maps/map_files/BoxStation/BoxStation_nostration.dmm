@@ -56655,11 +56655,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/machinery/power/apc{
-	areastring = "/area/science/circuit";
-	name = "Circuit Lab APC";
-	pixel_x = -26
-	},
+/obj/machinery/power/apc/auto_name/west,
 /turf/open/floor/plasteel/white,
 /area/science/circuit)
 "mNW" = (
