@@ -6,7 +6,6 @@
 	attack_verb = list("clawed")
 	gender = FEMALE
 	squeak_override = list('modular_citadel/sound/voice/nya.ogg' = 1)
-	var/can_random_spawn = TRUE			//if this is FALSE, don't spawn this for random plushies.
 
 /obj/item/toy/plush/vergashplushie
 	name = "Vergash plushie"
@@ -33,7 +32,6 @@
 	icon_state = "LampAddict"
 	gender = MALE
 	squeak_override = list('modular_citadel/sound/voice/scream_moth.ogg' = 1)
-	var/can_random_spawn = TRUE
 
 /obj/item/toy/plush/derpyslimeplushie
 	name = "derpy slime plushie"
