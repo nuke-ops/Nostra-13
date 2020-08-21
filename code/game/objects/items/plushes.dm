@@ -628,14 +628,6 @@ GLOBAL_LIST_INIT(valid_plushie_paths, valid_plushie_paths())
 	gender = FEMALE
 	squeak_override = list('modular_citadel/sound/voice/scream_moth.ogg' = 1)
 
-/obj/item/toy/plush/mothplushie
-	name = "insect plushie"
-	desc = "An adorable stuffed toy that resembles some kind of insect."
-	icon_state = "bumble"
-	item_state = "bumble"
-	squeak_override = list('modular_citadel/sound/voice/mothsqueak.ogg' = 1)
-	can_random_spawn = FALSE
-
 /obj/item/toy/plush/lampplushie
 	name = "lamp plushie"
 	desc = "A toy lamp plushie, doesn't actually make light, but it still toggles on and off. Click clack!"
