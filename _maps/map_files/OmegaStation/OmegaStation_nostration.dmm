@@ -7534,6 +7534,7 @@
 	name = "Station Intercom";
 	pixel_y = -24
 	},
+/obj/machinery/light,
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
 "amj" = (
@@ -21275,6 +21276,12 @@
 /obj/machinery/atmospherics/pipe/manifold/green/visible{
 	dir = 1
 	},
+/obj/machinery/camera{
+	c_tag = "Engineering Fore";
+	dir = 1;
+	network = list("ss13","engine");
+	pixel_x = 23
+	},
 /turf/open/floor/engine,
 /area/engine/engineering)
 "aIl" = (
@@ -31243,14 +31250,12 @@
 /obj/machinery/atmospherics/pipe/manifold/cyan/visible{
 	dir = 1
 	},
-/obj/machinery/camera{
-	c_tag = "Engineering Fore";
+/obj/machinery/airalarm/engine{
 	dir = 1;
-	network = list("ss13","engine");
-	pixel_x = 23
+	pixel_y = -32
 	},
 /turf/open/floor/engine,
-/area/engine/engineering)
+/area/engine/supermatter)
 "aZU" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -31682,6 +31687,9 @@
 /obj/machinery/camera{
 	c_tag = "Arrivals Lounge";
 	dir = 2
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/open/floor/plasteel/grimy,
 /area/hallway/primary/aft)
@@ -32317,10 +32325,6 @@
 	},
 /obj/machinery/light/small{
 	dir = 4
-	},
-/obj/machinery/airalarm/engine{
-	dir = 1;
-	pixel_y = 30
 	},
 /turf/open/floor/engine,
 /area/engine/supermatter)
@@ -37784,6 +37788,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+/obj/machinery/light,
 /turf/open/floor/plasteel{
 	heat_capacity = 1e+006
 	},
@@ -45530,6 +45535,12 @@
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/fitness/pool)
+"qme" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/aft)
 "qnA" = (
 /turf/open/floor/plating,
 /area/science/storage)
@@ -91577,7 +91588,7 @@ bjo
 bjo
 bjo
 tWh
-bys
+qme
 bys
 aYc
 bls
@@ -91588,7 +91599,7 @@ aVq
 sNz
 bed
 tWh
-bys
+qme
 bfK
 aYc
 bgU
