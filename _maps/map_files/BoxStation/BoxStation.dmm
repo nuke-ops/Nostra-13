@@ -19263,6 +19263,7 @@
 /obj/machinery/door/airlock/external{
 	name = "Escape Airlock"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/hallway/secondary/exit)
 "aTr" = (
@@ -24856,6 +24857,9 @@
 /area/science/robotics/lab)
 "bhw" = (
 /obj/machinery/computer/rdconsole/robotics,
+/obj/machinery/posialert{
+	pixel_y = 32
+	},
 /turf/open/floor/plasteel/white,
 /area/science/robotics/lab)
 "bhx" = (
@@ -32962,14 +32966,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 8
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /obj/structure/cable{
 	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
@@ -33637,9 +33638,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "bBH" = (
@@ -34376,9 +34374,6 @@
 "bDo" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
@@ -35865,9 +35860,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
 "bGN" = (
@@ -36897,9 +36889,6 @@
 	req_access_txt = "48";
 	shuttledocked = 1
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/quartermaster/miningdock)
@@ -36907,10 +36896,10 @@
 /obj/docking_port/stationary{
 	dir = 8;
 	dwidth = 3;
-	height = 10;
+	height = 5;
 	id = "mining_home";
 	name = "mining shuttle bay";
-	roundstart_template = /datum/map_template/shuttle/mining/large;
+	roundstart_template = /datum/map_template/shuttle/mining/box;
 	width = 7
 	},
 /turf/open/space/basic,
@@ -36922,9 +36911,6 @@
 /obj/machinery/door/airlock/mining/glass{
 	name = "Mining Dock";
 	req_access_txt = "48"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/miningdock)
@@ -51230,6 +51216,7 @@
 	name = "Security Escape Airlock";
 	req_access_txt = "2"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/hallway/secondary/exit)
 "cyl" = (
@@ -51257,6 +51244,7 @@
 /obj/machinery/door/airlock/external{
 	name = "Cargo Escape Airlock"
 	},
+/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/hallway/secondary/exit)
 "cyt" = (
@@ -53632,18 +53620,6 @@
 	dir = 8
 	},
 /area/crew_quarters/fitness/pool)
-"dCT" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "QMLoad"
-	},
-/obj/machinery/door/poddoor{
-	id = "QMLoaddoor";
-	name = "supply dock loading door"
-	},
-/obj/structure/fans/tiny,
-/turf/open/floor/plating,
-/area/quartermaster/storage)
 "dCV" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -53779,10 +53755,6 @@
 	dir = 4
 	},
 /area/crew_quarters/fitness/pool)
-"ecM" = (
-/obj/machinery/light,
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/pool)
 "edA" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -53792,6 +53764,18 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
+"efN" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad"
+	},
+/obj/machinery/door/poddoor{
+	id = "QMLoaddoor";
+	name = "supply dock loading door"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plating,
+/area/quartermaster/storage)
 "efO" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
@@ -53841,12 +53825,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
 /area/security/execution/transfer)
-"eoI" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/open/floor/plasteel,
-/area/quartermaster/miningdock)
 "epD" = (
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden,
 /obj/machinery/light{
@@ -54363,18 +54341,6 @@
 "fxV" = (
 /turf/closed/wall/r_wall,
 /area/hallway/primary/central)
-"fyh" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "QMLoad2"
-	},
-/obj/machinery/door/poddoor{
-	id = "QMLoaddoor2";
-	name = "supply dock loading door"
-	},
-/obj/structure/fans/tiny,
-/turf/open/floor/plating,
-/area/quartermaster/storage)
 "fyS" = (
 /obj/structure/pool/ladder{
 	dir = 1;
@@ -55000,12 +54966,6 @@
 /obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/open/floor/plating,
 /area/engine/atmos)
-"hys" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plasteel,
-/area/quartermaster/miningdock)
 "hzK" = (
 /turf/open/floor/plasteel/yellowsiding/corner{
 	dir = 1
@@ -55751,9 +55711,6 @@
 	name = "Pool Shutters";
 	pixel_y = 24
 	},
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/pool)
 "jRw" = (
@@ -56314,19 +56271,9 @@
 /obj/item/clothing/under/rank/civilian/lawyer/red,
 /turf/open/floor/plasteel,
 /area/crew_quarters/locker)
-"llk" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/obj/machinery/light,
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/pool)
 "lnk" = (
 /obj/item/radio/intercom{
 	pixel_y = 25
-	},
-/obj/machinery/light{
-	dir = 1
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/pool)
@@ -56662,7 +56609,6 @@
 	},
 /area/maintenance/bar)
 "mqZ" = (
-/obj/structure/reagent_dispensers/keg/aphro/strong,
 /obj/item/reagent_containers/glass/beaker,
 /turf/open/floor/plating,
 /area/maintenance/bar)
@@ -57769,12 +57715,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/disposal)
-"pMz" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plasteel,
-/area/quartermaster/miningdock)
 "pPi" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -58391,18 +58331,6 @@
 /obj/machinery/status_display/evac,
 /turf/closed/wall,
 /area/ai_monitored/storage/eva)
-"rOi" = (
-/obj/effect/turf_decal/tile/brown{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/brown{
-	dir = 8
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plasteel,
-/area/quartermaster/miningdock)
 "rPU" = (
 /turf/open/floor/plasteel/white/side{
 	dir = 4
@@ -58834,6 +58762,18 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
 /area/hallway/secondary/service)
+"tcw" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "QMLoad2"
+	},
+/obj/machinery/door/poddoor{
+	id = "QMLoaddoor2";
+	name = "supply dock loading door"
+	},
+/obj/structure/fans/tiny,
+/turf/open/floor/plating,
+/area/quartermaster/storage)
 "tgH" = (
 /obj/structure/filingcabinet/employment,
 /turf/open/floor/wood,
@@ -60095,7 +60035,9 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/security/main)
 "woR" = (
-/obj/machinery/cryopod/tele,
+/obj/machinery/cryopod{
+	dir = 1
+	},
 /turf/open/floor/carpet,
 /area/crew_quarters/cryopod)
 "wph" = (
@@ -78454,11 +78396,11 @@ aPz
 aaa
 aaa
 boI
-fyh
+tcw
 brJ
 boI
 brJ
-dCT
+efN
 boI
 aaa
 aaa
@@ -79499,7 +79441,7 @@ aaa
 aaa
 aaa
 aaa
-aoV
+aaf
 aaf
 aaf
 aaa
@@ -81809,7 +81751,7 @@ aaf
 aaf
 bGi
 bHz
-hys
+byE
 bKk
 bGi
 aoV
@@ -82066,7 +82008,7 @@ aaa
 aaa
 bGi
 bHy
-hys
+byE
 bKj
 bGi
 aoV
@@ -82580,7 +82522,7 @@ bxy
 bxy
 bGj
 bHA
-rOi
+bHA
 bKl
 bxy
 aaH
@@ -82837,7 +82779,7 @@ bDk
 bEK
 byE
 byE
-hys
+byE
 byE
 bGi
 aaf
@@ -83350,8 +83292,8 @@ bvI
 bAm
 bBG
 bDo
-pMz
-eoI
+byE
+byE
 bKp
 bGi
 aaf
@@ -91019,8 +90961,8 @@ atf
 dgz
 tqg
 ujF
-woR
-woR
+ujF
+ujF
 dgz
 aaa
 aJn
@@ -97687,7 +97629,7 @@ con
 con
 fyS
 eVJ
-ecM
+dqb
 veS
 ahs
 sJI
@@ -98715,7 +98657,7 @@ con
 con
 fyS
 eVJ
-llk
+wHk
 aqu
 aro
 aro
