@@ -287,4 +287,3 @@ window "statwindow"
 		anchor2 = 100,100
 		is-default = true
 		saved-params = ""
-

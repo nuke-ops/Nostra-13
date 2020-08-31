@@ -1,11 +1,12 @@
-## Sandstorm Station 13
-Based and maintained from Citadel Station 13, that is based and maintained from /tg/station.
+## [No]St[r]ation
+Based and maintained from Sandstorm.
 
-[![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
+[![Build Status](https://api.travis-ci.org/nuke-ops/Nostration-13.png)](https://travis-ci.org/nuke-ops/Nostration-13) 
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/nuke-ops/Nostration-13.svg)](http://isitmaintained.com/project/nuke-ops/Nostration-13 "Percentage of issues still open")  
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/nuke-ops/Nostration-13.svg)](http://isitmaintained.com/project/nuke-ops/Nostration-13 "Average time to resolve an issue")
+<img alt="Discord" src="https://img.shields.io/discord/667237704127479829?label=Discord">
 
-[![Build Status](https://api.travis-ci.org/SandPoot/Sandstorm-Station-13.svg?branch=master)](https://travis-ci.org/SandPoot/Sandstorm-Station-13)
-
-<img alt="GitHub forks badge" src="https://img.shields.io/github/forks/SandPoot/Sandstorm-Station-13"> <img alt="GitHub stars badge" src="https://img.shields.io/github/stars/SandPoot/Sandstorm-Station-13"> <a href="http://www.gnu.org/licenses/agpl-3.0.html"><img alt="GitHub license badge" src="https://img.shields.io/github/license/SandPoot/Sandstorm-Station-13"></a>
+[![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/pretty-risque.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com) [![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
 
 **Upstream Information**  
 * **Website:** <https://www.tgstation13.org>
@@ -17,18 +18,20 @@ Based and maintained from Citadel Station 13, that is based and maintained from 
 * ~~**IRC:** <irc://irc.rizon.net/coderbus>~~ (dead)  
 
 **Citadel Station Information**  
-
 * **Website:** <http://citadel-station.net>
 * **Code:** <https://github.com/Citadel-Station-13/Citadel-Station-13>
 * **Wiki:** <https://citadel-station.net/wiki/index.php?title=Main_Page>
 * **Forums:** <http://citadel-station.net/forum>
 * **Ban Appeals:** <http://citadel-station.net/forum/forumdisplay.php?fid=8>
-* **Discord:**  <https://discord.gg/E6SQuhz>  
+* **Discord:**  <https://discord.gg/E6SQuhz>
 
-**Sandstorm Station Information**  
-* **Code:** <https://github.com/SandPoot/Sandstorm-Station-13>
-* **Discord:**  <https://discord.gg/Jx7A7dW>
-
+**Nostration Information**  
+* **Website:** http://nukeops.asuscomm.com/ss13  
+* **Forums:** Not yet  
+* **Ban Appeals:** https://discord.com/invite/bxgeRPq
+* **Code:** https://github.com/nuke-ops/Nostration-13  
+* **Discord:**  [Here](https://discord.gg/bxgeRPq) 
+  
 ## DOWNLOADING
 
 There are a number of ways to download the source code. Some are described here, an alternative all-inclusive guide is also located at http://www.tgstation13.org/wiki/Downloading_the_source_code
