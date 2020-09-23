@@ -20,79 +20,48 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "cargo elevator"
 	has_gravity = FALSE
 
+//Old Omega
+
 /area/oldomega/HigherHall
-	requires_power = FALSE
-	power_light = FALSE
-	power_equip = FALSE
-	power_environ = FALSE
 	name = "Old station Higher Hall"
+	icon_state = "hallC"
 
 /area/oldomega/LowerHall
-	requires_power = FALSE
-	power_light = FALSE
-	power_equip = FALSE
-	power_environ = FALSE
 	name = "Old station Lower Hall"
+	icon_state = "hallC"
 
 /area/oldomega/OldAtmos
-	requires_power = FALSE
-	power_light = FALSE
-	power_equip = FALSE
-	power_environ = FALSE
 	name = "Old station Atmospherics"
+	icon_state = "atmos"
 
 /area/oldomega/OldMedbay
-	requires_power = FALSE
-	power_light = FALSE
-	power_equip = FALSE
-	power_environ = FALSE
 	name = "Old station Med Bay"
+	icon_state = "medbay"
 
 /area/oldomega/LowerMaint
-	requires_power = FALSE
-	power_light = FALSE
-	power_equip = FALSE
-	power_environ = FALSE
 	name = "Old station Lower Maintenace"
+	icon_state = "maintcentral"
 
 /area/oldomega/OldSolars
-	requires_power = FALSE
-	power_light = FALSE
-	power_equip = FALSE
-	power_environ = FALSE
 	name = "Old station Solars"
+	icon_state = "yellow"
 
 /area/oldomega/HigherMaint
-	requires_power = FALSE
-	power_light = FALSE
-	power_equip = FALSE
-	power_environ = FALSE
 	name = "Old station Higher Maintenace"
+	icon_state = "maintcentral"
 
 /area/oldomega/TransitCenter
-	requires_power = FALSE
-	power_light = FALSE
-	power_equip = FALSE
-	power_environ = FALSE
 	name = "Old station Transit Center"
+	icon_state = "blue"
 
 /area/oldomega/OldStorage
-	requires_power = FALSE
-	power_light = FALSE
-	power_equip = FALSE
-	power_environ = FALSE
 	name = "Old station Storage"
+	icon_state = "engi_storage"
 
 /area/oldomega/OldOffice
-	requires_power = FALSE
-	power_light = FALSE
-	power_equip = FALSE
-	power_environ = FALSE
 	name = "Old station Office"
+	icon_state = "blue"
 
 /area/oldomega/OldEngi
-	requires_power = FALSE
-	power_light = FALSE
-	power_equip = FALSE
-	power_environ = FALSE
 	name = "Old station Engineering"
+	icon_state = "engine_foyer"
