@@ -1,7 +1,0 @@
-/mob/key_down(_key, client/user)
-	switch(_key)
-		if("T")
-			src.set_typing_indicator(TRUE)
-		if("M")
-			src.set_typing_indicator(TRUE)
-	return ..()

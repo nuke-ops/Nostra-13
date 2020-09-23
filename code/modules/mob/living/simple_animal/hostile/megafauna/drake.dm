@@ -38,7 +38,6 @@ Difficulty: Medium
 /mob/living/simple_animal/hostile/megafauna/dragon
 	name = "ash drake"
 	desc = "Guardians of the necropolis."
-	threat = 30
 	health = 2500
 	maxHealth = 2500
 	spacewalk = TRUE
@@ -275,7 +274,7 @@ Difficulty: Medium
 
 /mob/living/simple_animal/hostile/megafauna/dragon/AltClickOn(atom/movable/A)
 	if(!istype(A))
-		altclick_listed_turf(A)
+		AltClickNoInteract(src, A)
 		return
 	if(swoop_cooldown >= world.time)
 		to_chat(src, "<span class='warning'>You need to wait 20 seconds between swoop attacks!</span>")

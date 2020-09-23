@@ -1,12 +1,3 @@
-/obj/item/toy/plush/vergashplushie
-	name = "Vergash plushie"
-	desc = "the wonders of a horned lizard with more than just horns."
-	icon = 'modular_nostration/icons/obj/plushes.dmi'
-	icon_state = "Vergash"
-	attack_verb = list("sucked")
-	gender = FEMALE
-	squeak_override = list('modular_nostration/sound/interactions/moan_f1.ogg' = 1)
-
 /obj/item/toy/plush/nekoplushie
 	name = "Shiro Neko plushie"
 	desc = "combat neko deployed."
@@ -16,6 +7,15 @@
 	gender = FEMALE
 	squeak_override = list('modular_citadel/sound/voice/nya.ogg' = 1)
 
+/obj/item/toy/plush/vergashplushie
+	name = "Vergash plushie"
+	desc = "the wonders of a horned lizard with more than just horns."
+	icon = 'modular_nostration/icons/obj/plushes.dmi'
+	icon_state = "Vergash"
+	attack_verb = list("sucked")
+	gender = FEMALE
+	squeak_override = list('sandcode/sound/interactions/moan_f1.ogg' = 1)
+
 /obj/item/toy/plush/rpgsnek
 	name = "RPGsnek plushie"
 	desc = "a snake ,just a sake."
@@ -23,14 +23,13 @@
 	icon_state = "RPGSnek"
 	attack_verb = list("Licked")
 	gender = MALE
-	squeak_override = list('modular_nostration/sound/interactions/under_moan_f2.ogg' = 1)
+	squeak_override = list('sandcode/sound/interactions/under_moan_f2.ogg' = 1)
 
-/obj/item/toy/plush/moth
-	name = "moth plushie"
-	desc = "That's not a bee..."
+/obj/item/toy/plush/mothplushie
+	name = "insect plushie"
+	desc = "An adorable stuffed toy that resembles some kind of insect."
 	icon = 'modular_nostration/icons/obj/plushes.dmi'
 	icon_state = "LampAddict"
-	attack_verb = list("stung")
 	gender = MALE
 	squeak_override = list('modular_citadel/sound/voice/scream_moth.ogg' = 1)
 
