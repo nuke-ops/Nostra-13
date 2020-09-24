@@ -25,43 +25,65 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/oldomega/HigherHall
 	name = "Old station Higher Hall"
 	icon_state = "hallC"
+	requires_power = TRUE
+	blob_allowed = FALSE
 
 /area/oldomega/LowerHall
 	name = "Old station Lower Hall"
 	icon_state = "hallC"
+	requires_power = TRUE
+	blob_allowed = FALSE
 
 /area/oldomega/OldAtmos
 	name = "Old station Atmospherics"
 	icon_state = "atmos"
+	requires_power = TRUE
+	blob_allowed = FALSE
 
 /area/oldomega/OldMedbay
 	name = "Old station Med Bay"
 	icon_state = "medbay"
+	requires_power = TRUE
+	blob_allowed = FALSE
 
 /area/oldomega/LowerMaint
 	name = "Old station Lower Maintenace"
 	icon_state = "maintcentral"
+	requires_power = TRUE
+	blob_allowed = FALSE
 
 /area/oldomega/OldSolars
 	name = "Old station Solars"
 	icon_state = "yellow"
+	requires_power = TRUE
+	blob_allowed = FALSE
 
 /area/oldomega/HigherMaint
 	name = "Old station Higher Maintenace"
 	icon_state = "maintcentral"
+	requires_power = TRUE
+	blob_allowed = FALSE
 
 /area/oldomega/TransitCenter
 	name = "Old station Transit Center"
 	icon_state = "blue"
+	requires_power = TRUE
+	blob_allowed = FALSE
 
 /area/oldomega/OldStorage
 	name = "Old station Storage"
 	icon_state = "engi_storage"
+	requires_power = TRUE
+	blob_allowed = FALSE
 
 /area/oldomega/OldOffice
 	name = "Old station Office"
 	icon_state = "blue"
+	requires_power = TRUE
+	blob_allowed = FALSE
 
 /area/oldomega/OldEngi
 	name = "Old station Engineering"
 	icon_state = "engine_foyer"
+	requires_power = TRUE
+	blob_allowed = FALSE
