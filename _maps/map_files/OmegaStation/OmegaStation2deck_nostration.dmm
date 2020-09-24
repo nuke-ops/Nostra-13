@@ -1768,12 +1768,12 @@
 /turf/open/transparent/openspace,
 /area/maintenance/disposal)
 "iK" = (
-/obj/structure/barricade/wooden,
 /obj/machinery/door/airlock/external{
 	name = "External Airlock";
 	req_access_txt = "13"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/wooden,
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
 "iM" = (
@@ -10158,11 +10158,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
-"VZ" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/lattice/catwalk,
-/turf/open/floor/plating/asteroid/airless,
-/area/space/nearstation)
 "Wd" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/cable/white{
@@ -10922,19 +10917,6 @@
 	icon_state = "platingdmg3"
 	},
 /area/oldomega/OldSolars)
-"Zn" = (
-/obj/item/stack/marker_beacon{
-	anchored = 1;
-	icon_state = "markerburgundy-on";
-	light_power = 3;
-	light_range = 3;
-	name = "Docking Beacon";
-	picked_color = "Burgundy"
-	},
-/obj/structure/lattice/catwalk,
-/obj/structure/lattice/catwalk,
-/turf/open/floor/plating/asteroid/airless,
-/area/space/nearstation)
 "Zp" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -37385,10 +37367,10 @@ OR
 OR
 TS
 TS
-CY
+PU
 HD
-CY
-Wi
+PU
+TS
 TS
 TS
 TS
@@ -49730,11 +49712,11 @@ PU
 PU
 fy
 WG
-Zn
+fy
 PU
 PU
 PU
-Zn
+fy
 OR
 OR
 OR
@@ -57179,7 +57161,7 @@ TS
 Wo
 PU
 PU
-VZ
+PU
 TS
 OR
 OR
@@ -57436,10 +57418,10 @@ TS
 Wo
 TS
 OR
-VZ
 PU
 PU
-VZ
+PU
+PU
 TS
 Kh
 OR
