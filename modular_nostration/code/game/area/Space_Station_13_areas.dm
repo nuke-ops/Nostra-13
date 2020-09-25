@@ -26,64 +26,53 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Old station Higher Hall"
 	icon_state = "hallC"
 	blob_allowed = FALSE
-	requires_power = FALSE
 
 /area/ruin/space/has_grav/oldomega/LowerHall
 	name = "Old station Lower Hall"
 	icon_state = "hallC"
 	blob_allowed = FALSE
-	requires_power = FALSE
 
 /area/ruin/space/has_grav/oldomega/OldAtmos
 	name = "Old station Atmospherics"
 	icon_state = "atmos"
 	blob_allowed = FALSE
-	requires_power = FALSE
 
 /area/ruin/space/has_grav/oldomega/OldMedbay
 	name = "Old station Med Bay"
 	icon_state = "medbay"
 	blob_allowed = FALSE
-	requires_power = FALSE
 
 /area/ruin/space/has_grav/oldomega/LowerMaint
 	name = "Old station Lower Maintenace"
 	icon_state = "maintcentral"
 	blob_allowed = FALSE
-	requires_power = FALSE
 
 /area/ruin/space/has_grav/oldomega/OldSolars
 	name = "Old station Solars"
 	icon_state = "yellow"
 	blob_allowed = FALSE
-	requires_power = FALSE
 
 /area/ruin/space/has_grav/oldomega/HigherMaint
 	name = "Old station Higher Maintenace"
 	icon_state = "maintcentral"
 	blob_allowed = FALSE
-	requires_power = FALSE
 
 /area/ruin/space/has_grav/oldomega/TransitCenter
 	name = "Old station Transit Center"
 	icon_state = "blue"
 	blob_allowed = FALSE
-	requires_power = FALSE
 
 /area/ruin/space/has_grav/oldomega/OldStorage
 	name = "Old station Storage"
 	icon_state = "engi_storage"
 	blob_allowed = FALSE
-	requires_power = FALSE
 
 /area/ruin/space/has_grav/oldomega/OldOffice
 	name = "Old station Office"
 	icon_state = "blue"
 	blob_allowed = FALSE
-	requires_power = FALSE
 
 /area/ruin/space/has_grav/oldomega/OldEngi
 	name = "Old station Engineering"
 	icon_state = "engine_foyer"
 	blob_allowed = FALSE
-	requires_power = FALSE

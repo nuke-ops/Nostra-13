@@ -2359,6 +2359,7 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+/obj/item/circuitboard/computer/solar_control,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/oldomega/OldSolars)
 "ls" = (
@@ -3459,6 +3460,7 @@
 	pixel_y = -27;
 	start_charge = 0
 	},
+/obj/item/stack/cable_coil/red,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/oldomega/OldSolars)
 "qw" = (
@@ -4253,10 +4255,6 @@
 /turf/open/space/basic,
 /area/maintenance/solars/port/aft)
 "uh" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "cargoload"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -4930,10 +4928,6 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "cargounload"
-	},
 /obj/structure/railing/corner{
 	dir = 8
 	},
@@ -4943,6 +4937,10 @@
 /obj/effect/turf_decal/caution{
 	dir = 4;
 	icon_state = "caution"
+	},
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "cargounload"
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
@@ -6887,6 +6885,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/stack/sheet/glass/fifty,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/oldomega/OldEngi)
 "Gj" = (
@@ -8843,11 +8842,8 @@
 /area/crew_quarters/fitness/recreation)
 "OY" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/apc{
-	pixel_y = 27;
-	start_charge = 0
-	},
-/turf/open/floor/plating,
+/obj/item/kirbyplants/photosynthetic,
+/turf/open/floor/plasteel,
 /area/ruin/space/has_grav/oldomega/HigherHall)
 "OZ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -9205,6 +9201,20 @@
 	icon_state = "carpetsymbol"
 	},
 /area/maintenance/port/fore)
+"QN" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/tile/brown{
+	dir = 8
+	},
+/obj/structure/railing,
+/obj/structure/sign/warning/nosmoking{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel,
+/area/quartermaster/storage)
 "QP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/small{
@@ -25242,7 +25252,7 @@ Vh
 Vh
 Vh
 Vh
-OY
+nh
 ln
 dJ
 dJ
@@ -27813,7 +27823,7 @@ TS
 TS
 OR
 Vh
-IG
+OY
 nh
 Ix
 ZJ
@@ -59406,7 +59416,7 @@ Qr
 Kn
 oM
 Ha
-uv
+QN
 qn
 Yz
 Yz

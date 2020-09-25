@@ -5106,10 +5106,6 @@
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/hop)
 "aie" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "cargounload"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -5118,6 +5114,10 @@
 	dir = 4
 	},
 /obj/structure/plasticflaps,
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "cargoload"
+	},
 /turf/open/floor/plating,
 /area/quartermaster/storage)
 "aif" = (
@@ -5423,12 +5423,12 @@
 	},
 /area/maintenance/fore)
 "aiM" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "cargounload"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/stripes/end,
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "cargoload"
+	},
 /turf/open/floor/plating,
 /area/quartermaster/storage)
 "aiN" = (
@@ -8976,9 +8976,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/conveyor_switch/oneway{
-	id = "cargounload"
-	},
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
@@ -8988,6 +8985,9 @@
 	},
 /obj/structure/disposalpipe/junction/flip{
 	dir = 1
+	},
+/obj/machinery/conveyor_switch/oneway{
+	id = "cargoload"
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
@@ -37736,6 +37736,7 @@
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/machinery/door/firedoor,
 /turf/open/floor/plasteel{
 	heat_capacity = 1e+006
 	},
@@ -44952,10 +44953,6 @@
 /turf/open/floor/plasteel,
 /area/engine/atmos)
 "nHB" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "cargounload"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -44968,6 +44965,10 @@
 	},
 /obj/structure/railing/corner{
 	dir = 4
+	},
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "cargoload"
 	},
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/storage)
@@ -45257,6 +45258,13 @@
 /obj/item/kirbyplants,
 /turf/open/floor/plasteel/dark,
 /area/quartermaster/storage)
+"oDB" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel,
+/area/hallway/primary/aft)
 "oGc" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 6
@@ -45992,6 +46000,17 @@
 "rfI" = (
 /turf/open/floor/plating,
 /area/quartermaster/storage)
+"rfM" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel,
+/area/hallway/primary/aft)
 "rjQ" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
 /turf/open/floor/plasteel,
@@ -46094,6 +46113,10 @@
 	heat_capacity = 1e+006
 	},
 /area/hallway/primary/port/aft)
+"rOa" = (
+/obj/machinery/door/firedoor,
+/turf/open/floor/plasteel,
+/area/hallway/primary/aft)
 "rTz" = (
 /turf/closed/wall,
 /area/science/explab)
@@ -91864,9 +91887,9 @@ bjo
 bjo
 bjo
 tWh
-qme
-bys
-aYc
+oDB
+rOa
+rfM
 bls
 tWh
 baJ
