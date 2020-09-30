@@ -151,11 +151,13 @@
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
 "aL" = (
-/obj/machinery/shower{
-	dir = 4;
-	name = "emergency shower"
+/obj/structure/chair/sofa/corp{
+	dir = 1;
+	icon_state = "corp_sofamiddle"
 	},
-/turf/open/floor/plating,
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/light,
+/turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "aN" = (
 /obj/machinery/door/firedoor,
@@ -1187,6 +1189,9 @@
 	},
 /obj/effect/turf_decal/tile/red{
 	dir = 4
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/open/floor/plasteel,
 /area/security/checkpoint/auxiliary)
@@ -2338,16 +2343,10 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/oldomega/HigherHall)
 "lp" = (
-/obj/docking_port/stationary{
-	dir = 2;
-	dwidth = 11;
-	height = 22;
-	id = "whiteship_home";
-	name = "SS13: Auxiliary Dock, Station-Port";
-	width = 35
-	},
-/turf/open/space/basic,
-/area/space)
+/obj/effect/turf_decal/delivery,
+/obj/machinery/light/small,
+/turf/open/floor/plasteel,
+/area/hallway/secondary/entry)
 "lq" = (
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
@@ -2640,11 +2639,11 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "mw" = (
-/obj/machinery/shower{
-	dir = 8;
-	name = "emergency shower"
+/obj/effect/turf_decal/delivery,
+/obj/machinery/light/small{
+	dir = 1
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "mx" = (
 /obj/machinery/light,
@@ -2948,6 +2947,9 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
 "nV" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
 "nY" = (
@@ -5518,6 +5520,9 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "Ae" = (
@@ -5778,6 +5783,9 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
@@ -6485,6 +6493,15 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
+"Ep" = (
+/obj/machinery/door/airlock/external{
+	name = "External Docking Port"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/hallway/secondary/entry)
 "Eq" = (
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
@@ -6709,6 +6726,7 @@
 	dir = 4;
 	icon_state = "corp_sofaend_right"
 	},
+/obj/machinery/light,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "Fw" = (
@@ -7109,6 +7127,7 @@
 	dir = 8;
 	icon_state = "corp_sofaend_left"
 	},
+/obj/machinery/light,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "Hn" = (
@@ -7778,7 +7797,7 @@
 "Ki" = (
 /obj/item/shard,
 /obj/effect/decal/cleanable/glass,
-/turf/open/space/basic,
+/turf/open/transparent/openspace,
 /area/asteroid/nearstation)
 "Kl" = (
 /obj/structure/window/spawner/east,
@@ -8299,7 +8318,7 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
 "MJ" = (
-/turf/open/space/basic,
+/turf/open/transparent/openspace,
 /area/asteroid/nearstation)
 "MK" = (
 /turf/closed/wall,
@@ -8484,6 +8503,9 @@
 "Nu" = (
 /obj/structure/railing,
 /obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/machinery/light{
 	dir = 1
 	},
 /turf/open/floor/plasteel,
@@ -9628,7 +9650,7 @@
 "SD" = (
 /obj/item/stack/ore/glass,
 /obj/effect/decal/cleanable/glass,
-/turf/open/space/basic,
+/turf/open/transparent/openspace,
 /area/asteroid/nearstation)
 "SE" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -9757,14 +9779,16 @@
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
 "Td" = (
-/obj/machinery/door/airlock/external{
-	name = "External Docking Port"
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 11;
+	height = 22;
+	id = "whiteship_home";
+	name = "SS13: Auxiliary Dock, Station-Port";
+	width = 35
 	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 1
-	},
-/turf/open/floor/plating,
-/area/hallway/secondary/entry)
+/turf/open/space/basic,
+/area/space)
 "Tf" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/turf_decal/stripes/line{
@@ -10498,10 +10522,6 @@
 "WJ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 9
-	},
-/obj/machinery/light{
-	dir = 1;
-	light_color = "#e8eaff"
 	},
 /obj/structure/railing,
 /obj/effect/turf_decal/stripes/line{
@@ -49982,21 +50002,21 @@ Mv
 vm
 vm
 Jr
-Xj
+lp
 Jr
 hy
 EA
 vY
 Aw
 Jr
-Xj
+mw
 Jr
 vm
 vm
 vm
 vm
 vm
-vm
+HG
 HG
 HG
 HG
@@ -50251,10 +50271,10 @@ Jr
 Tb
 Yi
 Jr
-Xl
-Xl
-Xl
-Xl
+Jr
+vm
+vm
+HG
 HG
 HG
 HG
@@ -50508,10 +50528,10 @@ rs
 rs
 Bu
 Xj
-Xl
-nV
-aL
-Xl
+Jr
+Jr
+Jr
+HG
 HG
 HG
 HG
@@ -50767,9 +50787,9 @@ Ro
 Xj
 uy
 nV
-nV
+Ep
 Td
-lp
+HG
 HG
 HG
 HG
@@ -51022,10 +51042,10 @@ BX
 pD
 Fn
 Xj
-Xl
-nV
-mw
-Xl
+Jr
+Jr
+Jr
+HG
 HG
 HG
 HG
@@ -51262,7 +51282,7 @@ sn
 Xg
 ZO
 ZO
-mx
+Tu
 Xl
 Xl
 Tb
@@ -51279,10 +51299,10 @@ Jr
 Dx
 Uv
 Jr
-Xl
-Xl
-Xl
-Xl
+Jr
+vm
+vm
+HG
 HG
 HG
 HG
@@ -51524,21 +51544,21 @@ Mv
 vm
 vm
 Jr
-Xj
+lp
 Jr
 Rw
 zT
 Oo
 LR
 Jr
-Xj
+mw
 Jr
 vm
 vm
 vm
 vm
 vm
-vm
+HG
 HG
 HG
 HG
@@ -51776,7 +51796,7 @@ Sr
 vI
 mG
 Rj
-tr
+aL
 Xl
 HG
 HG
