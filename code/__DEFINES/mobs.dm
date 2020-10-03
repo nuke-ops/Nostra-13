@@ -280,6 +280,12 @@
 #define OFFSET_HAIR "hair"
 #define OFFSET_FHAIR "fhair"
 #define OFFSET_MUTPARTS "mutantparts"
+//skyrat edit
+#define OFFSET_UNDERWEAR "underwear"
+#define	OFFSET_SOCKS "socks"
+#define OFFSET_SHIRT "shirt"
+#define OFFSET_WRISTS "wrist"
+//
 
 //MINOR TWEAKS/MISC
 #define AGE_MIN				18	//youngest a character can be //CITADEL EDIT - 17 --> 18
@@ -312,7 +318,7 @@
 
 #define HUMAN_FIRE_STACK_ICON_NUM	3
 
-#define TYPING_INDICATOR_TIMEOUT 5 MINUTES
+#define TYPING_INDICATOR_TIMEOUT 20 MINUTES
 
 #define GRAB_PIXEL_SHIFT_PASSIVE 6
 #define GRAB_PIXEL_SHIFT_AGGRESSIVE 12

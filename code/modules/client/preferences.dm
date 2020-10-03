@@ -8,6 +8,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/client/parent
 	//doohickeys for savefiles
 	var/path
+	var/vr_path
 	var/default_slot = 1				//Holder so it doesn't default to slot 1, rather the last one used
 	var/max_save_slots = 16
 
@@ -93,6 +94,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/see_chat_emotes = TRUE
 	var/enable_personal_chat_color = FALSE
 	var/personal_chat_color = "#ffffff"
+	var/list/color_gear = list()
 	//SKYRAT CHANGES END
 	var/underwear = "Nude"				//underwear type
 	var/undie_color = "FFFFFF"
@@ -108,7 +110,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/facial_hair_color = "000000"		//Facial hair color
 	var/skin_tone = "caucasian1"		//Skin color
 	var/use_custom_skin_tone = FALSE
-	var/eye_color = "000000"				//Eye color
+	var/left_eye_color = "000000"		//Eye color
+	var/right_eye_color = "000000"
+	var/split_eye_colors = FALSE
 	var/datum/species/pref_species = new /datum/species/human()	//Mutant race
 	var/list/features = list("mcolor" = "FFFFFF",
 		"mcolor2" = "FFFFFF",
@@ -503,17 +507,20 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<b>Sprite Size:</b> <a href='?_src_=prefs;preference=body_size;task=input'>[features["body_size"]*100]%</a><br>"
 
 			if((EYECOLOR in pref_species.species_traits) && !(NOEYES in pref_species.species_traits))
-
 				if(!use_skintones && !mutant_colors)
 					dat += APPEARANCE_CATEGORY_COLUMN
-
-				dat += "<h3>Eye Color</h3>"
-
-				dat += "<span style='border: 1px solid #161616; background-color: #[eye_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=eyes;task=input'>Change</a><BR>"
-
-			/*	dat += "</td>"
-			else if(use_skintones || mutant_colors)
-				dat += "</td>" */ //sandstorm change, speech and body colors stay together
+				if(left_eye_color != right_eye_color)
+					split_eye_colors = TRUE
+				dat += "<h3>Heterochromia</h3>"
+				dat += "</b><a style='display:block;width:100px' href='?_src_=prefs;preference=toggle_split_eyes;task=input'>[split_eye_colors ? "Enabled" : "Disabled"]</a>"
+				if(!split_eye_colors)
+					dat += "<h3>Eye Color</h3>"
+					dat += "<span style='border: 1px solid #161616; background-color: #[left_eye_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=eyes;task=input'>Change</a>"
+				else
+					dat += "<h3>Left Eye Color</h3>"
+					dat += "<span style='border: 1px solid #161616; background-color: #[left_eye_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=eye_left;task=input'>Change</a>"
+					dat += "<h3>Right Eye Color</h3>"
+					dat += "<span style='border: 1px solid #161616; background-color: #[right_eye_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=eye_right;task=input'>Change</a><BR>"
 
 			dat += "<h2>Speech preferences</h2>"
 			dat += "<b>Custom Speech Verb:</b><BR>"
@@ -522,6 +529,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "</b><a style='display:block;width:100px' href='?_src_=prefs;preference=tongue;task=input'>[custom_tongue]</a><BR>"
 			//SKYRAT EDIT
 			dat += "<b>Custom runechat color:</b> <a href='?_src_=prefs;preference=enable_personal_chat_color'>[enable_personal_chat_color ? "Enabled" : "Disabled"]</a><br> [enable_personal_chat_color ? "<span style='border: 1px solid #161616; background-color: [personal_chat_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=personal_chat_color;task=input'>Change</a>" : ""]<br>"
+			dat += "</td>"
 			//END OF SKYRAT EDIT	
 
 			if(HAIR in pref_species.species_traits)
@@ -568,7 +576,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			if(length(pref_species.allowed_limb_ids))
 				if(!chosen_limb_id || !(chosen_limb_id in pref_species.allowed_limb_ids))
-					chosen_limb_id = pref_species.id
+					chosen_limb_id = pref_species.limbs_id || pref_species.id
 				dat += "<h3>Body sprite</h3>"
 				dat += "<a style='display:block;width:100px' href='?_src_=prefs;preference=bodysprite;task=input'>[chosen_limb_id]</a>"
 
@@ -581,6 +589,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "</td>"
 			dat += "<table><tr><td width='340px' height='300px' valign='top'>"
 			dat += "<h2>Clothing & Equipment</h2>"
+			/* skyrat change
 			dat += "<b>Underwear:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=underwear;task=input'>[underwear]</a>"
 			if(GLOB.underwear_list[underwear]?.has_color)
 				dat += "<b>Underwear Color:</b> <span style='border:1px solid #161616; background-color: #[undie_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=undie_color;task=input'>Change</a><BR>"
@@ -590,6 +599,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<b>Socks:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=socks;task=input'>[socks]</a>"
 			if(GLOB.socks_list[socks]?.has_color)
 				dat += "<b>Socks Color:</b> <span style='border:1px solid #161616; background-color: #[socks_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=socks_color;task=input'>Change</a><BR>"
+			*/
 			dat += "<b>Backpack:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=bag;task=input'>[backbag]</a>"
 			dat += "<b>Jumpsuit:</b><BR><a href ='?_src_=prefs;preference=suit;task=input'>[jumpsuit_style]</a><BR>"
 			if((HAS_FLESH in pref_species.species_traits) || (HAS_BONE in pref_species.species_traits))
@@ -890,7 +900,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							class_link = "style='white-space:normal;background:#ebc42e;' href='?_src_=prefs;preference=gear;toggle_gear_path=[html_encode(name)];toggle_gear=1'"
 						else
 							class_link = "style='white-space:normal;' href='?_src_=prefs;preference=gear;toggle_gear_path=[html_encode(name)];toggle_gear=1'"
-						dat += "<tr style='vertical-align:top;'><td width=15%><a [class_link]>[name]</a></td>"
+						//skyrat edit
+						if(gear.has_colors && (gear.name in color_gear))
+							var/colore = "<a href='?_src_=prefs;preference=gear;toggle_gear_path=[html_encode(name)];toggle_gear=color'>Color</a><span style='border: 1px solid #161616; background-color: [color_gear[gear.name]];'>&nbsp;&nbsp;&nbsp;</span>"
+							dat += "<tr style='vertical-align:top;'><td width=15%><a [class_link]>[name]</a>[colore]</td>"
+						else
+							dat += "<tr style='vertical-align:top;'><td width=15%><a [class_link]>[name]</a></td>"
+						//
 						dat += "<td width = 5% style='vertical-align:top'>[gear.cost]</td><td>"
 						if(islist(gear.restricted_roles))
 							if(gear.restricted_roles.len)
@@ -1470,6 +1486,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					facial_hair_color = random_short_color()
 				if("facial_hair_style")
 					facial_hair_style = random_facial_hair_style(gender)
+				/*
 				if("underwear")
 					underwear = random_underwear(gender)
 					undie_color = random_short_color()
@@ -1479,8 +1496,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if("socks")
 					socks = random_socks()
 					socks_color = random_short_color()
+				*/
 				if(BODY_ZONE_PRECISE_EYES)
-					eye_color = random_eye_color()
+					var/random_eye_color = random_eye_color()
+					left_eye_color = random_eye_color
+					right_eye_color = random_eye_color
 				if("s_tone")
 					skin_tone = random_skin_tone()
 					use_custom_skin_tone = null
@@ -1640,6 +1660,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 								else
 									modified_limbs[limb_type] = list(modification_type)
 
+				/*
 				if("underwear")
 					var/new_underwear = input(user, "Choose your character's underwear:", "Character Preference")  as null|anything in GLOB.underwear_list
 					if(new_underwear)
@@ -1669,11 +1690,27 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					var/n_socks_color = input(user, "Choose your socks' color.", "Character Preference", "#[socks_color]") as color|null
 					if(n_socks_color)
 						socks_color = sanitize_hexcolor(n_socks_color, 6)
+				*/
 
 				if("eyes")
-					var/new_eyes = input(user, "Choose your character's eye colour:", "Character Preference","#"+eye_color) as color|null
+					var/new_eyes = input(user, "Choose your character's eye colour:", "Character Preference","#"+left_eye_color) as color|null
 					if(new_eyes)
-						eye_color = sanitize_hexcolor(new_eyes, 6)
+						left_eye_color = sanitize_hexcolor(new_eyes, 6)
+						right_eye_color = sanitize_hexcolor(new_eyes, 6)
+
+				if("eye_left")
+					var/new_eyes = input(user, "Choose your character's left eye colour:", "Character Preference","#"+left_eye_color) as color|null
+					if(new_eyes)
+						left_eye_color = sanitize_hexcolor(new_eyes, 6)
+
+				if("eye_right")
+					var/new_eyes = input(user, "Choose your character's right eye colour:", "Character Preference","#"+right_eye_color) as color|null
+					if(new_eyes)
+						right_eye_color = sanitize_hexcolor(new_eyes, 6)
+
+				if("toggle_split_eyes")
+					split_eye_colors = !split_eye_colors
+					right_eye_color = left_eye_color
 
 				if("species")
 					var/result = input(user, "Select a species", "Species Selection") as null|anything in GLOB.roundstart_race_names
@@ -2682,20 +2719,32 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			var/datum/gear/G = GLOB.loadout_items[gear_category][gear_subcategory][name]
 			if(!G)
 				return
-			var/toggle = text2num(href_list["toggle_gear"])
-			if(!toggle && (G.type in chosen_gear))//toggling off and the item effectively is in chosen gear)
-				chosen_gear -= G.type
-				gear_points += initial(G.cost)
-			else if(toggle && (!(is_type_in_ref_list(G, chosen_gear))))
-				if(!is_loadout_slot_available(G.category))
-					to_chat(user, "<span class='danger'>You cannot take this loadout, as you've already chosen too many of the same category!</span>")
-					return
-				if(G.donoritem && !G.donator_ckey_check(user.ckey))
-					to_chat(user, "<span class='danger'>This is an item intended for donator use only. You are not authorized to use this item.</span>")
-					return
-				if(gear_points >= initial(G.cost))
-					chosen_gear += G.type
-					gear_points -= initial(G.cost)
+			//skyrat edit
+			if(href_list["toggle_gear"] != "color")
+				var/toggle = text2num(href_list["toggle_gear"])
+				if(!toggle && (G.type in chosen_gear))//toggling off and the item effectively is in chosen gear)
+					chosen_gear -= G.type
+					gear_points += initial(G.cost)
+				else if(toggle && (!(is_type_in_ref_list(G, chosen_gear))))
+					if(!is_loadout_slot_available(G.category))
+						to_chat(user, "<span class='danger'>You cannot take this loadout, as you've already chosen too many of the same category!</span>")
+						return
+					if(G.donoritem && !G.donator_ckey_check(user.ckey))
+						to_chat(user, "<span class='danger'>This is an item intended for donator use only. You are not authorized to use this item.</span>")
+						return
+					if(gear_points >= initial(G.cost))
+						chosen_gear += G.type
+						if(!color_gear)
+							color_gear = list()
+						color_gear |= list(G.name = G.color)
+						gear_points -= initial(G.cost)
+			else
+				var/choice = input(user, "Select a color for [G.name].", "Gear Color") as color
+				if(choice)
+					if(!color_gear)
+						color_gear = list()
+					color_gear[G.name] = choice
+			//
 
 	ShowChoices(user)
 	return 1
@@ -2724,18 +2773,22 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.gender = gender
 	character.age = age
 
-	character.eye_color = eye_color
+	character.left_eye_color = left_eye_color
+	character.right_eye_color = right_eye_color
 	var/obj/item/organ/eyes/organ_eyes = character.getorgan(/obj/item/organ/eyes)
 	if(organ_eyes)
-		if(!initial(organ_eyes.eye_color))
-			organ_eyes.eye_color = eye_color
-		organ_eyes.old_eye_color = eye_color
+		if(!initial(organ_eyes.left_eye_color))
+			organ_eyes.left_eye_color = left_eye_color
+			organ_eyes.right_eye_color = right_eye_color
+		organ_eyes.old_left_eye_color = left_eye_color
+		organ_eyes.old_right_eye_color = right_eye_color
 	character.hair_color = hair_color
 	character.facial_hair_color = facial_hair_color
 	character.skin_tone = skin_tone
 	character.dna.skin_tone_override = use_custom_skin_tone ? skin_tone : null
 	character.hair_style = hair_style
 	character.facial_hair_style = facial_hair_style
+	/* skyrat edit
 	character.underwear = underwear
 
 	character.saved_underwear = underwear
@@ -2743,6 +2796,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	character.saved_undershirt = undershirt
 	character.socks = socks
 	character.saved_socks = socks
+	*/
 	character.undie_color = undie_color
 	character.shirt_color = shirt_color
 	character.socks_color = socks_color
