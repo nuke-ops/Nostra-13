@@ -513,7 +513,6 @@ mob/visible_message(message, self_message, blind_message, vision_distance = DEFA
 				client.prefs.chat_toggles ^= CHAT_OOC
 			if (!(client.prefs.chat_toggles & CHAT_OOC) && isdead(new_mob))
 				client.prefs.chat_toggles ^= CHAT_OOC
-		client.change_view(CONFIG_GET(string/default_view))
 	new_mob.ckey = ckey
 	if(send_signal)
 		SEND_SIGNAL(src, COMSIG_MOB_KEY_CHANGE, new_mob, src)
@@ -937,7 +936,9 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 	if (!client)
 		return
 	client.mouse_pointer_icon = initial(client.mouse_pointer_icon)
-	if (ismecha(loc))
+	if(examine_cursor_icon && client.keys_held["Shift"]) //mouse shit is hardcoded, make this non hard-coded once we make mouse modifiers bindable
+		client.mouse_pointer_icon = examine_cursor_icon
+	else if (ismecha(loc))
 		var/obj/mecha/M = loc
 		if(M.mouse_pointer)
 			client.mouse_pointer_icon = M.mouse_pointer
