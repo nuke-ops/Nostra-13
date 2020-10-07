@@ -40,10 +40,6 @@
 		to_chat(user, "<span class='notice'>You [anchored ? "fasten the railing to":"unfasten the railing from"] the floor.</span>")
 	return TRUE
 
-/obj/structure/railing/proc/check_anchored(checked_anchored)
-	if(anchored == checked_anchored)
-		return TRUE
-
 /obj/structure/railing/CanPass(atom/movable/mover, turf/target)
 	..()
 	if(get_dir(loc, target) & dir)
