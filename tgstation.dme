@@ -3643,7 +3643,6 @@
 #include "modular_nostration\code\datums\shuttles.dm"
 #include "modular_nostration\code\game\area\Space_Station_13_areas.dm"
 #include "modular_nostration\code\game\objects\items\plushes.dm"
-#include "modular_nostration\code\game\objects\structures\railings.dm"
 #include "modular_nostration\code\game\turfs\openspace\openspace.dm"
 #include "modular_nostration\code\game\turfs\simulated\hull.dm"
 #include "modular_nostration\code\modules\cargo\console.dm"
