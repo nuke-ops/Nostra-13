@@ -39,6 +39,7 @@
 	. = ..()
 	update_config_movespeed()
 	update_movespeed(TRUE)
+	initialize_actionspeed()
 	hook_vr("mob_new",list(src))
 
 /mob/GenerateTag()
@@ -507,11 +508,12 @@ mob/visible_message(message, self_message, blind_message, vision_distance = DEFA
 	if(!ckey)
 		return
 	SEND_SIGNAL(new_mob, COMSIG_MOB_PRE_PLAYER_CHANGE, new_mob, src)
-	if (client && client.prefs && client.prefs.auto_ooc)
-		if (client.prefs.chat_toggles & CHAT_OOC && isliving(new_mob))
-			client.prefs.chat_toggles ^= CHAT_OOC
-		if (!(client.prefs.chat_toggles & CHAT_OOC) && isdead(new_mob))
-			client.prefs.chat_toggles ^= CHAT_OOC
+	if (client)
+		if(client.prefs?.auto_ooc)
+			if (client.prefs.chat_toggles & CHAT_OOC && isliving(new_mob))
+				client.prefs.chat_toggles ^= CHAT_OOC
+			if (!(client.prefs.chat_toggles & CHAT_OOC) && isdead(new_mob))
+				client.prefs.chat_toggles ^= CHAT_OOC
 	new_mob.ckey = ckey
 	if(send_signal)
 		SEND_SIGNAL(src, COMSIG_MOB_KEY_CHANGE, new_mob, src)
@@ -935,7 +937,15 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 	if (!client)
 		return
 	client.mouse_pointer_icon = initial(client.mouse_pointer_icon)
-	if (ismecha(loc))
+	if(pull_cursor_icon && client.keys_held["Ctrl"])
+		client.mouse_pointer_icon = pull_cursor_icon
+	else if(throw_cursor_icon && in_throw_mode != 0)
+		client.mouse_pointer_icon = throw_cursor_icon
+	else if(combat_cursor_icon && SEND_SIGNAL(usr, COMSIG_COMBAT_MODE_CHECK, COMBAT_MODE_ACTIVE))
+		client.mouse_pointer_icon = combat_cursor_icon
+	else if(examine_cursor_icon && client.keys_held["Shift"]) //mouse shit is hardcoded, make this non hard-coded once we make mouse modifiers bindable
+		client.mouse_pointer_icon = examine_cursor_icon
+	else if (ismecha(loc))
 		var/obj/mecha/M = loc
 		if(M.mouse_pointer)
 			client.mouse_pointer_icon = M.mouse_pointer

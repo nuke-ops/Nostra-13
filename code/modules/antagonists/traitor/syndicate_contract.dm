@@ -68,7 +68,7 @@
 	empty_pod.explosionSize = list(0,0,0,1)
 	empty_pod.leavingSound = 'sound/effects/podwoosh.ogg'
 
-	new /obj/effect/abstract/DPtarget(empty_pod_turf, empty_pod)
+	new /obj/effect/pod_landingzone(empty_pod_turf, empty_pod)
 
 /datum/syndicate_contract/proc/enter_check(datum/source, sent_mob)
 	if(istype(source, /obj/structure/closet/supplypod/extractionpod))
@@ -99,19 +99,15 @@
 				for(var/obj/item/W in M)
 					if(ishuman(M))
 						var/mob/living/carbon/human/H = M
-						if(W == H.w_uniform)
+						if(W == H.w_uniform || W == H.shoes || W == H.w_underwear || W == H.w_socks || W == H.w_shirt) //skyrat edit
 							continue //So all they're left with are shoes and uniform.
-						if(W == H.shoes)
-							continue
-
-
 					M.transferItemToLoc(W)
 					victim_belongings.Add(W)
 
 			var/obj/structure/closet/supplypod/extractionpod/pod = source
 
 			// Handle the pod returning
-			pod.send_up(pod)
+			pod.startExitSequence(pod)
 
 			if(ishuman(M))
 				var/mob/living/carbon/human/target = M
@@ -190,10 +186,8 @@
 		for(var/obj/item/W in M)
 			if(ishuman(M))
 				var/mob/living/carbon/human/H = M
-				if(W == H.w_uniform)
+				if(W == H.w_uniform || W == H.shoes || W == H.w_underwear || W == H.w_socks || W == H.w_shirt) //skyrat edit
 					continue //So all they're left with are shoes and uniform.
-				if(W == H.shoes)
-					continue
 			M.dropItemToGround(W)
 		for(var/obj/item/W in victim_belongings)
 			W.forceMove(return_pod)
@@ -202,7 +196,7 @@
 		M.blur_eyes(30)
 		M.Dizzy(35)
 		M.confused += 20
-		new /obj/effect/abstract/DPtarget(possible_drop_loc[pod_rand_loc], return_pod)
+		new /obj/effect/pod_landingzone(possible_drop_loc[pod_rand_loc], return_pod)
 	else
 		to_chat(M, "<span class='reallybig hypnophrase'>A million voices echo in your head... <i>\"Seems where you got sent here from won't \
 					be able to handle our pod... You will die here instead.\"</i></span>")

@@ -1,6 +1,7 @@
 // Clients aren't datums so we have to define these procs indpendently.
 // These verbs are called for all key press and release events
 /client/verb/keyDown(_key as text)
+	SHOULD_NOT_SLEEP(TRUE)
 	set instant = TRUE
 	set hidden = TRUE
 
@@ -72,6 +73,7 @@
 
 	holder?.key_down(_key, src)
 	mob.focus?.key_down(_key, src)
+	mob.update_mouse_pointer()
 
 /// Keyup's all keys held down.
 /client/proc/ForceAllKeysUp()
@@ -83,6 +85,7 @@
 		keyUp("[key]")
 
 /client/verb/keyUp(_key as text)
+	SHOULD_NOT_SLEEP(TRUE)
 	set instant = TRUE
 	set hidden = TRUE
 
@@ -104,6 +107,7 @@
 			break
 	holder?.key_up(_key, src)
 	mob.focus?.key_up(_key, src)
+	mob.update_mouse_pointer()
 
 // Called every game tick
 /client/keyLoop()
