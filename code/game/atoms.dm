@@ -300,7 +300,7 @@
 /atom/proc/emp_act(severity)
 	var/protection = SEND_SIGNAL(src, COMSIG_ATOM_EMP_ACT, severity)
 	if(!(protection & EMP_PROTECT_WIRES) && istype(wires))
-		wires.emp_pulse()
+		wires.emp_pulse(severity)
 	return protection // Pass the protection value collected here upwards
 
 /atom/proc/bullet_act(obj/item/projectile/P, def_zone)
@@ -576,6 +576,20 @@
 	else if(w_uniform)
 		w_uniform.add_blood_DNA(blood_dna, diseases)
 		update_inv_w_uniform()
+	//skyrat edit
+	else if(w_underwear)
+		w_underwear.add_blood_DNA(blood_dna, diseases)
+		update_inv_w_underwear()
+	else if(w_socks)
+		w_socks.add_blood_DNA(blood_dna, diseases)
+		update_inv_w_socks()
+	else if(w_shirt)
+		w_shirt.add_blood_DNA(blood_dna, diseases)
+		update_inv_w_shirt()
+	else if(wrists)
+		wrists.add_blood_DNA(blood_dna, diseases)
+		update_inv_wrists()
+	//
 	if(gloves)
 		var/obj/item/clothing/gloves/G = gloves
 		G.add_blood_DNA(blood_dna, diseases)
@@ -1133,6 +1147,22 @@
   */
 /atom/proc/rust_heretic_act()
 	return
+
+/**
+  * Used to set something as 'open' if it's being used as a supplypod
+  *
+  * Override this if you want an atom to be usable as a supplypod.
+  */
+/atom/proc/setOpened()
+		return
+
+/**
+  * Used to set something as 'closed' if it's being used as a supplypod
+  *
+  * Override this if you want an atom to be usable as a supplypod.
+  */
+/atom/proc/setClosed()
+		return
 
 ///Passes Stat Browser Panel clicks to the game and calls client click on an atom
 /atom/Topic(href, list/href_list)

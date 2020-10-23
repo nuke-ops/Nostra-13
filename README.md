@@ -1,23 +1,23 @@
 ## [No]St[r]ation
 Based and maintained from Sandstorm.
 
-[![Build Status](https://api.travis-ci.org/nuke-ops/Nostration-13.png)](https://travis-ci.org/nuke-ops/Nostration-13) 
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/nuke-ops/Nostration-13.svg)](http://isitmaintained.com/project/nuke-ops/Nostration-13 "Percentage of issues still open")  
+[![Build Status](https://api.travis-ci.org/nuke-ops/Nostration-13.png)](https://travis-ci.org/nuke-ops/Nostration-13)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/nuke-ops/Nostration-13.svg)](http://isitmaintained.com/project/nuke-ops/Nostration-13 "Percentage of issues still open")
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/nuke-ops/Nostration-13.svg)](http://isitmaintained.com/project/nuke-ops/Nostration-13 "Average time to resolve an issue")
 <img alt="Discord" src="https://img.shields.io/discord/667237704127479829?label=Discord">
 
 [![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/pretty-risque.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com) [![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
 
-**Upstream Information**  
+**Upstream Information**
 * **Website:** <https://www.tgstation13.org>
 * **Code:** <https://github.com/tgstation/tgstation>
 * **Wiki:** <https://tgstation13.org/wiki/Main_Page>
 * **Codedocs:** <https://codedocs.tgstation13.org>
 * **/tg/station Discord:** <https://tgstation13.org/phpBB/viewforum.php?f=60>
 * **Coderbus Discord:** <https://discord.gg/Vh8TJp9>
-* ~~**IRC:** <irc://irc.rizon.net/coderbus>~~ (dead)  
+* ~~**IRC:** <irc://irc.rizon.net/coderbus>~~ (dead)
 
-**Citadel Station Information**  
+**Citadel Station Information**
 * **Website:** <http://citadel-station.net>
 * **Code:** <https://github.com/Citadel-Station-13/Citadel-Station-13>
 * **Wiki:** <https://citadel-station.net/wiki/index.php?title=Main_Page>
@@ -25,13 +25,13 @@ Based and maintained from Sandstorm.
 * **Ban Appeals:** <http://citadel-station.net/forum/forumdisplay.php?fid=8>
 * **Discord:**  <https://discord.gg/E6SQuhz>
 
-**Nostration Information**  
-* **Website:** http://nukeops.asuscomm.com/ss13  
-* **Forums:** Not yet  
+**Nostration Information**
+* **Website:** http://nukeops.asuscomm.com/ss13
+* **Forums:** Not yet
 * **Ban Appeals:** https://discord.com/invite/bxgeRPq
-* **Code:** https://github.com/nuke-ops/Nostration-13  
-* **Discord:**  [Here](https://discord.gg/bxgeRPq) 
-  
+* **Code:** https://github.com/nuke-ops/Nostration-13
+* **Discord:**  [Here](https://discord.gg/bxgeRPq)
+
 ## DOWNLOADING
 
 There are a number of ways to download the source code. Some are described here, an alternative all-inclusive guide is also located at http://www.tgstation13.org/wiki/Downloading_the_source_code
@@ -111,7 +111,7 @@ the new version.
 ## HOSTING
 
 If you'd like a more robust server hosting option for tgstation and its
-derivatives. Check out our server tools suite at 
+derivatives. Check out our server tools suite at
 https://github.com/tgstation/tgstation-server
 
 ## MAPS
@@ -145,7 +145,7 @@ To enable an away mission open `config/awaymissionconfig.txt` and uncomment one 
 
 The SQL backend requires a Mariadb server running 10.2 or later. Mysql is not supported but Mariadb is a drop in replacement for mysql. SQL is required for the library, stats tracking, admin notes, and job-only bans, among other features, mostly related to server administration. Your server details go in /config/dbconfig.txt, and the SQL schema is in /SQL/tgstation_schema.sql and /SQL/tgstation_schema_prefix.sql depending on if you want table prefixes.  More detailed setup instructions are located here: https://www.tgstation13.org/wiki/Downloading_the_source_code#Setting_up_the_database
 
-## WEB/CDN RESOURCE DELIVERY 
+## WEB/CDN RESOURCE DELIVERY
 
 Web delivery of game resources makes it quicker for players to join and reduces some of the stress on the game server.
 

@@ -1,6 +1,7 @@
 PROCESSING_SUBSYSTEM_DEF(dcs)
 	name = "Datum Component System"
 	flags = SS_NO_INIT
+	wait = 1 SECONDS
 
 	var/list/elements_by_type = list()
 
@@ -8,6 +9,10 @@ PROCESSING_SUBSYSTEM_DEF(dcs)
 	comp_lookup = SSdcs.comp_lookup
 
 /datum/controller/subsystem/processing/dcs/proc/GetElement(list/arguments)
+	//skyrat edit
+	if(!istype(arguments) || !arguments.len)
+		return
+	//
 	var/datum/element/eletype = arguments[1]
 	var/element_id = eletype
 

@@ -145,10 +145,17 @@
 	else
 		dat += "<tr><td><B>Eyes:</B></td><td><A href='?src=[REF(src)];item=[SLOT_GLASSES]'>[(glasses && !(glasses.item_flags & ABSTRACT))	? glasses : "<font color=grey>Empty</font>"]</A></td></tr>"
 
-	if(SLOT_EARS in obscured)
-		dat += "<tr><td><font color=grey><B>Ears:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
+	//skyrat edit
+	if(SLOT_EARS_LEFT in obscured)
+		dat += "<tr><td><font color=grey><B>Left ear:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
 	else
-		dat += "<tr><td><B>Ears:</B></td><td><A href='?src=[REF(src)];item=[SLOT_EARS]'>[(ears && !(ears.item_flags & ABSTRACT))		? ears		: "<font color=grey>Empty</font>"]</A></td></tr>"
+		dat += "<tr><td><B>Left ear:</B></td><td><A href='?src=[REF(src)];item=[SLOT_EARS_LEFT]'>[(ears && !(ears.item_flags & ABSTRACT))		? ears		: "<font color=grey>Empty</font>"]</A></td></tr>"
+
+	if(SLOT_EARS_RIGHT in obscured)
+		dat += "<tr><td><font color=grey><B>Right ear:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
+	else
+		dat += "<tr><td><B>Right ear:</B></td><td><A href='?src=[REF(src)];item=[SLOT_EARS_RIGHT]'>[(ears_extra && !(ears_extra.item_flags & ABSTRACT))		? ears_extra		: "<font color=grey>Empty</font>"]</A></td></tr>"
+	//
 
 	dat += "<tr><td>&nbsp;</td></tr>"
 
@@ -179,6 +186,13 @@
 	else
 		dat += "<tr><td><B>Gloves:</B></td><td><A href='?src=[REF(src)];item=[SLOT_GLOVES]'>[(gloves && !(gloves.item_flags & ABSTRACT))		? gloves	: "<font color=grey>Empty</font>"]</A></td></tr>"
 
+	//skyrat edit
+	if(SLOT_WRISTS in obscured)
+		dat += "<tr><td><font color=grey><B>Wrists:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
+	else
+		dat += "<tr><td><B>Wrists:</B></td><td><A href='?src=[REF(src)];item=[SLOT_WRISTS]'>[(wrists && !(wrists.item_flags & ABSTRACT)) ? wrists : "<font color=grey>Empty</font>"]</A></td></tr>"
+	//
+
 	if(SLOT_W_UNIFORM in obscured)
 		dat += "<tr><td><font color=grey><B>Uniform:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
 	else
@@ -196,6 +210,23 @@
 		dat += "<tr><td>&nbsp;&#8627;<B>Pockets:</B></td><td><A href='?src=[REF(src)];pockets=left'>[(l_store && !(l_store.item_flags & ABSTRACT)) ? "Left (Full)" : "<font color=grey>Left (Empty)</font>"]</A>"
 		dat += "&nbsp;<A href='?src=[REF(src)];pockets=right'>[(r_store && !(r_store.item_flags & ABSTRACT)) ? "Right (Full)" : "<font color=grey>Right (Empty)</font>"]</A></td></tr>"
 		dat += "<tr><td>&nbsp;&#8627;<B>ID:</B></td><td><A href='?src=[REF(src)];item=[SLOT_WEAR_ID]'>[(wear_id && !(wear_id.item_flags & ABSTRACT)) ? wear_id : "<font color=grey>Empty</font>"]</A></td></tr>"
+
+	//skyrat edit
+	dat += "<tr><td><B>Underwear Section:</B></td></tr>"
+	var/undies_hidden = underwear_hidden()
+	if((SLOT_W_UNDERWEAR in obscured) || undies_hidden)
+		dat += "<tr><td><font color=grey>&nbsp;&#8627;<B>Underwear:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
+	else
+		dat += "<tr><td>&nbsp;&#8627;<B>Underwear:</B></td><td><A href='?src=[REF(src)];item=[SLOT_W_UNDERWEAR]'>[(w_underwear && !(w_underwear.item_flags & ABSTRACT)) ? w_underwear : "<font color=grey>Empty</font>"]</A></td></tr>"
+	if((SLOT_W_SOCKS in obscured) || undies_hidden)
+		dat += "<tr><td>&nbsp;&#8627;<font color=grey><B>Socks:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
+	else
+		dat += "<tr><td>&nbsp;&#8627;<B>Socks:</B></td><td><A href='?src=[REF(src)];item=[SLOT_W_SOCKS]'>[(w_socks && !(w_socks.item_flags & ABSTRACT)) ? w_socks : "<font color=grey>Empty</font>"]</A></td></tr>"
+	if((SLOT_W_SHIRT in obscured) || undies_hidden)
+		dat += "<tr><td>&nbsp;&#8627;<font color=grey><B>Shirt:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
+	else
+		dat += "<tr><td>&nbsp;&#8627;<B>Shirt:</B></td><td><A href='?src=[REF(src)];item=[SLOT_W_SHIRT]'>[(w_shirt && !(w_shirt.item_flags & ABSTRACT)) ? w_shirt : "<font color=grey>Empty</font>"]</A></td></tr>"
+	//
 
 	if(handcuffed)
 		dat += "<tr><td><B>Handcuffed:</B> <A href='?src=[REF(src)];item=[SLOT_HANDCUFFED]'>Remove</A></td></tr>"
@@ -255,10 +286,10 @@
 		if(href_list["pockets"])
 			var/strip_mod = 1
 			var/strip_silence = FALSE
-			var/obj/item/clothing/gloves/g = gloves
-			if (istype(g))
-				strip_mod = g.strip_mod
-				strip_silence = g.strip_silence
+			var/obj/item/clothing/gloves/G = gloves
+			if(istype(G))
+				strip_mod = G.strip_mod
+				strip_silence = G.strip_silence
 			var/pocket_side = href_list["pockets"]
 			var/pocket_id = (pocket_side == "right" ? SLOT_R_STORE : SLOT_L_STORE)
 			var/obj/item/pocket_item = (pocket_id == SLOT_R_STORE ? r_store : l_store)
@@ -552,10 +583,18 @@
 	if(wear_suit)
 		if(wear_suit.flags_inv & HIDEGLOVES)
 			LAZYOR(., SLOT_GLOVES)
+			LAZYOR(., SLOT_WRISTS)
 		if(wear_suit.flags_inv & HIDEJUMPSUIT)
 			LAZYOR(., SLOT_W_UNIFORM)
+			LAZYOR(., SLOT_W_SHIRT)
+			LAZYOR(., SLOT_W_UNDERWEAR)
 		if(wear_suit.flags_inv & HIDESHOES)
 			LAZYOR(., SLOT_SHOES)
+			LAZYOR(., SLOT_W_SOCKS)
+	if(w_uniform)
+		if(underwear_hidden())
+			LAZYOR(., SLOT_W_SHIRT)
+			LAZYOR(., SLOT_W_UNDERWEAR)
 
 /mob/living/carbon/human/assess_threat(judgement_criteria, lasercolor = "", datum/callback/weaponcheck=null)
 	if(judgement_criteria & JUDGE_EMAGGED)
@@ -813,7 +852,7 @@
 				hud_used.healthdoll.icon_state = "healthdoll_DEAD"
 
 		hud_used.staminas?.update_icon_state()
-		hud_used.staminabuffer?.update_icon_state()
+		hud_used.staminabuffer?.mark_dirty()
 
 /mob/living/carbon/human/fully_heal(admin_revive = FALSE)
 	if(admin_revive)
@@ -1052,9 +1091,9 @@
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown)
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying)
 		return
-	var/stambufferinfluence = (bufferedstam*(100/stambuffer))*0.2 //CIT CHANGE - makes stamina buffer influence movedelay
 	if(!HAS_TRAIT(src, TRAIT_IGNOREDAMAGESLOWDOWN))	//if we want to ignore slowdown from damage, but not from equipment
-		var/health_deficiency = ((maxHealth + stambufferinfluence) - health + (getStaminaLoss()*0.75))//CIT CHANGE - reduces the impact of staminaloss and makes stamina buffer influence it
+		var/scaling = maxHealth / 100
+		var/health_deficiency = ((maxHealth / scaling) - (health / scaling) + (getStaminaLoss()*0.75))//CIT CHANGE - reduces the impact of staminaloss and makes stamina buffer influence it
 		if(health_deficiency >= 40)
 			add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, (health_deficiency-39) / 75)
 			add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying, TRUE, (health_deficiency-39) / 25)
@@ -1064,11 +1103,6 @@
 	else
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown)
 		remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying)
-
-
-/mob/living/carbon/human/do_after_coefficent()
-	. = ..()
-	. *= physiology.do_after_speed
 
 /mob/living/carbon/human/is_bleeding()
 	if(NOBLOOD in dna.species.species_traits || bleedsuppress)
@@ -1260,3 +1294,6 @@
 
 /mob/living/carbon/human/species/roundstartslime
 	race = /datum/species/jelly/roundstartslime
+
+/mob/living/carbon/human/species/arachnid
+	race = /datum/species/arachnid
