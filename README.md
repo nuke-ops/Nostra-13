@@ -26,7 +26,7 @@ Based and maintained from Sandstorm.
 * **Discord:**  <https://discord.gg/E6SQuhz>
 
 **Nostration Information**
-* **Website:** http://nukeops.asuscomm.com/ss13
+* **Website:** http://nukeops.com/ss13
 * **Forums:** Not yet
 * **Ban Appeals:** https://discord.com/invite/bxgeRPq
 * **Code:** https://github.com/nuke-ops/Nostration-13
