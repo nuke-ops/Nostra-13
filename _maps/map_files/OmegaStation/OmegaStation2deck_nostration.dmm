@@ -443,16 +443,10 @@
 	},
 /area/construction/storage)
 "cp" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	dwidth = 2;
-	height = 13;
-	id = "ferry_home";
-	name = "port bay 2";
-	width = 5
-	},
-/turf/open/space/basic,
-/area/space)
+/obj/structure/ladder,
+/obj/structure/lattice/catwalk,
+/turf/open/floor/plating/asteroid/airless,
+/area/maintenance/solars/port/aft)
 "cs" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
@@ -1337,12 +1331,10 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/oldomega/HigherHall)
 "gF" = (
-/obj/machinery/door/airlock/external{
-	name = "External Airlock";
-	req_access_txt = "13"
-	},
-/turf/open/space/basic,
-/area/asteroid/nearstation)
+/obj/structure/lattice/catwalk,
+/obj/structure/railing/corner,
+/turf/open/floor/plating/asteroid/airless,
+/area/space/nearstation)
 "gG" = (
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
@@ -2977,10 +2969,16 @@
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/oldomega/OldEngi)
 "ob" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/ladder,
-/turf/open/floor/plating/asteroid/airless,
-/area/maintenance/solars/port/aft)
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 2;
+	height = 13;
+	id = "ferry_home";
+	name = "port bay 2";
+	width = 5
+	},
+/turf/open/space/basic,
+/area/space)
 "oc" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/tile/red{
@@ -6186,14 +6184,6 @@
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
 /area/space)
-"CZ" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/open/floor/plating/asteroid/airless,
-/area/space/nearstation)
 "Da" = (
 /turf/open/floor/plating{
 	icon_state = "platingdmg2"
@@ -7667,9 +7657,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "Jy" = (
-/obj/machinery/atmospherics/components/unary/tank/air{
-	dir = 8
-	},
+/obj/machinery/atmospherics/components/unary/tank/air,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "Jz" = (
@@ -45883,7 +45871,7 @@ TS
 OR
 OR
 OR
-PU
+gF
 vm
 vm
 vm
@@ -46140,7 +46128,7 @@ tT
 tT
 tT
 tT
-CZ
+zk
 HG
 HG
 vm
@@ -49488,8 +49476,8 @@ Xl
 HG
 HG
 HG
+ob
 HG
-cp
 HG
 HG
 HG
@@ -53334,7 +53322,7 @@ FS
 FS
 Kh
 TS
-ob
+TS
 wf
 TS
 lD
@@ -54105,7 +54093,7 @@ OR
 OR
 TS
 TS
-TS
+cp
 wf
 TS
 TS
@@ -61507,7 +61495,7 @@ HG
 VO
 TS
 PM
-gF
+gs
 PM
 TS
 TS
