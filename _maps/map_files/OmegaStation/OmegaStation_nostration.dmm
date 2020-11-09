@@ -28659,10 +28659,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/item/integrated_circuit_printer,
-/obj/item/integrated_electronics/analyzer,
-/obj/item/integrated_electronics/debugger,
-/obj/item/integrated_electronics/wirer,
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -29343,6 +29339,9 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /obj/structure/cable/white{
 	icon_state = "4-8"
+	},
+/obj/structure/chair/office/dark{
+	dir = 1
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/genetics)
@@ -32202,6 +32201,11 @@
 "bbK" = (
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/machinery/portable_atmospherics/canister/tritium,
+/obj/machinery/door/window/southleft{
+	name = "DANGER";
+	req_access_txt = "30"
 	},
 /turf/open/floor/plating,
 /area/science/storage)
@@ -43257,7 +43261,10 @@
 /obj/structure/rack,
 /obj/item/construction/rcd/industrial,
 /obj/item/pipe_dispenser{
-	icon_state = "rpd"
+	icon = 'modular_nostration/icons/obj/tools.dmi';
+	icon_state = "sci_rpd";
+	lefthand_file = 'modular_nostration/icons/mob/inhands/equipment/tools_lefthand.dmi';
+	righthand_file = 'modular_nostration/icons/mob/inhands/equipment/tools_righthand.dmi'
 	},
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/heads/hor)
@@ -44409,6 +44416,12 @@
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/wood,
 /area/crew_quarters/fitness/pool)
+"lrK" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/hallway/primary/aft)
 "ltV" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
@@ -45292,9 +45305,10 @@
 /turf/open/floor/plasteel,
 /area/science/mixing)
 "oKv" = (
-/obj/structure/window/reinforced/tinted/fulltile,
-/turf/open/floor/plating,
-/area/hallway/secondary/exit)
+/obj/structure/lattice/catwalk,
+/obj/structure/marker_beacon,
+/turf/open/space/basic,
+/area/space/nearstation)
 "oKz" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
@@ -46332,6 +46346,9 @@
 /area/ai_monitored/turret_protected/ai)
 "sxO" = (
 /obj/structure/stairs,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/open/floor/plasteel{
 	heat_capacity = 1e+006
 	},
@@ -48636,6 +48653,15 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
+"tHX" = (
+/obj/structure/stairs,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plasteel{
+	heat_capacity = 1e+006
+	},
+/area/hallway/primary/aft)
 "tKM" = (
 /turf/closed/wall,
 /area/hallway/primary/fore)
@@ -48713,10 +48739,6 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
-	},
-/obj/machinery/door/airlock/research/glass{
-	name = "Robotics Lab";
-	req_access_txt = "29"
 	},
 /obj/machinery/door/airlock/research/glass{
 	name = "Robotics Lab";
@@ -49476,6 +49498,17 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard/fore)
+"vWH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/external{
+	name = "External Airlock";
+	req_access_txt = "13"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/turf/open/floor/plating,
+/area/hallway/primary/aft)
 "vXX" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -49594,6 +49627,16 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+"wrL" = (
+/obj/machinery/door/airlock/external{
+	name = "External Airlock";
+	req_access_txt = "13"
+	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/hallway/primary/aft)
 "wvy" = (
 /obj/machinery/atmospherics/pipe/manifold/general/visible,
 /obj/machinery/meter,
@@ -50078,6 +50121,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/mixing)
+"yey" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/lattice/catwalk,
+/turf/open/space/basic,
+/area/hallway/primary/aft)
 "yhg" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -85229,7 +85279,7 @@ hBx
 aad
 aad
 aac
-aac
+ahu
 aaa
 aaa
 aaa
@@ -85486,7 +85536,7 @@ aad
 aad
 aad
 aac
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -85743,7 +85793,7 @@ aad
 aad
 aac
 aaa
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -86000,7 +86050,7 @@ sLf
 bok
 aac
 aaa
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -86255,10 +86305,10 @@ bpP
 bqd
 bjJ
 bok
-aaa
-aaa
-aaa
-aaa
+sdX
+sdX
+oKv
+sdX
 aaa
 aaa
 aaa
@@ -86514,7 +86564,7 @@ bjK
 bok
 aaa
 aaa
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -86771,7 +86821,7 @@ bql
 bok
 aaa
 aaa
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -87026,10 +87076,10 @@ sLf
 bfu
 bfu
 bok
-aaa
-aaa
-aaa
-aaa
+sdX
+sdX
+oKv
+sdX
 aaa
 aaa
 aaa
@@ -87285,7 +87335,7 @@ blF
 blI
 aaa
 aaa
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -87542,7 +87592,7 @@ blG
 blJ
 aaa
 aaa
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -87797,10 +87847,10 @@ bfu
 bok
 bok
 bok
-aaa
-aaa
-aaa
-aaa
+sdX
+sdX
+oKv
+sdX
 aaa
 aaa
 aaa
@@ -88051,12 +88101,12 @@ bhu
 bij
 bpu
 bjl
-aaa
-aaa
+abL
+abL
 abL
 aaa
 aaa
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -88313,7 +88363,7 @@ aaa
 abL
 aaa
 aaa
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -88565,13 +88615,13 @@ bom
 bil
 biR
 bjl
-aaa
-aaa
+sdX
+sdX
 abL
-aaa
-aaa
-aaa
-aaa
+sdX
+sdX
+oKv
+sdX
 aaa
 aaa
 aaa
@@ -88827,7 +88877,7 @@ aaa
 abL
 aaa
 aaa
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -89084,7 +89134,7 @@ aaa
 abL
 aaa
 aaa
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -89336,14 +89386,14 @@ boo
 bio
 bfu
 bfu
-aaa
-aaa
+sdX
+sdX
 abL
-aaa
-aaa
-aaa
-aaa
-aaa
+sdX
+sdX
+abL
+sdX
+oKv
 aaa
 aaa
 aaa
@@ -89598,7 +89648,7 @@ aaa
 abL
 aaa
 aaa
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -89853,9 +89903,9 @@ bjo
 abL
 abL
 abL
-abL
+oKv
 aaa
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -90111,11 +90161,11 @@ bjo
 fKe
 fKe
 abL
-aaa
-aaa
-aaa
-aaa
-aaa
+sdX
+abL
+sdX
+sdX
+oKv
 aaa
 aaa
 aaa
@@ -90369,7 +90419,7 @@ sxO
 fKe
 abL
 aaa
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -90622,11 +90672,11 @@ bit
 tOn
 tOn
 tOn
-sxO
+tHX
 fKe
 abL
 aaa
-aaa
+sdX
 aaa
 aaa
 aaa
@@ -90883,10 +90933,10 @@ fKe
 fKe
 abL
 sdX
-aaa
-aaa
-aaa
-aaa
+abL
+sdX
+sdX
+oKv
 aaa
 aaa
 aaa
@@ -91135,12 +91185,12 @@ bov
 biv
 jzK
 fKe
+abL
+abL
+abL
+oKv
 aaa
-abL
-abL
-abL
 sdX
-aaa
 aaa
 aaa
 aaa
@@ -91393,11 +91443,11 @@ bxY
 tap
 bjn
 aaa
+aaa
 abL
 aaa
 aaa
 sdX
-aaa
 aaa
 aaa
 aaa
@@ -91650,13 +91700,13 @@ bir
 tOn
 bjo
 sdX
-abL
-aaa
-aaa
 sdX
-aaa
-aaa
-aaa
+abL
+sdX
+sdX
+abL
+sdX
+oKv
 aaa
 aaa
 aaa
@@ -91906,12 +91956,12 @@ boy
 boX
 bpy
 lye
+bjo
+bjo
+yey
 aaa
-abL
-abL
 aaa
 sdX
-aaa
 aaa
 aaa
 aaa
@@ -92162,13 +92212,13 @@ bgV
 boz
 bix
 tOn
-jRV
-aaa
-iIF
+vWH
+lrK
+wrL
 abL
-sdX
-sdX
 aaa
+aaa
+sdX
 aaa
 aaa
 aaa
@@ -92420,12 +92470,12 @@ boA
 biw
 bpx
 bpz
+bjo
+bjo
+yey
 aaa
-abL
-abL
-sdX
-sdX
 aaa
+sdX
 aaa
 aaa
 aaa
@@ -92677,13 +92727,13 @@ bhJ
 biy
 tOn
 jRV
-aaa
+sdX
+sdX
 abL
-aaa
 sdX
 sdX
-aaa
-aaa
+oKv
+sdX
 aaa
 aaa
 aaa
@@ -92934,13 +92984,13 @@ boB
 boY
 bpA
 hKr
+abL
+iIF
+abL
 aaa
-abL
-abL
-abL
-abL
-abL
-abL
+aaa
+sdX
+aaa
 aaa
 aaa
 aaa
@@ -93197,8 +93247,8 @@ bfP
 rHe
 bfP
 bfP
-abL
-abL
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -93455,7 +93505,7 @@ bpQ
 bqe
 bfP
 aad
-abL
+aaa
 aaa
 aaa
 aaa
@@ -99588,7 +99638,7 @@ blZ
 bta
 aMz
 aNG
-oKv
+azb
 sdX
 pZU
 aaa
@@ -99845,7 +99895,7 @@ aLH
 btb
 blZ
 aNH
-oKv
+azb
 sdX
 aaa
 aaa
@@ -100102,7 +100152,7 @@ bsO
 blZ
 blZ
 aNH
-oKv
+azb
 sdX
 aaa
 aaa
@@ -100359,12 +100409,12 @@ bsO
 blZ
 blZ
 aNH
-oKv
+azb
 sdX
 pZU
 aac
-aac
 gvm
+aYr
 eSL
 aad
 eGm
@@ -100621,8 +100671,8 @@ sdX
 pZU
 aac
 aad
-aac
 aYr
+aad
 aad
 eGm
 bbu
@@ -100878,9 +100928,9 @@ sdX
 pZU
 aac
 aad
-aac
 aYr
 aad
+eGm
 eGm
 bbH
 bcR
@@ -101135,11 +101185,11 @@ azb
 azb
 aac
 aad
-aac
 aYr
 aad
 eGm
 bbK
+qnA
 qnA
 bdL
 beX
@@ -101392,9 +101442,9 @@ lMi
 dyg
 aac
 aac
-aac
 aYr
 aad
+eGm
 eGm
 bbL
 bcS
@@ -101649,8 +101699,8 @@ azb
 azb
 aac
 aac
-aac
-eSL
+aYr
+aad
 aad
 eGm
 bbP
@@ -101906,8 +101956,8 @@ aac
 aac
 aac
 aac
-aac
 aYr
+eSL
 aad
 eGm
 eGm
@@ -102162,7 +102212,7 @@ aad
 aad
 aad
 aad
-aac
+gvm
 aac
 aYr
 aad
@@ -103973,10 +104023,10 @@ aQf
 sdX
 pZU
 sdX
+oKv
 sdX
-aaa
+oKv
 sdX
-aaa
 aaa
 aaa
 aaa
@@ -105001,10 +105051,10 @@ aQf
 sdX
 pZU
 sdX
+oKv
 sdX
-aaa
+oKv
 sdX
-aaa
 aaa
 aaa
 aaa
@@ -106029,10 +106079,10 @@ aQf
 aUG
 pZU
 sdX
+oKv
 sdX
-aaa
+oKv
 sdX
-aaa
 aaa
 aaa
 aaa
@@ -107056,11 +107106,11 @@ sdX
 sdX
 sdX
 sdX
-aaa
 sdX
-aaa
+oKv
 sdX
-aaa
+oKv
+sdX
 aaa
 aaa
 aaa
@@ -108084,11 +108134,11 @@ aaa
 aaa
 aaa
 aaa
-aaa
 sdX
-aaa
+oKv
 sdX
-aaa
+oKv
+sdX
 aaa
 aaa
 aaa
@@ -109112,11 +109162,11 @@ aaa
 aaa
 aaa
 aaa
-aaa
 sdX
-aaa
+oKv
 sdX
-aaa
+oKv
+sdX
 aaa
 aaa
 aaa
