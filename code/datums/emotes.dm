@@ -69,9 +69,13 @@
 			M.show_message(dchatmsg) //SKYRAT CHANGE
 
 	if(emote_type == EMOTE_AUDIBLE)
-		user.audible_message(msg, user_msg = TRUE, runechat_popup = chat_popup) //SKYRAT CHANGE
-	else
-		user.visible_message(msg, user_msg = TRUE, runechat_popup = chat_popup) //SKYRAT CHANGE
+		user.audible_message(dchatmsg, runechat_popup = chat_popup, rune_msg = msg)
+	else if(emote_type == EMOTE_VISIBLE)
+		user.visible_message(dchatmsg, runechat_popup = chat_popup, rune_msg = msg)
+	else if(emote_type == EMOTE_BOTH)
+		user.visible_message(dchatmsg, blind_message = msg, runechat_popup = chat_popup, rune_msg = msg)
+	else if(emote_type == EMOTE_OMNI)
+		user.visible_message(dchatmsg, omni = TRUE, runechat_popup = chat_popup, rune_msg = msg)
 	//Skyrat change
 	if(image_popup)
 		flick_emote_popup_on_mob(user, image_popup, 40)
