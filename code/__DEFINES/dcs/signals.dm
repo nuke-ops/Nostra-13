@@ -136,11 +136,15 @@
 #define COMSIG_ATOM_ATTACK_HAND "atom_attack_hand"				//from base of atom/attack_hand(): (mob/user)
 #define COMSIG_ATOM_ATTACK_PAW "atom_attack_paw"				//from base of atom/attack_paw(): (mob/user)
 	#define COMPONENT_NO_ATTACK_HAND 1							//works on all 3.
+/////////////////
+
 //This signal return value bitflags can be found in __DEFINES/misc.dm
 #define COMSIG_ATOM_INTERCEPT_Z_FALL "movable_intercept_z_impact"	//called for each movable in a turf contents on /turf/zImpact(): (atom/movable/A, levels)
 
-
-/////////////////
+/// Called from orbit component: (atom/movable/orbiter, radius, clockwise, rotation_speed, rotation_segments, pre_rotation)
+#define COMSIG_ATOM_ORBIT_BEGIN "atom_orbit_begin"
+/// Called from orbit component: (atom/movable/orbiter, refreshing)
+#define COMSIG_ATOM_ORBIT_END "atom_orbit_end"
 
 #define COMSIG_ENTER_AREA "enter_area" 						//from base of area/Entered(): (/area)
 #define COMSIG_EXIT_AREA "exit_area" 							//from base of area/Exited(): (/area)
@@ -538,11 +542,12 @@
 #define COMSIG_XENO_MONKEY_CLICK_CTRL "xeno_monkey_click_ctrl"				//from monkey CtrlClickOn(): (/mob)
 
 // Skyrat signals
-
 // Movable signals
 #define COMSIG_MOVABLE_RADIO_TALK_INTO "movable_radio_talk_into"				//from radio talk_into(): (obj/item/radio/radio, message, channel, list/spans, datum/language/language, direct)
 // Mob signals
 #define COMSIG_MOB_ITEM_ATTACK_SELF "item_attack_self"				//from base of obj/item/attack_self(): (obj/item)
 // Living signals
-
 #define COMSIG_LIVING_UPDATED_MOBILITY "living_updated_mobility" //from base of (/mob/living/proc/update_mobility): (mobility_flags)
+// twitch plays
+/// Returns direction: (wipe_votes)
+#define COMSIG_TWITCH_PLAYS_MOVEMENT_DATA "twitch_plays_movement_data"
