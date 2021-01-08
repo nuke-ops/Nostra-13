@@ -742,8 +742,8 @@
 /area/maintenance/starboard)
 "dH" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/table/wood,
 /obj/item/clothing/suit/hooded/wintercoat/ratvar/fake,
+/obj/structure/table/reinforced/brass,
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
@@ -1876,6 +1876,7 @@
 "iZ" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/armory_contraband,
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/oldomega/OldOffice)
 "ja" = (
@@ -2176,7 +2177,6 @@
 "kC" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/door_assembly,
-/obj/structure/barricade/wooden,
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/oldomega/OldEngi)
@@ -2451,7 +2451,6 @@
 	dir = 4
 	},
 /obj/structure/door_assembly,
-/obj/structure/barricade/wooden,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -4389,7 +4388,6 @@
 /area/maintenance/port/fore)
 "uU" = (
 /obj/structure/door_assembly,
-/obj/structure/barricade/wooden,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -5048,7 +5046,7 @@
 	light_power = 0.25;
 	light_range = 10
 	},
-/obj/structure/chair/wood/normal{
+/obj/structure/chair/brass{
 	dir = 8
 	},
 /turf/open/floor/plating,
@@ -5131,6 +5129,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/rapid,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/oldomega/HigherHall)
 "yk" = (
@@ -5495,7 +5494,6 @@
 /area/crew_quarters/dorms)
 "zX" = (
 /obj/structure/door_assembly,
-/obj/structure/barricade/wooden,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
@@ -6176,7 +6174,6 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/obj/structure/barricade/wooden,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/oldomega/HigherMaint)
@@ -7766,6 +7763,11 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/oldomega/OldStorage)
+"Kb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/stack/tile/brass,
+/turf/open/floor/plating,
+/area/construction/storage)
 "Kc" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -8209,15 +8211,12 @@
 /area/ruin/space/has_grav/oldomega/HigherHall)
 "Mr" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 3;
-	name = "3maintenance loot spawner"
-	},
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/high_tools,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/oldomega/OldStorage)
 "Ms" = (
@@ -8810,6 +8809,11 @@
 	},
 /turf/open/floor/plating/asteroid/airless,
 /area/space/nearstation)
+"OQ" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/hivebot/rapid,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/oldomega/OldStorage)
 "OR" = (
 /turf/closed/mineral,
 /area/asteroid/nearstation)
@@ -8892,6 +8896,12 @@
 	icon_state = "wood-broken6"
 	},
 /area/maintenance/bar)
+"Pp" = (
+/obj/structure/barricade/wooden,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/airlock/clockwork/brass,
+/turf/open/floor/plasteel,
+/area/construction/storage)
 "Ps" = (
 /obj/machinery/door/airlock{
 	name = "Unit 1"
@@ -9403,8 +9413,8 @@
 /area/maintenance/bar)
 "RE" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/table/wood,
-/obj/effect/temp_visual/ratvar/spearbreak,
+/obj/item/clockwork/weapon/ratvarian_spear,
+/obj/structure/table/reinforced/brass,
 /turf/open/floor/plating,
 /area/construction/storage)
 "RG" = (
@@ -9581,6 +9591,7 @@
 /area/quartermaster/office)
 "Sp" = (
 /obj/effect/decal/cleanable/glass,
+/mob/living/simple_animal/hostile/hivebot/rapid,
 /turf/open/floor/plating/asteroid/airless,
 /area/asteroid/nearstation)
 "Sr" = (
@@ -10209,7 +10220,6 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
-/obj/structure/barricade/wooden,
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
@@ -10466,7 +10476,6 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/obj/structure/barricade/wooden,
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -11077,7 +11086,7 @@
 "YW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/chair/wood/wings,
+/obj/structure/chair/brass,
 /turf/open/floor/plating{
 	icon_state = "platingdmg1"
 	},
@@ -25018,7 +25027,7 @@ Ah
 sv
 XP
 kA
-XP
+OQ
 JZ
 Ah
 TS
@@ -46585,7 +46594,7 @@ TS
 TS
 TS
 TS
-TS
+ro
 OR
 OR
 OR
@@ -48122,7 +48131,7 @@ OR
 OR
 OR
 OR
-TS
+ro
 TS
 TS
 TS
@@ -49400,12 +49409,12 @@ Kh
 Kh
 Kh
 Kh
+ro
 TS
 TS
 TS
 TS
-TS
-TS
+ro
 OR
 OR
 hX
@@ -50423,7 +50432,7 @@ HG
 HG
 HG
 TS
-TS
+ro
 OR
 OR
 OR
@@ -51211,7 +51220,7 @@ IF
 Fp
 gM
 Vz
-wd
+Pp
 pg
 bp
 xZ
@@ -52236,7 +52245,7 @@ sA
 Cs
 QP
 Ph
-Ph
+Kb
 xG
 qq
 sA
