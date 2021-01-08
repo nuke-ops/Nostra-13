@@ -127,12 +127,12 @@
   * * ignored_mobs (optional) doesn't show any message to any given mob in the list.
   * * target (optional) is the other mob involved with the visible message. For example, the attacker in many combat messages.
   * * target_message (optional) is what the target mob will see e.g. "[src] does something to you!"
+  * * omni (optional) if TRUE, will show to users no matter what.
   */
-/atom/proc/visible_message(message, self_message, blind_message, vision_distance = DEFAULT_MESSAGE_RANGE, ignored_mobs, mob/target, target_message, user_msg, runechat_popup) //SKYRAT CHANGE
+/atom/proc/visible_message(message, self_message, blind_message, vision_distance = DEFAULT_MESSAGE_RANGE, ignored_mobs, mob/target, target_message, omni = FALSE, runechat_popup, rune_msg)
 	var/turf/T = get_turf(src)
 	if(!T)
 		return
-	var/final_msg = user_msg ? "<b>[src]</b> " + message : message //SKYRAT CHANGE
 	var/list/hearers = get_hearers_in_view(vision_distance, src) //caches the hearers and then removes ignored mobs.
 	if(!length(hearers))
 		return
@@ -140,19 +140,25 @@
 
 	if(target_message && target && istype(target) && target.client)
 		hearers -= target
-		//This entire if/else chain could be in two lines but isn't for readibilties sake.
-		var/msg = target_message
-		if(target.see_invisible<invisibility) //if src is invisible to us,
-			msg = blind_message
-		//the light object is dark and not invisible to us, darkness does not matter if you're directly next to the target
-		else if(T.lighting_object && T.lighting_object.invisibility <= target.see_invisible && T.is_softly_lit() && !in_range(T,target))
-			msg = blind_message
-		if(msg)
-			target.show_message(msg, MSG_VISUAL,blind_message, MSG_AUDIBLE)
+		if(omni)
+			target.show_message(target_message)
+		else
+			//This entire if/else chain could be in two lines but isn't for readibilties sake.
+			var/msg = target_message
+			if(target.see_invisible<invisibility) //if src is invisible to us,
+				msg = blind_message
+			//the light object is dark and not invisible to us, darkness does not matter if you're directly next to the target
+			else if(T.lighting_object && T.lighting_object.invisibility <= target.see_invisible && T.is_softly_lit() && !in_range(T,target))
+				msg = blind_message
+			if(msg)
+				target.show_message(msg, MSG_VISUAL,blind_message, MSG_AUDIBLE)
 	if(self_message)
 		hearers -= src
 	for(var/mob/M in hearers)
 		if(!M.client)
+			continue
+		if(omni)
+			M.show_message(message)
 			continue
 		//This entire if/else chain could be in two lines but isn't for readibilties sake.
 		var/msg = message
@@ -165,17 +171,22 @@
 			msg = blind_message
 		if(!msg)
 			continue
-		if (runechat_popup && M.client?.prefs.chat_on_map && (M.client.prefs.see_chat_non_mob || ismob(src)) && M.client.prefs.see_chat_emotes) //SKYRAT CHANGE
-			M.create_chat_message(src, null, msg, list("emote", "italics"), null) //Skyrat change
-		M.show_message(final_msg, MSG_VISUAL,blind_message, MSG_AUDIBLE) //SKYRAT CHANGE
+		if(runechat_popup && M.client?.prefs.chat_on_map && (M.client.prefs.see_chat_non_mob || ismob(src)) && M.client.prefs.see_chat_emotes) //SKYRAT CHANGE
+			M.create_chat_message(src, null, rune_msg ? rune_msg : msg, list("emote", "italics"), null) //Skyrat change
+		M.show_message(msg, MSG_VISUAL, blind_message, MSG_AUDIBLE) //SKYRAT CHANGE
 
 ///Adds the functionality to self_message.
-mob/visible_message(message, self_message, blind_message, vision_distance = DEFAULT_MESSAGE_RANGE, list/ignored_mobs, mob/target, target_message, user_msg, runechat_popup) //SKYRAT CHANGE
+/mob/visible_message(message, self_message, blind_message, vision_distance = DEFAULT_MESSAGE_RANGE, list/ignored_mobs, mob/target, target_message, omni = FALSE, runechat_popup, rune_msg)
 	. = ..()
 	if(self_message && target != src)
-		if (runechat_popup && client?.prefs.chat_on_map && client.prefs.see_chat_emotes) //SKYRAT CHANGE
-			create_chat_message(src, null, self_message, list("emote", "italics"), null) //Skyrat change
-		show_message(user_msg ? "<b>[src]</b> " + self_message : self_message, MSG_VISUAL, blind_message, MSG_AUDIBLE) //SKYRAT CHANGE
+		if(!omni)
+			show_message(self_message, MSG_VISUAL, blind_message, MSG_AUDIBLE)
+			if(runechat_popup && client?.prefs.chat_on_map && client.prefs.see_chat_emotes) //SKYRAT CHANGE
+				create_chat_message(src, null, rune_msg ? rune_msg : self_message, list("emote", "italics"), null) //Skyrat change
+		else
+			show_message(self_message)
+			if(runechat_popup && client?.prefs.chat_on_map && client.prefs.see_chat_emotes) //SKYRAT CHANGE
+				create_chat_message(src, null, rune_msg ? rune_msg : self_message, list("emote", "italics"), null) //Skyrat change
 
 /**
   * Show a message to all mobs in earshot of this atom
@@ -188,11 +199,10 @@ mob/visible_message(message, self_message, blind_message, vision_distance = DEFA
   * * hearing_distance (optional) is the range, how many tiles away the message can be heard.
   * * ignored_mobs (optional) doesn't show any message to any given mob in the list.
   */
-/atom/proc/audible_message(message, deaf_message, hearing_distance = DEFAULT_MESSAGE_RANGE, self_message, ignored_mobs, user_msg, runechat_popup) //SKYRAT CHANGE
+/atom/proc/audible_message(message, deaf_message, hearing_distance = DEFAULT_MESSAGE_RANGE, self_message, ignored_mobs, runechat_popup, rune_msg) //SKYRAT CHANGE
 	var/turf/T = get_turf(src)
 	if(!T)
 		return
-	var/final_msg = user_msg ? "<b>[src]</b> " + message : message //SKYRAT CHANGE
 	var/list/hearers = get_hearers_in_view(hearing_distance, src)
 	if(!length(hearers))
 		return
@@ -200,9 +210,9 @@ mob/visible_message(message, self_message, blind_message, vision_distance = DEFA
 	if(self_message)
 		hearers -= src
 	for(var/mob/M in hearers)
-		if (runechat_popup && M.client?.prefs.chat_on_map && (M.client.prefs.see_chat_non_mob || ismob(src)) && M.client.prefs.see_chat_emotes) //SKYRAT CHANGE
-			M.create_chat_message(src, null, message, list("emote", "italics"), null) //Skyrat change
-		M.show_message(final_msg, MSG_AUDIBLE, deaf_message, MSG_VISUAL) //SKYRAT CHANGE
+		if(runechat_popup && M.client?.prefs.chat_on_map && (M.client.prefs.see_chat_non_mob || ismob(src)) && M.client.prefs.see_chat_emotes) //SKYRAT CHANGE
+			M.create_chat_message(src, null, rune_msg ? rune_msg : message, list("emote", "italics"), null) //Skyrat change
+		M.show_message(message, MSG_AUDIBLE, deaf_message, MSG_VISUAL) //SKYRAT CHANGE
 
 /**
   * Show a message to all mobs in earshot of this one
@@ -216,12 +226,12 @@ mob/visible_message(message, self_message, blind_message, vision_distance = DEFA
   * * hearing_distance (optional) is the range, how many tiles away the message can be heard.
   * * ignored_mobs (optional) doesn't show any message to any given mob in the list.
   */
-/mob/audible_message(message, deaf_message, hearing_distance = DEFAULT_MESSAGE_RANGE, self_message, list/ignored_mobs, user_msg, runechat_popup) //SKYRAT CHANGE
+/mob/audible_message(message, deaf_message, hearing_distance = DEFAULT_MESSAGE_RANGE, self_message, list/ignored_mobs, runechat_popup, rune_msg) //SKYRAT CHANGE
 	. = ..()
 	if(self_message)
-		if (runechat_popup && client?.prefs.chat_on_map && client.prefs.see_chat_emotes) //SKYRAT CHANGE
-			create_chat_message(src, null, self_message, list("emote", "italics"), null) //Skyrat change
-		show_message(user_msg ? "<b>[src]</b> " + self_message : self_message, MSG_AUDIBLE, deaf_message, MSG_VISUAL)
+		if(runechat_popup && client?.prefs.chat_on_map && client.prefs.see_chat_emotes) //SKYRAT CHANGE
+			create_chat_message(src, null, rune_msg ? rune_msg : self_message, list("emote", "italics"), null) //Skyrat change
+		show_message(self_message, MSG_AUDIBLE, deaf_message, MSG_VISUAL)
 
 /mob/proc/get_item_by_slot(slot_id)
 	return null
@@ -468,39 +478,6 @@ mob/visible_message(message, self_message, blind_message, vision_distance = DEFA
 		mind.store_memory(msg)
 	else
 		to_chat(src, "You don't have a mind datum for some reason, so you can't add a note to it.")
-
-/mob/verb/abandon_mob()
-	set name = "Respawn"
-	set category = "OOC"
-
-	if (CONFIG_GET(flag/norespawn))
-		return
-	if ((stat != DEAD || !( SSticker )))
-		to_chat(usr, "<span class='boldnotice'>You must be dead to use this!</span>")
-		return
-
-	log_game("[key_name(usr)] used abandon mob.")
-
-	to_chat(usr, "<span class='boldnotice'>Please roleplay correctly!</span>")
-
-	if(!client)
-		log_game("[key_name(usr)] AM failed due to disconnect.")
-		return
-	client.screen.Cut()
-	client.screen += client.void
-	if(!client)
-		log_game("[key_name(usr)] AM failed due to disconnect.")
-		return
-
-	var/mob/dead/new_player/M = new /mob/dead/new_player()
-	if(!client)
-		log_game("[key_name(usr)] AM failed due to disconnect.")
-		qdel(M)
-		return
-
-	M.key = key
-//	M.Login()	//wat
-	return
 
 /mob/proc/transfer_ckey(mob/new_mob, send_signal = TRUE)
 	if(!new_mob || (!ckey && new_mob.ckey))
@@ -1022,6 +999,12 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 	switch(var_name)
 		if("logging")
 			return debug_variable(var_name, logging, 0, src, FALSE)
+		if(NAMEOF(src, lastKnownIP))
+			if(!check_rights(R_SENSITIVE, FALSE))
+				return "SENSITIVE"
+		if(NAMEOF(src, computer_id))
+			if(!check_rights(R_SENSITIVE, FALSE))
+				return "SENSITIVE"
 	. = ..()
 
 /mob/vv_auto_rename(new_name)

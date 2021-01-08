@@ -27,7 +27,7 @@ Based and maintained from Sandstorm.
 
 **Nostration Information**
 * **Website:** http://nukeops.com/ss13
-* **Forums:** Not yet
+* **Forums:** Not yet?
 * **Ban Appeals:** https://discord.com/invite/bxgeRPq
 * **Code:** https://github.com/nuke-ops/Nostration-13
 * **Discord:**  [Here](https://discord.gg/bxgeRPq)

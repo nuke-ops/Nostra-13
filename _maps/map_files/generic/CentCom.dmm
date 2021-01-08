@@ -8429,7 +8429,7 @@
 /area/centcom/ferry)
 "tx" = (
 /obj/structure/table/wood,
-/obj/item/storage/box/dice,
+/obj/item/storage/dice,
 /turf/open/floor/plasteel/grimy,
 /area/centcom/ferry)
 "ty" = (
@@ -10217,7 +10217,7 @@
 /area/wizard_station)
 "xy" = (
 /obj/structure/table/wood/fancy,
-/obj/item/storage/box/dice{
+/obj/item/storage/dice{
 	icon_state = "magicdicebag"
 	},
 /turf/open/floor/carpet,
@@ -10373,6 +10373,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/turf/open/indestructible/hotelwood,
+/area/centcom/holding)
+"ye" = (
+/obj/effect/mob_spawn/robot/ghostcafe,
 /turf/open/indestructible/hotelwood,
 /area/centcom/holding)
 "yg" = (
@@ -18700,10 +18704,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/syndicate_mothership)
-"XJ" = (
-/obj/effect/mob_spawn/robot/ghostcafe,
-/turf/open/indestructible/hotelwood,
-/area/centcom/holding)
 "XL" = (
 /obj/machinery/door/airlock/wood,
 /turf/open/floor/wood,
@@ -48351,7 +48351,7 @@ Nd
 Nd
 Ms
 Sd
-XJ
+ye
 Nd
 Nd
 Nd

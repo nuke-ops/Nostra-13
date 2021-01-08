@@ -59,7 +59,7 @@
 
 	user.log_message(msg, LOG_EMOTE)
 	//msg = "<b>[user]</b> " + msg //SKYRAT CHANGE
-	var/dchatmsg = "<b>[user]</b> " + msg //SKYRAT CHANGE
+	var/dchatmsg = "<span class='emote'><b>[user]</b> [msg]</span>" //SKYRAT CHANGE
 
 	for(var/mob/M in GLOB.dead_mob_list)
 		if(!M.client || isnewplayer(M))
@@ -69,9 +69,13 @@
 			M.show_message(dchatmsg) //SKYRAT CHANGE
 
 	if(emote_type == EMOTE_AUDIBLE)
-		user.audible_message(msg, user_msg = TRUE, runechat_popup = chat_popup) //SKYRAT CHANGE
-	else
-		user.visible_message(msg, user_msg = TRUE, runechat_popup = chat_popup) //SKYRAT CHANGE
+		user.audible_message(dchatmsg, runechat_popup = chat_popup, rune_msg = msg)
+	else if(emote_type == EMOTE_VISIBLE)
+		user.visible_message(dchatmsg, runechat_popup = chat_popup, rune_msg = msg)
+	else if(emote_type == EMOTE_BOTH)
+		user.visible_message(dchatmsg, blind_message = msg, runechat_popup = chat_popup, rune_msg = msg)
+	else if(emote_type == EMOTE_OMNI)
+		user.visible_message(dchatmsg, omni = TRUE, runechat_popup = chat_popup, rune_msg = msg)
 	//Skyrat change
 	if(image_popup)
 		flick_emote_popup_on_mob(user, image_popup, 40)
@@ -148,7 +152,7 @@
 	var/sound //Sound to play when emote is called
 	var/vary = FALSE	//used for the honk borg emote
 	var/volume = 50
-	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon)
+	mob_type_allowed_typecache = list(/mob/living/brain, /mob/living/silicon, /mob/camera/aiEye)
 
 /datum/emote/sound/run_emote(mob/user, params)
 	. = ..()
