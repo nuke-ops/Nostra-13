@@ -3683,7 +3683,7 @@
 	lootcount = 2;
 	name = "2maintenance loot spawner"
 	},
-/obj/item/caution,
+/obj/item/clothing/suit/caution,
 /turf/open/floor/plating,
 /area/construction)
 "ajb" = (
@@ -4639,7 +4639,7 @@
 /turf/open/floor/plasteel,
 /area/security/processing)
 "alk" = (
-/obj/item/caution,
+/obj/item/clothing/suit/caution,
 /turf/open/floor/plating,
 /area/construction/secondary)
 "all" = (
@@ -23696,19 +23696,19 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/item/caution{
+/obj/item/clothing/suit/caution{
 	pixel_x = 6;
 	pixel_y = 3
 	},
-/obj/item/caution{
+/obj/item/clothing/suit/caution{
 	pixel_x = 6;
 	pixel_y = 3
 	},
-/obj/item/caution{
+/obj/item/clothing/suit/caution{
 	pixel_x = 6;
 	pixel_y = 3
 	},
-/obj/item/caution{
+/obj/item/clothing/suit/caution{
 	pixel_x = 6;
 	pixel_y = 3
 	},
@@ -27122,7 +27122,7 @@
 /area/quartermaster/sorting)
 "bgP" = (
 /obj/item/analyzer,
-/obj/item/caution,
+/obj/item/clothing/suit/caution,
 /turf/open/floor/plating,
 /area/maintenance/disposal)
 "bgQ" = (
@@ -34224,7 +34224,7 @@
 /turf/open/floor/plasteel/dark,
 /area/chapel/office)
 "bvU" = (
-/obj/item/caution,
+/obj/item/clothing/suit/caution,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/warning/biohazard{
 	pixel_x = -32
@@ -41578,7 +41578,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
-/obj/item/caution,
+/obj/item/clothing/suit/caution,
 /obj/item/shovel,
 /obj/item/stack/tile/plasteel{
 	pixel_x = 10;
@@ -52079,8 +52079,8 @@
 /area/quartermaster/warehouse)
 "cgt" = (
 /obj/structure/rack,
-/obj/item/caution,
-/obj/item/caution,
+/obj/item/clothing/suit/caution,
+/obj/item/clothing/suit/caution,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/quartermaster/warehouse)
@@ -59859,7 +59859,7 @@
 	name = "Computer Core"
 	})
 "cvF" = (
-/obj/item/caution,
+/obj/item/clothing/suit/caution,
 /turf/open/floor/plasteel,
 /area/science/server{
 	name = "Computer Core"
@@ -62557,7 +62557,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 8
 	},
-/obj/item/caution,
+/obj/item/clothing/suit/caution,
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden{
 	dir = 4
 	},
@@ -63695,7 +63695,7 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
-/obj/item/caution,
+/obj/item/clothing/suit/caution,
 /obj/machinery/atmospherics/pipe/manifold4w/orange/hidden,
 /obj/structure/cable{
 	icon_state = "4-8"
