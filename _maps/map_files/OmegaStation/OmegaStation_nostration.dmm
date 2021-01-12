@@ -2853,7 +2853,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/table,
-/obj/item/storage/dice,
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
@@ -44934,9 +44933,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/mixing)
-"kRL" = (
-/turf/closed/mineral/random/labormineral,
-/area/ai_monitored/security/armory)
 "kRR" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/closet/crate,
@@ -83815,7 +83811,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aac
 aad
 aac
 aac
@@ -84072,7 +84068,7 @@ aaa
 aaa
 aaa
 aaa
-aaa
+aac
 aad
 aad
 swF
@@ -84586,8 +84582,8 @@ aaa
 aac
 aac
 aac
-aad
-aad
+aac
+aac
 aad
 aac
 aed
@@ -84842,9 +84838,9 @@ aaa
 aac
 aac
 aad
-aad
-aad
-aad
+aac
+aac
+aac
 aac
 aaa
 aed
@@ -85100,7 +85096,7 @@ aad
 aad
 aad
 aad
-aad
+aac
 aac
 aaa
 aaa
@@ -86902,7 +86898,7 @@ aad
 aac
 aad
 aac
-kRL
+aad
 ajm
 ajm
 ajm
