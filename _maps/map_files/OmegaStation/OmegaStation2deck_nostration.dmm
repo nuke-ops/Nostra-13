@@ -131,8 +131,8 @@
 	pixel_y = -5
 	},
 /obj/machinery/button/door{
-	id = "Dorms";
-	name = "Dorm shutters Control";
+	id = "dorms";
+	name = "Dorm Window Shutters";
 	normaldoorcontrol = 1;
 	pixel_y = -25;
 	specialfunctions = 4
@@ -168,8 +168,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock{
-	id_tag = "Dorm5";
-	name = "Room Five"
+	id_tag = "Dorm6";
+	name = "Room Six"
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
@@ -552,8 +552,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock{
-	id_tag = "1Dorm3";
-	name = "Room Two"
+	id_tag = "Dorm10";
+	name = "Room Ten"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -708,8 +708,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock{
-	id_tag = "1Dorm3";
-	name = "Room Four"
+	id_tag = "Dorm8";
+	name = "Room Eight"
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
@@ -1140,7 +1140,7 @@
 	pixel_x = 32
 	},
 /obj/machinery/button/door{
-	id = "Dorm5";
+	id = "Dorm6";
 	name = "Dorm Bolt Control";
 	normaldoorcontrol = 1;
 	pixel_y = -25;
@@ -1398,7 +1398,7 @@
 	pixel_x = 32
 	},
 /obj/machinery/button/door{
-	id = "1Dorm3";
+	id = "Dorm10";
 	name = "Dorm Bolt Control";
 	normaldoorcontrol = 1;
 	pixel_y = 25;
@@ -1447,8 +1447,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock{
-	id_tag = "Dorm4";
-	name = "Room Four"
+	id_tag = "Dorm7";
+	name = "Room Seven"
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
@@ -3319,7 +3319,7 @@
 	pixel_x = 32
 	},
 /obj/machinery/button/door{
-	id = "1Dorm2";
+	id = "Dorm9";
 	name = "Dorm Bolt Control";
 	normaldoorcontrol = 1;
 	pixel_y = 25;
@@ -5008,14 +5008,14 @@
 /turf/open/floor/plating/asteroid/airless,
 /area/space/nearstation)
 "xy" = (
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /obj/machinery/door/poddoor/shutters/preopen{
-	id = "Dorms";
-	name = "Dormitories shutters"
+	id = "dorms";
+	name = "Dorm Window Shutter"
 	},
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/crew_quarters/dorms)
 "xD" = (
@@ -6905,7 +6905,7 @@
 	pixel_x = 32
 	},
 /obj/machinery/button/door{
-	id = "1Dorm3";
+	id = "Dorm8";
 	name = "Cabin Bolt Control";
 	normaldoorcontrol = 1;
 	pixel_y = -25;
@@ -7636,8 +7636,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock{
-	id_tag = "1Dorm6";
-	name = "Room Six"
+	id_tag = "Dorm5";
+	name = "Room Five"
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
@@ -8383,7 +8383,7 @@
 	pixel_x = 32
 	},
 /obj/machinery/button/door{
-	id = "Dorm6";
+	id = "Dorm5";
 	name = "Dorm Bolt Control";
 	normaldoorcontrol = 1;
 	pixel_y = -25;
@@ -9736,7 +9736,7 @@
 	pixel_x = 32
 	},
 /obj/machinery/button/door{
-	id = "1Dorm4";
+	id = "Dorm7";
 	name = "Dorm Bolt Control";
 	normaldoorcontrol = 1;
 	pixel_y = -25;
@@ -10594,11 +10594,11 @@
 /turf/open/floor/plating,
 /area/maintenance/department/crew_quarters/locker)
 "WU" = (
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters/preopen{
-	id = "Dorms";
-	name = "Dormitories shutters"
+	id = "dorms";
+	name = "Dorm Window Shutter"
 	},
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/crew_quarters/dorms)
 "WW" = (
@@ -11005,8 +11005,8 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock{
-	id_tag = "1Dorm2";
-	name = "Room One"
+	id_tag = "Dorm9";
+	name = "Room Nine"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -52015,7 +52015,7 @@ TS
 Wo
 TS
 pj
-SE
+id
 id
 id
 id
