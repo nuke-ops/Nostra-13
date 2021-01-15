@@ -33990,7 +33990,7 @@
 /obj/machinery/mass_driver{
 	id = "SM";
 	name = "Engineering Safety Driver";
-	resistance_flags = LAVA_PROOF, FIRE_PROOF, ACID_PROOF, FREEZE_PROOF
+	resistance_flags = 163
 	},
 /obj/machinery/power/supermatter_crystal/shard{
 	anchored = 1
