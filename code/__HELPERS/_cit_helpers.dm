@@ -102,7 +102,7 @@ GLOBAL_VAR_INIT(miscreants_allowed, FALSE)
 		if(!src.holder)	return
 		message_admins("[key_name_admin(usr)] manually reloaded mentors")
 
-/*pretty much everything got moved to modular_skyrat (interactions)
+/*pretty much everything got moved to ~modular_skyrat~ modular_nostration (interactions)
 /mob/living/carbon/has_penis() // Skyrat Change
 	var/obj/item/organ/genital/G = getorganslot(ORGAN_SLOT_PENIS)
 	if(G && istype(G, /obj/item/organ/genital/penis))
