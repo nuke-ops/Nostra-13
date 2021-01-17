@@ -161,11 +161,11 @@
 		..()
 
 /mob/living/simple_animal/hostile/poison/terror_spider/adjustBruteLoss(amount, updating_health = TRUE, forced = FALSE)
-	. = ..(amount, updating_health, forced)
+	. = ..(amount, updating_health, forced, only_organic)
 	Retaliate()
 
 /mob/living/simple_animal/hostile/poison/terror_spider/adjustFireLoss(amount, updating_health = TRUE, forced = FALSE)
-	. = ..(amount, updating_health, forced)
+	. = ..(amount, updating_health, forced, only_organic)
 	Retaliate()
 
 /mob/living/simple_animal/hostile/poison/terror_spider/proc/Retaliate()
