@@ -38,12 +38,16 @@ RLD
 	var/ammo_sections = 10	//amount of divisions in the ammo indicator overlay/number of ammo indicator states
 	var/custom_range = 7
 	var/upgrade = FALSE
+	var/datum/component/remote_materials/silo_mats //remote connection to the silo
+	var/silo_link = FALSE //switch to use internal or remote storage
 
-/obj/item/construction/Initialize()
+/obj/item/construction/Initialize(mapload)
 	. = ..()
 	spark_system = new /datum/effect_system/spark_spread
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
+	if(upgrade & RCD_UPGRADE_SILO_LINK)
+		silo_mats = AddComponent(/datum/component/remote_materials, "RCD", mapload, FALSE)
 
 /obj/item/construction/examine(mob/user)
 	. = ..()
@@ -52,6 +56,10 @@ RLD
 		. += "It contains the design for machine frames, computer frames and deconstruction."
 	if(upgrade & RCD_UPGRADE_SIMPLE_CIRCUITS)
 		. += "It contains the design for firelock, air alarm, fire alarm, apc circuits and crap power cells."
+	if(upgrade & RCD_UPGRADE_SILO_LINK)
+		. += "Remote storage link state: [silo_link ? "[silo_mats.on_hold() ? "ON HOLD" : "ON"]" : "OFF"]."
+		if(silo_link && silo_mats.mat_container && !silo_mats.on_hold())
+			. += "Remote connection has iron in equivalent to [silo_mats.mat_container.get_material_amount(/datum/material/iron)/500] RCD unit\s." //1 matter for 1 floor tile, as 4 tiles are produced from 1 metal
 
 /obj/item/construction/Destroy()
 	QDEL_NULL(spark_system)
@@ -92,6 +100,8 @@ RLD
 		var/obj/item/rcd_upgrade/rcd_up = W
 		if(!(upgrade & rcd_up.upgrade))
 			upgrade |= rcd_up.upgrade
+			if((rcd_up.upgrade & RCD_UPGRADE_SILO_LINK) && !silo_mats)
+				silo_mats = AddComponent(/datum/component/remote_materials, "RCD", FALSE, FALSE)
 			playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
 			qdel(W)
 	else
@@ -119,16 +129,41 @@ RLD
 		spark_system.start()
 
 /obj/item/construction/proc/useResource(amount, mob/user)
-	if(matter < amount)
-		if(user)
-			to_chat(user, no_ammo_message)
-		return FALSE
-	matter -= amount
-	update_icon()
-	return TRUE
+	if(!silo_mats || !silo_link)
+		if(matter < amount)
+			if(user)
+				to_chat(user, no_ammo_message)
+			return FALSE
+		matter -= amount
+		update_icon()
+		return TRUE
+	else
+		if(silo_mats.on_hold())
+			if(user)
+				to_chat(user, "Mineral access is on hold, please contact the quartermaster.")
+			return FALSE
+		if(!silo_mats.mat_container.has_materials(list(/datum/material/iron = 500), amount))
+			if(user)
+				to_chat(user, no_ammo_message)
+			return FALSE
+
+		silo_mats.mat_container.use_materials(list(/datum/material/iron = 500), amount)
+		silo_mats.silo_log(src, "consume", -amount, "build", list(GLOB.materials_list["iron"] = 500))
+		return TRUE
 
 /obj/item/construction/proc/checkResource(amount, mob/user)
 	. = matter >= amount
+	if(!silo_link || !silo_mats || !silo_mats.mat_container)
+		. = matter >= amount
+	else
+		if(silo_mats.on_hold())
+			if(user)
+				to_chat(user, "Mineral access is on hold, please contact the quartermaster.")
+			return FALSE
+		if(!silo_mats.mat_container)
+			to_chat(user, "<span class='alert'>No silo link detected. Connect to silo via multitool.</span>")
+			return FALSE
+		. = silo_mats.mat_container.has_materials(list(/datum/material/iron = 500), amount)
 	if(!. && user)
 		to_chat(user, no_ammo_message)
 		if(has_ammobar)
@@ -165,6 +200,7 @@ RLD
 	custom_price = PRICE_ABOVE_EXPENSIVE
 	custom_premium_price = PRICE_ALMOST_ONE_GRAND
 	max_matter = 160
+	slot_flags = ITEM_SLOT_BELT
 	item_flags = NO_MAT_REDEMPTION | NOBLUDGEON
 	has_ammobar = TRUE
 	var/mode = 1
@@ -203,6 +239,16 @@ RLD
 		window_type_name = "glass"
 
 	to_chat(user, "<span class='notice'>You change \the [src]'s window mode to [window_type_name].</span>")
+
+/obj/item/construction/rcd/proc/toggle_silo_link(mob/user)
+	if(silo_mats)
+		if(!silo_mats.mat_container)
+			to_chat(user, "<span class='alert'>No silo link detected. Connect to silo via multitool.</span>")
+			return FALSE
+		silo_link = !silo_link
+		to_chat(user, "<span class='notice'>You change \the [src]'s storage link state: [silo_link ? "ON" : "OFF"].</span>")
+	else
+		to_chat(user, "<span class='warning'>\the [src] dont have remote storage connection.</span>")
 
 /obj/item/construction/rcd/verb/change_airlock_access(mob/user)
 
@@ -452,16 +498,14 @@ RLD
 	var/turf/the_turf = get_turf(A)
 	var/turf_coords = "[COORD(the_turf)]"
 	investigate_log("[user] is attempting to use [src] on [A] (loc [turf_coords] at [the_turf]) with cost [rcd_results["cost"]], delay [rcd_results["delay"]], mode [rcd_results["mode"]].", INVESTIGATE_RCD)
-	if(do_after(user, delay, target = A))
-		if(checkResource(rcd_results["cost"], user))
-			var/atom/cached = A
-			if(A.rcd_act(user, src, rcd_results["mode"]))
-				rcd_effect.end_animation()
-				useResource(rcd_results["cost"], user)
-				activate()
-				investigate_log("[user] used [src] on [cached] (loc [turf_coords] at [the_turf]) with cost [rcd_results["cost"]], delay [rcd_results["delay"]], mode [rcd_results["mode"]].", INVESTIGATE_RCD)
-				playsound(src, 'sound/machines/click.ogg', 50, 1)
-				return TRUE
+	if(checkResource(rcd_results["cost"], user))
+		if(do_after(user, rcd_results["delay"] * delay_mod, target = A))
+			if(checkResource(rcd_results["cost"], user))
+				if(A.rcd_act(user, src, rcd_results["mode"]))
+					useResource(rcd_results["cost"], user)
+					activate()
+					playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
+					return TRUE
 	qdel(rcd_effect)
 
 /obj/item/construction/rcd/Initialize()
@@ -484,6 +528,10 @@ RLD
 		"Deconstruct" = image(icon= 'icons/mob/radial.dmi', icon_state = "delete"),
 		"Machine Frames" = image(icon = 'icons/mob/radial.dmi', icon_state = "machine"),
 		"Computer Frames" = image(icon = 'icons/mob/radial.dmi', icon_state = "computer_dir"),
+		)
+	if(upgrade & RCD_UPGRADE_SILO_LINK)
+		choices += list(
+		"Silo Link" = image(icon = 'icons/obj/mining.dmi', icon_state = "silo"),
 		)
 	if(mode == RCD_AIRLOCK)
 		choices += list(
@@ -520,6 +568,9 @@ RLD
 			return
 		if("Change Window Type")
 			toggle_window_type(user)
+			return
+		if("Silo Link")
+			toggle_silo_link(user)
 			return
 		else
 			return
@@ -673,7 +724,7 @@ RLD
 
 
 /obj/item/construction/rld
-	name = "rapid-light-device (RLD)"
+	name = "Rapid Lighting Device (RLD)"
 	desc = "A device used to rapidly provide lighting sources to an area. Reload with metal, plasteel, glass or compressed matter cartridges."
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "rld"
@@ -683,6 +734,7 @@ RLD
 	max_matter = 200
 	sheetmultiplier = 5
 	var/mode = LIGHT_MODE
+	slot_flags = ITEM_SLOT_BELT
 	actions_types = list(/datum/action/item_action/pick_color)
 	ammo_sections = 5
 	has_ammobar = TRUE
@@ -856,6 +908,10 @@ RLD
 	desc = "It contains the design for firelock, air alarm, fire alarm, apc circuits and crap power cells."
 	upgrade = RCD_UPGRADE_SIMPLE_CIRCUITS
 
+/obj/item/rcd_upgrade/silo_link
+	desc = "It contains direct silo connection RCD upgrade."
+	upgrade = RCD_UPGRADE_SILO_LINK
+
 /obj/item/construction/plumbing
 	name = "Plumbing Constructor"
 	desc = "An expertly modified RCD outfitted to construct plumbing machinery. Reload with compressed matter cartridges."
@@ -865,6 +921,7 @@ RLD
 	has_ammobar = FALSE
 	matter = 200
 	max_matter = 200
+	slot_flags = ITEM_SLOT_BELT
 
 	///type of the plumbing machine
 	var/blueprint = null

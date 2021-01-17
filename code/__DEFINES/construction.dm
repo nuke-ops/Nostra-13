@@ -106,7 +106,8 @@
 #define RCD_COMPUTER 16
 
 #define RCD_UPGRADE_FRAMES 1
-#define RCD_UPGRADE_SIMPLE_CIRCUITS 2
+#define RCD_UPGRADE_SIMPLE_CIRCUITS	2
+#define RCD_UPGRADE_SILO_LINK 4
 
 //Electrochromatic window defines.
 #define NOT_ELECTROCHROMATIC		0

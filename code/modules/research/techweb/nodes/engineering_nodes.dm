@@ -37,6 +37,15 @@
 	design_ids = list("pico_mani", "super_matter_bin")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 
+/datum/techweb_node/adv_rcd_upgrade
+	id = "adv_rcd_upgrade"
+	display_name = "Advanced RCD designs upgrade"
+	description = "Unlocks new RCD designs."
+	design_ids = list("rcd_upgrade_silo_link")
+	prereq_ids = list("rcd_upgrade", "bluespace_travel")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 25000)
+	export_price = 5000
+
 /datum/techweb_node/adv_power
 	id = "adv_power"
 	display_name = "Advanced Power Manipulation"
