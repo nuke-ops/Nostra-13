@@ -420,8 +420,6 @@
 		/obj/item/reagent_containers/pill,
 		/obj/item/reagent_containers/glass/beaker,
 		/obj/item/reagent_containers/glass/bottle,
-		/obj/item/reagent_containers/glass/waterbottle,
-		/obj/item/reagent_containers/medigel,
 		/obj/item/reagent_containers/syringe,
 		/obj/item/reagent_containers/dropper,
 		/obj/item/reagent_containers/syringe/dart,
@@ -458,7 +456,7 @@
 		/obj/item/reagent_containers/blood,
 		/obj/item/reagent_containers/hypospray/medipen,
 		/obj/item/reagent_containers/food/snacks/deadmouse,
-		/obj/item/reagent_containers/food/snacks/monkeycube,
+		/obj/item/reagent_containers/food/snacks/cube/monkey,
 		/obj/item/reagent_containers/food/snacks/meat/slab
 		))
 

@@ -140,6 +140,15 @@
 /datum/component/storage/PreTransfer()
 	update_actions()
 
+/datum/component/storage/proc/set_holdable(can_hold_list, cant_hold_list)
+	can_hold_description = generate_hold_desc(can_hold_list)
+
+	if (can_hold_list != null)
+		can_hold = string_list(typecacheof(can_hold_list))
+
+	if (cant_hold_list != null)
+		cant_hold = string_list(typecacheof(cant_hold_list))
+
 /datum/component/storage/proc/update_actions()
 	QDEL_NULL(modeswitch_action)
 	if(!isitem(parent) || !allow_quick_gather)
