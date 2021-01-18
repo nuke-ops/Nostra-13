@@ -718,9 +718,13 @@ RLD
 
 /obj/item/construction/rcd/Initialize()
 	. = ..()
+	airlock_electronics = new(src)
+	airlock_electronics.name = "Access Control"
+	airlock_electronics.holder = src
 	GLOB.rcd_list += src
 
 /obj/item/construction/rcd/Destroy()
+	QDEL_NULL(airlock_electronics)
 	GLOB.rcd_list -= src
 	. = ..()
 
@@ -728,18 +732,22 @@ RLD
 	..()
 	var/list/choices = list(
 		"Airlock" = image(icon = 'icons/radials/rcd.dmi', icon_state = "airlock"),
+		"Deconstruct" = image(icon= 'icons/radials/rcd.dmi', icon_state = "delete"),
 		"Grilles & Windows" = image(icon = 'icons/radials/rcd.dmi', icon_state = "grillewindow"),
 		"Floors & Walls" = image(icon = 'icons/radials/rcd.dmi', icon_state = "wallfloor")
 	)
 	if(upgrade & RCD_UPGRADE_FRAMES)
 		choices += list(
-		"Deconstruct" = image(icon= 'icons/radials/rcd.dmi', icon_state = "delete"),
 		"Machine Frames" = image(icon = 'icons/radials/rcd.dmi', icon_state = "machine"),
 		"Computer Frames" = image(icon = 'icons/radials/rcd.dmi', icon_state = "computer_dir"),
 		)
 	if(upgrade & RCD_UPGRADE_SILO_LINK)
 		choices += list(
 		"Silo Link" = image(icon = 'icons/obj/mining.dmi', icon_state = "silo"),
+		)
+	if(upgrade & RCD_UPGRADE_FURNISHING)
+		choices += list(
+		"Furnishing" = image(icon = 'icons/radials/rcd.dmi', icon_state = "chair")
 		)
 	if(mode == RCD_AIRLOCK)
 		choices += list(
