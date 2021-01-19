@@ -213,9 +213,6 @@
 	if(..())
 		return
 
-	B.RCD.change_airlock_access(usr)
-
-
 /datum/action/innate/aux_base/window_type
 	name = "Select Window Glass"
 	button_icon_state = "window_select"
