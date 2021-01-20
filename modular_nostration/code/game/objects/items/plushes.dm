@@ -14,7 +14,7 @@
 	icon_state = "Vergash"
 	attack_verb = list("sucked")
 	gender = FEMALE
-	squeak_override = list('sandcode/sound/interactions/moan_f1.ogg' = 1)
+	squeak_override = list('modular_sand/sound/interactions/moan_f1.ogg' = 1)
 
 /obj/item/toy/plush/rpgsnek
 	name = "RPGsnek plushie"
@@ -23,7 +23,7 @@
 	icon_state = "RPGSnek"
 	attack_verb = list("Licked")
 	gender = MALE
-	squeak_override = list('sandcode/sound/interactions/under_moan_f2.ogg' = 1)
+	squeak_override = list('modular_sand/sound/interactions/under_moan_f2.ogg' = 1)
 
 /obj/item/toy/plush/mothplushie
 	name = "insect plushie"
