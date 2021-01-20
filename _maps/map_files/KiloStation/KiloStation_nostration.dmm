@@ -17581,7 +17581,6 @@
 	dir = 1
 	},
 /obj/machinery/power/apc{
-	area = "/area/engine/break_room";
 	name = "Engineering Foyer APC";
 	pixel_y = -26
 	},
@@ -52602,7 +52601,6 @@
 /area/crew_quarters/fitness/recreation)
 "bGJ" = (
 /obj/machinery/power/apc{
-	area = "/area/maintenance/aft";
 	dir = 8;
 	name = "Aft Maintenance APC";
 	pixel_x = -26
