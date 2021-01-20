@@ -12409,6 +12409,18 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
 /area/janitor)
+"eue" = (
+/obj/item/kirbyplants{
+	icon_state = "plant-04"
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/medbay/central)
 "eus" = (
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
 	dir = 4
@@ -23645,6 +23657,12 @@
 /obj/machinery/atmospherics/pipe/simple/orange/visible,
 /turf/open/floor/engine,
 /area/engine/engineering)
+"lfs" = (
+/obj/item/kirbyplants{
+	icon_state = "plant-08"
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/aft)
 "lfy" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -28893,6 +28911,12 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/carpet,
 /area/quartermaster/miningoffice)
+"old" = (
+/obj/item/kirbyplants{
+	icon_state = "applebush"
+	},
+/turf/open/floor/wood,
+/area/security/courtroom)
 "oln" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
@@ -33154,6 +33178,12 @@
 	},
 /turf/open/floor/carpet,
 /area/crew_quarters/dorms)
+"qHO" = (
+/obj/item/kirbyplants{
+	icon_state = "plant-21"
+	},
+/turf/open/floor/plasteel,
+/area/hallway/secondary/exit/departure_lounge)
 "qIm" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
