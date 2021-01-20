@@ -6,4 +6,3 @@
 	light_color = LIGHT_COLOR_CYAN
 	shuttleId = "cargo_elevator"
 	possible_destinations = "Cargo_First_Deck;Cargo_Second_Deck" 
-	

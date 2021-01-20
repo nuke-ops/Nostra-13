@@ -10,4 +10,4 @@ GLOBAL_DATUM_INIT(default_contained_state, /datum/ui_state/default/contained, ne
 	if(src_object.contains(user))
 		return UI_INTERACTIVE
 	return ..()
-	
+
