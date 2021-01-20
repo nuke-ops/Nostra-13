@@ -592,6 +592,7 @@
 /obj/structure/sign/directions/security{
 	dir = 8;
 	icon_state = "direction_sec";
+	
 	},
 /obj/structure/sign/directions/command{
 	dir = 8;

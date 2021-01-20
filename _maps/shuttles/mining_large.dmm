@@ -5,9 +5,7 @@
 "b" = (
 /obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "c" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/toolbox/emergency,
@@ -19,9 +17,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "d" = (
 /obj/machinery/computer/shuttle/mining,
 /obj/effect/turf_decal/tile/brown,
@@ -30,9 +26,7 @@
 	},
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "e" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/mask/gas,
@@ -45,9 +39,7 @@
 	},
 /obj/item/tank/internals/emergency_oxygen,
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "f" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/tile/brown,
@@ -59,9 +51,7 @@
 	},
 /obj/item/storage/firstaid/regular,
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "g" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -78,9 +68,7 @@
 	},
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "h" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -97,9 +85,7 @@
 	},
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "i" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -116,9 +102,7 @@
 	},
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "j" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/tile/brown{
@@ -139,14 +123,10 @@
 	pixel_y = -8
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "k" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "l" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/tile/brown{
@@ -159,9 +139,7 @@
 /obj/item/folder/yellow,
 /obj/item/pen,
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "m" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -176,9 +154,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "n" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -192,9 +168,7 @@
 	},
 /obj/effect/turf_decal/stripes/white/line,
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "o" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -214,9 +188,7 @@
 	},
 /obj/effect/turf_decal/tile/brown,
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "p" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/tile/brown{
@@ -231,15 +203,11 @@
 	pixel_y = 18
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "q" = (
 /obj/machinery/status_display/evac,
 /turf/closed/wall/mineral/titanium/nodiagonal,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "r" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -255,9 +223,7 @@
 	name = "Mining Shuttle Cockpit"
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "s" = (
 /obj/item/clothing/suit/hazardvest{
 	desc = "A high-visibility lifejacket complete with whistle and slot for oxygen tanks.";
@@ -341,17 +307,13 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "t" = (
 /obj/effect/turf_decal/box/white/corners{
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "u" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -370,9 +332,7 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "v" = (
 /obj/effect/turf_decal/box/white/corners{
 	dir = 4
@@ -385,9 +345,7 @@
 	icon_state = "0-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "w" = (
 /obj/effect/turf_decal/box/white/corners{
 	dir = 8
@@ -397,24 +355,18 @@
 	icon_state = "0-2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "x" = (
 /obj/effect/turf_decal/box/white/corners{
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "y" = (
 /obj/machinery/light/small,
 /obj/effect/turf_decal/box/white/corners,
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "z" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -431,27 +383,18 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "A" = (
 /obj/machinery/light/small,
 /obj/effect/turf_decal/box/white/corners{
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "B" = (
 /obj/effect/turf_decal/box/white/corners,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "C" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
@@ -461,9 +404,7 @@
 /obj/item/wrench,
 /obj/item/flashlight,
 /turf/open/floor/plating,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "D" = (
 /obj/machinery/door/airlock/external{
 	name = "Mining Shuttle External Airlock"
@@ -473,9 +414,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "E" = (
 /obj/machinery/power/apc/highcap{
 	dir = 4;
@@ -488,14 +427,10 @@
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "F" = (
 /turf/closed/wall/mineral/titanium,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "G" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
@@ -503,9 +438,7 @@
 	layer = 2.9
 	},
 /turf/open/floor/plating/airless,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "H" = (
 /obj/structure/sign/warning/vacuum/external{
 	pixel_x = 32
@@ -517,15 +450,11 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "I" = (
 /obj/structure/shuttle/engine/propulsion,
 /turf/open/floor/plating/airless,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 "J" = (
 /obj/machinery/door/airlock/external{
 	name = "Mining Shuttle External Airlock"
@@ -546,9 +475,7 @@
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
-/area/shuttle/mining{
-	requires_power = 1
-	})
+/area/shuttle/mining)
 
 (1,1,1) = {"
 a
