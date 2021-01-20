@@ -3722,7 +3722,6 @@
 #include "modular_nostration\code\modules\mob\living\simple_animal\terror_spiders\spider_types\red.dm"
 #include "modular_nostration\code\modules\mob\living\simple_animal\terror_spiders\spider_types\white.dm"
 #include "modular_nostration\code\modules\surgery\organs\parasites.dm"
-#include "modular_nostration\icons\mob\test.dm"
 // Modular Sand
 #include "modular_sand\code\__DEFINES\language.dm"
 #include "modular_sand\code\__DEFINES\runechat_defines.dm"
