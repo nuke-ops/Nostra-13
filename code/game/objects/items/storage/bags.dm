@@ -234,13 +234,7 @@
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.max_combined_w_class = 100
 	STR.max_items = 100
-	STR.set_holdable(list(
-		/obj/item/reagent_containers/food/snacks/grown,
-		/obj/item/seeds,
-		/obj/item/grown,
-		/obj/item/reagent_containers/honeycomb,
-		/obj/item/disk/plantgene
-		))
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/food/snacks/grown, /obj/item/seeds, /obj/item/grown, /obj/item/reagent_containers/honeycomb, /obj/item/disk/plantgene))
 
 ////////
 
@@ -279,11 +273,7 @@
 	. = ..()
 	var/datum/component/storage/concrete/stack/STR = GetComponent(/datum/component/storage/concrete/stack)
 	STR.allow_quick_empty = TRUE
-	STR.set_holdable(list(/obj/item/stack/sheet),
-		list(
-			/obj/item/stack/sheet/mineral/sandstone,
-			/obj/item/stack/sheet/mineral/wood
-			))
+	STR.can_hold = typecacheof(list(/obj/item/stack/sheet))
 	STR.cant_hold = typecacheof(list(/obj/item/stack/sheet/mineral/sandstone, /obj/item/stack/sheet/mineral/wood))
 	STR.max_combined_stack_amount = 300
 
@@ -320,11 +310,7 @@
 	STR.max_combined_w_class = 21
 	STR.max_items = 7
 	STR.display_numerical_stacking = FALSE
-	STR.set_holdable(list(
-		/obj/item/book,
-		/obj/item/storage/book,
-		/obj/item/spellbook
-		))
+	STR.can_hold = typecacheof(list(/obj/item/book, /obj/item/storage/book, /obj/item/spellbook))
 
 /*
  * Trays - Agouri
@@ -416,15 +402,7 @@
 	STR.storage_flags = STORAGE_FLAGS_VOLUME_DEFAULT
 	STR.max_volume = STORAGE_VOLUME_CHEMISTRY_BAG
 	STR.insert_preposition = "in"
-	STR.set_holdable(list(
-		/obj/item/reagent_containers/pill,
-		/obj/item/reagent_containers/glass/beaker,
-		/obj/item/reagent_containers/glass/bottle,
-		/obj/item/reagent_containers/syringe,
-		/obj/item/reagent_containers/dropper,
-		/obj/item/reagent_containers/syringe/dart,
-		/obj/item/reagent_containers/chem_pack
-		))
+	STR.can_hold = typecacheof(list(/obj/item/reagent_containers/pill, /obj/item/reagent_containers/glass/beaker, /obj/item/reagent_containers/glass/bottle, /obj/item/reagent_containers/syringe/dart, /obj/item/reagent_containers/chem_pack))
 
 /*
  *  Biowaste bag (mostly for xenobiologists)
@@ -445,20 +423,8 @@
 	STR.max_combined_w_class = 200
 	STR.max_items = 25
 	STR.insert_preposition = "in"
-	STR.set_holdable(list(
-		/obj/item/slime_extract,
-		/obj/item/organ,
-		/obj/item/bodypart,
-		/obj/item/reagent_containers/syringe,
-		/obj/item/reagent_containers/dropper,
-		/obj/item/reagent_containers/glass/beaker,
-		/obj/item/reagent_containers/glass/bottle,
-		/obj/item/reagent_containers/blood,
-		/obj/item/reagent_containers/hypospray/medipen,
-		/obj/item/reagent_containers/food/snacks/deadmouse,
-		/obj/item/reagent_containers/food/snacks/cube/monkey,
-		/obj/item/reagent_containers/food/snacks/meat/slab
-		))
+	STR.can_hold = typecacheof(list(/obj/item/slime_extract, /obj/item/reagent_containers/syringe, /obj/item/reagent_containers/glass/beaker, /obj/item/reagent_containers/glass/bottle, /obj/item/reagent_containers/blood, /obj/item/reagent_containers/hypospray/medipen, /obj/item/reagent_containers/food/snacks/deadmouse, /obj/item/reagent_containers/food/snacks/cube, /obj/item/organ, /obj/item/reagent_containers/food/snacks/meat/slab, /obj/item/bodypart))
+	STR.cant_hold = typecacheof(list(/obj/item/organ/brain, /obj/item/organ/liver/cybernetic, /obj/item/organ/heart/cybernetic, /obj/item/organ/lungs/cybernetic, /obj/item/organ/tongue/cybernetic, /obj/item/organ/ears/cybernetic, /obj/item/organ/eyes/robotic, /obj/item/organ/cyberimp))
 
 /obj/item/storage/bag/bio/holding
 	name = "bio bag of holding"

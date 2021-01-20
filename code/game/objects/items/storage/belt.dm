@@ -66,12 +66,7 @@
 		/obj/item/clothing/gloves,
 		/obj/item/holosign_creator,
 		/obj/item/forcefield_projector,
-		/obj/item/assembly/signaler,
-		/obj/item/lightreplacer,
-		/obj/item/construction/rcd,
-		/obj/item/pipe_dispenser,
-		/obj/item/inducer,
-		/obj/item/plunger
+		/obj/item/assembly/signaler
 		))
 	STR.can_hold = can_hold
 
@@ -187,9 +182,6 @@
 		/obj/item/implant,
 		/obj/item/implanter,
 		/obj/item/pinpointer/crew,
-		/obj/item/holosign_creator/medical,
-		/obj/item/construction/plumbing,
-		/obj/item/plunger,
 		/obj/item/reagent_containers/chem_pack,
 		/obj/item/stack/sticky_tape //surgical tape
 		))
@@ -515,8 +507,6 @@
 		/obj/item/multitool,
 		/obj/item/reagent_containers/food/drinks/bottle/molotov,
 		/obj/item/grenade/plastic/c4,
-		/obj/item/reagent_containers/food/snacks/grown/cherry_bomb,
-		/obj/item/reagent_containers/food/snacks/grown/firelemon
 		))
 
 /obj/item/storage/belt/grenade/full/PopulateContents()

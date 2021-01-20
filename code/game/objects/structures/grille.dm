@@ -50,10 +50,10 @@
 		if(RCD_DECONSTRUCT)
 			return list("mode" = RCD_DECONSTRUCT, "delay" = 20, "cost" = 5)
 		if(RCD_WINDOWGRILLE)
-			if(the_rcd.window_glass == RCD_WINDOW_REINFORCED)
+			if(the_rcd.window_type == /obj/structure/window/reinforced/fulltile)
 				return list("mode" = RCD_WINDOWGRILLE, "delay" = 40, "cost" = 12)
-			return list("mode" = RCD_WINDOWGRILLE, "delay" = 20, "cost" = 8)
-
+			else
+				return list("mode" = RCD_WINDOWGRILLE, "delay" = 20, "cost" = 8)
 	return FALSE
 
 /obj/structure/grille/rcd_act(mob/user, var/obj/item/construction/rcd/the_rcd, passed_mode)
@@ -63,14 +63,10 @@
 			qdel(src)
 			return TRUE
 		if(RCD_WINDOWGRILLE)
-			if(!isturf(loc))
-				return FALSE
-			var/turf/T = loc
-			var/window_dir = the_rcd.window_size == RCD_WINDOW_FULLTILE ? FULLTILE_WINDOW_DIR : user.dir
-			if(!valid_window_location(T, window_dir))
+			if(locate(/obj/structure/window) in loc)
 				return FALSE
 			to_chat(user, "<span class='notice'>You construct the window.</span>")
-			var/obj/structure/window/WD = new the_rcd.window_type(T, window_dir)
+			var/obj/structure/window/WD = new the_rcd.window_type(drop_location())
 			WD.setAnchored(TRUE)
 			return TRUE
 	return FALSE

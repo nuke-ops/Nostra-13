@@ -224,8 +224,6 @@
 			return list("mode" = RCD_MACHINE, "delay" = 20, "cost" = 25)
 		if(RCD_COMPUTER)
 			return list("mode" = RCD_COMPUTER, "delay" = 20, "cost" = 25)
-		if(RCD_FURNISHING)
-			return list("mode" = RCD_FURNISHING, "delay" = the_rcd.furnish_delay, "cost" = the_rcd.furnish_cost)
 	return FALSE
 
 /turf/open/floor/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
@@ -239,17 +237,17 @@
 				return FALSE
 			to_chat(user, "<span class='notice'>You build an airlock.</span>")
 			var/obj/machinery/door/airlock/A = new the_rcd.airlock_type(src)
-			A.electronics = new /obj/item/electronics/airlock(A)
-			if(the_rcd.airlock_electronics)
-				A.electronics.accesses = the_rcd.airlock_electronics.accesses.Copy()
-				A.electronics.one_access = the_rcd.airlock_electronics.one_access
-				A.electronics.unres_sides = the_rcd.airlock_electronics.unres_sides
+
+			A.electronics = new/obj/item/electronics/airlock(A)
+
+			if(the_rcd.conf_access)
+				A.electronics.accesses = the_rcd.conf_access.Copy()
+			A.electronics.one_access = the_rcd.use_one_access
+
 			if(A.electronics.one_access)
 				A.req_one_access = A.electronics.accesses
 			else
 				A.req_access = A.electronics.accesses
-			if(A.electronics.unres_sides)
-				A.unres_sides = A.electronics.unres_sides
 			A.autoclose = TRUE
 			return TRUE
 		if(RCD_DECONSTRUCT)
@@ -277,9 +275,9 @@
 				return FALSE
 			var/obj/structure/frame/computer/C = new(src)
 			C.anchored = TRUE
-			C.state = 1
 			C.setDir(the_rcd.computer_dir)
 			return TRUE
+
 	return FALSE
 
 /turf/open/floor/material

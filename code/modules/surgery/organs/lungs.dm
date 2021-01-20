@@ -4,10 +4,10 @@
 	name = "lungs"
 	desc = "Looking at them makes you start manual breathing."
 	icon_state = "lungs"
-	w_class = WEIGHT_CLASS_SMALL
 	zone = BODY_ZONE_CHEST
 	slot = ORGAN_SLOT_LUNGS
 	gender = PLURAL
+	w_class = WEIGHT_CLASS_NORMAL
 
 	var/failed = FALSE
 	var/operated = FALSE	//whether we can still have our damages fixed through surgery
