@@ -3,7 +3,7 @@
 	real_name = "Unknown"
 	icon = 'icons/mob/human.dmi'
 	icon_state = "caucasian_m"
-	appearance_flags = KEEP_TOGETHER|TILE_BOUND|PIXEL_SCALE
+	SET_APPEARANCE_FLAGS(KEEP_TOGETHER|TILE_BOUND|PIXEL_SCALE)
 
 /mob/living/carbon/human/Initialize()
 	add_verb(src, /mob/living/proc/mob_sleep)
@@ -546,7 +546,7 @@
 											return
 							to_chat(usr, "<span class='warning'>Unable to locate a data core entry for this person.</span>")
 
-	if(href_list["lookitem"]) //It's for the show item at sandcode/code/modules/mob/living/carbon/show.dm
+	if(href_list["lookitem"]) //It's for the show item at modular_sand/code/modules/mob/living/carbon/show.dm
 		var/obj/item/I = locate(href_list["lookitem"])
 		if(I in view(4))
 			src.examinate(I)
@@ -1075,7 +1075,7 @@
 			return
 
 	stop_pulling()
-	riding_datum.handle_vehicle_layer()
+	riding_datum.handle_vehicle_layer(dir)
 	riding_datum.fireman_carrying = fireman
 	. = ..(target, force, check_loc)
 
