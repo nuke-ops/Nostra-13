@@ -299,6 +299,8 @@ GLOBAL_VAR(atmos_extools_initialized) // this must be an uninitialized (null) on
 		if(QUANTIZE(CACHE_GAS[id]) <= 0)\
 			CACHE_GAS -= id;\
 	}
+//Use this to see if a turf is fully blocked or not, think windows or firelocks. Fails with 1x1 non full tile windows, but it's not worth the cost.
+#define TURF_SHARES(T) (LAZYLEN(T.atmos_adjacent_turfs))
 
 GLOBAL_LIST_INIT(pipe_paint_colors, list(
 		"amethyst" = rgb(130,43,255), //supplymain

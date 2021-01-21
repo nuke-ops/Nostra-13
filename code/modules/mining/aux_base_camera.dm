@@ -213,17 +213,14 @@
 	if(..())
 		return
 
-	B.RCD.change_airlock_access(usr)
-
-
 /datum/action/innate/aux_base/window_type
-	name = "Select Window Type"
+	name = "Select Window Glass"
 	button_icon_state = "window_select"
 
 /datum/action/innate/aux_base/window_type/Activate()
 	if(..())
 		return
-	B.RCD.toggle_window_type(usr)
+	B.RCD.toggle_window_glass()
 
 /datum/action/innate/aux_base/place_fan
 	name = "Place Tiny Fan"
