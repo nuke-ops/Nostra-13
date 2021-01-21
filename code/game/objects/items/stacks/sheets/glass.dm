@@ -41,6 +41,7 @@ GLOBAL_LIST_INIT(glass_recipes, list ( \
 	material_type = /datum/material/glass
 	point_value = 1
 	tableVariant = /obj/structure/table/glass
+	matter_amount = 4
 	shard_type = /obj/item/shard
 
 /obj/item/stack/sheet/glass/suicide_act(mob/living/carbon/user)
@@ -164,6 +165,7 @@ GLOBAL_LIST_INIT(reinforced_glass_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/rglass
 	grind_results = list(/datum/reagent/silicon = 20, /datum/reagent/iron = 10)
 	point_value = 4
+	matter_amount = 6
 	shard_type = /obj/item/shard
 
 /obj/item/stack/sheet/rglass/attackby(obj/item/W, mob/user, params)
@@ -211,6 +213,7 @@ GLOBAL_LIST_INIT(prglass_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/plasmarglass
 	grind_results = list(/datum/reagent/silicon = 20, /datum/reagent/toxin/plasma = 10, /datum/reagent/iron = 10)
 	point_value = 23
+	matter_amount = 8
 	shard_type = /obj/item/shard/plasma
 
 /obj/item/stack/sheet/plasmarglass/get_main_recipes()
