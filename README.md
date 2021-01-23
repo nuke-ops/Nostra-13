@@ -1,8 +1,8 @@
-## [No]St[r]ation
+## Nostration-13
 Based and maintained from Sandstorm.
 
-[![Docker Build](https://github.com/nuke-ops/Nostration-13/workflows/Docker%20Build/badge.svg?branch=master)
-[![CI Suite](https://github.com/nuke-ops/Nostration-13/workflows/CI%20Suite/badge.svg?branch=master)
+![Docker Build](https://github.com/nuke-ops/Nostration-13/workflows/Docker%20Build/badge.svg?branch=master)
+![CI Suite](https://github.com/nuke-ops/Nostration-13/workflows/CI%20Suite/badge.svg?branch=master)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/nuke-ops/Nostration-13.svg)](http://isitmaintained.com/project/nuke-ops/Nostration-13 "Percentage of issues still open")
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/nuke-ops/Nostration-13.svg)](http://isitmaintained.com/project/nuke-ops/Nostration-13 "Average time to resolve an issue")
 <img alt="Discord" src="https://img.shields.io/discord/667237704127479829?label=Discord">
