@@ -922,7 +922,7 @@
 /area/security/prison)
 "acb" = (
 /obj/structure/table,
-/obj/item/storage/box/dice,
+/obj/item/storage/dice,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "acc" = (
@@ -12469,7 +12469,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/dorms)
 "axL" = (
-/obj/item/caution,
+/obj/item/clothing/suit/caution,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -14487,6 +14487,7 @@
 	dir = 9
 	},
 /obj/effect/turf_decal/stripes/line,
+/obj/structure/closet/radiation,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "aBM" = (
@@ -14495,6 +14496,7 @@
 	icon_state = "1-8"
 	},
 /obj/effect/turf_decal/stripes/line,
+/obj/structure/closet/radiation,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "aBN" = (
@@ -14502,6 +14504,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
+/obj/structure/closet/radiation,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "aBO" = (
@@ -15591,7 +15594,7 @@
 /area/crew_quarters/dorms)
 "aDZ" = (
 /obj/structure/table,
-/obj/item/storage/box/dice,
+/obj/item/storage/dice,
 /turf/open/floor/plasteel,
 /area/crew_quarters/dorms)
 "aEa" = (
@@ -21170,7 +21173,7 @@
 /area/crew_quarters/locker)
 "aPI" = (
 /obj/structure/table,
-/obj/item/storage/box/dice,
+/obj/item/storage/dice,
 /turf/open/floor/plasteel,
 /area/crew_quarters/locker)
 "aPJ" = (
@@ -36811,7 +36814,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/maintenance/starboard)
+/area/engine/break_room)
 "btA" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
@@ -37503,11 +37506,9 @@
 /turf/open/floor/plasteel/dark/corner,
 /area/hallway/primary/starboard)
 "bvc" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/turf/closed/wall/r_wall,
-/area/maintenance/starboard)
+/obj/machinery/portable_atmospherics/pump,
+/turf/open/floor/plating,
+/area/engine/engineering)
 "bvd" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -37526,7 +37527,7 @@
 	},
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plating,
-/area/maintenance/starboard)
+/area/engine/break_room)
 "bvf" = (
 /obj/item/radio/intercom{
 	freerange = 1;
@@ -37579,7 +37580,7 @@
 	dir = 10
 	},
 /turf/open/floor/plasteel/dark,
-/area/maintenance/starboard)
+/area/engine/break_room)
 "bvh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
@@ -37590,7 +37591,7 @@
 	dir = 6
 	},
 /turf/open/floor/plasteel/dark,
-/area/maintenance/starboard)
+/area/engine/break_room)
 "bvi" = (
 /obj/effect/turf_decal/stripes/corner{
 	dir = 1
@@ -41076,7 +41077,7 @@
 /obj/machinery/light,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plating,
-/area/maintenance/starboard)
+/area/engine/break_room)
 "bCL" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
@@ -42471,7 +42472,7 @@
 	dir = 10
 	},
 /obj/structure/table/wood/poker,
-/obj/item/storage/box/dice,
+/obj/item/storage/dice,
 /turf/open/floor/wood,
 /area/crew_quarters/bar)
 "bFt" = (
@@ -80556,7 +80557,7 @@
 /obj/machinery/rnd/production/protolathe/department/engineering,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plating,
-/area/maintenance/starboard)
+/area/engine/break_room)
 "dBJ" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -122783,7 +122784,7 @@ aFs
 aGT
 axY
 aJm
-aJu
+bvc
 aMb
 fdr
 axY
@@ -122806,7 +122807,7 @@ bmY
 bhT
 bhT
 bhT
-bvc
+bvm
 bxc
 bHs
 bAA
