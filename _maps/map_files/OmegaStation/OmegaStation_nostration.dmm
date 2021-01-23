@@ -25497,7 +25497,7 @@
 	name = "Port Solar Array"
 	},
 /turf/open/floor/plasteel/airless/solarpanel,
-/area/space/nearstation)
+/area/solar/starboard/aft)
 "aQe" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -25507,7 +25507,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
-/area/space/nearstation)
+/area/solar/starboard/aft)
 "aQf" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -25517,7 +25517,7 @@
 	name = "Port Solar Array"
 	},
 /turf/open/floor/plasteel/airless/solarpanel,
-/area/space/nearstation)
+/area/solar/starboard/aft)
 "aQg" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -26171,7 +26171,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
-/area/space/nearstation)
+/area/solar/starboard/aft)
 "aRm" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -29238,7 +29238,7 @@
 "aWW" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "aWX" = (
 /obj/machinery/door/airlock/external{
 	name = "Solar Maintenance";
@@ -29249,7 +29249,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "aWY" = (
 /obj/structure/cable/white{
 	icon_state = "0-4"
@@ -29326,7 +29326,7 @@
 /obj/structure/cable,
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
-/area/space/nearstation)
+/area/solar/starboard/aft)
 "aXd" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -30015,7 +30015,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "aYq" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer/on{
 	dir = 1
@@ -30097,14 +30097,14 @@
 	icon_state = "0-4"
 	},
 /turf/open/space/basic,
-/area/space/nearstation)
+/area/solar/starboard/aft)
 "aYw" = (
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
-/area/space/nearstation)
+/area/solar/starboard/aft)
 "aYx" = (
 /obj/structure/chair/comfy/brown,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
@@ -30131,7 +30131,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/space/basic,
-/area/space/nearstation)
+/area/solar/starboard/aft)
 "aYA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/broken,
@@ -30143,7 +30143,7 @@
 	icon_state = "0-8"
 	},
 /turf/open/floor/plasteel/airless/solarpanel,
-/area/space/nearstation)
+/area/solar/starboard/aft)
 "aYC" = (
 /obj/machinery/telecomms/bus/preset_one/birdstation,
 /obj/machinery/power/apc{
@@ -30691,7 +30691,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "aZz" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -30705,7 +30705,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
-/area/space/nearstation)
+/area/solar/starboard/aft)
 "aZB" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
@@ -31371,7 +31371,7 @@
 /area/medical/medbay/zone3)
 "baB" = (
 /turf/closed/wall/r_wall,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "baC" = (
 /obj/structure/cable/white{
 	icon_state = "2-4"
@@ -31387,7 +31387,7 @@
 	pixel_y = 3
 	},
 /turf/open/floor/plating,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "baD" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -31396,14 +31396,14 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "baE" = (
 /obj/machinery/power/smes,
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "baF" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -31416,7 +31416,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
-/area/space/nearstation)
+/area/solar/starboard/aft)
 "baG" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/tile/blue{
@@ -31839,7 +31839,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "bbs" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -31848,7 +31848,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "bbt" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -31860,7 +31860,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "bbu" = (
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/stripes/line{
@@ -32606,19 +32606,19 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "bcN" = (
 /obj/structure/cable/white{
 	icon_state = "1-8"
 	},
 /turf/open/floor/plating,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "bcO" = (
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
 /turf/open/floor/plating,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "bcP" = (
 /obj/machinery/power/solar_control{
 	dir = 1;
@@ -32629,7 +32629,7 @@
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating,
-/area/maintenance/solars/aux/starboard/aft)
+/area/maintenance/solars/starboard/aft)
 "bcQ" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/light/small{
@@ -33949,7 +33949,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
-/area/space/nearstation)
+/area/solar/starboard/aft)
 "bfg" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
@@ -36561,7 +36561,7 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating/airless,
-/area/asteroid/nearstation)
+/area/engine/engineering)
 "bjz" = (
 /obj/structure/chair/office/dark{
 	dir = 1
@@ -101642,8 +101642,8 @@ sdX
 pZU
 aac
 gvm
+aad
 aYr
-eSL
 aad
 eGm
 eGm
@@ -101899,8 +101899,8 @@ sdX
 pZU
 aac
 aad
-aYr
 aad
+aYr
 aad
 eGm
 bbu
@@ -102156,8 +102156,8 @@ sdX
 pZU
 aac
 aad
-aYr
 aad
+aYr
 eGm
 eGm
 bbH
@@ -102413,8 +102413,8 @@ azb
 azb
 aac
 aad
-aYr
 aad
+eSL
 eGm
 bbK
 qnA
@@ -102670,8 +102670,8 @@ lMi
 dyg
 aac
 aac
-aYr
 aad
+aYr
 eGm
 eGm
 bbL
@@ -102927,8 +102927,8 @@ azb
 azb
 aac
 aac
-aYr
 aad
+aYr
 aad
 eGm
 bbP
@@ -103184,8 +103184,8 @@ aac
 aac
 aac
 aac
+aad
 aYr
-eSL
 aad
 eGm
 eGm
@@ -104984,7 +104984,7 @@ aRl
 aRl
 aRl
 aXc
-abL
+aWp
 aZA
 baF
 baF
@@ -105241,7 +105241,7 @@ aQf
 aQf
 aQf
 aaa
-abL
+aWp
 aaa
 aQf
 aQf

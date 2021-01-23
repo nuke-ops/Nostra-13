@@ -1700,7 +1700,7 @@
 	},
 /obj/effect/turf_decal/tile/brown,
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "ir" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /obj/effect/turf_decal/tile/neutral{
@@ -2037,7 +2037,7 @@
 	name = "QM Safety"
 	},
 /turf/open/floor/plating,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "jR" = (
 /obj/structure/cable,
 /obj/machinery/power/tracker,
@@ -2194,7 +2194,7 @@
 /obj/machinery/power/deck_relay,
 /obj/structure/cable/white,
 /turf/closed/wall/r_wall,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "kK" = (
 /obj/machinery/light/small{
 	dir = 8;
@@ -2301,7 +2301,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "lf" = (
 /obj/item/shard,
 /obj/effect/decal/cleanable/glass,
@@ -3134,7 +3134,7 @@
 	},
 /obj/machinery/light,
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "oN" = (
 /obj/structure/chair{
 	dir = 4
@@ -3215,7 +3215,7 @@
 	dir = 6
 	},
 /turf/open/floor/plating,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "pj" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -3820,7 +3820,7 @@
 /area/crew_quarters/dorms)
 "rT" = (
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "rU" = (
 /turf/closed/wall,
 /area/crew_quarters/dorms)
@@ -4714,7 +4714,7 @@
 	name = "QM Safety"
 	},
 /turf/open/floor/plating,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "wn" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Departure Lounge"
@@ -4994,7 +4994,7 @@
 "xs" = (
 /obj/structure/chair/office/dark,
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "xt" = (
 /obj/structure/transit_tube/diagonal/topleft,
 /obj/structure/lattice/catwalk,
@@ -5230,7 +5230,7 @@
 	name = "QM Safety"
 	},
 /turf/open/floor/plating,
-/area/quartermaster)
+/area/quartermaster/qm)
 "yK" = (
 /obj/machinery/power/port_gen/pacman,
 /obj/effect/turf_decal/delivery,
@@ -5485,7 +5485,7 @@
 	name = "QM Safety"
 	},
 /turf/open/floor/plating,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "zV" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -6131,7 +6131,7 @@
 	dir = 9
 	},
 /turf/closed/wall/r_wall,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "CR" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8
@@ -6147,7 +6147,7 @@
 	icon_state = "plant-05"
 	},
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "CU" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
@@ -6387,7 +6387,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "Eg" = (
 /obj/effect/turf_decal/delivery,
 /obj/structure/chair/sofa/corp/left{
@@ -6748,7 +6748,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "FA" = (
 /obj/structure/flora/tree/jungle/small,
 /turf/open/floor/grass,
@@ -7088,7 +7088,7 @@
 /area/hydroponics)
 "Ha" = (
 /turf/closed/wall/r_wall,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "He" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plating,
@@ -7272,7 +7272,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "HO" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
@@ -7800,7 +7800,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "Ko" = (
 /obj/structure/table/wood,
 /obj/item/clothing/gloves/color/latex,
@@ -8647,7 +8647,7 @@
 	},
 /obj/effect/turf_decal/tile/brown,
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "Oh" = (
 /obj/effect/turf_decal/vg_decals/numbers/eight,
 /obj/effect/decal/cleanable/dirt,
@@ -9109,7 +9109,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "Qs" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt,
@@ -9588,7 +9588,7 @@
 "So" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "Sp" = (
 /obj/effect/decal/cleanable/glass,
 /mob/living/simple_animal/hostile/hivebot/rapid,
@@ -9706,7 +9706,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "SN" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
@@ -9896,7 +9896,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "TE" = (
 /obj/structure/barricade/wooden,
 /obj/effect/decal/cleanable/dirt,
@@ -10161,7 +10161,7 @@
 	name = "QM Safety"
 	},
 /turf/open/floor/plating,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "UY" = (
 /obj/structure/lattice/catwalk,
 /obj/item/stack/marker_beacon{
@@ -10552,7 +10552,7 @@
 	},
 /obj/effect/turf_decal/tile/brown,
 /turf/open/floor/plasteel,
-/area/quartermaster/office)
+/area/quartermaster/qm)
 "WN" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
