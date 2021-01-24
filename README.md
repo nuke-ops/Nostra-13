@@ -7,7 +7,10 @@ Based and maintained from Sandstorm.
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/nuke-ops/Nostration-13.svg)](http://isitmaintained.com/project/nuke-ops/Nostration-13 "Average time to resolve an issue")
 <img alt="Discord" src="https://img.shields.io/discord/667237704127479829?label=Discord">
 
-[![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/pretty-risque.svg)](https://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com) [![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
+[![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](https://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/pretty-risque.svg)](https://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com)
+[![forinfinityandbyond](https://user-images.githubusercontent.com/5211576/29499758-4efff304-85e6-11e7-8267-62919c3688a9.gif)](https://www.reddit.com/r/SS13/comments/5oplxp/what_is_the_main_problem_with_byond_as_an_engine/dclbu1a)
 
 **Nostration Information**
 * **Website:** http://nukeops.com/ss13
@@ -15,6 +18,7 @@ Based and maintained from Sandstorm.
 * **Forums:** Not yet?
 * **Ban Appeals:** https://discord.gg/MDvjpNJdVj
 * **Discord:**  [Here](https://discord.gg/bxgeRPq)
+* **Codedocs:** https://nuke-ops.github.io/Nostration-13/
 
 **(Upstream) Sandstorm Information**
 * **Code:** <https://github.com/SandPoot/Sandstorm-Station-13>
