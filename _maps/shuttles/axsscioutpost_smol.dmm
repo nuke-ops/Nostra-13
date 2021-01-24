@@ -1,19 +1,19 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /turf/closed/wall/mineral/titanium,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 "b" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 "c" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 "d" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -23,7 +23,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 "h" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -35,7 +35,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 "j" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -47,7 +47,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 "q" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -65,7 +65,7 @@
 	shuttleId = "sciout_access"
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 "s" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -78,15 +78,15 @@
 	},
 /obj/structure/shuttle/engine/heater,
 /turf/open/floor/plating,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 "x" = (
 /obj/structure/shuttle/engine/propulsion/burst,
 /turf/open/floor/plating,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 "E" = (
 /obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 "G" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -103,16 +103,16 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 "M" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 "N" = (
 /turf/open/floor/plasteel/dark,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 "V" = (
 /obj/machinery/door/airlock/titanium/glass,
 /obj/structure/fans/tiny,
@@ -126,7 +126,7 @@
 	width = 7
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 "Y" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -145,7 +145,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/shuttle/custom)
+/area/shuttle/axsscioutpost_smol)
 
 (1,1,1) = {"
 a
