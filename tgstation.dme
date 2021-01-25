@@ -3671,7 +3671,6 @@
 #include "modular_citadel\code\modules\reagents\chemistry\recipes\fermi.dm"
 #include "modular_citadel\code\modules\reagents\objects\clothes.dm"
 #include "modular_citadel\code\modules\reagents\objects\items.dm"
-// Modular Nostration
 #include "modular_nostration\code\_DEFINES\DNA.dm"
 #include "modular_nostration\code\datums\ai_laws.dm"
 #include "modular_nostration\code\datums\saymode.dm"
@@ -3722,7 +3721,6 @@
 #include "modular_nostration\code\modules\mob\living\simple_animal\terror_spiders\spider_types\white.dm"
 #include "modular_nostration\code\modules\shuttle\elevator.dm"
 #include "modular_nostration\code\modules\surgery\organs\parasites.dm"
-// Modular Sand
 #include "modular_sand\code\__DEFINES\language.dm"
 #include "modular_sand\code\__DEFINES\runechat_defines.dm"
 #include "modular_sand\code\__DEFINES\status_effects.dm"
@@ -3956,4 +3954,6 @@
 #include "modular_sand\code\modules\uplink\uplink_roles.dm"
 #include "modular_sand\code\modules\vending\clothesmate.dm"
 #include "modular_sand\tools\Redirector\textprocs.dm"
+#include "modular_Nostration\code\controllers\subsystem\bluespace_locker.dm"
+#include "modular_Nostration\code\game\area\Space_Station_13_areas.dm"
 // END_INCLUDE
