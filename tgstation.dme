@@ -3601,6 +3601,7 @@
 #include "interface\menu.dm"
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
+// Modular Citadel
 #include "modular_citadel\code\datums\components\souldeath.dm"
 #include "modular_citadel\code\datums\status_effects\chems.dm"
 #include "modular_citadel\code\game\objects\cit_screenshake.dm"
@@ -3673,12 +3674,14 @@
 #include "modular_citadel\code\modules\reagents\objects\items.dm"
 // Modular Nostration
 #include "modular_nostration\code\_DEFINES\DNA.dm"
+#include "modular_nostration\code\controllers\subsystem\bluespace_locker.dm"
 #include "modular_nostration\code\datums\ai_laws.dm"
 #include "modular_nostration\code\datums\saymode.dm"
 #include "modular_nostration\code\datums\shuttles.dm"
 #include "modular_nostration\code\game\area\Space_Station_13_areas.dm"
 #include "modular_nostration\code\game\gamemodes\dynamic\dynamic_rulesets_midround.dm"
 #include "modular_nostration\code\game\objects\items\plushes.dm"
+#include "modular_nostration\code\game\objects\structures\crates_lockers\closets\bluespace_locker.dm"
 #include "modular_nostration\code\game\turfs\openspace\openspace.dm"
 #include "modular_nostration\code\game\turfs\simulated\hull.dm"
 #include "modular_nostration\code\modules\antagonists\terror_spiders\terror_spiders.dm"
