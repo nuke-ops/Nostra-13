@@ -1,4 +1,3 @@
-
 /obj/structure/closet/bluespace
 	name = "bluespace locker"
 

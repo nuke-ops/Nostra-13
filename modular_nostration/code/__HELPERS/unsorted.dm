@@ -1,4 +1,3 @@
-
 /proc/get_turf_global(atom/A, recursion_limit = 5)
 	var/turf/T = get_turf(A)
 	if(!T)

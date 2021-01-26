@@ -3674,12 +3674,14 @@
 #include "modular_citadel\code\modules\reagents\objects\items.dm"
 // Modular Nostration
 #include "modular_nostration\code\_DEFINES\DNA.dm"
+#include "modular_nostration\code\controllers\subsystem\bluespace_locker.dm"
 #include "modular_nostration\code\datums\ai_laws.dm"
 #include "modular_nostration\code\datums\saymode.dm"
 #include "modular_nostration\code\datums\shuttles.dm"
 #include "modular_nostration\code\game\area\Space_Station_13_areas.dm"
 #include "modular_nostration\code\game\gamemodes\dynamic\dynamic_rulesets_midround.dm"
 #include "modular_nostration\code\game\objects\items\plushes.dm"
+#include "modular_nostration\code\game\objects\structures\crates_lockers\closets\bluespace_locker.dm"
 #include "modular_nostration\code\game\turfs\openspace\openspace.dm"
 #include "modular_nostration\code\game\turfs\simulated\hull.dm"
 #include "modular_nostration\code\modules\antagonists\terror_spiders\terror_spiders.dm"
@@ -3957,6 +3959,4 @@
 #include "modular_sand\code\modules\uplink\uplink_roles.dm"
 #include "modular_sand\code\modules\vending\clothesmate.dm"
 #include "modular_sand\tools\Redirector\textprocs.dm"
-#include "modular_Nostration\code\controllers\subsystem\bluespace_locker.dm"
-#include "modular_Nostration\code\game\area\Space_Station_13_areas.dm"
 // END_INCLUDE
