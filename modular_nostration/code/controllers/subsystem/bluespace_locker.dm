@@ -1,4 +1,3 @@
-
 SUBSYSTEM_DEF(bluespace_locker)
 	name = "Bluespace Locker"
 	flags = SS_NO_FIRE

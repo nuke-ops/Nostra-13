@@ -3693,6 +3693,12 @@
 	},
 /turf/open/floor/plasteel,
 /area/centcom/control)
+"jA" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien20";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "jB" = (
 /obj/structure/noticeboard{
 	dir = 8;
@@ -6827,6 +6833,12 @@
 	},
 /turf/open/indestructible/hotelwood,
 /area/centcom/holding)
+"pE" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien21";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "pG" = (
 /obj/machinery/biogenerator,
 /obj/effect/turf_decal/tile/green{
@@ -6995,6 +7007,12 @@
 /obj/effect/landmark/ai_multicam_room,
 /turf/open/ai_visible,
 /area/ai_multicam_room)
+"pX" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien13";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "pZ" = (
 /obj/machinery/washing_machine,
 /turf/open/floor/plasteel/freezer,
@@ -7355,6 +7373,12 @@
 	},
 /turf/open/floor/plating,
 /area/syndicate_mothership)
+"qL" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien14";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "qQ" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Administrative Office";
@@ -7465,6 +7489,12 @@
 /obj/item/pen/fountain,
 /turf/open/indestructible/hotelwood,
 /area/centcom/holding)
+"rj" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien2";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "rk" = (
 /obj/structure/table/reinforced,
 /obj/item/book/manual/wiki/security_space_law,
@@ -11730,6 +11760,12 @@
 	},
 /turf/open/indestructible/hotelwood,
 /area/centcom/holding)
+"Br" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien17";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "Bu" = (
 /obj/structure/table/wood,
 /obj/item/paper_bin,
@@ -13665,6 +13701,9 @@
 "Fh" = (
 /turf/open/floor/plasteel/cafeteria,
 /area/centcom/holding)
+"Fi" = (
+/turf/open/space/basic,
+/area/bluespace_locker)
 "Fj" = (
 /obj/structure/closet/crate/bin,
 /turf/open/indestructible/hotelwood,
@@ -13812,6 +13851,12 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/tdome/tdomeobserve)
+"FC" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien24";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "FD" = (
 /obj/machinery/shower{
 	dir = 4
@@ -14387,6 +14432,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/tdome/tdomeobserve)
+"GN" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien3";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "GO" = (
 /obj/structure/table/wood,
 /obj/structure/sign/plaques/golden{
@@ -14887,6 +14938,12 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/tdome/tdomeobserve)
+"HL" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien5";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "HM" = (
 /obj/structure/chair,
 /obj/effect/landmark/thunderdome/observe,
@@ -15948,6 +16005,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/tdome/tdomeadmin)
+"JW" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien18";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "JX" = (
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/stripes/line{
@@ -16889,6 +16952,12 @@
 "MI" = (
 /turf/open/floor/plating,
 /area/syndicate_mothership)
+"MK" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien8";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "ML" = (
 /obj/structure/table/wood/fancy,
 /turf/open/indestructible/hotelwood,
@@ -17087,6 +17156,12 @@
 	},
 /turf/open/floor/plasteel,
 /area/centcom/control)
+"NI" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien10";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "NP" = (
 /obj/machinery/button/crematorium{
 	id = "crematoriumGhostDojo";
@@ -17149,10 +17224,22 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/syndicate_mothership)
+"Od" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien23";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "Oe" = (
 /obj/machinery/deepfryer,
 /turf/open/floor/plasteel/cafeteria,
 /area/syndicate_mothership)
+"Of" = (
+/turf/open/indestructible{
+	icon = 'icons/turf/walls.dmi';
+	icon_state = "alien22"
+	},
+/area/bluespace_locker)
 "Oh" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -17499,6 +17586,12 @@
 /obj/effect/turf_decal/tile/green,
 /turf/open/floor/holofloor,
 /area/holodeck/rec_center/firingrange)
+"PW" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien16";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "PX" = (
 /obj/machinery/computer/arcade/battle,
 /turf/open/indestructible/hotelwood,
@@ -17751,6 +17844,12 @@
 /obj/machinery/washing_machine,
 /turf/open/floor/mineral/titanium/blue,
 /area/centcom/holding)
+"Rr" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien19";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "Ru" = (
 /obj/structure/table,
 /obj/item/storage/backpack/duffelbag/med/surgery,
@@ -17760,6 +17859,11 @@
 /obj/effect/turf_decal/loading_area,
 /turf/open/floor/plating,
 /area/syndicate_mothership)
+"RC" = (
+/turf/closed/indestructible/abductor{
+	opacity = 0
+	},
+/area/bluespace_locker)
 "RD" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
@@ -17770,6 +17874,9 @@
 	},
 /turf/open/floor/holofloor,
 /area/holodeck/rec_center/basketball)
+"RJ" = (
+/turf/open/floor/plasteel/dark,
+/area/bluespace_locker)
 "RM" = (
 /obj/structure/chair/comfy/brown{
 	color = "#596479"
@@ -17798,6 +17905,12 @@
 	},
 /turf/open/indestructible/hotelwood,
 /area/centcom/holding)
+"RV" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien11";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "RZ" = (
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
@@ -18027,6 +18140,12 @@
 /obj/structure/window/reinforced/fulltile,
 /turf/open/indestructible/hotelwood,
 /area/centcom/holding)
+"Tx" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien7";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "Tz" = (
 /obj/effect/light_emitter,
 /turf/open/floor/plating/asteroid/snow/airless,
@@ -18131,6 +18250,12 @@
 	},
 /turf/open/indestructible/hotelwood,
 /area/centcom/holding)
+"Uf" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien4";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "Ug" = (
 /obj/machinery/door/poddoor/shuttledock{
 	checkdir = 1;
@@ -18200,6 +18325,12 @@
 	},
 /turf/open/indestructible/hotelwood,
 /area/centcom/holding)
+"Ut" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien15";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "Uu" = (
 /obj/machinery/light{
 	dir = 8
@@ -18341,6 +18472,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/centcom/supplypod/loading/two)
+"Ve" = (
+/obj/machinery/light/small{
+	brightness = 3;
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/bluespace_locker)
 "Vf" = (
 /obj/structure/table,
 /obj/item/assembly/flash/handheld,
@@ -18837,6 +18975,12 @@
 /obj/structure/dresser,
 /turf/open/floor/plasteel/dark,
 /area/syndicate_mothership)
+"Yk" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien6";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "Ym" = (
 /obj/machinery/computer/arcade/orion_trail,
 /turf/open/indestructible/hotelwood,
@@ -18896,6 +19040,12 @@
 /obj/structure/closet/crate,
 /turf/open/floor/plasteel/cafeteria,
 /area/centcom/holding)
+"YL" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien12";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "YN" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -18974,6 +19124,12 @@
 /obj/structure/bed/dogbed,
 /turf/open/indestructible/hotelwood,
 /area/centcom/holding)
+"Zp" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/bluespace_locker)
 "Zr" = (
 /obj/machinery/light,
 /turf/open/floor/plasteel/dark,
@@ -19007,6 +19163,12 @@
 /obj/effect/landmark/start/nukeop_leader,
 /turf/open/floor/wood,
 /area/syndicate_mothership)
+"ZA" = (
+/turf/closed/indestructible/abductor{
+	icon_state = "alien9";
+	opacity = 0
+	},
+/area/bluespace_locker)
 "ZF" = (
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
@@ -73404,7 +73566,7 @@ aa
 aa
 aa
 aa
-ad
+aa
 aa
 aa
 aa
@@ -78002,32 +78164,32 @@ fU
 fV
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -78259,32 +78421,32 @@ ab
 ab
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -78516,32 +78678,32 @@ fF
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -78773,32 +78935,32 @@ fz
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -79030,32 +79192,32 @@ fA
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -79287,32 +79449,32 @@ fz
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -79544,32 +79706,32 @@ fz
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -79801,32 +79963,32 @@ fz
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -80058,32 +80220,32 @@ fz
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -80315,32 +80477,32 @@ fz
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+PW
+qL
+YL
+NI
+Yk
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -80572,32 +80734,32 @@ fz
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+jA
+Br
+RJ
+Ve
+RJ
+Tx
+RC
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -80829,32 +80991,32 @@ fz
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+pE
+RJ
+RJ
+RJ
+RJ
+RJ
+rj
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -81086,32 +81248,32 @@ fz
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Of
+RJ
+RJ
+RJ
+RJ
+RJ
+GN
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -81343,32 +81505,32 @@ fz
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Od
+RJ
+RJ
+RJ
+RJ
+RJ
+Uf
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -81600,32 +81762,32 @@ fA
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+FC
+JW
+RJ
+Zp
+RJ
+MK
+HL
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -81857,32 +82019,32 @@ fz
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Rr
+Ut
+pX
+RV
+ZA
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -82114,32 +82276,32 @@ fF
 ab
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -82371,32 +82533,32 @@ ab
 ab
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -82628,32 +82790,32 @@ fU
 fW
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -82885,32 +83047,32 @@ fU
 fW
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -83142,32 +83304,32 @@ fU
 fW
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -83399,32 +83561,32 @@ fU
 fW
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -83656,32 +83818,32 @@ fU
 fW
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -83913,32 +84075,32 @@ ab
 ab
 ab
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
@@ -84170,32 +84332,32 @@ ab
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
+Fi
 aa
 aa
 aa
