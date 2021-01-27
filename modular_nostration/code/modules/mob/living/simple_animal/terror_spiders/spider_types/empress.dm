@@ -16,7 +16,6 @@
 	health = 1000
 	melee_damage_lower = 30
 	melee_damage_upper = 60
-	ventcrawler = TRUE
 	idle_ventcrawl_chance = 0
 	ai_playercontrol_allowtype = 0
 	rapid = 3
@@ -37,6 +36,7 @@
 	. = ..()
 	empresserase_action = new()
 	empresserase_action.Grant(src)
+	AddElement(/datum/element/ventcrawling, given_tier = VENTCRAWLER_ALWAYS)
 
 /mob/living/simple_animal/hostile/poison/terror_spider/queen/empress/spider_special_action()
 	return

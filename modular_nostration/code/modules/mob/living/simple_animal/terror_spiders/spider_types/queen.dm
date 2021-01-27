@@ -21,7 +21,6 @@
 	regen_points_per_tick = 3
 	melee_damage_lower = 10
 	melee_damage_upper = 20
-	ventcrawler = TRUE
 	ai_break_lights = FALSE
 	ai_spins_webs = FALSE
 	ai_ventcrawls = FALSE
@@ -60,6 +59,7 @@
 	ventsmash_action = new()
 	ventsmash_action.Grant(src)
 	spider_myqueen = src
+	AddElement(/datum/element/ventcrawling, given_tier = VENTCRAWLER_ALWAYS)
 
 /mob/living/simple_animal/hostile/poison/terror_spider/queen/Life(seconds, times_fired)
 	. = ..()
