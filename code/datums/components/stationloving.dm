@@ -56,8 +56,8 @@
 	if (!T)
 		return FALSE
 	var/area/A = T.loc
-    if(istype(A, GLOB.station_loving_blacklist)) // Obviously terrible, just for test merging
-        return FALSE
+	if(istype(A, GLOB.station_loving_blacklist)) // Nostra change
+		return FALSE
 	if (is_station_level(T.z) || is_centcom_level(T.z))
 		return TRUE
 	if (is_reserved_level(T.z))
