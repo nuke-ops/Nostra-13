@@ -1,0 +1,5 @@
+author: maksxpl
+delete-after: true
+changes:
+  - tweak: Bluespace locker area doesn't allow nuke disk anymore
+  - bugfix: Moved bluespace locker location one tile lower
