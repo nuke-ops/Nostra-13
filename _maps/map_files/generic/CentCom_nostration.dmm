@@ -7363,9 +7363,7 @@
 /area/syndicate_mothership)
 "qL" = (
 /obj/structure/closet/bluespace/internal,
-/turf/closed/indestructible/abductor{
-	icon_state = "alien22"
-	},
+/turf/open/floor/plasteel/dark,
 /area/bluespace_locker)
 "qQ" = (
 /obj/machinery/door/airlock/centcom{
@@ -24791,8 +24789,8 @@ aa
 aa
 aa
 aa
+rj
 qL
-GN
 GN
 PW
 GN
