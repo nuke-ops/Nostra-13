@@ -56,7 +56,7 @@
 	if (!T)
 		return FALSE
 	var/area/A = T.loc
-	if(istype(A, /area/fabric_of_reality)) // Obviously terrible, just for test merging
+	if(istype(A, GLOB.station_loving_blacklist)) // Nostra change
 		return FALSE
 	if (is_station_level(T.z) || is_centcom_level(T.z))
 		return TRUE

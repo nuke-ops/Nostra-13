@@ -4,6 +4,8 @@ SUBSYSTEM_DEF(bluespace_locker)
 	var/obj/structure/closet/bluespace/internal/internal_locker = null
 	var/obj/structure/closet/bluespace/external/external_locker = null
 
+GLOBAL_LIST_INIT(station_loving_blacklist, list(/area/fabric_of_reality, /area/bluespace_locker))
+
 /datum/controller/subsystem/bluespace_locker/Initialize()
 	bluespaceify_random_locker()
 	if(external_locker)
