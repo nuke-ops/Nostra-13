@@ -3674,7 +3674,8 @@
 #include "modular_citadel\code\modules\reagents\objects\clothes.dm"
 #include "modular_citadel\code\modules\reagents\objects\items.dm"
 // Modular Nostration
-#include "modular_nostration\code\_DEFINES\DNA.dm"
+#include "modular_nostration\code\__DEFINES\DNA.dm"
+#include "modular_nostration\code\__HELPERS\unsorted.dm"
 #include "modular_nostration\code\controllers\subsystem\bluespace_locker.dm"
 #include "modular_nostration\code\datums\ai_laws.dm"
 #include "modular_nostration\code\datums\saymode.dm"
