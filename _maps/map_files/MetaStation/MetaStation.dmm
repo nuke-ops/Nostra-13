@@ -59637,12 +59637,12 @@
 	dir = 4;
 	pixel_x = -22
 	},
-/turf/open/floor/plasteel/white/side{
-	dir = 4
-	},
 /obj/machinery/airalarm{
 	dir = 4;
 	pixel_x = -23
+	},
+/turf/open/floor/plasteel/white/side{
+	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/surgery)
@@ -61676,17 +61676,6 @@
 /obj/machinery/light,
 /obj/machinery/bloodbankgen,
 /turf/open/floor/plasteel/white,
-/area/medical/surgery)
-"csl" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/closet/crate/freezer/blood,
-/obj/machinery/door/window/northleft{
-	name = "Surgery Supplies";
-	red_alert_access = 1;
-	req_access_txt = "5"
-	},
 /area/medical/surgery)
 "csl" = (
 /obj/machinery/light,
