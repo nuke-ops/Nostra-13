@@ -3680,6 +3680,7 @@
 #include "modular_nostration\code\datums\ai_laws.dm"
 #include "modular_nostration\code\datums\saymode.dm"
 #include "modular_nostration\code\datums\shuttles.dm"
+#include "modular_nostration\code\game\area\areas.dm"
 #include "modular_nostration\code\game\area\Space_Station_13_areas.dm"
 #include "modular_nostration\code\game\gamemodes\dynamic\dynamic_rulesets_midround.dm"
 #include "modular_nostration\code\game\objects\items\plushes.dm"
