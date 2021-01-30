@@ -1,11 +1,10 @@
 {
     "map_name": "OmegaStation",
-    "map_path": "modular_nostration/map_files/OmegaStation",
-    "map_file": ["OmegaStation_nostration.dmm","OmegaStation2deck_nostration.dmm"],
+    "map_path": "map_files/OmegaStation",
+    "map_file": "OmegaStation.dmm",
 	"shuttles": {
 	    "emergency": "emergency_omega",
 	    "ferry": "ferry_fancy",
 	    "cargo": "cargo_delta"
-    },
-    "traits": [{"Up" : 1, "Linkage" : "Cross"}, {"Baseturf" : "/turf/open/openspace", "Down" : -1, "Linkage" : "Cross"}]
+    }
 }

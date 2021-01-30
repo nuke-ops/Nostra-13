@@ -1,1 +1,1 @@
-#define FORCE_MAP "_maps/snaxi.json"
+#define FORCE_MAP "modular_nostration/_maps/snaxi.json"

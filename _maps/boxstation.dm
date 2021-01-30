@@ -1,1 +1,1 @@
-#define FORCE_MAP "_maps/boxstation.json"
+#define FORCE_MAP "modular_nostration/_maps/boxstation.json"
