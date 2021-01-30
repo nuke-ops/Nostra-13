@@ -1,1 +1,1 @@
-#define FORCE_MAP "modular_nostration/_maps/cogstation.json"
+#define FORCE_MAP "_maps/cogstation.json"
