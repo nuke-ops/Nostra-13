@@ -22871,7 +22871,7 @@
 /obj/machinery/requests_console{
 	department = "Genetics";
 	name = "Genetics RC";
-	pixel_x = 28	
+	pixel_x = 28
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/genetics)
