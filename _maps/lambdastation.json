@@ -1,9 +1,9 @@
 {
     "map_name": "Lambda Station",
-    "map_path": "map_files/LambdaStation",
+    "map_path": "modular_nostration/map_files/LambdaStation",
     "map_file":[
-        "lambda.dmm",
-        "dorms.dmm"
+        "lambda_nostration.dmm",
+        "dorms_nostration.dmm"
 	],
     "shuttles": {
         "cargo": "cargo_box",

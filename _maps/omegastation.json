@@ -1,6 +1,6 @@
 {
     "map_name": "OmegaStation",
-    "map_path": "map_files/OmegaStation",
+    "map_path": "modular_nostration/map_files/OmegaStation",
     "map_file": ["OmegaStation_nostration.dmm","OmegaStation2deck_nostration.dmm"],
 	"shuttles": {
 	    "emergency": "emergency_omega",

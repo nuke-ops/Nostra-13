@@ -1,6 +1,6 @@
 {
     "map_name": "Kilo Station",
-    "map_path": "map_files/KiloStation",
+    "map_path": "modular_nostration/map_files/KiloStation",
     "map_file": "KiloStation_nostration.dmm",
     "shuttles": {
 	    "emergency": "emergency_kilo",

@@ -1,6 +1,6 @@
 {
     "map_name": "MetaStation",
-    "map_path": "map_files/MetaStation",
+    "map_path": "modular_nostration/map_files/MetaStation",
     "map_file": "MetaStation_nostration.dmm",
     "shuttles": {
 	    "cargo": "cargo_box",
