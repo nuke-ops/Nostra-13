@@ -32,6 +32,8 @@
 	species_category = SPECIES_CATEGORY_LIZARD
 	wings_icon = "Dragon"
 
+	ass_image = 'modular_nostration/icons/ass/asslizard.png' // Nostra change
+
 /datum/species/lizard/random_name(gender,unique,lastname)
 	if(unique)
 		return random_unique_lizard_name(gender)
