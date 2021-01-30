@@ -11,7 +11,7 @@
 
 ## A Port?
 
-<!-- Just say if it is a port of something and link the original pr/commit/whatever. -->
+<!-- [Name/description of port] - [link to pr/commit/whatever] -->
 
 ## Changelog
 :cl:
