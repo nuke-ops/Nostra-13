@@ -1,5 +1,0 @@
-author: maksxpl
-delete-after: true
-changes:
-  - bugfix: deleted spare id from places where it shouldn't be
-  - tweak: updated maps to the more actual state
