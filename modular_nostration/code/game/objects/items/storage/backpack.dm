@@ -2,6 +2,9 @@
 	name = "science duffel bag"
 	desc = "A large duffel bag for holding extra science supplies."
 	icon = 'modular_nostration/icons/obj/storage.dmi'
+	mob_overlay_icon = 'modular_nostration/icons/mob/clothing/back.dmi'
+	lefthand_file = 'modular_nostration/icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = 'modular_nostration/icons/mob/inhands/equipment/backpack_righthand.dmi'
 	icon_state = "duffel-sci"
 	item_state = "duffel-sci"
 
