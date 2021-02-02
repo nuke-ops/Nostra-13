@@ -247,7 +247,9 @@
 					/obj/item/clothing/suit/toggle/labcoat/depjacket/sci = 4,
 					/obj/item/clothing/shoes/sneakers/white = 4,
 					/obj/item/radio/headset/headset_sci = 4,
-					/obj/item/clothing/mask/gas = 5)
+					/obj/item/clothing/mask/gas = 5,
+					/obj/item/storage/backpack/duffelbag/sci = 3 //Nostra change
+					)
 	refill_canister = /obj/item/vending_refill/wardrobe/science_wardrobe
 	payment_department = ACCOUNT_SCI
 	cost_multiplier_per_dept = list(ACCOUNT_SCI = 0)
