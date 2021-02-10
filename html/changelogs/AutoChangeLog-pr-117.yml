@@ -1,0 +1,7 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - rscadd: Added paramedic office.
+  - rscadd: Added scrubbers in xenobio slime cages.
+  - bugfix: Fixed scrubbers in toxins.
+  - bugfix: Fixed scrubbers in turbine.
