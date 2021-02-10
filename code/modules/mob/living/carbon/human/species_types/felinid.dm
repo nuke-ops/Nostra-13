@@ -13,6 +13,8 @@
 	wagging_type = "mam_waggingtail"
 	species_category = SPECIES_CATEGORY_FURRY
 
+	ass_image = 'modular_nostration/icons/ass/asscat.png' // Nostra change
+
 /datum/species/human/felinid/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
 	if(ishuman(C))
 		var/mob/living/carbon/human/H = C

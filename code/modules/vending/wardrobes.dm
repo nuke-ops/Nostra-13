@@ -238,7 +238,7 @@
 					/obj/item/clothing/head/beret/sci = 3,
 					/obj/item/storage/backpack/science = 3,
 					/obj/item/storage/backpack/satchel/tox = 3,
-					/obj/item/storage/backpack/duffelbag = 3,
+					/obj/item/storage/backpack/duffelbag/sci = 3, //Nostra change
 					/obj/item/clothing/suit/hooded/wintercoat/science = 3,
 					/obj/item/clothing/under/rank/rnd/scientist = 4,
 					/obj/item/clothing/under/rank/rnd/scientist/util = 4,

@@ -76,3 +76,11 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Old station Engineering"
 	icon_state = "engine_foyer"
 	blob_allowed = FALSE
+
+/area/bluespace_locker
+  name = "Bluespace Locker"
+  icon_state = "away"
+  requires_power = FALSE
+  has_gravity = STANDARD_GRAVITY
+  noteleport = TRUE
+  hidden = TRUE

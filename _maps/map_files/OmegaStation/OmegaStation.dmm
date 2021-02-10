@@ -4924,11 +4924,11 @@
 /obj/effect/turf_decal/stripes/end{
 	dir = 1
 	},
-/obj/item/gun/energy/e_gun/hos,
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+/obj/item/gun/energy/e_gun/hos,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/captain/private)
 "ahI" = (
@@ -22871,7 +22871,7 @@
 /obj/machinery/requests_console{
 	department = "Genetics";
 	name = "Genetics RC";
-	pixel_x = 28	
+	pixel_x = 28
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/genetics)
@@ -40546,6 +40546,9 @@
 	areastring = "/area/maintenance/starboard/aft";
 	name = "Starboard Quater Maintenance APC";
 	pixel_y = -26
+	},
+/obj/structure/cable/white{
+	icon_state = "0-8"
 	},
 /turf/open/floor/plating{
 	icon_state = "panelscorched"

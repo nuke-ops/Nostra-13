@@ -53,6 +53,8 @@
 
 	backpack = /obj/item/storage/backpack/science
 	satchel = /obj/item/storage/backpack/satchel/tox
+	duffelbag = /obj/item/storage/backpack/duffelbag/sci // Nostra change
+
 
 	chameleon_extras = /obj/item/stamp/rd
 

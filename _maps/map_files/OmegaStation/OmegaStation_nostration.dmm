@@ -35604,12 +35604,7 @@
 	pixel_x = 8;
 	pixel_y = 9
 	},
-/obj/item/pipe_dispenser{
-	icon = 'modular_nostration/icons/obj/tools.dmi';
-	icon_state = "sci_rpd";
-	lefthand_file = 'modular_nostration/icons/mob/inhands/equipment/tools_lefthand.dmi';
-	righthand_file = 'modular_nostration/icons/mob/inhands/equipment/tools_righthand.dmi'
-	},
+/obj/item/pipe_dispenser/science,
 /turf/open/floor/plasteel,
 /area/science/mixing)
 "bhS" = (
@@ -41690,6 +41685,13 @@
 	dir = 4
 	},
 /area/hallway/secondary/exit)
+"cbL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/pipe_dispenser/science,
+/turf/closed/wall,
+/area/science/xenobiology)
 "ccy" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -96911,7 +96913,7 @@ bfP
 bnh
 hcf
 boG
-bpa
+cbL
 bnh
 bnQ
 boG

@@ -20437,7 +20437,7 @@
 	volume_rate = 200
 	},
 /turf/open/floor/plating/airless,
-/area/space)
+/area/science/xenobiology)
 "oZW" = (
 /obj/structure/table/glass,
 /obj/item/reagent_containers/dropper,

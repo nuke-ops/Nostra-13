@@ -24,7 +24,6 @@
 	move_to_delay = 5 // at 20ticks/sec, this is 4 tile/sec movespeed, same as a human. Faster than a normal spider, so it can intercept attacks on queen.
 	speed = 0 // '0' (also the default for human mobs) converts to 2.5 total delay, or 4 tiles/sec.
 	spider_opens_doors = 2
-	ventcrawler = TRUE
 	ai_ventcrawls = FALSE
 	environment_smash = ENVIRONMENT_SMASH_RWALLS
 	idle_ventcrawl_chance = 0 // stick to the queen!
@@ -33,6 +32,10 @@
 	var/dcheck_counter = 0
 	var/queen_visible = TRUE
 	var/cycles_noqueen = 0
+
+/mob/living/simple_animal/hostile/poison/terror_spider/purple/Initialize()
+	. = ..()
+	AddElement(/datum/element/ventcrawling, given_tier = VENTCRAWLER_ALWAYS)
 
 /mob/living/simple_animal/hostile/poison/terror_spider/purple/death(gibbed)
 	if(!(stat == DEAD || (status_flags & GODMODE)) && spider_myqueen)

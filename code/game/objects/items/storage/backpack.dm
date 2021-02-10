@@ -50,15 +50,17 @@
 
 /obj/item/storage/backpack/holding/satchel
 	name = "satchel of holding"
-	desc = "A satchel that opens into a localized pocket of Blue Space."
+	desc = "A satchel that opens into a localized pocket of Blue Space, it feels really light." // Nostra change
 	icon_state = "holdingsat"
 	item_state = "holdingsat"
+	slowdown = -0.3 // Nostra change
 
 /obj/item/storage/backpack/holding/duffel
 	name = "duffel bag of holding"
-	desc = "A duffel bag that opens into a localized pocket of Blue Space."
+	desc = "A duffel bag that opens into a localized pocket of Blue Space, now with even more space!" // Nostra change
 	icon_state = "holdingduffel"
 	item_state = "holdingduffel"
+	slowdown = 0.5 // Nostra change
 
 /obj/item/storage/backpack/holding/ComponentInitialize()
 	. = ..()
@@ -66,6 +68,20 @@
 	STR.max_w_class = MAX_WEIGHT_CLASS_BAG_OF_HOLDING
 	STR.storage_flags = STORAGE_FLAGS_VOLUME_DEFAULT
 	STR.max_volume = STORAGE_VOLUME_BAG_OF_HOLDING
+
+/obj/item/storage/backpack/holding/satchel/ComponentInitialize() // Nostra change
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_volume = STORAGE_VOLUME_BACKPACK
+	STR.storage_flags = STORAGE_FLAGS_VOLUME_DEFAULT
+	STR.max_w_class = MAX_WEIGHT_CLASS_BACKPACK
+
+/obj/item/storage/backpack/holding/duffel/ComponentInitialize() // Nostra change
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_w_class = MAX_WEIGHT_CLASS_DUFFLEBAG_OF_HOLDING
+	STR.storage_flags = STORAGE_FLAGS_VOLUME_DEFAULT
+	STR.max_volume = STORAGE_VOLUME_DUFFLEBAG_OF_HOLDING
 
 /obj/item/storage/backpack/holding/suicide_act(mob/living/user)
 	user.visible_message("<span class='suicide'>[user] is jumping into [src]! It looks like [user.p_theyre()] trying to commit suicide.</span>")

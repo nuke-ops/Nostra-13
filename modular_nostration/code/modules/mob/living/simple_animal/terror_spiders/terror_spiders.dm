@@ -54,7 +54,6 @@ GLOBAL_LIST_EMPTY(ts_spiderling_list)
 	// '2' converts to 4.5, or 2.2 tiles/sec.
 
 	// Ventcrawling
-	ventcrawler = TRUE // allows player ventcrawling
 	var/ai_ventcrawls = TRUE
 	var/idle_ventcrawl_chance = 15
 	var/freq_ventcrawl_combat = 1800 // 3 minutes
@@ -251,6 +250,7 @@ GLOBAL_LIST_EMPTY(ts_spiderling_list)
 /mob/living/simple_animal/hostile/poison/terror_spider/Initialize()
 	..()
 	GLOB.ts_spiderlist += src
+	AddElement(/datum/element/ventcrawling, given_tier = VENTCRAWLER_ALWAYS)
 	if(spider_tier >= TS_TIER_2)
 		initial_language_holder = /datum/language_holder/terror_spider_high
 
