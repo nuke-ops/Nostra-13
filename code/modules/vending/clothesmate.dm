@@ -21,6 +21,7 @@
 					/obj/item/clothing/suit/jacket/puffer/vest = 4,
 					/obj/item/clothing/suit/jacket/puffer = 4,
 					/obj/item/clothing/suit/hooded/cloak/david = 4,
+					/obj/item/clothing/neck/cancloak = 4,
 					/obj/item/clothing/suit/bomber = 5,
 					/obj/item/clothing/under/suit/turtle/teal = 3,
 					/obj/item/clothing/under/suit/turtle/grey = 3,
@@ -31,7 +32,10 @@
 					/obj/item/clothing/under/suit/burgundy = 3,
 					/obj/item/clothing/under/suit/charcoal = 3,
 					/obj/item/clothing/under/suit/white = 3,
+					/obj/item/clothing/under/suit/tan = 3,
+					/obj/item/clothing/under/suit/charismatic_suit = 3,
 					/obj/item/clothing/under/costume/kilt = 3,
+					/obj/item/clothing/suit/suspenders = 3,
 					/obj/item/clothing/under/misc/overalls = 3,
 					/obj/item/clothing/under/suit/sl = 3,
 					/obj/item/clothing/accessory/sweater = 3,
@@ -70,6 +74,7 @@
 					/obj/item/clothing/accessory/suitjacket/burgundy = 2,
 					/obj/item/clothing/accessory/suitjacket/checkered = 2,
 					/obj/item/clothing/suit/jacket/miljacket = 5,
+					/obj/item/clothing/suit/jacket/urbanjacket = 5,
 					/obj/item/clothing/under/suit/white_on_white/skirt = 2,
 					/obj/item/clothing/under/rank/captain/suit/skirt = 2,
 					/obj/item/clothing/under/rank/civilian/head_of_personnel/suit/skirt = 2,
@@ -208,7 +213,9 @@
 					/obj/item/clothing/neck/necklace/dope = 5,
 					/obj/item/clothing/suit/jacket/letterman_nanotrasen = 5,
 					/obj/item/clothing/under/misc/corporateuniform = 5,
-					/obj/item/clothing/suit/hooded/wintercoat/polychromic = 5)
+					/obj/item/clothing/suit/hooded/wintercoat/polychromic = 5,
+					/obj/item/clothing/suit/toggle/wbreakpoly/polychromic = 5,
+					/obj/item/clothing/shoes/sneakers/poly/polychromic = 10)
 	refill_canister = /obj/item/vending_refill/clothing
 	default_price = PRICE_CHEAP
 	extra_price = PRICE_BELOW_NORMAL
