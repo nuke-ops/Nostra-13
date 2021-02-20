@@ -214,16 +214,17 @@
 	//skyrat edit
 	dat += "<tr><td><B>Underwear Section:</B></td></tr>"
 	var/undies_hidden = underwear_hidden()
+	var/socks_hidden = socks_hidden()
 	if((SLOT_W_UNDERWEAR in obscured) || undies_hidden)
 		dat += "<tr><td><font color=grey>&nbsp;&#8627;<B>Underwear:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
 	else
 		dat += "<tr><td>&nbsp;&#8627;<B>Underwear:</B></td><td><A href='?src=[REF(src)];item=[SLOT_W_UNDERWEAR]'>[(w_underwear && !(w_underwear.item_flags & ABSTRACT)) ? w_underwear : "<font color=grey>Empty</font>"]</A></td></tr>"
-	if((SLOT_W_SOCKS in obscured) || undies_hidden)
-		dat += "<tr><td>&nbsp;&#8627;<font color=grey><B>Socks:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
+	if((SLOT_W_SOCKS in obscured) || socks_hidden)
+		dat += "<tr><td><font color=grey>&nbsp;&#8627;<B>Socks:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
 	else
 		dat += "<tr><td>&nbsp;&#8627;<B>Socks:</B></td><td><A href='?src=[REF(src)];item=[SLOT_W_SOCKS]'>[(w_socks && !(w_socks.item_flags & ABSTRACT)) ? w_socks : "<font color=grey>Empty</font>"]</A></td></tr>"
 	if((SLOT_W_SHIRT in obscured) || undies_hidden)
-		dat += "<tr><td>&nbsp;&#8627;<font color=grey><B>Shirt:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
+		dat += "<tr><td><font color=grey>&nbsp;&#8627;<B>Shirt:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
 	else
 		dat += "<tr><td>&nbsp;&#8627;<B>Shirt:</B></td><td><A href='?src=[REF(src)];item=[SLOT_W_SHIRT]'>[(w_shirt && !(w_shirt.item_flags & ABSTRACT)) ? w_shirt : "<font color=grey>Empty</font>"]</A></td></tr>"
 	//
@@ -313,11 +314,13 @@
 						dropItemToGround(pocket_item)
 						if(!usr.can_hold_items() || !usr.put_in_hands(pocket_item))
 							pocket_item.forceMove(drop_location())
+						log_combat(usr, src, "pickpocketed of item: [pocket_item]")
 				else
 					if(place_item)
 						if(place_item.mob_can_equip(src, usr, pocket_id, FALSE, TRUE))
 							usr.temporarilyRemoveItemFromInventory(place_item, TRUE)
 							equip_to_slot(place_item, pocket_id, TRUE)
+							log_combat(usr, src, "placed item [place_item] onto")
 						//do nothing otherwise
 
 				// Update strip window
@@ -325,8 +328,9 @@
 					show_inv(usr)
 			else
 				// Display a warning if the user mocks up
-				if (!strip_silence)
+				if(!strip_silence)
 					to_chat(src, "<span class='warning'>You feel your [pocket_side] pocket being fumbled with!</span>")
+				log_combat(usr, src, "failed to [pocket_item ? "pickpocket item [pocket_item] from" : "place item [place_item] onto "]")
 
 	if(usr.canUseTopic(src, BE_CLOSE, NO_DEXTERY, null, FALSE))
 		// separate from first canusetopic
@@ -596,6 +600,9 @@
 		if(underwear_hidden())
 			LAZYOR(., SLOT_W_SHIRT)
 			LAZYOR(., SLOT_W_UNDERWEAR)
+	if(shoes)
+		if(socks_hidden())
+			LAZYOR(., SLOT_W_SOCKS)
 
 /mob/living/carbon/human/assess_threat(judgement_criteria, lasercolor = "", datum/callback/weaponcheck=null)
 	if(judgement_criteria & JUDGE_EMAGGED)
