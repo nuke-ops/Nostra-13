@@ -8,7 +8,7 @@
 	mutanttongue = /obj/item/organ/tongue/abductor
 	species_category = SPECIES_CATEGORY_ALIEN
 
-	ass_image = 'modular_nostration/icons/ass/assgrey.png' // Nostra change
+	ass_image = 'modular_nostra/icons/ass/assgrey.png' // Nostra change
 
 /datum/species/abductor/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()

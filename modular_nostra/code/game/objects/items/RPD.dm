@@ -1,10 +1,10 @@
 /obj/item/pipe_dispenser/science
 	name = "Rapid Piping Device (RPD)"
 	desc = "A device used to rapidly pipe things."
-	icon = 'modular_nostration/icons/obj/tools.dmi'
+	icon = 'modular_nostra/icons/obj/tools.dmi'
 	icon_state = "rpd_sci"
-	lefthand_file = 'modular_nostration/icons/mob/inhands/equipment/tools_lefthand.dmi'
-	righthand_file = 'modular_nostration/icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = 'modular_nostra/icons/mob/inhands/equipment/tools_lefthand.dmi'
+	righthand_file = 'modular_nostra/icons/mob/inhands/equipment/tools_righthand.dmi'
 	flags_1 = CONDUCT_1
 	force = 10
 	throwforce = 10

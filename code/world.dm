@@ -16,9 +16,9 @@
 	area = /area/space
 	view = "15x15"
 	hub = "Exadv1.spacestation13"
-	name = "Nostration-13"
+	name = "Nostra-13"
 	hub_password = "kMZy3U5jJHSiBQjr"
-	name = "Nostration-13"
+	name = "Nostra-13"
 	fps = 20
 #ifdef FIND_REF_NO_CHECK_TICK
 	loop_checks = FALSE

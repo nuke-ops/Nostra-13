@@ -2,9 +2,9 @@
    "map_name":"Snow Taxi",
    "map_path":"map_files/Snaxi",
    "map_file":[
-      "IcemoonUnderground_Below_nostration.dmm",
-      "IcemoonUnderground_Above_nostration.dmm",
-      "Snaxi_nostration.dmm"
+      "IcemoonUnderground_Below_nostra.dmm",
+      "IcemoonUnderground_Above_nostra.dmm",
+      "Snaxi_nostra.dmm"
    ],
    "station_ruin_budget":0,
    "space_ruin_levels":0,

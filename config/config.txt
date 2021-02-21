@@ -25,7 +25,7 @@ $include sandstorm/config.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-# SERVERNAME Nostrations-13
+# SERVERNAME Nostra-13
 
 ## Server tagline: This will appear right below the server's title.
 # SERVERTAGLINE A generic TG-based server
@@ -264,7 +264,7 @@ CHECK_RANDOMIZER
 RULESURL tgstation13.org/wiki/rules
 
 ## Github address
-GITHUBURL https://github.com/nuke-ops/Nostration-13
+GITHUBURL https://github.com/nuke-ops/Nostra-13
 
 ## Round specific stats address
 ## Link to round specific parsed logs; IE statbus. It is appended with the RoundID automatically by ticker/Reboot()
