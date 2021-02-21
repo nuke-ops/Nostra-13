@@ -29,7 +29,7 @@
 	wagging_type = "mam_waggingtail"
 	species_category = SPECIES_CATEGORY_JELLY
 
-	ass_image = 'modular_nostration/icons/ass/assslime.png' // Nostra change
+	ass_image = 'modular_nostra/icons/ass/assslime.png' // Nostra change
 
 /obj/item/organ/brain/jelly
 	name = "slime nucleus"

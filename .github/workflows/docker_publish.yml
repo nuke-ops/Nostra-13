@@ -15,7 +15,7 @@ jobs:
       - name: Build and Publish Docker Image to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: ss13nukeops/nostration-13
+          name: ss13nukeops/nostra-13
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           dockerfile: Dockerfile

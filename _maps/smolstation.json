@@ -1,7 +1,7 @@
 {
     "map_name": "Smol Station",
     "map_path": "map_files/SmolStation",
-	"map_file": "SmolStation_nostration.dmm",
+	"map_file": "SmolStation_nostra.dmm",
     "shuttles": {
 	    "emergency": "emergency_box",
 	    "ferry": "ferry_fancy",

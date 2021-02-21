@@ -304,7 +304,7 @@
 	else if(isalienadult(ass) || istype(ass, /mob/living/simple_animal/hostile/alien)) //Xenos have their own asses, thanks to Pybro.
 		temp_img = icon('icons/ass/assalien.png')
 	else if(issilicon(ass))
-		temp_img = icon('modular_nostration/icons/ass/assmachine.png')
+		temp_img = icon('modular_nostra/icons/ass/assmachine.png')
 	else if(isdrone(ass)) //Drones are hot
 		temp_img = icon('icons/ass/assdrone.png')
 

@@ -43501,10 +43501,10 @@
 /obj/structure/rack,
 /obj/item/construction/rcd/industrial,
 /obj/item/pipe_dispenser{
-	icon = 'modular_nostration/icons/obj/tools.dmi';
+	icon = 'modular_nostra/icons/obj/tools.dmi';
 	icon_state = "sci_rpd";
-	lefthand_file = 'modular_nostration/icons/mob/inhands/equipment/tools_lefthand.dmi';
-	righthand_file = 'modular_nostration/icons/mob/inhands/equipment/tools_righthand.dmi'
+	lefthand_file = 'modular_nostra/icons/mob/inhands/equipment/tools_lefthand.dmi';
+	righthand_file = 'modular_nostra/icons/mob/inhands/equipment/tools_righthand.dmi'
 	},
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/heads/hor)

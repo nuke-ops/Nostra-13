@@ -7,7 +7,7 @@ on:
 jobs:
   MakeCL:
     runs-on: ubuntu-latest
-    if: github.repository == 'nuke-ops/Nostration-13' && !contains(github.event.head_commit.message, '[ci skip]')
+    if: github.repository == 'nuke-ops/Nostra-13' && !contains(github.event.head_commit.message, '[ci skip]')
     steps:
       - name: Checkout
         uses: actions/checkout@v1

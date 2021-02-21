@@ -1,5 +1,5 @@
 /obj/effect/overlay/gunpoint_effect
-	icon = 'modular_nostration/icons/mob/targeted.dmi'
+	icon = 'modular_nostra/icons/mob/targeted.dmi'
 	icon_state = "locking"
 	layer = FLY_LAYER
 	plane = GAME_PLANE
@@ -23,12 +23,12 @@
 
 	var/moved_counter = 0
 
-	var/static/radio_forbid = image(icon = 'modular_nostration/icons/mob/radial_gunpoint.dmi', icon_state = "radial_radio_forbid")
-	var/static/radio_allow = image(icon = 'modular_nostration/icons/mob/radial_gunpoint.dmi', icon_state = "radial_radio")
-	var/static/use_forbid = image(icon = 'modular_nostration/icons/mob/radial_gunpoint.dmi', icon_state = "radial_use_forbid")
-	var/static/use_allow = image(icon = 'modular_nostration/icons/mob/radial_gunpoint.dmi', icon_state = "radial_use")
-	var/static/move_forbid = image(icon = 'modular_nostration/icons/mob/radial_gunpoint.dmi', icon_state = "radial_move_forbid")
-	var/static/move_allow = image(icon = 'modular_nostration/icons/mob/radial_gunpoint.dmi', icon_state = "radial_move")
+	var/static/radio_forbid = image(icon = 'modular_nostra/icons/mob/radial_gunpoint.dmi', icon_state = "radial_radio_forbid")
+	var/static/radio_allow = image(icon = 'modular_nostra/icons/mob/radial_gunpoint.dmi', icon_state = "radial_radio")
+	var/static/use_forbid = image(icon = 'modular_nostra/icons/mob/radial_gunpoint.dmi', icon_state = "radial_use_forbid")
+	var/static/use_allow = image(icon = 'modular_nostra/icons/mob/radial_gunpoint.dmi', icon_state = "radial_use")
+	var/static/move_forbid = image(icon = 'modular_nostra/icons/mob/radial_gunpoint.dmi', icon_state = "radial_move_forbid")
+	var/static/move_allow = image(icon = 'modular_nostra/icons/mob/radial_gunpoint.dmi', icon_state = "radial_move")
 
 /datum/gunpoint/New(user, tar, gun)
 	source = user
@@ -92,7 +92,7 @@
 			return
 		locked = TRUE
 		log_combat(target, source, "locked onto with aiming")
-		playsound(get_turf(source), 'modular_nostration/sound/effects/targeton.ogg', 50,1)
+		playsound(get_turf(source), 'modular_nostra/sound/effects/targeton.ogg', 50,1)
 		to_chat(source, "<span class='boldnotice'>You lock onto [target.name]!</span>")
 		target.visible_message("<span class='boldwarning'>[source.name] holds [target.name] at gunpoint with the [aimed_gun.name]!</span>", "<span class='userdanger'>[source.name] holds you at gunpoint with the [aimed_gun.name]!</span>")
 		if(target.gunpointed.len == 1)//First case
@@ -160,7 +160,7 @@
 
 /datum/gunpoint/proc/ClickDestroy()
 	if(locked)
-		playsound(get_turf(source), 'modular_nostration/sound/effects/targetoff.ogg', 50,1)
+		playsound(get_turf(source), 'modular_nostra/sound/effects/targetoff.ogg', 50,1)
 	Destroy()
 
 /datum/gunpoint/proc/SourceCC(datum/source, amount, update, ignore)

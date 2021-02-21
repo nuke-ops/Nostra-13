@@ -22,7 +22,7 @@
 	canlay = 1000
 	spider_tier = TS_TIER_5
 	projectiletype = /obj/item/projectile/terrorqueenspit/empress
-	icon = 'modular_nostration/icons/mob/terrorspider64.dmi'
+	icon = 'modular_nostra/icons/mob/terrorspider64.dmi'
 	pixel_x = -16
 	mob_size = MOB_SIZE_LARGE
 	icon_state = "terror_empress"
