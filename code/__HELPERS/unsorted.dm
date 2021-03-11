@@ -1247,28 +1247,40 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 
 #define FOR_DVIEW_END GLOB.dview_mob.loc = null
 
-//can a window be here, or is there a window blocking it?
-/proc/valid_window_location(turf/T, dir_to_check)
-	if(!T)
+/**
+ * Checks whether the target turf is in a valid state to accept a directional window
+ * or other directional pseudo-dense object such as railings.
+ *
+ * Returns FALSE if the target turf cannot accept a directional window or railing.
+ * Returns TRUE otherwise.
+ *
+ * Arguments:
+ * * dest_turf - The destination turf to check for existing windows and railings
+ * * test_dir - The prospective dir of some atom you'd like to put on this turf.
+ * * is_fulltile - Whether the thing you're attempting to move to this turf takes up the entire tile or whether it supports multiple movable atoms on its tile.
+ */
+/proc/valid_window_location(turf/dest_turf, test_dir, is_fulltile = FALSE)
+	if(!dest_turf)
 		return FALSE
-	for(var/obj/O in T)
-		if(istype(O, /obj/machinery/door/window) && (O.dir == dir_to_check || dir_to_check == FULLTILE_WINDOW_DIR))
-			return FALSE
-		if(istype(O, /obj/structure/windoor_assembly))
-			var/obj/structure/windoor_assembly/W = O
-			if(W.ini_dir == dir_to_check || dir_to_check == FULLTILE_WINDOW_DIR)
+	for(var/obj/turf_content in dest_turf)
+		if(istype(turf_content, /obj/machinery/door/window))
+			if((turf_content.dir == test_dir) || is_fulltile)
 				return FALSE
-		if(istype(O, /obj/structure/window))
-			var/obj/structure/window/W = O
-			if(W.ini_dir == dir_to_check || W.ini_dir == FULLTILE_WINDOW_DIR || dir_to_check == FULLTILE_WINDOW_DIR)
+		if(istype(turf_content, /obj/structure/windoor_assembly))
+			var/obj/structure/windoor_assembly/windoor_assembly = turf_content
+			if(windoor_assembly.dir == test_dir || is_fulltile)
 				return FALSE
-		if(istype(O, /obj/structure/railing))
-			var/obj/structure/railing/rail = O
-			if(rail.ini_dir == dir_to_check || rail.ini_dir == FULLTILE_WINDOW_DIR || dir_to_check == FULLTILE_WINDOW_DIR)
+		if(istype(turf_content, /obj/structure/window))
+			var/obj/structure/window/window_structure = turf_content
+			if(window_structure.dir == test_dir || window_structure.fulltile || is_fulltile)
+				return FALSE
+		if(istype(turf_content, /obj/structure/railing))
+			var/obj/structure/railing/rail = turf_content
+			if(rail.dir == test_dir || is_fulltile)
 				return FALSE
 	return TRUE
 
-/proc/pass()
+/proc/pass(...)
 	return
 
 /proc/get_mob_or_brainmob(occupant)
@@ -1578,54 +1590,6 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 	for(var/each_item in items_list)
 		for(var/i in 1 to items_list[each_item])
 			new each_item(where_to)
-
-/*
-Here's how to use the chat system with configs
-send2adminchat is a simple function that broadcasts to admin channels
-send2chat is a bit verbose but can be very specific
-The second parameter is a string, this string should be read from a config.
-What this does is dictacte which TGS4 channels can be sent to.
-For example if you have the following channels in tgs4 set up
-- Channel 1, Tag: asdf
-- Channel 2, Tag: bombay,asdf
-- Channel 3, Tag: Hello my name is asdf
-- Channel 4, No Tag
-- Channel 5, Tag: butts
-and you make the call:
-send2chat("I sniff butts", CONFIG_GET(string/where_to_send_sniff_butts))
-and the config option is set like:
-WHERE_TO_SEND_SNIFF_BUTTS asdf
-It will be sent to channels 1 and 2
-Alternatively if you set the config option to just:
-WHERE_TO_SEND_SNIFF_BUTTS
-it will be sent to all connected chats.
-In TGS3 it will always be sent to all connected designated game chats.
-*/
-
-/**
-  * Sends a message to TGS chat channels.
-  *
-  * message - The message to send.
-  * channel_tag - Required. If "", the message with be sent to all connected (Game-type for TGS3) channels. Otherwise, it will be sent to TGS4 channels with that tag (Delimited by ','s).
-  */
-/proc/send2chat(message, channel_tag)
-	if(channel_tag == null || !world.TgsAvailable())
-		return
-
-	var/datum/tgs_version/version = world.TgsVersion()
-	if(channel_tag == "" || version.suite == 3)
-		world.TgsTargetedChatBroadcast(message, FALSE)
-		return
-
-	var/list/channels_to_use = list()
-	for(var/I in world.TgsChatChannelInfo())
-		var/datum/tgs_chat_channel/channel = I
-		var/list/applicable_tags = splittext(channel.custom_tag, ",")
-		if(channel_tag in applicable_tags)
-			channels_to_use += channel
-
-	if(channels_to_use.len)
-		world.TgsChatBroadcast(message, channels_to_use)
 
 //Checks to see if either the victim has a garlic necklace or garlic in their blood
 /proc/blood_sucking_checks(var/mob/living/carbon/target, check_neck, check_blood)

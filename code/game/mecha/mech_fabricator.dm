@@ -66,7 +66,7 @@
 
 /obj/machinery/mecha_part_fabricator/Initialize(mapload)
 	stored_research = new
-	rmat = AddComponent(/datum/component/remote_materials, "mechfab", mapload && link_on_init)
+	rmat = AddComponent(/datum/component/remote_materials, "mechfab", mapload && link_on_init, _after_insert=CALLBACK(src, .proc/AfterMaterialInsert))
 
 	RefreshParts() //Recalculating local material sizes if the fab isn't linked
 	return ..()
@@ -677,4 +677,3 @@
 
 /obj/machinery/mecha_part_fabricator/offstation
 	link_on_init = FALSE
-	circuit = /obj/item/circuitboard/machine/mechfab/offstation

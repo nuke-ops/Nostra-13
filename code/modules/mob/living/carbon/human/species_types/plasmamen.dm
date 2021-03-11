@@ -25,7 +25,7 @@
 
 	species_category = SPECIES_CATEGORY_SKELETON
 
-	ass_image = 'modular_nostra/icons/ass/assplasma.png' // Nostra change
+	ass_image = 'icons/ass/assplasma.png'
 
 /datum/species/plasmaman/spec_life(mob/living/carbon/human/H)
 	var/datum/gas_mixture/environment = H.loc.return_air()
