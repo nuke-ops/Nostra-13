@@ -221,9 +221,6 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/datum/action/innate/flight/fly //the actual flying ability given to flying species
 	var/wings_icon = "Angel" //the icon used for the wings
 
-	///For custom overrides for species ass images - Nostra change
-	var/icon/ass_image
-
 ///////////
 // PROCS //
 ///////////

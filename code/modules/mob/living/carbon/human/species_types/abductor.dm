@@ -9,8 +9,6 @@
 	species_category = SPECIES_CATEGORY_ALIEN
 	ass_image = 'icons/ass/assgrey.png'
 
-	ass_image = 'modular_nostra/icons/ass/assgrey.png' // Nostra change
-
 /datum/species/abductor/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
 	var/datum/atom_hud/abductor_hud = GLOB.huds[DATA_HUD_ABDUCTOR]

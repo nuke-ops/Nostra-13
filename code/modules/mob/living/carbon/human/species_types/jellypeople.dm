@@ -30,8 +30,6 @@
 	species_category = SPECIES_CATEGORY_JELLY
 	ass_image = 'icons/ass/assslime.png'
 
-	ass_image = 'modular_nostra/icons/ass/assslime.png' // Nostra change
-
 /obj/item/organ/brain/jelly
 	name = "slime nucleus"
 	desc = "A slimey membranous mass from a slime person"
