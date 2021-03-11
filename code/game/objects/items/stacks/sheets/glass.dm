@@ -42,6 +42,7 @@ GLOBAL_LIST_INIT(glass_recipes, list ( \
 	point_value = 1
 	tableVariant = /obj/structure/table/glass
 	matter_amount = 4
+	cost = 500
 	shard_type = /obj/item/shard
 
 /obj/item/stack/sheet/glass/suicide_act(mob/living/carbon/user)
@@ -70,12 +71,13 @@ GLOBAL_LIST_INIT(glass_recipes, list ( \
 		if (get_amount() < 1 || CC.get_amount() < 5)
 			to_chat(user, "<span class='warning>You need five lengths of coil and one sheet of glass to make wired glass!</span>")
 			return
-		CC.use_tool(src, user, 0, 5, skill_gain_mult = TRIVIAL_USE_TOOL_MULT)
+		CC.use(5)
 		use(1)
 		to_chat(user, "<span class='notice'>You attach wire to the [name].</span>")
 		var/obj/item/stack/light_w/new_tile = new(user.loc)
 		new_tile.add_fingerprint(user)
-	else if(istype(W, /obj/item/stack/rods))
+		return
+	if(istype(W, /obj/item/stack/rods))
 		var/obj/item/stack/rods/V = W
 		if (V.get_amount() >= 1 && get_amount() >= 1)
 			var/obj/item/stack/sheet/rglass/RG = new (get_turf(user))
@@ -87,9 +89,8 @@ GLOBAL_LIST_INIT(glass_recipes, list ( \
 				user.put_in_hands(RG)
 		else
 			to_chat(user, "<span class='warning'>You need one rod and one sheet of glass to make reinforced glass!</span>")
-			return
-	else
-		return ..()
+		return
+	return ..()
 
 
 

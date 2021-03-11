@@ -487,12 +487,16 @@
 	item_state = "militaryjacket"
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy, /obj/item/storage/fancy/cigarettes, /obj/item/lighter, /obj/item/gun/ballistic/automatic/pistol, /obj/item/gun/ballistic/revolver, /obj/item/radio)
 
-/obj/item/clothing/suit/jacket/urbanjacket
+/obj/item/clothing/suit/jacket/urbanjacket/polychromic
 	name = "urban jacket"
 	desc = "A canvas jacket styled with a fur neck piece, stylish."
 	icon_state = "urbanjacket"
 	item_state = "urbanjacket"
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy, /obj/item/storage/fancy/cigarettes, /obj/item/lighter, /obj/item/gun/ballistic/automatic/pistol, /obj/item/gun/ballistic/revolver, /obj/item/radio)
+
+/obj/item/clothing/suit/jacket/urbanjacket/polychromic/ComponentInitialize()
+	. = ..()
+	AddElement(/datum/element/polychromic, list("#3D4C31", "#CBBDAF", "#3B3B3B"), 3)
 
 /obj/item/clothing/suit/jacket/letterman
 	name = "letterman jacket"
@@ -1035,6 +1039,12 @@
 	desc = "Perfect for windy days."
 	icon_state = "wbreakpoly"
 	item_state = "wbreakpoly"
+
+/obj/item/clothing/suit/toggle/wbreakpoly/on_toggle(mob/user)
+	if(suittoggled)
+		to_chat(usr, "<span class='notice'>You zip up [src].</span>")
+	else
+		to_chat(usr, "<span class='notice'>You unzip [src].</span>")
 
 /obj/item/clothing/suit/toggle/wbreakpoly/polychromic/ComponentInitialize()
 	. = ..()

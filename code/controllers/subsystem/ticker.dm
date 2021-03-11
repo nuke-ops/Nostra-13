@@ -69,6 +69,7 @@ SUBSYSTEM_DEF(ticker)
 	var/modevoted = FALSE					//Have we sent a vote for the gamemode?
 
 	var/station_integrity = 100				// stored at roundend for use in some antag goals
+	var/emergency_reason
 
 /datum/controller/subsystem/ticker/Initialize(timeofday)
 	load_mode()
@@ -178,7 +179,10 @@ SUBSYSTEM_DEF(ticker)
 				timeLeft = 0
 
 			if(!modevoted)
-				send_gamemode_vote()
+				if(!CONFIG_GET(string/force_gamemode))
+					send_gamemode_vote()
+				else
+					force_gamemode(CONFIG_GET(string/force_gamemode))
 			//countdown
 			if(timeLeft < 0)
 				return
@@ -237,12 +241,14 @@ SUBSYSTEM_DEF(ticker)
 				var/datum/game_mode/smode = config.pick_mode(GLOB.secret_force_mode)
 				if(!smode.can_start())
 					message_admins("<span class='notice'>Unable to force secret [GLOB.secret_force_mode]. [smode.required_players] players and [smode.required_enemies] eligible antagonists needed.</span>")
+					force_gamemode("extended")
 				else
 					mode = smode
 
 		if(!mode)
 			if(!runnable_modes.len)
 				to_chat(world, "<B>Unable to choose playable game mode.</B> Reverting to pre-game lobby.")
+				force_gamemode("extended")
 				return 0
 			mode = pickweight(runnable_modes)
 			if(!mode)	//too few roundtypes all run too recently
@@ -255,6 +261,7 @@ SUBSYSTEM_DEF(ticker)
 			qdel(mode)
 			mode = null
 			SSjob.ResetOccupations()
+			force_gamemode("extended")
 			return 0
 
 	CHECK_TICK
@@ -268,11 +275,12 @@ SUBSYSTEM_DEF(ticker)
 	if(!GLOB.Debug2)
 		if(!can_continue)
 			log_game("[mode.name] failed pre_setup, cause: [mode.setup_error]")
-			send2irc("SSticker", "[mode.name] failed pre_setup, cause: [mode.setup_error]")
+			send2adminchat("SSticker", "[mode.name] failed pre_setup, cause: [mode.setup_error]")
 			message_admins("<span class='notice'>[mode.name] failed pre_setup, cause: [mode.setup_error]</span>")
 			QDEL_NULL(mode)
 			to_chat(world, "<B>Error setting up [GLOB.master_mode].</B> Reverting to pre-game lobby.")
 			SSjob.ResetOccupations()
+			force_gamemode("extended")
 			return 0
 	else
 		message_admins("<span class='notice'>DEBUG: Bypassing prestart checks...</span>")
@@ -334,7 +342,7 @@ SUBSYSTEM_DEF(ticker)
 
 	var/list/adm = get_admin_counts()
 	var/list/allmins = adm["present"]
-	send2irc("Server", "Round [GLOB.round_id ? "#[GLOB.round_id]:" : "of"] [hide_mode ? "secret":"[mode.name]"] has started[allmins.len ? ".":" with no active admins online!"]")
+	send2adminchat("Server", "Round [GLOB.round_id ? "#[GLOB.round_id]:" : "of"] [hide_mode ? "secret":"[mode.name]"] has started[allmins.len ? ".":" with no active admins online!"]")
 	if(CONFIG_GET(string/new_round_ping))
 		send2chat("<@&[CONFIG_GET(string/new_round_ping)]> | A new round has started on [SSmapping.config.map_name]!", CONFIG_GET(string/chat_announce_new_game))
 	setup_done = TRUE
@@ -569,7 +577,10 @@ SUBSYSTEM_DEF(ticker)
 		if(STATION_DESTROYED_NUKE)
 			news_message = "We would like to reassure all employees that the reports of a Syndicate backed nuclear attack on [station_name()] are, in fact, a hoax. Have a secure day!"
 		if(STATION_EVACUATED)
-			news_message = "The crew of [station_name()] has been evacuated amid unconfirmed reports of enemy activity."
+			if(emergency_reason)
+				news_message = "[station_name()] has been evacuated after transmitting the following distress beacon:\n\n[emergency_reason]"
+			else
+				news_message = "The crew of [station_name()] has been evacuated amid unconfirmed reports of enemy activity."
 		if(BLOB_WIN)
 			news_message = "[station_name()] was overcome by an unknown biological outbreak, killing all crew on board. Don't let it happen to you! Remember, a clean work station is a safe work station."
 		if(BLOB_NUKE)
@@ -595,7 +606,7 @@ SUBSYSTEM_DEF(ticker)
 		if(WIZARD_KILLED)
 			news_message = "Tensions have flared with the Space Wizard Federation following the death of one of their members aboard [station_name()]."
 		if(STATION_NUKED)
-			news_message = "[station_name()] activated its self destruct device for unknown reasons. Attempts to clone the Captain so he can be arrested and executed are underway."
+			news_message = "[station_name()] activated its self-destruct device for unknown reasons. Attempts to clone the Captain so he can be arrested and executed are underway."
 		if(CLOCK_SUMMON)
 			news_message = "The garbled messages about hailing a mouse and strange energy readings from [station_name()] have been discovered to be an ill-advised, if thorough, prank by a clown."
 		if(CLOCK_SILICONS)
@@ -610,7 +621,8 @@ SUBSYSTEM_DEF(ticker)
 	if(SSblackbox.first_death)
 		var/list/ded = SSblackbox.first_death
 		if(ded.len)
-			news_message += " NT Sanctioned Psykers picked up faint traces of someone near the station, allegedly having had died. Their name was: [ded["name"]], [ded["role"]], at [ded["area"]].[ded["last_words"] ? " Their last words were: \"[ded["last_words"]]\"" : ""]"
+			var/last_words = ded["last_words"] ? " Their last words were: \"[ded["last_words"]]\"" : ""
+			news_message += " NT Sanctioned Psykers picked up faint traces of someone near the station, allegedly having had died. Their name was: [ded["name"]], [ded["role"]], at [ded["area"]].[last_words]"
 		else
 			news_message += " NT Sanctioned Psykers proudly confirm reports that nobody died this shift!"
 
