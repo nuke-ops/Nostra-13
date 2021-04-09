@@ -33,6 +33,8 @@
 	RegisterSignal(parent, COMSIG_LIVING_REVIVE, .proc/on_revive)
 	RegisterSignal(parent, COMSIG_MOB_HUD_CREATED, .proc/modify_hud)
 	RegisterSignal(parent, COMSIG_MOB_DEATH, .proc/stop_processing)
+	RegisterSignal(parent, COMSIG_VOID_MASK_ACT, .proc/direct_sanity_drain)
+
 
 	if(owner.hud_used)
 		modify_hud()
@@ -165,6 +167,7 @@
 			setSanity(sanity+0.4, maximum=SANITY_AMAZING)
 
 	HandleNutrition(owner)
+	HandleThirst(owner)
 
 /datum/component/mood/proc/setSanity(amount, minimum=SANITY_INSANE, maximum=SANITY_NEUTRAL)//I'm sure bunging this in here will have no negative repercussions.
 	var/mob/living/master = parent
@@ -322,7 +325,7 @@
 			add_event(null, "nutrition", /datum/mood_event/fat)
 		if(NUTRITION_LEVEL_WELL_FED to NUTRITION_LEVEL_FULL)
 			add_event(null, "nutrition", /datum/mood_event/wellfed)
-		if( NUTRITION_LEVEL_FED to NUTRITION_LEVEL_WELL_FED)
+		if(NUTRITION_LEVEL_FED to NUTRITION_LEVEL_WELL_FED)
 			add_event(null, "nutrition", /datum/mood_event/fed)
 		if(NUTRITION_LEVEL_HUNGRY to NUTRITION_LEVEL_FED)
 			clear_event(null, "nutrition")
@@ -376,6 +379,10 @@
 		return
 	remove_temp_moods()
 	setSanity(initial(sanity))
+
+///Causes direct drain of someone's sanity, call it with a numerical value corresponding how badly you want to hurt their sanity
+/datum/component/mood/proc/direct_sanity_drain(datum/source, amount)
+	setSanity(sanity + amount)
 
 #undef ECSTATIC_SANITY_PEN
 #undef SLIGHT_INSANITY_PEN
