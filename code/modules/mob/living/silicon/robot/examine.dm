@@ -53,6 +53,7 @@
 	if(client)
 		. += "OOC Notes: <a href='?src=[REF(src)];skyrat_ooc_notes=1'>\[View\]</a>"
 	//END SKYRAT EDIT
+	SEND_SIGNAL(src, COMSIG_PARENT_EXAMINE, usr, .)
 
 	. += "*---------*</span>"
 
