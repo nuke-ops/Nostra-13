@@ -578,7 +578,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "</table>"
 
 			for(var/mutant_part in GLOB.all_mutant_parts)
-				if(mutant_part == "mam_body_markings")
+				if(mutant_part == "body_markings" || mutant_part == "mam_body_markings")
 					continue
 				if(parent.can_have_part(mutant_part))
 					if(!mutant_category)
