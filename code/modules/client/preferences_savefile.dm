@@ -47,7 +47,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		addtimer(CALLBACK(src, .proc/force_reset_keybindings), 30)	//No mob available when this is run, timer allows user choice.
 
 /datum/preferences/proc/update_character(current_version, savefile/S)
-	message_admins(current_version)
 	if(current_version < 19)
 		pda_style = "mono"
 	if(current_version < 20)
@@ -297,7 +296,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		S["be_special"] << L
 
 	if(current_version < 51) // rp markings means markings are now stored as a list, lizard markings now mam like the rest
-		message_admins("migrating")
 		var/marking_type
 		var/species_id = S["species"]
 		var/datum/species/actual_species = GLOB.species_datums[species_id]
