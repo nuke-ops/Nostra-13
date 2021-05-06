@@ -47,6 +47,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		addtimer(CALLBACK(src, .proc/force_reset_keybindings), 30)	//No mob available when this is run, timer allows user choice.
 
 /datum/preferences/proc/update_character(current_version, savefile/S)
+	message_admins(current_version)
 	if(current_version < 19)
 		pda_style = "mono"
 	if(current_version < 20)
@@ -296,6 +297,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		S["be_special"] << L
 
 	if(current_version < 51) // rp markings means markings are now stored as a list, lizard markings now mam like the rest
+		message_admins("migrating")
 		var/marking_type
 		var/species_id = S["species"]
 		var/datum/species/actual_species = GLOB.species_datums[species_id]
@@ -311,30 +313,30 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 			var/old_marking_value = S[marking_type]
 			var/list/color_list = list("#FFFFFF","#FFFFFF","#FFFFFF")
 
-			if(S["feature_mcolor"]) color_list[1] = S["feature_mcolor"] else color_list[1] = "#FFFFFF"
-			if(S["feature_mcolor2"]) color_list[2] = S["feature_mcolor2"] else color_list[2] = "#FFFFFF"
-			if(S["feature_mcolor3"]) color_list[3] = S["feature_mcolor3"] else color_list[3] = "#FFFFFF"
+			if(S["feature_mcolor"]) color_list[1] = "#" + S["feature_mcolor"]
+			if(S["feature_mcolor2"]) color_list[2] = "#" + S["feature_mcolor2"]
+			if(S["feature_mcolor3"]) color_list[3] = "#" + S["feature_mcolor3"]
 
-			var/marking_list = list()
+			var/list/marking_list = list()
 			for(var/part in list(ARM_LEFT, ARM_RIGHT, LEG_LEFT, LEG_RIGHT, CHEST, HEAD))
 				var/list/copied_color_list = color_list.Copy()
-				var/datum/sprite_accessory/mam_body_markings/S = GLOB.mam_body_markings_list[old_marking_value]
-				if(length(S.covered_limbs) && S.covered_limbs[part])
-					var/matrixed_sections = S.covered_limbs[part]
+				var/datum/sprite_accessory/mam_body_markings/mam_marking = GLOB.mam_body_markings_list[old_marking_value]
+				var/part_name = GLOB.bodypart_names[num2text(part)]
+				if(length(mam_marking.covered_limbs) && mam_marking.covered_limbs[part_name])
+					var/matrixed_sections = mam_marking.covered_limbs[part_name]
 					// just trust me this is fine
 					switch(matrixed_sections)
 						if(MATRIX_GREEN)
-							color_list[1] = color_list[2]
+							copied_color_list[1] = copied_color_list[2]
 						if(MATRIX_BLUE)
-							color_list[1] = color_list[3]
+							copied_color_list[1] = copied_color_list[3]
 						if(MATRIX_RED_BLUE)
-							color_list[2] = color_list[3]
+							copied_color_list[2] = copied_color_list[3]
 						if(MATRIX_GREEN_BLUE)
-							color_list[1] = color_list[2]
-							color_list[2] = color_list[3]
+							copied_color_list[1] = copied_color_list[2]
+							copied_color_list[2] = copied_color_list[3]
 				marking_list += list(list(part, old_marking_value, copied_color_list))
-
-			S[marking_type] = safe_json_encode(marking_list)
+			features["mam_body_markings"] = marking_list
 
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
 	if(!ckey)
