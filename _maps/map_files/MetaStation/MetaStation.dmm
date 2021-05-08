@@ -645,7 +645,7 @@
 /area/security/prison)
 "acb" = (
 /obj/structure/table,
-/obj/item/storage/box/dice,
+/obj/item/storage/dice,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "acc" = (
@@ -3252,7 +3252,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security/glass{
 	name = "Security E.V.A. Storage";
-	req_access_txt = "3"
+	req_access_txt = "1"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -3421,6 +3421,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/gear_painter,
 /turf/open/floor/plasteel/white/corner,
 /area/hallway/secondary/entry)
 "aiW" = (
@@ -8434,7 +8435,7 @@
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "axL" = (
-/obj/item/caution,
+/obj/item/clothing/suit/caution,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
@@ -57258,9 +57259,6 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
-/turf/open/floor/plasteel/white/side{
-	dir = 4
-	},
 /turf/open/floor/plasteel/dark,
 /area/command/bridge)
 "iuC" = (
@@ -58402,9 +58400,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -63554,7 +63549,6 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
-/obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
@@ -71931,13 +71925,7 @@
 "rdG" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 9
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_y = -30
+	icon_state = "0-8"
 	},
 /obj/machinery/door/poddoor/preopen{
 	id = "hosprivacy";
@@ -92127,13 +92115,13 @@ aaf
 aaf
 aaa
 aaa
+aaf
 aaa
 aaa
-aaf
-aaf
-aaf
-aaf
-aaf
+aaa
+aaa
+aaa
+pBY
 aaa
 aaa
 aaa
@@ -92384,14 +92372,14 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaf
-aaa
-aaa
-aaa
 aaf
 aaf
+aaf
+aaf
+aaf
+aVs
+rta
+aVs
 aaf
 aaf
 aaa
@@ -92643,12 +92631,12 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
+aaf
 aaa
 aaf
+aVs
+pAD
+aVs
 aaa
 aaf
 aaa
@@ -92904,7 +92892,7 @@ aRA
 aRA
 aRA
 aVs
-aVs
+lcv
 aVs
 aVs
 aaf
@@ -93161,9 +93149,9 @@ wOY
 aSH
 aUb
 aVt
-aWT
+mdt
+vMG
 aVs
-aaf
 aaf
 aaa
 aaa
@@ -93418,9 +93406,9 @@ abu
 bsk
 aUc
 aVu
-aWU
-aYC
-aaa
+bvF
+lvm
+aVs
 aaf
 aaa
 aaa
@@ -93675,9 +93663,9 @@ wOY
 aSI
 aRA
 aVv
-aWU
+bvF
+ulG
 aVs
-aaf
 aaf
 aaa
 aaa
@@ -93933,8 +93921,8 @@ aRA
 aRA
 cZf
 aWV
-aRA
-aaa
+kHw
+aVs
 aaa
 aaa
 aaa
@@ -97800,7 +97788,7 @@ blU
 aiT
 siD
 bHJ
-aiT
+lFR
 iSt
 mcS
 alK
@@ -101184,7 +101172,7 @@ cwi
 dux
 dux
 dux
-aaa
+dux
 aaa
 cBR
 cCK
@@ -101439,9 +101427,9 @@ cuf
 cvk
 cwh
 bXE
+bXE
 dvq
 dux
-aaa
 aaa
 cBR
 cBR
@@ -101695,10 +101683,10 @@ chZ
 chZ
 cvl
 cbx
+cfD
 ceu
 dux
-dux
-aaf
+mqC
 aaa
 aaa
 cBR
@@ -101945,7 +101933,7 @@ cia
 cia
 cia
 cia
-cpT
+cDP
 cia
 cia
 cia
@@ -101953,9 +101941,9 @@ ceu
 dyg
 dvt
 bXE
+bXE
 dvE
 dux
-aaf
 aaf
 aaf
 dBN
@@ -102200,19 +102188,19 @@ cia
 cjw
 ckU
 cmk
-cnm
+cnt
 coy
-cpU
+cUH
 crj
 csj
 cia
 cug
 dyg
+bXE
 dDw
 bXE
-cNg
+rvd
 dux
-aaa
 aaa
 aaa
 cBR
@@ -102453,23 +102441,23 @@ bXE
 cer
 dux
 dwb
-cib
-cjx
-ckV
+cia
+cjC
+cla
 cml
-cnn
+cnt
 coz
-coz
-crk
+cUH
+crq
 csk
 cia
 cuh
 cvm
 cDK
-cxc
+ceu
 cxR
+oeQ
 dux
-aaa
 aaa
 aaa
 dBN
@@ -102710,11 +102698,11 @@ bXE
 bYJ
 dux
 dwe
+cia
+cjB
+cpT
 cic
-cjy
-ckW
-cmk
-cno
+cnr
 coA
 cUH
 crl
@@ -102723,10 +102711,10 @@ cia
 ceu
 ceu
 dyg
+ceu
 dux
 dux
 dux
-aaa
 aaa
 aaa
 cBR
@@ -102967,23 +102955,23 @@ dvt
 dux
 dux
 dwb
-cic
+cia
 cjz
 ckX
 cmm
 cnp
 coB
-coB
+vwZ
 crm
 csm
 cia
-cui
+dux
 cwj
-dyg
+cNg
+ceu
 dux
-cxS
+nho
 dux
-aaf
 aaf
 aaf
 cBR
@@ -103224,23 +103212,23 @@ cdi
 dux
 cdl
 dwb
-cic
-cjA
-ckY
-cmk
+cia
+cnm
+sos
+cid
 cnq
 coC
 cpW
 crn
 csn
-cia
-cdl
-cMm
-cMo
+cui
 dux
-cxT
+cxS
+cNf
+fpa
 dux
-aaa
+sCN
+dux
 aaa
 aaa
 aaf
@@ -103481,23 +103469,23 @@ dux
 dux
 cfD
 dwb
-cic
 cia
+cib
 ckZ
-cia
-cia
-cia
+cjA
+kgN
+coB
 cpX
 cia
 lWL
 cia
-ceu
+cia
 dyg
+bXE
 dyw
 dux
-cxS
+nho
 dux
-aaa
 aaa
 aaa
 aaf
@@ -103738,20 +103726,20 @@ cdj
 cse
 cdj
 cgL
-cid
+cia
 cjB
-cla
-cmk
+cro
+ckY
 cnr
 coD
-cpY
-cro
+cqa
+cnt
 cso
+cuj
 cia
-cfD
 dyj
 ceu
-dux
+ceu
 dux
 dux
 dux
@@ -103995,18 +103983,18 @@ cdk
 ceu
 cfE
 dwi
-cic
+cia
 cjC
 clb
 cmn
-cns
+cnt
 coE
 cpZ
-coB
+hny
 csp
+cwn
 csr
-duH
-dyg
+cxT
 ceu
 cMm
 cwm
@@ -104252,17 +104240,17 @@ dux
 dux
 cfF
 dwj
-cic
+cia
 cjD
 clc
-cmk
+coG
 cnt
 coF
-cqa
-crq
+cEe
+cnt
 csq
+cxc
 cia
-dux
 diM
 cwm
 cNf
@@ -104509,12 +104497,12 @@ cdl
 hcC
 hcC
 cgO
-cic
 cia
 cia
 cia
 cia
-coG
+cia
+cia
 cqb
 cia
 cia
@@ -104522,7 +104510,7 @@ cia
 cia
 gjp
 dDw
-bXE
+gwW
 cxU
 cxU
 czN
@@ -104778,7 +104766,7 @@ csr
 duH
 bXE
 cvn
-cwn
+dvE
 cxd
 cxU
 cyN
@@ -105032,9 +105020,9 @@ coI
 cqd
 crs
 css
-dux
-dux
-dux
+cvp
+cvp
+cvp
 cxU
 cxU
 cxU
@@ -109150,7 +109138,7 @@ cvA
 cwB
 cxt
 cyg
-cyZ
+reM
 cAd
 ctA
 dbr
@@ -109662,9 +109650,9 @@ ctA
 ctA
 ctA
 ctA
-cxv
-cyi
 ctA
+ctA
+cym
 ctA
 ctA
 cCi
@@ -109915,12 +109903,12 @@ coV
 cqt
 cga
 cKJ
-ctB
+cyl
 cuw
 mfP
 cwD
 cxw
-cyj
+cyl
 czb
 cAf
 cBc
@@ -110429,18 +110417,18 @@ coX
 cnL
 cga
 cbC
-ctB
+cyl
 cuy
 cvE
-ctB
+cxv
 cxy
 cyl
 czd
-cAg
+gtn
 ctB
 cCe
 cCe
-cEe
+cCe
 cEY
 cCe
 cCe
@@ -110687,11 +110675,11 @@ coY
 cga
 csI
 ctD
-cuz
 cvF
-ctB
-ctB
-cym
+sBC
+cyl
+cyi
+cyl
 cze
 ctB
 cBd
@@ -111202,18 +111190,18 @@ crG
 csK
 ctF
 car
-car
+czg
 car
 cxA
 car
-czg
+car
 cAi
 ctF
 car
 car
-czg
-cFb
 car
+cFb
+czg
 car
 cHO
 cIF
@@ -111459,7 +111447,7 @@ crH
 csL
 ctG
 cgc
-cvG
+qee
 chh
 cxB
 cyo
@@ -111470,7 +111458,7 @@ cCm
 cpa
 cEh
 cFc
-chh
+umv
 chh
 cvG
 cIG
