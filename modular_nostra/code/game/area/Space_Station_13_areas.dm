@@ -72,5 +72,4 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
   icon_state = "away"
   requires_power = FALSE
   has_gravity = STANDARD_GRAVITY
-  noteleport = TRUE
   hidden = TRUE
