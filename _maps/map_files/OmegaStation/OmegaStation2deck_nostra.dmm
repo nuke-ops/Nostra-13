@@ -5997,9 +5997,9 @@
 /area/asteroid/nearstation)
 "Af" = (
 /obj/structure/lattice/catwalk,
-/obj/structure/barricade/wooden,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/structure/grille,
 /turf/open/floor/plating/asteroid/airless,
 /area/asteroid/nearstation)
 "Aj" = (
@@ -11193,6 +11193,16 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
+"Yt" = (
+/obj/structure/lattice/catwalk,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/structure/cable/white{
+	icon_state = "1-2"
+	},
+/obj/structure/grille,
+/turf/open/floor/plating/asteroid/airless,
+/area/asteroid/nearstation)
 "Yv" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -47922,9 +47932,9 @@ xn
 dL
 dL
 dL
-su
+Yt
 yS
-su
+Yt
 dL
 dL
 dL
