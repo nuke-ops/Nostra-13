@@ -1,0 +1,4 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - bugfix: fixed openspace tiles sucking air out of the room
