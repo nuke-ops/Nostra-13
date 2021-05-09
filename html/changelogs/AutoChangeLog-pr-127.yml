@@ -1,0 +1,5 @@
+author: maksxpl
+delete-after: true
+changes:
+  - tweak: changed icon in left top corner
+  - bugfix: fixed sci rpd path
