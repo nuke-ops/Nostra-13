@@ -34766,6 +34766,9 @@
 "bgq" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/stripes/line,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
+	},
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
 "bgr" = (
@@ -36069,6 +36072,9 @@
 	c_tag = "Xenobiology Central";
 	dir = 4;
 	pixel_y = -5
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -24
 	},
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
@@ -38493,17 +38499,8 @@
 /area/science/xenobiology)
 "bnf" = (
 /obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	id = "xeno1";
-	name = "Containment Control";
-	req_access_txt = "55"
-	},
 /obj/machinery/firealarm{
 	pixel_y = 24
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -24;
-	pixel_y = 32
 	},
 /obj/effect/turf_decal/bot,
 /obj/structure/window/reinforced,
@@ -38511,13 +38508,6 @@
 /area/science/xenobiology)
 "bng" = (
 /obj/effect/turf_decal/stripes/line,
-/obj/machinery/button/door{
-	id = "xeno4";
-	name = "Containment Control";
-	pixel_x = 26;
-	pixel_y = 6;
-	req_access_txt = "55"
-	},
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
 "bnh" = (
@@ -39639,6 +39629,20 @@
 	pixel_x = -12;
 	pixel_y = 2
 	},
+/obj/machinery/button/door{
+	id = "xeno2";
+	name = "Containment Control";
+	pixel_x = -26;
+	pixel_y = -6;
+	req_access_txt = "55"
+	},
+/obj/machinery/button/door{
+	id = "xeno1";
+	name = "Containment Control";
+	pixel_x = -26;
+	pixel_y = 6;
+	req_access_txt = "55"
+	},
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
 "bpc" = (
@@ -39980,11 +39984,6 @@
 /area/science/xenobiology)
 "bpF" = (
 /obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	id = "xeno2";
-	name = "Containment Control";
-	req_access_txt = "55"
-	},
 /obj/effect/turf_decal/bot,
 /obj/structure/window/reinforced,
 /turf/open/floor/plasteel,
@@ -39993,20 +39992,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/cable/white{
 	icon_state = "1-2"
-	},
-/turf/open/floor/plasteel/white,
-/area/science/xenobiology)
-"bpH" = (
-/obj/effect/turf_decal/tile/purple{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/purple,
-/obj/machinery/button/door{
-	id = "xeno5";
-	name = "Containment Control";
-	pixel_x = 26;
-	pixel_y = -6;
-	req_access_txt = "55"
 	},
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
@@ -40402,14 +40387,14 @@
 /area/science/xenobiology)
 "bqr" = (
 /obj/machinery/processor/slime,
-/obj/machinery/newscaster{
-	pixel_y = 32
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
+	},
+/obj/machinery/newscaster{
+	pixel_y = 32
 	},
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
@@ -41718,13 +41703,6 @@
 	dir = 4
 	},
 /area/hallway/secondary/exit)
-"cbL" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/item/pipe_dispenser/science,
-/turf/closed/wall,
-/area/science/xenobiology)
 "ccy" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -46062,10 +46040,6 @@
 	},
 /turf/closed/wall/r_wall,
 /area/science/mixing)
-"nTi" = (
-/obj/structure/sign/warning/biohazard,
-/turf/closed/wall,
-/area/science/xenobiology)
 "nUk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/general/visible,
@@ -95947,7 +95921,7 @@ bpa
 bpF
 haq
 boD
-nTi
+ibv
 bqp
 bnN
 boD
@@ -96715,7 +96689,7 @@ bng
 bnP
 boF
 bpd
-bpH
+boF
 bpT
 boF
 bqn
@@ -96971,11 +96945,11 @@ bfP
 bnh
 hcf
 boG
-cbL
+bpa
 bnh
 bnQ
 boG
-nTi
+ibv
 bqr
 bjt
 bjG
