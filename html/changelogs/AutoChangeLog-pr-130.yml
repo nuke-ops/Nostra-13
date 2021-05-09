@@ -1,0 +1,7 @@
+author: maksxpl
+delete-after: true
+changes:
+  - rscadd: added paramedic office on omega
+  - rscadd: added paramedic office on meta
+  - bugfix: yeeted openspace tiles back into existence on omega
+  - tweak: reworked atmos network on the 2nd floor of the omega station
