@@ -32,7 +32,7 @@
 // Lewd interactions have a blacklist for certain mobs. When we evalute the user and target, both of
 // their requirements must be satisfied, and the mob must not be of a blacklisted type.
 // This should not be too weighty on the server, as the check is only run to generate the menu options.
-/datum/interaction/lewd/evaluate_user(mob/living/user, silent)
+/datum/interaction/lewd/evaluate_user(mob/living/user, silent, action_check)
 	. = ..()
 	if(.)
 		if((user.stat == DEAD))
@@ -63,6 +63,7 @@
 	var/has_penis = FALSE
 	var/has_vagina = FALSE
 	var/has_breasts = FALSE
+	var/anus_exposed = FALSE
 	var/last_partner
 	var/last_orifice
 	var/obj/item/organ/last_genital
@@ -93,7 +94,6 @@
 		return 0
 	else
 		return dif
-
 
 /mob/living/proc/add_lust(add)
 	var/cur = src.get_lust() //GetLust handles per-time lust loss
@@ -214,18 +214,30 @@
 	if(issilicon(src))
 		return TRUE
 	switch(nintendo)
-		if(REQUIRE_EXPOSED)
-			if(is_bottomless())
-				return TRUE
-			else
-				return FALSE
 		if(REQUIRE_ANY)
 			return TRUE
+		if(REQUIRE_EXPOSED)
+			switch(anus_exposed)
+				if(-1)
+					return FALSE
+				if(1)
+					return TRUE
+				else
+					if(is_bottomless())
+						return TRUE
+					else
+						return FALSE
 		if(REQUIRE_UNEXPOSED)
-			if(!is_bottomless())
-				return TRUE
+			if(anus_exposed == -1)
+				if(!anus_exposed)
+					if(!is_bottomless())
+						return TRUE
+					else
+						return FALSE
+				else
+					return FALSE
 			else
-				return FALSE
+				return TRUE
 		else
 			return TRUE
 
@@ -271,10 +283,9 @@
 			feetcount++
 		for(var/obj/item/bodypart/r_leg/R in C.bodyparts)
 			feetcount++
-		if(C.get_item_by_slot(SLOT_SHOES))
-			var/obj/item/clothing/shoes/S = C.get_item_by_slot(SLOT_SHOES)
-			covered = S.body_parts_covered
-		if(covered & FEET)
+		if(!C.is_barefoot())
+			covered = TRUE
+		if(covered)
 			iscovered = TRUE
 		switch(nintendo)
 			if(REQUIRE_ANY)
@@ -387,21 +398,33 @@
 //
 
 
+///Are we wearing something that covers our chest?
 /mob/living/proc/is_topless()
 	if(istype(src, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = src
-		if((!(H.wear_suit) || !(H.wear_suit.body_parts_covered & CHEST)) && (!(H.w_uniform) || !(H.w_uniform.body_parts_covered & CHEST)))
+		if((!(H.wear_suit) || !(H.wear_suit.body_parts_covered & CHEST)) && (!(H.w_uniform) || !(H.w_uniform.body_parts_covered & CHEST)) && (!(H.w_shirt) || !(H.w_shirt.body_parts_covered & CHEST)))
 			return TRUE
 	else
 		return TRUE
 
+///Are we wearing something that covers our groin?
 /mob/living/proc/is_bottomless()
 	if(istype(src, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = src
-		if((!(H.wear_suit) || !(H.wear_suit.body_parts_covered & GROIN)) && (!(H.w_uniform) || !(H.w_uniform.body_parts_covered & GROIN)))
+		if((!(H.wear_suit) || !(H.wear_suit.body_parts_covered & GROIN)) && (!(H.w_uniform) || !(H.w_uniform.body_parts_covered & GROIN)) && (!(H.w_underwear) || !(H.w_underwear.body_parts_covered & GROIN)))
 			return TRUE
 	else
 		return TRUE
+
+///Are we wearing something that covers our shoes?
+/mob/living/proc/is_barefoot()
+	if(istype(src, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = src
+		if((!(H.wear_suit) || !(H.wear_suit.body_parts_covered & GROIN)) && (!(H.w_socks) || !(H.w_socks.body_parts_covered & FEET)))
+			return TRUE
+	else
+		return TRUE
+
 /*
 /proc/cum_splatter(target, var/mob/living/user) // Like blood_splatter(), but much more questionable on a resume.
 	if(user.has_penis() && !user.has_vagina())
@@ -787,6 +810,7 @@
 	last_orifice = orifice
 	last_genital = genepool
 
+/*	Kills fucking animation, i hate this and players do too.
 /mob/living/proc/do_fucking_animation(fuckdir) // Today I wrote 'var/fuckdir' with a straight face. Not a milestone I ever expected to pass. dont worry, we dont use heretic proc/name(var/dir)
 	if(!fuckdir)
 		return
@@ -815,6 +839,7 @@
 
 	animate(src, pixel_x = pixel_x + pixel_x_diff, pixel_y = pixel_y + pixel_y_diff, time = 2)
 	animate(pixel_x = initial(pixel_x), pixel_y = final_pixel_y, time = 2)
+*/
 
 /*--------------------------------------------------
   ---------------LEWD PROCESS DATUM-----------------
@@ -847,7 +872,7 @@
 							"kisses \the <b>[partner]</b>'s delicate folds.",
 							"tastes \the <b>[partner]</b>.",
 						)
-					else 
+					else
 						improv = TRUE
 				if("penis")
 					if(partner.has_penis())
@@ -860,7 +885,7 @@
 							"kisses the base of \the <b>[partner]</b>'s shaft.",
 							"takes \the <b>[partner]</b> deeper into their mouth.",
 						)
-					else 
+					else
 						improv = TRUE
 			if(improv)
 				// get confused about how to do the sex
@@ -932,7 +957,7 @@
 	visible_message(message = "<font color=purple><b>\The [src]</b> [message]</font>", ignored_mobs = get_unconsenting())
 	partner.handle_post_sex(lust_increase, CUM_TARGET_MOUTH, src)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 	lust_increase = NORMAL_LUST //RESET IT REE
 
 /mob/living/proc/do_facefuck(mob/living/partner, var/fucktarget = "penis")
@@ -1010,7 +1035,7 @@
 						message = "shoves their cock into \the <b>[partner]</b>'s mouth"
 				else
 					improv = TRUE
-		if(improv)	
+		if(improv)
 			message = "shoves their crotch into \the <b>[partner]</b>'s face."
 		else
 			if(ishuman(partner))
@@ -1029,7 +1054,7 @@
 		visible_message(message = "<font color=red><b>\The <b>[partner]</b></b> [retaliation_message]</font>", ignored_mobs = get_unconsenting())
 	handle_post_sex(NORMAL_LUST, CUM_TARGET_MOUTH, partner)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/thigh_smother(mob/living/partner, var/fucktarget = "penis")
 
@@ -1076,7 +1101,7 @@
 						"locks their legs around \the <b>[partner]</b>'s head before pulling it into their fat package, smothering them."))
 				else
 					improv = TRUE
-				
+
 		if(improv)
 			message = "deviously locks their legs around \the <b>[partner]</b>'s head and smothers it in their thighs."
 		else
@@ -1105,7 +1130,7 @@
 
 	partner.dir = get_dir(partner,src)
 
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 
 
@@ -1119,7 +1144,7 @@
 
 	partner.dir = get_dir(partner,src)
 
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_throatfuck(mob/living/partner)
 	var/message
@@ -1163,7 +1188,7 @@
 		visible_message(message = "<font color=red><b>\The <b>[partner]</b></b> [retaliation_message]</font>", ignored_mobs = get_unconsenting())
 	handle_post_sex(NORMAL_LUST, CUM_TARGET_THROAT, partner)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/nut_face(var/mob/living/partner)
 
@@ -1188,7 +1213,7 @@
 	visible_message(message = "<font color=purple><b>\The [src]</b> [message]</font>", ignored_mobs = get_unconsenting())
 	handle_post_sex(lust_increase, CUM_TARGET_MOUTH, partner)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_anal(mob/living/partner)
 	var/message
@@ -1213,7 +1238,7 @@
 	handle_post_sex(NORMAL_LUST, CUM_TARGET_ANUS, partner)
 	partner.handle_post_sex(NORMAL_LUST, null, src)
 	partner.dir = get_dir(src, partner)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_vaginal(mob/living/partner)
 	var/message
@@ -1234,7 +1259,7 @@
 	handle_post_sex(NORMAL_LUST, CUM_TARGET_VAGINA, partner)
 	partner.handle_post_sex(NORMAL_LUST, null, src)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_mount(mob/living/partner)
 	var/message
@@ -1252,7 +1277,7 @@
 	partner.handle_post_sex(NORMAL_LUST, CUM_TARGET_VAGINA, src)
 	handle_post_sex(NORMAL_LUST, null, partner)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_mountass(mob/living/partner)
 	var/message
@@ -1270,7 +1295,7 @@
 	partner.handle_post_sex(NORMAL_LUST, CUM_TARGET_ANUS, src)
 	handle_post_sex(NORMAL_LUST, null, partner)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_tribadism(mob/living/partner)
 	var/message
@@ -1290,7 +1315,7 @@
 	partner.handle_post_sex(NORMAL_LUST, CUM_TARGET_VAGINA, src)
 	handle_post_sex(NORMAL_LUST, null, partner)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_fingering(mob/living/partner)
 	visible_message(message = "<font color=purple><b>\The [src]</b> [pick("fingers \the <b>[partner]</b>.",
@@ -1299,7 +1324,7 @@
 	playlewdinteractionsound(loc, 'modular_sand/sound/interactions/champ_fingering.ogg', 50, 1, -1)
 	partner.handle_post_sex(NORMAL_LUST, null, src)
 	partner.dir = get_dir(partner, src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_fingerass(mob/living/partner)
 	visible_message(message = "<font color=purple><b>\The [src]</b> [pick("fingers \the <b>[partner]</b>.",
@@ -1308,14 +1333,14 @@
 	playlewdinteractionsound(loc, 'modular_sand/sound/interactions/champ_fingering.ogg', 50, 1, -1)
 	partner.handle_post_sex(NORMAL_LUST, null, src)
 	partner.dir = get_dir(partner, src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_rimjob(mob/living/partner)
 	visible_message(message = "<font color=purple><b>\The [src]</b> licks \the <b>[partner]</b>'s asshole.</font>", ignored_mobs = get_unconsenting())
 	playlewdinteractionsound(loc, 'modular_sand/sound/interactions/champ_fingering.ogg', 50, 1, -1)
 	partner.handle_post_sex(NORMAL_LUST, null, src)
 	partner.dir = get_dir(src, partner)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_handjob(mob/living/partner)
 	var/message
@@ -1335,11 +1360,11 @@
 	visible_message(message = "<font color=purple><b>\The [src]</b> [message]</font>", ignored_mobs = get_unconsenting())
 	partner.handle_post_sex(NORMAL_LUST, CUM_TARGET_HAND, src)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_breastfuck(mob/living/partner)
 	var/message
-	
+
 	if(is_fucking(partner, CUM_TARGET_BREASTS))
 		message = "[pick("fucks \the <b>[partner]</b>'s' breasts.",
 			"grinds their cock between \the <b>[partner]</b>'s boobs.",
@@ -1356,7 +1381,7 @@
 	visible_message(message = "<font color=purple><b>\The [src]</b> [message]</font>", ignored_mobs = get_unconsenting())
 	handle_post_sex(NORMAL_LUST, CUM_TARGET_BREASTS, partner)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_mountface(mob/living/partner)
 	var/message
@@ -1376,7 +1401,7 @@
 	visible_message(message = "<font color=purple><b>\The [src]</b> [message]</font>", ignored_mobs = get_unconsenting())
 	handle_post_sex(LOW_LUST, null, src)
 	partner.dir = get_dir(src, partner)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_lickfeet(mob/living/partner)
 	var/message
@@ -1390,7 +1415,7 @@
 	visible_message(message = "<font color=purple><b>\The [src]</b> [message]</font>", ignored_mobs = get_unconsenting())
 	handle_post_sex(LOW_LUST, null, src)
 	partner.dir = get_dir(src, partner)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /*Grinding YOUR feet in TARGET's face*/
 /mob/living/proc/do_grindface(mob/living/partner)
@@ -1435,7 +1460,7 @@
 	visible_message(message = "<font color=purple><b>\The [src]</b> [message]</font>", ignored_mobs = get_unconsenting())
 	partner.handle_post_sex(LOW_LUST, null, src)
 	partner.dir = get_dir(src, partner)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /*Grinding YOUR feet in TARGET's mouth*/
 /mob/living/proc/do_grindmouth(mob/living/partner)
@@ -1477,7 +1502,7 @@
 	visible_message(message = "<font color=purple><b>\The [src]</b> [message]</font>", ignored_mobs = get_unconsenting())
 	partner.handle_post_sex(LOW_LUST, null, src)
 	partner.dir = get_dir(src, partner)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_footfuck(mob/living/partner)
 	var/message
@@ -1499,7 +1524,7 @@
 	visible_message(message = "<font color=purple><b>\The [src]</b> [message]</font>", ignored_mobs = get_unconsenting())
 	handle_post_sex(NORMAL_LUST, CUM_TARGET_FEET, src)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_dfootfuck(mob/living/partner)
 	var/message
@@ -1521,7 +1546,7 @@
 	visible_message(message = "<font color=purple><b>\The [src]</b> [message]</font>", ignored_mobs = get_unconsenting())
 	handle_post_sex(NORMAL_LUST, CUM_TARGET_FEET, src)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_vfootfuck(mob/living/partner)
 	var/message
@@ -1543,7 +1568,7 @@
 	visible_message(message = "<font color=purple><b>\The [src]</b> [message]</font>", ignored_mobs = get_unconsenting())
 	handle_post_sex(NORMAL_LUST, CUM_TARGET_FEET, src)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_footjob(mob/living/partner)
 	var/message
@@ -1564,7 +1589,7 @@
 	visible_message(message = "<font color=purple><b>\The [src]</b> [message]</font>", ignored_mobs = get_unconsenting())
 	partner.handle_post_sex(NORMAL_LUST, CUM_TARGET_FEET, src)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_dfootjob(mob/living/partner)
 	var/message
@@ -1586,7 +1611,7 @@
 	visible_message(message = "<font color=purple><b>\The [src]</b> [message]</font>", ignored_mobs = get_unconsenting())
 	partner.handle_post_sex(NORMAL_LUST, CUM_TARGET_FEET, src)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_footjob_v(mob/living/partner)
 	var/message
@@ -1608,7 +1633,7 @@
 	visible_message(message = "<font color=purple><b>\The [src]</b> [message]</font>", ignored_mobs = get_unconsenting())
 	partner.handle_post_sex(NORMAL_LUST, CUM_TARGET_FEET, src)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/get_shoes(var/singular = FALSE)
 	var/obj/A = get_item_by_slot(SLOT_SHOES)
@@ -1682,7 +1707,7 @@
 	handle_post_sex(NORMAL_LUST, CUM_TARGET_EYES, partner)
 	partner.handle_post_sex(LOW_LUST, null, src)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 
 /mob/living/proc/do_earfuck(mob/living/partner)
 	var/message
@@ -1712,5 +1737,5 @@
 	handle_post_sex(NORMAL_LUST, CUM_TARGET_EARS, partner)
 	partner.handle_post_sex(LOW_LUST, null, src)
 	partner.dir = get_dir(partner,src)
-	do_fucking_animation(get_dir(src, partner))
+	//do_fucking_animation(get_dir(src, partner))
 //
