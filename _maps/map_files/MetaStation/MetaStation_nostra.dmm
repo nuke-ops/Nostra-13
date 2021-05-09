@@ -25461,6 +25461,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
+/obj/effect/landmark/start/paramedic,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "cal" = (
@@ -33053,9 +33054,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
-"css" = (
-/turf/closed/wall,
-/area/medical/cryo)
 "cst" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -33398,25 +33396,14 @@
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "ctr" = (
-/obj/structure/bed{
-	dir = 1
-	},
-/obj/item/bedsheet/medical{
-	dir = 1
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
+/obj/structure/closet/secure_closet/paramedic,
 /obj/machinery/airalarm{
 	dir = 4;
 	pixel_x = -23
 	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/turf/open/floor/plasteel/white,
-/area/medical/patients_rooms/room_a)
+/turf/open/floor/plasteel/dark,
+/area/medical/paramedic)
 "cts" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
@@ -33427,8 +33414,11 @@
 /obj/machinery/vending/wallmed{
 	pixel_y = 28
 	},
-/turf/open/floor/plasteel/white,
-/area/medical/patients_rooms/room_a)
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/paramedic)
 "ctt" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -33439,32 +33429,19 @@
 /obj/machinery/light_switch{
 	pixel_y = 25
 	},
-/obj/effect/turf_decal/tile/blue,
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/turf/open/floor/plasteel/white,
-/area/medical/patients_rooms/room_a)
+/turf/open/floor/plasteel/dark,
+/area/medical/paramedic)
 "ctu" = (
-/obj/machinery/door/airlock/medical{
-	name = "Patient Room A";
-	req_access_txt = "5"
-	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Paramedic's Office";
+	req_access_txt = "5;6;12;64"
 	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue,
-/turf/open/floor/plasteel/white,
-/area/medical/patients_rooms/room_a)
+/turf/open/floor/plasteel/dark,
+/area/medical/paramedic)
 "ctv" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -33716,17 +33693,21 @@
 	},
 /area/medical/surgery)
 "cul" = (
-/obj/structure/chair/office/light{
-	dir = 8
-	},
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/obj/effect/landmark/start/medical_doctor,
-/turf/open/floor/plasteel/white,
-/area/medical/patients_rooms/room_a)
+/obj/structure/chair/office/light{
+	dir = 4
+	},
+/obj/effect/landmark/start/paramedic,
+/obj/machinery/camera{
+	c_tag = "Paramedic Disbatch";
+	dir = 10;
+	network = list("ss13","medbay")
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/paramedic)
 "cum" = (
-/obj/structure/closet/secure_closet/personal/patient,
 /obj/machinery/button/door{
 	id = "isola";
 	name = "Privacy Shutters";
@@ -33735,14 +33716,12 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
-/obj/effect/turf_decal/tile/blue,
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
+/obj/machinery/computer/crew{
+	dir = 8
 	},
-/turf/open/floor/plasteel/white,
-/area/medical/patients_rooms/room_a)
+/turf/open/floor/plasteel/dark,
+/area/medical/paramedic)
 "cun" = (
-/obj/effect/spawner/structure/window,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
@@ -33750,8 +33729,9 @@
 	id = "isola";
 	name = "privacy shutters"
 	},
+/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
-/area/medical/patients_rooms/room_a)
+/area/medical/paramedic)
 "cuo" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
@@ -34120,10 +34100,7 @@
 "cvo" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
-/area/medical/patients_rooms/room_a)
-"cvp" = (
-/turf/closed/wall,
-/area/medical/patients_rooms/room_a)
+/area/medical/paramedic)
 "cvq" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -76215,33 +76192,19 @@
 /turf/open/floor/plasteel,
 /area/commons/locker)
 "tNq" = (
-/obj/structure/table,
-/obj/item/folder/white{
-	pixel_x = 4;
-	pixel_y = -3
-	},
-/obj/item/clothing/neck/stethoscope,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/machinery/power/apc{
-	areastring = "/area/medical/patients_rooms/room_a";
-	dir = 8;
-	name = "Patient Room A APC";
-	pixel_x = -25
-	},
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
+/obj/machinery/suit_storage_unit/paramedic,
+/obj/machinery/power/apc{
+	areastring = "/area/medical/paramedic";
+	dir = 8;
+	name = "Paramedic's Office APC";
+	pixel_x = -25
 	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/turf/open/floor/plasteel/white,
-/area/medical/patients_rooms/room_a)
+/turf/open/floor/plasteel/dark,
+/area/medical/paramedic)
 "tNF" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel,
@@ -105092,10 +105055,10 @@ cnv
 coI
 cqd
 crs
-css
-cvp
-cvp
-cvp
+cyl
+cyl
+cyl
+cyl
 cxU
 cxU
 cxU
@@ -105349,7 +105312,7 @@ cnw
 coJ
 cqe
 crt
-css
+cyl
 ctr
 tNq
 cvo
@@ -105606,10 +105569,10 @@ cnx
 coK
 cqf
 cru
-css
+cyl
 cts
 cul
-cvp
+cyl
 cwp
 cxf
 cxU
@@ -105863,10 +105826,10 @@ cny
 coL
 cqg
 crv
-css
+cyl
 ctt
 cum
-cvp
+cyl
 cwq
 cxg
 cxU
@@ -106120,10 +106083,10 @@ cnz
 coM
 cqh
 cnz
-css
+cyl
 ctu
 cun
-cvp
+cyl
 cwr
 cxh
 cxU
