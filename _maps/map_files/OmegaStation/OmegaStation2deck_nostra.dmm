@@ -62,6 +62,7 @@
 	id_tag = "Dorm7";
 	name = "Room Seven"
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel,
 /area/commons/dorms)
 "ak" = (
@@ -2393,6 +2394,7 @@
 	id_tag = "Dorm8";
 	name = "Room Eight"
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel,
 /area/commons/dorms)
 "ke" = (
