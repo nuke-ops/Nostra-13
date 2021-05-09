@@ -4615,6 +4615,20 @@
 	},
 /turf/open/space/basic,
 /area/space/nearstation)
+"tu" = (
+/obj/docking_port/stationary{
+	area_type = /area/shuttle/cargo/CargoElevator;
+	dheight = 0;
+	dir = 4;
+	dwidth = 2;
+	height = 6;
+	id = "Cargo_Second_Deck";
+	name = "Cargo Second Deck";
+	roundstart_template = /datum/map_template/shuttle/cargo/elevator;
+	width = 5
+	},
+/turf/open/openspace/airless,
+/area/cargo/storage)
 "tB" = (
 /obj/machinery/atmospherics/components/unary/vent_pump{
 	dir = 8;
@@ -58537,7 +58551,7 @@ yM
 yA
 PG
 qS
-qS
+tu
 qS
 PG
 Pn

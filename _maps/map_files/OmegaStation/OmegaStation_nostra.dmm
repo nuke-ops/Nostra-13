@@ -50149,7 +50149,6 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard)
 "unV" = (
-/obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
