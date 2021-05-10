@@ -3739,7 +3739,6 @@
 #include "modular_nostra\code\datums\shuttles.dm"
 #include "modular_nostra\code\game\area\areas.dm"
 #include "modular_nostra\code\game\area\Space_Station_13_areas.dm"
-#include "modular_nostra\code\game\gamemodes\dynamic\dynamic_rulesets_midround.dm"
 #include "modular_nostra\code\game\objects\items\plushes.dm"
 #include "modular_nostra\code\game\objects\items\RPD.dm"
 #include "modular_nostra\code\game\objects\items\storage\backpack.dm"
