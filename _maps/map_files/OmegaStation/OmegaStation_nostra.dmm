@@ -19201,6 +19201,7 @@
 /obj/item/kirbyplants{
 	pixel_y = 9
 	},
+/obj/structure/table,
 /turf/open/floor/plasteel/dark,
 /area/command/heads_quarters/ce)
 "aFn" = (
@@ -19959,6 +19960,9 @@
 	pixel_y = -29
 	},
 /obj/effect/turf_decal/trimline/yellow/filled/line{
+	dir = 1
+	},
+/obj/structure/chair/office/dark{
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
