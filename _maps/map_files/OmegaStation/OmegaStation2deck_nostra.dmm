@@ -310,7 +310,7 @@
 	dir = 4
 	},
 /obj/structure/railing/corner,
-/turf/open/space/basic,
+/turf/open/openspace/airless,
 /area/tcommsat/server)
 "bk" = (
 /obj/machinery/light,
@@ -879,7 +879,7 @@
 /obj/structure/railing/corner{
 	dir = 4
 	},
-/turf/open/space/basic,
+/turf/open/openspace/airless,
 /area/tcommsat/server)
 "dw" = (
 /turf/open/floor/plating,
@@ -1106,7 +1106,7 @@
 	dir = 8
 	},
 /obj/structure/railing/corner,
-/turf/open/space/basic,
+/turf/open/openspace/airless,
 /area/tcommsat/server)
 "ew" = (
 /turf/closed/wall/r_wall,
@@ -2352,7 +2352,7 @@
 /obj/structure/railing/corner{
 	dir = 4
 	},
-/turf/open/space/basic,
+/turf/open/openspace/airless,
 /area/tcommsat/server)
 "jP" = (
 /obj/effect/turf_decal/tile/brown{
@@ -2438,7 +2438,7 @@
 /obj/structure/railing/corner{
 	dir = 1
 	},
-/turf/open/space/basic,
+/turf/open/openspace/airless,
 /area/tcommsat/server)
 "kc" = (
 /obj/machinery/door/firedoor,
@@ -2530,7 +2530,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/open/space/basic,
+/turf/open/openspace/airless,
 /area/tcommsat/server)
 "ko" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2669,9 +2669,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
-"ld" = (
-/turf/closed/wall,
-/area/maintenance/disposal)
 "lf" = (
 /obj/machinery/door/airlock/external{
 	name = "External Airlock";
@@ -3165,7 +3162,7 @@
 "nd" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/railing,
-/turf/open/space/basic,
+/turf/open/openspace/airless,
 /area/tcommsat/server)
 "ne" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
@@ -3834,7 +3831,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/open/space/basic,
+/turf/open/openspace/airless,
 /area/tcommsat/server)
 "pO" = (
 /obj/effect/decal/cleanable/cobweb,
@@ -4606,10 +4603,6 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/hallway/secondary/exit/departure_lounge)
-"sR" = (
-/obj/structure/lattice/catwalk,
-/turf/closed/wall,
-/area/cargo/storage)
 "sT" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 5
@@ -4779,7 +4772,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/open/space/basic,
+/turf/open/openspace/airless,
 /area/tcommsat/server)
 "tO" = (
 /obj/effect/turf_decal/stripes/corner,
@@ -5017,7 +5010,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/open/space/basic,
+/turf/open/openspace/airless,
 /area/tcommsat/server)
 "uM" = (
 /obj/structure/railing{
@@ -9853,7 +9846,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/open/space/basic,
+/turf/open/openspace/airless,
 /area/tcommsat/server)
 "Qe" = (
 /obj/effect/decal/cleanable/blood/gibs,
@@ -10738,7 +10731,7 @@
 /obj/structure/railing/corner{
 	dir = 8
 	},
-/turf/open/space/basic,
+/turf/open/openspace/airless,
 /area/tcommsat/server)
 "Up" = (
 /obj/machinery/light{
@@ -10999,7 +10992,7 @@
 /obj/structure/railing/corner{
 	dir = 8
 	},
-/turf/open/space/basic,
+/turf/open/openspace/airless,
 /area/tcommsat/server)
 "VO" = (
 /obj/structure/cable/white{
@@ -11412,7 +11405,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/open/space/basic,
+/turf/open/openspace/airless,
 /area/tcommsat/server)
 "XA" = (
 /obj/effect/turf_decal/stripes/corner{
@@ -57569,14 +57562,14 @@ JU
 JU
 Pq
 Pq
-ld
-ld
-ld
-ld
-OG
-OG
-OG
-OG
+WI
+WI
+WI
+WI
+ew
+ew
+ew
+ew
 OG
 OG
 OG
@@ -57826,7 +57819,7 @@ JU
 JU
 Pq
 Pq
-ld
+WI
 LX
 Lp
 Bn
@@ -58083,7 +58076,7 @@ JU
 JU
 Pq
 Pq
-ld
+WI
 nF
 Sm
 Ky
@@ -58100,7 +58093,7 @@ ZL
 OG
 OG
 OG
-OG
+ew
 Pq
 Pq
 Bp
@@ -58340,7 +58333,7 @@ JU
 JU
 Pq
 Pq
-ld
+WI
 bv
 bv
 pq
@@ -58357,7 +58350,7 @@ Eo
 Eo
 iG
 Ik
-OG
+ew
 Pq
 Pq
 Bp
@@ -58597,7 +58590,7 @@ pF
 pF
 NC
 Pq
-ld
+WI
 bv
 bv
 Ky
@@ -58614,7 +58607,7 @@ jH
 AM
 jP
 Eo
-OG
+ew
 Pq
 Pq
 Bp
@@ -58854,7 +58847,7 @@ ta
 JU
 Pq
 Pq
-ld
+WI
 qv
 qv
 Ba
@@ -58871,7 +58864,7 @@ qS
 PG
 Pn
 jk
-OG
+ew
 Pq
 Pq
 Bp
@@ -59128,7 +59121,7 @@ qS
 qS
 Pn
 Eo
-OG
+ew
 Pq
 Pq
 Pq
@@ -59385,7 +59378,7 @@ qS
 qS
 Pn
 Eo
-OG
+ew
 Pq
 Bp
 Bp
@@ -59642,7 +59635,7 @@ qS
 qS
 Pn
 Eo
-OG
+ew
 Pq
 Pq
 Pq
@@ -59899,7 +59892,7 @@ qS
 qS
 Pn
 jk
-OG
+ew
 Pq
 Pq
 Pq
@@ -60156,7 +60149,7 @@ qS
 PG
 Pn
 Eo
-OG
+ew
 Pq
 Pq
 Pq
@@ -60413,7 +60406,7 @@ FY
 gw
 ap
 Eo
-sR
+PK
 Pq
 Pq
 Pq
@@ -60670,7 +60663,7 @@ tY
 Zu
 PJ
 We
-sR
+PK
 Pq
 Pq
 Pq
