@@ -11152,11 +11152,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/structure/stairs{
-	dir = 1;
-	icon_state = "stairs_t"
-	},
-/turf/open/floor/engine,
+/obj/machinery/vending/snack/random,
+/turf/open/floor/plasteel/dark,
 /area/service/bar/atrium)
 "ase" = (
 /obj/machinery/door/poddoor/shutters{
@@ -11950,6 +11947,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
+/obj/machinery/vending/cigarette,
 /turf/open/floor/plasteel/dark,
 /area/service/bar/atrium)
 "atj" = (
