@@ -211,6 +211,6 @@
 	moduleselect_icon = "standard"
 	hat_offset = -3
 
-/obj/item/robot_module/Initialize()
+/obj/item/robot_module/butler/Initialize()
 	basic_modules += /obj/item/dildo/custom
 	. = ..()
