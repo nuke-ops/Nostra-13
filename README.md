@@ -16,8 +16,8 @@ Based and maintained from Sandstorm.
 * **Website:** http://nukeops.com/ss13
 * **Code:** https://github.com/nuke-ops/Nostra-13
 * **Forums:** Not yet?
-* **Ban Appeals:** https://discord.gg/MDvjpNJdVj
 * **Discord:**  [Here](https://discord.gg/bxgeRPq)
+* **Ban Appeals:** at discord ^
 * **Codedocs:** https://nuke-ops.github.io/Nostra-13/
 
 **(Upstream) Sandstorm Information**
