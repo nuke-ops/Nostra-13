@@ -1,0 +1,6 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - rscadd: Added "gas the slimes" chamber on Omega Station.
+  - tweak: Changed some color tiles to more smooth ones.
+  - bugfix: Fixed area in Medbay.
