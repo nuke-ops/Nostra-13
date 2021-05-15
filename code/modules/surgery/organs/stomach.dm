@@ -24,7 +24,6 @@
 		var/mob/living/carbon/human/H = owner
 		if(.)
 			H.dna.species.handle_digestion(H)
-			H.dna.species.handle_thirst(H)
 		handle_disgust(H)
 
 	if(!damage)
