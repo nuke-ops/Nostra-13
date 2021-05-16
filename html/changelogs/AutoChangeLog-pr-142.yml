@@ -1,0 +1,5 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - bugfix: Fixed windows near theater
+  - tweak: Changed colored tiles to more s m o o t h ones.
