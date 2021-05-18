@@ -50253,12 +50253,11 @@
 "sOC" = (
 /obj/docking_port/stationary{
 	area_type = /area/shuttle/cargo/CargoElevator;
-	dheight = 0;
 	dir = 4;
 	dwidth = 2;
 	height = 6;
-	id = "Cargo_Second_Deck";
-	name = "Cargo Second Deck";
+	id = "Cargo_First_Deck";
+	name = "Cargo First Deck";
 	roundstart_template = /datum/map_template/shuttle/cargo/elevator;
 	width = 5
 	},

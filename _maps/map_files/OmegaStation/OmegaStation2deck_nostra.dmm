@@ -7205,6 +7205,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/oldomega/OldSolars)
+"DE" = (
+/obj/docking_port/stationary{
+	area_type = /area/shuttle/cargo/CargoElevator;
+	dir = 4;
+	dwidth = 2;
+	height = 6;
+	id = "Cargo_Second_Deck";
+	name = "Cargo Second Deck";
+	width = 5
+	},
+/turf/open/openspace/airless,
+/area/cargo/storage)
 "DG" = (
 /obj/item/shard,
 /obj/effect/decal/cleanable/glass,
@@ -59106,7 +59118,7 @@ yM
 yA
 PG
 qS
-qS
+DE
 qS
 PG
 Pn
