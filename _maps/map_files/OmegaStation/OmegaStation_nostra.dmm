@@ -43004,6 +43004,11 @@
 /obj/machinery/light/small,
 /obj/structure/bed,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/effect/spawner/lootdrop/bedsheet,
+/obj/structure/sign/poster/official/obey{
+	pixel_x = 32
+	},
+/obj/item/toy/plush/snakeplushie,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "fBb" = (
@@ -43191,6 +43196,11 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
+/obj/effect/spawner/lootdrop/bedsheet,
+/obj/structure/sign/poster/official/help_others{
+	pixel_x = 32
+	},
+/obj/item/toy/plush/beeplushie,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "fVU" = (
@@ -43636,6 +43646,17 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/engineering/atmos)
+"gUm" = (
+/obj/machinery/light/small,
+/obj/structure/bed,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/effect/spawner/lootdrop/bedsheet,
+/obj/structure/sign/poster/official/do_not_question{
+	pixel_x = 32
+	},
+/obj/item/toy/plush/carpplushie,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "gUt" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 4
@@ -83394,7 +83415,7 @@ brH
 cOS
 dpC
 eKj
-fyu
+gUm
 hIV
 kwm
 nAS
