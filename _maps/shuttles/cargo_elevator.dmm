@@ -1,37 +1,37 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/obj/effect/turf_decal/trimline/brown/filled/line{
-	dir = 1
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
 	},
-/turf/open/floor/engine/o2,
+/turf/open/floor/engine,
+/area/shuttle/cargo/CargoElevator)
+"b" = (
+/turf/open/floor/engine,
 /area/shuttle/cargo/CargoElevator)
 "c" = (
 /obj/machinery/computer/shuttle/cargo/elevator{
 	dir = 8
 	},
-/obj/effect/turf_decal/trimline/brown/filled/line{
-	dir = 1
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
 	},
-/turf/open/floor/engine/o2,
+/turf/open/floor/engine,
 /area/shuttle/cargo/CargoElevator)
 "f" = (
 /obj/machinery/conveyor{
 	dir = 1;
 	id = "cargounload"
 	},
-/obj/effect/turf_decal/trimline/brown/filled/line{
-	dir = 4
-	},
-/turf/open/floor/engine/o2,
+/turf/open/floor/engine,
 /area/shuttle/cargo/CargoElevator)
 "h" = (
 /turf/open/openspace,
 /area/template_noop)
 "j" = (
-/obj/effect/turf_decal/trimline/brown/filled/line{
-	dir = 8
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
 	},
-/turf/open/floor/engine/o2,
+/turf/open/floor/engine,
 /area/shuttle/cargo/CargoElevator)
 "m" = (
 /obj/docking_port/mobile/elevator{
@@ -42,16 +42,7 @@
 	name = "cargo elevator";
 	width = 5
 	},
-/obj/effect/turf_decal/trimline/brown/filled/line{
-	dir = 8
-	},
-/turf/open/floor/engine/o2,
-/area/shuttle/cargo/CargoElevator)
-"n" = (
-/obj/effect/turf_decal/trimline/brown/filled/line{
-	dir = 4
-	},
-/turf/open/floor/engine/o2,
+/turf/open/floor/engine,
 /area/shuttle/cargo/CargoElevator)
 "p" = (
 /obj/machinery/conveyor{
@@ -59,57 +50,88 @@
 	icon_state = "conveyor_map";
 	id = "cargounload"
 	},
-/obj/effect/turf_decal/trimline/brown/filled/line{
-	dir = 4
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/engine,
+/area/shuttle/cargo/CargoElevator)
+"q" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 2
 	},
-/turf/open/floor/engine/o2,
+/turf/open/floor/engine,
 /area/shuttle/cargo/CargoElevator)
 "r" = (
-/turf/open/floor/engine/o2,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/turf/open/floor/engine,
 /area/shuttle/cargo/CargoElevator)
 "s" = (
-/obj/effect/turf_decal/trimline/brown/filled/line,
-/turf/open/floor/engine/o2,
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/turf/open/floor/engine,
+/area/shuttle/cargo/CargoElevator)
+"u" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/turf/open/floor/engine,
+/area/shuttle/cargo/CargoElevator)
+"E" = (
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/engine,
+/area/shuttle/cargo/CargoElevator)
+"L" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/shuttle/cargo/CargoElevator)
+"T" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4
+	},
+/turf/open/floor/engine,
 /area/shuttle/cargo/CargoElevator)
 
 (1,1,1) = {"
 h
 j
 m
-j
+E
 h
 "}
 (2,1,1) = {"
 a
-r
-r
+T
+b
 r
 s
 "}
 (3,1,1) = {"
-a
-r
-r
-r
-s
+j
+b
+b
+b
+E
 "}
 (4,1,1) = {"
-a
-r
-r
-r
-s
+j
+b
+b
+b
+E
 "}
 (5,1,1) = {"
 c
-r
-r
-r
-s
+L
+b
+q
+u
 "}
 (6,1,1) = {"
 h
-n
+j
 f
 p
 h

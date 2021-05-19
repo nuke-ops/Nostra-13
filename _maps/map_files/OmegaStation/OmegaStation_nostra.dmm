@@ -2138,6 +2138,12 @@
 /obj/structure/cable/white{
 	icon_state = "1-8"
 	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "adr" = (
@@ -3032,6 +3038,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
+/obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "afc" = (
@@ -3047,6 +3054,10 @@
 	},
 /obj/structure/closet/crate{
 	name = "emergency supplies crate"
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
@@ -3514,6 +3525,10 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "afU" = (
@@ -3560,6 +3575,16 @@
 /area/command/heads_quarters/captain/private)
 "afY" = (
 /obj/effect/landmark/event_spawn,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "afZ" = (
@@ -3587,6 +3612,16 @@
 /area/command/heads_quarters/captain/private)
 "agd" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "age" = (
@@ -3711,6 +3746,16 @@
 /turf/open/floor/plasteel/dark,
 /area/command/bridge)
 "agm" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "agn" = (
@@ -4370,6 +4415,10 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "ahq" = (
@@ -4379,6 +4428,16 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "ahr" = (
@@ -4878,6 +4937,12 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/closet/crate,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "aio" = (
@@ -4886,6 +4951,12 @@
 	dir = 1;
 	pixel_x = -32;
 	pixel_y = -22
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
@@ -8539,10 +8610,12 @@
 /turf/open/floor/plasteel,
 /area/command/bridge)
 "aoA" = (
-/obj/structure/closet/wardrobe/cargotech,
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
+	},
+/obj/structure/closet/wardrobe/cargotech{
+	anchored = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
@@ -41961,6 +42034,9 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/neutral,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
 "dek" = (
@@ -42783,10 +42859,12 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard/fore)
 "eVR" = (
-/obj/structure/closet/wardrobe/cargotech,
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
+	},
+/obj/structure/closet/wardrobe/cargotech{
+	anchored = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
@@ -43044,6 +43122,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "fFw" = (
@@ -43121,6 +43203,9 @@
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
@@ -43985,6 +44070,12 @@
 "hKg" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/structure/closet/crate,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "hKr" = (
@@ -44355,6 +44446,9 @@
 	dir = 6
 	},
 /obj/structure/closet/crate,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "iIj" = (
@@ -45398,6 +45492,16 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "kTr" = (
@@ -45428,7 +45532,9 @@
 /turf/open/floor/plasteel,
 /area/engineering/atmos)
 "kWJ" = (
-/obj/structure/closet/wardrobe/cargotech,
+/obj/structure/closet/wardrobe/cargotech{
+	anchored = 1
+	},
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
@@ -46227,6 +46333,9 @@
 /obj/structure/cable/white{
 	icon_state = "0-2"
 	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "nbP" = (
@@ -46324,6 +46433,9 @@
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
@@ -46460,6 +46572,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+/obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
 "nFG" = (
@@ -47184,6 +47297,12 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "pvX" = (
@@ -47272,6 +47391,9 @@
 	dir = 10
 	},
 /obj/structure/closet/crate/internals,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "pHr" = (
@@ -48300,6 +48422,16 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "swZ" = (
@@ -51234,9 +51366,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
 "uCY" = (
@@ -52242,7 +52371,6 @@
 /turf/open/floor/plasteel/white,
 /area/science/research)
 "xcN" = (
-/obj/structure/closet/wardrobe/cargotech,
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -52253,6 +52381,9 @@
 /obj/machinery/light{
 	dir = 8;
 	light_color = "#e8eaff"
+	},
+/obj/structure/closet/wardrobe/cargotech{
+	anchored = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
