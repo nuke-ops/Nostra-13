@@ -1,5 +1,0 @@
-author: SVX-0
-delete-after: true
-changes:
-  - bugfix: added location marker for upper level, along with swapping the ID for
-      lower level location marker
