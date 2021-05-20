@@ -60,7 +60,7 @@
 	if(!mat_container || panel_open || !powered())
 		return
 	var/datum/material/ore = pick(ore_rates)
-	mat_container.bsm_insert(((ore_rates[ore] * 1000) * multiplier), ore)
+	mat_container.bsm_insert(((ore_rates[ore] * 1000) * multiplier * 0.5), ore)
 
 /datum/component/material_container/proc/bsm_insert(amt, datum/material/mat)
 	if(!istype(mat))
