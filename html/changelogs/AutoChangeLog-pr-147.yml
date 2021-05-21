@@ -1,5 +1,0 @@
-author: maksxpl
-delete-after: true
-changes:
-  - balance: bluespace miner costs now 10 bp crystals instead of 5
-  - balance: bluespace miner is gathering half of materials that it was mining before
