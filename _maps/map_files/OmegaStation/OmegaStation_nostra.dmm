@@ -4875,8 +4875,7 @@
 	dir = 4
 	},
 /obj/machinery/conveyor{
-	dir = 1;
-	id = "cargoload"
+	id = "elevatorload"
 	},
 /turf/open/floor/plating,
 /area/cargo/storage)
@@ -5211,8 +5210,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/stripes/end,
 /obj/machinery/conveyor{
-	dir = 1;
-	id = "cargoload"
+	id = "elevatorload"
 	},
 /turf/open/floor/plating,
 /area/cargo/storage)
@@ -8659,11 +8657,11 @@
 /obj/structure/disposalpipe/junction/flip{
 	dir = 1
 	},
-/obj/machinery/conveyor_switch/oneway{
-	id = "cargoload"
-	},
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 5
+	},
+/obj/machinery/conveyor_switch{
+	id = "elevatorload"
 	},
 /turf/open/floor/plasteel,
 /area/cargo/storage)
@@ -41416,7 +41414,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/cargo/storage)
 "bHS" = (
 /obj/machinery/vending/sustenance{
@@ -42026,18 +42024,17 @@
 /turf/open/floor/engine/plasma,
 /area/engineering/atmos)
 "ddR" = (
-/obj/structure/fluff/big_chain,
-/obj/effect/turf_decal/stripes/line{
-	dir = 9
+/obj/structure/fluff/big_chain{
+	pixel_y = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/effect/turf_decal/tile/neutral,
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/stripes/box,
+/turf/open/floor/plating,
 /area/cargo/storage)
 "dek" = (
 /obj/structure/lattice/catwalk,
@@ -42531,7 +42528,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/cargo/storage)
 "epp" = (
 /obj/structure/cable/white{
@@ -43196,19 +43193,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard/fore)
-"fMc" = (
-/obj/structure/fluff/big_chain,
-/obj/effect/turf_decal/stripes/line{
-	dir = 5
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/cargo/storage)
 "fMT" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -43244,7 +43228,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/cargo/storage)
 "fPX" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
@@ -43305,7 +43289,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/cargo/storage)
 "fWw" = (
 /obj/effect/turf_decal/stripes/line{
@@ -45078,7 +45062,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/cargo/storage)
 "jVT" = (
 /obj/effect/turf_decal/stripes/line{
@@ -45597,14 +45581,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/processing)
-"lnI" = (
-/obj/machinery/button/massdriver{
-	id = "trash";
-	pixel_x = -26;
-	pixel_y = -6
-	},
-/turf/closed/wall/r_wall,
-/area/maintenance/disposal)
 "low" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 4
@@ -46427,17 +46403,14 @@
 /turf/open/floor/plasteel/white,
 /area/science/research)
 "nrg" = (
-/obj/structure/fluff/big_chain,
-/obj/effect/turf_decal/stripes/line{
-	dir = 6
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/open/floor/plasteel/dark,
+/obj/structure/fluff/big_chain{
+	pixel_y = 10
+	},
+/obj/effect/turf_decal/stripes/box,
+/turf/open/floor/plating,
 /area/cargo/storage)
 "nsa" = (
 /obj/effect/turf_decal/stripes/line{
@@ -46471,7 +46444,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/cargo/storage)
 "nuN" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -46562,18 +46535,15 @@
 /turf/closed/wall,
 /area/cargo/storage)
 "nFC" = (
-/obj/structure/fluff/big_chain,
-/obj/effect/turf_decal/stripes/line{
-	dir = 10
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
 /obj/machinery/light,
-/turf/open/floor/plasteel/dark,
+/obj/structure/fluff/big_chain{
+	pixel_y = 10
+	},
+/obj/effect/turf_decal/stripes/box,
+/turf/open/floor/plating,
 /area/cargo/storage)
 "nFG" = (
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible{
@@ -46590,11 +46560,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
 	},
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "cargoload"
-	},
 /obj/structure/plasticflaps,
+/obj/machinery/conveyor{
+	id = "elevatorload"
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
 "nHF" = (
@@ -46729,6 +46698,11 @@
 /area/security/warden)
 "oad" = (
 /obj/structure/ladder,
+/obj/machinery/button/massdriver{
+	id = "trash";
+	pixel_x = -26;
+	pixel_y = -6
+	},
 /turf/open/floor/plating,
 /area/maintenance/disposal)
 "oaV" = (
@@ -47071,7 +47045,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/cargo/storage)
 "oVH" = (
 /obj/structure/closet/secure_closet/warden,
@@ -47168,7 +47142,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/cargo/storage)
 "pfm" = (
 /obj/structure/chair/office/dark,
@@ -47958,6 +47932,9 @@
 /obj/effect/turf_decal/stripes/corner{
 	dir = 2
 	},
+/obj/machinery/conveyor_switch{
+	id = "elevatorload"
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
 "rfM" = (
@@ -48096,7 +48073,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/cargo/storage)
 "rHe" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -51578,7 +51555,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/cargo/storage)
 "vlJ" = (
 /obj/effect/turf_decal/stripes/line{
@@ -51715,7 +51692,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/cargo/storage)
 "vCu" = (
 /obj/structure/sign/warning/vacuum/external{
@@ -51953,7 +51930,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/cargo/storage)
 "vXX" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -98695,7 +98672,7 @@ aad
 aad
 aco
 aco
-lnI
+aco
 oad
 knQ
 adn
@@ -101531,7 +101508,7 @@ sdX
 sdX
 sdX
 ado
-fMc
+nrg
 rGQ
 rGQ
 rGQ

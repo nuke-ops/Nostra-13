@@ -17,13 +17,6 @@
 	},
 /turf/open/floor/engine,
 /area/shuttle/cargo/CargoElevator)
-"f" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "cargounload"
-	},
-/turf/open/floor/engine,
-/area/shuttle/cargo/CargoElevator)
 "h" = (
 /turf/open/openspace,
 /area/template_noop)
@@ -42,15 +35,6 @@
 	name = "cargo elevator";
 	width = 5
 	},
-/turf/open/floor/engine,
-/area/shuttle/cargo/CargoElevator)
-"p" = (
-/obj/machinery/conveyor{
-	dir = 9;
-	icon_state = "conveyor_map";
-	id = "cargounload"
-	},
-/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/engine,
 /area/shuttle/cargo/CargoElevator)
 "q" = (
@@ -132,7 +116,7 @@ u
 (6,1,1) = {"
 h
 j
-f
-p
+b
+E
 h
 "}
