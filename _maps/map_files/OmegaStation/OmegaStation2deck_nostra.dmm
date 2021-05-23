@@ -3941,15 +3941,15 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 2
 	},
-/obj/machinery/door/poddoor{
-	id = "cargounload";
-	name = "supply dock unloading door"
-	},
+/obj/structure/fans/tiny,
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "cargounload"
 	},
-/obj/structure/fans/tiny,
+/obj/machinery/door/poddoor{
+	id = "cargounload";
+	name = "supply dock unloading door"
+	},
 /turf/open/floor/plating,
 /area/cargo/storage)
 "pR" = (
@@ -8251,15 +8251,15 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/machinery/door/poddoor{
-	id = "cargoload";
-	name = "supply dock loading door"
-	},
+/obj/structure/fans/tiny,
 /obj/machinery/conveyor{
 	dir = 4;
 	id = "cargoload"
 	},
-/obj/structure/fans/tiny,
+/obj/machinery/door/poddoor{
+	id = "cargoload";
+	name = "supply dock loading door"
+	},
 /turf/open/floor/plating,
 /area/cargo/storage)
 "Hm" = (
