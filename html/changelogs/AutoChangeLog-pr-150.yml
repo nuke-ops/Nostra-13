@@ -1,0 +1,5 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - rscdel: Removed old charlie station.
+  - rscadd: Added new charlie station.
