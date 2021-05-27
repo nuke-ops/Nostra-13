@@ -1,0 +1,6 @@
+author: maksxpl
+delete-after: true
+changes:
+  - balance: bluespace miner crafting cost is changed from 10 to 15
+  - balance: tier 5 bluespace miner is generating 5x more diamonds
+  - balance: tier 5 bluespace miner isn't generating bluespace crystals anymore
