@@ -86457,6 +86457,9 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel{
 	heat_capacity = 1e+006
 	},
@@ -87020,10 +87023,24 @@
 /turf/closed/wall/r_wall,
 /area/security/office)
 "jxc" = (
-/obj/machinery/power/apc{
-	areastring = "/area/command/heads_quarters/ce";
-	name = "Chief Engineer's APC";
-	pixel_y = -26
+/obj/structure/table/reinforced,
+/obj/machinery/microwave{
+	desc = "It looks really dirty.";
+	name = "maintenance microwave";
+	pixel_y = 5
+	},
+/obj/structure/sign/poster/official/help_others{
+	pixel_x = -32
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/yellow{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/engineering/break_room)
@@ -91651,7 +91668,7 @@
 	dir = 8
 	},
 /obj/structure/cable/white{
-	icon_state = "1-4"
+	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
 /area/command/heads_quarters/ce)
@@ -94381,9 +94398,6 @@
 /obj/item/gps/engineering{
 	gpstag = "CE0"
 	},
-/obj/machinery/newscaster{
-	pixel_y = 32
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -94396,6 +94410,14 @@
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
+	},
+/obj/machinery/power/apc{
+	areastring = "/area/command/heads_quarters/ce";
+	name = "Chief Engineer's APC";
+	pixel_y = 32
+	},
+/obj/structure/cable/white{
+	icon_state = "0-2"
 	},
 /turf/open/floor/plasteel/dark,
 /area/command/heads_quarters/ce)
@@ -109366,24 +109388,6 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/service/hydroponics)
-"rts" = (
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/machinery/firealarm{
-	dir = 0;
-	pixel_x = 0;
-	pixel_y = -26
-	},
-/turf/open/floor/plasteel/dark,
-/area/command/heads_quarters/ce)
 "rtx" = (
 /obj/structure/table/wood,
 /obj/item/storage/briefcase{
@@ -110271,11 +110275,6 @@
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
-	},
-/obj/machinery/power/apc{
-	areastring = "/area/command/heads_quarters/ce";
-	name = "Chief Engineer's APC";
-	pixel_y = -26
 	},
 /turf/open/floor/plasteel/dark,
 /area/command/heads_quarters/ce)
@@ -111845,6 +111844,9 @@
 /area/command/meeting_room/council)
 "sjF" = (
 /obj/item/kirbyplants/random,
+/obj/machinery/firealarm{
+	pixel_y = 24
+	},
 /obj/machinery/button/door{
 	id = "ceblast";
 	name = "Lockdown Control";
@@ -111867,15 +111869,6 @@
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
-	},
-/obj/machinery/power/apc{
-	areastring = "/area/command/heads_quarters/ce";
-	dir = 1;
-	name = "Chief Engineer's APC";
-	pixel_y = 23
-	},
-/obj/structure/cable/white{
-	icon_state = "0-2"
 	},
 /turf/open/floor/plasteel/dark,
 /area/command/heads_quarters/ce)
@@ -116240,6 +116233,19 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
 /area/engineering/storage/tech)
+"tGF" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/structure/cable/white{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plasteel,
+/area/command/heads_quarters/ce)
 "tGL" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 4
@@ -151757,13 +151763,13 @@ mMB
 pRP
 kkO
 mcs
-mHG
+tGF
 xKr
 lLv
 lCx
 vBq
 ikP
-rts
+iLR
 qjg
 ine
 vJe
