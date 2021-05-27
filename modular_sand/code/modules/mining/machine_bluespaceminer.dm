@@ -30,7 +30,7 @@
 		multiplier += L.rating
 		stock_amt++
 	multiplier /= stock_amt
-	if(multiplier >= 5)
+	if(multiplier >= 5) //nostra comment - doesnt matter after nerf
 		ore_rates += list(/datum/material/bluespace = 0.01)
 	else
 		ore_rates -= ore_rates["bluespace crystal"]
@@ -60,7 +60,7 @@
 	if(!mat_container || panel_open || !powered())
 		return
 	var/datum/material/ore = pick(ore_rates)
-	mat_container.bsm_insert(((ore_rates[ore] * 1000) * multiplier * 0.5), ore)
+	mat_container.bsm_insert(((ore_rates[ore] * 1000) * multiplier * 0.5), ore) //nostra change - added '* 0.5' because fun is not allowed
 
 /datum/component/material_container/proc/bsm_insert(amt, datum/material/mat)
 	if(!istype(mat))
