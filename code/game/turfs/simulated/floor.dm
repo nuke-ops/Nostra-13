@@ -26,8 +26,6 @@
 	/// Starting from here, +20% chance to break turf.
 	var/explosion_power_break_turf_bonus = EXPLOSION_POWER_FLOOR_TURF_BREAK_BONUS
 
-	var/icon_regular_floor = "floor" //used to remember what icon the tile should have by default
-	var/icon_plating = "plating"
 	thermal_conductivity = 0.004
 	heat_capacity = 10000
 	intact = 1
