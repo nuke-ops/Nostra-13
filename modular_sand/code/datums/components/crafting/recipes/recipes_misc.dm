@@ -14,10 +14,12 @@
 /datum/crafting_recipe/protolathe
 	name = "Protolathe Board"
 	result = /obj/item/circuitboard/machine/protolathe
-	reqs = list(/obj/item/stack/sheet/metal = 1,
-				/obj/item/stack/sheet/mineral/gold = 2,
-				/obj/item/stack/sheet/mineral/uranium = 1,
-				/obj/item/stack/cable_coil = 5)
+	reqs = list(/obj/item/circuitboard/machine/protolathe/department/medical = 1,
+				/obj/item/circuitboard/machine/protolathe/department/engineering = 1,
+				/obj/item/circuitboard/machine/protolathe/department/security = 1,
+				/obj/item/circuitboard/machine/protolathe/department/cargo = 1,
+				/obj/item/circuitboard/machine/protolathe/department/service = 1,
+				/obj/item/stack/cable_coil = 15) //Nostra change
 	tools = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER, TOOL_WELDER)
 	time = 20
 	subcategory = CAT_TOOL
