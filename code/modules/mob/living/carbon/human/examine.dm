@@ -30,7 +30,7 @@
 	if(skipface || get_visible_name() == "Unknown")
 		. += "You can't make out what species they are."
 	else
-		. += "[t_He] [t_is] a [dna.custom_species ? dna.custom_species : dna.species.name]!"
+		. += "[t_He] [t_is] a [spec_trait_examine_font()][dna.custom_species ? dna.custom_species : dna.species.name]</font>!"
 
 	//Underwear
 	var/shirt_hidden = undershirt_hidden()
@@ -496,11 +496,6 @@
 		. += "<span class='info'><b>Traits:</b> [traitstring]</span>"
 
 	SEND_SIGNAL(src, COMSIG_PARENT_EXAMINE, user, .) //This also handles flavor texts now
-
-	var/invisible_man = skipface || get_visible_name() == "Unknown" // SKYRAT EDIT -- BEGIN
-	if(!invisible_man)
-		if(client)
-			. += "OOC Notes: <a href='?src=[REF(src)];skyrat_ooc_notes=1'>\[View\]</a>" // SKYRAT EDIT -- END
 
 	. += "*---------*</span>"
 
