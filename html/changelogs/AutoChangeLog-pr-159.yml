@@ -1,6 +1,0 @@
-author: maksxpl
-delete-after: true
-changes:
-  - balance: changed recipe of omni protolathe, now it need all department lathe circuits
-      to build it
-  - balance: added emag to requirements to build blackmarket
