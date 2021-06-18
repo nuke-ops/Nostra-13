@@ -11,7 +11,9 @@
 	var/selected_item
 	var/buying
 	var/money = 0 // How much money is inserted into the uplink.
-	var/list/accessible_markets = list(/datum/blackmarket_market/blackmarket) // List of typepaths for "/datum/blackmarket_market"s that this uplink can access. //start of Nostra change
+	var/list/accessible_markets = list(/datum/blackmarket_market/blackmarket) // List of typepaths for "/datum/blackmarket_market"s that this uplink can access.
+	
+	//start of Nostra change
 
 /obj/item/blackmarket_uplink/emag_act()
     if(flags_1 & EMAGGED)
