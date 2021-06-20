@@ -17,7 +17,7 @@
 
 /obj/item/blackmarket_uplink/emag_act()
     if(flags_1 & EMAGGED)
-        to_chat(usr, "<span class='notice'>The device reports connection to restricted frequencies.</span>"
+        to_chat(usr, "<span class='notice'>The device reports connection to restricted frequencies.</span>")
         return
     accessible_markets += /datum/blackmarket_market/syndi
     . = ..()
