@@ -1,0 +1,6 @@
+author: maksxpl
+delete-after: true
+changes:
+  - tweak: tweaked a omnilathe recipe
+  - balance: blackmarket recipe doesn't require emag anymore, instead you emag to
+      access warehouse tab
