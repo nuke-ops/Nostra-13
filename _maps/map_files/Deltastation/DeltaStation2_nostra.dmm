@@ -45706,7 +45706,7 @@
 	dir = 1
 	},
 /obj/machinery/power/apc/highcap/five_k{
-	areastring = "/area/engine/break_room";
+	areastring = "/area/engineering/break_room";
 	dir = 1;
 	name = "Engineering Foyer APC";
 	pixel_y = 24

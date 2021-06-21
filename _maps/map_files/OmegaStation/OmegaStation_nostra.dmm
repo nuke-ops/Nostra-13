@@ -32034,7 +32034,7 @@
 /area/engineering/supermatter)
 "bbU" = (
 /obj/machinery/power/apc{
-	areastring = "/area/engine/engineering";
+	areastring = "/area/engineering/main";
 	dir = 4;
 	name = "Engine Room APC";
 	pixel_x = 26

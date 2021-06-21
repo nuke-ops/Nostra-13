@@ -1523,6 +1523,7 @@
 "eF" = (
 /obj/machinery/computer/rdconsole,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/ancientstation/rnd)
 "eG" = (
@@ -1676,6 +1677,7 @@
 "fa" = (
 /obj/machinery/rnd/destructive_analyzer,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/ancientstation/rnd)
 "fb" = (
@@ -1808,6 +1810,7 @@
 "fu" = (
 /obj/machinery/mecha_part_fabricator,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/ancientstation/rnd)
 "fv" = (
@@ -1817,6 +1820,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
+/obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/ancientstation/rnd)
 "fx" = (
@@ -2290,7 +2294,10 @@
 /area/ruin/space/has_grav/ancientstation/mining)
 "gM" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/rnd/production/circuit_imprinter,
+/obj/item/reagent_containers/glass/beaker/sulphuric,
 /obj/item/reagent_containers/dropper,
+/obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/ancientstation/rnd)
 "gN" = (
@@ -2320,6 +2327,7 @@
 /obj/structure/table,
 /obj/item/tank/internals/anesthetic,
 /obj/item/clothing/mask/breath/medical,
+/obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/ancientstation/rnd)
 "gQ" = (
@@ -2328,6 +2336,7 @@
 	name = "Robotics Operating Table"
 	},
 /obj/item/surgical_drapes,
+/obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/ancientstation/rnd)
 "gS" = (
@@ -5889,6 +5898,16 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/engi)
+"tu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table,
+/obj/machinery/button{
+	id = "proto";
+	name = "blast doors";
+	pixel_y = 2
+	},
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/ancientstation/proto)
 "tz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6443,10 +6462,6 @@
 /obj/machinery/atmospherics/miner/oxygen,
 /turf/open/floor/engine/o2,
 /area/ruin/space/has_grav/ancientstation/atmo)
-"BK" = (
-/obj/structure/mirror,
-/turf/closed/wall,
-/area/ruin/space/has_grav/ancientstation)
 "BN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -7299,6 +7314,9 @@
 /obj/item/toy/seashell,
 /obj/item/toy/seashell,
 /obj/item/toy/seashell,
+/obj/structure/mirror{
+	pixel_y = 33
+	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/ancientstation)
 "NQ" = (
@@ -7577,6 +7595,12 @@
 "RA" = (
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/ancientstation/proto)
+"RI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/rnd/production/protolathe,
+/obj/effect/turf_decal/box,
+/turf/open/floor/plasteel/white,
+/area/ruin/space/has_grav/ancientstation/rnd)
 "RJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair{
@@ -10525,7 +10549,7 @@ aa
 aa
 aa
 aa
-BK
+aT
 NK
 OC
 sC
@@ -11568,7 +11592,7 @@ eY
 oH
 eF
 oH
-oH
+RI
 nN
 oe
 hg
@@ -11683,7 +11707,7 @@ kg
 RA
 SJ
 RA
-cE
+tu
 jA
 dF
 aa

@@ -11,8 +11,16 @@
 	var/selected_item
 	var/buying
 	var/money = 0 // How much money is inserted into the uplink.
-	var/list/accessible_markets = list(/datum/blackmarket_market/blackmarket,
-									   /datum/blackmarket_market/syndi) // List of typepaths for "/datum/blackmarket_market"s that this uplink can access.
+	var/list/accessible_markets = list(/datum/blackmarket_market/blackmarket) // List of typepaths for "/datum/blackmarket_market"s that this uplink can access.
+	
+	//start of Nostra change
+
+/obj/item/blackmarket_uplink/emag_act()
+    if(flags_1 & EMAGGED)
+        to_chat(usr, "<span class='notice'>The device reports connection to restricted frequencies.</span>")
+        return
+    accessible_markets += /datum/blackmarket_market/syndi
+    . = ..()
 
 /obj/item/blackmarket_uplink/Initialize()
 	. = ..()
@@ -21,6 +29,8 @@
 		var/list/categories = SSblackmarket.markets[viewing_market].categories
 		if(categories && categories.len)
 			viewing_category = categories[1]
+
+//end of Nostra change
 
 /obj/item/blackmarket_uplink/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/holochip) || istype(I, /obj/item/stack/spacecash) || istype(I, /obj/item/coin))
