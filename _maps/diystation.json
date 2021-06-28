@@ -1,0 +1,11 @@
+{
+    "map_name": "DIY Station",
+    "map_path": "map_files/DIYstation",
+    "map_file": "DIYstation.dmm",
+    "shuttles": {
+	    "emergency": "emergency_omega",
+	    "ferry": "ferry_kilo",
+	    "cargo": "cargo_delta",
+	    "whiteship": "whiteship_meta"
+    }
+}

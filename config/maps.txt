@@ -51,3 +51,7 @@ endmap
 
 map smolstation
 endmap
+
+map diystation
+endmap
+
