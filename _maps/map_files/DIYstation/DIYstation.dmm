@@ -505,13 +505,13 @@
 /turf/open/floor/plating,
 /area/engineering/atmos)
 "bV" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "cargoload"
-	},
 /obj/structure/plasticflaps,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
+	},
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "cargounload"
 	},
 /turf/open/floor/plating,
 /area/cargo/storage)
@@ -3151,7 +3151,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/loading_area{
-	dir = 8
+	dir = 4
 	},
 /turf/open/floor/plating{
 	icon_state = "platingdmg1"
@@ -3220,10 +3220,6 @@
 /turf/open/floor/plating,
 /area/asteroid/nearstation)
 "ry" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "cargounload"
-	},
 /obj/machinery/door/poddoor{
 	id = "cargounload";
 	name = "supply dock unloading door"
@@ -3233,6 +3229,10 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
+	},
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "cargoload"
 	},
 /turf/open/floor/plating,
 /area/cargo/storage)
@@ -3428,6 +3428,22 @@
 "sw" = (
 /turf/closed/wall,
 /area/cargo/storage)
+"sz" = (
+/obj/structure/closet/crate,
+/obj/item/areaeditor/blueprints,
+/obj/item/areaeditor/blueprints{
+	pixel_x = 2
+	},
+/obj/item/areaeditor/blueprints{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/effect/turf_decal/delivery/white,
+/obj/structure/cable/white{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating,
+/area/asteroid/nearstation)
 "sB" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 1
@@ -3806,6 +3822,12 @@
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
+"uq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/maintenance,
+/turf/open/floor/plating,
+/area/asteroid/nearstation)
 "uC" = (
 /obj/structure/cable/white{
 	icon_state = "0-2"
@@ -4143,6 +4165,9 @@
 /obj/machinery/light/broken{
 	dir = 1
 	},
+/obj/machinery/status_display/supply{
+	pixel_y = 32
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/qm)
 "wM" = (
@@ -4240,6 +4265,9 @@
 	},
 /obj/machinery/light/broken{
 	dir = 1
+	},
+/obj/machinery/status_display/supply{
+	pixel_y = 32
 	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
@@ -4402,7 +4430,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/loading_area{
-	dir = 4
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/cargo/storage)
@@ -4862,14 +4890,14 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ai_monitored/command/nuke_storage)
 "AC" = (
-/obj/machinery/conveyor{
-	dir = 8;
-	id = "cargounload"
-	},
 /obj/structure/plasticflaps,
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/decal/cleanable/cobweb{
 	icon_state = "cobweb2"
+	},
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "cargoload"
 	},
 /turf/open/floor/plating,
 /area/cargo/storage)
@@ -5169,6 +5197,7 @@
 	},
 /obj/structure/table,
 /obj/item/pen,
+/obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
 "CA" = (
@@ -6930,6 +6959,10 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/cargo/qm)
+"MK" = (
+/obj/effect/spawner/lootdrop/maintenance,
+/turf/open/floor/plating/asteroid/airless,
+/area/asteroid/nearstation)
 "MM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7135,6 +7168,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/bot,
+/obj/effect/spawner/lootdrop/keg,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "NG" = (
@@ -7289,6 +7323,9 @@
 	pixel_y = 2
 	},
 /obj/effect/turf_decal/delivery/white,
+/obj/structure/cable/white{
+	icon_state = "1-4"
+	},
 /turf/open/floor/plating,
 /area/asteroid/nearstation)
 "Op" = (
@@ -7525,6 +7562,13 @@
 	},
 /turf/open/floor/plating,
 /area/cargo/storage)
+"PF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/spawner/lootdrop/maintenance,
+/turf/open/floor/plating,
+/area/asteroid/nearstation)
 "PG" = (
 /obj/structure/cable/white,
 /obj/effect/spawner/structure/window/plastitanium,
@@ -7545,6 +7589,14 @@
 	},
 /turf/open/floor/plating,
 /area/engineering/main)
+"PQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/bot,
+/obj/effect/spawner/lootdrop/maintenance,
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
 "PS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7971,7 +8023,7 @@
 	},
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Maintenance Hatch";
-	req_access_txt = "24;10;31;19"
+	req_one_access_txt = "24;10;31;19"
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/white{
@@ -8167,6 +8219,7 @@
 /obj/effect/decal/cleanable/cobweb{
 	icon_state = "cobweb2"
 	},
+/obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "Tz" = (
@@ -8241,6 +8294,9 @@
 /obj/machinery/light_switch{
 	pixel_x = 38;
 	pixel_y = 24
+	},
+/obj/machinery/status_display{
+	pixel_x = 32
 	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/miningdock)
@@ -8460,6 +8516,22 @@
 /obj/machinery/light/floor,
 /turf/open/floor/grass,
 /area/hallway/secondary/exit/departure_lounge)
+"UR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
+/obj/effect/spawner/lootdrop/maintenance,
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
 "US" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -8719,10 +8791,6 @@
 /turf/closed/wall/r_wall,
 /area/cargo/miningdock)
 "Wl" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "cargoload"
-	},
 /obj/machinery/door/poddoor{
 	id = "cargoload";
 	name = "supply dock loading door"
@@ -8732,6 +8800,10 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
+	},
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "cargounload"
 	},
 /turf/open/floor/plating,
 /area/cargo/storage)
@@ -8772,6 +8844,7 @@
 /obj/effect/turf_decal/delivery,
 /obj/item/clothing/suit/space/orange,
 /obj/item/clothing/head/helmet/space/orange,
+/obj/item/tank/internals/oxygen,
 /turf/open/floor/plasteel/dark,
 /area/engineering/main)
 "WA" = (
@@ -9090,6 +9163,9 @@
 /obj/machinery/light/broken{
 	dir = 8
 	},
+/obj/machinery/status_display/supply{
+	pixel_x = -32
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
 "XQ" = (
@@ -9270,6 +9346,9 @@
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/machinery/status_display/supply{
+	pixel_x = -32
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
 "YL" = (
@@ -42957,7 +43036,7 @@ Wi
 Wi
 Wi
 Cd
-Gu
+uq
 qp
 VT
 VT
@@ -44492,7 +44571,7 @@ SZ
 SZ
 SZ
 SZ
-SZ
+PF
 SZ
 lt
 SZ
@@ -44985,7 +45064,7 @@ Xy
 QV
 xi
 bj
-NC
+PQ
 Kh
 Aa
 JM
@@ -46037,7 +46116,7 @@ Cd
 DB
 SZ
 SZ
-SZ
+PF
 SZ
 SZ
 SZ
@@ -46286,7 +46365,7 @@ Gu
 Ri
 Gu
 Cd
-SZ
+PF
 Wi
 Wi
 Wi
@@ -46526,7 +46605,7 @@ Wi
 Wi
 Wi
 pk
-Yh
+UR
 Gd
 fE
 UC
@@ -47814,11 +47893,11 @@ pk
 NL
 sw
 xf
-Sn
+zm
 sU
 mI
 sU
-zm
+Sn
 lM
 RL
 vj
@@ -47845,8 +47924,8 @@ Eo
 Eo
 GP
 Ag
-On
-On
+sz
+sz
 On
 qN
 Wi
@@ -50661,7 +50740,7 @@ qp
 qp
 DB
 OU
-OU
+MK
 Gp
 ET
 OW
@@ -56835,7 +56914,7 @@ wP
 EZ
 aF
 uV
-fa
+vu
 pd
 rc
 an
