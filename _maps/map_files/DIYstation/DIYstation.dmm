@@ -9,7 +9,9 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "ah" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 9
@@ -32,7 +34,9 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "ai" = (
 /obj/docking_port/stationary{
 	dheight = 1;
@@ -53,10 +57,14 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "ak" = (
 /turf/open/space/basic,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "an" = (
 /obj/machinery/light{
 	dir = 4
@@ -72,14 +80,23 @@
 	pixel_x = 28
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
+"ap" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "at" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-4"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "au" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -110,7 +127,9 @@
 	icon_state = "1-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "aw" = (
 /obj/structure/lattice,
 /obj/structure/lattice,
@@ -147,13 +166,17 @@
 	name = "Cargo 2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "aF" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "aJ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
@@ -173,7 +196,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "aK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -191,7 +216,9 @@
 	pixel_y = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "aM" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -200,8 +227,10 @@
 /obj/structure/cable/white{
 	icon_state = "2-4"
 	},
-/turf/closed/wall/mineral/plastitanium,
-/area/engineering/main)
+/turf/closed/wall/mineral/titanium,
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "aQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -236,7 +265,9 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "aV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -263,7 +294,9 @@
 	pixel_y = 24
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "be" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/binary/pump/on/layer3{
@@ -289,13 +322,17 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "bh" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer/on{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "bi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -321,8 +358,10 @@
 "bo" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/scientist,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "bp" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -342,14 +381,18 @@
 	},
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "bq" = (
 /obj/structure/chair/office{
 	dir = 1
 	},
 /obj/effect/landmark/start/paramedic,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "bt" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Departure Lounge"
@@ -383,8 +426,10 @@
 	dir = 1
 	},
 /obj/effect/landmark/start/clown,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "bC" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/structure/cable/white{
@@ -402,7 +447,9 @@
 	req_access_txt = "40"
 	},
 /turf/open/floor/plasteel/dark,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "bE" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -417,14 +464,18 @@
 /obj/machinery/computer/operating,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/dark,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "bG" = (
 /obj/structure/window/plasma/reinforced{
 	dir = 4
 	},
 /obj/machinery/air_sensor/atmos/oxygen_tank,
 /turf/open/floor/engine/o2,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "bJ" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -460,7 +511,9 @@
 	},
 /obj/item/stack/sheet/glass/fifty,
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "bP" = (
 /obj/machinery/computer/upload/borg{
 	dir = 1
@@ -470,7 +523,9 @@
 	dir = 1
 	},
 /turf/open/floor/circuit/green,
-/area/ai_monitored/command/nuke_storage)
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "bQ" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
@@ -488,7 +543,9 @@
 /obj/effect/landmark/start/station_engineer,
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "bT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -501,9 +558,11 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "bU" = (
-/obj/effect/spawner/structure/window/plastitanium,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "bV" = (
 /obj/structure/plasticflaps,
 /obj/effect/turf_decal/stripes/line{
@@ -519,7 +578,9 @@
 /obj/machinery/vending/assist,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/dark,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "bX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -538,14 +599,18 @@
 /area/asteroid/nearstation)
 "bZ" = (
 /turf/open/floor/plasteel,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "cd" = (
 /obj/structure/cable/white{
 	icon_state = "1-4"
 	},
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plasteel,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "cl" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -560,7 +625,9 @@
 	pixel_y = -7
 	},
 /turf/open/floor/wood,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "cn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -583,14 +650,18 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "cs" = (
 /obj/effect/landmark/start/depsec,
 /obj/structure/chair/office{
 	dir = 1
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "cw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -617,8 +688,10 @@
 	},
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/firecloset,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "cU" = (
 /obj/structure/cable/white{
 	icon_state = "2-8"
@@ -638,7 +711,9 @@
 	},
 /obj/effect/landmark/start/station_engineer,
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "da" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -648,14 +723,19 @@
 /turf/open/floor/plating,
 /area/asteroid/nearstation)
 "dd" = (
-/turf/open/floor/mineral/plastitanium,
-/area/ai_monitored/command/nuke_storage)
+/obj/item/documents/nanotrasen,
+/turf/open/floor/mineral/titanium,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "df" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "dh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -676,7 +756,9 @@
 	dir = 6
 	},
 /turf/open/floor/circuit/green,
-/area/ai_monitored/command/nuke_storage)
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "dn" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 9
@@ -684,8 +766,10 @@
 /obj/structure/cable/white{
 	icon_state = "1-8"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "dp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -702,12 +786,14 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "dw" = (
-/turf/closed/wall/mineral/plastitanium,
+/turf/closed/wall/mineral/titanium,
 /area/maintenance/port/central)
 "dx" = (
 /obj/structure/chair/office,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "dy" = (
 /obj/effect/turf_decal/delivery,
 /obj/structure/closet/crate,
@@ -729,13 +815,17 @@
 	pixel_y = -4
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "dE" = (
 /obj/structure/window/plasma/reinforced{
 	dir = 1
 	},
 /turf/open/floor/engine/n2,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "dI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -751,8 +841,10 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 1
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "dL" = (
 /obj/effect/turf_decal/stripes/white/corner{
 	dir = 4
@@ -768,8 +860,10 @@
 /obj/effect/turf_decal/caution{
 	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "dO" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
@@ -786,7 +880,9 @@
 	},
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "dQ" = (
 /obj/docking_port/stationary{
 	dir = 2;
@@ -804,13 +900,27 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/asteroid/nearstation)
+"dS" = (
+/obj/effect/turf_decal/delivery,
+/obj/structure/window/plasma/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "dT" = (
 /obj/item/kirbyplants{
 	icon_state = "plant-16";
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/obj/structure/sign/nanotrasen{
+	pixel_y = 32
+	},
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "ea" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -827,8 +937,10 @@
 	icon_state = "plant-05";
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "ed" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -842,7 +954,6 @@
 /turf/open/floor/plasteel,
 /area/cargo/qm)
 "ej" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/window/plasma/reinforced,
 /obj/structure/window/plasma/reinforced{
 	dir = 1
@@ -850,8 +961,11 @@
 /obj/structure/window/plasma/reinforced{
 	dir = 8
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "el" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
@@ -865,7 +979,9 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "en" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
@@ -882,13 +998,17 @@
 	},
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "eo" = (
 /obj/machinery/airalarm/directional/south,
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/firecloset,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "er" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -903,7 +1023,9 @@
 /obj/effect/turf_decal/bot,
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/plasteel/cafeteria,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "eB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -934,7 +1056,9 @@
 	pixel_y = 32
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "eM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -960,12 +1084,14 @@
 /turf/open/floor/plating,
 /area/cargo/qm)
 "eN" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "eP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -989,7 +1115,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "eV" = (
 /obj/structure/barricade/wooden,
 /turf/open/floor/plating,
@@ -1018,7 +1146,9 @@
 /area/hallway/secondary/entry)
 "fa" = (
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "fh" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
@@ -1041,7 +1171,9 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "fk" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 1
@@ -1055,7 +1187,9 @@
 	pixel_y = 32
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "fm" = (
 /obj/structure/cable/white{
 	icon_state = "1-8"
@@ -1074,7 +1208,9 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "fn" = (
 /obj/structure/cable,
 /obj/structure/window/plasma/reinforced{
@@ -1083,7 +1219,9 @@
 /obj/effect/turf_decal/bot,
 /obj/machinery/power/rtg/advanced,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "fo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1114,7 +1252,9 @@
 /obj/machinery/light,
 /obj/effect/landmark/start/atmospheric_technician,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "fu" = (
 /obj/structure/closet/l3closet/janitor,
 /obj/machinery/light/small{
@@ -1130,8 +1270,10 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "fA" = (
 /obj/structure/railing/corner{
 	dir = 1
@@ -1149,15 +1291,19 @@
 /turf/open/floor/plasteel/dark,
 /area/cargo/qm)
 "fF" = (
-/turf/closed/wall/mineral/plastitanium,
-/area/ai_monitored/command/nuke_storage)
+/turf/closed/wall/mineral/titanium,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "fH" = (
 /obj/machinery/airalarm/directional/south,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 5
 	},
 /turf/open/floor/wood,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "fK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1190,7 +1336,9 @@
 	},
 /obj/effect/landmark/start/atmospheric_technician,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "fO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1228,7 +1376,9 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "fX" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -1245,15 +1395,22 @@
 /obj/machinery/atmospherics/components/unary/cryo_cell{
 	dir = 4
 	},
+/obj/structure/sign/nanotrasen{
+	pixel_y = -32
+	},
 /turf/open/floor/plasteel,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "ge" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-4"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "gg" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1330,7 +1487,9 @@
 /obj/machinery/suit_storage_unit/engine,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "gz" = (
 /obj/structure/toilet,
 /obj/machinery/light/small{
@@ -1339,7 +1498,9 @@
 /obj/effect/turf_decal/bot,
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "gH" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 4
@@ -1350,7 +1511,9 @@
 	pixel_y = 24
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "gM" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
@@ -1359,20 +1522,26 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "gN" = (
 /obj/structure/window/plasma/reinforced{
 	dir = 1
 	},
 /obj/structure/lattice,
 /turf/open/space/basic,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "gS" = (
-/obj/machinery/porta_turret/centcom_shuttle{
+/obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 10
 	},
-/turf/closed/wall/mineral/plastitanium,
-/area/security/brig)
+/turf/closed/wall/mineral/titanium,
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "gW" = (
 /obj/machinery/door/airlock/external{
 	name = "Mining Dock Airlock";
@@ -1405,9 +1574,11 @@
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
-/obj/effect/spawner/structure/window/plastitanium,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "hi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1436,7 +1607,9 @@
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "hp" = (
 /obj/machinery/vending/snack/random,
 /obj/effect/turf_decal/bot,
@@ -1444,8 +1617,13 @@
 	pixel_x = -24;
 	pixel_y = -24
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/obj/structure/sign/nanotrasen{
+	pixel_y = -32
+	},
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "ht" = (
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/stripes/line{
@@ -1455,7 +1633,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "hu" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -1470,12 +1650,14 @@
 /turf/open/floor/grass,
 /area/hallway/secondary/exit/departure_lounge)
 "hv" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "hw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1493,7 +1675,9 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "hK" = (
 /obj/machinery/power/rtg/advanced/fullupgrade,
 /obj/structure/cable{
@@ -1538,7 +1722,9 @@
 	},
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "ih" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/window/plasma/reinforced{
@@ -1550,11 +1736,15 @@
 	},
 /obj/structure/closet/secure_closet/detective,
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "ij" = (
 /obj/structure/sign/warning/securearea,
-/turf/closed/wall/mineral/plastitanium,
-/area/engineering/main)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "il" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
 	dir = 1
@@ -1562,14 +1752,18 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "iq" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/structure/closet/secure_closet/atmospherics,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "ir" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 10
@@ -1578,7 +1772,9 @@
 /obj/machinery/rnd/production/protolathe/department/science,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "is" = (
 /obj/structure/closet/secure_closet/medical3,
 /obj/item/radio/intercom{
@@ -1608,10 +1804,9 @@
 	pixel_y = 24
 	},
 /turf/open/floor/plasteel,
-/area/medical/medbay/central)
-"iu" = (
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/science/research)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "iv" = (
 /obj/machinery/power/floodlight,
 /obj/structure/cable/white{
@@ -1647,7 +1842,9 @@
 	dir = 4
 	},
 /turf/open/space/basic,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "iU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1663,7 +1860,9 @@
 	charge = 5e+006
 	},
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "iZ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -1673,7 +1872,9 @@
 	},
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "ja" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
@@ -1688,14 +1889,18 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "jb" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-2"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "je" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1751,14 +1956,17 @@
 	dir = 6
 	},
 /turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "jx" = (
 /obj/structure/window/plasma/reinforced,
 /obj/structure/lattice,
 /turf/open/space/basic,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "jz" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-2"
 	},
@@ -1768,8 +1976,11 @@
 /obj/structure/cable/white{
 	icon_state = "2-4"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "jA" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
@@ -1778,7 +1989,9 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "jB" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
 /obj/machinery/light_switch{
@@ -1786,7 +1999,9 @@
 	pixel_y = 24
 	},
 /turf/open/floor/plasteel,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "jK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1838,7 +2053,9 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "jU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1864,7 +2081,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "kb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1877,7 +2096,9 @@
 /obj/effect/turf_decal/delivery,
 /obj/structure/tank_dispenser,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "kh" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -1887,7 +2108,9 @@
 	name = "Toilet Unit"
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "kk" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
@@ -1911,15 +2134,19 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "kq" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 8
 	},
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/emcloset,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "ks" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1975,14 +2202,23 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/hallway/secondary/exit/departure_lounge)
+"kz" = (
+/obj/item/kirbyplants{
+	pixel_y = 3
+	},
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "kC" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ai_monitored/command/nuke_storage)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "kG" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
@@ -1998,8 +2234,11 @@
 /obj/machinery/door/poddoor{
 	id = "battlebarge"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "kL" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2040,7 +2279,9 @@
 	},
 /obj/effect/landmark/start/depsec,
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "kW" = (
 /obj/structure/window/plasma/reinforced{
 	dir = 8
@@ -2063,15 +2304,19 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "ll" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
 /obj/structure/cable/white,
-/obj/effect/spawner/structure/window/plastitanium,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "lo" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -2131,8 +2376,10 @@
 /obj/structure/cable/white{
 	icon_state = "2-4"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "lF" = (
 /turf/closed/wall/r_wall,
 /area/asteroid/nearstation)
@@ -2180,7 +2427,9 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "lT" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	name = "Air to Distro"
@@ -2199,7 +2448,9 @@
 	dir = 10
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "lU" = (
 /obj/structure/rack,
 /obj/item/storage/toolbox/emergency{
@@ -2215,7 +2466,6 @@
 /turf/open/floor/plasteel/dark,
 /area/cargo/miningdock)
 "lW" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-4"
 	},
@@ -2225,8 +2475,11 @@
 /obj/structure/cable/white{
 	icon_state = "2-4"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "mb" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2235,7 +2488,9 @@
 /area/asteroid/nearstation)
 "me" = (
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "mf" = (
 /obj/effect/spawner/lootdrop/bedsheet{
 	dir = 1
@@ -2251,7 +2506,9 @@
 	specialfunctions = 4
 	},
 /turf/open/floor/wood,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "mg" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
 	dir = 1
@@ -2273,7 +2530,9 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "mi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2297,7 +2556,9 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel/dark,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "mm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2312,8 +2573,10 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "mx" = (
 /obj/structure/railing,
 /turf/open/floor/plating/asteroid/airless,
@@ -2323,7 +2586,9 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "mI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2369,7 +2634,9 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "mK" = (
 /turf/closed/wall/rust,
 /area/hallway/secondary/entry)
@@ -2396,8 +2663,10 @@
 	icon_state = "plant-03";
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "mS" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -2417,7 +2686,9 @@
 	dir = 10
 	},
 /turf/open/floor/circuit/green,
-/area/ai_monitored/command/nuke_storage)
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "na" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2437,8 +2708,10 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "nh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2446,8 +2719,10 @@
 /turf/open/floor/plasteel/dark,
 /area/hallway/secondary/entry)
 "nl" = (
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/engineering/atmos)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "nm" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2463,7 +2738,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "nu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2474,18 +2751,24 @@
 /area/cargo/storage)
 "ny" = (
 /obj/machinery/atmospherics/pipe/layer_manifold,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/engineering/atmos)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "nB" = (
 /obj/machinery/atmospherics/components/trinary/mixer/airmix/flipped,
 /turf/open/floor/plasteel,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "nD" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 1
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "nK" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -2507,7 +2790,9 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "nM" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 6
@@ -2536,7 +2821,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "nX" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -2551,7 +2838,9 @@
 /obj/item/soap/nanotrasen,
 /obj/item/bikehorn/rubberducky,
 /turf/open/floor/plasteel/cafeteria,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "nY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2568,8 +2857,10 @@
 "oe" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/assistant,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "og" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
@@ -2578,16 +2869,23 @@
 /obj/structure/chair/office/dark{
 	dir = 4
 	},
+/obj/structure/sign/nanotrasen{
+	pixel_y = -32
+	},
 /turf/open/floor/wood,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "oi" = (
 /obj/structure/cable/white{
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/auto_name/north,
 /obj/structure/chair/office,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "oj" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
@@ -2595,8 +2893,10 @@
 /obj/structure/cable/white{
 	icon_state = "1-4"
 	},
-/turf/closed/wall/mineral/plastitanium,
-/area/security/brig)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "ol" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/computer/rdconsole{
@@ -2606,7 +2906,9 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "on" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2643,7 +2945,9 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "ou" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2673,7 +2977,9 @@
 	},
 /obj/machinery/power/rtg/advanced,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "oB" = (
 /obj/machinery/power/rtg/advanced/fullupgrade,
 /obj/structure/cable{
@@ -2740,7 +3046,9 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "pd" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/crate/bin{
@@ -2750,9 +3058,10 @@
 	dir = 9
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "pe" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/window/plasma/reinforced{
 	dir = 1
 	},
@@ -2760,17 +3069,24 @@
 /obj/structure/window/plasma/reinforced{
 	dir = 8
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "ph" = (
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "pi" = (
-/obj/machinery/porta_turret/centcom_shuttle{
+/obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 6
 	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/engineering/atmos)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "pk" = (
 /turf/closed/wall/r_wall/rust,
 /area/maintenance/port/fore)
@@ -2782,7 +3098,9 @@
 /obj/effect/turf_decal/bot,
 /obj/machinery/power/rtg/advanced,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "pr" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -2810,7 +3128,9 @@
 	},
 /obj/effect/landmark/start/captain,
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "pK" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
 	dir = 4
@@ -2832,7 +3152,9 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "pL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/flora/ausbushes/fullgrass,
@@ -2873,7 +3195,9 @@
 /obj/structure/table/reinforced,
 /mob/living/simple_animal/bot/medbot,
 /turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "pW" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -2888,15 +3212,19 @@
 	req_access_txt = "30"
 	},
 /turf/open/floor/plasteel/dark,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "qg" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white,
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "qj" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -2904,7 +3232,9 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "ql" = (
 /obj/structure/cable,
 /obj/machinery/power/terminal{
@@ -2921,7 +3251,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "qm" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2946,8 +3278,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 6
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "qx" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt,
@@ -2973,8 +3307,10 @@
 	icon_state = "2-4"
 	},
 /obj/effect/landmark/blobstart,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "qA" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -2991,7 +3327,9 @@
 /obj/effect/turf_decal/box,
 /obj/machinery/nuclearbomb/selfdestruct,
 /turf/open/floor/circuit/green,
-/area/ai_monitored/command/nuke_storage)
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "qD" = (
 /obj/structure/window/plasma/reinforced,
 /obj/structure/window/plasma/reinforced{
@@ -2999,20 +3337,26 @@
 	},
 /obj/structure/lattice,
 /turf/open/space/basic,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "qH" = (
 /obj/machinery/power/apc/auto_name/east,
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/ai_monitored/command/nuke_storage)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "qI" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 8
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/ai_monitored/command/nuke_storage)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "qN" = (
 /obj/structure/railing{
 	dir = 1
@@ -3024,7 +3368,9 @@
 	pixel_y = 3
 	},
 /turf/open/floor/plasteel,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "qV" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 9
@@ -3049,7 +3395,9 @@
 	pixel_y = -32
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "qW" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
@@ -3065,7 +3413,9 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "qZ" = (
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/item/clothing/under/costume/geisha,
@@ -3073,7 +3423,9 @@
 	dir = 1
 	},
 /turf/open/floor/wood,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "rc" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
@@ -3090,12 +3442,16 @@
 	pixel_y = -7
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "re" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "rf" = (
 /obj/machinery/power/apc/auto_name/south,
 /obj/structure/cable/white,
@@ -3136,7 +3492,9 @@
 	turns_per_move = 10
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "ri" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
@@ -3145,7 +3503,9 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "ro" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -3169,7 +3529,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "rs" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 10
@@ -3249,8 +3611,10 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
 "rA" = (
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/medical/medbay/central)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "rB" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt,
@@ -3276,14 +3640,18 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "rM" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-2"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "rN" = (
 /obj/structure/grille,
 /obj/effect/decal/cleanable/dirt,
@@ -3347,13 +3715,17 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "sd" = (
-/obj/machinery/porta_turret/centcom_shuttle{
+/obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 9
 	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/hallway/primary/central)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "sg" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/light{
@@ -3373,15 +3745,19 @@
 	req_access_txt = "56"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "sh" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
 	},
 /obj/structure/chair/office,
 /obj/effect/landmark/start/librarian,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "sj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -3423,8 +3799,10 @@
 	},
 /obj/structure/chair/office,
 /obj/effect/landmark/start/research_director,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "sw" = (
 /turf/closed/wall,
 /area/cargo/storage)
@@ -3453,7 +3831,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "sC" = (
 /obj/effect/turf_decal/delivery,
 /obj/structure/closet/crate{
@@ -3482,7 +3862,9 @@
 	pixel_y = 3
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "sE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/white{
@@ -3502,7 +3884,6 @@
 /turf/open/floor/plasteel/dark,
 /area/cargo/miningdock)
 "sO" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white,
 /obj/structure/cable/white{
 	icon_state = "1-8"
@@ -3510,8 +3891,11 @@
 /obj/structure/cable/white{
 	icon_state = "1-4"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "sS" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 5
@@ -3523,7 +3907,9 @@
 	pixel_y = 30
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "sU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -3540,14 +3926,18 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "td" = (
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "tm" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/open/floor/circuit/green/telecomms/mainframe,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "to" = (
 /obj/machinery/button/door{
 	id = "battlebarge";
@@ -3557,8 +3947,10 @@
 /obj/effect/turf_decal/caution{
 	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "tp" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -3571,7 +3963,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "tq" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 6
@@ -3583,7 +3977,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "tr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -3616,8 +4012,10 @@
 /turf/open/floor/plasteel/dark,
 /area/cargo/qm)
 "tv" = (
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/commons/dorms)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "tx" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -3633,7 +4031,9 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "tz" = (
 /obj/structure/barricade/wooden,
 /turf/closed/mineral/random/labormineral,
@@ -3647,7 +4047,9 @@
 	pixel_y = -24
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "tG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/xeno_spawn,
@@ -3662,13 +4064,17 @@
 	},
 /obj/effect/landmark/start/scientist,
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "tM" = (
-/obj/machinery/porta_turret/centcom_shuttle{
+/obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 9
 	},
-/turf/closed/wall/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/closed/wall/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "tN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -3726,14 +4132,18 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "ub" = (
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
-/obj/effect/spawner/structure/window/plastitanium,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "ud" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -3753,7 +4163,9 @@
 	receive_ore_updates = 1
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "uf" = (
 /obj/structure/dresser,
 /obj/machinery/light_switch{
@@ -3761,7 +4173,9 @@
 	pixel_y = -24
 	},
 /turf/open/floor/wood,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "uh" = (
 /obj/structure/lattice,
 /turf/closed/wall/r_wall,
@@ -3772,8 +4186,10 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "uj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -3798,15 +4214,17 @@
 /turf/open/floor/plasteel/dark,
 /area/cargo/miningdock)
 "un" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/machinery/atmospherics/pipe/manifold/general/visible{
 	dir = 4
 	},
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "uo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -3837,17 +4255,23 @@
 	charge = 5e+006
 	},
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "uF" = (
-/turf/closed/wall/mineral/plastitanium,
-/area/engineering/atmos)
+/turf/closed/wall/mineral/titanium,
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "uH" = (
 /obj/structure/chair/office{
 	dir = 1
 	},
 /obj/effect/landmark/start/geneticist,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "uI" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -3872,15 +4296,19 @@
 "uP" = (
 /obj/effect/landmark/start/head_of_security,
 /turf/open/floor/wood,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "uQ" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
 /obj/structure/chair/office,
 /obj/effect/landmark/start/lawyer,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "uR" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -3899,13 +4327,17 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "uS" = (
 /obj/machinery/airalarm/directional/east,
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/firecloset,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "uT" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/machinery/firealarm{
@@ -3917,14 +4349,18 @@
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "uV" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 4
 	},
 /obj/effect/landmark/start/quartermaster,
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "uW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -3942,8 +4378,10 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ai_monitored/command/nuke_storage)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "uY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -3976,7 +4414,9 @@
 	use_power = 0
 	},
 /turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "vj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4001,7 +4441,9 @@
 	pixel_y = 3
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "vy" = (
 /turf/closed/wall,
 /area/cargo/qm)
@@ -4024,7 +4466,9 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "vB" = (
 /obj/structure/cable/white{
 	icon_state = "0-2"
@@ -4035,44 +4479,47 @@
 /obj/structure/cable/white{
 	icon_state = "2-4"
 	},
-/obj/effect/spawner/structure/window/plastitanium,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/science/research)
-"vC" = (
-/obj/effect/spawner/structure/window/plastitanium,
-/obj/structure/cable/white{
-	icon_state = "0-8"
-	},
-/turf/open/floor/plating,
-/area/security/brig)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "vD" = (
 /obj/structure/cable/white{
 	icon_state = "1-4"
 	},
-/turf/closed/wall/mineral/plastitanium,
-/area/engineering/main)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "vM" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-2"
 	},
 /obj/machinery/door/poddoor{
 	id = "battlebarge"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "vR" = (
 /obj/structure/window/plasma/reinforced{
 	dir = 4
 	},
 /obj/machinery/air_sensor/atmos/nitrogen_tank,
 /turf/open/floor/engine/n2,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "wa" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "wd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4090,7 +4537,9 @@
 	},
 /obj/structure/lattice,
 /turf/open/space/basic,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "wg" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
@@ -4110,8 +4559,10 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "wv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4131,8 +4582,10 @@
 	icon_state = "4-8"
 	},
 /obj/effect/landmark/start/assistant,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "wD" = (
 /obj/machinery/door/window/brigdoor/security/cell/westright{
 	dir = 4;
@@ -4174,16 +4627,20 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
-/turf/closed/wall/mineral/plastitanium,
-/area/commons/dorms)
+/turf/closed/wall/mineral/titanium,
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "wP" = (
 /obj/machinery/light,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "wT" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
 /obj/structure/cable/white{
@@ -4195,16 +4652,22 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "wU" = (
 /turf/open/floor/engine/n2,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "wV" = (
-/obj/machinery/porta_turret/centcom_shuttle{
+/obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 10
 	},
-/turf/closed/wall/mineral/plastitanium,
-/area/medical/medbay/central)
+/turf/closed/wall/mineral/titanium,
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "wW" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
 /obj/effect/turf_decal/tile/neutral,
@@ -4222,13 +4685,23 @@
 	},
 /obj/effect/landmark/start/station_engineer,
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "wX" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 9
 	},
 /turf/open/floor/plasteel,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
+"xa" = (
+/obj/effect/spawner/structure/window/shuttle,
+/turf/open/floor/plating,
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "xb" = (
 /obj/structure/window/plasma/reinforced{
 	dir = 8
@@ -4248,7 +4721,9 @@
 	},
 /obj/effect/turf_decal/stripes/corner,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "xf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4281,19 +4756,25 @@
 	pixel_y = 23
 	},
 /turf/open/floor/plasteel,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "xh" = (
 /obj/machinery/suit_storage_unit/atmos,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "xi" = (
 /turf/closed/wall/r_wall,
 /area/maintenance/port/fore)
 "xj" = (
 /obj/effect/landmark/blobstart,
 /turf/open/floor/wood,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "xo" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -4308,15 +4789,21 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "xp" = (
 /obj/effect/landmark/blobstart,
 /turf/open/floor/circuit/green/telecomms/mainframe,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "xr" = (
 /mob/living/simple_animal/sloth/citrus,
-/turf/open/floor/mineral/plastitanium,
-/area/ai_monitored/command/nuke_storage)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "xs" = (
 /obj/machinery/vending/medical,
 /obj/effect/turf_decal/bot,
@@ -4324,7 +4811,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "xt" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/secure_closet/warden,
@@ -4342,16 +4831,29 @@
 	desc = "A rare breed of bat which roosts in spaceships. This one was tamed by Warden. Wryy...";
 	name = "Dio"
 	},
+/obj/structure/sign/nanotrasen{
+	pixel_y = -32
+	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
+"xv" = (
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "xy" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/structure/chair/office,
 /obj/effect/landmark/start/mime,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "xD" = (
 /turf/closed/wall/r_wall/rust,
 /area/cargo/storage)
@@ -4364,7 +4866,9 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "xO" = (
 /obj/effect/turf_decal/box/white,
 /obj/structure/cable/white{
@@ -4391,8 +4895,10 @@
 	dir = 1
 	},
 /obj/effect/landmark/start/virologist,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "ya" = (
 /obj/machinery/atmospherics/pipe/manifold/cyan/visible{
 	dir = 1
@@ -4413,7 +4919,9 @@
 	},
 /obj/effect/landmark/start/atmospheric_technician,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "yb" = (
 /obj/effect/landmark/start/cyborg,
 /obj/item/radio/intercom{
@@ -4423,8 +4931,10 @@
 	name = "AI Intercom";
 	pixel_x = 28
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/ai_monitored/command/nuke_storage)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "yg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4437,8 +4947,13 @@
 "yk" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/emcloset,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/obj/structure/sign/nanotrasen{
+	pixel_y = -32
+	},
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "yl" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/light/small{
@@ -4463,7 +4978,9 @@
 	pixel_y = -4
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "ym" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4488,7 +5005,9 @@
 "yz" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
 /turf/open/floor/plasteel,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "yC" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -4516,7 +5035,9 @@
 	name = "Lockerroom"
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/dorms)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "yL" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
@@ -4536,19 +5057,25 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "yM" = (
 /obj/structure/shuttle/engine/huge{
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "yO" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "yQ" = (
 /obj/structure/window/plasma/reinforced{
 	dir = 8
@@ -4573,7 +5100,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "yT" = (
 /obj/item/storage/box/lights/mixed,
 /obj/item/lightreplacer,
@@ -4594,7 +5123,9 @@
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/cafeteria,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "zd" = (
 /obj/structure/cable,
 /obj/structure/cable{
@@ -4606,7 +5137,9 @@
 /obj/effect/turf_decal/bot,
 /obj/machinery/power/rtg/advanced,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "zf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4658,7 +5191,9 @@
 	},
 /obj/effect/landmark/start/ai,
 /turf/open/floor/circuit/green,
-/area/ai_monitored/command/nuke_storage)
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "zq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4699,7 +5234,9 @@
 	dir = 8
 	},
 /turf/open/floor/engine/o2,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "zy" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/tank_dispenser/oxygen,
@@ -4712,7 +5249,9 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "zB" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 4
@@ -4726,9 +5265,11 @@
 /obj/structure/cable/white{
 	icon_state = "0-4"
 	},
-/obj/effect/spawner/structure/window/plastitanium,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "zG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4744,7 +5285,9 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "zK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4763,7 +5306,9 @@
 "zN" = (
 /obj/structure/lattice,
 /turf/open/space/basic,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "zP" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/suit_storage_unit/security,
@@ -4775,14 +5320,18 @@
 	req_access_txt = "1"
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "zR" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 4
 	},
 /obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "zV" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/structure/cable/white{
@@ -4794,8 +5343,13 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/ai_monitored/command/nuke_storage)
+/obj/structure/sign/nanotrasen{
+	pixel_x = -32
+	},
+/turf/open/floor/mineral/titanium,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "zX" = (
 /turf/closed/wall/rust,
 /area/maintenance/port/fore)
@@ -4817,15 +5371,19 @@
 /obj/item/kirbyplants{
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Af" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "Ag" = (
 /obj/effect/turf_decal/loading_area/white{
 	dir = 1
@@ -4841,11 +5399,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/wood,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "Ao" = (
-/obj/effect/spawner/structure/window/plastitanium,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Au" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -4887,8 +5449,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ai_monitored/command/nuke_storage)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "AC" = (
 /obj/structure/plasticflaps,
 /obj/effect/turf_decal/stripes/line,
@@ -4911,7 +5475,13 @@
 	pixel_y = 23
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
+"AK" = (
+/obj/structure/girder,
+/turf/closed/mineral/random/labormineral,
+/area/asteroid/nearstation)
 "AL" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -4922,8 +5492,10 @@
 	pixel_x = -24;
 	pixel_y = -24
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/ai_monitored/command/nuke_storage)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "AM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4952,8 +5524,10 @@
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
 "AV" = (
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/engineering/main)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "AW" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/marker_beacon,
@@ -4987,7 +5561,9 @@
 	req_access_txt = "24;10;13'19"
 	},
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Bb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -4998,8 +5574,10 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Bi" = (
 /obj/machinery/atmospherics/pipe/manifold/cyan/visible{
 	dir = 1
@@ -5023,13 +5601,26 @@
 	pixel_y = 24
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
+"Bk" = (
+/obj/effect/turf_decal/delivery,
+/obj/structure/window/plasma/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Br" = (
-/obj/machinery/porta_turret/centcom_shuttle{
+/obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 5
 	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/engineering/main)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Bt" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
@@ -5041,12 +5632,16 @@
 /obj/item/stock_parts/cell/high,
 /obj/item/clothing/glasses/welding,
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "Bu" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/vending/tool,
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "By" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5064,24 +5659,30 @@
 /obj/effect/spawner/lootdrop/bedsheet,
 /obj/item/toy/plush/borgplushie,
 /turf/open/floor/plasteel,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "BF" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
 /obj/effect/landmark/start/shaft_miner,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "BI" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-4"
 	},
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "BM" = (
 /obj/machinery/computer/crew{
 	dir = 8
@@ -5091,7 +5692,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "BO" = (
 /obj/effect/turf_decal/loading_area/white{
 	dir = 1
@@ -5108,14 +5711,18 @@
 	name = "Lockerroom"
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/dorms)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "BU" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 1
 	},
 /obj/effect/landmark/start/cargo_technician,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "BV" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
@@ -5123,7 +5730,9 @@
 /obj/machinery/rnd/destructive_analyzer,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "Ca" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5134,15 +5743,17 @@
 /turf/closed/wall,
 /area/asteroid/nearstation)
 "Cg" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-4"
 	},
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Ck" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/modular_computer/console/preset/engineering{
@@ -5152,7 +5763,9 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "Cm" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -5175,7 +5788,9 @@
 	req_access_txt = "24;10;13'19"
 	},
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Cu" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
 	dir = 2;
@@ -5183,7 +5798,9 @@
 	name = "server vent"
 	},
 /turf/open/floor/circuit/green/telecomms/mainframe,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "Cy" = (
 /turf/closed/wall/r_wall/rust,
 /area/hallway/secondary/entry)
@@ -5202,8 +5819,10 @@
 /area/hallway/secondary/entry)
 "CA" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "CC" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -5213,8 +5832,10 @@
 	dir = 1
 	},
 /obj/effect/landmark/start/chaplain,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "CE" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5253,7 +5874,9 @@
 "CT" = (
 /obj/structure/window/plasma/reinforced,
 /turf/open/floor/engine/o2,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "CV" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes/line{
@@ -5271,7 +5894,9 @@
 "CW" = (
 /obj/machinery/rnd/server,
 /turf/open/floor/circuit/green/telecomms/mainframe,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "CZ" = (
 /obj/machinery/vending/tool,
 /obj/structure/window/reinforced{
@@ -5279,7 +5904,9 @@
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/dark,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "De" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5314,7 +5941,9 @@
 	},
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Dp" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -5333,7 +5962,9 @@
 	name = "Cargo 1"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Dw" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -5355,7 +5986,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Dy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5413,7 +6046,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "DH" = (
 /obj/structure/cable/white,
 /obj/machinery/power/apc/auto_name/south,
@@ -5421,7 +6056,9 @@
 /obj/effect/turf_decal/bot,
 /mob/living/simple_animal/pet/cat/Runtime,
 /turf/open/floor/plasteel/cafeteria,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "DJ" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -5451,8 +6088,14 @@
 	name = "Bridge RC";
 	pixel_x = 32
 	},
+/obj/structure/sign/nanotrasen{
+	pixel_x = 32;
+	pixel_y = -32
+	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "DL" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
@@ -5475,7 +6118,9 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "DN" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/light/small{
@@ -5485,14 +6130,18 @@
 	pixel_y = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "DW" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
 /obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "El" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5584,7 +6233,9 @@
 	pixel_y = -24
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "EP" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -5594,8 +6245,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "EQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5624,8 +6277,10 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "EZ" = (
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/hallway/primary/central)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Fd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5643,8 +6298,10 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Fh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5684,10 +6341,14 @@
 	},
 /obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/plasteel,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Fq" = (
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/security/brig)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "Ft" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5712,7 +6373,9 @@
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "FF" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
@@ -5728,11 +6391,15 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "FN" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "FO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5761,7 +6428,9 @@
 	},
 /obj/machinery/meter/atmos/atmos_waste_loop,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "FV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5787,7 +6456,9 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Gd" = (
 /turf/closed/wall/rust,
 /area/cargo/qm)
@@ -5810,16 +6481,20 @@
 	dir = 1
 	},
 /obj/effect/landmark/start/botanist,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Gn" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/effect/landmark/start/cyborg,
-/turf/open/floor/mineral/plastitanium,
-/area/ai_monitored/command/nuke_storage)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "Go" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
@@ -5828,7 +6503,7 @@
 /turf/open/floor/plating,
 /area/asteroid/nearstation)
 "Gp" = (
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/maintenance/port/central)
 "Gr" = (
 /obj/structure/cable/white{
@@ -5839,7 +6514,9 @@
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "Gt" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
@@ -5849,7 +6526,9 @@
 	},
 /obj/machinery/computer/crew,
 /turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Gu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5867,8 +6546,13 @@
 /obj/structure/closet/crate/bin{
 	pixel_y = 6
 	},
+/obj/structure/sign/nanotrasen{
+	pixel_y = -32
+	},
 /turf/open/floor/plasteel/dark,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "GF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5879,8 +6563,10 @@
 /obj/effect/turf_decal/caution{
 	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "GL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5893,8 +6579,10 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "GP" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
@@ -5911,24 +6599,30 @@
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "GU" = (
 /obj/machinery/atmospherics/pipe/layer_manifold{
 	dir = 4
 	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/engineering/atmos)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "GW" = (
 /obj/effect/turf_decal/box,
 /obj/machinery/ai_slipper{
 	uses = 10
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/ai_monitored/command/nuke_storage)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "GY" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -5948,7 +6642,9 @@
 	dir = 1
 	},
 /turf/open/floor/circuit/green,
-/area/ai_monitored/command/nuke_storage)
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "Hi" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5958,7 +6654,9 @@
 /obj/effect/turf_decal/delivery,
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plasteel/dark,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "Hk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6019,8 +6717,10 @@
 	pixel_x = -24;
 	pixel_y = -24
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Hz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6048,8 +6748,10 @@
 "HD" = (
 /obj/machinery/vending/cigarette,
 /obj/effect/turf_decal/bot,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "HI" = (
 /obj/structure/closet/secure_closet/medical2,
 /obj/effect/turf_decal/tile/neutral{
@@ -6067,7 +6769,9 @@
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/dark,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "HN" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -6087,17 +6791,21 @@
 	id = "battlebarge"
 	},
 /turf/open/floor/plasteel/dark,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "HQ" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "HV" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
@@ -6112,7 +6820,9 @@
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "HZ" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 1
@@ -6126,7 +6836,9 @@
 	weaponscheck = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "Ie" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6155,7 +6867,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Im" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6192,7 +6906,9 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "IF" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6206,7 +6922,9 @@
 	},
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "IQ" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -6223,7 +6941,9 @@
 /area/hallway/secondary/entry)
 "IT" = (
 /turf/open/floor/engine/o2,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "IU" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
@@ -6247,7 +6967,9 @@
 	icon_state = "1-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "IV" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -6267,22 +6989,31 @@
 	id = "battlebarge"
 	},
 /turf/open/floor/plasteel/dark,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "IW" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 1
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Ja" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 6
 	},
 /obj/machinery/aug_manipulator,
 /obj/effect/turf_decal/bot,
+/obj/structure/sign/nanotrasen{
+	pixel_y = -32
+	},
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "Ji" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6321,7 +7052,9 @@
 	},
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/plasteel,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Jq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6333,12 +7066,16 @@
 /area/hallway/secondary/exit/departure_lounge)
 "Jr" = (
 /obj/effect/landmark/start/shaft_miner,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Jw" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Jy" = (
 /obj/machinery/door/airlock/mining{
 	name = "Mining Dock";
@@ -6369,8 +7106,10 @@
 	icon_state = "applebush";
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "JJ" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 4
@@ -6380,7 +7119,9 @@
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "JK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6415,7 +7156,9 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "JQ" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -6438,14 +7181,18 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "JU" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer/on{
 	dir = 1
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "JX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6460,7 +7207,9 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "Kd" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
@@ -6533,8 +7282,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Ky" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/secure_closet/engineering_chief,
@@ -6556,7 +7307,9 @@
 /mob/living/simple_animal/parrot/Poly,
 /obj/item/tank/jetpack/suit,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "KA" = (
 /obj/docking_port/stationary{
 	dir = 8;
@@ -6571,23 +7324,27 @@
 "KF" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/bartender,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "KH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/r_wall/rust,
 /area/hallway/secondary/entry)
 "KK" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-2"
 	},
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "KN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6622,7 +7379,9 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/ai_monitored/command/nuke_storage)
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "La" = (
 /obj/machinery/light{
 	dir = 1
@@ -6631,8 +7390,13 @@
 	icon_state = "plant-05";
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/obj/structure/sign/nanotrasen{
+	pixel_y = 32
+	},
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Lf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6659,7 +7423,9 @@
 	dir = 4
 	},
 /turf/open/space/basic,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "Li" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 9
@@ -6671,7 +7437,9 @@
 	},
 /obj/structure/closet/secure_closet/security/sec,
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "Lj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6694,7 +7462,9 @@
 	pixel_y = -24
 	},
 /turf/open/floor/plasteel,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "Lq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6731,14 +7501,18 @@
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "LC" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 8
 	},
 /obj/effect/landmark/start/detective,
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "LG" = (
 /obj/structure/table/reinforced,
 /obj/machinery/chem_dispenser/drinks{
@@ -6748,8 +7522,10 @@
 	pixel_x = -3;
 	pixel_y = -5
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "LH" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6767,7 +7543,9 @@
 	name = "Room One"
 	},
 /turf/open/floor/plasteel/dark,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "LM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6791,24 +7569,31 @@
 /obj/structure/window/plasma/reinforced{
 	dir = 8
 	},
+/obj/structure/window/plasma/reinforced,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "LP" = (
 /obj/machinery/vending/cola/random,
 /obj/effect/turf_decal/bot,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "LS" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "LV" = (
-/obj/machinery/porta_turret/centcom_shuttle{
+/obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 9
 	},
-/turf/closed/wall/mineral/plastitanium,
-/area/science/research)
+/turf/closed/wall/mineral/titanium,
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "LX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6847,14 +7632,17 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "Mj" = (
 /obj/effect/turf_decal/delivery,
 /obj/structure/reagent_dispensers/foamtank,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "Mk" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "1-4"
 	},
@@ -6864,8 +7652,11 @@
 /obj/machinery/door/poddoor{
 	id = "battlebarge"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Mm" = (
 /obj/structure/cable/white{
 	icon_state = "0-2"
@@ -6885,10 +7676,14 @@
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "Mn" = (
-/turf/closed/wall/mineral/plastitanium,
-/area/security/brig)
+/turf/closed/wall/mineral/titanium,
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "Mq" = (
 /obj/machinery/light{
 	dir = 8
@@ -6904,7 +7699,9 @@
 	pixel_x = -24
 	},
 /turf/open/floor/plasteel,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Mr" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/machinery/atmospherics/miner/nitrogen,
@@ -6913,7 +7710,9 @@
 	dir = 8
 	},
 /turf/open/floor/engine/n2,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "Mw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6943,7 +7742,18 @@
 	pressure_checks = 0
 	},
 /turf/open/floor/circuit/green/telecomms/mainframe,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
+"MD" = (
+/obj/structure/closet/crate/bin{
+	pixel_y = 6
+	},
+/obj/effect/turf_decal/bot,
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "MI" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -6987,26 +7797,40 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel/dark,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "MP" = (
-/obj/machinery/porta_turret/centcom_shuttle{
+/obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 9
 	},
-/turf/closed/wall/mineral/plastitanium,
-/area/commons/dorms)
+/turf/closed/wall/mineral/titanium,
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "MQ" = (
 /obj/item/kirbyplants{
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/obj/structure/sign/nanotrasen{
+	pixel_y = -32
+	},
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "MS" = (
 /obj/structure/closet/crate/bin{
 	pixel_y = 6
 	},
 /obj/effect/turf_decal/bot,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/obj/structure/sign/nanotrasen{
+	pixel_y = 32
+	},
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "MT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7017,7 +7841,9 @@
 /obj/machinery/power/apc/auto_name/south,
 /obj/structure/cable/white,
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "MY" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes/line{
@@ -7044,7 +7870,9 @@
 	pixel_y = 28
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "Nd" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -7073,7 +7901,9 @@
 /obj/item/flashlight,
 /obj/machinery/cell_charger,
 /turf/open/floor/plasteel/dark,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "Nh" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -7091,7 +7921,9 @@
 	name = "Toilet Unit"
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "Ni" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7111,8 +7943,10 @@
 /area/cargo/miningdock)
 "Nl" = (
 /obj/structure/sign/warning/securearea,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/engineering/atmos)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "Nm" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
@@ -7125,7 +7959,9 @@
 	},
 /obj/effect/landmark/start/head_of_personnel,
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "Nn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7133,12 +7969,32 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
+"Nq" = (
+/obj/structure/mirror{
+	pixel_x = -26
+	},
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12
+	},
+/obj/machinery/shower{
+	dir = 8;
+	name = "shower"
+	},
+/obj/effect/turf_decal/bot,
+/obj/item/soap/nanotrasen,
+/turf/open/floor/plasteel,
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "Nr" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 10
 	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/commons/dorms)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "Ns" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7162,7 +8018,9 @@
 	pixel_y = -24
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "NC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7179,8 +8037,10 @@
 /area/asteroid/nearstation)
 "NH" = (
 /obj/effect/landmark/start/cargo_technician,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "NL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7208,13 +8068,17 @@
 	dir = 4
 	},
 /turf/open/floor/engine/n2,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "NR" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "NS" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -7233,8 +8097,10 @@
 	icon_state = "4-8"
 	},
 /obj/effect/landmark/event_spawn,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "NZ" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
@@ -7244,10 +8110,14 @@
 	},
 /obj/effect/landmark/start/chief_engineer,
 /turf/open/floor/plasteel,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "Oa" = (
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ai_monitored/command/nuke_storage)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "Ob" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -7259,12 +8129,21 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Oe" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/gravity_generator/main/station,
+/obj/machinery/door/window/brigdoor/eastright{
+	dir = 2;
+	name = "Gravity Generator";
+	req_access_txt = "11"
+	},
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Of" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -7296,7 +8175,17 @@
 	},
 /obj/effect/mapping_helpers/airlock/unres,
 /turf/open/floor/plasteel/dark,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
+"Ol" = (
+/obj/machinery/porta_turret/centcom_shuttle/ballistic{
+	dir = 10
+	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "Om" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7334,21 +8223,31 @@
 	icon_state = "plant-05";
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/obj/structure/sign/nanotrasen{
+	pixel_y = -32
+	},
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Os" = (
 /obj/effect/turf_decal/delivery,
 /obj/structure/window/plasma/reinforced{
 	dir = 4
 	},
+/obj/structure/window/plasma/reinforced,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "OC" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "OK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7373,13 +8272,17 @@
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "OO" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "OP" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 4
@@ -7397,7 +8300,9 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "OT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7421,7 +8326,9 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "OY" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
 	dir = 4
@@ -7442,7 +8349,9 @@
 /obj/machinery/light,
 /obj/machinery/meter/atmos/atmos_waste_loop,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "Pb" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/turf_decal/stripes/line{
@@ -7459,7 +8368,9 @@
 	req_access_txt = "47"
 	},
 /turf/open/floor/plasteel/dark,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "Pc" = (
 /turf/closed/wall,
 /area/hallway/secondary/entry)
@@ -7491,7 +8402,9 @@
 	pixel_y = 24
 	},
 /turf/open/floor/plasteel/cafeteria,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Pk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7510,7 +8423,9 @@
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Po" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -7530,7 +8445,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Pr" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -7538,7 +8455,9 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "Pt" = (
 /obj/structure/closet/secure_closet/hop,
 /obj/machinery/light{
@@ -7552,7 +8471,9 @@
 	},
 /obj/structure/window/plasma/reinforced,
 /turf/open/floor/mineral/plastitanium,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "Pw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7571,15 +8492,16 @@
 /area/asteroid/nearstation)
 "PG" = (
 /obj/structure/cable/white,
-/obj/effect/spawner/structure/window/plastitanium,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "PI" = (
 /obj/effect/landmark/observer_start,
 /turf/open/floor/plating,
 /area/asteroid/nearstation)
 "PP" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/window/plasma/reinforced,
 /obj/structure/window/plasma/reinforced{
 	dir = 1
@@ -7587,8 +8509,11 @@
 /obj/structure/window/plasma/reinforced{
 	dir = 4
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "PQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7638,7 +8563,9 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "Qd" = (
 /obj/machinery/sleeper{
 	dir = 8
@@ -7647,19 +8574,25 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Qj" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-2"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Qo" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/roboticist,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Qp" = (
 /obj/structure/grille,
 /obj/structure/cable{
@@ -7690,7 +8623,9 @@
 	name = "Cargo 4"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Qt" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes/line,
@@ -7708,7 +8643,9 @@
 	},
 /obj/effect/turf_decal/trimline/blue/filled/corner,
 /turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Qy" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
 	dir = 4
@@ -7727,10 +8664,14 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "QA" = (
 /turf/open/floor/plasteel,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "QF" = (
 /obj/machinery/door/window/brigdoor/eastright{
 	dir = 8;
@@ -7746,15 +8687,22 @@
 /obj/structure/window/plasma/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/nanotrasen{
+	pixel_y = -32
+	},
 /turf/open/floor/mineral/plastitanium,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "QH" = (
 /obj/machinery/computer/secure_data{
 	dir = 8
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/wood,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "QI" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -7763,8 +8711,10 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "QP" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
@@ -7789,12 +8739,16 @@
 	icon_state = "1-4"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "QT" = (
 /obj/effect/turf_decal/delivery,
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "QV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7805,8 +8759,10 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "QZ" = (
-/turf/closed/wall/mineral/plastitanium,
-/area/commons/dorms)
+/turf/closed/wall/mineral/titanium,
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "Rb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/white{
@@ -7821,8 +8777,10 @@
 	dir = 1;
 	pixel_y = -24
 	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ai_monitored/command/nuke_storage)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/eva{
+	name = "Shuttle Vault"
+	})
 "Rg" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -7851,7 +8809,9 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Rn" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
@@ -7860,16 +8820,23 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable/white,
-/obj/effect/spawner/structure/window/plastitanium,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Rq" = (
 /obj/machinery/light{
 	dir = 4;
 	light_color = "#e8eaff"
 	},
+/obj/structure/sign/nanotrasen{
+	pixel_x = 32
+	},
 /turf/open/floor/plating/asteroid/airless,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Rw" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -7912,7 +8879,9 @@
 	pixel_y = -32
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "RB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7936,7 +8905,6 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "RK" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/window/plasma/reinforced{
 	dir = 1
 	},
@@ -7944,8 +8912,11 @@
 /obj/structure/window/plasma/reinforced{
 	dir = 4
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "RL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -7963,8 +8934,10 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "RP" = (
 /obj/structure/cable/white,
 /obj/structure/cable/white{
@@ -7975,7 +8948,9 @@
 	charge = 5e+006
 	},
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "RV" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/effect/turf_decal/stripes/line{
@@ -7994,7 +8969,9 @@
 	},
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Sn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -8030,7 +9007,9 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Sr" = (
 /obj/machinery/light{
 	dir = 1
@@ -8042,8 +9021,10 @@
 	icon_state = "plant-10";
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "St" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -8158,7 +9139,9 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "SV" = (
 /obj/machinery/door/airlock/external{
 	name = "Mining Dock Airlock";
@@ -8192,8 +9175,10 @@
 "Tc" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/cook,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Tk" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -8210,7 +9195,9 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "Tn" = (
 /obj/structure/table/reinforced,
 /obj/structure/cable/white{
@@ -8242,7 +9229,9 @@
 	},
 /obj/machinery/power/apc/auto_name/north,
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "TA" = (
 /obj/structure/window/plasma/reinforced{
 	dir = 8
@@ -8252,7 +9241,9 @@
 	},
 /obj/structure/window/plasma/reinforced,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "TB" = (
 /obj/structure/barricade/wooden,
 /obj/effect/decal/cleanable/dirt,
@@ -8324,12 +9315,16 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "TW" = (
 /obj/structure/cable/white,
-/obj/effect/spawner/structure/window/plastitanium,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Ua" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -8343,14 +9338,18 @@
 /turf/closed/wall/r_wall/rust,
 /area/asteroid/nearstation)
 "Ue" = (
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/command/bridge)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "Uh" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/machinery/rnd/production/circuit_imprinter/department/science,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/white,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "Uj" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8
@@ -8379,11 +9378,13 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "Ul" = (
-/obj/machinery/porta_turret/centcom_shuttle{
+/obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 6
 	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/engineering/main)
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Um" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -8396,13 +9397,17 @@
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
-/obj/effect/spawner/structure/window/plastitanium,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/science/research)
+/area/maintenance/department/science{
+	name = "Shuttle RnD"
+	})
 "Uo" = (
 /obj/machinery/light,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Up" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 8
@@ -8412,17 +9417,23 @@
 	name = "Officer Beepsky"
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "Uq" = (
-/turf/closed/wall/mineral/plastitanium,
-/area/engineering/main)
+/turf/closed/wall/mineral/titanium,
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Us" = (
 /obj/structure/chair/office{
 	dir = 1
 	},
 /obj/effect/landmark/start/chief_medical_officer,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Ut" = (
 /obj/structure/railing/corner{
 	dir = 8
@@ -8442,12 +9453,14 @@
 /turf/open/floor/grass,
 /area/hallway/secondary/exit/departure_lounge)
 "Uw" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-4"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "UA" = (
 /obj/machinery/airalarm/directional/north,
 /obj/effect/turf_decal/delivery,
@@ -8456,7 +9469,9 @@
 /obj/item/storage/box/lights/mixed,
 /obj/item/clothing/gloves/color/yellow,
 /turf/open/floor/plasteel/dark,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "UC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -8496,7 +9511,9 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "UJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -8548,7 +9565,9 @@
 	},
 /obj/machinery/power/rtg/advanced,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "UT" = (
 /obj/structure/barricade/wooden,
 /turf/open/floor/plating/asteroid/airless,
@@ -8585,7 +9604,9 @@
 	pixel_y = 23
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "Va" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -8651,7 +9672,9 @@
 	pixel_y = 3
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Vn" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 6
@@ -8662,7 +9685,9 @@
 	},
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "Vt" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -8696,7 +9721,9 @@
 /obj/machinery/light/small,
 /obj/machinery/power/rtg/advanced,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "VL" = (
 /obj/structure/window/plasma/reinforced{
 	dir = 8
@@ -8706,7 +9733,9 @@
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plating,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "VM" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
@@ -8743,7 +9772,9 @@
 	name = "Cargo 3"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "VT" = (
 /obj/structure/fans/tiny,
 /obj/effect/decal/cleanable/dirt,
@@ -8765,8 +9796,10 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Wa" = (
 /obj/vehicle/ridden/janicart,
 /obj/item/key/janitor,
@@ -8783,7 +9816,9 @@
 	},
 /obj/effect/landmark/start/chief_medical_officer,
 /turf/open/floor/plasteel/cafeteria,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Wi" = (
 /turf/closed/mineral/random/labormineral,
 /area/asteroid/nearstation)
@@ -8823,8 +9858,10 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Wp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -8846,7 +9883,9 @@
 /obj/item/clothing/head/helmet/space/orange,
 /obj/item/tank/internals/oxygen,
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "WA" = (
 /obj/structure/cable/white{
 	icon_state = "0-2"
@@ -8859,7 +9898,9 @@
 	charge = 5e+006
 	},
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "WB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -8899,7 +9940,9 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "WG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -8945,19 +9988,25 @@
 	pixel_y = -24
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "WS" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/heater/on{
 	dir = 1
 	},
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plating,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "WU" = (
 /obj/machinery/light,
 /obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "WW" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes/line,
@@ -8976,7 +10025,9 @@
 "Xa" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "Xc" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9010,7 +10061,9 @@
 	dir = 4
 	},
 /turf/open/floor/engine/o2,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "Xh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9027,7 +10080,9 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel/dark,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Xk" = (
 /obj/structure/window/plasma/reinforced{
 	dir = 8
@@ -9036,7 +10091,9 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Xl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9051,7 +10108,9 @@
 /area/hallway/secondary/entry)
 "Xn" = (
 /turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Xo" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9078,7 +10137,9 @@
 	req_access_txt = "11"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Xu" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
@@ -9098,7 +10159,9 @@
 	},
 /obj/machinery/power/apc/auto_name/west,
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Xy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/portables_connector/visible/layer3{
@@ -9118,7 +10181,9 @@
 	dir = 5
 	},
 /turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "XC" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9135,9 +10200,11 @@
 /turf/open/floor/plasteel/dark,
 /area/hallway/secondary/exit/departure_lounge)
 "XI" = (
-/obj/effect/spawner/structure/window/plastitanium,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "XK" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 8
@@ -9171,10 +10238,14 @@
 "XQ" = (
 /obj/effect/landmark/start/warden,
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "XR" = (
-/turf/closed/wall/mineral/plastitanium,
-/area/command/bridge)
+/turf/closed/wall/mineral/titanium,
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "XY" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 4
@@ -9183,7 +10254,9 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "Ya" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9214,18 +10287,22 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Yg" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/engineering/atmos)
+/area/maintenance/department/engine/atmos{
+	name = "Shuttle Atmospherics"
+	})
 "Yh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -9242,7 +10319,6 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "Yj" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
@@ -9252,8 +10328,11 @@
 /obj/machinery/door/poddoor{
 	id = "battlebarge"
 	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/hallway/primary/central)
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Yx" = (
 /obj/item/radio/intercom{
 	name = "Station Intercom";
@@ -9263,7 +10342,9 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "YA" = (
 /obj/effect/turf_decal/delivery,
 /obj/machinery/light/small{
@@ -9295,7 +10376,9 @@
 	pixel_y = 3
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "YD" = (
 /obj/structure/cable/white{
 	icon_state = "0-4"
@@ -9359,7 +10442,9 @@
 	dir = 10
 	},
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "YP" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
 /obj/structure/chair/office,
@@ -9367,8 +10452,10 @@
 	pixel_y = 32
 	},
 /obj/effect/landmark/start/assistant,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "YT" = (
 /obj/machinery/power/apc/auto_name/north,
 /obj/structure/cable/white{
@@ -9401,13 +10488,15 @@
 /turf/open/floor/plating,
 /area/asteroid/nearstation)
 "Za" = (
-/obj/effect/spawner/structure/window/plastitanium,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 9
 	},
 /obj/structure/cable/white,
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "Zd" = (
 /obj/effect/turf_decal/trimline/red/filled/line{
 	dir = 1
@@ -9417,14 +10506,18 @@
 	},
 /obj/structure/closet/secure_closet/security/sec,
 /turf/open/floor/plasteel/dark,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 "Ze" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
 /turf/open/floor/plasteel/cafeteria,
-/area/medical/medbay/central)
+/area/maintenance/department/medical{
+	name = "Shuttle Medbay"
+	})
 "Zi" = (
 /obj/effect/turf_decal/stripes/white/corner{
 	dir = 8
@@ -9446,8 +10539,10 @@
 	pixel_x = -26;
 	pixel_y = 28
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "Zy" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
 	dir = 4
@@ -9459,7 +10554,9 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
-/area/command/bridge)
+/area/maintenance/department/bridge{
+	name = "Shuttle Bridge"
+	})
 "ZC" = (
 /obj/effect/turf_decal/delivery,
 /obj/structure/reagent_dispensers/watertank,
@@ -9468,7 +10565,9 @@
 	},
 /obj/machinery/power/apc/auto_name/west,
 /turf/open/floor/plasteel/dark,
-/area/commons/dorms)
+/area/maintenance/arrivals/north{
+	name = "Shuttle Dorms"
+	})
 "ZE" = (
 /obj/structure/table/reinforced,
 /obj/machinery/airalarm{
@@ -9500,8 +10599,10 @@
 	icon_state = "1-4"
 	},
 /obj/effect/landmark/event_spawn,
-/turf/open/floor/mineral/plastitanium,
-/area/hallway/primary/central)
+/turf/open/floor/mineral/titanium,
+/area/maintenance/aft{
+	name = "Cental Shuttle Hallway"
+	})
 "ZJ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -9520,7 +10621,9 @@
 	name = "Cargo 3"
 	},
 /turf/open/floor/plasteel/dark,
-/area/engineering/main)
+/area/maintenance/department/engine{
+	name = "Shuttle Engineering"
+	})
 "ZX" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 1
@@ -9530,7 +10633,9 @@
 	name = "Cell 1 Locker"
 	},
 /turf/open/floor/plasteel,
-/area/security/brig)
+/area/maintenance/department/security{
+	name = "Shuttle Security"
+	})
 
 (1,1,1) = {"
 lQ
@@ -21528,7 +22633,7 @@ Wi
 Wi
 Wi
 Wi
-OU
+Wi
 OU
 lQ
 lQ
@@ -44060,7 +45165,7 @@ Wi
 Wi
 Wi
 Wi
-Wi
+AK
 Gu
 Gu
 Gu
@@ -45092,7 +46197,7 @@ Gu
 Gu
 SZ
 Gu
-Wi
+AK
 Wi
 Gu
 SZ
@@ -45600,7 +46705,7 @@ Gu
 Gu
 Gu
 Gu
-Wi
+AK
 Wi
 Wi
 da
@@ -45871,9 +46976,9 @@ SZ
 bi
 da
 TB
-Wi
+AK
 DB
-Wi
+AK
 Wi
 qp
 Cd
@@ -45882,14 +46987,14 @@ Wi
 Wi
 Cd
 Cd
-Wi
+AK
 qp
 Cd
 qp
 Dk
 qp
 Cd
-Wi
+AK
 Cd
 Wi
 Wi
@@ -46366,7 +47471,7 @@ Ri
 Gu
 Cd
 PF
-Wi
+AK
 Wi
 Wi
 Cd
@@ -46886,7 +47991,7 @@ qp
 Cd
 qp
 DB
-Wi
+AK
 Wi
 Wi
 Wi
@@ -47141,7 +48246,7 @@ Cd
 qp
 Cd
 qp
-Wi
+AK
 Wi
 Wi
 Wi
@@ -47417,7 +48522,7 @@ Wi
 Wi
 OU
 OU
-Wi
+AK
 Cd
 qp
 DB
@@ -47653,7 +48758,7 @@ qp
 qp
 Cd
 qp
-Wi
+AK
 Wi
 Wi
 OU
@@ -47678,7 +48783,7 @@ Wi
 qp
 Cd
 qp
-Wi
+AK
 Wi
 Wi
 Wi
@@ -48423,7 +49528,7 @@ IF
 lU
 ZE
 oY
-Wi
+AK
 Wi
 Wi
 Wi
@@ -48961,7 +50066,7 @@ OU
 OU
 Wi
 Wi
-Wi
+AK
 Cd
 Cd
 Wi
@@ -49467,7 +50572,7 @@ vM
 Mk
 HN
 EZ
-gS
+Ol
 OU
 OU
 OU
@@ -49966,7 +51071,7 @@ CV
 oY
 Cd
 qp
-Wi
+AK
 Wi
 Wi
 OU
@@ -50246,10 +51351,10 @@ Wi
 Wi
 Wi
 Wi
-Wi
+AK
 qp
 Cd
-Wi
+AK
 Wi
 Wi
 Wi
@@ -50481,7 +51586,7 @@ oY
 Cd
 qp
 Cd
-Wi
+AK
 Wi
 OU
 dw
@@ -51016,11 +52121,11 @@ BE
 Fq
 Wi
 Wi
-Wi
+AK
 Cd
 Cd
 qp
-Wi
+AK
 Wi
 Wi
 Wi
@@ -51767,7 +52872,7 @@ OU
 OU
 OU
 Wi
-Wi
+AK
 tv
 Nf
 pc
@@ -51789,7 +52894,7 @@ Fq
 Cd
 qp
 Cd
-Wi
+AK
 Wi
 Wi
 Wi
@@ -52302,7 +53407,7 @@ Fq
 Fq
 Mn
 DB
-Wi
+AK
 Wi
 Wi
 Wi
@@ -52808,7 +53913,7 @@ Yf
 Fg
 td
 cs
-vC
+ub
 sB
 YL
 GQ
@@ -53311,7 +54416,7 @@ OU
 OU
 tv
 gz
-bZ
+Nq
 kh
 bZ
 qR
@@ -53566,13 +54671,13 @@ dr
 OU
 OU
 LV
-iu
-iu
-iu
-iu
-iu
-iu
-EZ
+ap
+ap
+ap
+ap
+ap
+ap
+ap
 La
 Jw
 IW
@@ -53822,14 +54927,14 @@ lQ
 dr
 lQ
 OU
-iu
+ap
 CW
 MC
 pW
 Nt
 gM
 ir
-EZ
+ap
 Qo
 td
 Yf
@@ -54079,14 +55184,14 @@ lQ
 dr
 lQ
 OU
-iu
+ap
 tm
 xp
 vB
 BV
 tJ
 uT
-EZ
+ap
 sr
 td
 Yf
@@ -54336,14 +55441,14 @@ lQ
 dr
 lQ
 lQ
-iu
+ap
 CW
 Cu
 un
 JU
 iZ
 Uh
-XI
+xa
 Qo
 td
 Yf
@@ -54593,14 +55698,14 @@ lQ
 dr
 lQ
 lQ
-iu
-iu
-iu
-iu
-iu
+ap
+ap
+ap
+ap
+ap
 ud
 Bt
-XI
+xa
 bo
 td
 BF
@@ -54850,7 +55955,7 @@ lQ
 dr
 lQ
 lQ
-iu
+ap
 Mm
 Gr
 Fx
@@ -55107,14 +56212,14 @@ lQ
 dr
 lQ
 lQ
-iu
+ap
 LA
 hk
 ON
 Un
 JJ
 Ja
-EZ
+ap
 ht
 ht
 rp
@@ -57164,10 +58269,10 @@ dr
 lQ
 lQ
 Cg
-MS
+MD
 td
 Wo
-MQ
+kz
 Uw
 vu
 lR
@@ -57951,7 +59056,7 @@ bP
 nl
 ya
 WS
-bU
+xv
 Ky
 cr
 OY
@@ -59735,7 +60840,7 @@ lQ
 lQ
 lQ
 AV
-LN
+dS
 LN
 me
 pe
@@ -60249,7 +61354,7 @@ dr
 dr
 dr
 AV
-Os
+Bk
 Os
 OX
 JO
