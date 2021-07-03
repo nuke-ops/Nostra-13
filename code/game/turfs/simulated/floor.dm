@@ -26,12 +26,13 @@
 	/// Starting from here, +20% chance to break turf.
 	var/explosion_power_break_turf_bonus = EXPLOSION_POWER_FLOOR_TURF_BREAK_BONUS
 
-	thermal_conductivity = 0.004
+	var/icon_regular_floor = "floor" //used to remember what icon the tile should have by default
+	var/icon_plating = "plating"
+	thermal_conductivity = 0.04
 	heat_capacity = 10000
 	intact = 1
 	tiled_dirt = TRUE							//included - tile floofing
 
-	var/icon_plating = "plating"				//included - tile floofing
 	var/broken = 0
 	var/burnt = 0
 	var/floor_tile = null //tile that this floor drops
@@ -290,7 +291,8 @@
 			PlaceOnTop(/turf/closed/wall)
 			return TRUE
 		if(RCD_AIRLOCK)
-			if(locate(/obj/machinery/door) in src)
+			if(locate(/obj/machinery/door/airlock) in src)
+				to_chat(user, "<span class='notice'>There is another door here!</span>")
 				return FALSE
 			if(ispath(the_rcd.airlock_type, /obj/machinery/door/window))
 				to_chat(user, "<span class='notice'>You build a windoor.</span>")
