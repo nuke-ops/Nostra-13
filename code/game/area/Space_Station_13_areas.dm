@@ -37,7 +37,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/ai_monitored/turret_protected/AIsatextAP
 	name = "AI Sat Ext"
 	icon_state = "storage"
-	
+
 /area/arrival
 	requires_power = FALSE
 
@@ -295,6 +295,42 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Xenobiology Maintenance"
 	icon_state = "xenomaint"
 	area_flags = VALID_TERRITORY | BLOBS_ALLOWED | UNIQUE_AREA | XENOBIOLOGY_COMPATIBLE
+
+/area/maintenance/department/shuttle/bridge
+	name = "Shuttle Bridge"
+	icon_state = "blue"
+
+/area/maintenance/department/shuttle/brig
+	name = "Shuttle Brig"
+	icon_state = "red"
+
+/area/maintenance/department/shuttle/vault
+	name = "Shuttle Vault"
+	icon_state = "black"
+
+/area/maintenance/department/shuttle/engineering
+	name = "Shuttle Engineering"
+	icon_state = "yellow"
+
+/area/maintenance/department/shuttle/atmos
+	name = "Shuttle Atmospherics"
+	icon_state = "yellow"
+
+/area/maintenance/department/shuttle/science
+	name = "Shuttle RnD"
+	icon_state = "purple"
+
+/area/maintenance/department/shuttle/medical
+	name = "Shuttle Medbay"
+	icon_state = "blue"
+
+/area/maintenance/department/shuttle/dorms
+	name = "Shuttle Dorms"
+	icon_state = "green"
+
+/area/maintenance/department/shuttle/hall
+	name = "Shuttle Hall"
+	icon_state = "white"
 
 //Maintenance - Generic
 
