@@ -1,5 +1,0 @@
-author: maksxpl
-delete-after: true
-changes:
-  - tweak: allowed spray to use a bit darker colors
-  - bugfix: fixed RCD not able to build door at firelocks
