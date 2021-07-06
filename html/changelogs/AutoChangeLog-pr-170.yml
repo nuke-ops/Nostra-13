@@ -1,0 +1,8 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - rscadd: Added posialert and drone dispenser on DIYstation, MetaStation, PubbyStation,
+      OmegaStation
+  - rscadd: Added drone dispenser on BoxStation.
+  - tweak: Due to abuse DIYstation shuttle is made out of plastitanium again.
+  - rscadd: Added borg rechargers, cryosleepers and centcom teleporters on DIYstation.
