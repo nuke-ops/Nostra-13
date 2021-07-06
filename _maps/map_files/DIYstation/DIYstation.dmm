@@ -74,13 +74,13 @@
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/bridge)
 "ap" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/science)
 "at" = (
 /obj/structure/cable/white{
 	icon_state = "0-4"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/atmos)
 "au" = (
@@ -203,7 +203,7 @@
 /obj/structure/cable/white{
 	icon_state = "2-4"
 	},
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/engineering)
 "aQ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -324,7 +324,7 @@
 "bo" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/scientist,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "bp" = (
 /obj/machinery/firealarm{
@@ -351,7 +351,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/start/paramedic,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "bt" = (
 /obj/machinery/door/airlock/public/glass{
@@ -368,9 +368,13 @@
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
 "bw" = (
-/obj/machinery/power/port_gen/pacman,
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "1-2"
+	},
+/obj/structure/table/reinforced,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 2;
+	name = "2maintenance loot spawner"
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
@@ -382,11 +386,8 @@
 /turf/open/floor/plating,
 /area/maintenance/port/central)
 "bA" = (
-/obj/structure/chair/office{
-	dir = 1
-	},
-/obj/effect/landmark/start/clown,
-/turf/open/floor/mineral/titanium,
+/obj/machinery/cryopod/tele,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "bC" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -503,10 +504,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
-"bU" = (
-/obj/effect/spawner/structure/window/shuttle,
-/turf/open/floor/plating,
-/area/maintenance/department/shuttle/atmos)
 "bV" = (
 /obj/structure/plasticflaps,
 /obj/effect/turf_decal/stripes/line{
@@ -592,7 +589,7 @@
 /obj/structure/chair/office{
 	dir = 1
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "cw" = (
 /obj/effect/decal/cleanable/dirt,
@@ -620,7 +617,7 @@
 	},
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/firecloset,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "cU" = (
 /obj/structure/cable/white{
@@ -651,14 +648,13 @@
 /turf/open/floor/plating,
 /area/asteroid/nearstation)
 "dd" = (
-/obj/item/documents/nanotrasen,
 /turf/open/floor/mineral/titanium,
 /area/maintenance/department/shuttle/vault)
 "df" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "dh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -688,7 +684,7 @@
 /obj/structure/cable/white{
 	icon_state = "1-8"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "dp" = (
 /obj/effect/decal/cleanable/dirt,
@@ -706,11 +702,11 @@
 /turf/open/space/basic,
 /area/space/nearstation)
 "dw" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/port/central)
 "dx" = (
 /obj/structure/chair/office,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "dy" = (
 /obj/effect/turf_decal/delivery,
@@ -755,7 +751,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 1
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "dL" = (
 /obj/effect/turf_decal/stripes/white/corner{
@@ -772,7 +768,7 @@
 /obj/effect/turf_decal/caution{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "dO" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -823,7 +819,7 @@
 /obj/structure/sign/nanotrasen{
 	pixel_y = 32
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "ea" = (
 /obj/effect/decal/cleanable/dirt,
@@ -841,7 +837,7 @@
 	icon_state = "plant-05";
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "ed" = (
 /obj/effect/decal/cleanable/dirt,
@@ -863,7 +859,7 @@
 /obj/structure/window/plasma/reinforced{
 	dir = 8
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/engineering)
 "el" = (
@@ -901,7 +897,7 @@
 /obj/machinery/airalarm/directional/south,
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/firecloset,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "er" = (
 /obj/effect/decal/cleanable/dirt,
@@ -977,7 +973,7 @@
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/bridge)
 "eP" = (
@@ -1144,7 +1140,7 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "fA" = (
 /obj/structure/railing/corner{
@@ -1163,7 +1159,7 @@
 /turf/open/floor/plasteel/dark,
 /area/cargo/qm)
 "fF" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/vault)
 "fH" = (
 /obj/machinery/airalarm/directional/south,
@@ -1268,7 +1264,7 @@
 /obj/structure/cable/white{
 	icon_state = "0-4"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/hall)
 "gg" = (
@@ -1388,7 +1384,7 @@
 /obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 10
 	},
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/brig)
 "gW" = (
 /obj/machinery/door/airlock/external{
@@ -1422,7 +1418,7 @@
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/medical)
 "hi" = (
@@ -1464,7 +1460,7 @@
 /obj/structure/sign/nanotrasen{
 	pixel_y = -32
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "ht" = (
 /obj/machinery/door/firedoor,
@@ -1493,7 +1489,7 @@
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/atmos)
 "hw" = (
@@ -1539,6 +1535,13 @@
 /obj/machinery/door/firedoor,
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
+"hW" = (
+/obj/structure/grille,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
 "hZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1559,6 +1562,16 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel,
 /area/maintenance/department/shuttle/medical)
+"if" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/start/shaft_miner,
+/turf/open/floor/mineral/plastitanium,
+/area/maintenance/department/shuttle/hall)
 "ih" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/window/plasma/reinforced{
@@ -1573,7 +1586,7 @@
 /area/maintenance/department/shuttle/brig)
 "ij" = (
 /obj/structure/sign/warning/securearea,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/engineering)
 "il" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
@@ -1582,7 +1595,8 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/titanium,
+/obj/effect/landmark/start/chaplain,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "iq" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -1597,6 +1611,9 @@
 /obj/machinery/airalarm/directional/south,
 /obj/machinery/rnd/production/protolathe/department/science,
 /obj/effect/turf_decal/bot,
+/obj/machinery/posialert{
+	pixel_x = -32
+	},
 /turf/open/floor/plasteel/white,
 /area/maintenance/department/shuttle/science)
 "is" = (
@@ -1665,6 +1682,16 @@
 	},
 /turf/open/space/basic,
 /area/maintenance/department/shuttle/atmos)
+"iM" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/start/clown,
+/turf/open/floor/mineral/plastitanium,
+/area/maintenance/department/shuttle/hall)
 "iU" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1710,7 +1737,7 @@
 /obj/structure/cable/white{
 	icon_state = "0-2"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/bridge)
 "je" = (
@@ -1750,6 +1777,18 @@
 	},
 /turf/open/floor/plasteel,
 /area/cargo/storage)
+"jj" = (
+/obj/machinery/power/rtg/advanced/fullupgrade{
+	power_gen = 15000
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
 "jm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -1784,7 +1823,7 @@
 /obj/structure/cable/white{
 	icon_state = "2-4"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/hall)
 "jA" = (
@@ -1935,7 +1974,7 @@
 	},
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/emcloset,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "ks" = (
 /obj/effect/decal/cleanable/dirt,
@@ -1996,13 +2035,13 @@
 /obj/item/kirbyplants{
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "kC" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/vault)
 "kG" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -2020,7 +2059,7 @@
 /obj/machinery/door/poddoor{
 	id = "battlebarge"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/hall)
 "kL" = (
@@ -2092,7 +2131,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable/white,
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/medical)
 "lo" = (
@@ -2154,7 +2193,7 @@
 /obj/structure/cable/white{
 	icon_state = "2-4"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "lF" = (
 /turf/closed/wall/r_wall,
@@ -2204,6 +2243,9 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/bridge)
+"lS" = (
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/maintenance/department/shuttle/atmos)
 "lT" = (
 /obj/machinery/atmospherics/components/binary/pump/on{
 	name = "Air to Distro"
@@ -2247,7 +2289,7 @@
 /obj/structure/cable/white{
 	icon_state = "2-4"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/bridge)
 "mb" = (
@@ -2335,7 +2377,7 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "mx" = (
 /obj/structure/railing,
@@ -2419,7 +2461,7 @@
 	icon_state = "plant-03";
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "mS" = (
 /obj/machinery/light/small{
@@ -2460,7 +2502,7 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "nh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2497,7 +2539,7 @@
 /area/cargo/storage)
 "ny" = (
 /obj/machinery/atmospherics/pipe/layer_manifold,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/atmos)
 "nB" = (
 /obj/machinery/atmospherics/components/trinary/mixer/airmix/flipped,
@@ -2507,7 +2549,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 1
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "nK" = (
 /obj/effect/turf_decal/stripes/line{
@@ -2591,7 +2633,7 @@
 "oe" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/assistant,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "og" = (
 /obj/machinery/light,
@@ -2612,7 +2654,7 @@
 	},
 /obj/machinery/power/apc/auto_name/north,
 /obj/structure/chair/office,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "oj" = (
 /obj/structure/cable/white{
@@ -2621,7 +2663,7 @@
 /obj/structure/cable/white{
 	icon_state = "1-4"
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/brig)
 "ol" = (
 /obj/effect/turf_decal/bot,
@@ -2785,7 +2827,7 @@
 /obj/structure/window/plasma/reinforced{
 	dir = 8
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/engineering)
 "ph" = (
@@ -2795,7 +2837,7 @@
 /obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 6
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/atmos)
 "pk" = (
 /turf/closed/wall/r_wall/rust,
@@ -2920,7 +2962,7 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/bridge)
 "qj" = (
@@ -2972,7 +3014,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 6
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "qx" = (
 /obj/effect/turf_decal/bot,
@@ -2999,7 +3041,7 @@
 	icon_state = "2-4"
 	},
 /obj/effect/landmark/blobstart,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "qA" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3016,6 +3058,7 @@
 	},
 /obj/effect/turf_decal/box,
 /obj/machinery/nuclearbomb/selfdestruct,
+/obj/item/folder/documents,
 /turf/open/floor/circuit/green,
 /area/maintenance/department/shuttle/vault)
 "qD" = (
@@ -3046,10 +3089,9 @@
 /turf/open/floor/plating/asteroid/airless,
 /area/asteroid/nearstation)
 "qR" = (
-/obj/item/kirbyplants{
-	pixel_y = 3
-	},
-/turf/open/floor/plasteel,
+/obj/machinery/droneDispenser/preloaded,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/dorms)
 "qV" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -3119,7 +3161,7 @@
 /area/maintenance/department/shuttle/bridge)
 "re" = (
 /obj/structure/cable/white,
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/bridge)
 "rf" = (
@@ -3195,6 +3237,16 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
+/area/maintenance/department/shuttle/hall)
+"rq" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "rs" = (
 /obj/effect/turf_decal/stripes/white/line{
@@ -3275,7 +3327,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
 "rA" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/medical)
 "rB" = (
 /obj/effect/turf_decal/bot,
@@ -3301,13 +3353,16 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
+/obj/item/stock_parts/cell/high,
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/engineering)
 "rM" = (
 /obj/structure/cable/white{
 	icon_state = "0-2"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/brig)
 "rN" = (
@@ -3378,7 +3433,7 @@
 /obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 9
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/hall)
 "sg" = (
 /obj/effect/turf_decal/bot,
@@ -3404,9 +3459,8 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
 	},
-/obj/structure/chair/office,
-/obj/effect/landmark/start/librarian,
-/turf/open/floor/mineral/titanium,
+/obj/machinery/cryopod,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "sj" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3449,7 +3503,7 @@
 	},
 /obj/structure/chair/office,
 /obj/effect/landmark/start/research_director,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "sw" = (
 /turf/closed/wall,
@@ -3535,7 +3589,7 @@
 /obj/structure/cable/white{
 	icon_state = "1-4"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/atmos)
 "sS" = (
@@ -3566,7 +3620,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "td" = (
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "tm" = (
 /obj/machinery/light/small{
@@ -3583,7 +3637,7 @@
 /obj/effect/turf_decal/caution{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "tp" = (
 /obj/effect/turf_decal/tile/neutral,
@@ -3642,7 +3696,7 @@
 /turf/open/floor/plasteel/dark,
 /area/cargo/qm)
 "tv" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/dorms)
 "tx" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3693,7 +3747,7 @@
 /obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 9
 	},
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "tN" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3757,7 +3811,7 @@
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/brig)
 "ud" = (
@@ -3798,7 +3852,7 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "uj" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3830,7 +3884,7 @@
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/science)
 "uo" = (
@@ -3865,14 +3919,14 @@
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/engineering)
 "uF" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/atmos)
 "uH" = (
 /obj/structure/chair/office{
 	dir = 1
 	},
 /obj/effect/landmark/start/geneticist,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "uI" = (
 /obj/structure/window/reinforced{
@@ -3905,7 +3959,7 @@
 	},
 /obj/structure/chair/office,
 /obj/effect/landmark/start/lawyer,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "uR" = (
 /obj/structure/cable{
@@ -3930,7 +3984,7 @@
 /obj/machinery/airalarm/directional/east,
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/firecloset,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "uT" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
@@ -3968,7 +4022,7 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/vault)
 "uY" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4061,14 +4115,14 @@
 /obj/structure/cable/white{
 	icon_state = "2-4"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/science)
 "vD" = (
 /obj/structure/cable/white{
 	icon_state = "1-4"
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/engineering)
 "vM" = (
 /obj/structure/cable/white{
@@ -4077,7 +4131,7 @@
 /obj/machinery/door/poddoor{
 	id = "battlebarge"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/hall)
 "vR" = (
@@ -4129,7 +4183,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "wv" = (
 /obj/effect/decal/cleanable/dirt,
@@ -4150,7 +4204,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/landmark/start/assistant,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "wD" = (
 /obj/machinery/door/window/brigdoor/security/cell/westright{
@@ -4193,7 +4247,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/dorms)
 "wP" = (
 /obj/machinery/light,
@@ -4201,7 +4255,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "wT" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
@@ -4222,7 +4276,7 @@
 /obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 10
 	},
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/medical)
 "wW" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
@@ -4364,6 +4418,14 @@
 /obj/structure/sign/nanotrasen{
 	pixel_y = -32
 	},
+/mob/living/simple_animal/bot/secbot{
+	arrest_type = 1;
+	health = 45;
+	icon_state = "secbot1";
+	idcheck = 1;
+	name = "Sergeant-at-Armsky";
+	weaponscheck = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/brig)
 "xv" = (
@@ -4374,9 +4436,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/chair/office,
-/obj/effect/landmark/start/mime,
-/turf/open/floor/mineral/titanium,
+/obj/machinery/cryopod,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "xD" = (
 /turf/closed/wall/r_wall/rust,
@@ -4417,7 +4478,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/start/virologist,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "ya" = (
 /obj/machinery/atmospherics/pipe/manifold/cyan/visible{
@@ -4463,10 +4524,7 @@
 "yk" = (
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/emcloset,
-/obj/structure/sign/nanotrasen{
-	pixel_y = -32
-	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "yl" = (
 /obj/effect/turf_decal/delivery,
@@ -4686,6 +4744,13 @@
 	dir = 1
 	},
 /obj/effect/landmark/start/ai,
+/obj/item/radio/intercom{
+	broadcasting = 1;
+	frequency = 1447;
+	listening = 0;
+	name = "AI Intercom";
+	pixel_y = -32
+	},
 /turf/open/floor/circuit/green,
 /area/maintenance/department/shuttle/vault)
 "zq" = (
@@ -4755,7 +4820,7 @@
 /obj/structure/cable/white{
 	icon_state = "0-4"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/medical)
 "zG" = (
@@ -4849,7 +4914,7 @@
 /obj/item/kirbyplants{
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Af" = (
 /obj/structure/cable/white{
@@ -4875,7 +4940,7 @@
 /turf/open/floor/wood,
 /area/maintenance/department/shuttle/brig)
 "Ao" = (
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/hall)
 "Au" = (
@@ -4919,7 +4984,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/vault)
 "AC" = (
 /obj/structure/plasticflaps,
@@ -4988,7 +5053,7 @@
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
 "AV" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/engineering)
 "AW" = (
 /obj/structure/lattice/catwalk,
@@ -5034,7 +5099,7 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Bi" = (
 /obj/machinery/atmospherics/pipe/manifold/cyan/visible{
@@ -5071,18 +5136,15 @@
 /obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 5
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/engineering)
 "Bt" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 1
 	},
-/obj/structure/table/reinforced,
 /obj/effect/turf_decal/bot,
-/obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/high,
-/obj/item/clothing/glasses/welding,
+/obj/machinery/recharge_station/upgraded,
 /turf/open/floor/plasteel/white,
 /area/maintenance/department/shuttle/science)
 "Bu" = (
@@ -5090,6 +5152,10 @@
 /obj/machinery/vending/tool,
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/engineering)
+"Bx" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
+/turf/open/floor/mineral/plastitanium,
+/area/maintenance/department/shuttle/hall)
 "By" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -5113,7 +5179,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start/shaft_miner,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "BI" = (
 /obj/structure/cable/white{
@@ -5122,7 +5188,7 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/atmos)
 "BM" = (
@@ -5157,7 +5223,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/start/cargo_technician,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "BV" = (
 /obj/structure/cable/white{
@@ -5168,7 +5234,7 @@
 /turf/open/floor/plasteel/white,
 /area/maintenance/department/shuttle/science)
 "BY" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/hall)
 "Ca" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5186,7 +5252,7 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/hall)
 "Ck" = (
@@ -5230,6 +5296,19 @@
 	},
 /turf/open/floor/circuit/green/telecomms/mainframe,
 /area/maintenance/department/shuttle/science)
+"Cx" = (
+/obj/machinery/power/rtg/advanced/fullupgrade,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/light/small/broken{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
 "Cy" = (
 /turf/closed/wall/r_wall/rust,
 /area/hallway/secondary/entry)
@@ -5248,18 +5327,16 @@
 /area/hallway/secondary/entry)
 "CA" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
-/turf/open/floor/mineral/titanium,
+/obj/effect/landmark/start/librarian,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "CC" = (
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -24
 	},
-/obj/structure/chair/office{
-	dir = 1
-	},
-/obj/effect/landmark/start/chaplain,
-/turf/open/floor/mineral/titanium,
+/obj/machinery/cryopod/tele,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "CE" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5359,6 +5436,9 @@
 	dir = 8
 	},
 /obj/machinery/airalarm/directional/west,
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
+/obj/item/stock_parts/cell/high,
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/engineering)
 "Dp" = (
@@ -5577,6 +5657,13 @@
 "Ew" = (
 /turf/closed/wall/r_wall,
 /area/space/nearstation)
+"Ex" = (
+/obj/machinery/power/rtg/advanced/fullupgrade,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
 "EB" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -5644,7 +5731,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "EQ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5690,7 +5777,7 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Fh" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5733,7 +5820,7 @@
 /turf/open/floor/plasteel,
 /area/maintenance/department/shuttle/medical)
 "Fq" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/brig)
 "Ft" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5778,7 +5865,7 @@
 /area/maintenance/department/shuttle/brig)
 "FN" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "FO" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5853,11 +5940,8 @@
 /area/cargo/qm)
 "Gm" = (
 /obj/machinery/light,
-/obj/structure/chair/office{
-	dir = 1
-	},
-/obj/effect/landmark/start/botanist,
-/turf/open/floor/mineral/titanium,
+/obj/machinery/cryopod/tele,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Gn" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -5875,7 +5959,7 @@
 /turf/open/floor/plating,
 /area/asteroid/nearstation)
 "Gp" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/port/central)
 "Gr" = (
 /obj/structure/cable/white{
@@ -5929,7 +6013,7 @@
 /obj/effect/turf_decal/caution{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "GL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -5943,7 +6027,7 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "GP" = (
 /obj/structure/cable/white{
@@ -5963,14 +6047,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/brig)
 "GU" = (
 /obj/machinery/atmospherics/pipe/layer_manifold{
 	dir = 4
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/atmos)
 "GW" = (
 /obj/effect/turf_decal/box,
@@ -6069,7 +6153,7 @@
 	pixel_x = -24;
 	pixel_y = -24
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Hz" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6098,7 +6182,7 @@
 "HD" = (
 /obj/machinery/vending/cigarette,
 /obj/effect/turf_decal/bot,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "HI" = (
 /obj/structure/closet/secure_closet/medical2,
@@ -6145,7 +6229,7 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/hall)
 "HV" = (
@@ -6166,14 +6250,6 @@
 "HZ" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 1
-	},
-/mob/living/simple_animal/bot/secbot{
-	arrest_type = 1;
-	health = 45;
-	icon_state = "secbot1";
-	idcheck = 1;
-	name = "Sergeant-at-Armsky";
-	weaponscheck = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/brig)
@@ -6323,17 +6399,20 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 1
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Ja" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 6
 	},
-/obj/machinery/aug_manipulator,
 /obj/effect/turf_decal/bot,
 /obj/structure/sign/nanotrasen{
 	pixel_y = -32
 	},
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
+/obj/item/stock_parts/cell/high,
+/obj/item/clothing/glasses/welding,
 /turf/open/floor/plasteel/white,
 /area/maintenance/department/shuttle/science)
 "Ji" = (
@@ -6365,6 +6444,19 @@
 /obj/effect/turf_decal/trimline/brown/filled/line,
 /turf/open/floor/plasteel,
 /area/cargo/storage)
+"Jn" = (
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/sign/nanotrasen{
+	pixel_y = -32
+	},
+/turf/open/floor/plasteel/dark,
+/area/maintenance/department/shuttle/hall)
 "Jp" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 9
@@ -6384,13 +6476,9 @@
 	},
 /turf/open/floor/plating,
 /area/hallway/secondary/exit/departure_lounge)
-"Jr" = (
-/obj/effect/landmark/start/shaft_miner,
-/turf/open/floor/mineral/titanium,
-/area/maintenance/department/shuttle/hall)
 "Jw" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Jy" = (
 /obj/machinery/door/airlock/mining{
@@ -6422,16 +6510,14 @@
 	icon_state = "applebush";
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "JJ" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 4
 	},
-/obj/structure/closet/crate/bin{
-	pixel_y = 6
-	},
 /obj/effect/turf_decal/bot,
+/obj/machinery/aug_manipulator,
 /turf/open/floor/plasteel/white,
 /area/maintenance/department/shuttle/science)
 "JK" = (
@@ -6508,12 +6594,6 @@
 /obj/machinery/light/small/broken,
 /turf/open/floor/plasteel,
 /area/cargo/storage)
-"Kb" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/maintenance/department/shuttle/dorms)
 "Kd" = (
 /obj/effect/turf_decal/stripes/white/line{
 	dir = 1
@@ -6586,7 +6666,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Ky" = (
 /obj/effect/turf_decal/bot,
@@ -6624,7 +6704,7 @@
 "KF" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/bartender,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "KH" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6638,7 +6718,7 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/bridge)
 "KN" = (
@@ -6687,7 +6767,7 @@
 /obj/structure/sign/nanotrasen{
 	pixel_y = 32
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Lf" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6804,7 +6884,7 @@
 	pixel_x = -3;
 	pixel_y = -5
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "LH" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6853,7 +6933,7 @@
 "LP" = (
 /obj/machinery/vending/cola/random,
 /obj/effect/turf_decal/bot,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "LS" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6864,7 +6944,7 @@
 /obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 9
 	},
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/science)
 "LX" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6895,6 +6975,15 @@
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
+"Mf" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
+	dir = 1
+	},
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/maintenance/department/shuttle/hall)
 "Mg" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/computer/monitor{
@@ -6920,7 +7009,7 @@
 /obj/machinery/door/poddoor{
 	id = "battlebarge"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/hall)
 "Mm" = (
@@ -6944,7 +7033,7 @@
 	},
 /area/maintenance/department/shuttle/science)
 "Mn" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/brig)
 "Mq" = (
 /obj/machinery/light{
@@ -7006,7 +7095,7 @@
 	pixel_y = 6
 	},
 /obj/effect/turf_decal/bot,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "MI" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7056,7 +7145,7 @@
 /obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 9
 	},
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/dorms)
 "MQ" = (
 /obj/item/kirbyplants{
@@ -7065,7 +7154,7 @@
 /obj/structure/sign/nanotrasen{
 	pixel_y = -32
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "MS" = (
 /obj/structure/closet/crate/bin{
@@ -7075,7 +7164,7 @@
 /obj/structure/sign/nanotrasen{
 	pixel_y = 32
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "MT" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7098,6 +7187,13 @@
 /obj/structure/ore_box,
 /turf/open/floor/plasteel/dark,
 /area/cargo/miningdock)
+"MZ" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 4
+	},
+/obj/effect/landmark/start/mime,
+/turf/open/floor/mineral/plastitanium,
+/area/maintenance/department/shuttle/hall)
 "Na" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
@@ -7181,7 +7277,7 @@
 /area/cargo/miningdock)
 "Nl" = (
 /obj/structure/sign/warning/securearea,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/atmos)
 "Nm" = (
 /obj/structure/cable/white{
@@ -7223,7 +7319,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 10
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/dorms)
 "Ns" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7265,7 +7361,7 @@
 /area/asteroid/nearstation)
 "NH" = (
 /obj/effect/landmark/start/cargo_technician,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "NL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7319,7 +7415,8 @@
 	icon_state = "4-8"
 	},
 /obj/effect/landmark/event_spawn,
-/turf/open/floor/mineral/titanium,
+/obj/effect/landmark/start/botanist,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "NZ" = (
 /obj/structure/cable/white{
@@ -7332,7 +7429,7 @@
 /turf/open/floor/plasteel,
 /area/maintenance/department/shuttle/atmos)
 "Oa" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/vault)
 "Ob" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -7392,7 +7489,7 @@
 /obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 10
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Om" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7434,7 +7531,7 @@
 /obj/structure/sign/nanotrasen{
 	pixel_y = -32
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Os" = (
 /obj/effect/turf_decal/delivery,
@@ -7672,7 +7769,7 @@
 /area/asteroid/nearstation)
 "PG" = (
 /obj/structure/cable/white,
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/brig)
 "PI" = (
@@ -7687,7 +7784,7 @@
 /obj/structure/window/plasma/reinforced{
 	dir = 4
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/engineering)
 "PQ" = (
@@ -7695,7 +7792,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/bot,
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/lootdrop/maintenance{
+	lootcount = 3;
+	name = "3maintenance loot spawner"
+	},
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "PS" = (
@@ -7720,6 +7820,13 @@
 /obj/structure/flora/ausbushes/stalkybush,
 /turf/open/floor/grass,
 /area/hallway/secondary/exit/departure_lounge)
+"PW" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 4
+	},
+/obj/effect/landmark/start/cook,
+/turf/open/floor/mineral/plastitanium,
+/area/maintenance/department/shuttle/hall)
 "PX" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
 /obj/effect/turf_decal/tile/neutral{
@@ -7753,13 +7860,13 @@
 /obj/structure/cable/white{
 	icon_state = "0-2"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/engineering)
 "Qo" = (
 /obj/structure/chair/office,
 /obj/effect/landmark/start/roboticist,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Qp" = (
 /obj/structure/grille,
@@ -7867,7 +7974,7 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "QP" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -7909,7 +8016,7 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "QZ" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/dorms)
 "Rb" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7925,7 +8032,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/vault)
 "Rg" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -7964,7 +8071,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable/white,
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/medical)
 "Rq" = (
@@ -8050,7 +8157,7 @@
 /obj/structure/window/plasma/reinforced{
 	dir = 4
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/engineering)
 "RL" = (
@@ -8070,7 +8177,7 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "RP" = (
 /obj/structure/cable/white,
@@ -8149,7 +8256,7 @@
 	icon_state = "plant-10";
 	pixel_y = 3
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "St" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8266,6 +8373,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/medical)
+"SU" = (
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
 "SV" = (
 /obj/machinery/door/airlock/external{
 	name = "Mining Dock Airlock";
@@ -8297,9 +8408,8 @@
 /turf/open/floor/plating,
 /area/asteroid/nearstation)
 "Tc" = (
-/obj/structure/chair/office,
-/obj/effect/landmark/start/cook,
-/turf/open/floor/mineral/titanium,
+/obj/machinery/cryopod,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Tk" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -8434,7 +8544,7 @@
 /area/maintenance/department/shuttle/engineering)
 "TW" = (
 /obj/structure/cable/white,
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/medical)
 "Ua" = (
@@ -8450,7 +8560,7 @@
 /turf/closed/wall/r_wall/rust,
 /area/asteroid/nearstation)
 "Ue" = (
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/bridge)
 "Uh" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
@@ -8489,7 +8599,7 @@
 /obj/machinery/porta_turret/centcom_shuttle/ballistic{
 	dir = 6
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/maintenance/department/shuttle/engineering)
 "Um" = (
 /obj/effect/decal/cleanable/dirt,
@@ -8503,12 +8613,12 @@
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/science)
 "Uo" = (
 /obj/machinery/light,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Up" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
@@ -8521,14 +8631,14 @@
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/brig)
 "Uq" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/engineering)
 "Us" = (
 /obj/structure/chair/office{
 	dir = 1
 	},
 /obj/effect/landmark/start/chief_medical_officer,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Ut" = (
 /obj/structure/railing/corner{
@@ -8552,7 +8662,7 @@
 /obj/structure/cable/white{
 	icon_state = "0-4"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/bridge)
 "UA" = (
@@ -8872,7 +8982,7 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Wa" = (
 /obj/vehicle/ridden/janicart,
@@ -8930,7 +9040,7 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Wp" = (
 /obj/effect/decal/cleanable/dirt,
@@ -9204,6 +9314,9 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc/auto_name/west,
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
+/obj/item/stock_parts/cell/high,
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/engineering)
 "Xy" = (
@@ -9276,7 +9389,7 @@
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/brig)
 "XR" = (
-/turf/closed/wall/mineral/titanium,
+/turf/closed/wall/mineral/plastitanium,
 /area/maintenance/department/shuttle/bridge)
 "XY" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
@@ -9317,7 +9430,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Yg" = (
 /obj/structure/cable/white{
@@ -9326,7 +9439,7 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/atmos)
 "Yh" = (
@@ -9354,7 +9467,7 @@
 /obj/machinery/door/poddoor{
 	id = "battlebarge"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/hall)
 "Yx" = (
@@ -9405,9 +9518,6 @@
 	},
 /obj/machinery/power/smes{
 	charge = 5e+006
-	},
-/obj/machinery/light/small/broken{
-	dir = 1
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
@@ -9470,7 +9580,7 @@
 	pixel_y = 32
 	},
 /obj/effect/landmark/start/assistant,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "YT" = (
 /obj/machinery/power/apc/auto_name/north,
@@ -9508,7 +9618,7 @@
 	dir = 9
 	},
 /obj/structure/cable/white,
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/engineering)
 "Zd" = (
@@ -9549,7 +9659,7 @@
 	pixel_x = -26;
 	pixel_y = 28
 	},
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "Zy" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
@@ -9603,7 +9713,7 @@
 	icon_state = "1-4"
 	},
 /obj/effect/landmark/event_spawn,
-/turf/open/floor/mineral/titanium,
+/turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "ZJ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
@@ -9638,7 +9748,7 @@
 /obj/structure/cable/white{
 	icon_state = "0-8"
 	},
-/obj/effect/spawner/structure/window/shuttle,
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/hall)
 
@@ -45166,8 +45276,8 @@ Wi
 Wi
 Wi
 Wi
-Wi
-Wi
+xi
+pk
 xi
 xi
 Xy
@@ -45423,9 +45533,9 @@ Wi
 Wi
 Wi
 Wi
-Wi
-Wi
-pk
+xi
+jj
+hW
 bw
 be
 WZ
@@ -45680,9 +45790,9 @@ Wi
 Wi
 Wi
 Wi
-Wi
-Wi
 pk
+Cx
+SU
 YD
 uo
 Mc
@@ -45937,9 +46047,9 @@ Wi
 Wi
 Wi
 Wi
-Wi
-Wi
-xi
+pk
+Ex
+SU
 Tn
 sE
 Rb
@@ -46194,9 +46304,9 @@ Wi
 Wi
 Wi
 Wi
-Wi
-Wi
 xi
+xi
+pk
 pk
 xi
 pk
@@ -50858,8 +50968,8 @@ Ma
 BY
 Tc
 to
-Yf
-Fg
+PW
+iM
 dN
 bA
 BY
@@ -51372,9 +51482,9 @@ tv
 BY
 xy
 td
-Yf
+MZ
 NU
-Jr
+td
 Gm
 BY
 rM
@@ -51887,7 +51997,7 @@ BY
 dT
 td
 Yf
-Fg
+if
 td
 MQ
 BY
@@ -52143,8 +52253,8 @@ CZ
 Ao
 oe
 FN
-CA
-il
+Bx
+Mf
 dJ
 cs
 ge
@@ -52909,7 +53019,7 @@ tv
 qZ
 xj
 LI
-Kb
+yO
 bZ
 Ao
 oe
@@ -53166,7 +53276,7 @@ tv
 tv
 tv
 tv
-yO
+bZ
 WU
 BY
 Ac
@@ -53943,7 +54053,7 @@ BY
 Qo
 td
 Yf
-NU
+rq
 td
 uH
 BY
@@ -55230,7 +55340,7 @@ ht
 rp
 qW
 ht
-ht
+Jn
 BY
 xs
 is
@@ -55484,18 +55594,18 @@ ap
 BY
 Sr
 FN
-CA
-il
+Bx
+Mf
 dJ
 cR
-nl
-nl
-nl
-nl
-nl
-nl
-nl
-nl
+lS
+lS
+lS
+lS
+lS
+lS
+lS
+lS
 dr
 dr
 AW
@@ -55745,14 +55855,14 @@ QI
 dn
 td
 yk
-nl
+lS
 zx
 CT
 we
 qD
 dE
 Mr
-nl
+lS
 lQ
 lQ
 dr
@@ -56002,14 +56112,14 @@ td
 td
 td
 eo
-nl
+lS
 IT
 CT
 gN
 jx
 dE
 wU
-nl
+lS
 lQ
 lQ
 dr
@@ -56259,14 +56369,14 @@ lW
 qg
 qg
 re
-nl
+lS
 bG
 Xg
 Lh
 iH
 NP
 vR
-nl
+lS
 lQ
 lQ
 dr
@@ -56516,7 +56626,7 @@ It
 zH
 xF
 Ck
-nl
+lS
 xb
 kW
 aT
@@ -56773,14 +56883,14 @@ Nm
 NR
 pJ
 MU
-nl
+lS
 fM
 nB
 yz
 yz
 wX
 ft
-nl
+lS
 lQ
 lQ
 dr
@@ -57030,7 +57140,7 @@ rc
 an
 DK
 BM
-nl
+lS
 OP
 QT
 kd
@@ -57287,7 +57397,7 @@ kC
 Oa
 AB
 Re
-nl
+lS
 Tz
 mF
 mF
@@ -57544,7 +57654,7 @@ zV
 AL
 Gn
 Ha
-nl
+lS
 bc
 xh
 sg
@@ -57801,7 +57911,7 @@ qI
 qC
 GW
 zp
-nl
+lS
 Bi
 VL
 nl
@@ -58058,7 +58168,7 @@ xr
 qH
 yb
 bP
-nl
+lS
 ya
 WS
 xv
@@ -58315,14 +58425,14 @@ AV
 AV
 AV
 AV
-nl
+lS
 FU
 lT
 ny
 iq
 PX
 Rz
-nl
+lS
 lQ
 lQ
 dr
@@ -58572,11 +58682,11 @@ pq
 pq
 VJ
 AV
-nl
-nl
-nl
+lS
+lS
+lS
 Nl
-bU
+xv
 vz
 GU
 uF

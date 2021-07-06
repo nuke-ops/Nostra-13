@@ -31052,6 +31052,9 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/machinery/posialert{
+	pixel_y = 32
+	},
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "bad" = (
@@ -33546,14 +33549,7 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/robotics/mechbay)
-"bey" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
-/turf/closed/wall/r_wall,
-/area/science/robotics/lab)
 "bez" = (
-/obj/effect/turf_decal/stripes/line,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/closed/wall/r_wall,
 /area/science/robotics/lab)
@@ -50693,12 +50689,6 @@
 	},
 /turf/closed/wall,
 /area/science/research)
-"tqM" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 2
-	},
-/turf/closed/wall/r_wall,
-/area/science/robotics/mechbay)
 "tsw" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
@@ -97187,7 +97177,7 @@ aWo
 aSz
 aXC
 aYm
-tqM
+aZa
 aZe
 tZy
 bbG
@@ -97444,7 +97434,7 @@ bat
 bbn
 bcz
 aYn
-bey
+aZi
 bfY
 bgW
 pgl

@@ -27170,6 +27170,9 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/machinery/posialert{
+	pixel_x = -32
+	},
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "blF" = (
@@ -55689,6 +55692,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
+"iLJ" = (
+/obj/machinery/droneDispenser/preloaded,
+/turf/open/floor/plating,
+/area/maintenance/department/cargo)
 "iLR" = (
 /obj/structure/table,
 /obj/structure/bedsheetbin,
@@ -105011,7 +105018,7 @@ aaa
 aaa
 aEj
 bjx
-aFi
+iLJ
 bjw
 nJI
 bog
