@@ -55443,8 +55443,8 @@
 	department = "Science";
 	departmentType = 2;
 	name = "Science Requests Console";
-	receive_ore_updates = 1;
-	pixel_x = 30
+	pixel_x = 30;
+	receive_ore_updates = 1
 	},
 /turf/open/floor/plasteel/white,
 /area/science/circuit)
@@ -60534,12 +60534,7 @@
 /turf/open/floor/plating,
 /area/maintenance/solars/port/aft)
 "tEL" = (
-/obj/structure/table,
-/obj/effect/spawner/lootdrop/maintenance{
-	lootcount = 2;
-	name = "2maintenance loot spawner"
-	},
-/obj/item/storage/toolbox/electrical,
+/obj/machinery/droneDispenser/preloaded,
 /turf/open/floor/plating,
 /area/maintenance/department/medical/morgue)
 "tHh" = (

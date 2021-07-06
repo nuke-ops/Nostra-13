@@ -41439,6 +41439,9 @@
 	pixel_y = 4
 	},
 /obj/effect/turf_decal/delivery,
+/obj/machinery/posialert{
+	pixel_y = -32
+	},
 /turf/open/floor/plasteel,
 /area/science/robotics/lab)
 "cJO" = (
@@ -80837,6 +80840,7 @@
 	},
 /obj/structure/cable/yellow,
 /obj/effect/turf_decal/stripes/line,
+/obj/machinery/droneDispenser/preloaded,
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
 "wFX" = (
