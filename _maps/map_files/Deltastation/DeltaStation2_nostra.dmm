@@ -113344,6 +113344,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/machinery/droneDispenser/preloaded,
 /turf/open/floor/plasteel,
 /area/maintenance/port/aft)
 "dKK" = (
@@ -114152,7 +114153,6 @@
 "dMh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/effect/landmark/event_spawn,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -114160,6 +114160,9 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/structure/table/reinforced,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/glass/fifty,
 /turf/open/floor/plasteel{
 	heat_capacity = 1e+006
 	},
@@ -114197,6 +114200,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel,
 /area/maintenance/port/aft)
 "dMl" = (
