@@ -387,6 +387,10 @@
 /area/maintenance/port/central)
 "bA" = (
 /obj/machinery/cryopod/tele,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "bC" = (
@@ -1703,9 +1707,7 @@
 "iX" = (
 /obj/structure/cable/white,
 /obj/effect/turf_decal/bot,
-/obj/machinery/power/smes{
-	charge = 5e+006
-	},
+/obj/machinery/power/smes,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/engineering)
 "iZ" = (
@@ -3091,7 +3093,7 @@
 "qR" = (
 /obj/machinery/droneDispenser/preloaded,
 /obj/effect/turf_decal/bot,
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/maintenance/department/shuttle/dorms)
 "qV" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -3456,10 +3458,10 @@
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/atmos)
 "sh" = (
-/obj/structure/extinguisher_cabinet{
+/obj/machinery/cryopod,
+/obj/machinery/computer/cryopod{
 	pixel_y = 32
 	},
-/obj/machinery/cryopod,
 /turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "sj" = (
@@ -3913,9 +3915,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/turf_decal/bot,
-/obj/machinery/power/smes{
-	charge = 5e+006
-	},
+/obj/machinery/power/smes,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/engineering)
 "uF" = (
@@ -4437,6 +4437,9 @@
 	dir = 1
 	},
 /obj/machinery/cryopod,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 32
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "xD" = (
@@ -5331,11 +5334,11 @@
 /turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "CC" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
-	},
 /obj/machinery/cryopod/tele,
+/obj/machinery/computer/cryopod{
+	dir = 1;
+	pixel_y = -32
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/hall)
 "CE" = (
@@ -6217,9 +6220,6 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
 	},
-/obj/machinery/door/poddoor{
-	id = "battlebarge"
-	},
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/hall)
 "HQ" = (
@@ -6388,9 +6388,6 @@
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
-	},
-/obj/machinery/door/poddoor{
-	id = "battlebarge"
 	},
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/hall)
@@ -8185,9 +8182,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/turf_decal/bot,
-/obj/machinery/power/smes{
-	charge = 5e+006
-	},
+/obj/machinery/power/smes,
 /turf/open/floor/plating,
 /area/maintenance/department/shuttle/engineering)
 "RV" = (
