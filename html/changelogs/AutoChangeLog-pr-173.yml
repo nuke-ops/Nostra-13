@@ -1,0 +1,5 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - tweak: Changed vent pumps into scrubbers in incinerator and turbine engine.
+  - tweak: Expanded space cooling loop and area near it.
