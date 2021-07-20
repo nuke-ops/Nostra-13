@@ -514,8 +514,8 @@
 	dir = 1
 	},
 /obj/machinery/conveyor{
-	dir = 8;
-	id = "cargounload"
+	dir = 4;
+	id = "cargoload"
 	},
 /turf/open/floor/plating,
 /area/cargo/storage)
@@ -3221,7 +3221,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/loading_area{
-	dir = 4
+	dir = 8
 	},
 /turf/open/floor/plating{
 	icon_state = "platingdmg1"
@@ -3311,8 +3311,8 @@
 	dir = 8
 	},
 /obj/machinery/conveyor{
-	dir = 4;
-	id = "cargoload"
+	dir = 8;
+	id = "cargounload"
 	},
 /turf/open/floor/plating,
 /area/cargo/storage)
@@ -4520,7 +4520,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/loading_area{
-	dir = 8
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/cargo/storage)
@@ -4996,8 +4996,8 @@
 	icon_state = "cobweb2"
 	},
 /obj/machinery/conveyor{
-	dir = 4;
-	id = "cargoload"
+	dir = 8;
+	id = "cargounload"
 	},
 /turf/open/floor/plating,
 /area/cargo/storage)
@@ -9014,8 +9014,8 @@
 	dir = 8
 	},
 /obj/machinery/conveyor{
-	dir = 8;
-	id = "cargounload"
+	dir = 4;
+	id = "cargoload"
 	},
 /turf/open/floor/plating,
 /area/cargo/storage)
@@ -48108,11 +48108,11 @@ pk
 NL
 sw
 xf
-zm
+Sn
 sU
 mI
 sU
-Sn
+zm
 lM
 RL
 vj
