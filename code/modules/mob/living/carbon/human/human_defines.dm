@@ -15,7 +15,6 @@
 
 	block_parry_data = /datum/block_parry_data/unarmed/human
 	default_block_parry_data = /datum/block_parry_data/unarmed/human
-	causes_dirt_buildup_on_floor = TRUE
 
 	//Hair colour and style
 	var/hair_color = "000"
@@ -59,6 +58,8 @@
 	var/obj/item/ears_extra = null
 	var/obj/item/wrists = null
 	//
+	/// When an braindead player has their equipment fiddled with, we log that info here for when they come back so they know who took their ID while they were DC'd for 30 seconds
+	var/list/afk_thefts
 
 	var/special_voice = "" // For changing our voice. Used by a symptom.
 
