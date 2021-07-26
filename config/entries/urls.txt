@@ -35,3 +35,7 @@ WIKIURLTG http://www.tgstation13.org/wiki
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
 # BANAPPEALS https://citadel-station.net/forum/viewforum.php?f=8&sid=a0ce5331d5594ef6d49661609c6f4ff9
+
+## discord address
+DISCORDURL https://discord.gg/bxgeRPq
+
