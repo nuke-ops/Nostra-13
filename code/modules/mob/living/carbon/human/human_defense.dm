@@ -714,7 +714,6 @@
 				if(0 to NUTRITION_LEVEL_STARVING)
 					to_send += "<span class='danger'>You're starving!</span>\n"
 
-
 			//TODO: Convert these messages into vague messages, thereby encouraging actual dignosis.
 			//Compiles then shows the list of damaged organs and broken organs
 			var/list/broken = list()
