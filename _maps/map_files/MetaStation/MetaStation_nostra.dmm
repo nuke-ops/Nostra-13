@@ -33943,19 +33943,19 @@
 /turf/open/floor/plating,
 /area/maintenance/aft)
 "cuF" = (
-/obj/machinery/public_nanite_chamber,
 /obj/machinery/airalarm{
 	pixel_y = 23
 	},
-/turf/open/floor/circuit/green/anim,
+/obj/machinery/nanite_chamber,
+/turf/open/floor/circuit/green,
 /area/science/nanite)
 "cuG" = (
 /obj/machinery/nanite_programmer,
-/turf/open/floor/circuit/green/anim,
+/turf/open/floor/circuit/green,
 /area/science/nanite)
 "cuH" = (
 /obj/machinery/computer/nanite_cloud_controller,
-/turf/open/floor/circuit/green/anim,
+/turf/open/floor/circuit/green,
 /area/science/nanite)
 "cuI" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
@@ -34318,7 +34318,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
 	},
-/turf/open/floor/circuit/green/anim,
+/turf/open/floor/circuit/green,
 /area/science/nanite)
 "cvK" = (
 /obj/structure/chair/office/dark{
@@ -34749,7 +34749,7 @@
 "cwK" = (
 /obj/machinery/nanite_program_hub,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/turf/open/floor/circuit/green/anim,
+/turf/open/floor/circuit/green,
 /area/science/nanite)
 "cwL" = (
 /obj/machinery/vending/cola/random,
@@ -36006,7 +36006,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/nanite_program_hub,
-/turf/open/floor/circuit/green/anim,
+/turf/open/floor/circuit/green,
 /area/science/nanite)
 "czm" = (
 /turf/open/floor/plasteel/dark,
@@ -36571,7 +36571,7 @@
 	dir = 8;
 	light_color = "#e8eaff"
 	},
-/turf/open/floor/circuit/green/anim,
+/turf/open/floor/circuit/green,
 /area/science/nanite)
 "cAq" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
@@ -36591,7 +36591,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/nanite_programmer,
-/turf/open/floor/circuit/green/anim,
+/turf/open/floor/circuit/green,
 /area/science/nanite)
 "cAs" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -36973,8 +36973,8 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
 	},
-/obj/machinery/public_nanite_chamber,
-/turf/open/floor/circuit/green/anim,
+/obj/machinery/nanite_chamber,
+/turf/open/floor/circuit/green,
 /area/science/nanite)
 "cBk" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -36989,7 +36989,7 @@
 	dir = 4
 	},
 /obj/machinery/computer/nanite_cloud_controller,
-/turf/open/floor/circuit/green/anim,
+/turf/open/floor/circuit/green,
 /area/science/nanite)
 "cBm" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -78469,7 +78469,9 @@
 	},
 /obj/structure/closet/secure_closet/injection{
 	name = "educational injections";
-	pixel_x = 2
+	pixel_x = 2;
+	req_access = 0;
+	req_access_txt = "58"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -80842,7 +80844,7 @@
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/droneDispenser/preloaded,
 /turf/open/floor/plating,
-/area/maintenance/starboard/aft)
+/area/maintenance/aft)
 "wFX" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/engine/air,
