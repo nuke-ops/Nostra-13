@@ -3641,7 +3641,10 @@
 /turf/open/floor/plasteel/dark,
 /area/security/execution/transfer)
 "ajb" = (
-/obj/structure/closet/secure_closet/injection,
+/obj/structure/closet/secure_closet/injection{
+	req_access = 0;
+	req_access_txt = "58"
+	},
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "Prisoner Transfer Centre";
@@ -53685,6 +53688,13 @@
 	icon_state = "wood-broken"
 	},
 /area/maintenance/department/crew_quarters/dorms)
+"eqU" = (
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
+	dir = 5
+	},
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space/nearstation)
 "eta" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Engineering Supplies";
@@ -54926,13 +54936,11 @@
 	},
 /area/maintenance/department/science)
 "hfa" = (
-/obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
-	dir = 5
-	},
+/obj/structure/lattice,
+/obj/machinery/atmospherics/pipe/heat_exchanging/simple,
 /turf/open/space/basic,
 /area/space/nearstation)
 "hfZ" = (
@@ -59752,10 +59760,10 @@
 	},
 /area/maintenance/department/engine)
 "rAv" = (
-/obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple{
 	dir = 4
 	},
+/obj/structure/lattice,
 /turf/open/space/basic,
 /area/space/nearstation)
 "rBh" = (
@@ -60477,6 +60485,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/turf_decal/tile/green,
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
 "tnY" = (
@@ -61320,16 +61329,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
-"vsN" = (
-/obj/structure/lattice/catwalk,
-/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/heat_exchanging/simple{
-	dir = 9
-	},
-/turf/open/space/basic,
-/area/space/nearstation)
 "vtl" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 4
@@ -96699,12 +96698,12 @@ pBJ
 wIo
 nyr
 nyr
-mpT
+eqU
+cdm
 aaa
 fon
 fon
 fon
-aaa
 aaa
 aaa
 aaa
@@ -96957,11 +96956,11 @@ cKB
 nsJ
 cKB
 rAv
+cdm
 aht
 fon
 shH
 fon
-aaa
 aaa
 aaa
 aaa
@@ -97214,11 +97213,11 @@ rbZ
 rbZ
 rbZ
 hfa
+mpT
 aaa
 fon
 shH
 fon
-aaa
 aaa
 aaa
 aaa
@@ -97470,12 +97469,12 @@ yaZ
 rbZ
 rbZ
 rbZ
-vsN
+hfa
+rsQ
 aht
 fon
 shH
 fon
-aaa
 aaa
 aaa
 aaa
@@ -97728,11 +97727,11 @@ rbZ
 rbZ
 rbZ
 hfa
+mpT
 aaa
 fon
 shH
 fon
-aaa
 aaa
 aaa
 aaa
@@ -97984,12 +97983,12 @@ yaZ
 rbZ
 rbZ
 rbZ
-vsN
+hfa
+rsQ
 aht
 fon
 shH
 fon
-aaa
 aaa
 aaa
 aaa
@@ -98242,11 +98241,11 @@ qvr
 rsQ
 qvr
 rsQ
+cdm
 aaa
 fon
 fon
 fon
-aaa
 aaa
 aaa
 aaa
@@ -98500,8 +98499,8 @@ aht
 aaa
 aaa
 aaa
-aht
 aaa
+aht
 aaa
 aaa
 aaa
@@ -98756,7 +98755,7 @@ fon
 fon
 fon
 fon
-aht
+aaa
 aht
 aht
 aht
@@ -99013,7 +99012,7 @@ shH
 shH
 shH
 fon
-aaa
+aht
 aht
 shH
 shH
