@@ -23,4 +23,5 @@
 
 	faction = list("neutral", "carp")
 	AIStatus = 4
-	butcher_results = list(/obj/item/toy/spinningtoy = 1)
+	butcher_results = list(/obj/item/toy/spinningtoy = 1,
+							/obj/item/clothing/head/soft = 1)
