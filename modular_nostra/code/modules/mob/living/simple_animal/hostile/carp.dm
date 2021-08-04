@@ -5,7 +5,7 @@
 	gender = FEMALE
 	regen_amount = 8
 
-	icon = 'icons/mob/animal.dmi'
+	icon = 'modular_nostra/icons/mob/animal.dmi'
 	icon_state = "carp_cargo"
 	icon_living = "carp_cargo"
 	icon_dead = "carp_dead_cargo"
