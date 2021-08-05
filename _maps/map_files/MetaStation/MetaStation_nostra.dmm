@@ -65545,7 +65545,9 @@
 /turf/open/floor/wood,
 /area/service/lawoffice)
 "nwc" = (
-/mob/living/simple_animal/sloth/citrus,
+/mob/living/simple_animal/hostile/carp/cargo{
+	icon_state = "cargo_carp"
+	},
 /turf/open/floor/plasteel,
 /area/cargo/storage)
 "nwG" = (
