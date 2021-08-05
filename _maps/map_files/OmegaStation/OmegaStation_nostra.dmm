@@ -5441,7 +5441,9 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/port/fore)
 "ajf" = (
-/mob/living/simple_animal/sloth/citrus,
+/mob/living/simple_animal/hostile/carp/cargo{
+	icon_state = "cargo_carp"
+	},
 /turf/open/floor/plasteel,
 /area/cargo/storage)
 "ajg" = (
