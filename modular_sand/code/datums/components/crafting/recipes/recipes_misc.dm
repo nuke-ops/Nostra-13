@@ -52,7 +52,7 @@
 /datum/crafting_recipe/crowbar
 	name = "Makeshift Crowbar"
 	result = /obj/item/crowbar/makeshift
-	reqs = list(/obj/item/stack/rods = 1)
+	reqs = list(/obj/item/stack/rods = 2)
 	time = 40
 	subcategory = CAT_TOOL
 	category = CAT_MISCELLANEOUS
@@ -79,8 +79,7 @@
 /datum/crafting_recipe/wrench
 	name = "Wrench"
 	result = /obj/item/wrench/makeshift
-	reqs = list(/obj/item/stack/rods = 1,
-				/obj/item/stack/sheet/metal = 1)
+	reqs = list(/obj/item/stack/rods = 2)
 	tools = list(TOOL_CROWBAR, TOOL_SCREWDRIVER)
 	time = 30
 	subcategory = CAT_TOOL
