@@ -22737,6 +22737,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/item/toy/plush/jerry,
 /turf/open/floor/plasteel,
 /area/cargo/qm/private)
 "bau" = (
@@ -59037,6 +59038,10 @@
 	},
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
+"pUv" = (
+/mob/living/simple_animal/hostile/carp/cargo,
+/turf/open/floor/plasteel,
+/area/cargo/qm/private)
 "pVD" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -101062,7 +101067,7 @@ aTg
 aUq
 aVu
 aPY
-aPY
+pUv
 aPY
 aZn
 aPY

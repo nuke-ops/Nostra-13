@@ -65294,6 +65294,7 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
+/obj/item/toy/plush/jerry,
 /turf/open/floor/plasteel,
 /area/cargo/office)
 "nkB" = (
@@ -65545,9 +65546,7 @@
 /turf/open/floor/wood,
 /area/service/lawoffice)
 "nwc" = (
-/mob/living/simple_animal/hostile/carp/cargo{
-	icon_state = "cargo_carp"
-	},
+/mob/living/simple_animal/hostile/carp/cargo,
 /turf/open/floor/plasteel,
 /area/cargo/storage)
 "nwG" = (

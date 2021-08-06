@@ -6458,9 +6458,9 @@
 /turf/closed/wall,
 /area/security/brig)
 "ama" = (
-/mob/living/simple_animal/sloth/paperwork,
+/mob/living/simple_animal/hostile/carp/cargo,
 /turf/open/floor/plasteel,
-/area/cargo/storage)
+/area/cargo/office)
 "amb" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -30412,6 +30412,7 @@
 	dir = 4;
 	pixel_x = -22
 	},
+/obj/item/toy/plush/jerry,
 /turf/open/floor/plasteel,
 /area/cargo/office)
 "buF" = (
@@ -83271,7 +83272,7 @@ dev
 aZE
 xBw
 bjr
-ama
+bjr
 bmh
 bjr
 bjr
@@ -84817,7 +84818,7 @@ boU
 bmP
 buF
 bbR
-bbR
+ama
 btu
 bbR
 bOL
