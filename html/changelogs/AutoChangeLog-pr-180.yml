@@ -1,0 +1,5 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - bugfix: Fixes lack of cable under the airlock to security checkpoint on Omega.
+  - tweak: Moved few tables in security checkpoint on Omega to make it '''better'''.
