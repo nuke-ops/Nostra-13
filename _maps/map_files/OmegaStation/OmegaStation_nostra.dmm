@@ -32061,7 +32061,11 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/plasteel/white,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel/dark,
 /area/medical/virology)
 "bbZ" = (
 /turf/closed/wall/r_wall,
@@ -32920,7 +32924,6 @@
 	c_tag = "Mebay - Virology Airlock";
 	network = list("ss13","medbay")
 	},
-/obj/structure/closet/emcloset,
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "bdx" = (
@@ -33479,14 +33482,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/machinery/airalarm{
-	dir = 8;
-	pixel_x = 24
-	},
-/obj/structure/closet/l3closet,
-/obj/machinery/light{
-	dir = 4
-	},
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "bev" = (
@@ -33496,7 +33491,16 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
 	},
-/turf/closed/wall/r_wall,
+/obj/machinery/airalarm{
+	dir = 8;
+	pixel_x = 24
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/closet/emcloset,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/dark,
 /area/medical/virology)
 "bew" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -34021,6 +34025,10 @@
 	name = "Monkey Pen";
 	req_access_txt = "39"
 	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "bfr" = (
@@ -34252,7 +34260,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 6
 	},
-/obj/structure/closet/l3closet,
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "bfN" = (
@@ -34667,7 +34674,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/dark,
 /area/medical/virology)
 "bgv" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -36485,7 +36492,7 @@
 	},
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plating/airless,
-/area/engineering/supermatter)
+/area/engineering/main)
 "bjz" = (
 /obj/structure/chair/office/dark{
 	dir = 1
@@ -45680,6 +45687,11 @@
 /obj/effect/turf_decal/trimline/brown/filled/corner,
 /turf/open/floor/plasteel,
 /area/cargo/storage)
+"luR" = (
+/obj/structure/closet/l3closet,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/dark,
+/area/medical/virology)
 "lvr" = (
 /obj/structure/chair{
 	dir = 8
@@ -45799,6 +45811,15 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard)
+"lBp" = (
+/obj/structure/cable/white{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/closet/l3closet,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel/dark,
+/area/medical/virology)
 "lDo" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -83404,7 +83425,7 @@ aOB
 aOB
 aOB
 aLU
-buW
+aEt
 aEt
 bkA
 blr
@@ -83661,7 +83682,7 @@ bdY
 aMX
 aMX
 sJG
-buW
+aEt
 bjm
 bkD
 bkG
@@ -83918,7 +83939,7 @@ aMS
 aMS
 aOC
 buW
-buW
+aEt
 bjs
 bkA
 bkG
@@ -84175,7 +84196,7 @@ aMT
 aMT
 aMT
 aPK
-buW
+aEt
 bjy
 bkD
 bkG
@@ -84689,7 +84710,7 @@ aMV
 aMV
 aMV
 aKD
-buW
+aEt
 bjy
 bkD
 bkG
@@ -84946,7 +84967,7 @@ aMW
 aMW
 aOD
 buW
-buW
+aEt
 bjs
 bkA
 bkG
@@ -85203,7 +85224,7 @@ aMX
 aMX
 aMX
 buW
-buW
+aEt
 bjL
 bkD
 bkG
@@ -85460,7 +85481,7 @@ aOE
 aOb
 aOE
 aLO
-buW
+aEt
 aEt
 bkA
 bkG
@@ -89567,9 +89588,9 @@ aZf
 bam
 aRb
 bbZ
-bbW
+luR
 bev
-bfN
+lBp
 bfN
 bhC
 biL
