@@ -79,7 +79,8 @@
 /datum/crafting_recipe/wrench
 	name = "Wrench"
 	result = /obj/item/wrench/makeshift
-	reqs = list(/obj/item/stack/rods = 2)
+	reqs = list(/obj/item/stack/rods = 1,
+				/obj/item/stack/sheet/metal = 1)
 	tools = list(TOOL_CROWBAR, TOOL_SCREWDRIVER)
 	time = 30
 	subcategory = CAT_TOOL
