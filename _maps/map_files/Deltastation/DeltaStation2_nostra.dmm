@@ -23365,7 +23365,6 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
-/obj/item/toy/plush/jerry,
 /turf/open/floor/plasteel,
 /area/cargo/qm)
 "aSA" = (
@@ -25877,6 +25876,9 @@
 /turf/open/floor/plasteel,
 /area/cargo/qm)
 "aVT" = (
+/obj/structure/cable/white{
+	icon_state = "4-8"
+	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
@@ -25887,9 +25889,9 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/carp/cargo,
+/mob/living/simple_animal/sloth/citrus,
 /turf/open/floor/plasteel,
-/area/cargo/storage)
+/area/cargo/qm)
 "aVU" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
@@ -28353,7 +28355,8 @@
 	},
 /turf/open/floor/plating{
 	initial_gas_mix = "o2=0.01;n2=0.01";
-	luminosity = 2
+	luminosity = 2;
+	
 	},
 /area/security/prison)
 "aZP" = (
@@ -29973,7 +29976,8 @@
 	},
 /turf/open/floor/plating{
 	initial_gas_mix = "o2=0.01;n2=0.01";
-	luminosity = 2
+	luminosity = 2;
+	
 	},
 /area/security/prison)
 "bcX" = (
@@ -172182,7 +172186,7 @@ azy
 aNv
 aOW
 axf
-aVT
+azy
 aUe
 aVM
 aAG
@@ -173983,7 +173987,7 @@ aPf
 aQP
 aSu
 aUk
-aVS
+aVT
 aXz
 aZd
 aQQ
