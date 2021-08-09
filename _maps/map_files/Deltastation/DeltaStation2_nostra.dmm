@@ -25889,7 +25889,8 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/mob/living/simple_animal/sloth/citrus,
+/obj/machinery/holopad/secure,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/cargo/qm)
 "aVU" = (
@@ -25899,8 +25900,13 @@
 /obj/structure/cable/white{
 	icon_state = "1-8"
 	},
-/obj/effect/turf_decal/bot,
-/obj/machinery/holopad/secure,
+/obj/structure/bed/dogbed/ian{
+	desc = "A bed for carp.";
+	name = "Jerry's bed"
+	},
+/mob/living/simple_animal/hostile/carp/cargo{
+	icon_state = "cargo_carp"
+	},
 /turf/open/floor/plasteel,
 /area/cargo/qm)
 "aVV" = (
@@ -28355,8 +28361,7 @@
 	},
 /turf/open/floor/plating{
 	initial_gas_mix = "o2=0.01;n2=0.01";
-	luminosity = 2;
-	
+	luminosity = 2
 	},
 /area/security/prison)
 "aZP" = (
@@ -29976,8 +29981,7 @@
 	},
 /turf/open/floor/plating{
 	initial_gas_mix = "o2=0.01;n2=0.01";
-	luminosity = 2;
-	
+	luminosity = 2
 	},
 /area/security/prison)
 "bcX" = (
@@ -125259,6 +125263,20 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/mixing)
+"eNI" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/mob/living/simple_animal/sloth/citrus,
+/turf/open/floor/plasteel,
+/area/cargo/storage)
 "eTv" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -172182,7 +172200,7 @@ azy
 azy
 aAG
 aKQ
-azy
+eNI
 aNv
 aOW
 axf
