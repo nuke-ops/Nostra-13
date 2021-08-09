@@ -1,0 +1,7 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - rscadd: Added Jerry and Citrus to cargo on Box, DIY, Delta, Meta, Omega and PubbyStation.
+  - rscadd: Added Jerry's bed on some stations.
+  - bugfix: Added missing creature pen windoor on MetaStation.
+  - tweak: Reinforced "DANGER" windoor on OmegaStation.
