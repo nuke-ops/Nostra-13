@@ -20,8 +20,8 @@
 	maxHealth = 100
 	speed = 10
 	glide_size = 2
-
-	faction = list("neutral", "carp")
-	AIStatus = 4
+	aggro_vision_range = 0
+	faction = list("neutral")
+	AIStatus = 2
 	butcher_results = list(/obj/item/toy/spinningtoy = 1,
 							/obj/item/clothing/head/soft = 1)
