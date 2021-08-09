@@ -1,3 +1,4 @@
+/*
 /datum/crafting_recipe/rnd_board
 	name = "RnD Console Board"
 	result = /obj/item/circuitboard/computer/rdconsole
@@ -10,7 +11,7 @@
 	time = 40
 	subcategory = CAT_TOOL
 	category = CAT_MISCELLANEOUS
-
+*/
 /datum/crafting_recipe/protolathe
 	name = "Protolathe Board"
 	result = /obj/item/circuitboard/machine/protolathe
@@ -25,7 +26,7 @@
 	time = 20
 	subcategory = CAT_TOOL
 	category = CAT_MISCELLANEOUS
-
+/*
 /datum/crafting_recipe/circuit_imprinter
 	name = "Circuit Imprinter"
 	result = /obj/item/circuitboard/machine/circuit_imprinter
@@ -137,3 +138,4 @@
 	time = 100
 	subcategory = CAT_TOOL
 	category = CAT_MISCELLANEOUS
+*/
