@@ -44869,6 +44869,13 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
 	},
+/obj/machinery/door/window/northleft{
+	base_state = "right";
+	dir = 8;
+	icon_state = "right";
+	name = "Containment Pen #6";
+	req_access_txt = "55"
+	},
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
 "cTg" = (
@@ -56871,6 +56878,9 @@
 /area/cargo/warehouse)
 "iiK" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/mob/living/simple_animal/hostile/carp/cargo{
+	icon_state = "cargo_carp"
+	},
 /turf/open/floor/plasteel,
 /area/cargo/qm)
 "iiP" = (
@@ -62052,6 +62062,11 @@
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/command/heads_quarters/cmo)
+"ljz" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/mob/living/simple_animal/sloth/citrus,
+/turf/open/floor/plasteel,
+/area/cargo/storage)
 "ljM" = (
 /obj/structure/chair/stool{
 	pixel_y = 8
@@ -65544,12 +65559,6 @@
 	},
 /turf/open/floor/wood,
 /area/service/lawoffice)
-"nwc" = (
-/mob/living/simple_animal/hostile/carp/cargo{
-	icon_state = "cargo_carp"
-	},
-/turf/open/floor/plasteel,
-/area/cargo/storage)
 "nwG" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -101391,7 +101400,7 @@ mIE
 mIE
 ifM
 mIE
-nwc
+mIE
 wzm
 hZC
 tUN
@@ -101902,7 +101911,7 @@ mKW
 qKo
 mKW
 dRx
-mKW
+ljz
 nUn
 mKW
 mXL

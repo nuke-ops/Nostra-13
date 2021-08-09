@@ -6457,10 +6457,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
 /area/security/brig)
-"ama" = (
-/mob/living/simple_animal/sloth/paperwork,
-/turf/open/floor/plasteel,
-/area/cargo/storage)
 "amb" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -32150,7 +32146,13 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
-/obj/machinery/holopad/secure,
+/mob/living/simple_animal/hostile/carp/cargo{
+	icon_state = "cargo_carp"
+	},
+/obj/structure/bed/dogbed/ian{
+	desc = "A bed for carp.";
+	name = "Jerry's bed"
+	},
 /turf/open/floor/plasteel,
 /area/cargo/qm)
 "byD" = (
@@ -32733,6 +32735,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/holopad/secure,
 /turf/open/floor/plasteel,
 /area/cargo/qm)
 "bzR" = (
@@ -56856,6 +56859,13 @@
 "kQk" = (
 /turf/closed/wall,
 /area/maintenance/department/medical/morgue)
+"kQq" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/mob/living/simple_animal/sloth/citrus,
+/turf/open/floor/plasteel,
+/area/cargo/storage)
 "kQz" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -83271,8 +83281,8 @@ dev
 aZE
 xBw
 bjr
-ama
-bmh
+bjr
+kQq
 bjr
 bjr
 bjr

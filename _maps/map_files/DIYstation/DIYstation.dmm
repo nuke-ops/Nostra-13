@@ -5877,6 +5877,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+/mob/living/simple_animal/hostile/carp/cargo{
+	icon_state = "cargo_carp"
+	},
 /turf/open/floor/plasteel,
 /area/cargo/storage)
 "FU" = (
@@ -9183,6 +9186,7 @@
 /obj/machinery/atmospherics/components/binary/pump/on/layer1{
 	dir = 4
 	},
+/mob/living/simple_animal/sloth/citrus,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "Xa" = (

@@ -24068,6 +24068,13 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
+/obj/structure/bed/dogbed/ian{
+	desc = "A bed for carp.";
+	name = "Jerry's bed"
+	},
+/mob/living/simple_animal/hostile/carp/cargo{
+	icon_state = "cargo_carp"
+	},
 /turf/open/floor/plasteel,
 /area/cargo/qm)
 "bdG" = (
@@ -53729,6 +53736,10 @@
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/space/nearstation)
+"esn" = (
+/mob/living/simple_animal/sloth/citrus,
+/turf/open/floor/plasteel,
+/area/cargo/storage)
 "eta" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Engineering Supplies";
@@ -102604,7 +102615,7 @@ aTl
 aUw
 aTm
 aTm
-aTm
+esn
 aYy
 aZo
 baB

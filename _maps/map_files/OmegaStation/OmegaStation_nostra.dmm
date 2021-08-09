@@ -5440,12 +5440,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
 /area/hallway/primary/port/fore)
-"ajf" = (
-/mob/living/simple_animal/hostile/carp/cargo{
-	icon_state = "cargo_carp"
-	},
-/turf/open/floor/plasteel,
-/area/cargo/storage)
 "ajg" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -31936,7 +31930,8 @@
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/tritium,
-/obj/machinery/door/window/southleft{
+/obj/machinery/door/window/brigdoor{
+	desc = "Door that leads to green heaven.";
 	name = "DANGER";
 	req_access_txt = "30"
 	},
@@ -34573,6 +34568,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/science/mixing)
@@ -44041,6 +44040,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/oldomega/OldAtmos)
+"hCD" = (
+/obj/effect/turf_decal/trimline/brown/filled/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/mob/living/simple_animal/hostile/carp/cargo{
+	icon_state = "cargo_carp"
+	},
+/turf/open/floor/plasteel/dark,
+/area/cargo/storage)
 "hCU" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/cable/white{
@@ -45512,6 +45523,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/neutral,
+/mob/living/simple_animal/sloth/citrus,
 /turf/open/floor/plasteel/dark,
 /area/cargo/warehouse)
 "kTr" = (
@@ -46018,7 +46030,7 @@
 /turf/open/floor/plasteel/dark,
 /area/science/xenobiology)
 "meo" = (
-/turf/closed/wall/r_wall/rust,
+/turf/closed/wall/rust,
 /area/science/mixing)
 "mfj" = (
 /obj/machinery/holopad,
@@ -46810,6 +46822,10 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
 /turf/open/floor/plasteel/white,
 /area/science/explab)
 "ohM" = (
@@ -98794,7 +98810,7 @@ uIG
 rDW
 rDW
 aii
-ajf
+aeW
 ajQ
 rDW
 rDW
@@ -99311,7 +99327,7 @@ ahm
 jOR
 amy
 amy
-amy
+hCD
 amy
 cXQ
 fIU
@@ -103214,13 +103230,13 @@ eGm
 bdI
 gcw
 bgi
-sVt
+iio
 qcP
-sVt
+iio
 meo
 meo
-sVt
-sVt
+iio
+iio
 kFk
 owp
 owp
