@@ -53,7 +53,7 @@
 /datum/crafting_recipe/crowbar
 	name = "Makeshift Crowbar"
 	result = /obj/item/crowbar/makeshift
-	reqs = list(/obj/item/stack/rods = 1)
+	reqs = list(/obj/item/stack/rods = 2)
 	time = 40
 	subcategory = CAT_TOOL
 	category = CAT_MISCELLANEOUS
