@@ -1,6 +1,0 @@
-author: maksxpl
-delete-after: true
-changes:
-  - rscdel: 'Removed (perhaps just temporary) recipes of: rnd board, circuit imprinter,
-      autolathe, makeshift tools, slime core'
-  - tweak: Also tweaked a bit AI of cargo carp
