@@ -3390,13 +3390,6 @@
 	icon_state = "platingdmg3"
 	},
 /area/ruin/space/has_grav/oldomega/OldSolars)
-"nP" = (
-/obj/effect/turf_decal/bot_white,
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/turf/open/floor/plasteel,
-/area/hallway/secondary/entry)
 "nS" = (
 /obj/machinery/door/airlock/external{
 	name = "Labor Camp Shuttle Airlock";
@@ -3520,6 +3513,9 @@
 	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
+	},
+/obj/structure/cable/white{
+	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel,
 /area/security/checkpoint/auxiliary)
@@ -4413,6 +4409,9 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/security/checkpoint/auxiliary)
 "rB" = (
@@ -4539,6 +4538,7 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
+/obj/machinery/holopad,
 /turf/open/floor/plasteel,
 /area/security/checkpoint/auxiliary)
 "sf" = (
@@ -5312,6 +5312,10 @@
 "vo" = (
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/red,
 /turf/open/floor/plasteel,
 /area/security/checkpoint/auxiliary)
 "vr" = (
@@ -5404,9 +5408,19 @@
 /area/maintenance/bar)
 "vK" = (
 /obj/structure/table/reinforced,
+/obj/item/flashlight/lamp{
+	pixel_x = 7;
+	pixel_y = 12
+	},
 /obj/item/folder/red,
 /obj/item/pen,
-/obj/item/flashlight/lamp,
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 4
+	},
 /turf/open/floor/plasteel,
 /area/security/checkpoint/auxiliary)
 "vL" = (
@@ -5848,13 +5862,9 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
 "xC" = (
-/obj/structure/chair/office/dark{
-	dir = 8
-	},
 /obj/structure/cable/white{
 	icon_state = "1-8"
 	},
-/obj/effect/landmark/start/security_officer,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	dir = 1
 	},
@@ -5923,13 +5933,20 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "xQ" = (
-/obj/structure/table/reinforced,
 /obj/structure/cable/white,
 /obj/machinery/power/apc{
 	areastring = "/area/security/checkpoint/auxiliary";
 	name = "Security Checkpoint APC";
 	pixel_x = 1;
 	pixel_y = -24
+	},
+/obj/machinery/vending/wardrobe/sec_wardrobe,
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
+	dir = 1
 	},
 /turf/open/floor/plasteel,
 /area/security/checkpoint/auxiliary)
@@ -6154,6 +6171,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
+/obj/effect/turf_decal/tile/red,
 /turf/open/floor/plasteel,
 /area/security/checkpoint/auxiliary)
 "yS" = (
@@ -6564,7 +6582,11 @@
 /turf/open/floor/plating/asteroid/airless,
 /area/asteroid/nearstation)
 "As" = (
-/obj/machinery/vending/wardrobe/sec_wardrobe,
+/obj/structure/closet/secure_closet/security,
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/red,
 /turf/open/floor/plasteel,
 /area/security/checkpoint/auxiliary)
 "At" = (
@@ -7264,9 +7286,6 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "Dj" = (
-/obj/structure/chair/office/dark{
-	dir = 8
-	},
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
@@ -8397,7 +8416,12 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
 "Ia" = (
-/obj/structure/closet/secure_closet/security,
+/obj/structure/chair/office/dark,
+/obj/effect/landmark/start/security_officer,
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/red,
 /turf/open/floor/plasteel,
 /area/security/checkpoint/auxiliary)
 "Ic" = (
@@ -8505,6 +8529,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 6
 	},
+/obj/machinery/holopad,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "Iw" = (
@@ -9422,6 +9447,10 @@
 "Mo" = (
 /obj/structure/filingcabinet/security,
 /obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/red,
+/obj/effect/turf_decal/tile/red{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -10837,6 +10866,12 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/turf_decal/tile/red{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/red{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/security/checkpoint/auxiliary)
 "SF" = (
@@ -11244,13 +11279,6 @@
 /area/construction/storage_wing)
 "Uu" = (
 /turf/closed/wall/r_wall,
-/area/hallway/secondary/entry)
-"Uv" = (
-/obj/effect/turf_decal/loading_area{
-	dir = 1
-	},
-/obj/effect/turf_decal/box,
-/turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "Uw" = (
 /obj/structure/flora/ausbushes/fullgrass,
@@ -12440,7 +12468,6 @@
 /obj/structure/cable/white{
 	icon_state = "4-8"
 	},
-/obj/effect/turf_decal/bot_white,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
 "ZK" = (
@@ -51247,7 +51274,7 @@ Ta
 AD
 se
 Ia
-Ui
+gF
 bN
 HR
 VF
@@ -51504,8 +51531,8 @@ dR
 GZ
 xC
 vo
-gF
-nP
+Ui
+bN
 aO
 XT
 Uu
@@ -51762,7 +51789,7 @@ yQ
 Mo
 vK
 io
-nP
+bN
 aO
 IA
 Px
@@ -52016,10 +52043,10 @@ Zn
 YM
 Ta
 ot
-Ui
-Ui
 Ta
-nP
+Ta
+Ta
+bN
 Iv
 JT
 uY
@@ -52790,7 +52817,7 @@ YK
 yi
 yi
 ZI
-Uv
+He
 Ju
 uO
 hq
@@ -53047,7 +53074,7 @@ rG
 yi
 yi
 ZI
-Uv
+He
 iD
 BX
 Uu
