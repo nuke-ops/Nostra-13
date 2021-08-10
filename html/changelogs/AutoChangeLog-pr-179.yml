@@ -1,0 +1,6 @@
+author: Dexxiol
+delete-after: true
+changes:
+  - tweak: tweaked crafting recipes for makeshift crowbar and wrench
+  - code_imp: cargo carps code now has 75% of actual carp
+  - rscadd: Added Jerry and Citrus to cargo on Box, DIY, Delta, Meta, Omega and PubbyStation.
