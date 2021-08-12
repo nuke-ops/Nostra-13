@@ -2802,6 +2802,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/engineering/main)
+"bQj" = (
+/obj/structure/grille,
+/obj/machinery/atmospherics/pipe/layer_manifold{
+	dir = 4
+	},
+/turf/closed/wall/r_wall,
+/area/engineering/atmos)
 "bQq" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
@@ -19887,10 +19894,10 @@
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "oCe" = (
-/obj/machinery/atmospherics/pipe/simple/cyan/visible{
+/obj/structure/grille,
+/obj/machinery/atmospherics/pipe/layer_manifold{
 	dir = 4
 	},
-/obj/structure/grille,
 /turf/closed/wall/r_wall,
 /area/maintenance/central)
 "oCp" = (
@@ -21065,8 +21072,8 @@
 /turf/open/floor/plating,
 /area/maintenance/central)
 "pxe" = (
-/obj/machinery/atmospherics/pipe/simple/yellow/visible,
 /obj/structure/grille,
+/obj/machinery/atmospherics/pipe/layer_manifold,
 /turf/closed/wall/r_wall,
 /area/maintenance/central)
 "pxz" = (
@@ -67688,17 +67695,17 @@ jiP
 eAj
 sFW
 dTE
-hPo
+bQj
 dTE
-hPo
+bQj
 dTE
-hPo
+bQj
 dTE
 hnW
 aGj
-hPo
+bQj
 dTE
-hPo
+bQj
 dTE
 hnW
 vuP
