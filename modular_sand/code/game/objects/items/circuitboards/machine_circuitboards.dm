@@ -40,8 +40,7 @@
 		/obj/item/stock_parts/micro_laser = 5,
 		/obj/item/stock_parts/manipulator = 5,
 		/obj/item/stock_parts/scanning_module = 5,
-		/obj/item/stack/ore/bluespace_crystal/refined = 5, //nostra change
-		/obj/item/stack/ore/bluespace_crystal/artificial = 5)
+		/obj/item/stack/ore/bluespace_crystal/refined = 5) //nostra change
 
 /obj/item/circuitboard/machine/telecomms/message_server
 	name = "Message Server (Machine Board)"
