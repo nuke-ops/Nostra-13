@@ -9,7 +9,7 @@
 	item_state = "hardsuit0-powerarmor-1"
 	hardsuit_type = "powerarmor"
 	clothing_flags = THICKMATERIAL //Ouchie oofie my bones
-	armor = list("melee" = 40, "bullet" = 35, "laser" = 30, "energy" = 20, "bomb" = 40, "bio" = 100, "rad" = 5, "fire" = 75, "acid" = 100)
+	armor = list("melee" = 75, "bullet" = 60, "laser" = 75, "energy" = 50, "bomb" = 70, "bio" = 100, "rad" = 15, "fire" = 100, "acid" = 100)
 	resistance_flags = ACID_PROOF
 	mutantrace_variation = STYLE_MUZZLE | STYLE_NO_ANTHRO_ICON
 
