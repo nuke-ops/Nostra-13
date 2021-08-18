@@ -137,6 +137,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = 32
 	},
+/mob/living/simple_animal/pet/dog/corgi/Ian,
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/bridge)
 "aJ" = (
@@ -1120,6 +1121,27 @@
 /obj/machinery/airalarm/directional/south,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 5
+	},
+/mob/living/simple_animal/hostile/retaliate/bat{
+	desc = "A fierce companion for any person of power, this spider has been carefully trained by Nanotrasen specialists. Its beady, staring eyes send shivers down your spine.";
+	emote_hear = list("chitters");
+	faction = list("spiders");
+	harm_intent_damage = 3;
+	health = 200;
+	icon_dead = "guard_dead";
+	icon_gib = "guard_dead";
+	icon_living = "guard";
+	icon_state = "guard";
+	maxHealth = 250;
+	max_co2 = 5;
+	max_tox = 2;
+	melee_damage_lower = 15;
+	melee_damage_upper = 20;
+	min_oxy = 5;
+	movement_type = 1;
+	name = "Sergeant Araneus";
+	real_name = "Sergeant Araneus";
+	turns_per_move = 10
 	},
 /turf/open/floor/wood,
 /area/maintenance/department/shuttle/brig)
@@ -3145,27 +3167,8 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/mob/living/simple_animal/hostile/retaliate/bat{
-	desc = "A fierce companion for any person of power, this spider has been carefully trained by Nanotrasen specialists. Its beady, staring eyes send shivers down your spine.";
-	emote_hear = list("chitters");
-	faction = list("spiders");
-	harm_intent_damage = 3;
-	health = 200;
-	icon_dead = "guard_dead";
-	icon_gib = "guard_dead";
-	icon_living = "guard";
-	icon_state = "guard";
-	maxHealth = 250;
-	max_co2 = 5;
-	max_tox = 2;
-	melee_damage_lower = 15;
-	melee_damage_upper = 20;
-	min_oxy = 5;
-	movement_type = 1;
-	name = "Sergeant Araneus";
-	real_name = "Sergeant Araneus";
-	turns_per_move = 10
-	},
+/obj/item/circuitboard/machine/protolathe/department/security,
+/obj/item/circuitboard/machine/protolathe/department/security,
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/brig)
 "ri" = (
@@ -5521,7 +5524,8 @@
 /obj/machinery/power/apc/auto_name/south,
 /obj/structure/closet/secure_closet/CMO,
 /obj/effect/turf_decal/bot,
-/mob/living/simple_animal/pet/cat/Runtime,
+/obj/item/circuitboard/machine/protolathe/department/medical,
+/obj/item/circuitboard/machine/protolathe/department/medical,
 /turf/open/floor/plasteel/cafeteria,
 /area/maintenance/department/shuttle/medical)
 "DJ" = (
@@ -6288,6 +6292,8 @@
 /obj/effect/turf_decal/bot,
 /obj/structure/closet/secure_closet/quartermaster,
 /obj/machinery/airalarm/directional/west,
+/obj/item/circuitboard/machine/protolathe/department/cargo,
+/obj/item/circuitboard/machine/protolathe/department/cargo,
 /turf/open/floor/plasteel/dark,
 /area/cargo/qm)
 "Iq" = (
@@ -6666,6 +6672,8 @@
 	},
 /mob/living/simple_animal/parrot/Poly,
 /obj/item/tank/jetpack/suit,
+/obj/item/circuitboard/machine/protolathe/department/engineering,
+/obj/item/circuitboard/machine/protolathe/department/engineering,
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/atmos)
 "KA" = (
@@ -6998,11 +7006,8 @@
 	pixel_x = -24;
 	pixel_y = -24
 	},
-/mob/living/simple_animal/pet/dog/pug{
-	desc = "It's Pugley IV, the research department's lovable pug clone. Hopefully nothing happens to this one - fourth time lucky!";
-	name = "Pugley IV";
-	real_name = "Pugley IV"
-	},
+/obj/item/circuitboard/machine/protolathe/department/science,
+/obj/item/circuitboard/machine/protolathe/department/science,
 /turf/open/floor/plasteel/cafeteria{
 	dir = 5
 	},
@@ -7688,13 +7693,14 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/mob/living/simple_animal/pet/dog/corgi/Ian,
 /obj/machinery/door/window/brigdoor{
 	dir = 8;
 	name = "Head of Personnel Locker";
 	req_access_txt = "57"
 	},
 /obj/structure/window/plasma/reinforced,
+/obj/item/circuitboard/machine/protolathe/department/service,
+/obj/item/circuitboard/machine/protolathe/department/service,
 /turf/open/floor/mineral/plastitanium,
 /area/maintenance/department/shuttle/bridge)
 "Pw" = (
@@ -7899,7 +7905,6 @@
 	},
 /obj/structure/closet/secure_closet/captains,
 /obj/item/hand_tele,
-/mob/living/simple_animal/pet/fox/Renault,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -9585,6 +9590,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
+/mob/living/simple_animal/pet/cat/Runtime,
 /turf/open/floor/plasteel/cafeteria,
 /area/maintenance/department/shuttle/medical)
 "Zi" = (
@@ -9623,6 +9629,7 @@
 /obj/machinery/camera/autoname{
 	dir = 1
 	},
+/mob/living/simple_animal/pet/fox/Renault,
 /turf/open/floor/plasteel/dark,
 /area/maintenance/department/shuttle/bridge)
 "ZC" = (
