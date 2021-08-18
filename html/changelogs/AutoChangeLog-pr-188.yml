@@ -1,0 +1,4 @@
+author: maksxpl
+delete-after: true
+changes:
+  - rscadd: Medbot is now rotating itself when it changes direction
