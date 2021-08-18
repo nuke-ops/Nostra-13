@@ -12,7 +12,7 @@
 /mob/living/simple_animal/bot/medbot
 	name = "\improper Medibot"
 	desc = "A little medical robot. He looks somewhat underwhelmed."
-	icon = 'icons/mob/aibots.dmi'
+	icon = 'modular_nostra/icons/mob/aibots.dmi' // Nostra change
 	icon_state = "medibot0"
 	density = FALSE
 	anchored = FALSE
