@@ -1,6 +1,0 @@
-author: AnonChangechong
-delete-after: true
-changes:
-  - tweak: Shuttle hallway is now smaller on DIYstation.
-  - rscadd: Added security cameras in shuttle on DIYstation.
-  - tweak: Moved corridor in asteroid on DIYstation.
