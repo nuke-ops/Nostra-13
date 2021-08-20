@@ -36297,65 +36297,9 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/command/heads_quarters/cmo)
-"bEI" = (
-/obj/structure/closet/secure_closet/paramedic,
-/obj/machinery/airalarm{
-	dir = 4;
-	pixel_x = -23
-	},
-/turf/open/floor/plasteel/dark,
-/area/medical/paramedic)
-"bEJ" = (
-/obj/machinery/vending/wallmed{
-	pixel_y = 28
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/medical/paramedic)
-"bEK" = (
-/obj/machinery/light_switch{
-	pixel_y = 25
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/medical/paramedic)
 "bEL" = (
-/obj/machinery/door/airlock/medical/glass{
-	id_tag = "MedbayFoyer";
-	name = "Paramedic's Office";
-	req_access_txt = "5;6;12;64"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/medical/paramedic)
-"bEM" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
-	dir = 4
+/obj/machinery/door/airlock/maintenance{
+	req_access_txt = "12"
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/engine)
@@ -36895,40 +36839,11 @@
 /turf/closed/wall,
 /area/medical/surgery)
 "bFV" = (
-/obj/machinery/suit_storage_unit/paramedic,
-/obj/machinery/power/apc{
-	areastring = "/area/medical/paramedic";
-	dir = 8;
-	name = "Paramedic's Office APC";
-	pixel_x = -25
+/obj/structure/closet/crate{
+	icon_state = "crateopen"
 	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/turf/open/floor/plasteel/dark,
-/area/medical/paramedic)
-"bFW" = (
-/obj/structure/chair/office/light{
-	dir = 4
-	},
-/obj/effect/landmark/start/paramedic,
-/obj/machinery/camera{
-	c_tag = "Paramedic Disbatch";
-	dir = 10;
-	network = list("ss13","medbay")
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on,
-/turf/open/floor/plasteel/dark,
-/area/medical/paramedic)
-"bFX" = (
-/obj/machinery/computer/crew{
-	dir = 8
-	},
-/turf/open/floor/plasteel/dark,
-/area/medical/paramedic)
+/turf/open/floor/plating,
+/area/maintenance/department/engine)
 "bFZ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
@@ -37496,10 +37411,6 @@
 	},
 /turf/open/floor/plasteel/freezer,
 /area/medical/surgery)
-"bHe" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/closed/wall,
-/area/medical/paramedic)
 "bHf" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
@@ -38133,7 +38044,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/vending/wallmed{
 	pixel_y = 28
 	},
@@ -38639,18 +38549,12 @@
 /turf/open/floor/plasteel/freezer,
 /area/medical/surgery)
 "bJu" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
-	dir = 1
-	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/turf/open/floor/plasteel/white,
-/area/medical/surgery)
-"bJv" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
 	},
@@ -38658,10 +38562,6 @@
 /area/medical/surgery)
 "bJw" = (
 /obj/machinery/computer/operating,
-/turf/open/floor/plasteel/white,
-/area/medical/surgery)
-"bJx" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/white,
 /area/medical/surgery)
 "bJy" = (
@@ -39076,12 +38976,12 @@
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "bKv" = (
-/obj/structure/closet/secure_closet/paramedic,
 /obj/machinery/airalarm{
 	dir = 4;
 	pixel_x = -23
 	},
 /obj/effect/turf_decal/tile/blue,
+/obj/machinery/suit_storage_unit/paramedic,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "bKw" = (
@@ -39101,6 +39001,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
+/obj/structure/closet/secure_closet/paramedic,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "bKx" = (
@@ -39116,21 +39017,22 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/computer/crew,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "bKy" = (
-/obj/machinery/door/airlock/medical/glass{
-	id_tag = "MedbayFoyer";
-	name = "Paramedic's Office";
-	req_access_txt = "5;6;12;64"
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/dark,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "isola";
+	name = "privacy shutters"
+	},
+/turf/open/floor/plating,
 /area/medical/paramedic)
 "bKz" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -39558,7 +39460,6 @@
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "bLF" = (
-/obj/machinery/suit_storage_unit/paramedic,
 /obj/machinery/power/apc{
 	areastring = "/area/medical/paramedic";
 	dir = 8;
@@ -39571,6 +39472,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
+/obj/effect/turf_decal/tile/blue,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "bLG" = (
@@ -39595,35 +39497,34 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/blue,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "bLH" = (
-/obj/machinery/button/door{
-	id = "isola";
-	name = "Privacy Shutters";
-	pixel_y = -25
-	},
-/obj/machinery/computer/crew{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "bLI" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "isola";
-	name = "privacy shutters"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = "MedbayFoyer";
+	name = "Paramedic's Office";
+	req_access_txt = "5;6;12;64"
+	},
+/turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "bLJ" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
@@ -39670,22 +39571,10 @@
 /turf/open/floor/plasteel/white,
 /area/medical/surgery)
 "bLN" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 5
-	},
 /turf/open/floor/plasteel/white,
 /area/medical/surgery)
 "bLO" = (
 /obj/effect/landmark/start/medical_doctor,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/turf/open/floor/plasteel/white,
-/area/medical/surgery)
-"bLP" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 9
-	},
 /turf/open/floor/plasteel/white,
 /area/medical/surgery)
 "bLQ" = (
@@ -40614,13 +40503,6 @@
 /area/medical/virology)
 "bNS" = (
 /obj/structure/closet/emcloset,
-/turf/open/floor/plating,
-/area/maintenance/department/engine)
-"bNT" = (
-/obj/structure/closet/firecloset,
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/open/floor/plating,
 /area/maintenance/department/engine)
 "bNU" = (
@@ -54167,6 +54049,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/landmark/start/paramedic,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
 "ftp" = (
@@ -55567,6 +55450,20 @@
 	},
 /turf/open/floor/engine,
 /area/engineering/main)
+"ioz" = (
+/obj/machinery/button/door{
+	id = "isola";
+	name = "Privacy Shutters";
+	pixel_y = -25
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/machinery/computer/crew{
+	dir = 1
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/paramedic)
 "ioF" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -56290,6 +56187,13 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
+"jWU" = (
+/obj/machinery/suit_storage_unit/paramedic,
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/medical/paramedic)
 "jXh" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 8
@@ -57671,6 +57575,16 @@
 /obj/effect/landmark/start/paramedic,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
+"nci" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/paramedic,
+/turf/open/floor/plasteel/dark,
+/area/medical/paramedic)
 "ncm" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 4
@@ -62589,6 +62503,14 @@
 	},
 /turf/open/floor/plasteel/white/corner,
 /area/hallway/secondary/exit/departure_lounge)
+"xLl" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "isola";
+	name = "privacy shutters"
+	},
+/turf/open/floor/plating,
+/area/medical/paramedic)
 "xLC" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
@@ -89619,7 +89541,7 @@ rSt
 rSt
 rSt
 rSt
-bEr
+rSt
 bOF
 bDz
 bDz
@@ -89875,8 +89797,8 @@ bIe
 wQj
 bKv
 bLF
+jWU
 wQj
-bNS
 bCz
 bPB
 bPB
@@ -90132,8 +90054,8 @@ bIf
 wQj
 bKw
 bLG
+nci
 wQj
-bNT
 bCz
 bPB
 bQm
@@ -90389,8 +90311,8 @@ bIg
 wQj
 bKx
 bLH
+ioz
 wQj
-bNU
 bCz
 bPB
 bQn
@@ -90646,8 +90568,8 @@ bkb
 wQj
 bKy
 bLI
+xLl
 wQj
-bjc
 bCz
 bPB
 bQo
@@ -93208,13 +93130,13 @@ bpY
 bpY
 bpY
 bCw
-wQj
-wQj
-wQj
-wQj
+byu
+byu
+bFU
+bFU
 bIp
-bJv
-bJx
+bLN
+bLN
 bLN
 bMO
 bFU
@@ -93465,10 +93387,10 @@ byw
 bAe
 bpY
 bCx
-wQj
-bEI
+bva
 bFV
-wQj
+bFV
+bFU
 bIq
 bJw
 bKF
@@ -93722,14 +93644,14 @@ byx
 bAf
 bBl
 bCy
-wQj
-bEJ
-bFW
-bHe
+bva
+bDi
+bDi
+bFU
 bIr
-bJx
-bJx
-bLP
+bLN
+bLN
+bLN
 bMQ
 bFU
 bCz
@@ -93979,10 +93901,10 @@ bsK
 bAg
 bpY
 bCz
-wQj
-bEK
-bFX
-wQj
+bva
+bDi
+bDi
+bFU
 bIs
 bJy
 bKG
@@ -94236,10 +94158,10 @@ byz
 ooh
 bpY
 bCA
-wQj
+bva
 bEL
-wQj
-wQj
+bva
+bFU
 bFU
 bJz
 bFU
@@ -94494,7 +94416,7 @@ bAi
 bpY
 bCB
 bDz
-bEM
+bDz
 bDz
 bDz
 bDz
