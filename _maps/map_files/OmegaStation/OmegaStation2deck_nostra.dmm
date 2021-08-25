@@ -1890,7 +1890,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/hallway/secondary/exit/departure_lounge)
+/area/maintenance/starboard)
 "hP" = (
 /obj/machinery/door/airlock/external{
 	name = "Supply Dock Airlock";
@@ -7199,9 +7199,6 @@
 "CT" = (
 /turf/open/floor/plasteel,
 /area/asteroid/nearstation)
-"CU" = (
-/turf/closed/wall/rust,
-/area/maintenance/department/crew_quarters/locker)
 "CV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -57141,7 +57138,7 @@ ae
 Gh
 bP
 QW
-CU
+rl
 ly
 kR
 bP
@@ -57398,8 +57395,8 @@ EU
 bP
 bP
 Fr
-MX
-MX
+bP
+bP
 fg
 rl
 rl
