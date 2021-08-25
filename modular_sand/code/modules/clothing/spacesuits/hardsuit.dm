@@ -63,7 +63,7 @@
 	item_state = "hardsuit-powerarmor-1"
 	slowdown = -0.1
 	clothing_flags = THICKMATERIAL //Not spaceproof. No, it isn't Spaceproof in Rimworld either.
-	armor = list("melee" = 45, "bullet" = 45, "laser" = 50, "energy" = 25, "bomb" = 50, "bio" = 100, "rad" = 5, "fire" = 75, "acid" = 100) //I was asked to buff this again. Here, fine.
+	armor = list("melee" = 45, "bullet" = 45, "laser" = 35, "energy" = 25, "bomb" = 50, "bio" = 100, "rad" = 5, "fire" = 75, "acid" = 100) //I was asked to buff this again. Here, fine.
 	resistance_flags = ACID_PROOF
 	var/explodioprobemp = 1
 	var/stamdamageemp = 200
