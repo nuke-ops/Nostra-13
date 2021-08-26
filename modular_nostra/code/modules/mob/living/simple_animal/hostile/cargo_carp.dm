@@ -3,7 +3,6 @@
 	desc = "He fish.\n\
 			He cargo fish even."
 	gender = FEMALE
-	regen_amount = 10
 
 	icon = 'modular_nostra/icons/mob/animal.dmi'
 	icon_state = "cargo_carp"
