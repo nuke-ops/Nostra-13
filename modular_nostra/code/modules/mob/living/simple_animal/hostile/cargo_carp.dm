@@ -14,8 +14,6 @@
 	mob_size = MOB_SIZE_SMALL
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	gold_core_spawnable = FRIENDLY_SPAWN
-	melee_damage_lower = 18
-	melee_damage_upper = 18
 	health = 100
 	maxHealth = 100
 	turns_per_move = 5
@@ -23,10 +21,6 @@
 	spacewalk = TRUE
 	pressure_resistance = 200
 	movement_type = FLYING
-	harm_intent_damage = 8
-	obj_damage = 40
-	melee_damage_lower = 20
-	melee_damage_upper = 20
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
 	attack_sound = 'sound/weapons/bite.ogg'
