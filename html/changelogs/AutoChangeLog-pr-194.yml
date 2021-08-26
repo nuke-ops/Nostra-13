@@ -1,0 +1,5 @@
+author: Dexxiol
+delete-after: true
+changes:
+  - bugfix: fixed Jerrys sprite
+  - code_imp: Jerry is now even more carp
