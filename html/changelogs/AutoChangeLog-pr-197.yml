@@ -1,0 +1,7 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - tweak: Added pacman generator with 30 plasma sheets in monastery maintenace on
+      PubbyStation.
+  - bugfix: Moved camera from the middle of the paramedic office on PubbyStation.
+  - tweak: Added medbay access to medbay airlocks on PubbyStation.
