@@ -73,15 +73,15 @@
 	var/list/candylist = list()
 	var/shouldunlock = FALSE
 
-/obj/machinery/door/airlock/titanium/doomed/locked/obj/machinery/door/airlock/titanium/doomed/locked/Initialize()
+/obj/machinery/door/airlock/titanium/doomed/locked/Initialize()
 	. = ..()
 	for(var/mob/living/simple_animal/hostile/asteroid/elite/candy/C in view(15))
 		candylist += C
 	if(candylist.len)
-		close()
+		INVOKE_ASYNC(src, /obj/machinery/door/airlock/titanium/doomed/locked.proc/close)
 		addtimer(CALLBACK(src, .proc/bolt), 5)
 
-/obj/machinery/door/airlock/titanium/doomed/locked/obj/machinery/door/airlock/titanium/doomed/locked/process()
+/obj/machinery/door/airlock/titanium/doomed/locked/process()
 	. = ..()
 	candylist = list()
 	for(var/mob/living/simple_animal/hostile/asteroid/elite/candy/C in view(15))

@@ -13,7 +13,7 @@
 	var/mood_modifier = 1 //Modifier to allow certain mobs to be less affected by moodlets
 	var/list/datum/mood_event/mood_events = list()
 	var/insanity_effect = 0 //is the owner being punished for low mood? If so, how much?
-	var/obj/screen/mood/screen_obj
+	var/atom/movable/screen/mood/screen_obj
 	var/datum/skill_modifier/bad_mood/malus
 	var/datum/skill_modifier/great_mood/bonus
 	var/static/malus_id = 0
@@ -50,7 +50,7 @@
 	STOP_PROCESSING(SSobj, src)
 
 /datum/component/mood/proc/print_mood(mob/user)
-	var/msg = "<span class='info'>*---------*\n<EM>Your current mood</EM>\n"
+	var/msg = "<div class='infobox'><span class='info'><EM>Your current mood</EM></span>\n"
 	msg += "<span class='notice'>My mental status: </span>" //Long term
 	switch(sanity)
 		if(SANITY_GREAT to INFINITY)
@@ -94,6 +94,7 @@
 			msg += event.description
 	else
 		msg += "<span class='nicegreen'>I don't have much of a reaction to anything right now.<span>\n"
+	msg += "</div>"
 	to_chat(user || parent, msg)
 
 ///Called after moodevent/s have been added/removed.

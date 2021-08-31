@@ -13,7 +13,7 @@
 		if(HAS_TRAIT(L, TRAIT_PROSOPAGNOSIA))
 			obscure_name = TRUE
 
-	. = list("<span class='info'>*---------*\nThis is <EM>[!obscure_name ? name : "Unknown"]</EM>!")
+	. = list("<div class='infobox'><span class='info'>This is <EM>[!obscure_name ? name : "Unknown"]</EM>!")
 
 	var/vampDesc = ReturnVampExamine(user) // Vamps recognize the names of other vamps.
 	var/vassDesc = ReturnVassalExamine(user) // Vassals recognize each other's marks.
@@ -25,8 +25,6 @@
 	var/list/obscured = check_obscured_slots()
 	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
 
-	//Skyrat changes - edited that to only show the extra species tidbit if it's unknown or he's got a custom species
-	//and also underwear slots :)
 	if(skipface || get_visible_name() == "Unknown")
 		. += "You can't make out what species they are."
 	else
@@ -395,7 +393,7 @@
 	var/obj/item/organ/vocal_cords/Vc = user.getorganslot(ORGAN_SLOT_VOICE)
 	if(Vc)
 		if(istype(Vc, /obj/item/organ/vocal_cords/velvet))
-			if(client.prefs.cit_toggles & HYPNO)
+			if(client?.prefs.cit_toggles & HYPNO)
 				msg += "<span class='velvet'><i>You feel your chords resonate looking at them.</i></span>\n"
 
 
@@ -497,7 +495,7 @@
 
 	SEND_SIGNAL(src, COMSIG_PARENT_EXAMINE, user, .) //This also handles flavor texts now
 
-	. += "*---------*</span>"
+	. += "</div>"
 
 /mob/living/proc/status_effect_examines(pronoun_replacement) //You can include this in any mob's examine() to show the examine texts of status effects!
 	var/list/dat = list()
