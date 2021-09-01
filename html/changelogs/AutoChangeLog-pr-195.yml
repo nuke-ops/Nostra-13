@@ -1,6 +1,0 @@
-author: AnonChangechong
-delete-after: true
-changes:
-  - bugfix: Fixed lack of pipe and cable under the airlock to escape lounge on OmegaStation.
-  - bugfix: Fixed maint areas on OmegaStation.
-  - tweak: Moved HoS office to Warden office and Warden office to HoS office on OmegaStation.
