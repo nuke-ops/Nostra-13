@@ -1,0 +1,45 @@
+"a" = (/turf/template_noop,/area/space)
+"c" = (/obj/effect/decal/cleanable/blood,/obj/effect/decal/remains/human,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"d" = (/obj/item/clothing/suit/cultrobes,/obj/item/clothing/shoes/cult/alt,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"e" = (/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"i" = (/obj/effect/decal/cleanable/blood/tracks,/obj/effect/decal/remains/human,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"j" = (/obj/item/flashlight/lantern{light_color = "#FF0000"; name = "cultist lantern"; on = 1},/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"k" = (/obj/effect/decal/cleanable/blood/tracks,/obj/effect/decal/cleanable/blood/old,/obj/effect/clockwork/overlay/floor/bloodcult,/obj/effect/temp_visual/cult/turf/floor,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"n" = (/obj/effect/rune/narsie,/obj/item/melee/cultblade/dagger,/obj/effect/mob_spawn/alien/corpse/humanoid,/obj/effect/decal/cleanable/blood/gibs/human,/obj/effect/decal/cleanable/blood/old,/obj/effect/clockwork/overlay/floor/bloodcult,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"p" = (/obj/item/paper/crumpled{info = "Soon, all shall see the wonders my savior Nar'Sie will bestow upon this realm of mortals. For they have been blinded by lies and deceat. My master, my savior is thy only one who can show them the true meaning of life. To grovel beneath the feet of our lord and to serve there will for thee rest of eternity!        May thy savior cometh too me- Believes-In-Narsie"},/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"r" = (/obj/effect/decal/cleanable/blood/gibs/human,/obj/effect/decal/cleanable/blood/old,/obj/effect/decal/cleanable/blood/old,/obj/effect/clockwork/overlay/floor/bloodcult,/obj/effect/temp_visual/cult/turf/floor,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"t" = (/obj/effect/decal/cleanable/blood/old,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"u" = (/obj/structure/closet/crate/necropolis/tendril/random,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"x" = (/mob/living/simple_animal/hostile/construct/wraith/hostile,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"z" = (/obj/effect/decal/cleanable/blood/tracks,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"A" = (/obj/effect/decal/cleanable/blood/gibs/human/body,/obj/effect/decal/cleanable/blood/splats,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"I" = (/obj/effect/decal/cleanable/blood/gibs/body,/obj/effect/decal/cleanable/blood/splats,/obj/effect/decal/remains/human,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"M" = (/obj/effect/decal/cleanable/blood/gibs/human,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"O" = (/obj/effect/decal/cleanable/blood/splats,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"P" = (/mob/living/simple_animal/hostile/construct/armored/hostile,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"R" = (/turf/closed/indestructible/rock,/area/ruin/space/has_grav)
+"X" = (/obj/effect/clockwork/overlay/floor/bloodcult,/obj/effect/temp_visual/cult/turf/floor,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+"Y" = (/obj/effect/spawner/trap,/turf/open/floor/holofloor/asteroid,/area/ruin/space/has_grav)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaeaaaaaaaa
+aaaaaeaaaeaeaaaaaaaa
+aaaaaeaeeeeeeaaaaaaa
+aaaaeRRRYRReeeeeeeea
+aaeeRPXdeRRRcexeaaaa
+aaaeRReXXuRRRReeaaaa
+aaaeeRtjeXXXdRRReaaa
+aaaeRReeXnreOReeaaaa
+eeeeYXeeekMeeReaaaaa
+aaaeeRXdezXpYeeaaaaa
+aaaaRRReezAXXXeeaaaa
+aaeeeRRIXzeRRXaaaaaa
+aaaaaeeRXieRxeaaaaaa
+aaaaaaeRXXeeeeaaaaaa
+aaaaaaeaaXeaaeaaaaaa
+aaaaaaaaaeaaaaaaaaaa
+aaaaaaaaaeaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaa
+"}

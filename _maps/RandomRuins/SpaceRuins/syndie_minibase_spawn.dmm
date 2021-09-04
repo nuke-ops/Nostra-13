@@ -1,0 +1,154 @@
+"ae" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/carpet/royalblack,/area/ruin/space/has_grav)
+"aj" = (/obj/machinery/atmospherics/components/unary/vent_pump/on{dir = 1},/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{dir = 4},/turf/open/floor/carpet/royalblack,/area/ruin/space/has_grav)
+"aD" = (/obj/structure/toilet{dir = 8},/obj/machinery/light/small,/turf/open/floor/mineral/titanium/white,/area/ruin/space/has_grav)
+"aY" = (/obj/machinery/door/airlock/external/glass,/obj/structure/fans/tiny,/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"ba" = (/obj/effect/spawner/structure/window/plasma/reinforced,/obj/structure/grille,/turf/open/space/basic,/area/ruin/space/has_grav)
+"bd" = (/obj/machinery/porta_turret/syndicate{dir = 9},/turf/closed/wall/r_wall,/area/ruin/space/has_grav)
+"bf" = (/obj/machinery/rnd/production/techfab/department/medical,/turf/open/floor/mineral/titanium/white,/area/ruin/space/has_grav)
+"bi" = (/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,/turf/closed/mineral/random,/area/ruin/space/has_grav)
+"bq" = (/obj/structure/flora/ausbushes/fullgrass,/obj/item/reagent_containers/glass/bucket,/turf/open/floor/grass,/area/ruin/space/has_grav)
+"bv" = (/obj/structure/cable{icon_state = "4-8"},/obj/machinery/atmospherics/pipe/simple/supply/hidden{dir = 4},/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"bQ" = (/turf/open/floor/plating/asteroid/airless,/area/ruin/unpowered/no_grav)
+"ca" = (/obj/effect/mob_spawn/human/syndicate{dir = 4; name = "Syndicate Infiltration Agent"; short_desc = You are a Syndicate, you have been tasked with retrieving the Captains Antique Raygun aboard the highly classified Nanotrasen base within your nearby sector. Good luck Soldier.},/obj/structure/bed{dir = 1},/obj/item/crowbar,/turf/open/floor/carpet/royalblack,/area/ruin/space/has_grav)
+"cs" = (/obj/machinery/atmospherics/pipe/simple/supply/hidden{dir = 4},/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"cZ" = (/obj/structure/closet/syndicate{anchored = 1; name = "Syndicate Infiltration Locker"},/obj/item/radio/headset/syndicate/alt,/obj/item/clothing/suit/armor/vest,/obj/item/clothing/under/syndicate,/obj/item/melee/transforming/energy/sword/saber,/obj/item/storage/box/syndie_kit/chameleon,/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"dd" = (/obj/machinery/computer/camera_advanced,/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"dn" = (/obj/structure/cable{icon_state = "0-4"},/obj/machinery/atmospherics/pipe/simple/supply/hidden{dir = 4},/obj/item/stack/cable_coil,/obj/machinery/light/small,/obj/machinery/power/apc/auto_name/north,/turf/open/floor/plating,/area/ruin/space/has_grav)
+"dx" = (/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"dH" = (/obj/structure/table/optable,/turf/open/floor/mineral/titanium/white,/area/ruin/space/has_grav)
+"dZ" = (/turf/open/floor/mineral/titanium/white,/area/ruin/space/has_grav)
+"ge" = (/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{dir = 5},/turf/closed/mineral/random,/area/ruin/space/has_grav)
+"hA" = (/obj/machinery/atmospherics/components/unary/vent_scrubber/on,/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"ii" = (/obj/structure/cable{icon_state = "2-8"},/obj/machinery/atmospherics/pipe/manifold/supply/hidden{dir = 4},/obj/item/stack/tile/mineral/plastitanium,/obj/item/stack/tile/mineral/plastitanium,/turf/open/floor/plating,/area/ruin/space/has_grav)
+"ik" = (/obj/structure/cable{icon_state = "4-8"},/turf/open/floor/plating,/area/ruin/space/has_grav)
+"iv" = (/obj/structure/table/reinforced,/obj/item/gun/ballistic/automatic/pistol,/turf/open/floor/plasteel/airless/dark,/area/ruin/space/has_grav)
+"iU" = (/obj/machinery/atmospherics/components/unary/outlet_injector/on{dir = 1},/turf/open/floor/plating/asteroid/airless,/area/ruin/unpowered/no_grav)
+"km" = (/obj/machinery/atmospherics/pipe/manifold/supply/hidden{dir = 8},/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"kt" = (/obj/structure/dresser,/obj/machinery/atmospherics/components/unary/vent_scrubber/on{dir = 4},/turf/open/floor/carpet/royalblack,/area/ruin/space/has_grav)
+"kv" = (/obj/machinery/shower{dir = 8},/obj/structure/curtain,/turf/open/floor/plasteel/showroomfloor/shower,/area/ruin/space/has_grav)
+"kG" = (/obj/machinery/atmospherics/components/unary/vent_pump/on{dir = 8},/turf/open/floor/mineral/titanium/white,/area/ruin/space/has_grav)
+"kM" = (/turf/open/floor/plasteel/airless/dark,/area/ruin/space/has_grav)
+"lJ" = (/obj/machinery/light/small,/obj/machinery/atmospherics/pipe/simple/supply/hidden{dir = 4},/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"mw" = (/obj/machinery/porta_turret/syndicate{dir = 10},/turf/closed/wall/r_wall,/area/ruin/space/has_grav)
+"mL" = (/obj/machinery/door/airlock/external/glass,/obj/structure/fans/tiny,/obj/structure/cable{icon_state = "4-8"},/turf/open/floor/plating,/area/ruin/space/has_grav)
+"mM" = (/obj/machinery/light/small{dir = 4},/turf/open/floor/mineral/titanium/white,/area/ruin/space/has_grav)
+"nt" = (/obj/structure/lattice/catwalk,/obj/structure/cable{icon_state = "4-8"},/obj/structure/cable{icon_state = "2-4"},/turf/open/space/basic,/area/space)
+"nQ" = (/obj/machinery/computer/rdconsole,/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"nS" = (/obj/machinery/porta_turret/syndicate{dir = 5},/turf/closed/wall/r_wall,/area/ruin/space/has_grav)
+"ot" = (/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{dir = 4},/turf/closed/wall/r_wall,/area/ruin/space/has_grav)
+"oZ" = (/obj/item/circuitboard/machine/smes,/turf/open/floor/plating,/area/ruin/space/has_grav)
+"pF" = (/obj/item/seeds/cannabis,/obj/item/seeds/carrot,/obj/item/seeds/apple,/obj/item/seeds/ambrosia,/obj/item/seeds/ambrosia,/obj/item/seeds/chili,/obj/item/seeds/lemon,/obj/item/seeds/tower,/obj/item/seeds/watermelon,/obj/item/seeds/watermelon,/obj/machinery/light/small{dir = 8},/turf/open/floor/grass,/area/ruin/space/has_grav)
+"qj" = (/obj/machinery/atmospherics/components/unary/vent_pump/on,/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"re" = (/obj/machinery/computer/message_monitor,/obj/machinery/light/small{dir = 1},/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"rP" = (/obj/machinery/computer/operating,/turf/open/floor/mineral/titanium/white,/area/ruin/space/has_grav)
+"rS" = (/obj/structure/reagent_dispensers/watertank/high,/turf/open/floor/grass,/area/ruin/space/has_grav)
+"sn" = (/obj/structure/table/reinforced,/obj/item/storage/backpack/duffelbag/syndie/surgery_adv,/obj/item/storage/firstaid/tactical/nukeop,/turf/open/floor/mineral/titanium/white,/area/ruin/space/has_grav)
+"sx" = (/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,/turf/open/floor/plating/asteroid/airless,/area/ruin/unpowered/no_grav)
+"sE" = (/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{dir = 4},/turf/closed/wall/r_wall,/area/ruin/space/has_grav)
+"sZ" = (/obj/machinery/airalarm/syndicate,/turf/closed/wall/r_wall,/area/ruin/space/has_grav)
+"tl" = (/obj/effect/decal/remains/human,/turf/open/floor/plating/asteroid/airless,/area/ruin/unpowered/no_grav)
+"ui" = (/turf/template_noop,/area/template_noop)
+"vq" = (/obj/structure/closet/syndicate{anchored = 1; name = "Syndicate Comms Locker"},/obj/item/clothing/head/HoS/syndicate,/obj/item/radio/headset/syndicate/alt,/obj/item/clothing/under/syndicate,/obj/machinery/light/small,/obj/item/melee/transforming/energy/sword/saber,/obj/item/clothing/suit/armor/vest/capcarapace/syndicate,/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"vr" = (/obj/structure/mirror/magic{pixel_x = 32},/turf/open/floor/mineral/titanium/white,/area/ruin/space/has_grav)
+"vO" = (/obj/machinery/atmospherics/pipe/simple/supply/hidden{dir = 6},/turf/open/floor/carpet/royalblack,/area/ruin/space/has_grav)
+"vT" = (/obj/machinery/atmospherics/pipe/simple/supply/hidden{dir = 4},/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"vY" = (/obj/machinery/door/airlock/hatch,/turf/open/floor/mineral/titanium/white,/area/ruin/space/has_grav)
+"wi" = (/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,/turf/closed/wall/r_wall,/area/ruin/space/has_grav)
+"wP" = (/obj/structure/flora/ausbushes/fullgrass,/obj/machinery/atmospherics/components/unary/vent_pump/on{dir = 8},/turf/open/floor/grass,/area/ruin/space/has_grav)
+"wX" = (/obj/machinery/door/airlock/hatch,/obj/structure/cable{icon_state = "4-8"},/obj/machinery/atmospherics/pipe/simple/supply/hidden{dir = 4},/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"wY" = (/obj/machinery/light/small{dir = 4},/obj/structure/cable{icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/supply/hidden,/obj/machinery/atmospherics/components/unary/vent_scrubber/on{dir = 4},/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"ya" = (/obj/machinery/light/small{dir = 1},/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"yK" = (/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"zT" = (/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{dir = 1},/turf/closed/mineral/random,/area/ruin/space/has_grav)
+"zV" = (/obj/machinery/autolathe/hacked,/obj/machinery/light/small{dir = 1},/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"Ad" = (/obj/structure/tank_dispenser/oxygen,/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"Bh" = (/obj/structure/lattice/catwalk,/obj/structure/cable{icon_state = "4-8"},/turf/open/space/basic,/area/space)
+"Br" = (/obj/structure/closet/crate/radiation,/obj/item/clothing/head/radiation,/obj/item/clothing/suit/radiation,/turf/open/floor/plating,/area/ruin/space/has_grav)
+"Cv" = (/obj/machinery/rnd/production/circuit_imprinter,/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"CL" = (/obj/machinery/telecomms/relay,/turf/open/floor/plasteel/airless/dark,/area/ruin/space/has_grav)
+"Ds" = (/obj/structure/lattice/catwalk,/obj/structure/cable{icon_state = "1-4"},/obj/structure/cable{icon_state = "4-8"},/turf/open/space/basic,/area/space)
+"Dx" = (/obj/structure/bed{dir = 1},/obj/effect/mob_spawn/human/syndicate{dir = 4; name = "Syndicate Comms Agent"; short_desc = You are a Syndicate, your job is to scout out the station and gather as much intel as you can. Assure no Nanotrasen thugs step foot upon your vessel.},/obj/item/crowbar,/turf/open/floor/carpet/royalblack,/area/ruin/space/has_grav)
+"DG" = (/obj/structure/lattice/catwalk,/obj/structure/cable{icon_state = "1-4"},/obj/structure/cable{icon_state = "1-8"},/turf/open/space/basic,/area/space)
+"DW" = (/obj/machinery/atmospherics/components/unary/vent_scrubber/on,/obj/machinery/sleeper/syndie/fullupgrade{dir = 1},/turf/open/floor/mineral/titanium/white,/area/ruin/space/has_grav)
+"EG" = (/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,/turf/closed/mineral/random,/area/ruin/space/has_grav)
+"Fv" = (/obj/structure/lattice/catwalk,/obj/structure/cable{icon_state = "2-4"},/obj/structure/cable{icon_state = "1-2"},/turf/open/space/basic,/area/space)
+"FK" = (/obj/machinery/atmospherics/pipe/simple/supply/hidden,/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"FO" = (/obj/structure/chair/office/dark{dir = 1},/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"Gb" = (/obj/item/storage/toolbox/syndicate,/obj/item/multitool,/turf/open/floor/plating,/area/ruin/space/has_grav)
+"Hg" = (/obj/machinery/atmospherics/pipe/simple/supply/hidden{dir = 4},/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"ID" = (/obj/structure/lattice/catwalk,/obj/structure/cable{icon_state = "1-2"},/obj/structure/cable{icon_state = "2-4"},/turf/open/space/basic,/area/space)
+"IV" = (/obj/machinery/atmospherics/components/unary/vent_pump/on{dir = 8},/turf/open/floor/plasteel/airless/dark,/area/ruin/space/has_grav)
+"JV" = (/obj/structure/cable{icon_state = "0-4"},/turf/open/floor/plating/airless,/area/space)
+"Ke" = (/obj/structure/cable{icon_state = "1-2"},/obj/machinery/atmospherics/pipe/manifold/supply/hidden{dir = 8},/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"LD" = (/obj/structure/table/reinforced,/obj/machinery/light/small{dir = 4},/obj/item/storage/backpack/duffelbag/syndie/bulldogbundle,/turf/open/floor/plasteel/airless/dark,/area/ruin/space/has_grav)
+"Mt" = (/obj/structure/table/reinforced,/obj/item/paper_bin,/obj/item/pen,/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"MH" = (/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{dir = 4},/turf/closed/mineral/random,/area/ruin/space/has_grav)
+"MK" = (/obj/structure/lattice/catwalk,/obj/structure/cable{icon_state = "0-2"},/turf/open/space/basic,/area/space)
+"MV" = (/obj/structure/table/reinforced,/obj/item/paper/monitorkey,/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"Nn" = (/obj/machinery/porta_turret/syndicate,/turf/closed/wall/r_wall,/area/ruin/space/has_grav)
+"Np" = (/obj/structure/lattice/catwalk,/obj/structure/cable{icon_state = "1-2"},/obj/structure/cable{icon_state = "1-4"},/turf/open/space/basic,/area/space)
+"Nq" = (/obj/structure/closet/crate/solarpanel_small,/turf/open/floor/plating,/area/ruin/space/has_grav)
+"NR" = (/turf/open/floor/plating/airless,/area/space)
+"NY" = (/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{dir = 1},/turf/closed/wall/r_wall,/area/ruin/space/has_grav)
+"Ou" = (/obj/machinery/door/airlock/hatch,/obj/machinery/atmospherics/pipe/simple/supply/hidden{dir = 4},/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"Pb" = (/obj/machinery/atmospherics/components/unary/tank/air,/turf/open/floor/plating,/area/ruin/space/has_grav)
+"Pr" = (/turf/closed/mineral/random,/area/ruin/space/has_grav)
+"PU" = (/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{dir = 10},/turf/closed/wall/r_wall,/area/ruin/space/has_grav)
+"Qz" = (/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{dir = 5},/turf/closed/wall/r_wall,/area/ruin/space/has_grav)
+"QO" = (/obj/machinery/atmospherics/components/unary/vent_pump/on{dir = 8},/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"RC" = (/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{dir = 9},/turf/closed/mineral/random,/area/ruin/space/has_grav)
+"RM" = (/obj/machinery/door/airlock/hatch,/obj/machinery/atmospherics/pipe/simple/supply/hidden,/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"Sw" = (/obj/structure/flora/ausbushes/grassybush,/mob/living/simple_animal/butterfly,/turf/open/floor/grass,/area/ruin/space/has_grav)
+"SM" = (/obj/structure/cable{icon_state = "0-8"},/turf/open/floor/plating/airless,/area/space)
+"SN" = (/obj/machinery/door/airlock/highsecurity,/obj/machinery/atmospherics/pipe/simple/supply/hidden{dir = 4},/turf/open/floor/plasteel/dark,/area/ruin/space/has_grav)
+"TK" = (/obj/structure/cable{icon_state = "1-8"},/obj/machinery/atmospherics/pipe/simple/supply/hidden{dir = 9},/obj/item/kirbyplants/photosynthetic,/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"Un" = (/obj/machinery/atmospherics/pipe/simple/supply/hidden{dir = 4},/turf/open/floor/plasteel/airless/dark,/area/ruin/space/has_grav)
+"Ut" = (/obj/structure/cable{icon_state = "4-8"},/obj/machinery/atmospherics/components/unary/vent_pump/on{dir = 4},/turf/open/floor/plating,/area/ruin/space/has_grav)
+"UD" = (/obj/machinery/light/small{dir = 4},/obj/structure/cable{icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/supply/hidden,/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{dir = 4},/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"UQ" = (/obj/machinery/porta_turret/syndicate{dir = 6},/turf/closed/wall/r_wall,/area/ruin/space/has_grav)
+"VP" = (/turf/closed/wall/r_wall,/area/ruin/space/has_grav)
+"Wd" = (/obj/machinery/rnd/production/techfab/department/science,/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"WK" = (/obj/machinery/atmospherics/pipe/simple/supply/hidden{dir = 4},/obj/item/kirbyplants/photosynthetic,/turf/open/floor/mineral/plastitanium/red,/area/ruin/space/has_grav)
+"WT" = (/obj/structure/cable{icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/supply/hidden,/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"WV" = (/obj/machinery/ore_silo,/turf/open/floor/plasteel/airless/dark,/area/ruin/space/has_grav)
+"Xk" = (/obj/machinery/mineral/bluespace_miner,/turf/open/floor/plasteel/airless/dark,/area/ruin/space/has_grav)
+"Xn" = (/obj/item/pickaxe,/turf/open/floor/plating/asteroid/airless,/area/ruin/unpowered/no_grav)
+"Xs" = (/obj/machinery/suit_storage_unit/syndicate,/turf/open/floor/mineral/plastitanium,/area/ruin/space/has_grav)
+"YI" = (/obj/machinery/hydroponics/constructable,/turf/open/floor/grass,/area/ruin/space/has_grav)
+"YY" = (/obj/structure/cable{icon_state = "4-8"},/obj/machinery/atmospherics/pipe/manifold/supply/hidden,/turf/open/floor/plating,/area/ruin/space/has_grav)
+"Zn" = (/obj/structure/lattice/catwalk,/turf/open/space/basic,/area/space)
+"Zo" = (/obj/machinery/rnd/production/techfab/department/engineering,/obj/machinery/light/small,/turf/open/floor/plating,/area/ruin/space/has_grav)
+"Zp" = (/obj/structure/cable{icon_state = "0-8"},/obj/structure/cable{icon_state = "4-8"},/turf/open/floor/plating,/area/ruin/space/has_grav)
+
+(1,1,1) = {"
+uiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiui
+uiuiuiuiuiuiuiuiuiuiuibQuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiui
+uiuiuiuiuiuiuiuiuiuiuibQbQbQuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiui
+uiuiuiuiuiuiuiuiuiuibdVPbabababababaVPnSuiuiuiuiuiuiuiuiuiui
+uiuiuiuiuiuiuiuiuiuiVPreddMVMtnQWdCvzVVPVPVPVPVPnSuiuiuiuiui
+uiuiuiuiuiuiuiuiuibQVPFOFOyKqjyKyKhAyKVPCLXkkMivVPuiuiuiuiui
+uiuiuiuiuiuiuiuibQbQVPvqcZyKkmcsWKlJcsSNUnIVkMLDVPuiuiuiuiui
+uiuiuiuiuiuiuibQbdVPVPVPVPVPRMVPVPwiVPVPVPWVkMivVPuiuiuiuiui
+uiuiuiuiuiuibQbQVPDxaeVPsZVPFKVPPrEGPrXnbQVPVPVPUQuiuiuiuiui
+uiuiuiuiuiuibQPrVPcavOOuHgdniiVPPrEGPrPrtlbQuiuiuiuiuiuiuiui
+uiuiuiuiuibQbQPrVPktajotPUVPWTVPVPQzPUVPVPVPVPVPuiuiuiuiuiui
+uiuibQbQbQbQPrPrVPVPvYVPEGVPKeOuHgHgvTQOyadxdxaYbQuiuiuiuiui
+uiuiuibQbQbQbQPrPrVPvrVPgeotUDotototsEAdXsXsVPVPbQbQbQuiuiui
+uiuiuiuiuiuibQbQbQVPaDVPPrVPWTsndHrPQzPUVPVPVPuiuiuiuiuiuiui
+uiuiuiuiuiuiuiuibQNnVPVPPrVPKekGdZmMVPEGPrbQuiuiuiuiuiuiuiui
+uiuiuiuiuiuiuiuiuiuibQbQPrVPWTbfDWkvVPEGPruiuiuiuiuiuiuiuiui
+uiuiuiuiuiuiuiuiuiuibQbQPrVPWTVPwiVPVPEGPruiuiuiuiuiuiuiuiui
+uiuiNRZnNRMKNRuiuiuiuibQPrVPwYotbiMHzTRCbQuiuiuiuiuiuiuiuiui
+uiuiNRZnNRIDSMuibdVPVPVPVPVPWTVPYIrSEGbQuiuiuiuiuiuiuiuiuiui
+uiuiNRZnNRFvSMVPVPoZNqPbVPVPKeOuwPSwEGbQuiuiuiuiuiuiuiuiuiui
+uiJVBhntBhDsBhmLikZpUtYYwXbvTKVPpFbqEGbQuiuiuiuiuiuiuiuiuiui
+uiuiNRNpSMZnNRVPVPBrZoGbototNYotMHMHRCPrbQuiuiuiuiuiuiuiuiui
+uiuiJVDGSMZnNRuimwVPVPVPVPbQsxPrPrPrPrPrPrbQuiuiuiuiuiuiuiui
+uiuiNRZnNRZnNRuiuiuiuiuiuibQiUbQbQPrPrPrPrPrbQbQuiuiuiuiuiui
+uiuiuiuiuiuiuiuiuiuiuiuiuiuiuibQbQbQbQbQPrPrbQbQuiuiuiuiuiui
+uiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuibQbQbQbQbQbQbQbQbQuiui
+uiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiui
+uiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiui
+uiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiui
+uiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiui
+"}

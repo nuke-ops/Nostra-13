@@ -331,6 +331,24 @@
 	name = "Space Diner"
 	description = "Come, traveler of the bluespace planes. Sit, enjoy a drink and take one of the fair maidens for a night. The exit is the way you came in, via that teleporter thingy, but do remember to stay safe."
 
+/datum/map_template/ruin/space/syndie_minibase_spawn
+	id = "syndie_minibase_spawn"
+	suffix = "syndie_minibase_spawn.dmm"
+	name = "Syndicate Communications and Retrieval Base"
+	description = "The Syndicate have placed you within close proximity of your target, gather what information you can about the base. Get in, steal the Captains Antique Raygun and get out. May best of luck be on your side soldier."
+
+/datum/map_template/ruin/space/dcshuttle
+	id = "dcshuttle"
+	suffix = "dcshuttle.dmm"
+	name = "DefCorp Ship"
+	description = "Jer"
+
+/datum/map_template/ruin/space/believesinnarsie
+	id = "believesinnarsie"
+	suffix = "believesinnarsie.dmm"
+	name = "Believes-In-Narsie"
+	description = "My thy savior send there grace upon me, and bless those blinded by there hate to come forth and share a vision of thy saviors true wonders."
+
 //Space ruins for the station z
 /datum/map_template/ruin/spacenearstation
 	prefix = "_maps/RandomRuins/SpaceRuinsStation/"
