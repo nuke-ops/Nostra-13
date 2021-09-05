@@ -11296,8 +11296,6 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 8
 	},
-/obj/structure/chair/office/dark,
-/obj/effect/landmark/start/paramedic,
 /obj/structure/cable/white{
 	icon_state = "2-8"
 	},
@@ -11312,6 +11310,7 @@
 	dir = 8;
 	network = list("ss13","medbay")
 	},
+/obj/structure/closet/secure_closet/paramedic,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "asB" = (
@@ -20779,8 +20778,16 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 5
 	},
-/turf/closed/wall,
-/area/medical/paramedic)
+/obj/machinery/door/airlock/maintenance_hatch{
+	name = "Maintenance Hatch";
+	req_access_txt = "5;6;12;64"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plating,
+/area/maintenance/port/central)
 "aHO" = (
 /obj/structure/cable/white{
 	icon_state = "4-8"
@@ -21383,7 +21390,6 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/oldomega/OldMedbay)
 "aIK" = (
-/obj/structure/closet/secure_closet/paramedic,
 /obj/effect/turf_decal/trimline/blue/filled/line,
 /obj/machinery/light{
 	dir = 1
@@ -21397,9 +21403,6 @@
 	},
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 8
-	},
-/obj/machinery/computer/crew{
-	dir = 1
 	},
 /obj/machinery/airalarm{
 	dir = 8;
@@ -21964,6 +21967,7 @@
 /area/hallway/primary/port/aft)
 "aJQ" = (
 /obj/effect/turf_decal/trimline/blue/filled/corner,
+/obj/machinery/suit_storage_unit/paramedic,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "aJR" = (
@@ -22728,21 +22732,8 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/structure/table/glass,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 4
-	},
-/obj/item/folder/white{
-	pixel_x = -6
-	},
-/obj/item/pen{
-	pixel_x = -2;
-	pixel_y = 3
-	},
-/obj/item/kirbyplants{
-	icon_state = "plant-11";
-	pixel_x = 5;
-	pixel_y = 18
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
@@ -23374,13 +23365,15 @@
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 4
 	},
-/obj/effect/landmark/start/paramedic,
+/obj/machinery/vending/medical,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "aMo" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
 	},
+/obj/effect/landmark/start/paramedic,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "aMp" = (
@@ -36635,13 +36628,6 @@
 	},
 /area/maintenance/port)
 "bjP" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/box/beakers{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/item/storage/box/syringes,
-/obj/item/extinguisher/mini,
 /obj/machinery/airalarm/unlocked{
 	dir = 4;
 	pixel_x = -23
@@ -36649,16 +36635,14 @@
 /obj/machinery/newscaster{
 	pixel_y = -32
 	},
-/obj/machinery/camera{
-	c_tag = "Xenobiology Lab";
-	dir = 4
-	},
-/obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes,
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal/bin,
 /turf/open/floor/plasteel/dark,
 /area/science/xenobiology)
 "bjQ" = (
@@ -39319,6 +39303,7 @@
 	light_power = 0.25;
 	light_range = 10
 	},
+/obj/machinery/pool/controller,
 /turf/open/floor/plasteel/dark,
 /area/commons/fitness/pool)
 "boS" = (
@@ -39439,11 +39424,6 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
-/obj/machinery/camera{
-	c_tag = "Xenobiology North";
-	dir = 4;
-	pixel_y = -5
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -39506,6 +39486,11 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/camera{
+	c_tag = "Xenobiology North";
+	dir = 8;
+	pixel_y = -5
 	},
 /turf/open/floor/plasteel,
 /area/science/xenobiology)
@@ -40010,8 +39995,8 @@
 /turf/open/floor/carpet/black,
 /area/service/bar/atrium)
 "bpY" = (
-/obj/structure/reagent_dispensers/watertank/high,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/reagent_dispensers/watertank/high,
 /turf/open/floor/wood,
 /area/commons/fitness/pool)
 "bpZ" = (
@@ -40089,6 +40074,7 @@
 /turf/open/floor/plating,
 /area/science/xenobiology)
 "bqh" = (
+/obj/structure/reagent_dispensers/watertank/high,
 /turf/open/floor/wood,
 /area/commons/fitness/pool)
 "bqi" = (
@@ -40395,10 +40381,6 @@
 	},
 /turf/open/floor/carpet/black,
 /area/service/bar/atrium)
-"bqD" = (
-/obj/machinery/pool/controller,
-/turf/open/floor/wood,
-/area/commons/fitness/pool)
 "bqE" = (
 /obj/effect/decal/cleanable/robot_debris/old,
 /obj/effect/landmark/xeno_spawn,
@@ -40885,17 +40867,6 @@
 /obj/structure/grille,
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
-"btN" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/machinery/door/airlock/maintenance_hatch{
-	name = "Maintenance Hatch";
-	req_access_txt = "5;6;12;64"
-	},
-/turf/open/floor/plating,
-/area/maintenance/port/central)
 "buw" = (
 /obj/machinery/holopad,
 /obj/effect/turf_decal/bot,
@@ -43962,6 +43933,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/event_spawn,
+/obj/effect/landmark/start/paramedic,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "hlt" = (
@@ -45543,6 +45515,26 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/plasteel,
 /area/cargo/miningdock)
+"kKD" = (
+/obj/effect/turf_decal/bot,
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 1
+	},
+/obj/structure/table/reinforced,
+/obj/item/storage/box/beakers{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/box/syringes,
+/obj/item/extinguisher/mini,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/structure/disposalpipe/segment{
+	dir = 10
+	},
+/turf/open/floor/plasteel,
+/area/science/xenobiology)
 "kLi" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -47651,6 +47643,9 @@
 /area/hallway/primary/starboard)
 "pWO" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
+	dir = 4
+	},
+/obj/machinery/computer/crew{
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
@@ -51423,6 +51418,7 @@
 /obj/structure/cable/white{
 	icon_state = "0-4"
 	},
+/obj/structure/closet/secure_closet/paramedic,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "uuJ" = (
@@ -52300,10 +52296,10 @@
 /obj/structure/cable/white{
 	icon_state = "1-2"
 	},
-/obj/machinery/suit_storage_unit/paramedic,
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 8
 	},
+/obj/machinery/suit_storage_unit/paramedic,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "wAm" = (
@@ -86359,7 +86355,7 @@ bmA
 kLi
 bpL
 blw
-bqh
+cMP
 hBx
 aad
 aad
@@ -86872,8 +86868,8 @@ bog
 sUc
 bpl
 bmD
-bqD
-cMP
+bqh
+bqh
 hBx
 aad
 aad
@@ -92235,12 +92231,12 @@ sGW
 aBU
 atd
 aGH
-btN
+adz
 aJQ
 uuj
 pWO
 aMn
-arw
+adz
 tFx
 aQX
 aSk
@@ -97413,7 +97409,7 @@ boD
 ibv
 bqp
 bnN
-boD
+kKD
 bjP
 bfP
 bjI
