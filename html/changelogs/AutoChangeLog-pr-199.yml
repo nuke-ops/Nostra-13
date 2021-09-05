@@ -1,0 +1,6 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - bugfix: The "Monke table" is now reachable on OmegaStation.
+  - tweak: Doubled and improved Paramedic offices on maps.
+  - tweak: Added Paramedic office on DeltaStation.
