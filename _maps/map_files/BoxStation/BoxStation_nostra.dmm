@@ -24756,8 +24756,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
 	},
-/obj/effect/landmark/start/paramedic,
-/obj/structure/chair/stool,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "bhr" = (
@@ -25305,7 +25303,7 @@
 	pixel_x = 10;
 	pixel_y = 17
 	},
-/obj/effect/landmark/start/paramedic,
+/obj/structure/closet/secure_closet/paramedic,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "biC" = (
@@ -25950,22 +25948,9 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
 	},
-/obj/structure/table/glass,
-/obj/item/flashlight/lamp{
-	pixel_x = -2;
-	pixel_y = 11
+/obj/machinery/vending/wallmed{
+	pixel_y = -28
 	},
-/obj/item/folder/white,
-/obj/item/pen,
-/turf/open/floor/plasteel/dark,
-/area/medical/paramedic)
-"bkd" = (
-/obj/machinery/camera{
-	c_tag = "Paramedic Disbatch";
-	dir = 8;
-	network = list("ss13","medbay")
-	},
-/obj/machinery/suit_storage_unit/paramedic,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "bkh" = (
@@ -30337,6 +30322,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/white,
 /area/science/explab)
 "bux" = (
@@ -30920,6 +30908,9 @@
 "bvN" = (
 /obj/structure/chair/office/light,
 /obj/effect/landmark/start/scientist,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/white,
 /area/science/explab)
 "bvO" = (
@@ -31564,6 +31555,9 @@
 /obj/machinery/computer/rdconsole/experiment{
 	dir = 1
 	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/white/side{
 	dir = 1
 	},
@@ -32081,7 +32075,10 @@
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/firedoor/heavy,
-/turf/open/floor/engine,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/open/floor/plating,
 /area/science/explab)
 "byw" = (
 /obj/machinery/door/poddoor/preopen{
@@ -33812,6 +33809,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -29
 	},
+/obj/item/pipe_dispenser/science,
 /turf/open/floor/plasteel/cafeteria,
 /area/command/heads_quarters/rd)
 "bCh" = (
@@ -34720,16 +34718,16 @@
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "bEo" = (
-/obj/machinery/portable_atmospherics/canister/toxins,
 /obj/effect/turf_decal/delivery,
+/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /turf/open/floor/engine,
 /area/science/storage)
 "bEp" = (
-/obj/machinery/portable_atmospherics/canister/toxins,
 /obj/structure/sign/warning/nosmoking{
 	pixel_y = 32
 	},
 /obj/effect/turf_decal/delivery,
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/open/floor/engine,
 /area/science/storage)
 "bEq" = (
@@ -35582,6 +35580,7 @@
 	pixel_y = 2
 	},
 /obj/structure/table/reinforced,
+/obj/item/pipe_dispenser/science,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
 "bGm" = (
@@ -36593,17 +36592,12 @@
 /turf/open/floor/engine,
 /area/science/xenobiology)
 "bIz" = (
-/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/effect/turf_decal/bot,
+/obj/machinery/portable_atmospherics/canister/toxins,
 /turf/open/floor/engine,
 /area/science/storage)
 "bIA" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/effect/turf_decal/bot,
-/turf/open/floor/engine,
-/area/science/storage)
-"bIB" = (
-/obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/engine,
 /area/science/storage)
@@ -38229,7 +38223,7 @@
 /obj/machinery/sparker/toxmix{
 	pixel_x = 25
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/toxins_mixing_output{
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
 	dir = 4
 	},
 /turf/open/floor/engine/vacuum,
@@ -48437,11 +48431,11 @@
 /turf/open/floor/engine/vacuum,
 /area/maintenance/disposal/incinerator)
 "coq" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/incinerator_output{
-	dir = 1
-	},
 /obj/structure/sign/warning/vacuum/external{
 	pixel_y = -32
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
+	dir = 1
 	},
 /turf/open/floor/engine/vacuum,
 /area/maintenance/disposal/incinerator)
@@ -51805,6 +51799,9 @@
 	dir = 4
 	},
 /obj/effect/landmark/event_spawn,
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
 /turf/open/floor/plasteel/white,
 /area/science/explab)
 "cBu" = (
@@ -53467,6 +53464,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
 	},
+/obj/structure/closet/secure_closet/paramedic,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "dqb" = (
@@ -53476,6 +53474,16 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/closed/wall/r_wall,
 /area/maintenance/disposal/incinerator)
+"dqM" = (
+/obj/structure/rack,
+/obj/item/stack/sheet/glass{
+	amount = 20;
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/obj/item/stack/sheet/metal/fifty,
+/turf/open/floor/plating,
+/area/maintenance/department/medical/morgue)
 "dsC" = (
 /obj/structure/chair/stool{
 	pixel_y = 8
@@ -55899,16 +55907,6 @@
 	},
 /turf/closed/wall,
 /area/maintenance/port/fore)
-"jbK" = (
-/obj/item/stack/sheet/glass{
-	amount = 20;
-	pixel_x = -3;
-	pixel_y = 6
-	},
-/obj/item/stack/sheet/metal/fifty,
-/obj/structure/rack,
-/turf/open/floor/plating,
-/area/maintenance/department/medical/morgue)
 "jdj" = (
 /obj/docking_port/stationary/random{
 	dir = 4;
@@ -55921,13 +55919,12 @@
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 1
 	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
-	dir = 1
+/obj/machinery/camera{
+	c_tag = "Paramedic Disbatch";
+	dir = 8;
+	network = list("ss13","medbay")
 	},
-/obj/machinery/vending/wallmed{
-	pixel_y = -28
-	},
-/obj/effect/landmark/start/paramedic,
+/obj/machinery/suit_storage_unit/paramedic,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "jex" = (
@@ -56845,7 +56842,7 @@
 	name = "Paramedic's Office";
 	req_access_txt = "5;6;12;64"
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "kQe" = (
 /obj/structure/table/wood/poker,
@@ -56919,11 +56916,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/machinery/door/airlock/medical{
-	name = "Paramedic's Office";
-	req_access_txt = "5;6;12;64"
-	},
-/turf/open/floor/plasteel/dark,
+/turf/closed/wall,
 /area/medical/morgue)
 "kWp" = (
 /obj/structure/shuttle/engine/heater{
@@ -57059,6 +57052,10 @@
 	icon_state = "wood-broken6"
 	},
 /area/maintenance/bar)
+"lqh" = (
+/obj/effect/landmark/start/paramedic,
+/turf/open/floor/plasteel,
+/area/hallway/primary/starboard)
 "lqO" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -58335,7 +58332,7 @@
 /obj/effect/turf_decal/trimline/blue/filled/corner{
 	dir = 4
 	},
-/obj/structure/closet/secure_closet/paramedic,
+/obj/machinery/suit_storage_unit/paramedic,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "ouQ" = (
@@ -59258,6 +59255,11 @@
 	},
 /turf/open/floor/wood/wood_diagonal,
 /area/maintenance/port/fore)
+"qHG" = (
+/obj/effect/turf_decal/delivery,
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/turf/open/floor/engine,
+/area/science/storage)
 "qIw" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -59709,6 +59711,18 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/brig)
+"rDc" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "telelab";
+	name = "test chamber blast door"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor/heavy,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plating,
+/area/science/explab)
 "rGo" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -59861,6 +59875,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
+/obj/effect/landmark/start/paramedic,
 /turf/open/floor/plasteel/dark,
 /area/medical/paramedic)
 "rXl" = (
@@ -60341,6 +60356,22 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall,
 /area/hallway/secondary/service)
+"tdk" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "telelab";
+	name = "test chamber blast door"
+	},
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor/heavy,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/science/explab)
 "tgH" = (
 /obj/structure/filingcabinet/employment,
 /turf/open/floor/wood,
@@ -103321,11 +103352,11 @@ aRJ
 bbB
 aYV
 aYV
-aYV
+lqh
 nyi
 nyi
 nyi
-bkd
+nyi
 nyi
 cTO
 bmZ
@@ -103583,7 +103614,7 @@ bfS
 biD
 bfS
 kQk
-kQk
+tEL
 cTO
 bmZ
 bpI
@@ -103840,7 +103871,7 @@ eUy
 pkg
 biE
 kQk
-tEL
+dqM
 cTO
 bmZ
 bpL
@@ -104097,7 +104128,7 @@ bfS
 vxz
 laN
 kQk
-jbK
+kQk
 cTO
 bmZ
 bpK
@@ -107455,8 +107486,8 @@ bDc
 bEo
 bIC
 bEc
-bIB
-bIB
+bIz
+bIz
 bJN
 bMo
 bNp
@@ -107966,7 +107997,7 @@ bzD
 bxv
 bCc
 bDc
-bEo
+qHG
 bDj
 bDY
 bIA
@@ -112330,7 +112361,7 @@ brv
 cBt
 bvN
 bxp
-byv
+tdk
 bzO
 bAQ
 bCl
@@ -112587,7 +112618,7 @@ brv
 buv
 bvO
 bxr
-byv
+rDc
 bzO
 bzO
 bzO
