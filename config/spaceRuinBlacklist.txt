@@ -56,3 +56,4 @@
 #_maps/RandomRuins/SpaceRuins/syndie_minibase_spawn.dmm
 #_maps/RandomRuins/SpaceRuins/dcshuttle.dmm
 #_maps/RandomRuins/SpaceRuins/believesinnarsie.dmm
+#_maps/RandomRuins/SpaceRuins/spiderden.dmm

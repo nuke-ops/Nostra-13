@@ -349,6 +349,12 @@
 	name = "Believes-In-Narsie"
 	description = "My thy savior send there grace upon me, and bless those blinded by there hate to come forth and share a vision of thy saviors true wonders."
 
+/datum/map_template/ruin/space/spiderden
+	id = "spiderden"
+	suffix = "spiderden.dmm"
+	name = "Spider Den"
+	description = "They tell stories of the crucades that happened millenias past..."
+
 //Space ruins for the station z
 /datum/map_template/ruin/spacenearstation
 	prefix = "_maps/RandomRuins/SpaceRuinsStation/"

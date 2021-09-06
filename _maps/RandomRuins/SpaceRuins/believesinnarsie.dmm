@@ -50,6 +50,10 @@
 	},
 /turf/open/floor/holofloor/asteroid,
 /area/ruin/space/has_grav)
+"q" = (
+/obj/structure/trap/fire,
+/turf/open/floor/holofloor/asteroid,
+/area/ruin/space/has_grav)
 "r" = (
 /obj/effect/decal/cleanable/blood/gibs/human,
 /obj/effect/decal/cleanable/blood/old,
@@ -63,7 +67,8 @@
 /turf/open/floor/holofloor/asteroid,
 /area/ruin/space/has_grav)
 "u" = (
-/obj/structure/closet/crate/necropolis/tendril/random,
+/obj/item/cult_bastard,
+/obj/structure/trap/fire,
 /turf/open/floor/holofloor/asteroid,
 /area/ruin/space/has_grav)
 "x" = (
@@ -276,7 +281,7 @@ j
 e
 e
 d
-e
+q
 I
 R
 R
@@ -356,7 +361,7 @@ a
 a
 e
 e
-e
+q
 e
 R
 R
@@ -411,7 +416,7 @@ e
 X
 X
 e
-e
+q
 e
 a
 a
