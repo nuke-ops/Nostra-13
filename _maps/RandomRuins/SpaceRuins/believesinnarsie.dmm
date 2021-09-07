@@ -5,20 +5,23 @@
 "c" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/remains/human,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "d" = (
 /obj/item/clothing/suit/cultrobes,
 /obj/item/clothing/shoes/cult/alt,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "e" = (
 /turf/open/floor/holofloor/asteroid,
 /area/ruin/space/has_grav)
+"g" = (
+/turf/open/floor/plating/asteroid,
+/area/ruin/space/has_grav)
 "i" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/decal/remains/human,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "j" = (
 /obj/item/flashlight/lantern{
@@ -26,33 +29,32 @@
 	name = "cultist lantern";
 	on = 1
 	},
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "k" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/clockwork/overlay/floor/bloodcult,
 /obj/effect/temp_visual/cult/turf/floor,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "n" = (
 /obj/effect/rune/narsie,
 /obj/item/melee/cultblade/dagger,
-/obj/effect/mob_spawn/alien/corpse/humanoid,
 /obj/effect/decal/cleanable/blood/gibs/human,
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/clockwork/overlay/floor/bloodcult,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "p" = (
 /obj/item/paper/crumpled{
 	info = "Soon, all shall see the wonders my savior Nar'Sie will bestow upon this realm of mortals. For they have been blinded by lies and deceat. My master, my savior is thy only one who can show them the true meaning of life. To grovel beneath the feet of our lord and to serve there will for thee rest of eternity!        May thy savior cometh too me- Believes-In-Narsie"
 	},
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "q" = (
 /obj/structure/trap/fire,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "r" = (
 /obj/effect/decal/cleanable/blood/gibs/human,
@@ -60,47 +62,47 @@
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/clockwork/overlay/floor/bloodcult,
 /obj/effect/temp_visual/cult/turf/floor,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "t" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "u" = (
 /obj/item/cult_bastard,
 /obj/structure/trap/fire,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "x" = (
 /mob/living/simple_animal/hostile/construct/wraith/hostile,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "z" = (
 /obj/effect/decal/cleanable/blood/tracks,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "A" = (
 /obj/effect/decal/cleanable/blood/gibs/human/body,
 /obj/effect/decal/cleanable/blood/splats,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "I" = (
 /obj/effect/decal/cleanable/blood/gibs/body,
 /obj/effect/decal/cleanable/blood/splats,
 /obj/effect/decal/remains/human,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "M" = (
 /obj/effect/decal/cleanable/blood/gibs/human,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "O" = (
 /obj/effect/decal/cleanable/blood/splats,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "P" = (
 /mob/living/simple_animal/hostile/construct/armored/hostile,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "R" = (
 /turf/closed/indestructible/rock,
@@ -108,11 +110,11 @@
 "X" = (
 /obj/effect/clockwork/overlay/floor/bloodcult,
 /obj/effect/temp_visual/cult/turf/floor,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "Y" = (
 /obj/effect/spawner/trap,
-/turf/open/floor/holofloor/asteroid,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 
 (1,1,1) = {"
@@ -125,7 +127,7 @@ a
 a
 a
 a
-e
+g
 a
 a
 a
@@ -147,7 +149,7 @@ a
 a
 a
 a
-e
+g
 a
 a
 a
@@ -165,14 +167,14 @@ a
 a
 a
 a
-e
+g
 a
 a
 a
-e
+g
 a
 a
-e
+g
 a
 a
 a
@@ -187,14 +189,14 @@ a
 a
 a
 a
-e
-e
-e
-e
-e
-e
+g
+g
+g
+g
+g
+g
 a
-e
+g
 a
 a
 a
@@ -208,15 +210,15 @@ a
 a
 a
 a
-e
+g
 R
 R
-e
+g
 R
 Y
-e
+g
 R
-e
+g
 a
 a
 a
@@ -228,8 +230,8 @@ a
 (6,1,1) = {"
 a
 a
-e
-e
+g
+g
 R
 P
 R
@@ -239,7 +241,7 @@ X
 R
 R
 R
-e
+g
 a
 a
 a
@@ -254,16 +256,16 @@ a
 a
 R
 X
-e
+g
 t
-e
-e
+g
+g
 X
 R
 R
-e
-e
-e
+g
+g
+g
 a
 a
 a
@@ -273,13 +275,13 @@ a
 a
 a
 a
-e
+g
 R
 d
 X
 j
-e
-e
+g
+g
 d
 q
 I
@@ -295,15 +297,15 @@ a
 a
 a
 a
-e
+g
 Y
-e
+g
 X
-e
+g
 X
-e
-e
-e
+g
+g
+g
 X
 X
 X
@@ -316,8 +318,8 @@ a
 (10,1,1) = {"
 a
 a
-e
-e
+g
+g
 R
 R
 u
@@ -330,8 +332,8 @@ z
 i
 X
 X
-e
-e
+g
+g
 a
 a
 "}
@@ -339,7 +341,7 @@ a
 a
 a
 a
-e
+g
 R
 R
 R
@@ -348,10 +350,10 @@ r
 M
 X
 A
-e
-e
-e
-e
+g
+g
+g
+g
 a
 a
 a
@@ -359,20 +361,20 @@ a
 "}
 (12,1,1) = {"
 a
-e
-e
+g
+g
 q
-e
+g
 R
 R
 X
-e
-e
+g
+g
 p
 X
 R
 R
-e
+g
 a
 a
 a
@@ -383,18 +385,18 @@ a
 a
 a
 a
-e
-e
+g
+g
 c
 R
 d
 O
-e
+g
 Y
 X
 R
 x
-e
+g
 a
 a
 a
@@ -406,18 +408,18 @@ a
 a
 a
 a
-e
-e
+g
+g
 R
 R
 R
 R
-e
+g
 X
 X
-e
+g
 q
-e
+g
 a
 a
 a
@@ -428,14 +430,14 @@ a
 a
 a
 a
-e
+g
 x
 e
 R
-e
-e
-e
-e
+g
+g
+g
+g
 a
 a
 a
@@ -450,14 +452,14 @@ a
 a
 a
 a
-e
-e
+g
+g
 e
 R
-e
+g
 a
 a
-e
+g
 a
 a
 a
@@ -472,10 +474,10 @@ a
 a
 a
 a
-e
+g
 a
 a
-e
+g
 a
 a
 a
@@ -494,7 +496,7 @@ a
 a
 a
 a
-e
+g
 a
 a
 a
@@ -516,7 +518,7 @@ a
 a
 a
 a
-e
+g
 a
 a
 a

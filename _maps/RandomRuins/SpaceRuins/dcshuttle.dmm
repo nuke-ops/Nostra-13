@@ -13,6 +13,19 @@
 "cB" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/powered/shuttle/medium_2)
+"dn" = (
+/obj/machinery/autolathe/hacked,
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered/shuttle/medium_2)
+"dr" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8
+	},
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8
+	},
+/turf/open/space,
+/area/ruin/powered/shuttle/medium_2)
 "du" = (
 /obj/machinery/door/airlock/external/glass,
 /obj/structure/fans/tiny,
@@ -168,9 +181,10 @@
 /turf/closed/wall/mineral/titanium/overspace,
 /area/ruin/powered/shuttle/medium_2)
 "qi" = (
-/obj/machinery/spaceship_navigation_beacon,
-/obj/structure/window/reinforced/spawner/east,
-/turf/open/floor/plating,
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8
+	},
+/turf/open/space,
 /area/ruin/powered/shuttle/medium_2)
 "qm" = (
 /obj/machinery/mineral/ore_redemption,
@@ -247,6 +261,9 @@
 /obj/item/reagent_containers/food/snacks/candy,
 /obj/item/reagent_containers/food/snacks/candy,
 /obj/item/reagent_containers/food/snacks/waffles,
+/obj/machinery/microwave{
+	pixel_y = 7
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered/shuttle/medium_2)
 "zL" = (
@@ -289,8 +306,8 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/shuttle/engine/void{
-	dir = 4
+/obj/structure/shuttle/engine/heater{
+	dir = 8
 	},
 /turf/open/floor/plating/airless,
 /area/ruin/powered/shuttle/medium_2)
@@ -419,6 +436,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/powered/shuttle/medium_2)
+"VD" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/turf/open/floor/plasteel/dark,
+/area/ruin/powered/shuttle/medium_2)
 "Xa" = (
 /obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
@@ -442,13 +465,13 @@
 kv
 kv
 kv
+qi
+qi
 kv
 kv
 kv
-kv
-kv
-kv
-kv
+qi
+qi
 kv
 kv
 kv
@@ -484,19 +507,19 @@ kv
 kv
 "}
 (4,1,1) = {"
-kv
-kv
+qi
+dr
 OA
 cB
 cB
-cB
 kv
-cB
+kv
+kv
 cB
 cB
 OA
-kv
-kv
+qi
+qi
 "}
 (5,1,1) = {"
 DK
@@ -594,9 +617,9 @@ GO
 GO
 Ok
 GO
-kY
-qi
-kY
+GO
+GO
+GO
 GO
 UD
 GO
@@ -716,7 +739,7 @@ GO
 Vc
 fj
 Xa
-hD
+VD
 sa
 GO
 kv
@@ -731,7 +754,7 @@ GO
 xz
 RN
 Xa
-hD
+dn
 hD
 GO
 kv

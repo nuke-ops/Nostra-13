@@ -4,7 +4,10 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "aj" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 1
@@ -13,43 +16,67 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "aD" = (
 /obj/structure/toilet{
 	dir = 8
 	},
 /obj/machinery/light/small,
 /turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "aY" = (
 /obj/machinery/door/airlock/external/glass,
 /obj/structure/fans/tiny,
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "ba" = (
 /obj/effect/spawner/structure/window/plasma/reinforced,
 /obj/structure/grille,
 /turf/open/space/basic,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "bd" = (
 /obj/machinery/porta_turret/syndicate{
 	dir = 9
 	},
 /turf/closed/wall/r_wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "bf" = (
 /obj/machinery/rnd/production/techfab/department/medical,
 /turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "bi" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /turf/closed/mineral/random,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "bq" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/grass,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "bv" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -58,14 +85,20 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "bM" = (
 /mob/living/simple_animal/hostile/netherworld,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav)
 "bQ" = (
 /turf/open/floor/plating/asteroid/airless,
-/area/ruin/unpowered/no_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "ca" = (
 /obj/effect/mob_spawn/human/syndicate{
 	dir = 4;
@@ -77,13 +110,19 @@
 	},
 /obj/item/crowbar,
 /turf/open/floor/carpet/royalblack,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "cs" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "cZ" = (
 /obj/structure/closet/syndicate{
 	anchored = 1;
@@ -95,11 +134,17 @@
 /obj/item/melee/transforming/energy/sword/saber,
 /obj/item/storage/box/syndie_kit/chameleon,
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "dd" = (
 /obj/machinery/computer/camera_advanced,
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "dn" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -110,28 +155,45 @@
 /obj/item/stack/cable_coil,
 /obj/machinery/power/apc/auto_name/north,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "dx" = (
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "dH" = (
 /obj/structure/table/optable,
 /turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "dZ" = (
 /turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "ge" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "gB" = (
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/structure/closet/crate,
+/obj/structure/closet/crate{
+	anchored = 1
+	},
 /obj/item/stack/sheet/mineral/plasma{
 	amount = 50
 	},
@@ -140,7 +202,10 @@
 "hA" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "hB" = (
 /obj/structure/rack,
 /obj/item/t_scanner/adv_mining_scanner/lesser,
@@ -151,7 +216,7 @@
 /area/ruin/space/has_grav)
 "hW" = (
 /obj/structure/mineral_door/wood,
-/turf/open/floor/plating/asteroid,
+/turf/open/floor/wood,
 /area/ruin/space/has_grav)
 "ig" = (
 /obj/structure/flora/ausbushes/fullgrass,
@@ -168,18 +233,27 @@
 /obj/item/stack/tile/mineral/plastitanium,
 /obj/item/stack/tile/mineral/plastitanium,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "ik" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "iv" = (
 /obj/structure/table/reinforced,
 /obj/item/gun/ballistic/automatic/pistol,
 /turf/open/floor/plasteel/airless/dark,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "iw" = (
 /obj/item/bodypart/head,
 /turf/open/floor/wood,
@@ -189,31 +263,46 @@
 	dir = 1
 	},
 /turf/open/floor/plating/asteroid/airless,
-/area/ruin/unpowered/no_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "ka" = (
 /obj/structure/fluff/fokoff_sign,
 /turf/open/floor/plating/asteroid/airless,
-/area/ruin/unpowered/no_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "km" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "kt" = (
 /obj/structure/dresser,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "kv" = (
 /obj/machinery/shower{
 	dir = 8
 	},
 /obj/structure/curtain,
 /turf/open/floor/plasteel/showroomfloor/shower,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "kF" = (
 /obj/structure/lattice,
 /turf/open/space/basic,
@@ -223,10 +312,16 @@
 	dir = 8
 	},
 /turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "kM" = (
 /turf/open/floor/plasteel/airless/dark,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "ln" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/open/floor/grass,
@@ -238,11 +333,17 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "lQ" = (
 /obj/machinery/power/floodlight,
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
 	},
 /turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
@@ -265,7 +366,10 @@
 	dir = 10
 	},
 /turf/closed/wall/r_wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "mL" = (
 /obj/machinery/door/airlock/external/glass,
 /obj/structure/fans/tiny,
@@ -273,13 +377,19 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "mM" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "nt" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
@@ -297,19 +407,28 @@
 "nQ" = (
 /obj/machinery/computer/rdconsole,
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "nS" = (
 /obj/machinery/porta_turret/syndicate{
 	dir = 5
 	},
 /turf/closed/wall/r_wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "ot" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /turf/closed/wall/r_wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "oL" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -323,7 +442,10 @@
 	amount = 50
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "pF" = (
 /obj/item/seeds/cannabis,
 /obj/item/seeds/carrot,
@@ -339,7 +461,10 @@
 	dir = 8
 	},
 /turf/open/floor/grass,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "pZ" = (
 /obj/structure/lattice,
 /obj/structure/lattice/catwalk,
@@ -351,42 +476,66 @@
 "qj" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "re" = (
 /obj/machinery/computer/message_monitor,
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "rP" = (
 /obj/machinery/computer/operating,
 /turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "rS" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /turf/open/floor/grass,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "sn" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/backpack/duffelbag/syndie/surgery_adv,
 /obj/item/storage/firstaid/tactical/nukeop,
 /turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "sx" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plating/asteroid/airless,
-/area/ruin/unpowered/no_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "sE" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 4
 	},
 /turf/closed/wall/r_wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "sZ" = (
 /obj/machinery/airalarm/syndicate,
 /turf/closed/wall/r_wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "tf" = (
 /obj/structure/ore_box,
 /turf/open/floor/plating/asteroid,
@@ -394,7 +543,10 @@
 "tl" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/plating/asteroid/airless,
-/area/ruin/unpowered/no_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "tV" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -419,36 +571,56 @@
 /obj/item/melee/transforming/energy/sword/saber,
 /obj/item/clothing/suit/armor/vest/capcarapace/syndicate,
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "vr" = (
 /obj/structure/mirror/magic{
 	pixel_x = 32
 	},
 /turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "vO" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
 /turf/open/floor/carpet/royalblack,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "vT" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "vY" = (
 /obj/machinery/door/airlock/hatch,
 /turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "wi" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall/r_wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "wk" = (
-/obj/machinery/power/port_gen/pacman,
+/obj/machinery/power/port_gen/pacman{
+	anchored = 1
+	},
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
@@ -460,7 +632,10 @@
 	dir = 8
 	},
 /turf/open/floor/grass,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "wX" = (
 /obj/machinery/door/airlock/hatch,
 /obj/structure/cable{
@@ -470,7 +645,10 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "wY" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -483,7 +661,10 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "xI" = (
 /turf/open/floor/wood,
 /area/ruin/space/has_grav)
@@ -492,27 +673,42 @@
 	dir = 1
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "yK" = (
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "zT" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
 	},
 /turf/closed/mineral/random,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "zV" = (
 /obj/machinery/autolathe/hacked,
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Ad" = (
 /obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Bh" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
@@ -525,11 +721,17 @@
 /obj/item/clothing/head/radiation,
 /obj/item/clothing/suit/radiation,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Cv" = (
 /obj/machinery/rnd/production/circuit_imprinter,
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "CE" = (
 /obj/structure/bookcase,
 /turf/open/floor/wood,
@@ -537,7 +739,18 @@
 "CL" = (
 /obj/machinery/telecomms/relay,
 /turf/open/floor/plasteel/airless/dark,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
+"CY" = (
+/obj/structure/flora/ausbushes/grassybush,
+/mob/living/simple_animal/butterfly,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Dp" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/grass,
@@ -563,7 +776,10 @@
 	},
 /obj/item/crowbar,
 /turf/open/floor/carpet/royalblack,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "DG" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
@@ -580,7 +796,10 @@
 	dir = 1
 	},
 /turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Eu" = (
 /obj/effect/landmark/carpspawn,
 /turf/template_noop,
@@ -588,7 +807,10 @@
 "EG" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/mineral/random,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Fv" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
@@ -602,18 +824,27 @@
 "FK" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "FO" = (
 /obj/structure/chair/office/dark{
 	dir = 1
 	},
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Gb" = (
 /obj/item/storage/toolbox/syndicate,
 /obj/item/multitool,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Ge" = (
 /obj/structure/flora/ausbushes/grassybush,
 /turf/open/floor/grass,
@@ -622,6 +853,9 @@
 /obj/machinery/power/floodlight,
 /obj/structure/cable{
 	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
 	},
 /turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
@@ -633,7 +867,10 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "HY" = (
 /obj/machinery/power/floodlight,
 /obj/structure/cable{
@@ -644,6 +881,12 @@
 "Iz" = (
 /turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
+"IB" = (
+/turf/closed/mineral/random,
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "ID" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
@@ -659,13 +902,19 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/airless/dark,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Jd" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "JV" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -680,7 +929,10 @@
 	dir = 8
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Lq" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -704,19 +956,28 @@
 	},
 /obj/item/storage/backpack/duffelbag/syndie/bulldogbundle,
 /turf/open/floor/plasteel/airless/dark,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Mt" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/pen,
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "MH" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
 /turf/closed/mineral/random,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "MK" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
@@ -728,11 +989,17 @@
 /obj/structure/table/reinforced,
 /obj/item/paper/monitorkey,
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Nn" = (
 /obj/machinery/porta_turret/syndicate,
 /turf/closed/wall/r_wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Np" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
@@ -746,7 +1013,10 @@
 "Nq" = (
 /obj/structure/closet/crate/solarpanel_small,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "NR" = (
 /turf/open/floor/plating/airless,
 /area/space)
@@ -755,7 +1025,10 @@
 	dir = 1
 	},
 /turf/closed/wall/r_wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Oa" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/item/bodypart/l_leg,
@@ -767,11 +1040,17 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Pb" = (
 /obj/machinery/atmospherics/components/unary/tank/air,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Pr" = (
 /turf/closed/mineral/random,
 /area/ruin/space/has_grav)
@@ -780,7 +1059,10 @@
 	dir = 10
 	},
 /turf/closed/wall/r_wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Qq" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood,
@@ -791,24 +1073,36 @@
 	dir = 5
 	},
 /turf/closed/wall/r_wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "QO" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "RC" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 9
 	},
 /turf/closed/mineral/random,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "RM" = (
 /obj/machinery/door/airlock/hatch,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Sq" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/wood,
@@ -830,7 +1124,10 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Tk" = (
 /obj/machinery/power/floodlight,
 /obj/structure/cable{
@@ -838,6 +1135,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
 	},
 /turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
@@ -854,13 +1154,19 @@
 	},
 /obj/item/kirbyplants/photosynthetic,
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Un" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /turf/open/floor/plasteel/airless/dark,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Ut" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -869,7 +1175,10 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "UD" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -882,22 +1191,36 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "UQ" = (
 /obj/machinery/porta_turret/syndicate{
 	dir = 6
 	},
 /turf/closed/wall/r_wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "VP" = (
 /turf/closed/wall/r_wall,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Wd" = (
 /obj/machinery/rnd/production/techfab/department/science,
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Wr" = (
-/obj/structure/closet/crate,
+/obj/structure/closet/crate{
+	anchored = 1
+	},
 /obj/item/stack/sheet/mineral/plasma{
 	amount = 50
 	},
@@ -909,18 +1232,27 @@
 	},
 /obj/item/kirbyplants/photosynthetic,
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "WT" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "WV" = (
 /obj/machinery/ore_silo,
 /turf/open/floor/plasteel/airless/dark,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Xk" = (
 /obj/item/stack/sheet/glass{
 	amount = 50
@@ -929,29 +1261,45 @@
 	amount = 50
 	},
 /turf/open/floor/plasteel/airless/dark,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Xn" = (
 /obj/item/pickaxe,
 /turf/open/floor/plating/asteroid/airless,
-/area/ruin/unpowered/no_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Xs" = (
 /obj/machinery/suit_storage_unit/syndicate{
 	helmet_type = /obj/item/clothing/head/helmet/space/syndicate/black/red;
+	storage_type = null;
 	suit_type = /obj/item/clothing/suit/space/syndicate/black/red
 	},
 /turf/open/floor/mineral/plastitanium,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "YI" = (
 /obj/machinery/hydroponics/constructable,
 /turf/open/floor/grass,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "YY" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Zn" = (
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
@@ -960,7 +1308,10 @@
 /obj/machinery/rnd/production/techfab/department/engineering,
 /obj/machinery/light/small,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 "Zp" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -969,7 +1320,10 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav)
+/area/ruin/space/has_grav{
+	base_area = null;
+	name = "Syndicate_Base"
+	})
 
 (1,1,1) = {"
 ui
@@ -1525,7 +1879,7 @@ ui
 bQ
 bQ
 bQ
-Pr
+IB
 bQ
 bQ
 ui
@@ -1605,10 +1959,10 @@ ui
 ui
 bQ
 bQ
-Pr
-Pr
-Pr
-Pr
+IB
+IB
+IB
+IB
 bQ
 ui
 ui
@@ -1690,7 +2044,7 @@ VP
 VP
 VP
 VP
-Pr
+IB
 bQ
 bQ
 ui
@@ -2274,7 +2628,7 @@ VP
 Ou
 VP
 ot
-Pr
+IB
 bQ
 bQ
 ui
@@ -2342,8 +2696,8 @@ Wd
 yK
 WK
 VP
-Pr
-Pr
+IB
+IB
 VP
 Hg
 ot
@@ -2356,7 +2710,7 @@ YI
 wP
 pF
 MH
-Pr
+IB
 bQ
 bQ
 ui
@@ -2435,11 +2789,11 @@ kv
 VP
 MH
 rS
-Sw
+CY
 bq
 MH
-Pr
-Pr
+IB
+IB
 bQ
 ui
 ui
@@ -2506,8 +2860,8 @@ zV
 yK
 cs
 VP
-Pr
-Pr
+IB
+IB
 PU
 vT
 sE
@@ -2520,8 +2874,8 @@ EG
 EG
 EG
 RC
-Pr
-Pr
+IB
+IB
 bQ
 ui
 ui
@@ -2589,7 +2943,7 @@ VP
 SN
 VP
 Xn
-Pr
+IB
 VP
 QO
 Ad
@@ -2601,9 +2955,9 @@ RC
 bQ
 bQ
 bQ
-Pr
-Pr
-Pr
+IB
+IB
+IB
 bQ
 bQ
 ui
@@ -2676,17 +3030,17 @@ VP
 ya
 Xs
 VP
-Pr
-Pr
-Pr
+IB
+IB
+IB
 bQ
 ui
 ui
 ui
 bQ
-Pr
-Pr
-Pr
+IB
+IB
+IB
 bQ
 ui
 ui
@@ -2767,8 +3121,8 @@ ui
 ui
 ui
 bQ
-Pr
-Pr
+IB
+IB
 bQ
 ui
 ui

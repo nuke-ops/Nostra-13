@@ -1,0 +1,1132 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ah" = (
+/obj/structure/trap/fire,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"ay" = (
+/obj/structure/fence/corner,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"dX" = (
+/obj/item/candle/infinite/hugbox{
+	desc = "It's a candle.";
+	name = "candle"
+	},
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"ex" = (
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"fl" = (
+/obj/structure/flora/ausbushes/brflowers,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav{
+	CanAtmosPass = 0;
+	CanAtmosPassVertical = 0;
+	name = "has_grav_endless_air"
+	})
+"ki" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"ko" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"kB" = (
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"lF" = (
+/turf/template_noop,
+/area/space)
+"lJ" = (
+/turf/closed/wall/mineral/wood,
+/area/ruin/space/has_grav)
+"mo" = (
+/obj/structure/table/wood,
+/obj/item/storage/box/cups,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"nn" = (
+/obj/structure/table/wood/fancy,
+/obj/item/reagent_containers/food/drinks/bottle/goldschlager,
+/turf/open/floor/carpet/red,
+/area/ruin/space/has_grav)
+"oh" = (
+/obj/structure/fence/corner{
+	dir = 8
+	},
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"pj" = (
+/obj/structure/chair/wood/normal{
+	dir = 1
+	},
+/turf/open/floor/carpet/red,
+/area/ruin/space/has_grav)
+"pZ" = (
+/obj/structure/flora/rock,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"qj" = (
+/obj/effect/decal/cleanable/blood/tracks,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"rs" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"um" = (
+/obj/structure/lattice,
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"uP" = (
+/obj/structure/fence,
+/obj/structure/fence/corner{
+	dir = 8
+	},
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"uW" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"ws" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/carpet/red,
+/area/ruin/space/has_grav)
+"yX" = (
+/obj/structure/chair/wood/normal{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"zV" = (
+/obj/structure/trap/fire,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav{
+	CanAtmosPass = 0;
+	CanAtmosPassVertical = 0;
+	name = "has_grav_endless_air"
+	})
+"Aq" = (
+/obj/structure/flora/rock,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav{
+	CanAtmosPass = 0;
+	CanAtmosPassVertical = 0;
+	name = "has_grav_endless_air"
+	})
+"BQ" = (
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/item/candle/infinite/hugbox{
+	desc = "It's a candle.";
+	name = "candle"
+	},
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"CL" = (
+/obj/structure/fence/door,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"De" = (
+/obj/structure/table/wood,
+/obj/item/candle/infinite/hugbox{
+	desc = "It's a candle.";
+	name = "candle"
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"DQ" = (
+/obj/structure/fence,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"ER" = (
+/obj/structure/flora/rock/pile,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"Fz" = (
+/obj/structure/table/wood/fancy,
+/obj/item/reagent_containers/food/drinks/bottle/gin,
+/turf/open/floor/carpet/red,
+/area/ruin/space/has_grav)
+"FG" = (
+/obj/structure/trap/fire,
+/obj/structure/fans/tiny/invisible,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav{
+	CanAtmosPass = 0;
+	CanAtmosPassVertical = 0;
+	name = "has_grav_endless_air"
+	})
+"Gh" = (
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"GG" = (
+/obj/structure/flora/ausbushes/fullgrass,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"GJ" = (
+/obj/structure/table/wood/fancy,
+/turf/open/floor/carpet/red,
+/area/ruin/space/has_grav)
+"JF" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"KA" = (
+/obj/structure/fence{
+	dir = 8
+	},
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"Mr" = (
+/obj/structure/mineral_door/wood,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"NA" = (
+/obj/structure/flora/ausbushes/fullgrass,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav{
+	CanAtmosPass = 0;
+	CanAtmosPassVertical = 0;
+	name = "has_grav_endless_air"
+	})
+"PU" = (
+/obj/structure/chair/wood/normal{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"Qm" = (
+/obj/item/toy/fluff/bone_poly,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"Re" = (
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav{
+	CanAtmosPass = 0;
+	CanAtmosPassVertical = 0;
+	name = "has_grav_endless_air"
+	})
+"RI" = (
+/obj/structure/flora/ausbushes/grassybush,
+/obj/item/picket_sign{
+	desc = "It reads- TURN BACK NOW -in all caps.";
+	name = "TURN BACK NOW"
+	},
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"SV" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"TH" = (
+/obj/item/candle/infinite/hugbox{
+	desc = "It's a candle.";
+	name = "candle"
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"Uf" = (
+/obj/structure/flora/ausbushes/grassybush,
+/obj/item/candle/infinite/hugbox{
+	desc = "It's a candle.";
+	name = "candle"
+	},
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"UL" = (
+/turf/open/floor/carpet/red,
+/area/ruin/space/has_grav)
+"VO" = (
+/obj/structure/flora/ausbushes/grassybush,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"XM" = (
+/obj/structure/bed/dogbed,
+/mob/living/simple_animal/hostile/jungle/mega_arachnid{
+	name = "Yana"
+	},
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"Za" = (
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp/green,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"Ze" = (
+/obj/structure/flora/tree/jungle,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+"Zm" = (
+/obj/structure/chair/wood/normal,
+/turf/open/floor/carpet/red,
+/area/ruin/space/has_grav)
+"ZO" = (
+/obj/structure/table/wood,
+/obj/item/paper,
+/obj/item/paper,
+/obj/item/pen,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"ZZ" = (
+/obj/structure/fence{
+	dir = 1
+	},
+/obj/structure/fence/corner{
+	dir = 6
+	},
+/turf/open/floor/grass,
+/area/ruin/space/has_grav)
+
+(1,1,1) = {"
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+SV
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+"}
+(2,1,1) = {"
+lF
+lF
+lF
+lF
+lF
+lF
+SV
+lF
+lF
+lF
+SV
+lF
+lF
+SV
+SV
+lF
+lF
+SV
+lF
+lF
+SV
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+"}
+(3,1,1) = {"
+lF
+lF
+lF
+SV
+lF
+SV
+SV
+lF
+lF
+SV
+SV
+lF
+lF
+lF
+um
+SV
+SV
+SV
+SV
+lF
+lF
+lF
+lF
+lF
+lF
+SV
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+"}
+(4,1,1) = {"
+lF
+lF
+SV
+SV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+SV
+SV
+lF
+lF
+lF
+SV
+lF
+lF
+lF
+lF
+lF
+lF
+SV
+lF
+lF
+SV
+lF
+lF
+lF
+lF
+"}
+(5,1,1) = {"
+lF
+lF
+lF
+SV
+zV
+uP
+DQ
+DQ
+DQ
+DQ
+DQ
+DQ
+DQ
+DQ
+DQ
+oh
+pZ
+pZ
+pZ
+zV
+SV
+SV
+SV
+lF
+SV
+SV
+SV
+lF
+lF
+SV
+SV
+SV
+SV
+lF
+SV
+lF
+lF
+lF
+lF
+lF
+"}
+(6,1,1) = {"
+lF
+lF
+lF
+SV
+zV
+KA
+BQ
+VO
+kB
+ko
+kB
+kB
+GG
+kB
+dX
+uW
+VO
+kB
+GG
+Aq
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lF
+lF
+lF
+lF
+"}
+(7,1,1) = {"
+lF
+lF
+lF
+SV
+zV
+KA
+kB
+kB
+GG
+kB
+Ze
+kB
+kB
+ki
+VO
+uW
+kB
+kB
+kB
+kB
+lJ
+JF
+ex
+JF
+JF
+JF
+JF
+ex
+ex
+ex
+Za
+ZO
+mo
+De
+ex
+lJ
+SV
+SV
+lF
+lF
+"}
+(8,1,1) = {"
+lF
+lF
+lF
+lF
+zV
+KA
+ki
+kB
+kB
+GG
+kB
+VO
+kB
+kB
+kB
+uW
+GG
+VO
+kB
+GG
+lJ
+rs
+TH
+ex
+ah
+JF
+ex
+yX
+JF
+ex
+ex
+ex
+ex
+ex
+JF
+lJ
+fl
+SV
+SV
+SV
+"}
+(9,1,1) = {"
+lF
+lF
+SV
+lF
+zV
+KA
+kB
+kB
+ER
+kB
+kB
+kB
+ER
+kB
+kB
+uW
+kB
+ER
+ER
+kB
+lJ
+rs
+rs
+ex
+ex
+ws
+Zm
+Fz
+pj
+UL
+UL
+UL
+UL
+UL
+ex
+lJ
+GG
+NA
+lF
+lF
+"}
+(10,1,1) = {"
+lF
+lF
+lF
+SV
+zV
+KA
+XM
+Qm
+qj
+kB
+kB
+qj
+qj
+kB
+qj
+CL
+kB
+kB
+kB
+kB
+Mr
+rs
+rs
+ws
+UL
+UL
+Zm
+GJ
+pj
+UL
+ws
+UL
+UL
+UL
+UL
+Mr
+kB
+kB
+Re
+SV
+"}
+(11,1,1) = {"
+lF
+lF
+lF
+SV
+zV
+KA
+kB
+kB
+kB
+kB
+ER
+kB
+kB
+kB
+kB
+KA
+ER
+ER
+kB
+ER
+lJ
+rs
+rs
+rs
+rs
+ex
+Zm
+nn
+pj
+UL
+UL
+UL
+UL
+UL
+ex
+lJ
+RI
+fl
+SV
+lF
+"}
+(12,1,1) = {"
+lF
+lF
+lF
+lF
+zV
+KA
+kB
+ko
+kB
+kB
+kB
+kB
+GG
+ko
+kB
+uW
+kB
+kB
+kB
+kB
+lJ
+rs
+ex
+rs
+TH
+ex
+ex
+PU
+ex
+ex
+ex
+ah
+ex
+ex
+JF
+lJ
+fl
+SV
+SV
+lF
+"}
+(13,1,1) = {"
+lF
+lF
+lF
+lF
+zV
+KA
+kB
+kB
+kB
+kB
+kB
+GG
+VO
+kB
+kB
+KA
+kB
+GG
+VO
+kB
+lJ
+Gh
+JF
+ex
+ex
+ex
+ex
+ex
+ex
+TH
+JF
+JF
+JF
+ex
+ex
+lJ
+SV
+SV
+lF
+lF
+"}
+(14,1,1) = {"
+lF
+lF
+lF
+lF
+zV
+KA
+Uf
+GG
+kB
+ki
+ko
+kB
+kB
+kB
+BQ
+uW
+VO
+kB
+GG
+Aq
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lJ
+lF
+lF
+lF
+lF
+"}
+(15,1,1) = {"
+lF
+lF
+lF
+SV
+zV
+ZZ
+DQ
+DQ
+DQ
+DQ
+DQ
+DQ
+DQ
+DQ
+DQ
+ay
+pZ
+pZ
+pZ
+zV
+SV
+SV
+SV
+SV
+lF
+lF
+SV
+SV
+lF
+lF
+SV
+SV
+SV
+SV
+lF
+SV
+lF
+lF
+lF
+lF
+"}
+(16,1,1) = {"
+lF
+lF
+SV
+SV
+FG
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+zV
+SV
+lF
+lF
+SV
+SV
+SV
+SV
+SV
+SV
+lF
+lF
+lF
+SV
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+"}
+(17,1,1) = {"
+lF
+lF
+lF
+SV
+SV
+SV
+SV
+lF
+lF
+SV
+SV
+SV
+SV
+SV
+SV
+SV
+lF
+SV
+SV
+SV
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+SV
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+"}
+(18,1,1) = {"
+lF
+lF
+lF
+lF
+lF
+SV
+lF
+SV
+lF
+lF
+SV
+SV
+SV
+lF
+lF
+lF
+lF
+lF
+SV
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+"}
+(19,1,1) = {"
+lF
+lF
+lF
+lF
+lF
+SV
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+SV
+lF
+lF
+lF
+lF
+SV
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+"}
+(20,1,1) = {"
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+lF
+"}

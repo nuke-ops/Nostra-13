@@ -3,29 +3,45 @@
 /turf/template_noop,
 /area/space)
 "b" = (
-/obj/structure/closet/crate/grave,
-/turf/open/floor/plating/dirt/dark,
-/area/ruin/space/has_grav)
-"f" = (
-/turf/open/floor/holofloor/asteroid,
-/area/ruin/space/has_grav)
-"l" = (
-/obj/effect/meteor/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating/dirt/dark,
-/area/ruin/space/has_grav)
-"m" = (
-/mob/living/simple_animal/hostile/poison/giant_spider/hunter,
-/turf/open/floor/plating/dirt/dark,
-/area/ruin/space/has_grav)
-"o" = (
-/obj/structure/spider/stickyweb,
+/obj/structure/closet/crate/grave{
+	allow_objects = 0;
+	mob_storage_capacity = 0;
+	should_populate_contents = 0;
+	storage_capacity = 5
+	},
+/obj/item/clothing/suit/armor/riot/knight/red{
+	armor = list("melee" = 60, "bullet" = 5, "laser" = 2, "energy" = 2, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 60, "wound" = 20);
+	name = "crusader armor"
+	},
 /obj/item/claymore/weak/ceremonial{
 	force = 16;
 	name = "aged claymore";
 	throwforce = 8
 	},
+/obj/item/storage/book/bible,
 /turf/open/floor/plating/dirt/dark,
+/area/ruin/space/has_grav)
+"f" = (
+/turf/open/floor/plating/asteroid,
+/area/ruin/space/has_grav)
+"l" = (
+/obj/structure/mineral_door,
+/turf/open/floor/plating/dirt,
+/area/ruin/space/has_grav)
+"m" = (
+/mob/living/simple_animal/hostile/poison/giant_spider/hunter{
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0);
+	death_sound = 'sound/effects/lingscreech.ogg';
+	deathmessage = "lets out a guttural scream...";
+	desc = "This one is different...";
+	health = 150;
+	name = "Holy Spider"
+	},
+/turf/open/floor/plating/dirt/dark,
+/area/ruin/space/has_grav)
+"o" = (
+/obj/item/flashlight/lantern,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "q" = (
 /obj/structure/spider/stickyweb,
@@ -39,27 +55,29 @@
 /turf/closed/mineral/random,
 /area/ruin/space/has_grav)
 "D" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/item/clothing/suit/armor/riot/knight/red{
-	armor = list("melee" = 60, "bullet" = 5, "laser" = 2, "energy" = 2, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 60, "wound" = 20);
-	name = "crusader armor"
-	},
-/turf/open/floor/plating/dirt/dark,
+/obj/item/shovel,
+/turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "I" = (
 /turf/open/floor/plating/dirt/dark,
 /area/ruin/space/has_grav)
 "K" = (
-/obj/effect/meteor/dust,
 /obj/item/flashlight/flare/torch{
 	anchored = 1;
 	on = 1
 	},
+/obj/structure/flora/rock/pile,
 /turf/open/floor/plating/dirt/dark,
 /area/ruin/space/has_grav)
 "R" = (
 /mob/living/simple_animal/hostile/poison/giant_spider{
-	dir = 4
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0);
+	death_sound = 'sound/effects/lingscreech.ogg';
+	deathmessage = "lets out a guttural scream...";
+	desc = "This one is different...";
+	dir = 4;
+	health = 250;
+	name = "Great Holy Spider"
 	},
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/plating/dirt/dark,
@@ -230,7 +248,7 @@ f
 f
 C
 C
-o
+q
 I
 V
 q
@@ -275,12 +293,12 @@ a
 f
 C
 I
-D
+V
 I
 I
 C
 C
-f
+o
 a
 a
 a
@@ -322,8 +340,8 @@ C
 r
 I
 I
+V
 l
-C
 f
 f
 a
@@ -347,7 +365,7 @@ C
 C
 C
 C
-f
+D
 f
 a
 a

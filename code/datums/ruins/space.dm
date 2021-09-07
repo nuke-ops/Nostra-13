@@ -355,6 +355,24 @@
 	name = "Spider Den"
 	description = "They tell stories of the crucades that happened millenias past..."
 
+/datum/map_template/ruin/space/dcderelict
+	id = "dcderelict"
+	suffix = "dcderelict.dmm"
+	name = "DC Derelict"
+	description = "A satellite for the mysterious corporation known as DefCorp, appears to be a bit dated."
+
+/datum/map_template/ruin/space/yana
+	id = "yana"
+	suffix = "yana.dmm"
+	name = "Yana"
+	description = "Who's a good girl! You are!"
+
+/datum/map_template/ruin/space/errorcodehostile
+	id = "_errorcodehostile_"
+	suffix = "errorcodehostile.dmm"
+	name = "_errorcode-hostile_"
+	description = "Missing Info"
+
 //Space ruins for the station z
 /datum/map_template/ruin/spacenearstation
 	prefix = "_maps/RandomRuins/SpaceRuinsStation/"
