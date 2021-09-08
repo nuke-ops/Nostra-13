@@ -35,7 +35,7 @@
 /area/ruin/space/has_grav)
 "lF" = (
 /turf/template_noop,
-/area/space)
+/area/template_noop)
 "lJ" = (
 /turf/closed/wall/mineral/wood,
 /area/ruin/space/has_grav)
@@ -76,8 +76,8 @@
 "um" = (
 /obj/structure/lattice,
 /obj/structure/lattice,
-/turf/open/space/basic,
-/area/space)
+/turf/template_noop,
+/area/space/nearstation)
 "uP" = (
 /obj/structure/fence,
 /obj/structure/fence/corner{
@@ -205,8 +205,8 @@
 /area/ruin/space/has_grav)
 "SV" = (
 /obj/structure/lattice,
-/turf/open/space/basic,
-/area/space)
+/turf/template_noop,
+/area/space/nearstation)
 "TH" = (
 /obj/item/candle/infinite/hugbox{
 	desc = "It's a candle.";
