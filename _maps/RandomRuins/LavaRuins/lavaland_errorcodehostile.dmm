@@ -2,14 +2,14 @@
 "a" = (
 /obj/effect/mapping_helpers/no_lava,
 /turf/closed/mineral/ash_rock,
-/area/icemoon/surface/outdoors)
+/area/lavaland/surface/outdoors)
 "b" = (
 /turf/closed/mineral/ash_rock,
 /area/ruin/powered/errorhostile)
 "d" = (
 /obj/effect/mapping_helpers/no_lava,
 /turf/open/floor/plating/asteroid/basalt,
-/area/icemoon/surface/outdoors)
+/area/lavaland/surface/outdoors)
 "e" = (
 /obj/structure/stone_tile/surrounding/cracked,
 /turf/open/floor/plating/asteroid/basalt,
@@ -152,7 +152,7 @@
 /obj/effect/mapping_helpers/no_lava,
 /obj/effect/mapping_helpers/no_lava,
 /turf/closed/mineral/ash_rock,
-/area/icemoon/surface/outdoors)
+/area/lavaland/surface/outdoors)
 "O" = (
 /turf/open/floor/plating/asteroid/basalt,
 /area/ruin/powered/errorhostile)
