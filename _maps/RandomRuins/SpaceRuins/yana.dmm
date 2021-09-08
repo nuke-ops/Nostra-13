@@ -21,11 +21,7 @@
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/grass,
-/area/ruin/space/has_grav{
-	CanAtmosPass = 0;
-	CanAtmosPassVertical = 0;
-	name = "has_grav_endless_air"
-	})
+/area/ruin/space/has_grav)
 "ki" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/grass,
@@ -109,20 +105,12 @@
 /obj/structure/trap/fire,
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/grass,
-/area/ruin/space/has_grav{
-	CanAtmosPass = 0;
-	CanAtmosPassVertical = 0;
-	name = "has_grav_endless_air"
-	})
+/area/ruin/space/has_grav)
 "Aq" = (
 /obj/structure/flora/rock,
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/grass,
-/area/ruin/space/has_grav{
-	CanAtmosPass = 0;
-	CanAtmosPassVertical = 0;
-	name = "has_grav_endless_air"
-	})
+/area/ruin/space/has_grav)
 "BQ" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/item/candle/infinite/hugbox{
@@ -161,11 +149,7 @@
 /obj/structure/fans/tiny/invisible,
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/grass,
-/area/ruin/space/has_grav{
-	CanAtmosPass = 0;
-	CanAtmosPassVertical = 0;
-	name = "has_grav_endless_air"
-	})
+/area/ruin/space/has_grav)
 "Gh" = (
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/wood,
@@ -196,11 +180,7 @@
 /obj/structure/flora/ausbushes/fullgrass,
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/grass,
-/area/ruin/space/has_grav{
-	CanAtmosPass = 0;
-	CanAtmosPassVertical = 0;
-	name = "has_grav_endless_air"
-	})
+/area/ruin/space/has_grav)
 "PU" = (
 /obj/structure/chair/wood/normal{
 	dir = 8
@@ -214,11 +194,7 @@
 "Re" = (
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/grass,
-/area/ruin/space/has_grav{
-	CanAtmosPass = 0;
-	CanAtmosPassVertical = 0;
-	name = "has_grav_endless_air"
-	})
+/area/ruin/space/has_grav)
 "RI" = (
 /obj/structure/flora/ausbushes/grassybush,
 /obj/item/picket_sign{
