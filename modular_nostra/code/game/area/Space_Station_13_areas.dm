@@ -67,6 +67,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Old station Engineering"
 	icon_state = "engine_foyer"
 
+/area/ruin/space/has_grav/syndicatebase1
+	name = "Syndicate Telecommunications Base"
+	icon_state = "red"
+
 /area/bluespace_locker
   name = "Bluespace Locker"
   icon_state = "away"

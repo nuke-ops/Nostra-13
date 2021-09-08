@@ -4,163 +4,115 @@
 /area/space)
 "b" = (
 /turf/closed/mineral/ash_rock,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "d" = (
 /obj/structure/stone_tile/surrounding/cracked,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "e" = (
 /obj/structure/stone_tile/surrounding/cracked{
 	dir = 4
 	},
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "g" = (
 /obj/structure/stone_tile/center/burnt,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "h" = (
 /obj/structure/stone_tile/surrounding,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "i" = (
 /obj/structure/stone_tile/slab,
 /obj/structure/stone_tile/slab,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "k" = (
 /turf/closed/wall/r_wall/rust,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "l" = (
 /obj/structure/stone_tile/slab/cracked,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "m" = (
 /obj/structure/stone_tile/center,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "n" = (
 /turf/open/floor/plasteel/cult,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "o" = (
 /obj/structure/stone_tile/surrounding/cracked{
 	dir = 1
 	},
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "p" = (
 /turf/closed/indestructible/necropolis,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "q" = (
 /obj/structure/stone_tile/surrounding/cracked{
 	dir = 8
 	},
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "r" = (
 /mob/living/simple_animal/hostile/megafauna/wendigo{
 	mob_size = 5;
 	resize = 2
 	},
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "s" = (
 /obj/structure/stone_tile/surrounding_tile/burnt{
 	dir = 8
 	},
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "t" = (
 /obj/structure/stone_tile/surrounding_tile,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "u" = (
 /obj/structure/stone_tile/block{
 	dir = 1
 	},
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "v" = (
 /turf/open/lava/smooth,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "w" = (
 /obj/structure/stone_tile{
 	dir = 8
 	},
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "x" = (
 /obj/structure/stone_tile/center/cracked,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "y" = (
 /obj/structure/stone_tile,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "z" = (
 /obj/structure/stone_tile/burnt{
 	dir = 8
 	},
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "B" = (
 /obj/structure/stone_tile/burnt,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "C" = (
 /obj/structure/stone_tile/block/burnt{
 	dir = 1
 	},
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "E" = (
 /obj/structure/stone_tile/slab,
 /obj/item/paper/crumpled{
@@ -168,106 +120,74 @@
 	name = "regret"
 	},
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "F" = (
 /obj/structure/stone_tile/block/cracked{
 	dir = 1
 	},
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "G" = (
 /obj/effect/temp_visual/lava_warning,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "H" = (
 /obj/structure/necropolis_arch,
 /obj/structure/stone_tile/slab,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "I" = (
 /obj/structure/stone_tile/block,
 /obj/structure/stone_tile/block,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "J" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "K" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/item/bodypart/head/devil,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "L" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /obj/item/kinetic_crusher,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "O" = (
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "P" = (
 /obj/structure/necropolis_gate,
 /obj/structure/stone_tile/slab/cracked,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "Q" = (
 /obj/structure/stone_tile/slab,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "R" = (
 /turf/open/chasm/lavaland,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "S" = (
 /obj/structure/stone_tile/slab/burnt,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "T" = (
 /obj/item/gps/mining{
 	gpstag = "_errorcode-hostile_"
 	},
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "V" = (
 /obj/structure/mineral_door/sandstone,
 /turf/open/floor/holofloor/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "W" = (
 /obj/structure/stone_tile/surrounding/burnt,
 /turf/open/floor/plating/asteroid/basalt,
-/area/ruin/space/has_grav{
-	name = "_errorcode"
-	})
+/area/ruin/space/has_grav)
 "X" = (
 /obj/structure/lattice,
 /turf/open/space/basic,
