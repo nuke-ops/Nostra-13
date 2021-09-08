@@ -15,21 +15,39 @@
 /turf/open/floor/carpet/royalblack,
 /area/ruin/space/has_grav/syndicatebase1)
 "aD" = (
-/obj/structure/toilet{
+/obj/machinery/light/small,
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/machinery/light/small,
-/turf/open/floor/mineral/titanium/white,
+/obj/structure/sink/kitchen{
+	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
+	dir = 4;
+	name = "sink";
+	pixel_x = -12;
+	pixel_y = 4
+	},
+/obj/structure/mirror/magic{
+	pixel_x = -28
+	},
+/turf/open/floor/plasteel/cafeteria,
 /area/ruin/space/has_grav/syndicatebase1)
 "aY" = (
 /obj/machinery/door/airlock/external/glass,
 /obj/structure/fans/tiny,
-/turf/open/floor/mineral/plastitanium,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plating,
 /area/ruin/space/has_grav/syndicatebase1)
 "ba" = (
 /obj/effect/spawner/structure/window/plasma/reinforced,
-/obj/structure/grille,
-/turf/open/space/basic,
+/turf/open/floor/plating,
 /area/ruin/space/has_grav/syndicatebase1)
 "bd" = (
 /obj/machinery/porta_turret/syndicate{
@@ -39,7 +57,10 @@
 /area/ruin/space/has_grav/syndicatebase1)
 "bf" = (
 /obj/machinery/rnd/production/techfab/department/medical,
-/turf/open/floor/mineral/titanium/white,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/syndicatebase1)
 "bi" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
@@ -65,7 +86,7 @@
 /area/ruin/space/has_grav)
 "bQ" = (
 /turf/open/floor/plating/asteroid/airless,
-/area/ruin/space/has_grav/syndicatebase1)
+/area/ruin/unpowered/no_grav)
 "ca" = (
 /obj/effect/mob_spawn/human/syndicate{
 	dir = 4;
@@ -84,6 +105,10 @@
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/syndicatebase1)
+"ct" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/closed/mineral/random,
+/area/ruin/unpowered/no_grav)
 "cZ" = (
 /obj/structure/closet/syndicate{
 	anchored = 1;
@@ -100,6 +125,9 @@
 /obj/machinery/computer/camera_advanced,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/syndicatebase1)
+"df" = (
+/turf/closed/mineral/random/high_chance,
+/area/ruin/space/has_grav)
 "dn" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -116,16 +144,13 @@
 /area/ruin/space/has_grav/syndicatebase1)
 "dH" = (
 /obj/structure/table/optable,
-/turf/open/floor/mineral/titanium/white,
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/turf/open/floor/plasteel,
 /area/ruin/space/has_grav/syndicatebase1)
 "dZ" = (
-/turf/open/floor/mineral/titanium/white,
-/area/ruin/space/has_grav/syndicatebase1)
-"ge" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/mineral/plastitanium,
+/turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/syndicatebase1)
 "gB" = (
 /obj/structure/cable{
@@ -151,6 +176,16 @@
 /obj/item/flashlight/seclite,
 /turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
+"hE" = (
+/obj/machinery/shower{
+	dir = 8;
+	name = "shower"
+	},
+/obj/item/soap/nanotrasen,
+/obj/item/bikehorn/rubberducky,
+/obj/structure/curtain,
+/turf/open/floor/plasteel/showroomfloor/shower,
+/area/ruin/space/has_grav/syndicatebase1)
 "hW" = (
 /obj/structure/mineral_door/wood,
 /turf/open/floor/wood,
@@ -180,6 +215,10 @@
 "iv" = (
 /obj/structure/table/reinforced,
 /obj/item/gun/ballistic/automatic/pistol,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
 /turf/open/floor/plasteel/airless/dark,
 /area/ruin/space/has_grav/syndicatebase1)
 "iw" = (
@@ -195,7 +234,7 @@
 "ka" = (
 /obj/structure/fluff/fokoff_sign,
 /turf/open/floor/plating/asteroid/airless,
-/area/ruin/space/has_grav/syndicatebase1)
+/area/ruin/unpowered/no_grav)
 "km" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
@@ -214,17 +253,20 @@
 	dir = 8
 	},
 /obj/structure/curtain,
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
 /turf/open/floor/plasteel/showroomfloor/shower,
 /area/ruin/space/has_grav/syndicatebase1)
 "kF" = (
 /obj/structure/lattice,
-/turf/open/space/basic,
-/area/space)
+/turf/template_noop,
+/area/space/nearstation)
 "kG" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8
 	},
-/turf/open/floor/mineral/titanium/white,
+/turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/syndicatebase1)
 "kM" = (
 /turf/open/floor/plasteel/airless/dark,
@@ -277,13 +319,19 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/syndicatebase1)
 "mM" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/open/floor/mineral/titanium/white,
+/turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/syndicatebase1)
 "nt" = (
 /obj/structure/lattice/catwalk,
@@ -293,8 +341,8 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/open/space/basic,
-/area/space)
+/turf/template_noop,
+/area/space/nearstation)
 "ny" = (
 /mob/living/simple_animal/hostile/netherworld,
 /turf/open/floor/plating/dirt,
@@ -309,6 +357,10 @@
 	},
 /turf/closed/wall/r_wall,
 /area/ruin/space/has_grav/syndicatebase1)
+"or" = (
+/obj/item/pickaxe,
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/unpowered/no_grav)
 "ot" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -323,12 +375,16 @@
 /turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
 "oZ" = (
-/obj/item/circuitboard/machine/smes,
-/obj/item/stack/sheet/glass{
-	amount = 50
-	},
+/obj/item/stack/cable_coil,
+/obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/syndicatebase1)
+"pd" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
+	},
+/turf/closed/mineral/random,
+/area/ruin/unpowered/no_grav)
 "pF" = (
 /obj/item/seeds/cannabis,
 /obj/item/seeds/carrot,
@@ -348,8 +404,8 @@
 "pZ" = (
 /obj/structure/lattice,
 /obj/structure/lattice/catwalk,
-/turf/open/space/basic,
-/area/space)
+/turf/template_noop,
+/area/space/nearstation)
 "qh" = (
 /turf/open/floor/plating/dirt,
 /area/ruin/space/has_grav)
@@ -366,7 +422,8 @@
 /area/ruin/space/has_grav/syndicatebase1)
 "rP" = (
 /obj/machinery/computer/operating,
-/turf/open/floor/mineral/titanium/white,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plasteel,
 /area/ruin/space/has_grav/syndicatebase1)
 "rS" = (
 /obj/structure/reagent_dispensers/watertank/high,
@@ -376,12 +433,15 @@
 /obj/structure/table/reinforced,
 /obj/item/storage/backpack/duffelbag/syndie/surgery_adv,
 /obj/item/storage/firstaid/tactical/nukeop,
-/turf/open/floor/mineral/titanium/white,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/syndicatebase1)
 "sx" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plating/asteroid/airless,
-/area/ruin/space/has_grav/syndicatebase1)
+/area/ruin/unpowered/no_grav)
 "sE" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 4
@@ -389,17 +449,18 @@
 /turf/closed/wall/r_wall,
 /area/ruin/space/has_grav/syndicatebase1)
 "sZ" = (
-/obj/machinery/airalarm/syndicate,
-/turf/closed/wall/r_wall,
+/obj/machinery/airalarm/syndicate{
+	pixel_y = 28
+	},
+/obj/structure/closet/firecloset,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plasteel/airless/dark,
 /area/ruin/space/has_grav/syndicatebase1)
 "tf" = (
 /obj/structure/ore_box,
 /turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
-"tl" = (
-/obj/effect/decal/remains/human,
-/turf/open/floor/plating/asteroid/airless,
-/area/ruin/space/has_grav/syndicatebase1)
 "tV" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -426,10 +487,13 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/space/has_grav/syndicatebase1)
 "vr" = (
-/obj/structure/mirror/magic{
-	pixel_x = 32
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
 	},
-/turf/open/floor/mineral/titanium/white,
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/turf/open/floor/plasteel/cafeteria,
 /area/ruin/space/has_grav/syndicatebase1)
 "vO" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -446,7 +510,17 @@
 /area/ruin/space/has_grav/syndicatebase1)
 "vY" = (
 /obj/machinery/door/airlock/hatch,
-/turf/open/floor/mineral/titanium/white,
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel/cafeteria,
 /area/ruin/space/has_grav/syndicatebase1)
 "wi" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
@@ -475,6 +549,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/syndicatebase1)
@@ -518,6 +598,20 @@
 /area/ruin/space/has_grav/syndicatebase1)
 "Ad" = (
 /obj/structure/tank_dispenser/oxygen,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel/airless/dark,
+/area/ruin/space/has_grav/syndicatebase1)
+"Am" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/syndicatebase1)
 "Bh" = (
@@ -525,12 +619,12 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/space/basic,
-/area/space)
+/turf/template_noop,
+/area/space/nearstation)
 "Br" = (
 /obj/structure/closet/crate/radiation,
-/obj/item/clothing/head/radiation,
 /obj/item/clothing/suit/radiation,
+/obj/item/clothing/head/radiation,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/syndicatebase1)
 "Cv" = (
@@ -562,8 +656,8 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/space/basic,
-/area/space)
+/turf/template_noop,
+/area/space/nearstation)
 "Dx" = (
 /obj/structure/bed{
 	dir = 1
@@ -584,14 +678,14 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/turf/open/space/basic,
-/area/space)
+/turf/template_noop,
+/area/space/nearstation)
 "DW" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /obj/machinery/sleeper/syndie/fullupgrade{
 	dir = 1
 	},
-/turf/open/floor/mineral/titanium/white,
+/turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/syndicatebase1)
 "Eu" = (
 /obj/effect/landmark/carpspawn,
@@ -609,8 +703,8 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/space/basic,
-/area/space)
+/turf/template_noop,
+/area/space/nearstation)
 "FK" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/mineral/plastitanium,
@@ -661,7 +755,7 @@
 /area/ruin/space/has_grav)
 "IB" = (
 /turf/closed/mineral/random,
-/area/ruin/space/has_grav/syndicatebase1)
+/area/ruin/unpowered/no_grav)
 "ID" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
@@ -670,8 +764,8 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/open/space/basic,
-/area/space)
+/turf/template_noop,
+/area/space/nearstation)
 "IV" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8
@@ -689,7 +783,7 @@
 	icon_state = "0-4"
 	},
 /turf/open/floor/plating/airless,
-/area/space)
+/area/space/nearstation)
 "Ke" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -711,6 +805,18 @@
 	},
 /turf/open/floor/plating/asteroid,
 /area/ruin/space/has_grav)
+"Lu" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/turf/open/floor/plasteel/cafeteria,
+/area/ruin/space/has_grav/syndicatebase1)
 "LA" = (
 /obj/structure/flora/ausbushes/fullgrass,
 /turf/open/floor/grass,
@@ -721,6 +827,10 @@
 	dir = 4
 	},
 /obj/item/storage/backpack/duffelbag/syndie/bulldogbundle,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
 /turf/open/floor/plasteel/airless/dark,
 /area/ruin/space/has_grav/syndicatebase1)
 "Mt" = (
@@ -740,16 +850,12 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/turf/open/space/basic,
-/area/space)
+/turf/template_noop,
+/area/space/nearstation)
 "MV" = (
 /obj/structure/table/reinforced,
 /obj/item/paper/monitorkey,
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/space/has_grav/syndicatebase1)
-"Nn" = (
-/obj/machinery/porta_turret/syndicate,
-/turf/closed/wall/r_wall,
 /area/ruin/space/has_grav/syndicatebase1)
 "Np" = (
 /obj/structure/lattice/catwalk,
@@ -759,15 +865,15 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/turf/open/space/basic,
-/area/space)
+/turf/template_noop,
+/area/space/nearstation)
 "Nq" = (
 /obj/structure/closet/crate/solarpanel_small,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/syndicatebase1)
 "NR" = (
 /turf/open/floor/plating/airless,
-/area/space)
+/area/space/nearstation)
 "NY" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
@@ -784,8 +890,18 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/syndicatebase1)
+"OW" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/unpowered/no_grav)
 "Pb" = (
 /obj/machinery/atmospherics/components/unary/tank/air,
 /turf/open/floor/plating,
@@ -825,6 +941,17 @@
 "RM" = (
 /obj/machinery/door/airlock/hatch,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/ruin/space/has_grav/syndicatebase1)
+"Sl" = (
+/obj/machinery/light/small{
+	brightness = 3;
+	dir = 8
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/space/has_grav/syndicatebase1)
 "Sq" = (
@@ -841,10 +968,16 @@
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating/airless,
-/area/space)
+/area/space/nearstation)
 "SN" = (
 /obj/machinery/door/airlock/highsecurity,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
@@ -883,18 +1016,15 @@
 /turf/open/floor/plasteel/airless/dark,
 /area/ruin/space/has_grav/syndicatebase1)
 "Ut" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/syndicatebase1)
 "UD" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -951,11 +1081,11 @@
 /obj/item/stack/sheet/metal{
 	amount = 50
 	},
+/obj/structure/closet/crate,
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 50
+	},
 /turf/open/floor/plasteel/airless/dark,
-/area/ruin/space/has_grav/syndicatebase1)
-"Xn" = (
-/obj/item/pickaxe,
-/turf/open/floor/plating/asteroid/airless,
 /area/ruin/space/has_grav/syndicatebase1)
 "Xs" = (
 /obj/machinery/suit_storage_unit/syndicate{
@@ -963,35 +1093,30 @@
 	storage_type = null;
 	suit_type = /obj/item/clothing/suit/space/syndicate/black/red
 	},
-/turf/open/floor/mineral/plastitanium,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel/airless/dark,
 /area/ruin/space/has_grav/syndicatebase1)
 "YI" = (
 /obj/machinery/hydroponics/constructable,
 /turf/open/floor/grass,
 /area/ruin/space/has_grav/syndicatebase1)
 "YY" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/syndicatebase1)
 "Zn" = (
 /obj/structure/lattice/catwalk,
-/turf/open/space/basic,
-/area/space)
+/turf/template_noop,
+/area/space/nearstation)
 "Zo" = (
 /obj/machinery/rnd/production/techfab/department/engineering,
 /obj/machinery/light/small,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/syndicatebase1)
-"Zp" = (
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/syndicatebase1)
 
@@ -1798,13 +1923,13 @@ kt
 VP
 VP
 VP
-Nn
+VP
 ui
 ui
 ui
 VP
 oZ
-Zp
+ik
 Br
 VP
 ui
@@ -1960,8 +2085,8 @@ VP
 Ou
 ot
 VP
-VP
-VP
+hE
+Lu
 VP
 bQ
 bQ
@@ -2122,11 +2247,11 @@ yK
 VP
 VP
 dn
-ge
+dx
 dx
 Jd
 dx
-dx
+Sl
 dx
 dx
 dx
@@ -2204,7 +2329,7 @@ km
 RM
 FK
 ii
-WT
+Am
 Ke
 UD
 WT
@@ -2427,7 +2552,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -2448,8 +2573,8 @@ Cv
 hA
 lJ
 wi
-EG
-EG
+ct
+ct
 Qz
 Hg
 ot
@@ -2504,7 +2629,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -2530,7 +2655,7 @@ zV
 yK
 cs
 VP
-IB
+or
 IB
 PU
 vT
@@ -2587,8 +2712,8 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Pr
@@ -2612,16 +2737,16 @@ VP
 VP
 SN
 VP
-Xn
-IB
+bQ
+OW
 VP
 QO
 Ad
 PU
-EG
-EG
-EG
-RC
+ct
+ct
+ct
+pd
 bQ
 bQ
 bQ
@@ -2662,16 +2787,16 @@ Pr
 Pr
 Pr
 Pr
+df
+df
 Pr
 Pr
 Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Pr
@@ -2694,8 +2819,8 @@ VP
 CL
 Un
 VP
+VP
 bQ
-tl
 VP
 ya
 Xs
@@ -2736,15 +2861,15 @@ Pr
 Pr
 Pr
 Pr
+df
+df
 Pr
 Pr
+df
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
+df
 Pr
 Pr
 Pr
@@ -2840,7 +2965,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Iz
 ui
@@ -2894,7 +3019,7 @@ ui
 ui
 Iz
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -2922,7 +3047,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Iz
 ui
@@ -2976,6 +3101,7 @@ ui
 Iz
 Pr
 Pr
+df
 Pr
 Pr
 Pr
@@ -2989,10 +3115,9 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
+df
 Pr
 Pr
 Pr
@@ -3058,6 +3183,7 @@ Iz
 Iz
 Pr
 Pr
+df
 Pr
 Pr
 Pr
@@ -3068,8 +3194,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -3140,17 +3265,17 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -3223,6 +3348,15 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+df
+df
+df
+Pr
+Pr
+df
 Pr
 Pr
 Pr
@@ -3241,16 +3375,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -3305,6 +3430,12 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+df
+df
 Pr
 Pr
 Pr
@@ -3326,13 +3457,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -3387,33 +3512,33 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+df
+Pr
+Pr
+df
+df
+Pr
+Pr
+Pr
+Pr
+df
+Pr
+df
+Pr
+df
+df
+df
 Pr
 Pr
 Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -3469,6 +3594,15 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+df
+df
 Pr
 Pr
 Pr
@@ -3486,16 +3620,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -3547,6 +3672,21 @@ Iz
 Iz
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+df
+Pr
+df
+Pr
+df
 Pr
 Pr
 Pr
@@ -3563,22 +3703,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -3631,21 +3756,21 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+df
+df
+df
+df
+Pr
+Pr
+df
 Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Pr
@@ -3718,6 +3843,24 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+df
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+df
+df
 Pr
 Pr
 Pr
@@ -3727,25 +3870,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -3803,6 +3928,7 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
@@ -3817,16 +3943,15 @@ Pr
 Pr
 Pr
 Pr
+df
+df
+df
 Pr
 Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -3891,6 +4016,7 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
@@ -3902,13 +4028,12 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -3964,6 +4089,16 @@ Pr
 qh
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+df
+df
 Pr
 Pr
 Pr
@@ -3979,17 +4114,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -4038,7 +4163,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -4050,6 +4175,11 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+df
 Pr
 Pr
 Pr
@@ -4066,13 +4196,8 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Pr
@@ -4135,6 +4260,7 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
@@ -4143,19 +4269,18 @@ Pr
 Pr
 Pr
 Pr
+df
+df
+df
+df
 Pr
 Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
+df
 Pr
 Pr
 Pr
@@ -4211,6 +4336,12 @@ ln
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+df
+df
 Pr
 Pr
 Pr
@@ -4229,16 +4360,10 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -4297,7 +4422,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -4317,11 +4442,11 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -4363,7 +4488,7 @@ ui
 Iz
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -4399,7 +4524,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -4477,7 +4602,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -4552,15 +4677,15 @@ vj
 ig
 vj
 Pr
+df
 Pr
 Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
+df
 Pr
 Pr
 Pr
@@ -4642,7 +4767,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -4674,7 +4799,7 @@ Iz
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Iz
@@ -4693,7 +4818,7 @@ Iz
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -4724,16 +4849,16 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
+df
+df
 Pr
 Pr
 Pr
@@ -4755,7 +4880,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -4788,12 +4913,12 @@ Tq
 Pr
 Pr
 Pr
+df
+df
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 vj
@@ -4805,6 +4930,7 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
@@ -4815,9 +4941,8 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Pr
@@ -4836,8 +4961,8 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Iz
@@ -4872,10 +4997,10 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
-Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 mo
@@ -4914,10 +5039,10 @@ Wr
 Iz
 Pr
 Pr
+df
+df
 Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -4955,8 +5080,8 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Pr
@@ -4964,10 +5089,10 @@ Pr
 LA
 Pr
 Pr
+df
 Pr
 Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -4998,8 +5123,8 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Pr
@@ -5037,6 +5162,8 @@ Pr
 Pr
 Pr
 Pr
+df
+df
 Pr
 Pr
 Pr
@@ -5047,9 +5174,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -5064,8 +5189,8 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Pr
@@ -5079,9 +5204,9 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
-Pr
-Pr
+df
 Pr
 Pr
 Iz
@@ -5131,6 +5256,7 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
@@ -5144,9 +5270,8 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Pr
@@ -5200,6 +5325,19 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+df
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+df
 Pr
 Pr
 Pr
@@ -5212,21 +5350,8 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Pr
@@ -5268,7 +5393,7 @@ Iz
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -5281,6 +5406,11 @@ Pr
 Pr
 Pr
 Pr
+df
+df
+Pr
+Pr
+df
 Pr
 Pr
 Pr
@@ -5289,12 +5419,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -5354,7 +5479,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -5371,6 +5496,12 @@ Pr
 Pr
 Pr
 Pr
+df
+df
+Pr
+Pr
+Pr
+df
 Pr
 Pr
 Pr
@@ -5389,13 +5520,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -5406,7 +5531,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Iz
@@ -5434,7 +5559,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -5450,6 +5575,14 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+df
+df
+Pr
+df
 Pr
 Pr
 Pr
@@ -5466,18 +5599,10 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -5486,9 +5611,9 @@ Iz
 Iz
 Pr
 Pr
+df
 Pr
-Pr
-Pr
+df
 Pr
 Pr
 Iz
@@ -5517,7 +5642,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -5531,6 +5656,14 @@ Pr
 Pr
 Pr
 Pr
+df
+df
+Pr
+Pr
+Pr
+Pr
+Pr
+df
 Pr
 Pr
 Pr
@@ -5548,15 +5681,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -5568,8 +5693,8 @@ Iz
 Pr
 Pr
 Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Iz
@@ -5599,8 +5724,8 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Pr
@@ -5612,6 +5737,16 @@ Pr
 Pr
 Pr
 Pr
+df
+df
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+df
+df
 Pr
 Pr
 Pr
@@ -5620,25 +5755,15 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -5649,9 +5774,9 @@ Iz
 Iz
 Pr
 Pr
-Pr
-Pr
-Pr
+df
+df
+df
 Pr
 Iz
 ui
@@ -5683,6 +5808,7 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
@@ -5700,6 +5826,11 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+df
 Pr
 Pr
 Pr
@@ -5711,18 +5842,12 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
+df
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -5776,6 +5901,19 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+Pr
+Pr
+df
+df
+Pr
+Pr
+Pr
+Pr
+df
 Pr
 Pr
 Pr
@@ -5788,21 +5926,8 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Pr
@@ -5845,6 +5970,7 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
@@ -5853,39 +5979,38 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+df
 Pr
 Pr
 Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+df
 Pr
 Pr
 Pr
 Pr
 Pr
 Pr
+df
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Pr
@@ -5934,6 +6059,11 @@ Pr
 Pr
 Pr
 Pr
+df
+df
+Pr
+df
+df
 Pr
 Pr
 Pr
@@ -5941,25 +6071,20 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
+df
 Pr
 Pr
 Pr
@@ -6015,6 +6140,13 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+Pr
+df
+df
 Pr
 Pr
 Pr
@@ -6034,6 +6166,7 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
@@ -6042,15 +6175,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -6093,6 +6218,23 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+df
+df
+Pr
+Pr
+Pr
+Pr
+df
+Pr
+Pr
+Pr
+df
+Pr
+Pr
+Pr
+df
 Pr
 Pr
 Pr
@@ -6112,6 +6254,7 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
@@ -6121,25 +6264,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Iz
@@ -6175,23 +6300,23 @@ Pr
 Pr
 Pr
 Pr
+df
+df
 Pr
 Pr
 Pr
 Pr
 Pr
+df
+df
 Pr
 Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
+df
 Pr
 Pr
 Pr
@@ -6215,12 +6340,12 @@ Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
 Pr
-Pr
-Pr
+df
 Pr
 Pr
 Iz
@@ -6256,6 +6381,15 @@ Iz
 Pr
 Pr
 Pr
+df
+df
+Pr
+df
+Pr
+Pr
+Pr
+Pr
+df
 Pr
 Pr
 Pr
@@ -6263,16 +6397,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -6296,13 +6421,13 @@ Pr
 Pr
 Pr
 Pr
+df
+df
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Iz
@@ -6338,6 +6463,24 @@ Iz
 Iz
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+df
+Pr
+Pr
+Pr
+df
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+df
+df
 Pr
 Pr
 Pr
@@ -6346,44 +6489,26 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+Pr
+df
 Pr
 Pr
 Pr
 Pr
 Pr
 Pr
+df
 Pr
 Pr
 Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -6430,6 +6555,13 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+Pr
+df
+df
 Pr
 Pr
 Pr
@@ -6440,24 +6572,17 @@ Pr
 Pr
 Pr
 Pr
+df
+df
+df
+df
 Pr
 Pr
 Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -6513,6 +6638,13 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+Pr
+df
+df
 Pr
 Pr
 Pr
@@ -6523,16 +6655,9 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
+df
 Pr
 Pr
 Pr
@@ -6600,6 +6725,26 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+df
+df
+Pr
+df
+Pr
+Pr
+Pr
+df
+df
+Pr
+Pr
+Pr
+Pr
+df
+df
+Pr
+df
 Pr
 Pr
 Pr
@@ -6609,27 +6754,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
 Pr
 Pr
 Pr
@@ -6682,6 +6807,16 @@ Pr
 Pr
 Pr
 Pr
+df
+Pr
+Pr
+Pr
+Pr
+Pr
+Pr
+df
+df
+df
 Pr
 Pr
 Pr
@@ -6690,27 +6825,17 @@ Pr
 Pr
 Pr
 Pr
+df
+df
 Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
+df
+df
+df
 Pr
 Pr
 Pr
@@ -6771,16 +6896,16 @@ Pr
 Pr
 Pr
 Pr
+df
+df
 Pr
 Pr
 Pr
 Pr
 Pr
 Pr
-Pr
-Pr
-Pr
-Pr
+df
+df
 Pr
 Pr
 Pr
@@ -6861,7 +6986,7 @@ Pr
 Pr
 Pr
 Pr
-Pr
+df
 Pr
 Pr
 Pr
