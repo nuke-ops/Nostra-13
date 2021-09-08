@@ -367,12 +367,6 @@
 	name = "Yana"
 	description = "Who's a good girl! You are!"
 
-/datum/map_template/ruin/space/errorcodehostile
-	id = "_errorcodehostile_"
-	suffix = "errorcodehostile.dmm"
-	name = "_errorcode-hostile_"
-	description = "Missing Info"
-
 //Space ruins for the station z
 /datum/map_template/ruin/spacenearstation
 	prefix = "_maps/RandomRuins/SpaceRuinsStation/"
@@ -439,3 +433,9 @@
 	suffix = "roid10.dmm"
 	name = "Maze Roid"
 	description = "Mineral asteroid. Ft. Brief maze."
+
+/datum/map_template/ruin/spacenearstation/roid11
+	id = "roid11"
+	suffix = "roid11.dmm"
+	name = "Snow Roid"
+	description = "Mineral asteroid. Ft. Snow Biome with mysterious tree."

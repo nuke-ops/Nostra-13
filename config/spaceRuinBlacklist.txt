@@ -59,4 +59,3 @@
 #_maps/RandomRuins/SpaceRuins/spiderden.dmm
 #_maps/RandomRuins/SpaceRuins/dcderelict.dmm
 #_maps/RandomRuins/SpaceRuins/yana.dmm
-#_maps/RandomRuins/SpaceRuins/errorcodehostile.dmm
