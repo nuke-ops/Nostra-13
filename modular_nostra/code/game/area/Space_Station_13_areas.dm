@@ -71,6 +71,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Syndicate Telecommunications Base"
 	icon_state = "red"
 
+/area/ruin/space/has_grav/spacepolicepost
+	name = "CentCom Security Post: 01"
+	icon_state = "blue"
+
 /area/bluespace_locker
   name = "Bluespace Locker"
   icon_state = "away"

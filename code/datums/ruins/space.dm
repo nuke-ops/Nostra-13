@@ -439,3 +439,9 @@
 	suffix = "roid11.dmm"
 	name = "Snow Roid"
 	description = "Mineral asteroid. Ft. Snow Biome with mysterious tree."
+
+/datum/map_template/ruin/spacenearstation/spacepolice
+	id = "spacepolice"
+	suffix = "spacepolice.dmm"
+	name = "Space Police"
+	description = "Hired by CentCom to keep you safe!"

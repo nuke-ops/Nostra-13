@@ -327,6 +327,54 @@
 	new/obj/structure/fluff/empty_sleeper/syndicate(get_turf(src))
 	return ..()
 
+//Space Policeman
+/obj/effect/mob_spawn/human/spacepolice
+	name = "space policeman"
+	desc = "A sleeper designed for long-term stasis."
+	mob_name = "centcom policeman"
+	job_description = "Space Policeman"
+	icon = 'icons/obj/machines/sleeper.dmi'
+	icon_state = "sleeper"
+	objectives = "Rat out the Syndicate/Changelings/Wizards/Narsie Cultists and eliminate them, but under any circumstances are you to harm any loyal Employees of Nanotrasen."
+	death = FALSE
+	roundstart = FALSE
+	random = TRUE
+	id_job = "Policeman"
+	id_access = "assistant"
+	outfit = /datum/outfit/spacepoliceman
+	short_desc = "You are an undercover cop assigned by CentCom to track down any Syndicate or Station Threatening Anomalies."
+	flavour_text = "You are a policeman hired by CentCom to root out any Syndicate, Wizard Federation, Nar'Sie Cultist threats either around, or within proximity of Nanotrasens top secret mining facility."
+	important_info = "DO NOT HARM ANY LOYAL NANOTRASEN CREW, OR THOSE IN COMMAND HAVE FULL RIGHT FOR YOUR EXTERMINATION"
+	assignedrole = "Space Policeman"
+
+/datum/outfit/spacepoliceman
+	name = "Space Policeman"
+	uniform = /obj/item/clothing/under/rank/security/officer/spacepol
+	shoes = /obj/item/clothing/shoes/jackboots
+	mask = /obj/item/clothing/mask/gas/sechailer/swat/spacepol
+	head = /obj/item/clothing/head/helmet/police
+	ears = /obj/item/radio/headset
+	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
+	back = /obj/item/tank/internals/oxygen
+	belt = /obj/item/gun/energy/e_gun/mini
+	suit = /obj/item/clothing/suit/armor/vest/blueshirt
+	suit_store = /obj/item/gun/energy/e_gun
+	gloves = /obj/item/clothing/gloves/tackler/combat
+	id = /obj/item/card/id
+	l_pocket = /obj/item/assembly/flash
+	r_pocket = /obj/item/restraints/handcuffs
+	implants = list(/obj/item/implant/mindshield)
+
+/obj/effect/mob_spawn/human/spacepolice/Destroy()
+	new/obj/structure/fluff/empty_sleeper/nanotrasen(get_turf(src))
+	return ..()
+
+/obj/effect/mob_spawn/human/spacepolice/special(mob/living/carbon/human/new_spawn)
+	ADD_TRAIT(new_spawn,TRAIT_NOCLONE,GHOSTROLE_TRAIT)
+	ADD_TRAIT(new_spawn,TRAIT_NO_TELEPORT,GHOSTROLE_TRAIT)
+	ADD_TRAIT(new_spawn,TRAIT_RESISTLOWPRESSURE,GHOSTROLE_TRAIT)
+	ADD_TRAIT(new_spawn,TRAIT_RESISTCOLD,GHOSTROLE_TRAIT)
+
 //Space Hotel Staff
 /obj/effect/mob_spawn/human/hotel_staff //not free antag u little shits
 	name = "staff sleeper"
