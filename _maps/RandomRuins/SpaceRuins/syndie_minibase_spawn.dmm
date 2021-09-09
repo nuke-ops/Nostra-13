@@ -30,6 +30,7 @@
 	pixel_y = 4
 	},
 /obj/structure/mirror/magic{
+	choosable_races = list("lizard","human","felinid","mammal","xeno","dwarf","insect","arachnid", "ipc");
 	pixel_x = -28
 	},
 /turf/open/floor/plasteel/cafeteria,
