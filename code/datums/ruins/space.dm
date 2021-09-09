@@ -373,6 +373,12 @@
 	name = "Space Police"
 	description = "Hired by CentCom to keep you safe!"
 
+/datum/map_template/ruin/space/madxenobiologist
+	id = "madxenobiologist"
+	suffix = "madxenobiologist.dmm"
+	name = "Xenobiology Prototype Ship"
+	description = "I will get my revenge..."
+
 //Space ruins for the station z
 /datum/map_template/ruin/spacenearstation
 	prefix = "_maps/RandomRuins/SpaceRuinsStation/"

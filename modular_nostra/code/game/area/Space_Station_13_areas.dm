@@ -75,6 +75,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "CentCom Security Post: 01"
 	icon_state = "blue"
 
+/area/ruin/space/has_grav/madscientistship
+	name = "Xenobiology Prototype Ship"
+	icon_state = "blue"
+
 /area/bluespace_locker
   name = "Bluespace Locker"
   icon_state = "away"

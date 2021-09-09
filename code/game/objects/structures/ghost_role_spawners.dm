@@ -375,6 +375,42 @@
 	ADD_TRAIT(new_spawn,TRAIT_RESISTLOWPRESSURE,GHOSTROLE_TRAIT)
 	ADD_TRAIT(new_spawn,TRAIT_RESISTCOLD,GHOSTROLE_TRAIT)
 
+//Mad Xenobiologist
+/obj/effect/mob_spawn/human/madxenobiologist
+	name = "mad xenobiologist"
+	desc = "A sleeper designed for long-term stasis."
+	mob_name = "mad xenobio"
+	job_description = "Mad Xenobiologist"
+	icon = 'icons/obj/machines/sleeper.dmi'
+	icon_state = "sleeper"
+	objectives = ""
+	death = FALSE
+	roundstart = FALSE
+	random = TRUE
+	id_job = "Scientist"
+	id_access = "scientist"
+	outfit = /datum/outfit/madxeno
+	short_desc = "You are the Mad Xenobiologist."
+	flavour_text = "You were a former Nanotrasen employee and due to your insane admiration of your slimes, you had betrayed Nanotrasen. Attempting to flee on a stolen Xenobiology Specialized Prototype Ship, your ship's right rear thruster was barely hit by Bluespace Artillery, almost killing you. But by sheer chance you had stolen a single Metal Foam Grenade during your escape, saving you... for now."
+	important_info = "SPREAD YOUR SLIMES FOR ALL TOO SEE"
+	assignedrole = "Mad Xenobiologist"
+
+/datum/outfit/madxeno
+	name = "Mad Xenobiologist"
+	uniform = /obj/item/clothing/under/rank/rnd/scientist
+	shoes = /obj/item/clothing/shoes/sneakers/white
+	head = /obj/item/clothing/head/soft/purple
+	back = /obj/item/storage/backpack/satchel/tox
+	suit = /obj/item/clothing/suit/toggle/labcoat
+	id = /obj/item/card/id
+
+/obj/effect/mob_spawn/human/madxenobiologist/Destroy()
+	new/obj/structure/fluff/empty_sleeper(get_turf(src))
+	return ..()
+
+/obj/effect/mob_spawn/human/madxenobiologist/special(mob/living/carbon/human/new_spawn)
+	ADD_TRAIT(new_spawn,TRAIT_UNSTABLE,GHOSTROLE_TRAIT)
+
 //Space Hotel Staff
 /obj/effect/mob_spawn/human/hotel_staff //not free antag u little shits
 	name = "staff sleeper"
