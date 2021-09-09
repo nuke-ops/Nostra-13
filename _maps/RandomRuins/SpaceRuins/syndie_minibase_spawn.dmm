@@ -91,8 +91,9 @@
 "ca" = (
 /obj/effect/mob_spawn/human/syndicate{
 	dir = 4;
+	flavour_text = "You have been tasked with infiltrating andd retrieving the Captains Antique Raygun aboard the highly classified Nanotrasen mining facility. Good luck Soldier.";
 	name = "Syndicate Infiltration Agent";
-	short_desc = "You are a Syndicate, you have been tasked with retrieving the Captains Antique Raygun aboard the highly classified Nanotrasen base within your nearby sector. Good luck Soldier."
+	short_desc = "You are a Syndicate."
 	},
 /obj/structure/bed{
 	dir = 1
@@ -137,7 +138,9 @@
 	dir = 4
 	},
 /obj/item/stack/cable_coil,
-/obj/machinery/power/apc/auto_name/north,
+/obj/machinery/power/apc/auto_name/north{
+	locked = 0
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/syndicatebase1)
 "dx" = (
@@ -665,8 +668,9 @@
 	},
 /obj/effect/mob_spawn/human/syndicate{
 	dir = 4;
+	flavour_text = "Your job is to gather as much intel about the mining facilities operations as you can. Ensure no Nanotrasen thugs step foot upon your vessel.";
 	name = "Syndicate Comms Agent";
-	short_desc = "You are a Syndicate, your job is to scout out the station and gather as much intel as you can. Assure no Nanotrasen thugs step foot upon your vessel."
+	short_desc = "You are a Syndicate."
 	},
 /obj/item/crowbar,
 /turf/open/floor/carpet/royalblack,
