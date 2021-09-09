@@ -367,6 +367,12 @@
 	name = "Yana"
 	description = "Who's a good girl! You are!"
 
+/datum/map_template/ruin/space/spacepolice
+	id = "spacepolice"
+	suffix = "spacepolice.dmm"
+	name = "Space Police"
+	description = "Hired by CentCom to keep you safe!"
+
 //Space ruins for the station z
 /datum/map_template/ruin/spacenearstation
 	prefix = "_maps/RandomRuins/SpaceRuinsStation/"
@@ -439,9 +445,3 @@
 	suffix = "roid11.dmm"
 	name = "Snow Roid"
 	description = "Mineral asteroid. Ft. Snow Biome with mysterious tree."
-
-/datum/map_template/ruin/spacenearstation/spacepolice
-	id = "spacepolice"
-	suffix = "spacepolice.dmm"
-	name = "Space Police"
-	description = "Hired by CentCom to keep you safe!"
