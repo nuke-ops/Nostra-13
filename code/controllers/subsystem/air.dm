@@ -37,7 +37,8 @@ SUBSYSTEM_DEF(air)
 
 	//atmos singletons
 	var/list/gas_reactions = list()
-
+	var/list/atmos_gen
+	var/list/planetary = list() //auxmos already caches static planetary mixes but could be convenient to do so here too
 	//Special functions lists
 	var/list/turf/open/high_pressure_delta = list()
 
@@ -54,13 +55,15 @@ SUBSYSTEM_DEF(air)
 	// Max number of turfs to look for a space turf, and max number of turfs that will be decompressed.
 	var/equalize_hard_turf_limit = 2000
 	// Whether equalization should be enabled at all.
-	var/equalize_enabled = FALSE
+	var/equalize_enabled = TRUE
 	// Whether turf-to-turf heat exchanging should be enabled.
 	var/heat_enabled = FALSE
 	// Max number of times process_turfs will share in a tick.
-	var/share_max_steps = 1
+	var/share_max_steps = 3
 	// Excited group processing will try to equalize groups with total pressure difference less than this amount.
-	var/excited_group_pressure_goal = 0.25
+	var/excited_group_pressure_goal = 1
+	// If this is set to 0, monstermos won't process planet atmos
+	var/planet_equalize_enabled = 0
 
 /datum/controller/subsystem/air/stat_entry(msg)
 	msg += "C:{"
@@ -472,6 +475,20 @@ SUBSYSTEM_DEF(air)
 		qdel(temp)
 
 	return pipe_init_dirs_cache[type]["[dir]"]
+
+/datum/controller/subsystem/air/proc/generate_atmos()
+	atmos_gen = list()
+	for(var/T in subtypesof(/datum/atmosphere))
+		var/datum/atmosphere/atmostype = T
+		atmos_gen[initial(atmostype.id)] = new atmostype
+
+/datum/controller/subsystem/air/proc/preprocess_gas_string(gas_string)
+	if(!atmos_gen)
+		generate_atmos()
+	if(!atmos_gen[gas_string])
+		return gas_string
+	var/datum/atmosphere/mix = atmos_gen[gas_string]
+	return mix.gas_string
 
 #undef SSAIR_PIPENETS
 #undef SSAIR_ATMOSMACHINERY

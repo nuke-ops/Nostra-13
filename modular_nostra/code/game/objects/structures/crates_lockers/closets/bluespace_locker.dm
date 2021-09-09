@@ -37,7 +37,7 @@
 		qdel(src)
 		return
 	SSbluespace_locker.internal_locker = src
-	..()
+	. = ..()
 
 /obj/structure/closet/bluespace/internal/get_other_locker()
 	return SSbluespace_locker.external_locker
@@ -147,7 +147,7 @@
 		qdel(src)
 		return
 	SSbluespace_locker.external_locker = src
-	..()
+	. = ..()
 
 /obj/structure/closet/bluespace/external/Destroy()
 	SSbluespace_locker.external_locker = null
