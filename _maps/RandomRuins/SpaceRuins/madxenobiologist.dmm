@@ -631,7 +631,7 @@
 /area/ruin/space/has_grav/madscientistship)
 "TB" = (
 /obj/machinery/door/window/brigdoor{
-	id = Scientist
+	id = null
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/circuit,
