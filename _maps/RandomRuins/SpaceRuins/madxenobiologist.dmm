@@ -38,6 +38,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
+"eG" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
 "eM" = (
 /obj/effect/mob_spawn/slime{
 	death = 0
@@ -87,6 +96,10 @@
 /obj/item/stack/rods/ten,
 /turf/template_noop,
 /area/template_noop)
+"hj" = (
+/obj/machinery/atmospherics/components/unary/tank/air,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
 "hK" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/dropper,
@@ -110,6 +123,12 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/shuttle,
+/area/ruin/space/has_grav/madscientistship)
+"kg" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "kk" = (
 /obj/structure/cable{
@@ -207,12 +226,6 @@
 	},
 /turf/open/floor/plasteel/shuttle,
 /area/ruin/space/has_grav/madscientistship)
-"oO" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
 "oV" = (
 /obj/item/stack/rods,
 /turf/template_noop,
@@ -250,6 +263,13 @@
 /obj/item/storage/firstaid,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
+"rB" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
 "rG" = (
 /obj/structure/closet/emcloset/anchored,
 /turf/open/floor/plasteel/dark/side,
@@ -282,9 +302,6 @@
 /obj/structure/closet/crate,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
-"tm" = (
-/turf/open/floor/plasteel/dark/side,
-/area/ruin/space/has_grav/madscientistship)
 "ty" = (
 /obj/structure/table/reinforced,
 /obj/item/disk/xenobio_console_upgrade/monkey,
@@ -298,6 +315,9 @@
 	},
 /turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
+"tX" = (
+/turf/open/floor/plasteel/dark/side,
+/area/ruin/space/has_grav/madscientistship)
 "uk" = (
 /turf/open/floor/plasteel/shuttle,
 /area/ruin/space/has_grav/madscientistship)
@@ -310,12 +330,6 @@
 /obj/item/crowbar/red,
 /obj/item/flashlight,
 /turf/open/floor/plasteel/shuttle,
-/area/ruin/space/has_grav/madscientistship)
-"uE" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 8
-	},
-/turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
 "uI" = (
 /obj/machinery/airalarm/directional/north{
@@ -380,6 +394,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
+"Bj" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
 "Bk" = (
 /obj/structure/window/plasma/reinforced/unanchored,
 /turf/closed/wall/mineral/titanium/interior,
@@ -408,11 +428,12 @@
 /obj/machinery/door/airlock/science,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
-"Cx" = (
-/obj/structure/cable{
-	icon_state = "1-2"
+"CC" = (
+/obj/structure/grille,
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "Dh" = (
@@ -494,21 +515,6 @@
 	},
 /turf/open/floor/plasteel/shuttle,
 /area/ruin/space/has_grav/madscientistship)
-"Hf" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 9
-	},
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"HR" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 6
-	},
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
 "If" = (
 /obj/structure/window/plasma/reinforced/spawner/north,
 /turf/open/floor/plasteel/dark,
@@ -536,18 +542,13 @@
 /obj/machinery/door/airlock/public,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
-"Km" = (
-/obj/machinery/atmospherics/components/unary/tank/air,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/madscientistship)
-"LQ" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
+"La" = (
+/obj/effect/turf_decal{
 	dir = 8
 	},
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"Me" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "Mr" = (
@@ -605,6 +606,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
+"Ow" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
 "Oy" = (
 /obj/effect/mob_spawn/human/madxenobiologist,
 /turf/open/floor/plasteel/shuttle,
@@ -619,7 +624,7 @@
 "OG" = (
 /obj/item/storage/belt/utility/full/engi,
 /obj/structure/mirror/magic{
-	choosable_races = list("human","felinid","insect");
+	choosable_races = list("human","felinid","insect","slimeperson");
 	name = "Science Mirror";
 	pixel_y = 30
 	},
@@ -674,9 +679,21 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
+"QP" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
 "Rq" = (
 /obj/structure/window/plasma/reinforced/spawner/east,
 /turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Rw" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 8
+	},
+/turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
 "Sb" = (
 /obj/structure/girder,
@@ -720,15 +737,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
-"VD" = (
-/obj/effect/turf_decal{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 8
-	},
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
 "WS" = (
 /obj/machinery/processor/slime,
 /obj/structure/window/plasma/reinforced/unanchored,
@@ -761,14 +769,6 @@
 	dir = 1
 	},
 /turf/open/floor/circuit,
-/area/ruin/space/has_grav/madscientistship)
-"Yp" = (
-/obj/structure/grille,
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 8
-	},
-/turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "Za" = (
 /obj/machinery/light/small,
@@ -992,7 +992,7 @@ Mr
 tk
 PP
 BV
-Km
+hj
 Qp
 EL
 gt
@@ -1056,7 +1056,7 @@ BU
 XP
 xW
 MG
-uE
+Rw
 aT
 Qp
 gt
@@ -1088,7 +1088,7 @@ Ce
 Ce
 Kj
 Ce
-Yp
+CC
 Qp
 Qp
 gt
@@ -1105,7 +1105,7 @@ fi
 aT
 Nh
 qR
-tm
+tX
 aT
 UR
 dZ
@@ -1120,7 +1120,7 @@ QI
 QI
 kl
 QI
-VD
+La
 Qp
 EL
 Um
@@ -1137,7 +1137,7 @@ uk
 In
 Nh
 Pl
-tm
+tX
 ij
 PG
 fr
@@ -1147,12 +1147,12 @@ kk
 kk
 kk
 kk
-HR
-Cx
-Cx
+eG
+rB
+rB
 Xh
-Me
-Hf
+Ow
+QP
 Qp
 EL
 gt
@@ -1169,7 +1169,7 @@ uk
 oD
 Nh
 PG
-tm
+tX
 Cw
 PG
 PG
@@ -1179,7 +1179,7 @@ hK
 PG
 PG
 PG
-oO
+Bj
 wY
 Rq
 Rq
@@ -1201,7 +1201,7 @@ uk
 oD
 Nh
 Pl
-tm
+tX
 ij
 ty
 PG
@@ -1211,7 +1211,7 @@ Bk
 Fr
 Gn
 PG
-oO
+Bj
 Fl
 kU
 Dh
@@ -1233,7 +1233,7 @@ uk
 In
 Nh
 qS
-tm
+tX
 ij
 lE
 PG
@@ -1243,7 +1243,7 @@ WS
 XX
 TB
 Fz
-LQ
+kg
 pe
 zU
 PG
@@ -1265,7 +1265,7 @@ uk
 oD
 Nh
 Pl
-tm
+tX
 ij
 OA
 PG
@@ -1297,7 +1297,7 @@ lj
 oD
 Nh
 PG
-tm
+tX
 Cw
 PG
 PG
@@ -1329,7 +1329,7 @@ uk
 In
 Nh
 Pl
-tm
+tX
 ij
 PG
 PG
@@ -1361,7 +1361,7 @@ fi
 aT
 Nh
 bs
-tm
+tX
 aT
 uI
 PG
