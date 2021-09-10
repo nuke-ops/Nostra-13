@@ -61,3 +61,4 @@
 #_maps/RandomRuins/SpaceRuins/yana.dmm
 #_maps/RandomRuins/SpaceRuins/spacepolice.dmm
 #_maps/RandomRuins/SpaceRuins/madxenobiologist.dmm
+#_maps/RandomRuins/SpaceRuins/ultimatespacegamer.dmm

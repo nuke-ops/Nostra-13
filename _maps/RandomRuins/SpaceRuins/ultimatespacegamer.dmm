@@ -1,0 +1,1161 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"bA" = (
+/obj/effect/turf_decal/delivery/white,
+/obj/effect/turf_decal/stripes{
+	dir = 4
+	},
+/turf/open/floor/carpet/green,
+/area/ruin/space/has_grav)
+"bF" = (
+/obj/machinery/door/airlock/public,
+/turf/open/floor/grass/fakebasalt,
+/area/ruin/space/has_grav)
+"cJ" = (
+/obj/structure/chair/sofa/left{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"df" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"dz" = (
+/obj/machinery/atmospherics/components/unary/tank/air,
+/turf/open/floor/plating/dirt,
+/area/ruin/space/has_grav)
+"dW" = (
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp/bananalamp,
+/turf/open/floor/carpet/green,
+/area/ruin/space/has_grav)
+"el" = (
+/turf/open/floor/grass/fakebasalt,
+/area/ruin/space/has_grav)
+"ft" = (
+/obj/effect/turf_decal/stripes{
+	dir = 8
+	},
+/turf/open/floor/light,
+/area/ruin/space/has_grav)
+"fC" = (
+/obj/effect/decal/cleanable/ash/large,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"fD" = (
+/obj/effect/turf_decal/loading_area/white{
+	dir = 4
+	},
+/turf/open/floor/grass/fakebasalt,
+/area/ruin/space/has_grav)
+"gc" = (
+/obj/structure/barricade/wooden,
+/obj/machinery/light/broken{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"gr" = (
+/obj/effect/decal/cleanable/ash,
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 1
+	},
+/turf/open/floor/carpet,
+/area/ruin/space/has_grav)
+"hr" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/carpet,
+/area/ruin/space/has_grav)
+"iJ" = (
+/obj/structure/closet/cabinet,
+/obj/item/clothing/under/rank/civilian/clown/jester,
+/obj/item/clothing/under/rank/civilian/clown,
+/obj/item/clothing/under/costume/pirate,
+/obj/item/clothing/mask/gas/clown_hat,
+/obj/item/clothing/head/sombrero,
+/obj/item/clothing/head/jester,
+/obj/item/clothing/shoes/clown_shoes,
+/obj/item/clothing/shoes/swagshoes,
+/obj/item/clothing/shoes/sneakers/black,
+/obj/item/clothing/shoes/sneakers/black,
+/turf/open/floor/grass/fakebasalt,
+/area/ruin/space/has_grav)
+"jf" = (
+/obj/machinery/vr_sleeper{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/circuit/red,
+/area/ruin/space/has_grav)
+"ki" = (
+/obj/structure/table/wood,
+/obj/item/toy/crayon/spraycan,
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/mirror{
+	pixel_y = 25
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/circuit/red,
+/area/ruin/space/has_grav)
+"kj" = (
+/obj/structure/barricade/wooden,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"kX" = (
+/obj/effect/decal/cleanable/ash,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/toy/plush/nekoplushie,
+/obj/item/storage/firstaid/ancient,
+/obj/structure/closet,
+/turf/open/floor/carpet/green,
+/area/ruin/space/has_grav)
+"lt" = (
+/obj/structure/closet/cabinet,
+/obj/machinery/light,
+/obj/item/clothing/underwear/shirt/skull,
+/obj/item/clothing/underwear/shirt/redjersey,
+/obj/item/clothing/underwear/shirt/tanktop/striped,
+/obj/item/clothing/underwear/shirt/tiedye,
+/obj/item/clothing/suit/nerdshirt,
+/obj/item/clothing/under/pants/jeans,
+/obj/item/clothing/under/pants/khaki,
+/obj/item/clothing/under/pants/camo,
+/obj/item/clothing/shoes/swagshoes,
+/obj/item/clothing/shoes/swagshoes,
+/turf/open/floor/carpet/green,
+/area/ruin/space/has_grav)
+"lJ" = (
+/obj/structure/table/wood,
+/obj/structure/spider/stickyweb,
+/turf/open/floor/carpet/arcade,
+/area/ruin/space/has_grav)
+"mg" = (
+/obj/item/bedsheet/pirate{
+	dir = 8
+	},
+/obj/structure/bed{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/toy/plush/catgirl,
+/obj/effect/mob_spawn/human/ultimatespacegamer{
+	dir = 4
+	},
+/turf/open/floor/carpet/green,
+/area/ruin/space/has_grav)
+"my" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/turf/closed/wall/mineral/wood,
+/area/ruin/space/has_grav)
+"mB" = (
+/obj/machinery/light,
+/obj/effect/turf_decal/stripes{
+	dir = 8
+	},
+/turf/open/floor/light,
+/area/ruin/space/has_grav)
+"mR" = (
+/obj/structure/closet/secure_closet/freezer/fridge{
+	locked = 0;
+	should_populate_contents = 0
+	},
+/obj/effect/turf_decal/stripes{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes{
+	dir = 8
+	},
+/obj/item/reagent_containers/food/snacks/cornchips,
+/obj/item/reagent_containers/food/snacks/cornchips,
+/obj/item/reagent_containers/food/snacks/cornchips,
+/obj/item/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/drinks/soda_cans/lemon_lime,
+/obj/item/reagent_containers/food/drinks/soda_cans/lemon_lime,
+/obj/item/reagent_containers/food/drinks/soda_cans/grey_bull,
+/obj/item/reagent_containers/food/drinks/soda_cans/buzz_fuzz,
+/obj/item/reagent_containers/food/drinks/soda_cans/buzz_fuzz,
+/obj/item/reagent_containers/food/drinks/soda_cans/buzz_fuzz,
+/obj/item/reagent_containers/food/drinks/soda_cans/space_mountain_wind,
+/obj/item/reagent_containers/food/drinks/soda_cans/space_mountain_wind,
+/obj/item/reagent_containers/food/drinks/soda_cans/space_mountain_wind,
+/obj/item/reagent_containers/food/drinks/soda_cans/space_mountain_wind,
+/obj/item/reagent_containers/food/drinks/soda_cans/pwr_game,
+/obj/item/reagent_containers/food/drinks/soda_cans/pwr_game,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plasteel/cafeteria,
+/area/ruin/space/has_grav)
+"nJ" = (
+/obj/structure/table/wood,
+/obj/item/toy/katana,
+/turf/open/floor/light,
+/area/ruin/space/has_grav)
+"nO" = (
+/obj/structure/bed,
+/obj/item/bedsheet,
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/item/toy/plush/bubbleplush,
+/turf/open/floor/carpet/arcade,
+/area/ruin/space/has_grav)
+"oj" = (
+/obj/structure/barricade/wooden/crude,
+/obj/structure/door_assembly/door_assembly_public{
+	anchored = 1
+	},
+/turf/open/floor/carpet,
+/area/ruin/space/has_grav)
+"os" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9
+	},
+/turf/closed/wall/mineral/wood,
+/area/ruin/space/has_grav)
+"oX" = (
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp,
+/obj/machinery/airalarm/directional/north{
+	locked = 0
+	},
+/turf/open/floor/grass/fakebasalt,
+/area/ruin/space/has_grav)
+"pC" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/grass/fakebasalt,
+/area/ruin/space/has_grav)
+"qx" = (
+/obj/item/picket_sign{
+	desc = "It's says: Turn Back! Epic Gamer at work!";
+	label = "Turn Back! Epic Gamer at work!";
+	name = "Turn Back! Epic Gamer at work!"
+	},
+/turf/open/floor/plating/asteroid,
+/area/ruin/unpowered/no_grav)
+"qV" = (
+/obj/effect/turf_decal/delivery/white,
+/obj/effect/turf_decal/stripes{
+	dir = 4
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on,
+/turf/open/floor/carpet/green,
+/area/ruin/space/has_grav)
+"ro" = (
+/turf/open/floor/carpet/arcade,
+/area/ruin/space/has_grav)
+"rH" = (
+/obj/machinery/door/airlock/maintenance_hatch,
+/obj/structure/fans/tiny,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"rQ" = (
+/obj/structure/barricade/wooden/crude,
+/turf/open/floor/carpet/arcade,
+/area/ruin/space/has_grav)
+"rX" = (
+/obj/structure/ladder/unbreakable{
+	id = gamerladder
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"se" = (
+/obj/structure/table/wood,
+/obj/structure/mirror{
+	pixel_y = 25
+	},
+/obj/item/razor,
+/turf/open/floor/carpet/green,
+/area/ruin/space/has_grav)
+"tk" = (
+/obj/structure/spider/stickyweb,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/carpet/arcade,
+/area/ruin/space/has_grav)
+"tN" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/carpet/arcade,
+/area/ruin/space/has_grav)
+"ug" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/closed/wall/mineral/wood,
+/area/ruin/space/has_grav)
+"wj" = (
+/obj/structure/chair/sofa/right{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"wN" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"xb" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 10
+	},
+/turf/closed/wall/mineral/wood,
+/area/ruin/space/has_grav)
+"xo" = (
+/obj/machinery/atmospherics/components/unary/tank/air,
+/turf/open/floor/plating/asteroid,
+/area/ruin/unpowered/no_grav)
+"xJ" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/carpet,
+/area/ruin/space/has_grav)
+"yd" = (
+/obj/structure/spider/stickyweb,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/carpet/arcade,
+/area/ruin/space/has_grav)
+"yV" = (
+/obj/structure/sink/kitchen{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes{
+	dir = 4
+	},
+/turf/open/floor/plasteel/cafeteria,
+/area/ruin/space/has_grav)
+"zk" = (
+/turf/closed/wall/mineral/wood,
+/area/ruin/space/has_grav)
+"Ah" = (
+/obj/structure/chair/stool/alien,
+/turf/open/floor/carpet/green,
+/area/ruin/space/has_grav)
+"AO" = (
+/obj/effect/decal/cleanable/ash,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/trash/cheesie,
+/turf/open/floor/carpet/green,
+/area/ruin/space/has_grav)
+"Bi" = (
+/turf/open/floor/carpet,
+/area/ruin/space/has_grav)
+"BS" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"Cv" = (
+/obj/effect/turf_decal/loading_area/white,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"CR" = (
+/obj/effect/turf_decal/delivery/white,
+/obj/effect/turf_decal/stripes{
+	dir = 4
+	},
+/obj/machinery/airalarm/directional/north{
+	locked = 0
+	},
+/obj/machinery/computer/arcade/battle,
+/turf/open/floor/carpet/green,
+/area/ruin/space/has_grav)
+"CZ" = (
+/obj/machinery/door/airlock/maintenance_hatch,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"DA" = (
+/turf/open/floor/carpet/green,
+/area/ruin/space/has_grav)
+"DL" = (
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"EY" = (
+/obj/machinery/door/airlock/abductor,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"Fe" = (
+/obj/effect/turf_decal/loading_area/white{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/grass/fakebasalt,
+/area/ruin/space/has_grav)
+"GR" = (
+/obj/item/picket_sign{
+	desc = "It's says, GAMERS ONLY!";
+	name = "GAMERS ONLY!"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/carpet,
+/area/ruin/space/has_grav)
+"GZ" = (
+/obj/effect/turf_decal/stripes/red/line{
+	dir = 1
+	},
+/turf/open/floor/carpet,
+/area/ruin/space/has_grav)
+"Hf" = (
+/obj/structure/spider/stickyweb,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/light/broken{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"HC" = (
+/turf/open/floor/plating/dirt,
+/area/ruin/unpowered/no_grav)
+"HE" = (
+/obj/structure/closet/secure_closet/freezer/fridge{
+	locked = 0;
+	should_populate_contents = 0
+	},
+/obj/effect/turf_decal{
+	dir = 4
+	},
+/obj/item/reagent_containers/food/drinks/soda_cans/pwr_game,
+/obj/item/reagent_containers/food/drinks/soda_cans/pwr_game,
+/obj/item/reagent_containers/food/drinks/soda_cans/pwr_game,
+/obj/item/reagent_containers/food/drinks/soda_cans/pwr_game,
+/obj/item/reagent_containers/food/drinks/soda_cans/pwr_game,
+/obj/item/reagent_containers/food/drinks/soda_cans/pwr_game,
+/obj/item/reagent_containers/food/snacks/cheesiehonkers,
+/obj/item/reagent_containers/food/snacks/cheesiehonkers,
+/obj/item/reagent_containers/food/snacks/cheesiehonkers,
+/obj/item/reagent_containers/food/snacks/cheesiehonkers,
+/obj/item/reagent_containers/food/snacks/cheesiehonkers,
+/obj/item/reagent_containers/food/snacks/cheesiehonkers,
+/obj/item/reagent_containers/food/snacks/cheesiehonkers,
+/obj/item/reagent_containers/food/snacks/cheesiehonkers,
+/obj/item/reagent_containers/food/snacks/cheesiehonkers,
+/obj/item/reagent_containers/food/snacks/cheesiehonkers,
+/obj/effect/decal/cleanable/greenglow,
+/obj/item/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/snacks/chips,
+/obj/item/reagent_containers/food/drinks/soda_cans/space_mountain_wind,
+/obj/item/reagent_containers/food/drinks/soda_cans/space_mountain_wind,
+/obj/item/reagent_containers/food/drinks/soda_cans/space_mountain_wind,
+/turf/open/floor/plasteel/airless/cafeteria,
+/area/ruin/space/has_grav)
+"IZ" = (
+/obj/machinery/vr_sleeper{
+	dir = 8
+	},
+/turf/open/floor/light,
+/area/ruin/space/has_grav)
+"Jc" = (
+/turf/open/floor/plating/asteroid,
+/area/ruin/unpowered/no_grav)
+"Jy" = (
+/obj/structure/table/wood,
+/obj/machinery/computer/security/wooden_tv,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"Ko" = (
+/obj/structure/grille,
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"Lh" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"LK" = (
+/obj/structure/table/wood,
+/obj/item/toy/figure/assistant,
+/obj/item/toy/figure/chef,
+/obj/item/toy/figure/dsquad,
+/turf/open/floor/light,
+/area/ruin/space/has_grav)
+"LZ" = (
+/obj/effect/turf_decal/caution/red,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"Mb" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/carpet/green,
+/area/ruin/space/has_grav)
+"Nh" = (
+/obj/structure/janitorialcart,
+/obj/item/mop,
+/turf/open/floor/carpet,
+/area/ruin/space/has_grav)
+"Ot" = (
+/obj/structure/fans/tiny,
+/obj/machinery/door/airlock/public,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"Ph" = (
+/obj/structure/bed,
+/obj/item/bedsheet/wiz,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/mob_spawn/human/ultimatespacegamer{
+	dir = 8
+	},
+/turf/open/floor/grass/fakebasalt,
+/area/ruin/space/has_grav)
+"Ql" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/grass/fakebasalt,
+/area/ruin/space/has_grav)
+"Qp" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/ladder/unbreakable{
+	height = 1;
+	id = gamerladder
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"QL" = (
+/obj/structure/spider/stickyweb,
+/obj/structure/closet/crate/wooden/toy,
+/turf/open/floor/carpet/arcade,
+/area/ruin/space/has_grav)
+"Ru" = (
+/obj/machinery/light/broken{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"Sa" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/circuit/red,
+/area/ruin/space/has_grav)
+"Un" = (
+/obj/machinery/light/broken{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"UT" = (
+/turf/template_noop,
+/area/template_noop)
+"Vf" = (
+/obj/structure/dresser,
+/turf/open/floor/carpet/green,
+/area/ruin/space/has_grav)
+"VD" = (
+/obj/item/picket_sign{
+	desc = "It's says: Turn Back! Epic Gamer at work!";
+	label = "Turn Back! Epic Gamer at work!";
+	name = "Turn Back! Epic Gamer at work!"
+	},
+/turf/open/floor/plating/dirt,
+/area/ruin/unpowered/no_grav)
+"VZ" = (
+/obj/structure/dresser,
+/obj/machinery/light,
+/turf/open/floor/circuit/red,
+/area/ruin/space/has_grav)
+"Wq" = (
+/obj/structure/sink/kitchen{
+	dir = 4;
+	pixel_x = -12;
+	pixel_y = 8
+	},
+/obj/effect/turf_decal,
+/obj/effect/turf_decal{
+	dir = 4
+	},
+/turf/open/floor/plasteel/airless/cafeteria,
+/area/ruin/space/has_grav)
+"WF" = (
+/obj/structure/table/wood,
+/obj/item/toy/plush/mammal/fox,
+/obj/machinery/light,
+/turf/open/floor/grass/fakebasalt,
+/area/ruin/space/has_grav)
+"Xd" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 4
+	},
+/turf/closed/wall/mineral/wood,
+/area/ruin/space/has_grav)
+"Xg" = (
+/obj/structure/sign/warning/radiation,
+/turf/closed/wall/mineral/wood,
+/area/ruin/space/has_grav)
+"Xs" = (
+/obj/machinery/light,
+/turf/open/floor/wood,
+/area/ruin/space/has_grav)
+"YC" = (
+/obj/structure/table/wood,
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/item/clothing/mask/facehugger/toy,
+/turf/open/floor/carpet/arcade,
+/area/ruin/space/has_grav)
+"YG" = (
+/obj/effect/decal/cleanable/ash/large,
+/turf/open/floor/carpet,
+/area/ruin/space/has_grav)
+"Zk" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes{
+	dir = 8
+	},
+/obj/item/trash/chips,
+/turf/open/floor/light,
+/area/ruin/space/has_grav)
+
+(1,1,1) = {"
+UT
+UT
+UT
+UT
+UT
+UT
+UT
+Jc
+UT
+UT
+Jc
+UT
+UT
+UT
+UT
+"}
+(2,1,1) = {"
+UT
+UT
+zk
+zk
+zk
+Jc
+UT
+Jc
+Jc
+Jc
+Jc
+Jc
+qx
+UT
+UT
+"}
+(3,1,1) = {"
+UT
+UT
+zk
+rX
+rH
+Jc
+UT
+Jc
+Jc
+HC
+HC
+Jc
+UT
+UT
+UT
+"}
+(4,1,1) = {"
+UT
+zk
+zk
+zk
+zk
+zk
+zk
+zk
+zk
+zk
+HC
+HC
+Jc
+UT
+UT
+"}
+(5,1,1) = {"
+UT
+zk
+mg
+DA
+lt
+zk
+HE
+Wq
+Xs
+zk
+VD
+HC
+Jc
+Jc
+UT
+"}
+(6,1,1) = {"
+Jc
+zk
+dW
+Mb
+AO
+zk
+BS
+Lh
+DL
+Ot
+HC
+HC
+Jc
+UT
+UT
+"}
+(7,1,1) = {"
+UT
+zk
+se
+Ah
+DA
+Xg
+Jy
+df
+cJ
+Ko
+VD
+HC
+Jc
+UT
+UT
+"}
+(8,1,1) = {"
+UT
+zk
+kX
+DA
+DA
+EY
+Cv
+LZ
+wj
+Ko
+HC
+HC
+HC
+Jc
+Jc
+"}
+(9,1,1) = {"
+UT
+zk
+Vf
+Mb
+Mb
+my
+ug
+os
+zk
+zk
+HC
+HC
+Jc
+qx
+UT
+"}
+(10,1,1) = {"
+UT
+zk
+CR
+bA
+qV
+Xd
+dz
+HC
+HC
+HC
+HC
+Jc
+Jc
+UT
+UT
+"}
+(11,1,1) = {"
+UT
+zk
+Zk
+ft
+mB
+zk
+HC
+HC
+HC
+Jc
+Jc
+Jc
+Jc
+UT
+UT
+"}
+(12,1,1) = {"
+UT
+zk
+LK
+IZ
+nJ
+zk
+Jc
+Jc
+Jc
+UT
+qx
+Jc
+Jc
+UT
+UT
+"}
+(13,1,1) = {"
+UT
+zk
+zk
+zk
+zk
+zk
+UT
+Jc
+UT
+UT
+UT
+Jc
+Jc
+UT
+UT
+"}
+(14,1,1) = {"
+UT
+UT
+UT
+UT
+UT
+Jc
+UT
+UT
+UT
+UT
+UT
+UT
+Jc
+UT
+UT
+"}
+(15,1,1) = {"
+UT
+UT
+UT
+UT
+UT
+Jc
+UT
+UT
+UT
+UT
+UT
+UT
+UT
+UT
+UT
+"}
+
+(1,1,2) = {"
+UT
+UT
+UT
+UT
+UT
+UT
+UT
+xo
+Jc
+UT
+UT
+Jc
+Jc
+UT
+UT
+"}
+(2,1,2) = {"
+UT
+UT
+zk
+zk
+zk
+my
+ug
+os
+zk
+zk
+zk
+zk
+zk
+Jc
+UT
+"}
+(3,1,2) = {"
+UT
+UT
+zk
+Qp
+DL
+xb
+ug
+ki
+Sa
+jf
+Sa
+VZ
+zk
+Jc
+UT
+"}
+(4,1,2) = {"
+Jc
+Jc
+zk
+zk
+CZ
+zk
+zk
+oX
+Fe
+fD
+fD
+mR
+zk
+Jc
+Jc
+"}
+(5,1,2) = {"
+UT
+Jc
+Jc
+Ko
+fC
+wN
+zk
+iJ
+el
+el
+el
+yV
+zk
+Jc
+UT
+"}
+(6,1,2) = {"
+UT
+UT
+Jc
+Ko
+DL
+DL
+zk
+Ph
+el
+Ql
+pC
+WF
+zk
+Jc
+UT
+"}
+(7,1,2) = {"
+UT
+UT
+Jc
+zk
+DL
+kj
+zk
+zk
+zk
+zk
+bF
+zk
+zk
+Jc
+UT
+"}
+(8,1,2) = {"
+UT
+Jc
+Jc
+zk
+Un
+kj
+zk
+GR
+gr
+xJ
+Bi
+Bi
+zk
+Jc
+UT
+"}
+(9,1,2) = {"
+UT
+UT
+Jc
+Ko
+kj
+kj
+oj
+hr
+GZ
+hr
+YG
+Nh
+zk
+Jc
+UT
+"}
+(10,1,2) = {"
+UT
+UT
+Jc
+Ko
+gc
+kj
+zk
+zk
+rQ
+zk
+zk
+zk
+zk
+Jc
+UT
+"}
+(11,1,2) = {"
+UT
+UT
+Jc
+zk
+zk
+zk
+zk
+QL
+tN
+ro
+Hf
+lJ
+zk
+Jc
+Jc
+"}
+(12,1,2) = {"
+UT
+UT
+UT
+UT
+Jc
+Jc
+zk
+YC
+Ru
+yd
+tk
+nO
+zk
+Jc
+Jc
+"}
+(13,1,2) = {"
+UT
+UT
+UT
+Jc
+Jc
+Jc
+zk
+zk
+zk
+zk
+zk
+zk
+zk
+Jc
+UT
+"}
+(14,1,2) = {"
+UT
+UT
+UT
+UT
+Jc
+UT
+Jc
+Jc
+Jc
+Jc
+UT
+Jc
+Jc
+Jc
+UT
+"}
+(15,1,2) = {"
+UT
+UT
+UT
+UT
+UT
+UT
+UT
+UT
+Jc
+UT
+UT
+UT
+UT
+Jc
+UT
+"}

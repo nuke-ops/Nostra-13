@@ -392,7 +392,7 @@
 	outfit = /datum/outfit/madxeno
 	short_desc = "You are the Mad Xenobiologist."
 	flavour_text = "You were a former Nanotrasen employee and due to your insane admiration of your slimes, you had betrayed Nanotrasen. Attempting to flee on a stolen Xenobiology Specialized Prototype Ship, your ship's right rear thruster was barely hit by Bluespace Artillery, almost killing you. But by sheer chance you had stolen a single Metal Foam Grenade during your escape, saving you... for now."
-	important_info = "SPREAD YOUR SLIMES FOR ALL TOO SEE"
+	important_info = ""
 	assignedrole = "Mad Xenobiologist"
 
 /datum/outfit/madxeno
@@ -410,6 +410,48 @@
 
 /obj/effect/mob_spawn/human/madxenobiologist/special(mob/living/carbon/human/new_spawn)
 	ADD_TRAIT(new_spawn,TRAIT_UNSTABLE,GHOSTROLE_TRAIT)
+	to_chat(new_spawn, "First Objective: Get sustainable power to your ship and survive using slimes.")
+	to_chat(new_spawn, "Second Objective: Spread slimes wherever you can.")
+	to_chat(new_spawn, "Final Objective: Take revenge on Nanotrasen for trying to stop your progress.")
+
+// Ultimate Space Gamer
+/obj/effect/mob_spawn/human/ultimatespacegamer
+	name = "ultimate gamer"
+	desc = "A sleeper designed for long-term stasis."
+	mob_name = "space gamer ultimate"
+	job_description = "Ultimate Space Gamer"
+	icon = 'icons/obj/machines/sleeper.dmi'
+	icon_state = "sleeper"
+	objectives = ""
+	death = FALSE
+	roundstart = FALSE
+	id_job = "Gamer"
+	mob_species = /datum/species/human
+	outfit = /datum/outfit/gamergear
+	short_desc = "You are the ULTIMATE SPACE GAMER."
+	flavour_text = "From the start you were a failure, doomed for nothing but a life of sadness and sorrow. But you knew you were destined for something greater, something.... out of this world, or perhaps..... in another?"
+	important_info = ""
+	assignedrole = "Ultimate Space Gamer"
+
+/datum/outfit/gamergear
+	name = "Ultimate Space Gamer"
+	uniform = /obj/item/clothing/under/costume/swagoutfit
+	shoes = /obj/item/clothing/shoes/swagshoes
+	id = /obj/item/card/id/gold
+
+/obj/effect/mob_spawn/human/ultimatespacegamer/Destroy()
+	return ..()
+
+/obj/effect/mob_spawn/human/ultimatespacegamer/special(mob/living/new_spawn)
+	var/gamername = pick("xX_RobustClown_Xx", "Ninja", "𝕿𝖗𝖆𝖘𝖍𝖊𝖆𝖙𝖊𝖗20000","Up-Dog","Wohn Jick","rank7-beepsky10100","Engineer Gaming","icewallowcome","j0e","Xx_ghostasaur_xX")
+	new_spawn.real_name = gamername //why this works when moving it from one function to another is beyond me
+	var/mob/living/carbon/human/H = new_spawn
+	var/obj/item/worn = H.wear_id
+	var/obj/item/card/id/id = worn.GetID()
+	id.registered_name = new_spawn.real_name
+	id.update_label()
+	to_chat(new_spawn, "Your goal? Be the best there ever was, beat the VR sleeper game and show your dominance as the ultimate gamer.")
+
 
 //Space Hotel Staff
 /obj/effect/mob_spawn/human/hotel_staff //not free antag u little shits

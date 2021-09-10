@@ -379,6 +379,13 @@
 	name = "Xenobiology Prototype Ship"
 	description = "I will get my revenge..."
 
+/datum/map_template/ruin/space/ultimatespacegamer
+	id = "ultimatespacegamer"
+	suffix = "ultimatespacegamer.dmm"
+	name = "gamerdome"
+	description = "Who will come ontop!?"
+	allow_duplicates = TRUE
+
 //Space ruins for the station z
 /datum/map_template/ruin/spacenearstation
 	prefix = "_maps/RandomRuins/SpaceRuinsStation/"
