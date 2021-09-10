@@ -120,12 +120,27 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav)
 "rX" = (
-/obj/structure/ladder/unbreakable{
-	id = gamerladder
-	},
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/closet/crate,
+/obj/item/radio/headset,
+/obj/item/clothing/gloves/color/red,
+/obj/item/clothing/gloves/color/black,
+/obj/item/clothing/neck/scarf/pink,
+/obj/item/clothing/neck/scarf/red,
+/obj/item/clothing/neck/scarf/yellow,
+/obj/item/clothing/neck/scarf,
+/obj/item/clothing/head/beanie/darkblue,
+/obj/item/clothing/head/beanie/red,
+/obj/item/clothing/head/beanie/striped,
+/obj/item/clothing/head/beanie/stripedred,
+/obj/item/clothing/head/soft/mime,
+/obj/item/clothing/head/soft/green,
+/obj/item/clothing/head/soft/grey,
+/obj/item/clothing/head/soft/blue,
+/obj/item/clothing/head/soft/baseball,
+/obj/item/clothing/suit/hooded/wintercoat/polychromic,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav)
 "se" = (
