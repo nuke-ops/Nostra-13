@@ -15805,23 +15805,10 @@
 /turf/open/floor/plating/ashplanet/rocky,
 /area/awaymission/snowdin/cave/cavern)
 "ME" = (
-/mob/living/simple_animal/hostile/megafauna/sand{
-	armour_penetration = 15;
-	damage_coeff = list("brute" = 0.2, "fire" = 0.5, "tox" = 1, "clone" = 1, "stamina" = 0, "oxy" = 1);
-	death_sound = '/sound/spookoween/ghost_whisper.ogg';
-	deathmessage = "shouts, im not finished with you...";
-	health = 2500;
-	loot = list(/obj/item/claymore/unforgiven);
-	maxHealth = 2500;
-	melee_damage_lower = 30;
-	melee_damage_upper = 30;
-	name = "Snow";
-	obj_damage = 10;
-	wander = 0
-	},
 /obj/effect/rune/apocalypse,
 /obj/effect/decal/remains/human,
 /obj/item/kitchen/knife/bloodletter,
+/mob/living/simple_animal/hostile/megafauna/apothalsnow,
 /turf/open/floor/plating/dirt/dark,
 /area/awaymission/snowdin/cave/cavern)
 "Nb" = (
