@@ -101,8 +101,9 @@
 /mob/living/simple_animal/hostile/megafauna/apothalsnow/proc/shoot_projectile(turf/marker, set_angle)
 	if(!isnum(set_angle) && (!marker || marker == loc))
 		return
-	var/obj/item/projectile/P = new /obj/item/projectile/apothalsnow(get_turf(src))
-	P.preparePixelProjectile(marker, get_turf(src))
+	var/turf/startloc = get_turf(src)
+	var/obj/item/projectile/P = new /obj/item/projectile/apothalsnow(startloc)
+	P.preparePixelProjectile(marker, startloc)
 	P.firer = src
 	if(target)
 		P.original = target
