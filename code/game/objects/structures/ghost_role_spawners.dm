@@ -335,15 +335,15 @@
 	job_description = "Space Policeman"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	objectives = "Rat out the Syndicate/Changelings/Wizards/Narsie Cultists and eliminate them, but under any circumstances are you to harm any loyal Employees of Nanotrasen."
+	objectives = "Track down any Syndicate, Wizard Federation or Eldritch Worshippers and eliminate them, but under any circumstances are you to harm any loyal Employees of Nanotrasen."
 	death = FALSE
 	roundstart = FALSE
 	random = TRUE
 	id_job = "Policeman"
 	id_access = "assistant"
 	outfit = /datum/outfit/spacepoliceman
-	short_desc = "You are an undercover cop assigned by CentCom to track down any Syndicate or Station Threatening Anomalies."
-	flavour_text = "You are a policeman hired by CentCom to root out any Syndicate, Wizard Federation, Nar'Sie Cultist threats either around, or within proximity of Nanotrasens top secret mining facility."
+	short_desc = "You are an undercover agent assigned by Spearhead Industries tasked with tracking down any Syndicate or Station Threatening Anomalies."
+	flavour_text = "You are an agent assigned by Spearhead Industries and tasked with rooting out and eliminating those classified enemies of Central Command such as the Syndicate, Wizard Federation, or worshipers of the Elder Gods Nar'sie and Ratvar. With hopes that our kind deeds to enforce Space Law beyond the borders of Sol will allow us, Spearhead Industries to gain a foot-hold in Nanotrasens Military Operations."
 	important_info = "DO NOT HARM ANY LOYAL NANOTRASEN CREW, OR THOSE IN COMMAND HAVE FULL RIGHT FOR YOUR EXTERMINATION"
 	assignedrole = "Space Policeman"
 
@@ -391,7 +391,7 @@
 	id_access = "scientist"
 	outfit = /datum/outfit/madxeno
 	short_desc = "You are the Mad Xenobiologist."
-	flavour_text = "You were a former Nanotrasen employee and due to your insane admiration of your slimes, you had betrayed Nanotrasen. Attempting to flee on a stolen Xenobiology Specialized Prototype Ship, your ship's right rear thruster was barely hit by Bluespace Artillery, almost killing you. But by sheer chance you had stolen a single Metal Foam Grenade during your escape, saving you... for now."
+	flavour_text = "You were a former Nanotrasen employee and due to your insane admiration of your slimes, and recent private negotiations with the Animal Rights Consortium, betrayed Nanotrasen. Attempting to flee on a stolen Xenobiology Specialized Prototype Ship, but during your haste your ship's right rear thruster was barely struck by Bluespace Artillery, almost killing you. But by sheer chance you had stolen a single Metal Foam Grenade during your escape, saving you... for now."
 	important_info = ""
 	assignedrole = "Mad Xenobiologist"
 
@@ -410,9 +410,9 @@
 
 /obj/effect/mob_spawn/human/madxenobiologist/special(mob/living/carbon/human/new_spawn)
 	ADD_TRAIT(new_spawn,TRAIT_UNSTABLE,GHOSTROLE_TRAIT)
-	to_chat(new_spawn, "First Objective: Get sustainable power to your ship and survive using slimes.")
-	to_chat(new_spawn, "Second Objective: Spread slimes wherever you can.")
-	to_chat(new_spawn, "Final Objective: Take revenge on Nanotrasen for trying to stop your progress.")
+	to_chat(new_spawn, "<span class='warning'>Objective 1:</span> Get sustainable power to your ship and survive using slimes.")
+	to_chat(new_spawn, "<span class='warning'>Objective 2:</span> Spread slimes wherever you can.")
+	to_chat(new_spawn, "<span class='warning'>Objective 3:</span> Take revenge upon Nanotrasen, in the name of ARC and the lack of my sanity! HAHAHAHAHAHAHA!")
 
 // Ultimate Space Gamer
 /obj/effect/mob_spawn/human/ultimatespacegamer
@@ -422,14 +422,14 @@
 	job_description = "Ultimate Space Gamer"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	objectives = ""
+	objectives = "Be the best there ever was, and kill whoever threatens you superiority within the realm of VR."
 	death = FALSE
 	roundstart = FALSE
 	id_job = "Gamer"
 	mob_species = /datum/species/human
 	outfit = /datum/outfit/gamergear
 	short_desc = "You are the ULTIMATE SPACE GAMER."
-	flavour_text = "From the start you were a failure, doomed for nothing but a life of sadness and sorrow. But you knew you were destined for something greater, something.... out of this world, or perhaps..... in another?"
+	flavour_text = "From the start you were a failure, doomed for nothing but a life of sadness and sorrow. But with new found inspiration found with Donk Corporations and a lifetime supply of Donk Pockets on the line, you knew you were destined for something greater, something.... out of this world, or perhaps..... in another?"
 	important_info = ""
 	assignedrole = "Ultimate Space Gamer"
 
@@ -443,14 +443,14 @@
 	return ..()
 
 /obj/effect/mob_spawn/human/ultimatespacegamer/special(mob/living/new_spawn)
-	var/gamername = pick("xX_RobustClown_Xx", "Ninja", "𝕿𝖗𝖆𝖘𝖍𝖊𝖆𝖙𝖊𝖗20000","Up-Dog","Wohn Jick","rank7-beepsky10100","Engineer Gaming","icewallowcome","j0e","Xx_ghostasaur_xX")
+	var/gamername = pick("xX_RobustClown_Xx","Ninja","Up-Dog","Wohn Jick","Engineer Gaming","icewallowcome","j0e","Xx_ghostasaur_xX", "Donk Co.")
 	new_spawn.real_name = gamername //why this works when moving it from one function to another is beyond me
 	var/mob/living/carbon/human/H = new_spawn
 	var/obj/item/worn = H.wear_id
 	var/obj/item/card/id/id = worn.GetID()
 	id.registered_name = new_spawn.real_name
 	id.update_label()
-	to_chat(new_spawn, "Your goal? Be the best there ever was, beat the VR sleeper game and show your dominance as the ultimate gamer.")
+	to_chat(new_spawn, "Your goal? Be the best there ever was, beat the VR sleeper game and show your dominance as the ultimate gamer. Plus Donk Co. promised a life time supply of Donk Pockets, be it I kill any NT Employees divulging themselves in the VR world.")
 
 
 //Space Hotel Staff
