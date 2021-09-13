@@ -391,7 +391,7 @@
 	id_access = "scientist"
 	outfit = /datum/outfit/madxeno
 	short_desc = "You are the Mad Xenobiologist."
-	flavour_text = "You were a former Nanotrasen employee and due to your insane admiration of your slimes, and recent private negotiations with the Animal Rights Consortium, betrayed Nanotrasen. Attempting to flee on a stolen Xenobiology Specialized Prototype Ship, but during your haste your ship's right rear thruster was barely struck by Bluespace Artillery, almost killing you. But by sheer chance you had stolen a single Metal Foam Grenade during your escape, saving you... for now."
+	flavour_text = "You were a former Nanotrasen employee but due to your insane admiration for your slimes, and recent negotiations with the Animal Rights Consortium, betrayed Nanotrasen. Attempting to flee on a stolen Xenobiology Specialized Prototype Ship, but during your haste your ship's right rear thruster was barely struck by Bluespace Artillery, almost killing you. But by sheer chance you had stolen a single Metal Foam Grenade during your escape, saving you... for now."
 	important_info = ""
 	assignedrole = "Mad Xenobiologist"
 
@@ -425,6 +425,7 @@
 	objectives = "Be the best there ever was, and kill whoever threatens you superiority within the realm of VR."
 	death = FALSE
 	roundstart = FALSE
+	random = TRUE
 	id_job = "Gamer"
 	mob_species = /datum/species/human
 	outfit = /datum/outfit/gamergear
@@ -444,11 +445,11 @@
 
 /obj/effect/mob_spawn/human/ultimatespacegamer/special(mob/living/new_spawn)
 	var/gamername = pick("xX_RobustClown_Xx","Ninja","Up-Dog","Wohn Jick","Engineer Gaming","icewallowcome","j0e","Xx_ghostasaur_xX", "Donk Co.")
-	new_spawn.real_name = gamername //why this works when moving it from one function to another is beyond me
+	//new_spawn.real_name = gamername //why this works when moving it from one function to another is beyond me
 	var/mob/living/carbon/human/H = new_spawn
 	var/obj/item/worn = H.wear_id
 	var/obj/item/card/id/id = worn.GetID()
-	id.registered_name = new_spawn.real_name
+	id.registered_name = gamername
 	id.update_label()
 	to_chat(new_spawn, "Your goal? Be the best there ever was, beat the VR sleeper game and show your dominance as the ultimate gamer. Plus Donk Co. promised a life time supply of Donk Pockets, be it I kill any NT Employees divulging themselves in the VR world.")
 
@@ -561,6 +562,40 @@
 	back = /obj/item/storage/backpack
 	implants = list(/obj/item/implant/mindshield) //No revolutionaries, he's MY friend.
 	id = /obj/item/card/id
+
+/obj/effect/mob_spawn/human/syndicate_agent_base_comms
+	name = "Syndicate Telecommunications Agent"
+	roundstart = FALSE
+	death = FALSE
+	icon = 'icons/obj/machines/sleeper.dmi'
+	icon_state = "sleeper_s"
+	outfit = /datum/outfit/syndicate_empty
+	assignedrole = "Syndicate Telecommunications Agent"
+	short_desc = "You are a Syndicate Telecommunications Agent"
+	flavour_text = "You have been assigned by MI13 in gathering intel about NT's latest technological breakthrough in Xeno-technology. Those slimes are more then Central Commmand is willing to give credit for, and this will bring the end too NT. Ensure no NT thugs come aboard your vessel at all costs."
+
+/obj/effect/mob_spawn/human/syndicate_agent_base_infl
+	name = "Syndicate Infiltration Agent"
+	roundstart = FALSE
+	death = FALSE
+	icon = 'icons/obj/machines/sleeper.dmi'
+	icon_state = "sleeper_s"
+	outfit = /datum/outfit/syndicate_empty
+	assignedrole = "Syndicate Infiltration Agent"
+	short_desc = "You are a Syndicate Infiltration Agent"
+	flavour_text = "You have been assigned by Waffle Co. in infiltrating and retrieving the next generation of weapon development technology. Assure no NT scumbags acknowledge your presence and escape with the valuables in hand. Do not fail us."
+
+/obj/effect/mob_spawn/human/syndicate_agent_base_comms/Destroy()
+	return ..()
+
+/obj/effect/mob_spawn/human/syndicate_agent_base_comms/special(mob/living/carbon/human/new_spawn)
+	to_chat(new_spawn, "<span class='warning'>Objectives:</span> Gather as much intel about NT's Slime Operations as you can, ensure you and your fellow agent stay undetected.")
+
+/obj/effect/mob_spawn/human/syndicate_agent_base_infl/Destroy()
+	return ..()
+
+/obj/effect/mob_spawn/human/syndicate_agent_base_infl/special(mob/living/carbon/human/new_spawn)
+	to_chat(new_spawn, "<span class='warning'>Objectives:</span> Steal the Captains Antique Lasergun, ensure your presence stays undetected. Failure is not an option.")
 
 /obj/effect/mob_spawn/human/syndicate
 	name = "Syndicate Operative"
