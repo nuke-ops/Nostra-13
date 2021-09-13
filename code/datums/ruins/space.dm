@@ -343,12 +343,6 @@
 	name = "DefCorp Ship"
 	description = "Jer"
 
-/datum/map_template/ruin/space/believesinnarsie
-	id = "believesinnarsie"
-	suffix = "believesinnarsie.dmm"
-	name = "Believes-In-Narsie"
-	description = "My thy savior send there grace upon me, and bless those blinded by there hate to come forth and share a vision of thy saviors true wonders."
-
 /datum/map_template/ruin/space/spiderden
 	id = "spiderden"
 	suffix = "spiderden.dmm"
@@ -360,12 +354,6 @@
 	suffix = "dcderelict.dmm"
 	name = "DC Derelict"
 	description = "A satellite for the mysterious corporation known as DefCorp, appears to be a bit dated."
-
-/datum/map_template/ruin/space/yana
-	id = "yana"
-	suffix = "yana.dmm"
-	name = "Yana"
-	description = "Who's a good girl! You are!"
 
 /datum/map_template/ruin/space/spacepolice
 	id = "spacepolice"
