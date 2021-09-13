@@ -114,7 +114,7 @@
 	playsound(src, 'sound/magic/clockwork/invoke_general.ogg', 200, 1, 2)
 	newtonian_move(get_dir(target_turf, src))
 	var/angle_to_target = Get_Angle(src, target_turf)
-	visible_message("<span class='colossus'>You will never be forgiven</span>")
+	visible_message("<span class='colossus'>You will never be forgiven!</span>")
 	if(isnum(set_angle))
 		angle_to_target = set_angle
 	var/static/list/apothalsnow_shotgun_shot_angles = list(8.5, 0, -8.5)
@@ -127,7 +127,7 @@
 	playsound(src, 'sound/magic/clockwork/invoke_general.ogg', 200, 1, 2)
 	newtonian_move(get_dir(target_turf, src))
 	var/angle_to_target = Get_Angle(src, target_turf)
-	visible_message("<span class='colossus'>Beg for mercy</span>")
+	visible_message("<span class='colossus'>Beg for mercy!</span>")
 	if(isnum(set_angle))
 		angle_to_target = set_angle
 	var/static/list/apothalsnow_shotgun_shot_angles = list(180.5, 150.5, 120.5, 90.5, 60.5, 30.5, 0, -30.5, -60.5, -90.5, -120.5, -150.5)
