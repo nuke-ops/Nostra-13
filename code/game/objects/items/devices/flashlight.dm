@@ -380,12 +380,14 @@
 	color = LIGHT_COLOR_GREEN
 	light_color = LIGHT_COLOR_GREEN
 
+//Start Nostra Change
 /obj/item/flashlight/lantern/syndicate
 	name = "suspicious lantern"
 	desc = "A suspicious looking lantern."
 	icon_state = "syndilantern"
 	item_state = "syndilantern"
 	brightness_on = 10
+//End Nostra Change
 
 /obj/item/flashlight/slime
 	gender = PLURAL

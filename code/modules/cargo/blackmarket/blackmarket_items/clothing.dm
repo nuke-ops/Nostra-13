@@ -65,6 +65,8 @@
 	stock_max = 7
 	availability_prob = 100
 
+// Start Nostra Change
+
 /obj/item/clothing/gloves/chameleon/combat
 	name = "combat gloves"
 	desc = "These tactical gloves are fireproof and shock resistant."
@@ -91,6 +93,8 @@
 	icon_state = "syndie_headset"
 	item_state = "syndie_headset"
 	bowman = TRUE
+
+// End Nostra Change
 
 /* commented out until someone wants to port the actual boots
  * i am unsure they are in accordance with server design ideals

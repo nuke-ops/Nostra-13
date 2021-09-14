@@ -186,6 +186,7 @@ GLOBAL_LIST_EMPTY(uplinks)
 				if(is_inaccessible)
 					continue
 			// Bringing this back, cause there is no reason this should be gone. Don't even know why it was commented out.
+			// Nostra Change Start
 			if(I.restricted_species)
 				if(ishuman(user))
 					var/is_inaccessible = TRUE
@@ -196,6 +197,7 @@ GLOBAL_LIST_EMPTY(uplinks)
 							break
 					if(is_inaccessible)
 						continue
+			// Nostra Change End
 			
 			cat["items"] += list(list(
 				"name" = I.name,

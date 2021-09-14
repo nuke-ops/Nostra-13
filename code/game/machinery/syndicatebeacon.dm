@@ -159,4 +159,10 @@ GLOBAL_VAR_INIT(singularity_counter, 0)
 	desc = "A label on it reads: <i>Warning: Activating this device will send a silly explosive to your location</i>."
 	droptype = /obj/machinery/syndicatebomb/badmin/clown
 
+//Start Nostra Change
+/obj/item/sbeacondrop/constructshell
+	desc = "A label on it reads: <i>Warning: Activating this device will send a Nar'sian construct shell to your location</i>."
+	droptype = /obj/structure/constructshell
+//End Nostra Change
+
 #undef METEOR_DISASTER_MODIFIER

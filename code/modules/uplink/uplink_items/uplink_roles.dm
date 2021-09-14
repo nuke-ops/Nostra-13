@@ -80,6 +80,17 @@
 	restricted_roles = list("Curator")
 	limited_stock = 1 //please don't spam deadchat
 
+// Nostra Change Start
+
+/datum/uplink_item/role_restricted/voodoo
+	name = "Wicker Doll"
+	desc = "A wicker voodoo doll with a cavity for storing a small item. Once an item has been stored within it, the doll may be used to manipulate the actions of another person that has previously been in contact with the stored item."
+	item = /obj/item/voodoo
+	cost = 12
+	restricted_roles = list("Curator")
+
+// Nostra Change End
+
 /datum/uplink_item/role_restricted/his_grace
 	name = "His Grace"
 	desc = "An incredibly dangerous weapon recovered from a station overcome by the grey tide. Once activated, He will thirst for blood and must be used to kill to sate that thirst. \
@@ -191,6 +202,18 @@
 	restricted_roles = list("Cook", "Janitor")
 	item = /obj/item/ammo_box/magazine/m45/kitchengun
 
+// Nostra Change Start
+
+/datum/uplink_item/role_restricted/echainsaw
+	name = "Energy Chainsaw"
+	desc = "An incredibly deadly modified chainsaw with plasma-based energy blades instead of metal and a slick black-and-red finish. While it rips apart matter with extreme efficiency, it is heavy, large, and monstrously loud."
+	item = /obj/item/chainsaw/energy
+	cost = 10
+	player_minimum = 10
+	restricted_roles = list("Botanist", "Cook", "Bartender")
+
+// Nostra Change End
+
 /datum/uplink_item/role_restricted/magillitis_serum
 	name = "Magillitis Serum Autoinjector"
 	desc = "A single-use autoinjector which contains an experimental serum that causes rapid muscular growth in Hominidae. \
@@ -259,6 +282,15 @@
 	cost = 11
 	restricted_roles = list("Station Engineer")
 
+// Nostra Change Start
+
+/datum/uplink_item/role_restricted/cultconstructkit
+	name = "Cult Construct Kit"
+	desc = "Recovered from an abandoned Nar'sie cult lair two construct shells and a stash of empty soulstones was found. These were purified to prevent occult contamination and have been put in a belt so they may be used as an accessible source of disposable minions. The construct shells have been packaged into two beacons for rapid and portable deployment."
+	item = /obj/item/storage/box/syndie_kit/cultconstructkit
+	cost = 20
+	restricted_roles = list("Chaplain")
+
 //Adding a few cool race restricted items cause why does this not exist already?
 
 /datum/uplink_item/race_restricted/tribal_claw
@@ -287,4 +319,7 @@
 	cost = 2
 	item = /obj/item/flashlight/lantern/syndicate
 	restricted_species = list("moth")
+
+//Nostra Change End
+
 

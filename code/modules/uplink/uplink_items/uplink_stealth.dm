@@ -180,6 +180,8 @@
 	item = /obj/item/grenade/clusterbuster/soap
 	cost = 6
 
+// Start Nostra Change
+
 /datum/uplink_item/stealthy_tools/chambowman
 	name = "Chameleon Bangproof Headset"
 	desc = "A headset reinforced to protect the ears from flashbangs, enhanced with chameleon disguise technology."
@@ -197,3 +199,4 @@
 	desc = "A pair of gloves reinforced with fire and shock resistance, enhanced with chameleon disguise technology."
 	item = /obj/item/clothing/gloves/chameleon/combat
 	cost = 1
+// End Nostra Change

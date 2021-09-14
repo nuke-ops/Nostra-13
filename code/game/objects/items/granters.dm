@@ -136,6 +136,8 @@
 	active = FALSE
 	UpdateButtonIcon()
 
+// Start Nostra Change
+
 /obj/item/book/granter/action/origami
 	granted_action = /datum/action/innate/origami
 	name = "The Art of Origami"
@@ -162,6 +164,8 @@
 	button_icon_state = "origami_off"
 	active = FALSE
 	UpdateButtonIcon()
+
+// End Nostra Change
 
 ///SPELLS///
 
@@ -496,6 +500,8 @@
 
 // I did not include mushpunch's grant, it is not a book and the item does it just fine.
 
+// Start Nostra Change
+
 /obj/item/book/granter/martial/tribal_claw
 	martial = /datum/martial_art/tribal_claw
 	name = "old scroll"
@@ -521,6 +527,8 @@
 	else
 		to_chat(user, "<span class='warning'>You try to read the scroll but can't comprehend any of it.</span>")
 		return TRUE
+
+// End Nostra Change
 
 
 //Crafting Recipe books
