@@ -259,3 +259,31 @@
 	cost = 11
 	restricted_roles = list("Station Engineer")
 
+//Adding a few cool race restricted items cause why does this not exist already?
+
+/datum/uplink_item/race_restricted/tribal_claw
+	name = "Old Tribal Scroll"
+	desc = "We found this scroll in a abandoned lizard settlement of the Knoises clan. \
+			It teaches you how to use your claws and tail to gain an advantage in combat, \
+			don't buy this unless you are a lizard or plan to give it to one as only they can understand the ancient draconic words."
+	item = /obj/item/book/granter/martial/tribal_claw
+	cost = 18
+	surplus = 0
+	restricted_species = list("lizard")
+
+/datum/uplink_item/race_restricted/plasma_fist
+	name = "frayed scroll"
+	desc = "An aged and frayed scrap of paper written in shifting runes. There are hand-drawn illustrations of pugilism."
+	item = /obj/item/book/granter/martial/plasma_fist
+	cost = 20
+	surplus = 0
+	restricted_species = list("plasmaman")
+
+/datum/uplink_item/race_restricted/syndilamp
+	name = "Extra-Bright Lantern"
+	desc = "We heard that moths such as yourself really like lamps, so we decided to grant you early access to a prototype \
+	Syndicate brand \"Extra-Bright Lantern™\". Enjoy."
+	cost = 2
+	item = /obj/item/flashlight/lantern/syndicate
+	restricted_species = list("moth")
+
