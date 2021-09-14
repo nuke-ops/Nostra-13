@@ -276,6 +276,7 @@
 	desc = "An aged and frayed scrap of paper written in shifting runes. There are hand-drawn illustrations of pugilism."
 	item = /obj/item/book/granter/martial/plasma_fist
 	cost = 20
+	player_minimum = 15
 	surplus = 0
 	restricted_species = list("plasmaman")
 
