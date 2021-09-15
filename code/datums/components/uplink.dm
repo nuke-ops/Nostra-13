@@ -185,8 +185,7 @@ GLOBAL_LIST_EMPTY(uplinks)
 						is_inaccessible = FALSE
 				if(is_inaccessible)
 					continue
-			// Bringing this back, cause there is no reason this should be gone. Don't even know why it was commented out.
-			// Nostra Change Start
+			// Nostra Change Start - that block was commented out
 			if(I.restricted_species)
 				if(ishuman(user))
 					var/is_inaccessible = TRUE

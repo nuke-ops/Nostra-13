@@ -70,9 +70,7 @@
 	var/list/include_modes = list() // Game modes to allow this item in.
 	var/list/exclude_modes = list() // Game modes to disallow this item from.
 	var/list/restricted_roles = list() //If this uplink item is only available to certain roles. Roles are dependent on the frequency chip or stored ID.
-	// Nostra Change Start
-	var/list/restricted_species
-	// Nostra Change End
+	var/list/restricted_species // Nostra Change
 	var/player_minimum //The minimum crew size needed for this item to be added to uplinks.
 	var/purchase_log_vis = TRUE // Visible in the purchase log?
 	var/restricted = FALSE // Adds restrictions for VR/Events
@@ -156,14 +154,6 @@
 	exclude_modes = list(/datum/game_mode/nuclear, /datum/game_mode/nuclear/clown_ops)
 	surplus = 0
 	cant_discount = TRUE
-
-// Start Nostra Change
-
-/datum/uplink_item/race_restricted
-	category = "Race-Restricted"
-	surplus = 0
-
-// End Nostra Change
 
 /datum/uplink_item/badass
 	category = "(Pointless) Badassery"

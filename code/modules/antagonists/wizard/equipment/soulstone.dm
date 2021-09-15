@@ -29,15 +29,6 @@
 	name = "mysterious old shard"
 	old_shard = TRUE
 
-// Start Nostra Change
-
-/obj/item/soulstone/anybody/purified
-	icon = 'icons/obj/wizard.dmi'
-	icon_state = "soulstone"
-	usability = TRUE
-
-// End Nostra Change
-
 /obj/item/soulstone/pickup(mob/living/user)
 	..()
 	if(!iscultist(user, TRUE) && !iswizard(user) && !usability)
