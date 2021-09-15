@@ -136,8 +136,6 @@
 	active = FALSE
 	UpdateButtonIcon()
 
-// Start Nostra Change
-
 /obj/item/book/granter/action/origami
 	granted_action = /datum/action/innate/origami
 	name = "The Art of Origami"
@@ -164,8 +162,6 @@
 	button_icon_state = "origami_off"
 	active = FALSE
 	UpdateButtonIcon()
-
-// End Nostra Change
 
 ///SPELLS///
 
