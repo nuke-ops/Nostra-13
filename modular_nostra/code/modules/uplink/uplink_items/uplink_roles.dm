@@ -14,6 +14,7 @@
 	desc = "An aged and frayed scrap of paper written in shifting runes. There are hand-drawn illustrations of pugilism."
 	item = /obj/item/book/granter/martial/plasma_fist
 	cost = 20
+	player_minimum = 15
 	surplus = 0
 	restricted_species = list("plasmaman")
 
@@ -46,3 +47,18 @@
 	item = /obj/item/storage/box/syndie_kit/cultconstructkit
 	cost = 20
 	restricted_roles = list("Chaplain")
+
+/datum/uplink_item/role_restricted/carpsiereligionbungle
+	name = "Carp'Sie Megacarp Kit"
+	desc = "With the many Elder Gods being worshipped about, a select few people seem to think Space Carp are the true gods above all, whatever the case may be this box contains three mega carp monkey cubes along with a full carp outfit. We are not responsible for any loss of limbs, flesh or life."
+	item = /obj/item/storage/box/syndie_kit/carpsiereligionbungle
+	cost = 15
+	restricted_roles = list("Chaplain", "Cook")
+
+/datum/uplink_item/role_restricted/syndieseeds
+	name = "Packet of Syndie Seeds"
+	desc = "Though the existence of gatfruit in major quantities deems to elude us we have managed to genetically modify some plants through countless testing and some assistance from some Russian colleagues to give a similar effect. Comes with one packet of seeds!"
+	item = /obj/item/seeds/syndieseeds
+	cost = 20
+	//player_minimum = 15
+	restricted_roles = list("Botanist")

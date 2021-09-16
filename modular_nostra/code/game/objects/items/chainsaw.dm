@@ -2,10 +2,10 @@
 /obj/item/chainsaw/energy
 	name = "energy chainsaw"
 	desc = "Become Leatherspace."
-	icon = 'icons/obj/items_and_weapons.dmi'
+	icon = 'modular_nostra/icons/obj/items_and_weapons.dmi'
 	icon_state = "echainsaw_off"
-	lefthand_file = 'icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/chainsaw_righthand.dmi'
+	lefthand_file = 'modular_nostra/icons/mob/inhands/weapons/chainsaw_lefthand.dmi'
+	righthand_file = 'modular_nostra/icons/mob/inhands/weapons/chainsaw_righthand.dmi'
 	force_on = 40
 	w_class = WEIGHT_CLASS_HUGE
 	attack_verb = list("sawed", "shred", "rended", "gutted", "eviscerated")
@@ -21,20 +21,19 @@
 
 /obj/item/chainsaw/energy/attack_self(mob/user)
 	on = !on
-	to_chat(user, "As you pull the starting cord dangling from [src], [on ? "it begins to whirr intimidatingly." : "the plasma microblades stop moving."]")
+	to_chat(user, "As you pull the starting cord dangling from [src], [on ? "it begins to whirr." : "the chain stops moving."]")
 	force = on ? force_on : initial(force)
 	playsound(user, on ? onsound : offsound , 50, 1)
 	set_light(on ? brightness_on : 0)
-	throwforce = on ? force_on : initial(force)
-	icon_state = "echainsaw_[on ? "on" : "off"]"
+	throwforce = on ? force_on : force
+	update_icon()
+	var/datum/component/butchering/butchering = src.GetComponent(/datum/component/butchering)
+	butchering.butchering_enabled = on
 
-	if(hitsound == "swing_hit")
+	if(on)
 		hitsound = pick('modular_nostra/sound/weapons/echainsawhit1.ogg','modular_nostra/sound/weapons/echainsawhit2.ogg')
 	else
 		hitsound = "swing_hit"
 
-	if(src == user.get_active_held_item())
-		user.update_inv_hands()
-	for(var/X in actions)
-		var/datum/action/A = X
-		A.UpdateButtonIcon()
+/obj/item/chainsaw/energy/update_icon_state()
+	icon_state = "echainsaw_[on ? "on" : "off"]"

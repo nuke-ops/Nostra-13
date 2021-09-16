@@ -1,7 +1,7 @@
 /obj/item/origami
 	name = "origami"
 	desc = "Paper folded to resemble... something."
-	icon = 'icons/obj/bureaucracy.dmi'
+	icon = 'modular_nostra/icons/obj/bureaucracy.dmi'
 	icon_state = "scrap"
 	throw_range = 1
 	throw_speed = 1
@@ -113,17 +113,17 @@
 		return
 
 	var/list/radial_list = list(
-		"Paper plane" = image(icon = 'icons/obj/bureaucracy.dmi', icon_state = "paperplane"),
-		"Paper crane" = image(icon = 'icons/obj/bureaucracy.dmi', icon_state = "papercrane"),
-		"Paper frog" = image(icon = 'icons/obj/bureaucracy.dmi', icon_state = "paperfrog"),
-		"Paper boat" = image(icon = 'icons/obj/bureaucracy.dmi', icon_state = "paperboat")
+		"Paper plane" = image(icon = 'modular_nostra/icons/obj/bureaucracy.dmi', icon_state = "paperplane"),
+		"Paper crane" = image(icon = 'modular_nostra/icons/obj/bureaucracy.dmi', icon_state = "papercrane"),
+		"Paper frog" = image(icon = 'modular_nostra/icons/obj/bureaucracy.dmi', icon_state = "paperfrog"),
+		"Paper boat" = image(icon = 'modular_nostra/icons/obj/bureaucracy.dmi', icon_state = "paperboat")
 	)
 
 	var/datum/action/innate/origami/origami_action = locate() in user.actions
 	if(origami_action)
 		//Origami Master
-		radial_list["Syndicate paper plane"] = image(icon = 'icons/obj/bureaucracy.dmi', icon_state = "paperplanesyndicate")
-		radial_list["Paper S"] = image(icon = 'icons/obj/bureaucracy.dmi', icon_state = "papersyndicate")
+		radial_list["Syndicate paper plane"] = image(icon = 'modular_nostra/icons/obj/bureaucracy.dmi', icon_state = "paperplanesyndicate")
+		radial_list["Paper S"] = image(icon = 'modular_nostra/icons/obj/bureaucracy.dmi', icon_state = "papersyndicate")
 
 	var/origami_selected = show_radial_menu(user, src, radial_list, require_near = TRUE, tooltips = TRUE)
 	if(!origami_selected || !user || user.stat)
