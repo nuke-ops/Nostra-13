@@ -59,6 +59,20 @@
 	name = "Packet of Syndie Seeds"
 	desc = "Though the existence of gatfruit in major quantities deems to elude us we have managed to genetically modify some plants through countless testing and some assistance from some Russian colleagues to give a similar effect. Comes with one packet of seeds!"
 	item = /obj/item/seeds/syndieseeds
-	cost = 20
-	//player_minimum = 15
+	cost = 17
+	player_minimum = 10
 	restricted_roles = list("Botanist")
+
+/datum/uplink_item/role_restricted/guidetoillusions
+	name = "Guide to Illusions"
+	desc = "Found this buried beneath an ancient temple that didn't exist, along with the soil around it... We can't seem to wrap our head around it."
+	item = /obj/item/book/granter/spell/manifestmimesuit
+	cost = 12
+	restricted_roles = list("Mime")
+
+/datum/uplink_item/role_restricted/fancyinsulatedgloves
+	name = "Fancy Insulated Gloves"
+	desc = "Yellow is too obvious, keep the crowd silent with these new fancy insulated gloves that give exact resemblance to the Mimes sacred white gloves! Crafted with confidence to keep Security at-ease."
+	item = /obj/item/clothing/gloves/color/whiteinsulated
+	cost = 3
+	restricted_roles = list("Mime")
