@@ -22,11 +22,12 @@
 	
 /obj/item/reagent_containers/food/snacks/grown/shell/syndieseeds
 	seed = /obj/item/seeds/syndieseeds
-	name = "Orange"
+	icon = 'modular_nostra/icons/obj/harvest.dmi'
+	name = "unusual fruit"
 	desc = "It smells like sourness and lead."
-	icon_state = "unusual orange"
+	icon_state = "unusualfruit"
 	trash = /obj/item/gun/ballistic/shotgun/boltaction
-	bitesize_mod = 2
+	bitesize_mod = 3
 	foodtype = FRUIT
 	tastes = list("sweetness" = 1)
 	wine_power = 10
