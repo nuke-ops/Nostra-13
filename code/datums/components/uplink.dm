@@ -185,8 +185,8 @@ GLOBAL_LIST_EMPTY(uplinks)
 						is_inaccessible = FALSE
 				if(is_inaccessible)
 					continue
-			/*
-			if(I.restricted_species) //catpeople specfic gloves.
+			// Nostra Change Start - that block was commented out
+			if(I.restricted_species)
 				if(ishuman(user))
 					var/is_inaccessible = TRUE
 					var/mob/living/carbon/human/H = user
@@ -196,7 +196,8 @@ GLOBAL_LIST_EMPTY(uplinks)
 							break
 					if(is_inaccessible)
 						continue
-			*/
+			// Nostra Change End
+			
 			cat["items"] += list(list(
 				"name" = I.name,
 				"cost" = I.cost,
