@@ -3797,6 +3797,7 @@
 #include "modular_nostra\code\modules\client\preferences_toggles.dm"
 #include "modular_nostra\code\modules\clothing\head\misc.dm"
 #include "modular_nostra\code\modules\clothing\neck\_neck.dm"
+#include "modular_nostra\code\modules\clothing\suits\miscellaneous.dm"
 #include "modular_nostra\code\modules\keybindings\keybind\carbon.dm"
 #include "modular_nostra\code\modules\mob\dead\new_player\sprite_accessories\legs_and_taurs.dm"
 #include "modular_nostra\code\modules\mob\living\living.dm"
