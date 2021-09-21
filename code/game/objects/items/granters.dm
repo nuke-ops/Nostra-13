@@ -152,13 +152,13 @@
 	check_flags = NONE
 
 /datum/action/innate/origami/Activate()
-	to_chat(owner, "<span class='notice'>You will now fold origami planes.</span>")
+	to_chat(owner, "<span class='notice'>You will now catch and fold origami planes.</span>") // Nostra change
 	button_icon_state = "origami_on"
 	active = TRUE
 	UpdateButtonIcon()
 
 /datum/action/innate/origami/Deactivate()
-	to_chat(owner, "<span class='notice'>You will no longer fold origami planes.</span>")
+	to_chat(owner, "<span class='notice'>You will no longer catch and fold origami planes.</span>") // Nostra change
 	button_icon_state = "origami_off"
 	active = FALSE
 	UpdateButtonIcon()
