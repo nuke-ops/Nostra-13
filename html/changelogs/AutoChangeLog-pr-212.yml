@@ -1,0 +1,7 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - rscdel: Deleted additional paramedic office on Metastation.
+  - tweak: Tweaked paramedic office on Snaxi.
+  - tweak: Added scrubbers to creature pens on Snaxi.
+  - tweak: Added scrubbers and vents in server room on Snaxi.
