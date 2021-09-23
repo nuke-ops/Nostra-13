@@ -23,7 +23,7 @@
 	info_list += "<span class='info'>Unique Identity: [ninja.dna.unique_enzymes]</span>\n"
 	info_list += "<span class='info'>Overall Status: [ninja.stat > 1 ? "dead" : "[ninja.health]% healthy"]</span>\n"
 	info_list += "<span class='info'>Nutrition Status: [ninja.nutrition]</span>\n"
-	info_list += "<span class='info'>Hydration Status: [ninja.thirst]<span>\n"
+	// info_list += "<span class='info'>Hydration Status: [ninja.thirst]<span>\n" // Nostra change
 	info_list += "<span class='info'>Oxygen Loss: [ninja.getOxyLoss()]</span>\n"
 	info_list += "<span class='info'>Toxin Levels: [ninja.getToxLoss()]</span>\n"
 	info_list += "<span class='info'>Burn Severity: [ninja.getFireLoss()]</span>\n"
