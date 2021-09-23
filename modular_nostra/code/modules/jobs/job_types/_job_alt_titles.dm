@@ -2,7 +2,7 @@
 	alt_titles = list("Civilian", "Visitor", "Intern", "Trainee Staff")
 
 //Command
-/datum/job/captain //extra titles and the CMO alts added by Quaint
+/datum/job/captain
 	alt_titles = list("Colony Overseer", "Station Director", "Stationmaster")
 /datum/job/hop
 	alt_titles = list("Crew Resource Officer", "Human Resources Manager")
