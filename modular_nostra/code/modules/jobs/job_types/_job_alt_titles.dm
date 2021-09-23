@@ -1,5 +1,5 @@
 /datum/job/assistant
-	alt_titles = list("Civilian", "Visitor", "Businessman", "Trader", "Entertainer", "Intern", "Off-Duty Employee", "Trainee Staff")
+	alt_titles = list("Civilian", "Visitor", "Intern", "Trainee Staff")
 
 //Command
 /datum/job/captain //extra titles and the CMO alts added by Quaint
@@ -8,12 +8,14 @@
 	alt_titles = list("Crew Resource Officer", "Human Resources Manager")
 /datum/job/hos
 	alt_titles = list("Chief of Security", "Security Overlord")
-/datum/job/qm
-	alt_titles = list("Resource Manager", "Logistics Supervisor", "Export Director")
+/datum/job/chief_engineer
+	alt_titles = list("Senior Engineer")
 /datum/job/rd
 	alt_titles = list("Research Overseer", "Director of Science")
 /datum/job/cmo
 	alt_titles = list("Biomedical Overseer", "Medical Director")
+/datum/job/qm
+	alt_titles = list("Resource Manager", "Logistics Supervisor", "Export Director")
 
 //Engineering
 /datum/job/atmos
@@ -26,8 +28,8 @@
 	alt_titles = list("Barista", "Barkeeper")
 /datum/job/chaplain
 	alt_titles = list("Priest", "Cult Leader", "Pope")
-/datum/job/clown //The most useless role in the game, delet this
-	alt_titles = list("Entertainer", "Jester") //hardy-harr
+/datum/job/clown
+	alt_titles = list("Entertainer", "Jester")
 /datum/job/cook
 	alt_titles = list("Culinary Artist", "Butcher", "Chef", "Nutritionist")
 /datum/job/curator
