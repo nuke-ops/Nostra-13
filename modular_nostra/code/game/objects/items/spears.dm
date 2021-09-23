@@ -1,4 +1,3 @@
-
 /obj/item/spear/bamboospear	//Blatant imitation of spear, but made out of bamboo. Not valid for explosive modification.
 	icon = 'modular_nostra/icons/obj/items_and_weapons.dmi'
 	icon_state = "bamboo_spear0"
