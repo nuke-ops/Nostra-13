@@ -1,4 +1,4 @@
-#define MECH_SIZE 1.5
+#define MECH_SIZE 1 // Nostra change - changed 1.5 to 1
 
 /obj/mecha/Initialize()
 	. = ..()
