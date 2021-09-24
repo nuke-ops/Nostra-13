@@ -347,8 +347,10 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 GLOBAL_LIST_INIT(bamboo_recipes, list ( \
 	new/datum/stack_recipe("punji sticks trap", /obj/structure/punji_sticks, 5, time = 30, one_per_turf = TRUE, on_floor = TRUE), \
 	new/datum/stack_recipe("blow gun", /obj/item/gun/syringe/blowgun, 10, time = 70), \
-	new/datum/stack_recipe("bamboo spear", /obj/item/spear/bamboospear, 2, time = 10), \ // Nostra Change Below
+	new/datum/stack_recipe("bamboo spear", /obj/item/spear/bamboospear, 2, time = 10), \
 	))
+
+// Maks, do not move this comment it stays here. Just keep this one from changing. Also Nostra Change being the "Bamboo Spear" cause duh.
 
 /obj/item/stack/sheet/mineral/bamboo
 	name = "bamboo cuttings"
