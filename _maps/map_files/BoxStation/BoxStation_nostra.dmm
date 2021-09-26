@@ -61794,7 +61794,7 @@
 /obj/machinery/door/window/southleft{
 	dir = 1;
 	name = "Nanite lab";
-	req_access_txt = "33"
+	req_access_txt = "47"
 	},
 /turf/open/floor/plasteel,
 /area/science/misc_lab)

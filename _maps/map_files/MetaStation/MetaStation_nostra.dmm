@@ -59400,6 +59400,23 @@
 	dir = 1
 	},
 /area/service/chapel/main)
+"jMv" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/research{
+	name = "Nanite Lab";
+	req_access_txt = "47"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel/dark,
+/area/science/nanite)
 "jMw" = (
 /obj/structure/sign/warning/radiation/rad_area{
 	pixel_y = 32
@@ -71251,10 +71268,6 @@
 /area/cargo/warehouse)
 "qOP" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/research{
-	name = "Nanite Lab";
-	req_access_txt = "33"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
@@ -71263,6 +71276,10 @@
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/research{
+	name = "Nanite Lab";
+	req_access_txt = "47"
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/nanite)
@@ -113959,7 +113976,7 @@ ctL
 ctL
 dLk
 cvL
-qOP
+jMv
 qOP
 cvL
 cAs
