@@ -1,0 +1,5 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - bugfix: Fixed nanitelab access on few maps.
+  - tweak: No more rushing xeno satelite on charlie station to change into xenomorph.
