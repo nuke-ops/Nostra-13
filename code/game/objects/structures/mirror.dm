@@ -141,7 +141,7 @@
 
 	var/mob/living/carbon/human/H = user
 
-	var/choice = input(user, "Something to change?", "Magical Grooming") as null|anything in list("name", "race", "gender", "hair", "eyes", "legs", "tail")
+	var/choice = input(user, "Something to change?", "Magical Grooming") as null|anything in list("name", "race", "gender", "hair", "eyes", "legs", "tail") // Nostra change - added legs and tail
 
 	if(!user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
 		return
@@ -203,7 +203,7 @@
 					else
 						to_chat(H, "<span class='notice'>Invalid color. Your color is not bright enough.</span>")
 
-			if(racechoice == SPECIES_LIZARD || racechoice == SPECIES_ASHWALKER)
+			if(racechoice == SPECIES_LIZARD || racechoice == SPECIES_ASHWALKER) // Nostra change
 				H.dna.features["frills"] = "None"
 				H.dna.features["tail_lizard"] = "Smooth"
 
@@ -280,6 +280,7 @@
 					H.dna.update_ui_block(DNA_RIGHT_EYE_COLOR_BLOCK)
 					H.dna.species.handle_body()
 
+		/* Start of Nostra change */
 		if("legs")
 			var/legchoice = alert(H, "Choose a leg style.", "Legs", "Plantigrade", "Digitigrade")
 			if(!user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
@@ -332,6 +333,7 @@
 						H.update_body()
 						H.update_body_parts()
 					return
+		/* End of Nostra change */
 
 	if(choice)
 		curse(user)
