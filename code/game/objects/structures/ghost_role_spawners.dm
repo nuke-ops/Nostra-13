@@ -572,7 +572,9 @@
 	outfit = /datum/outfit/syndicate_empty
 	assignedrole = "Syndicate Telecommunications Agent"
 	short_desc = "You are a Syndicate Telecommunications Agent"
-	flavour_text = "You have been assigned by MI13 in gathering intel about NT's latest technological breakthrough in Xeno-technology. Those slimes are more then Central Commmand is willing to give credit for, and this will bring the end too NT. Ensure no NT thugs come aboard your vessel at all costs."
+	flavour_text = "You have been assigned by MI13 in gathering intel about NT's latest technological breakthrough in Xeno-technology. Those slimes are more then Central Commmand is willing to give credit for, and this will bring their end too NT. Ensure no NT thugs come aboard your vessel at all costs."
+	important_info = "Do NOT kill the station crew unless your base has been discovered and breached by them."
+	objectives = "Gather as much intel about NT's Slime Operations as you can, ensure you and your fellow agent stay undetected."
 
 /obj/effect/mob_spawn/human/syndicate_agent_base_infl
 	name = "Syndicate Infiltration Agent"
@@ -584,6 +586,8 @@
 	assignedrole = "Syndicate Infiltration Agent"
 	short_desc = "You are a Syndicate Infiltration Agent"
 	flavour_text = "You have been assigned by Waffle Co. in infiltrating and retrieving the next generation of weapon development technology. Assure no NT scumbags acknowledge your presence and escape with the valuables in hand. Do not fail us."
+	important_info = "Do NOT kill the station crew unless your base has been discovered and breached by them."
+	objectives = "Steal the Captains Antique Lasergun, ensure your presence stays undetected."
 
 /obj/effect/mob_spawn/human/syndicate_agent_base_comms/Destroy()
 	return ..()
@@ -795,9 +799,9 @@
 			log_game("[key_name(user)] has successfully pried open [src] and disabled a space pirate spawner.")
 			W.play_tool_sound(src)
 			playsound(src.loc, 'modular_citadel/sound/voice/scream_skeleton.ogg', 50, 1, 4, 1.2)
-			if(rank == "Captain") 
+			if(rank == "Captain")
 				new /obj/effect/mob_spawn/human/pirate/corpse/captain(get_turf(src))
-			else 
+			else
 				new /obj/effect/mob_spawn/human/pirate/corpse(get_turf(src))
 			qdel(src)
 	else
