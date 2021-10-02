@@ -26,6 +26,28 @@
 	item = /obj/item/flashlight/lantern/syndicate
 	restricted_species = list("moth")
 
+/datum/uplink_item/race_restricted/xenothropy
+	name = "Xenothropy Injector"
+	desc = "Xenomorphs today are the greatest living bio-weapon to exist throughout the cosmos, but with the watchful eye of the Animal Rights Consortium and the many bright minds of Interdyne Pharmaceutics, we have managed to unlock the potential within the evolution of there species. Sadly we could not unwind every genome due to lack of resources, so it remains far weaker then there Ancestorial counterparts."
+	cost = 15
+	player_minimum = 5
+	item = /obj/item/xenothropy
+	restricted_species = list("xeno")
+
+/datum/uplink_item/race_restricted/catfight
+	name = "Kōkō kanfūneko"
+	desc = "With the rise of the cat-eared tyrant, we knew somewhere deep beneath the musk filled tombs hid a secret left untouched... Though this manga book has clearly been touched a lot- In fact a bit too much."
+	cost = 20
+	item = /obj/item/book/granter/martial/cat_fight
+	restricted_species = list("felinid")
+
+/datum/uplink_item/race_restricted/goofu
+	name = "Slime Scroll"
+	desc = "Xenobiology is the next step in our war effort, though during a tussle against one of Nanotrasens Military Stations, one of our men managed to find this little guy lying around. With due excitement we immediately brought it back and uncovered it's mysterious. It's a shame it only blorbles..."
+	cost = 19
+	item = /obj/item/book/granter/martial/goo_fu
+	restricted_species = list("jelly", "slime", "slimeperson", "slimelumi", "stargazer")
+
 /datum/uplink_item/role_restricted/voodoo
 	name = "Wicker Doll"
 	desc = "A wicker voodoo doll with a cavity for storing a small item. Once an item has been stored within it, the doll may be used to manipulate the actions of another person that has previously been in contact with the stored item."

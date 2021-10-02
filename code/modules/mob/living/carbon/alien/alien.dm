@@ -25,6 +25,8 @@
 	var/has_fine_manipulation = 0
 	var/move_delay_add = 0 // movement delay to add
 
+	var/isbenothropy //Too ensure Benothropy is not O.P. like an actual Xeno.
+
 	status_flags = CANUNCONSCIOUS|CANPUSH
 
 	heat_protection = 0.5
@@ -49,7 +51,8 @@
 
 /mob/living/carbon/alien/create_internal_organs()
 	internal_organs += new /obj/item/organ/brain/alien
-	internal_organs += new /obj/item/organ/alien/hivenode
+	if(!isbenothropy) //Pointless to have as a Benothropy.
+		internal_organs += new /obj/item/organ/alien/hivenode
 	internal_organs += new /obj/item/organ/tongue/alien
 	internal_organs += new /obj/item/organ/eyes/night_vision/alien
 	internal_organs += new /obj/item/organ/ears
