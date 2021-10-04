@@ -141,7 +141,7 @@
 
 	var/mob/living/carbon/human/H = user
 
-	var/choice = input(user, "Something to change?", "Magical Grooming") as null|anything in list("name", "race", "gender", "hair", "eyes")
+	var/choice = input(user, "Something to change?", "Magical Grooming") as null|anything in list("name", "race", "gender", "hair", "eyes", "legs", "tail") // Nostra change - added legs and tail
 
 	if(!user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
 		return
@@ -202,6 +202,10 @@
 
 					else
 						to_chat(H, "<span class='notice'>Invalid color. Your color is not bright enough.</span>")
+
+			if(racechoice == SPECIES_LIZARD || racechoice == SPECIES_ASHWALKER) // Nostra change
+				H.dna.features["frills"] = "None"
+				H.dna.features["tail_lizard"] = "Smooth"
 
 			H.update_body()
 			H.update_hair()
@@ -275,6 +279,62 @@
 					H.dna.update_ui_block(DNA_LEFT_EYE_COLOR_BLOCK)
 					H.dna.update_ui_block(DNA_RIGHT_EYE_COLOR_BLOCK)
 					H.dna.species.handle_body()
+
+		/* Start of Nostra change */
+		if("legs")
+			var/legchoice = alert(H, "Choose a leg style.", "Legs", "Plantigrade", "Digitigrade")
+			if(!user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
+				return
+			if(legchoice)
+				H.dna.features["legs"] = legchoice
+				if(legchoice == "Digitigrade")
+					H.dna.species.species_traits |= DIGITIGRADE
+				else
+					H.dna.species.species_traits -= DIGITIGRADE
+				H.Digitigrade_Leg_Swap(legchoice == "Digitigrade" ? FALSE : TRUE)
+				H.update_body()
+			return
+
+		if("tail")
+			if(!user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
+				return
+			switch(H.dna.species.id)
+				if(SPECIES_LIZARD)
+					var/new_lizard_tail = input(user, "Select a lizard tail style.", "Tails")  as null|anything in GLOB.tails_list_lizard
+					if(new_lizard_tail)
+						H.dna.features["tail_lizard"] = new_lizard_tail
+						H.update_body()
+						H.update_body_parts()
+					return
+				if(SPECIES_ASHWALKER)
+					var/new_lizard_tail = input(user, "Select a lizard tail style.", "Tails")  as null|anything in GLOB.tails_list_lizard
+					if(new_lizard_tail)
+						H.dna.features["tail_lizard"] = new_lizard_tail
+						H.update_body()
+						H.update_body_parts()
+					return
+				if(SPECIES_MAMMAL)
+					var/new_mammal_tail = input(user, "Select a mammal tail style.", "Tails")  as null|anything in GLOB.mam_tails_list
+					if(new_mammal_tail)
+						H.dna.features["tail_mammal"] = new_mammal_tail
+						H.update_body()
+						H.update_body_parts()
+					return
+				if(SPECIES_XENOHYBRID)
+					to_chat(H, span_warning("This race has no alternative tail options!")) //So I just thought of something very cursed... VSC Battle Roya- *Bzzt* *Thud* *Thud*
+					return
+				if(SPECIES_PLASMAMAN)
+					to_chat(H, span_warning("This race has no alternative tail options!")) //So I just thought of something very cursed... VSC Battle Roya- *Bzzt* *Thud* *Thud*
+					return
+				else
+					var/new_tail = input(user, "Select a tail style.", "Tails") as null|anything in GLOB.tails_list_human
+					if(new_tail)
+						H.dna.features["tail_human"] = new_tail
+						H.update_body()
+						H.update_body_parts()
+					return
+		/* End of Nostra change */
+
 	if(choice)
 		curse(user)
 
