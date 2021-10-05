@@ -5,6 +5,7 @@
 	invocation = "SSSSS!"
 	action_icon = 'modular_nostra/icons/obj/actions_spells.dmi'
 	action_icon_state = "shapeshift_xeno"
+	action_background_icon_state = "bg_alien"
 	revert_on_death = TRUE
 	die_with_shapeshifted_form = FALSE
 
@@ -57,7 +58,7 @@
 /mob/living/carbon/alien/humanoid/royal/praetorian_beno/Initialize()
 	//add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier, multiplicative_slowdown = 2.2)
 	cached_multiplicative_slowdown = 1.5
-	AddSpell(new /obj/effect/proc_holder/spell/aoe_turf/repulse/xeno(src))
+	AddSpell(new /obj/effect/proc_holder/spell/aoe_turf/repulse/xenothropy(src))
 	. = ..()
 
 /obj/item/xenothropy
@@ -78,3 +79,26 @@
 /mob/living/carbon/proc/xenothropize()
 	AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/benothropy(src))
 	return
+
+/obj/effect/proc_holder/spell/aoe_turf/repulse/xenothropy
+	name = "Tail Sweep"
+	desc = "Throw back attackers with a sweep of your tail."
+	sound = 'sound/magic/tail_swing.ogg'
+	charge_max = 400 //Longer cooldown for tail swing.
+	clothes_req = NONE
+	antimagic_allowed = TRUE
+	range = 2
+	cooldown_min = 400 //Much longer cooldown.
+	invocation_type = "none"
+	sparkle_path = /obj/effect/temp_visual/dir_setting/tailsweep
+	action_icon = 'icons/mob/actions/actions_xeno.dmi'
+	action_icon_state = "tailsweep"
+	action_background_icon_state = "bg_alien"
+	anti_magic_check = FALSE
+
+/obj/effect/proc_holder/spell/aoe_turf/repulse/xenothropy/cast(list/targets,mob/user = usr)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		playsound(C.loc, 'sound/voice/hiss5.ogg', 80, 1, 1)
+		C.spin(6,1)
+	..(targets, user, 60)
