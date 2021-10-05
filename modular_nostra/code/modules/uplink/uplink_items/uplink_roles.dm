@@ -24,7 +24,7 @@
 	Syndicate brand \"Extra-Bright Lantern™\". Enjoy."
 	cost = 2
 	item = /obj/item/flashlight/lantern/syndicate
-	restricted_species = list("moth")
+	restricted_species = list("insect")
 
 /datum/uplink_item/race_restricted/xenothropy
 	name = "Xenothropy Injector"
@@ -47,6 +47,13 @@
 	cost = 19
 	item = /obj/item/book/granter/martial/goo_fu
 	restricted_species = list("jelly", "slime", "slimeperson", "slimelumi", "stargazer")
+
+/datum/uplink_item/race_restricted/possessedflyswatter
+	name = "Possessed Flyswatter"
+	desc = "With the many strange and bizarre artifacts that settle within the endless void of our reality this one has to be by far one of the strangest, found in an old Wizard Settlement and now reproduced for personal use! Oddly enough completely useless for actually swatting flies."
+	cost = 9
+	item = /obj/item/melee/flyswatter_syndie
+	restricted_species = list("arachnid", "insect", "fly")
 
 /datum/uplink_item/role_restricted/voodoo
 	name = "Wicker Doll"

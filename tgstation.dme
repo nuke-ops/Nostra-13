@@ -3839,6 +3839,7 @@
 #include "modular_nostra\code\modules\uplink\uplink_items\uplink_stealth.dm"
 #include "modular_nostra\code\modules\uplink\uplink_items\uplink_dangerous.dm"
 #include "modular_nostra\code\game\objects\items\spears.dm"
+#include "modular_nostra\code\game\objects\items\weaponry.dm"
 #include "modular_nostra\code\modules\smithing\anvil_and_items.dm"
 #include "modular_sand\code\__DEFINES\language.dm"
 #include "modular_sand\code\__DEFINES\runechat_defines.dm"
