@@ -383,7 +383,7 @@
 	job_description = "Mad Xenobiologist"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	objectives = ""
+	//objectives = "" // Nostra change
 	death = FALSE
 	roundstart = FALSE
 	random = TRUE
@@ -394,6 +394,7 @@
 	flavour_text = "You were a former Nanotrasen employee but due to your insane admiration for your slimes, and recent negotiations with the Animal Rights Consortium, betrayed Nanotrasen. Attempting to flee on a stolen Xenobiology Specialized Prototype Ship, but during your haste your ship's right rear thruster was barely struck by Bluespace Artillery, almost killing you. But by sheer chance you had stolen a single Metal Foam Grenade during your escape, saving you... for now."
 	important_info = ""
 	assignedrole = "Mad Xenobiologist"
+	var/themadspecies // Nostra change
 
 /datum/outfit/madxeno
 	name = "Mad Xenobiologist"
@@ -412,7 +413,7 @@
 	ADD_TRAIT(new_spawn,TRAIT_UNSTABLE,GHOSTROLE_TRAIT)
 	to_chat(new_spawn, "<span class='warning'>Objective 1:</span> Get sustainable power to your ship and survive using slimes.")
 	to_chat(new_spawn, "<span class='warning'>Objective 2:</span> Spread slimes wherever you can.")
-	to_chat(new_spawn, "<span class='warning'>Objective 3:</span> Take revenge upon Nanotrasen, in the name of ARC and the lack of my sanity! HAHAHAHAHAHAHA!")
+	to_chat(new_spawn, "<span class='warning'>Objective 3:</span> Take revenge upon Nanotrasen, transform them all into [themadspecies] in the name of the ARC and the lack of my sanity! HAHAHAHAHAHAHA!") // Nostra change
 
 // Ultimate Space Gamer
 /obj/effect/mob_spawn/human/ultimatespacegamer

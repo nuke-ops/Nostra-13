@@ -112,6 +112,10 @@
 /area/ruin/space/has_grav/madscientistship)
 "iw" = (
 /obj/item/shard,
+/obj/structure/frame/machine,
+/obj/item/stack/cable_coil{
+	amount = 20
+	},
 /turf/open/floor/plating/foam,
 /area/ruin/space/has_grav/madscientistship)
 "jK" = (
@@ -189,6 +193,10 @@
 	name = "Command Shutters: Port"
 	},
 /turf/open/floor/plasteel/shuttle,
+/area/ruin/space/has_grav/madscientistship)
+"mY" = (
+/obj/item/stock_parts/matter_bin,
+/turf/open/floor/plating/foam,
 /area/ruin/space/has_grav/madscientistship)
 "np" = (
 /obj/machinery/computer,
@@ -376,6 +384,10 @@
 /obj/structure/foamedmetal/iron,
 /turf/template_noop,
 /area/template_noop)
+"yF" = (
+/obj/item/stock_parts/manipulator,
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
 "zg" = (
 /obj/machinery/camera{
 	dir = 1;
@@ -489,6 +501,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
+"FY" = (
+/obj/item/circuitboard/machine/chem_dispenser,
+/turf/open/floor/plating/foam,
+/area/ruin/space/has_grav/madscientistship)
 "Gn" = (
 /obj/structure/window/plasma/reinforced/spawner/west,
 /obj/structure/window/plasma/reinforced/spawner,
@@ -550,6 +566,10 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"LK" = (
+/obj/item/stock_parts/capacitor,
+/turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
 "Mr" = (
 /obj/item/toy/plush/slimeplushie,
@@ -736,6 +756,13 @@
 	icon_state = "0-2"
 	},
 /turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Vz" = (
+/obj/item/stock_parts/matter_bin,
+/obj/item/stack/sheet/glass{
+	amount = 5
+	},
+/turf/open/floor/plating/foam,
 /area/ruin/space/has_grav/madscientistship)
 "WS" = (
 /obj/machinery/processor/slime,
@@ -1405,7 +1432,7 @@ Ce
 Ce
 ao
 jK
-jK
+yF
 jK
 jK
 iw
@@ -1468,11 +1495,11 @@ jK
 jK
 jK
 ao
-jK
+LK
 PP
 kv
 Ny
-eS
+mY
 PO
 PO
 oV
@@ -1503,7 +1530,7 @@ PB
 jK
 Ny
 eS
-eS
+Vz
 PO
 PO
 PO
@@ -1532,7 +1559,7 @@ Qp
 Qp
 Qp
 Qp
-eS
+FY
 eS
 eS
 PO
