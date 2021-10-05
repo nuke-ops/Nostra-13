@@ -60,6 +60,7 @@
 	cached_multiplicative_slowdown = 1.5
 	AddSpell(new /obj/effect/proc_holder/spell/aoe_turf/repulse/xenothropy(src))
 	. = ..()
+/* Start
 
 /obj/item/xenothropy
 	name = "Xenothropy Injector"
@@ -75,6 +76,30 @@
 		qdel(src)
 	else
 		to_chat(M, "This might go badly for you...")
+ End */
+
+/obj/item/reagent_containers/syringe/xenothropy
+	name = "Xenothropy Injector"
+	desc = "A serum allowing Xenomorph Hybrids to call upon there ancestors."
+	amount_per_transfer_from_this = 1
+	volume = 1
+	list_reagents = list(/datum/reagent/xenothropytoxin = 1)
+
+/datum/reagent/xenothropytoxin
+	name = "Xenothropy Toxin"
+	description = "A serum allowing Xenomorph Hybrids to call upon there ancestors."
+	color = "#00FF00" //RGB: 94, 255, 59
+	can_synth = FALSE
+	taste_description = "acid"
+	value = REAGENT_VALUE_GLORIOUS
+
+/datum/reagent/xenothropytoxin/reaction_mob(mob/living/carbon/L, method=TOUCH, reac_volume)
+	if(isxenoperson(L))
+		L.xenothropize()
+	else
+		to_chat(L, "This might go badly for you...")
+		L.apply_damage(30, TOX)
+		return
 
 /mob/living/carbon/proc/xenothropize()
 	AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/benothropy(src))

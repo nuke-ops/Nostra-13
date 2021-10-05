@@ -31,7 +31,7 @@
 	desc = "Xenomorphs today are the greatest living bio-weapon to exist throughout the cosmos, but with the watchful eye of the Animal Rights Consortium and the many bright minds of Interdyne Pharmaceutics, we have managed to unlock the potential within the evolution of there species. Sadly we could not unwind every genome due to lack of resources, so it remains far weaker then there Ancestorial counterparts."
 	cost = 15
 	player_minimum = 5
-	item = /obj/item/xenothropy
+	item = /obj/item/reagent_containers/syringe/xenothropy
 	restricted_species = list("xeno")
 
 /datum/uplink_item/race_restricted/catfight
