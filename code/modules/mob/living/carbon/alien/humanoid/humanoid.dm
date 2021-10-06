@@ -25,7 +25,7 @@
 
 //This is fine right now, if we're adding organ specific damage this needs to be updated
 /mob/living/carbon/alien/humanoid/Initialize()
-	if(!isbenothropy) //Acid is pretty strong, so bye bye it goes! Benothropy shall not have it!
+	if(!isbenothropy) //Nostra Change - Acid is pretty strong, so bye bye it goes! Benothropy shall not have it!
 		AddAbility(new/obj/effect/proc_holder/alien/regurgitate(null))
 	. = ..()
 	AddComponent(/datum/component/footstep, FOOTSTEP_MOB_CLAW, 0.5, -3)
