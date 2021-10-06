@@ -21,6 +21,9 @@
 /obj/item/stack/sheet/mineral/plasma{
 	amount = 25
 	},
+/obj/item/stack/sheet/mineral/gold{
+	amount = 25
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/deltaai)
 "ai" = (
@@ -98,6 +101,7 @@
 /obj/machinery/light/small/broken{
 	dir = 1
 	},
+/obj/item/stack/sheet/mineral/silver,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/deltaai)
 "as" = (
@@ -4040,7 +4044,8 @@
 "lm" = (
 /obj/structure/alien/weeds,
 /obj/effect/decal/cleanable/blood/old,
-/obj/structure/alien/egg/grown,
+/obj/structure/alien/egg/burst,
+/obj/item/clothing/mask/facehugger/impregnated,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/deltaai)
 "ln" = (
@@ -6129,6 +6134,7 @@
 /obj/item/wallframe/camera,
 /obj/item/wallframe/camera,
 /obj/machinery/light/small/broken,
+/obj/item/stack/sheet/mineral/bamboo/ten,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/deltaai)
 "wd" = (

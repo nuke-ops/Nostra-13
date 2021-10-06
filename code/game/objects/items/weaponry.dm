@@ -86,6 +86,35 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	force = 25
 	block_chance = 0
 
+/obj/item/claymore/unforgiven
+	name = "the unforgiven"
+	desc = "You feel betrayed, broken. Have they forgiven you? Will they forgive you!? Your mind spins with anger and confusion..."
+	hitsound = 'sound/weapons/sear.ogg'
+	force = 35
+	throwforce = 15
+	slot_flags = ITEM_SLOT_BACK
+	attack_verb = list("scorned", "carved", "seared", "sliced", "gashed", "glaved", "gutted")
+	block_chance = 30
+	max_integrity = 500
+	item_flags = SLOWS_WHILE_IN_HAND
+
+/obj/item/claymore/unforgiven/Initialize(mapload)
+	. = ..()
+	START_PROCESSING(SSobj, src)
+	AddComponent(/datum/component/butchering, 50, 105)
+
+/obj/item/claymore/unforgiven/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	. = ..()
+
+/obj/item/claymore/unforgiven/process()
+	slowdown = -0.2
+	if(iscarbon(loc))
+		var/mob/living/carbon/wielder = loc
+		if(wielder.is_holding(src))
+			wielder.update_equipment_speed_mods()
+
+
 /obj/item/claymore/highlander //ALL COMMENTS MADE REGARDING THIS SWORD MUST BE MADE IN ALL CAPS
 	desc = "<b><i>THERE CAN BE ONLY ONE, AND IT WILL BE YOU!!!</i></b>\nActivate it in your hand to point to the nearest victim."
 	flags_1 = CONDUCT_1
@@ -615,9 +644,9 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	name = "throwing star"
 	desc = "An ancient weapon still used to this day, due to its ease of lodging itself into its victim's body parts."
 	icon_state = "throwingstar"
-	item_state = "eshield0"
-	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
+	item_state = "throwingstar"
+	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	force = 2
 	throwforce = 10 //10 + 2 (WEIGHT_CLASS_SMALL) * 4 (EMBEDDED_IMPACT_PAIN_MULTIPLIER) = 18 damage on hit due to guaranteed embedding
 	throw_speed = 4
@@ -630,8 +659,10 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	resistance_flags = FIRE_PROOF
 
 /obj/item/throwing_star/stamina
-	name = "shock throwing star"
+	name = "energy throwing star"
 	desc = "An aerodynamic disc designed to cause excruciating pain when stuck inside fleeing targets, hopefully without causing fatal harm."
+	icon_state = "energystar"
+	item_state = "energystar"
 	throwforce = 5
 	embedding = list("pain_chance" = 5, "embed_chance" = 100, "fall_chance" = 0, "jostle_chance" = 10, "pain_stam_pct" = 0.8, "jostle_pain_mult" = 3)
 

@@ -21,6 +21,7 @@
 	/mob/living/carbon/alien/humanoid/sentinel = 0.25,
 	/mob/living/carbon/alien/humanoid/drone = 0.5,
 	/mob/living/carbon/alien/humanoid/royal/praetorian = 1,
+	/mob/living/carbon/alien/humanoid/royal/praetorian_beno = 0.6,  //Nostra Change - BENOTHROPY REFUSES TO BE SLOW SO I WILL FORCE IT TOO BE!!!!
 	/mob/living/carbon/alien/humanoid/royal/queen = 3
 	)
 
