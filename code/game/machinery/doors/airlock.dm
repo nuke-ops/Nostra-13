@@ -1308,7 +1308,8 @@
 		return
 	if(!density) //Already open
 		return
-	if(locked || welded || user.isbenothropy) //Extremely generic, as aliens only understand the basics of how airlocks work. //Nostra Change - Sorry, but Benothropy can't open Airlocks, too O.P.
+	//Nostra Change - added "|| user.isbenothropy", Sorry, but Benothropy can't open Airlocks, too O.P.
+	if(locked || welded || user.isbenothropy) //Extremely generic, as aliens only understand the basics of how airlocks work.
 		to_chat(user, "<span class='warning'>[src] refuses to budge!</span>")
 		return
 	user.visible_message("<span class='warning'>[user] begins prying open [src].</span>",\
