@@ -24,7 +24,36 @@
 	Syndicate brand \"Extra-Bright Lantern™\". Enjoy."
 	cost = 2
 	item = /obj/item/flashlight/lantern/syndicate
-	restricted_species = list("moth")
+	restricted_species = list("insect")
+
+/datum/uplink_item/race_restricted/xenothropy
+	name = "Xenothropy Injector"
+	desc = "Xenomorphs today are the greatest living bio-weapon to exist throughout the cosmos, but with the watchful eye of the Animal Rights Consortium and the many bright minds of Interdyne Pharmaceutics, we have managed to unlock the potential within the evolution of there species. Sadly we could not unwind every genome due to lack of resources, so it remains far weaker then there Ancestorial counterparts."
+	cost = 15
+	player_minimum = 5
+	item = /obj/item/reagent_containers/syringe/xenothropy
+	restricted_species = list("xeno")
+
+/datum/uplink_item/race_restricted/catfight
+	name = "Kōkō kanfūneko"
+	desc = "With the rise of the cat-eared tyrant, we knew somewhere deep beneath the musk filled tombs hid a secret left untouched... Though this manga book has clearly been touched a lot- In fact a bit too much."
+	cost = 20
+	item = /obj/item/book/granter/martial/cat_fight
+	restricted_species = list("felinid")
+
+/datum/uplink_item/race_restricted/goofu
+	name = "Slime Scroll"
+	desc = "Xenobiology is the next step in our war effort, though during a tussle against one of Nanotrasens Military Stations, one of our men managed to find this little guy lying around. With due excitement we immediately brought it back and uncovered it's mysterious. It's a shame it only blorbles..."
+	cost = 19
+	item = /obj/item/book/granter/martial/goo_fu
+	restricted_species = list("jelly", "slime", "slimeperson", "slimelumi", "stargazer")
+
+/datum/uplink_item/race_restricted/possessedflyswatter
+	name = "Possessed Flyswatter"
+	desc = "With the many strange and bizarre artifacts that settle within the endless void of our reality this one has to be by far one of the strangest, found in an old Wizard Settlement and now reproduced for personal use! Oddly enough completely useless for actually swatting flies."
+	cost = 9
+	item = /obj/item/melee/flyswatter_syndie
+	restricted_species = list("arachnid", "insect", "fly")
 
 /datum/uplink_item/role_restricted/voodoo
 	name = "Wicker Doll"
