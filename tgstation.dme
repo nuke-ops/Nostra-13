@@ -3799,6 +3799,7 @@
 #include "modular_nostra\code\game\area\Space_Station_13_areas.dm"
 #include "modular_nostra\code\game\machinery\syndicatebeacon.dm"
 #include "modular_nostra\code\game\objects\items\chainsaw.dm"
+#include "modular_nostra\code\game\objects\items\extinguisher.dm"
 #include "modular_nostra\code\game\objects\items\granters.dm"
 #include "modular_nostra\code\game\objects\items\plushes.dm"
 #include "modular_nostra\code\game\objects\items\RPD.dm"
