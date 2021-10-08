@@ -19,5 +19,5 @@
 	resistance_flags = FIRE_PROOF
 	max_water = 300
 	power = 7 //Maximum distance launched water will travel
-	precision = true //By default, turfs picked from a spray are random, set to 1 to make it always have at least one water effect per row
+	precision = TRUE //By default, turfs picked from a spray are random, set to 1 to make it always have at least one water effect per row
 	cooling_power = 3 //Sets the cooling_temperature of the water reagent datum inside of the extinguisher when it is refilled
