@@ -17,13 +17,7 @@
 	attack_verb = list("slammed", "whacked", "bashed", "thunked", "battered", "bludgeoned", "thrashed")
 	dog_fashion = null
 	resistance_flags = FIRE_PROOF
-	var/max_water = 300
-	var/last_use = 1
-	var/chem = /datum/reagent/water
-	var/safety = TRUE
-	var/refilling = FALSE
-	var/tanktype = /obj/structure/reagent_dispensers/watertank
-	var/sprite_name = "fire_extinguisher"
-	var/power = 7 //Maximum distance launched water will travel
-	var/precision = true //By default, turfs picked from a spray are random, set to 1 to make it always have at least one water effect per row
-	var/cooling_power = 3 //Sets the cooling_temperature of the water reagent datum inside of the extinguisher when it is refilled
+	max_water = 300
+	power = 7 //Maximum distance launched water will travel
+	precision = true //By default, turfs picked from a spray are random, set to 1 to make it always have at least one water effect per row
+	cooling_power = 3 //Sets the cooling_temperature of the water reagent datum inside of the extinguisher when it is refilled
