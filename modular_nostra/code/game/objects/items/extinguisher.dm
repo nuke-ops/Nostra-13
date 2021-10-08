@@ -4,8 +4,8 @@
 	icon = 'modular_nostra/icons/obj/items_and_weapons.dmi'
 	icon_state = "bluespace_extinguisher0"
 	item_state = "bluespace_extinguisher"
-	lefthand_file = 'modular_nostra/icons/mob/inhands/weapons/items_lefthand.dmi'
-	righthand_file = 'modular_nostra/icons/mob/inhands/weapons/items_righthand.dmi'
+	lefthand_file = 'modular_nostra/icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = 'modular_nostra/icons/mob/inhands/items_righthand.dmi'
 	hitsound = 'sound/weapons/smash.ogg'
 	flags_1 = CONDUCT_1
 	throwforce = 10
