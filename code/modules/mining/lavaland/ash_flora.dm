@@ -159,6 +159,7 @@
 
 
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/shavings //for actual crafting
+	grind_results = list(/datum/reagent/toxin/mushroom_powder = 5) // Nostra Change
 
 /obj/item/reagent_containers/food/snacks/grown/ash_flora/mushroom_leaf
 	name = "mushroom leaf"
