@@ -92,6 +92,7 @@
 #define CAT_CAKE	"Cakes"
 #define CAT_DONUT	"Donuts"
 #define CAT_EGG	"Egg-Based Food"
+#define CAT_LIZARD "Lizard Food" //Nostra Change
 #define CAT_MEAT	"Meats"
 #define CAT_MEXICAN	"Mexican"
 #define CAT_MISCFOOD	"Misc. Food"

@@ -1071,6 +1071,16 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_name = "Acid Spit"
 	glass_desc = "A drink from Nanotrasen. Made from live aliens."
 
+// Nostra Change Start
+/datum/reagent/consumable/ethanol/acid_spit/on_mob_life(mob/living/carbon/M)
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(isxenoperson(H) || isalien(H))
+			H.adjustBruteLoss(-1, 0)
+			. = 2
+	return ..() || .
+// Nostra Change End
+
 /datum/reagent/consumable/ethanol/amasec
 	name = "Amasec"
 	description = "Official drink of the Nanotrasen Gun-Club!"

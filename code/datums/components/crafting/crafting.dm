@@ -36,6 +36,7 @@
 					CAT_CAKE,
 					CAT_DONUT,
 					CAT_EGG,
+					CAT_LIZARD, //Nostra Change
 					CAT_ICE,
 					CAT_MEAT,
 					CAT_MEXICAN,
