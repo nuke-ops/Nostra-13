@@ -20,6 +20,11 @@
 	glass_desc = "A sweet and ghastly drink."
 	value = REAGENT_VALUE_VERY_COMMON
 
+/datum/reagent/consumable/ethanol/ectocooler/on_mob_life(mob/living/carbon/M)
+	if(prob(20))
+		M.jitteriness += 0.2
+	..()
+
 /datum/reagent/consumable/ethanol/missingtex
 	name = "missingtexture"
 	description = "Hello Gordan."
