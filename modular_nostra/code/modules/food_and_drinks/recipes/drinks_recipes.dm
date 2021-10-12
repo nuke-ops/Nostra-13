@@ -128,3 +128,9 @@
 	id = /datum/reagent/consumable/mushroom_tea
 	results = list(/datum/reagent/consumable/mushroom_tea = 5)
 	required_reagents = list(/datum/reagent/toxin/mushroom_powder = 1, /datum/reagent/water = 5)
+
+/datum/chemical_reaction/drink/ratvir
+	name = "Ratvir"
+	id = /datum/reagent/consumable/ethanol/ratvir
+	results = list(/datum/reagent/consumable/ethanol/ratvir = 5)
+	required_reagents = list(/datum/reagent/copper = 2, /datum/reagent/consumable/ethanol/black_russian = 2)

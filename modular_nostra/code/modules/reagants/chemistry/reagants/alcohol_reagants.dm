@@ -213,7 +213,7 @@
 	if(prob(8))
 		playsound(M, 'modular_nostra/sound/effects/2spooky4me.ogg', 75, 1, -1)
 		if(!isskeleton(M))
-			new /datum/hallucination/delusion(M, TRUE, "skeleton", 300, 0)
+			new /datum/hallucination/delusion(M, TRUE, "skeleton", 3 SECONDS, 0)
 	..()
 
 	if(prob(60) && isskeleton(M))
@@ -372,5 +372,21 @@
 /datum/reagent/consumable/ethanol/the_juice/on_mob_end_metabolize(mob/living/carbon/victim)
 	if(prophet_trauma)
 		QDEL_NULL(prophet_trauma)
+	return ..()
+
+/datum/reagent/consumable/ethanol/ratvir
+	name = "Ratvir"
+	description = "Suffer not a heretic to live- But were off duty so you get a free pass."
+	color = "#4c14be"
+	boozepwr = 60
+	quality = DRINK_GOOD
+	taste_description = "brass"
+	glass_icon_state = "ratvir"
+	glass_name = "Ratvir"
+	glass_desc = "A glass filled with liquid brass."
+
+/datum/reagent/consumable/ethanol/ratvir/on_mob_life(mob/living/carbon/M)
+	if(M?.mind?.has_antag_datum(/datum/antagonist/clockcult))
+		M.heal_bodypart_damage(2, 1, 1)
 	return ..()
 

@@ -335,7 +335,7 @@
 	job_description = "Space Policeman"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	objectives = "Track down any Syndicate, Wizard Federation or Eldritch Worshippers and eliminate them, but under any circumstances are you to harm any loyal Employees of Nanotrasen."
+	objectives = list("Track down any Syndicate, Wizard Federation or Eldritch Worshippers and eliminate them, but under any circumstances are you to harm any loyal Employees of Nanotrasen.")
 	death = FALSE
 	roundstart = FALSE
 	random = TRUE
@@ -423,7 +423,7 @@
 	job_description = "Ultimate Space Gamer"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	objectives = "Be the best there ever was, and kill whoever threatens you superiority within the realm of VR."
+	objectives = list("Be the best there ever was, and kill whoever threatens you superiority within the realm of VR.")
 	death = FALSE
 	roundstart = FALSE
 	random = TRUE
@@ -588,7 +588,7 @@
 	short_desc = "You are a Syndicate Infiltration Agent"
 	flavour_text = "You have been assigned by Waffle Co. in infiltrating and retrieving the next generation of weapon development technology. Assure no NT scumbags acknowledge your presence and escape with the valuables in hand. Do not fail us."
 	important_info = "Do NOT kill the station crew unless your base has been discovered and breached by them."
-	objectives = "Steal the Captains Antique Lasergun, ensure your presence stays undetected."
+	objectives = list("Steal the Captains Antique Lasergun, ensure your presence stays undetected.")
 
 /obj/effect/mob_spawn/human/syndicate_agent_base_comms/Destroy()
 	return ..()
