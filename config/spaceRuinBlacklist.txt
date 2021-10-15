@@ -53,6 +53,8 @@
 #_maps/RandomRuins/SpaceRuins/spacehermit.dmm
 #_maps/RandomRuins/SpaceRuins/advancedlab.dmm
 #_maps/RandomRuins/SpaceRuins/spacediner.dmm
+
+## Nostra ruins
 #_maps/RandomRuins/SpaceRuins/syndie_minibase_spawn.dmm
 #_maps/RandomRuins/SpaceRuins/dcshuttle.dmm
 #_maps/RandomRuins/SpaceRuins/spiderden.dmm
@@ -60,3 +62,4 @@
 #_maps/RandomRuins/SpaceRuins/spacepolice.dmm
 #_maps/RandomRuins/SpaceRuins/madxenobiologist.dmm
 #_maps/RandomRuins/SpaceRuins/ultimatespacegamer.dmm
+#_maps/RandomRuins/SpaceRuins/skelter.dmm

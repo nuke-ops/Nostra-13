@@ -373,6 +373,11 @@
 	name = "gamerdome"
 	description = "Who will come ontop!?"
 	allow_duplicates = TRUE
+/datum/map_template/ruin/space/suspicious
+	id = "helterskelter"
+	suffix = "skelter.dmm"
+	name = "Helter Skelter"
+	description = "You're looking mighty suspicious. Why don't you go and take a seat over in that driver?"
 
 //Space ruins for the station z
 /datum/map_template/ruin/spacenearstation
