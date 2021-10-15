@@ -11,7 +11,7 @@
 	add_verb(src, /mob/living/carbon/human/verb/underwear_toggle)
 	add_verb(src, /mob/living/verb/subtle)
 	add_verb(src, /mob/living/verb/subtler)
-	add_verb(src, /mob/living/proc/surrender) //Skyrat change
+	add_verb(src, /mob/living/proc/surrender) // Sandstorm change
 	//initialize limbs first
 	create_bodyparts()
 
@@ -84,6 +84,34 @@
 			. += "Chemical Storage: [changeling.chem_charges]/[changeling.chem_storage]"
 			. += "Absorbed DNA: [changeling.absorbedcount]"
 
+	//NINJACODE
+	if(istype(wear_suit, /obj/item/clothing/suit/space/space_ninja)) //Only display if actually a ninja.
+		var/obj/item/clothing/suit/space/space_ninja/SN = wear_suit
+		. += "SpiderOS Status: [SN.s_initialized ? "Initialized" : "Disabled"]"
+		. += "Current Time: [STATION_TIME_TIMESTAMP("hh:mm:ss", world.time)]"
+		if(SN.s_initialized)
+			//Suit gear
+			. += "Energy Charge: [round(SN.cell.charge/100)]%"
+			//Ninja status
+			. += "Fingerprints: [md5(dna.uni_identity)]"
+			. += "Unique Identity: [dna.unique_enzymes]"
+			. += "Overall Status: [stat > 1 ? "dead" : "[health]% healthy"]"
+			. += "Nutrition Status: [nutrition]"
+			// . += "Hydration Status: [thirst]" // Nostra change
+			. += "Oxygen Loss: [getOxyLoss()]"
+			. += "Toxin Levels: [getToxLoss()]"
+			. += "Burn Severity: [getFireLoss()]"
+			. += "Brute Trauma: [getBruteLoss()]"
+			. += "Radiation Levels: [radiation] rad"
+			. += "Body Temperature: [bodytemperature-T0C] degrees C ([bodytemperature*1.8-459.67] degrees F)"
+
+			//Diseases
+			if(length(diseases))
+				. += "Viruses:"
+				for(var/thing in diseases)
+					var/datum/disease/D = thing
+					. += "* [D.name], Type: [D.spread_text], Stage: [D.stage]/[D.max_stages], Possible Cure: [D.cure_text]"
+
 /mob/living/carbon/human/show_inv(mob/user)
 	user.set_machine(src)
 	var/has_breathable_mask = istype(wear_mask, /obj/item/clothing/mask)
@@ -119,7 +147,7 @@
 	else
 		dat += "<tr><td><B>Eyes:</B></td><td><A href='?src=[REF(src)];item=[SLOT_GLASSES]'>[(glasses && !(glasses.item_flags & ABSTRACT))	? glasses : "<font color=grey>Empty</font>"]</A></td></tr>"
 
-	//skyrat edit
+	// Sandstorm edit
 	if(SLOT_EARS_LEFT in obscured)
 		dat += "<tr><td><font color=grey><B>Left ear:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
 	else
@@ -153,6 +181,14 @@
 		if(shoes && shoes.can_be_tied && shoes.tied != SHOES_KNOTTED)
 			dat += "&nbsp;<A href='?src=[REF(src)];shoes=[SLOT_SHOES]'>[shoes.tied ? "Untie shoes" : "Knot shoes"]</A>"
 
+	// Sandstorm edit
+	var/socks_hidden = socks_hidden()
+	if((SLOT_W_SOCKS in obscured) || socks_hidden)
+		dat += "<tr><td><font color=grey>&nbsp;&#8627;<B>Socks:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
+	else
+		dat += "<tr><td>&nbsp;&#8627;<B>Socks:</B></td><td><A href='?src=[REF(src)];item=[SLOT_W_SOCKS]'>[(w_socks && !(w_socks.item_flags & ABSTRACT)) ? w_socks : "<font color=grey>Empty</font>"]</A></td></tr>"
+	//
+
 		dat += "</td></tr>"
 
 	if(SLOT_GLOVES in obscured)
@@ -160,7 +196,7 @@
 	else
 		dat += "<tr><td><B>Gloves:</B></td><td><A href='?src=[REF(src)];item=[SLOT_GLOVES]'>[(gloves && !(gloves.item_flags & ABSTRACT))		? gloves	: "<font color=grey>Empty</font>"]</A></td></tr>"
 
-	//skyrat edit
+	// Sandstorm edit
 	if(SLOT_WRISTS in obscured)
 		dat += "<tr><td><font color=grey><B>Wrists:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
 	else
@@ -185,19 +221,13 @@
 		dat += "&nbsp;<A href='?src=[REF(src)];pockets=right'>[(r_store && !(r_store.item_flags & ABSTRACT)) ? "Right (Full)" : "<font color=grey>Right (Empty)</font>"]</A></td></tr>"
 		dat += "<tr><td>&nbsp;&#8627;<B>ID:</B></td><td><A href='?src=[REF(src)];item=[SLOT_WEAR_ID]'>[(wear_id && !(wear_id.item_flags & ABSTRACT)) ? wear_id : "<font color=grey>Empty</font>"]</A></td></tr>"
 
-	//skyrat edit
-	dat += "<tr><td><B>Underwear Section:</B></td></tr>"
+	// Sandstorm edit
 	var/shirt_hidden = undershirt_hidden()
 	var/undies_hidden = underwear_hidden()
-	var/socks_hidden = socks_hidden()
 	if((SLOT_W_UNDERWEAR in obscured) || undies_hidden)
 		dat += "<tr><td><font color=grey>&nbsp;&#8627;<B>Underwear:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
 	else
 		dat += "<tr><td>&nbsp;&#8627;<B>Underwear:</B></td><td><A href='?src=[REF(src)];item=[SLOT_W_UNDERWEAR]'>[(w_underwear && !(w_underwear.item_flags & ABSTRACT)) ? w_underwear : "<font color=grey>Empty</font>"]</A></td></tr>"
-	if((SLOT_W_SOCKS in obscured) || socks_hidden)
-		dat += "<tr><td><font color=grey>&nbsp;&#8627;<B>Socks:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
-	else
-		dat += "<tr><td>&nbsp;&#8627;<B>Socks:</B></td><td><A href='?src=[REF(src)];item=[SLOT_W_SOCKS]'>[(w_socks && !(w_socks.item_flags & ABSTRACT)) ? w_socks : "<font color=grey>Empty</font>"]</A></td></tr>"
 	if((SLOT_W_SHIRT in obscured) || shirt_hidden)
 		dat += "<tr><td><font color=grey>&nbsp;&#8627;<B>Shirt:</B></font></td><td><font color=grey>Obscured</font></td></tr>"
 	else
@@ -1081,10 +1111,10 @@
 		return
 	if(!HAS_TRAIT(src, TRAIT_IGNOREDAMAGESLOWDOWN))	//if we want to ignore slowdown from damage, but not from equipment
 		var/scaling = maxHealth / 100
-		var/health_deficiency = max(((maxHealth / scaling) - (health / scaling)), (getStaminaLoss()*0.75))
+		var/health_deficiency = max(((maxHealth / scaling) - (health / scaling)), max(0, getStaminaLoss() - 39))
 		if(health_deficiency >= 40)
-			add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, (health_deficiency - 15) / 75)
-			add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying, TRUE, (health_deficiency - 15) / 25)
+			add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, health_deficiency / 75)
+			add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying, TRUE, health_deficiency / 25)
 		else
 			remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown)
 			remove_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying)

@@ -22,7 +22,7 @@
 
 /mob/living/carbon/Moved()
 	. = ..()
-	if(. && (movement_type & FLOATING)) //floating is easy
+	if(. && !CHECK_BITFIELD(movement_type, FLOATING)) //floating is easy
 		if(HAS_TRAIT(src, TRAIT_NOHUNGER))
 			set_nutrition(NUTRITION_LEVEL_FED - 1)	//just less than feeling vigorous
 		else if(nutrition && stat != DEAD)
@@ -30,7 +30,15 @@
 			if(m_intent == MOVE_INTENT_RUN)
 				loss *= 2
 			adjust_nutrition(loss)
-
+/* Nostra change
+		if(HAS_TRAIT(src, TRAIT_NOTHIRST))
+			set_thirst(THIRST_LEVEL_BIT_THIRSTY - 1)
+		else if(thirst && stat != DEAD)
+			var/loss = THIRST_FACTOR/10
+			if(m_intent == MOVE_INTENT_RUN)
+				loss *= 2
+			adjust_thirst(loss)
+*/
 /mob/living/carbon/can_move_under_living(mob/living/other)
 	. = ..()
 	if(!.)		//we failed earlier don't need to fail again

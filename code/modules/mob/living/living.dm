@@ -597,8 +597,8 @@
 	if(full_heal)
 		fully_heal(admin_revive)
 	if(stat == DEAD && can_be_revived()) //in some cases you can't revive (e.g. no brain)
-		GLOB.dead_mob_list -= src
-		GLOB.alive_mob_list += src
+		remove_from_dead_mob_list()
+		add_to_alive_mob_list()
 		suiciding = 0
 		stat = UNCONSCIOUS //the mob starts unconscious,
 		if(!eye_blind)
@@ -635,6 +635,7 @@
 	SetSleeping(0, FALSE)
 	radiation = 0
 	set_nutrition(NUTRITION_LEVEL_FED + 50)
+	//set_thirst(THIRST_LEVEL_BIT_THIRSTY + 50) // Nostra change
 	bodytemperature = BODYTEMP_NORMAL
 	set_blindness(0)
 	set_blurriness(0)
@@ -1297,11 +1298,11 @@
 				return FALSE
 		if(NAMEOF(src, stat))
 			if((stat == DEAD) && (var_value < DEAD))//Bringing the dead back to life
-				GLOB.dead_mob_list -= src
-				GLOB.alive_mob_list += src
+				remove_from_dead_mob_list()
+				add_to_alive_mob_list()
 			if((stat < DEAD) && (var_value == DEAD))//Kill he
-				GLOB.alive_mob_list -= src
-				GLOB.dead_mob_list += src
+				remove_from_alive_mob_list()
+				add_to_dead_mob_list()
 		if(NAMEOF(src, health)) //this doesn't work. gotta use procs instead.
 			return FALSE
 	. = ..()
