@@ -16,7 +16,7 @@
 	damage_overlay_type = "" //We are too cool for regular damage overlays
 	species_traits = list(MUTCOLORS, HAIR, HAS_FLESH, HAS_BONE) // i mean i guess they have blood so they can have wounds too
 	species_language_holder = /datum/language_holder/ethereal
-	inherent_traits = list(TRAIT_NOHUNGER, TRAIT_NOTHIRST)
+	inherent_traits = list(TRAIT_NOHUNGER) // Nostra change - removed thrist
 	sexes = FALSE
 	toxic_food = NONE
 	/*
