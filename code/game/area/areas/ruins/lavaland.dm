@@ -90,6 +90,12 @@
 /area/ruin/lavaland/unpowered/syndicate_lava_base/circuits
 	name = "Syndicate Lavaland Circuit Lab"
 
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology
+	name = "Syndicate Xenobiology Lab"
+
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics
+	name = "Syndicate Hydroponics"
+
 
 //Xeno Nest
 
