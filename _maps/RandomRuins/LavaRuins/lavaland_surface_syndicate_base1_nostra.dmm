@@ -90,26 +90,25 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/medbay)
 "am" = (
-/obj/structure/table/reinforced,
-/obj/item/stock_parts/cell/high/plus{
-	pixel_x = -5;
-	pixel_y = 9
+/obj/machinery/nanite_chamber,
+/obj/machinery/light{
+	dir = 8
 	},
-/obj/item/stock_parts/cell/high/plus{
-	pixel_x = -8;
-	pixel_y = -3
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
 	},
-/obj/item/multitool,
-/obj/item/multitool,
-/obj/item/stock_parts/cell/high/plus{
-	pixel_x = -5;
-	pixel_y = 9
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
 	},
-/obj/item/stock_parts/cell/high/plus{
-	pixel_x = -5;
-	pixel_y = 9
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
 	},
-/turf/open/floor/plasteel,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "an" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
@@ -123,38 +122,44 @@
 /turf/open/floor/circuit/telecomms,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "ao" = (
-/obj/structure/table/reinforced,
-/obj/item/integrated_circuit_printer/upgraded,
-/obj/item/integrated_electronics/analyzer{
-	pixel_x = 8;
-	pixel_y = 1
+/obj/machinery/computer/nanite_chamber_control{
+	dir = 4
 	},
-/obj/item/integrated_electronics/analyzer{
-	pixel_x = 8;
-	pixel_y = 1
-	},
-/obj/item/integrated_circuit_printer/upgraded,
-/turf/open/floor/plasteel,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
-"ap" = (
-/turf/closed/indestructible/opshuttle,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"ar" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
-/turf/open/floor/circuit/telecomms,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+"ar" = (
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 5
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 1
+	},
+/obj/machinery/meter,
+/turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "as" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/chemistry)
-"at" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/obj/machinery/door/poddoor{
-	id = "lavalandsyndi_chemistry"
-	},
-/turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/chemistry)
 "au" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
@@ -227,13 +232,6 @@
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/telecomms)
-"aD" = (
-/obj/structure/table/reinforced,
-/obj/item/stack/sheet/mineral/plasma{
-	amount = 15
-	},
-/turf/open/floor/plasteel,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "aE" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8;
@@ -244,6 +242,12 @@
 /turf/open/floor/circuit/telecomms,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "aF" = (
+/obj/machinery/light/small,
+/obj/machinery/monkey_recycler,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "aG" = (
@@ -255,28 +259,20 @@
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"aH" = (
-/obj/machinery/door/firedoor,
-/turf/open/floor/plasteel/dark,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "aI" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/turf/open/floor/engine,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+/obj/machinery/door/poddoor{
+	id = "lavalandsyndi_chemistry"
+	},
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/chemistry)
 "aJ" = (
-/obj/structure/window/plastitanium,
-/obj/structure/grille,
+/obj/structure/window/plasma/reinforced/spawner/east,
 /turf/open/floor/engine,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "aK" = (
-/obj/machinery/door/window/northleft{
-	req_access_txt = "150"
-	},
-/obj/machinery/door/window/southright{
-	req_access_txt = "150"
-	},
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/stripes/box,
+/turf/open/floor/circuit/telecomms,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "aL" = (
 /turf/closed/wall/mineral/plastitanium/explosive,
@@ -293,66 +289,98 @@
 /turf/open/floor/engine,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "aO" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/structure/cable/yellow{
-	icon_state = "1-4"
-	},
-/turf/open/floor/plasteel/white/side{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/effect/turf_decal/trimline/red/filled/line,
+/turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "aP" = (
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
-/obj/machinery/power/apc/syndicate{
-	dir = 1;
-	name = "Circuit Lab APC";
-	pixel_y = 23
-	},
-/turf/open/floor/plasteel/white/side{
-	dir = 1
-	},
+/obj/machinery/light,
+/obj/effect/turf_decal/trimline/red/filled/line,
+/turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "aQ" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch{
+	heat_proof = 1;
+	name = "Experimentation Room";
+	req_access_txt = "150"
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "lavalandsyndi";
+	name = "Syndicate Research Experimentation Shutters"
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "aS" = (
-/turf/open/floor/plasteel,
+/obj/machinery/door/poddoor{
+	id = "lavalandsyndi_circuits"
+	},
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "aT" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/machinery/firealarm{
-	pixel_y = 24
-	},
-/obj/machinery/light/small{
+/obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
-/obj/structure/chair/office/light{
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "aU" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 5
-	},
+/obj/structure/table/reinforced,
+/obj/item/nanite_scanner,
+/obj/item/nanite_remote,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
-/turf/open/floor/plasteel,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 5
+	},
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/item/disk/nanite_program,
+/turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "aV" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "aW" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -365,162 +393,223 @@
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "aX" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
-	dir = 8
-	},
-/obj/machinery/airalarm/syndicate{
-	pixel_y = 24
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/open/floor/plasteel,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
-"aY" = (
+/obj/structure/table/reinforced,
+/obj/item/nanite_scanner,
+/obj/item/nanite_remote,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/item/disk/nanite_program,
 /turf/open/floor/plasteel/dark,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "ba" = (
 /obj/structure/chair/office/light{
 	dir = 8
 	},
-/obj/machinery/button/door{
-	id = "lavalandsyndi_circuits";
-	name = "Circuitry Blast Door Control";
-	pixel_x = -26;
-	pixel_y = -26;
-	req_access_txt = "150"
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
 	},
-/turf/open/floor/plasteel,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "bb" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
 /turf/open/floor/engine,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "bc" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/turf/open/floor/plasteel/dark,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"bd" = (
-/obj/structure/closet/crate/bin,
-/turf/open/floor/plasteel,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
-"be" = (
-/obj/structure/table/glass,
-/turf/open/floor/plasteel,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
-"bg" = (
-/obj/structure/closet/crate,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/glass/five,
-/obj/item/stack/sheet/glass/five,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/metal/fifty,
-/obj/item/stack/sheet/mineral/diamond{
-	amount = 5
-	},
-/obj/item/stack/sheet/mineral/gold{
-	amount = 10
-	},
-/obj/item/stack/sheet/mineral/plastitanium/fifty,
-/obj/item/stack/sheet/mineral/plastitanium/fifty,
-/obj/item/stack/sheet/mineral/silver{
-	amount = 10
-	},
-/obj/item/stack/sheet/plastic/fifty,
-/obj/item/stack/sheet/mineral/uranium{
-	amount = 5
-	},
-/obj/item/stack/sheet/bluespace_crystal,
-/obj/item/stack/sheet/bluespace_crystal,
-/obj/item/stack/sheet/bluespace_crystal,
-/turf/open/floor/plasteel,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
-"bh" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel/dark,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"bi" = (
-/mob/living/simple_animal/slime,
-/turf/open/floor/engine,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"bj" = (
-/obj/machinery/camera/xray{
-	dir = 10
-	},
-/obj/machinery/light/small,
-/turf/open/floor/engine,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"bk" = (
-/obj/machinery/camera/xray{
-	dir = 10
-	},
-/mob/living/simple_animal/slime,
-/obj/machinery/light/small,
-/turf/open/floor/engine,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"bl" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"bm" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line,
+/obj/effect/turf_decal/trimline/purple/filled/corner{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"bn" = (
+"bd" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+"be" = (
+/obj/machinery/nanite_programmer,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+"bg" = (
+/obj/machinery/nanite_programmer,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+"bh" = (
+/obj/structure/table,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"bl" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/preopen{
+	id = "lavalandsyndi";
+	name = "Syndicate Research Experimentation Shutters"
+	},
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"bm" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/preopen{
+	id = "lavalandsyndi";
+	name = "Syndicate Research Experimentation Shutters"
+	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/obj/structure/table,
-/obj/item/reagent_containers/glass/beaker/bluespace,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/dropper,
-/obj/item/reagent_containers/syringe,
-/obj/item/storage/pill_bottle/mutadone,
-/turf/open/floor/plasteel/dark,
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"bw" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "bF" = (
 /obj/structure/sign/warning/securearea,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/testlab)
-"bX" = (
-/obj/structure/closet/secure_closet/hydroponics,
-/obj/item/storage/box/disks_plantgene,
-/obj/item/storage/box/disks_plantgene,
-/obj/machinery/light/small{
+"bU" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
-/turf/open/floor/grass,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
-"bZ" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/poddoor{
-	id = "lavalandsyndi_circuits"
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line,
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"bX" = (
+/obj/machinery/biogenerator,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "co" = (
 /obj/machinery/door/airlock/hatch{
 	name = "Experimentation Lab";
 	req_access_txt = "150"
 	},
 /obj/structure/fans/tiny,
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"cx" = (
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "cA" = (
@@ -531,6 +620,14 @@
 /obj/item/clothing/glasses/science,
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/chemistry)
+"cB" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor{
+	id = "lavalandsyndi_circuits"
+	},
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "cG" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -545,6 +642,24 @@
 	},
 /turf/open/floor/engine/o2,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
+"dj" = (
+/obj/machinery/computer/nanite_cloud_controller,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "do" = (
 /obj/structure/closet/secure_closet/medical1{
 	req_access = null;
@@ -748,39 +863,6 @@
 /obj/structure/sign/warning/securearea,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"dR" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/hatch{
-	heat_proof = 1;
-	name = "Experimentation Room";
-	req_access_txt = "150"
-	},
-/obj/machinery/door/poddoor/preopen{
-	id = "lavalandsyndi";
-	name = "Syndicate Research Experimentation Shutters"
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/turf/open/floor/plasteel/dark,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"dS" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/poddoor/preopen{
-	id = "lavalandsyndi";
-	name = "Syndicate Research Experimentation Shutters"
-	},
-/turf/open/floor/plating,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "dT" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -962,11 +1044,17 @@
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/virology)
-"ek" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/turf/open/floor/plating,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/testlab)
+"ej" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 9
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "el" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -1238,15 +1326,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/mineral/plastitanium,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/cargo)
-"eF" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/poddoor{
-	id = "lavalandsyndi_cargo"
-	},
-/turf/open/floor/plating,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/cargo)
 "eG" = (
 /obj/structure/closet/secure_closet/personal/patient,
 /turf/open/floor/plasteel/white/side{
@@ -1262,11 +1341,6 @@
 /turf/open/floor/plasteel/white/side{
 	dir = 5
 	},
-/area/ruin/lavaland/unpowered/syndicate_lava_base/virology)
-"eI" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/virology)
 "eJ" = (
 /obj/structure/disposalpipe/segment,
@@ -1503,12 +1577,6 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/cargo)
-"fa" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/obj/machinery/door/firedoor,
-/turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/cargo)
 "fb" = (
 /obj/structure/closet/crate/bin,
@@ -1874,6 +1942,24 @@
 	dir = 1
 	},
 /area/ruin/lavaland/unpowered/syndicate_lava_base/main)
+"fK" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "fO" = (
 /turf/open/floor/plasteel/white/side{
 	dir = 1
@@ -1941,6 +2027,12 @@
 /obj/item/stack/sheet/cardboard,
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/cargo)
+"ga" = (
+/obj/effect/turf_decal/trimline/red/filled/corner{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "gb" = (
 /obj/structure/table,
 /obj/item/paper_bin,
@@ -2167,6 +2259,29 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/main)
+"gC" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"gD" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/red/filled/corner,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "gE" = (
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
 /obj/structure/cable/yellow{
@@ -2675,14 +2790,6 @@
 /turf/open/floor/plasteel/white/side{
 	dir = 6
 	},
-/area/ruin/lavaland/unpowered/syndicate_lava_base/virology)
-"hH" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/obj/machinery/door/poddoor/preopen{
-	id = "lavalandsyndi_virology"
-	},
-/turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/virology)
 "hI" = (
 /obj/structure/sign/warning/vacuum{
@@ -3602,15 +3709,6 @@
 /obj/item/storage/firstaid/radbgone,
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
-"jx" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/poddoor/preopen{
-	id = "lavalandsyndi_bar"
-	},
-/turf/open/floor/plating,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/bar)
 "jy" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/bar)
@@ -4127,19 +4225,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
-"kz" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/visible,
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
 "kA" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -4337,23 +4422,12 @@
 /obj/structure/cable/yellow,
 /turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
-"kX" = (
-/obj/machinery/atmospherics/pipe/simple/supply/visible{
-	dir = 5
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/n2{
-	dir = 1;
-	piping_layer = 3
-	},
-/turf/open/floor/plasteel,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
 "kY" = (
-/obj/machinery/atmospherics/pipe/manifold4w/supply/visible,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
 "kZ" = (
@@ -4530,11 +4604,15 @@
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
 "ls" = (
-/obj/machinery/atmospherics/pipe/simple/supply/visible,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
-	dir = 4
+/obj/effect/turf_decal/stripes/corner,
+/obj/machinery/light/small,
+/obj/machinery/atmospherics/pipe/simple/orange/visible{
+	dir = 8
 	},
+/obj/structure/reagent_dispensers/fueltank,
+/obj/item/clothing/head/welding,
+/obj/item/weldingtool/largetank,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
 "lt" = (
@@ -4908,18 +4986,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
-"mj" = (
-/obj/machinery/atmospherics/components/binary/pump/on{
-	dir = 8;
-	name = "O2 to Incinerator";
-	target_pressure = 4500
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/visible,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
-	dir = 9
-	},
-/turf/open/floor/plasteel,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
 "mk" = (
 /obj/machinery/atmospherics/pipe/manifold/supplymain/visible,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3,
@@ -4952,15 +5018,6 @@
 /area/ruin/lavaland/unpowered/syndicate_lava_base/telecomms)
 "mo" = (
 /turf/closed/wall/mineral/plastitanium/explosive,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/telecomms)
-"mp" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/poddoor/preopen{
-	id = "lavalandsyndi_telecomms"
-	},
-/turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/telecomms)
 "mq" = (
 /obj/structure/sign/warning/vacuum{
@@ -5083,18 +5140,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
-"mI" = (
-/obj/effect/turf_decal/stripes/corner,
-/obj/machinery/light/small,
-/obj/machinery/atmospherics/pipe/simple/orange/visible{
-	dir = 8
-	},
-/obj/structure/reagent_dispensers/fueltank,
-/obj/item/clothing/head/welding,
-/obj/item/weldingtool/largetank,
-/obj/machinery/atmospherics/pipe/simple/supply/visible,
-/turf/open/floor/plasteel,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
 "mJ" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
@@ -5155,12 +5200,6 @@
 "mT" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/arrivals)
-"mU" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/obj/machinery/door/firedoor,
-/turf/open/floor/plating,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/bar)
 "mX" = (
 /obj/structure/rack{
 	dir = 8
@@ -5543,8 +5582,20 @@
 /turf/open/floor/plasteel/white/corner,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/medbay)
 "nB" = (
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plating,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/corner{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "nC" = (
 /obj/structure/table/reinforced,
@@ -6069,11 +6120,18 @@
 /turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/telecomms)
 "ox" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/public/glass{
-	name = "Bar"
+/obj/machinery/smartfridge/disks,
+/obj/structure/table/reinforced,
+/obj/item/storage/box/disks_plantgene{
+	pixel_x = 5;
+	pixel_y = -5
 	},
-/turf/open/floor/plating,
+/obj/item/storage/box/disks_plantgene{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "oz" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber{
@@ -6148,6 +6206,13 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/arrivals)
+"oN" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/public/glass{
+	name = "Bar"
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "oP" = (
 /obj/structure/sign/departments/chemistry,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -6177,13 +6242,6 @@
 /obj/structure/destructible/clockwork,
 /turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"pu" = (
-/obj/structure/table/wood,
-/obj/machinery/plantgenes,
-/obj/item/seeds/kudzu,
-/obj/item/seeds/gatfruit,
-/turf/open/floor/grass,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "qe" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
@@ -6195,40 +6253,165 @@
 /turf/open/floor/engine,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "qW" = (
-/obj/structure/disposaloutlet{
-	dir = null
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 1
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
 	},
 /turf/open/floor/engine,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"sa" = (
-/obj/effect/turf_decal/tile/purple{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/purple{
+"rz" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 6
+/obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
+"sa" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/machinery/light/small{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 6
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"sb" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 4
+	},
+/obj/structure/chair/office/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"sm" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor{
+	id = "lavalandsyndi_circuits"
+	},
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+"ss" = (
+/obj/structure/table,
+/obj/machinery/reagentgrinder/constructed,
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 5;
+	pixel_y = 2
+	},
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 5;
+	pixel_y = 2
+	},
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 5;
+	pixel_y = 2
+	},
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 5;
+	pixel_y = 2
+	},
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 5;
+	pixel_y = 2
+	},
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "sy" = (
-/obj/machinery/light/small{
-	dir = 8
+/obj/structure/closet/l3closet,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"sH" = (
+/obj/effect/turf_decal/trimline/red/filled/line,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+"td" = (
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "tW" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
+"um" = (
+/mob/living/simple_animal/slime,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"us" = (
+/obj/structure/table/reinforced,
+/obj/item/integrated_circuit_printer/upgraded,
+/obj/item/integrated_electronics/analyzer{
+	pixel_x = 8;
+	pixel_y = 1
+	},
+/obj/item/multitool{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/obj/item/stock_parts/cell/high/plus{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/stock_parts/cell/high/plus{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/stock_parts/cell/high/plus{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/stock_parts/cell/high/plus{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/machinery/button/door{
+	id = "lavalandsyndi_circuits";
+	name = "Circuitry Blast Door Control";
+	pixel_x = -26;
+	pixel_y = -26;
+	req_access_txt = "150"
+	},
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 9
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "uA" = (
 /obj/machinery/porta_turret/syndicate{
 	dir = 10
@@ -6241,17 +6424,47 @@
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
-"uN" = (
-/obj/structure/disposalpipe/trunk,
-/obj/machinery/disposal/bin,
-/turf/open/floor/plasteel/dark,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"vs" = (
-/obj/machinery/vending/hydronutrients,
-/obj/machinery/light/small{
+"uC" = (
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+"uM" = (
+/obj/machinery/computer/nanite_cloud_controller,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
-/turf/open/floor/grass,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+"uN" = (
+/obj/structure/disposaloutlet{
+	dir = null
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"vs" = (
+/obj/machinery/chem_dispenser/mutagensaltpeter,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "vB" = (
 /obj/machinery/door/firedoor,
@@ -6260,6 +6473,18 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/bar)
+"wf" = (
+/obj/structure/table/reinforced,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/machinery/airalarm/syndicate{
+	pixel_y = 24
+	},
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "wo" = (
 /obj/machinery/hydroponics/constructable,
 /obj/machinery/light{
@@ -6271,11 +6496,81 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/testlab)
 "wz" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"wP" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"wR" = (
 /obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"xi" = (
+/obj/machinery/firealarm{
+	pixel_y = 24
+	},
+/obj/structure/table/reinforced,
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 15
+	},
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+"xL" = (
+/obj/machinery/door/firedoor,
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/cargo)
+"xV" = (
+/obj/structure/closet/secure_closet/hydroponics,
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/corner,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
+"xW" = (
+/obj/structure/table,
+/obj/item/disk/xenobio_console_upgrade/monkey,
+/obj/item/disk/xenobio_console_upgrade/slimeadv,
+/obj/item/disk/xenobio_console_upgrade/slimebasic,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/obj/machinery/smartfridge/extract{
+	pixel_x = 32
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"xZ" = (
+/obj/machinery/door/firedoor,
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/bar)
 "yb" = (
 /turf/open/floor/grass,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
@@ -6293,28 +6588,63 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "ze" = (
-/obj/structure/table,
-/obj/item/disk/xenobio_console_upgrade/monkey,
-/obj/item/disk/xenobio_console_upgrade/slimeadv,
-/obj/item/disk/xenobio_console_upgrade/slimebasic,
-/turf/open/floor/plasteel/dark,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"zz" = (
-/obj/structure/table,
-/obj/machinery/reagentgrinder/constructed,
-/turf/open/floor/plasteel/dark,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"Ae" = (
-/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on{
-	dir = 4;
-	name = "euthanization chamber freezer"
-	},
-/obj/effect/turf_decal/tile/purple{
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 4
 	},
-/obj/effect/turf_decal/tile/purple{
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"zt" = (
+/obj/machinery/camera/xray{
+	dir = 10
+	},
+/mob/living/simple_animal/slime,
+/obj/machinery/light/small,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/engine,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"zy" = (
+/obj/machinery/plantgenes,
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/bot,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
+"zQ" = (
+/obj/machinery/vending/hydronutrients,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
+"Ax" = (
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line,
 /turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "Ay" = (
@@ -6323,25 +6653,100 @@
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
-"BF" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/poddoor/preopen{
-	id = "lavalandsyndi";
-	name = "Syndicate Research Experimentation Shutters"
+"Az" = (
+/obj/machinery/atmospherics/pipe/manifold/general/hidden{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/turf/open/floor/plating,
+/turf/open/floor/circuit/telecomms,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"AJ" = (
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 4
+	},
+/obj/structure/table,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"AN" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/closet/l3closet,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"Bk" = (
+/obj/machinery/nanite_program_hub,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "CC" = (
 /obj/structure/sign/warning/fire,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
+"CL" = (
+/obj/structure/table/reinforced,
+/obj/item/integrated_circuit_printer/upgraded,
+/obj/item/integrated_electronics/analyzer{
+	pixel_x = 8;
+	pixel_y = 1
+	},
+/obj/item/multitool{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/obj/item/stock_parts/cell/high/plus{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/stock_parts/cell/high/plus{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/stock_parts/cell/high/plus{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/stock_parts/cell/high/plus{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 5
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "Dk" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/main)
+"Ep" = (
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
+"Et" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "EZ" = (
 /obj/machinery/door/airlock/external{
 	req_access_txt = "150"
@@ -6350,6 +6755,27 @@
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/arrivals)
+"Fa" = (
+/obj/machinery/nanite_chamber,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "Fr" = (
 /obj/structure/window/plasma/reinforced/spawner/west,
 /obj/structure/disposaloutlet{
@@ -6360,27 +6786,137 @@
 	},
 /turf/open/floor/engine,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"Fs" = (
-/obj/machinery/light/small{
+"Ft" = (
+/obj/structure/closet/crate,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/glass/five,
+/obj/item/stack/sheet/glass/five,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/mineral/diamond{
+	amount = 5
+	},
+/obj/item/stack/sheet/mineral/gold{
+	amount = 10
+	},
+/obj/item/stack/sheet/mineral/plastitanium/fifty,
+/obj/item/stack/sheet/mineral/plastitanium/fifty,
+/obj/item/stack/sheet/mineral/silver{
+	amount = 10
+	},
+/obj/item/stack/sheet/plastic/fifty,
+/obj/item/stack/sheet/mineral/uranium{
+	amount = 5
+	},
+/obj/item/stack/sheet/bluespace_crystal,
+/obj/item/stack/sheet/bluespace_crystal,
+/obj/item/stack/sheet/bluespace_crystal,
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+"FA" = (
+/mob/living/simple_animal/slime,
+/obj/effect/turf_decal/stripes/box,
+/turf/open/floor/circuit/telecomms,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"FF" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/syndicate{
+	dir = 1;
+	name = "Circuit Lab APC";
+	pixel_y = 23
+	},
+/obj/structure/closet/crate/bin,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 5
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+"GX" = (
+/obj/machinery/computer/camera_advanced/xenobio{
 	dir = 8
 	},
-/obj/structure/table/reinforced,
-/turf/open/floor/plasteel,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "He" = (
-/obj/machinery/vending/hydroseeds,
-/turf/open/floor/grass,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
-"Hi" = (
-/obj/structure/table/reinforced,
 /turf/open/floor/plasteel,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
+"Hf" = (
+/obj/machinery/door/window/northleft{
+	req_access_txt = "150"
+	},
+/obj/machinery/door/window/southright{
+	req_access_txt = "150"
+	},
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/loading_area,
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "HG" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
 /turf/open/floor/engine,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"HN" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 1
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"HQ" = (
+/obj/structure/window/plasma/reinforced/spawner/west,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/engine,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"Ij" = (
+/obj/machinery/seed_extractor,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
+"Ik" = (
+/obj/structure/chair/office/light{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "IJ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 1
@@ -6393,16 +6929,61 @@
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
-"KZ" = (
-/obj/structure/table/wood,
-/obj/machinery/smartfridge/disks,
-/turf/open/floor/grass,
+"JJ" = (
+/obj/machinery/camera/xray{
+	dir = 10
+	},
+/obj/machinery/light/small,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/engine,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"Kw" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor{
+	id = "lavalandsyndi_cargo"
+	},
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/cargo)
+"KJ" = (
+/obj/structure/disposalpipe/trunk,
+/obj/machinery/disposal/bin,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line,
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"KS" = (
+/obj/effect/turf_decal/stripes/corner,
+/obj/effect/turf_decal/trimline/red/filled/corner{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "La" = (
-/obj/structure/table/reinforced,
-/obj/item/paper_bin,
-/obj/item/pen,
-/turf/open/floor/plasteel,
+/obj/machinery/computer/nanite_chamber_control{
+	dir = 8
+	},
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "Lf" = (
 /obj/machinery/porta_turret/syndicate{
@@ -6410,10 +6991,6 @@
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/main)
-"Lg" = (
-/obj/machinery/biogenerator,
-/turf/open/floor/grass,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "Lt" = (
 /obj/machinery/atmospherics/pipe/simple/supplymain/visible,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
@@ -6421,16 +6998,85 @@
 	},
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
-"LC" = (
-/obj/machinery/chem_dispenser/mutagensaltpeter,
-/turf/open/floor/grass,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
+"Lx" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on{
+	dir = 8;
+	name = "euthanization chamber freezer"
+	},
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"LA" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"LB" = (
+/obj/structure/chair/office/light{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 6
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+"LD" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/preopen{
+	id = "lavalandsyndi_bar"
+	},
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/bar)
+"LR" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 10
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "Ms" = (
-/obj/structure/table,
-/obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes,
-/obj/machinery/light/small,
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/testlab)
+"Mz" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "MP" = (
@@ -6438,28 +7084,9 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "NA" = (
-/obj/machinery/computer/camera_advanced/xenobio,
-/turf/open/floor/plasteel/dark,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"NY" = (
-/obj/structure/table,
-/obj/item/stack/sheet/mineral/plasma{
-	amount = 5;
-	pixel_y = 2
-	},
-/obj/item/stack/sheet/mineral/plasma{
-	amount = 5;
-	pixel_y = 2
-	},
-/obj/item/stack/sheet/mineral/plasma{
-	amount = 5;
-	pixel_y = 2
-	},
-/obj/item/stack/sheet/mineral/plasma{
-	amount = 5;
-	pixel_y = 2
-	},
-/obj/machinery/light/small{
+/obj/machinery/processor/slime,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
@@ -6474,24 +7101,62 @@
 /obj/machinery/light/small,
 /turf/open/floor/engine,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"OX" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/obj/machinery/door/firedoor,
-/obj/machinery/door/poddoor{
-	id = "lavalandsyndi_circuits"
-	},
-/turf/open/floor/plating,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "Pa" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
 "Pd" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/obj/machinery/light/small{
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"Pi" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 6
+	},
+/obj/machinery/light/small,
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"Px" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line,
 /turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "PA" = (
@@ -6499,6 +7164,49 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/engine,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"PF" = (
+/obj/structure/table/reinforced,
+/obj/machinery/reagentgrinder/constructed,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
+"PY" = (
+/obj/structure/disposalpipe/trunk,
+/obj/machinery/disposal/bin,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 10
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"Qg" = (
+/obj/structure/table/reinforced,
+/obj/item/seeds/kudzu,
+/obj/item/seeds/gatfruit{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "Qi" = (
 /obj/machinery/cryopod,
 /turf/open/floor/plasteel/white/side{
@@ -6514,19 +7222,31 @@
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"QZ" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
+"Rl" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
+"Rr" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor{
 	id = "lavalandsyndi_circuits"
 	},
+/obj/effect/spawner/structure/window/plastitanium,
 /turf/open/floor/plating,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "Rz" = (
-/obj/structure/window/plastitanium,
-/obj/structure/grille,
-/obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
 /turf/open/floor/engine,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "RE" = (
@@ -6546,21 +7266,8 @@
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
-"RX" = (
-/obj/machinery/seed_extractor,
-/turf/open/floor/grass,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "Sd" = (
 /turf/open/floor/engine,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"Sj" = (
-/obj/effect/turf_decal/tile/purple{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/purple{
-	dir = 4
-	},
-/turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "St" = (
 /obj/structure/fans/tiny,
@@ -6572,48 +7279,116 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/arrivals)
-"SN" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/grass,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "SO" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 8
 	},
 /turf/open/floor/engine,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"TK" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor/preopen{
+	id = "lavalandsyndi_telecomms"
+	},
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/telecomms)
 "UO" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
 	dir = 9
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
-"UZ" = (
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 9
+"UY" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
 	},
-/obj/effect/turf_decal/tile/purple{
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
-/obj/effect/turf_decal/tile/purple{
+/obj/effect/turf_decal/tile/neutral{
 	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/corner,
+/turf/open/floor/plasteel/dark,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"Vk" = (
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/virology)
+"Vx" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/line{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"Vl" = (
-/obj/structure/closet/l3closet,
-/turf/open/floor/plasteel/dark,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"Vv" = (
-/obj/machinery/light{
-	dir = 4
+"VJ" = (
+/obj/structure/chair/office/light{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 10
 	},
 /turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+"VK" = (
+/obj/effect/spawner/structure/window/plastitanium,
+/obj/machinery/door/poddoor{
+	id = "lavalandsyndi_chemistry"
+	},
+/turf/open/floor/plating,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"VM" = (
+/obj/effect/turf_decal/trimline/red/filled/line,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
+"VN" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/turf/open/floor/engine,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
+"VR" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "lavalandsyndi_virology"
+	},
+/obj/effect/spawner/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/virology)
 "VU" = (
-/obj/machinery/smartfridge/extract,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/purple/filled/end{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "Wa" = (
@@ -6626,25 +7401,70 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "Wl" = (
-/obj/machinery/processor/slime,
+/obj/structure/table,
+/obj/item/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/dropper,
+/obj/item/reagent_containers/syringe,
+/obj/item/storage/pill_bottle/mutadone,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
-"Wr" = (
-/obj/item/reagent_containers/glass/beaker/bluespace,
-/obj/item/reagent_containers/glass/beaker/bluespace,
-/obj/item/reagent_containers/glass/beaker/bluespace,
-/obj/structure/table/wood,
-/obj/machinery/reagentgrinder/constructed,
-/turf/open/floor/grass,
-/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "Wt" = (
 /obj/structure/mirror/magic/lesser,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/dormitories)
+"WQ" = (
+/obj/machinery/atmospherics/components/binary/pump/on{
+	dir = 8;
+	name = "O2 to Incinerator";
+	target_pressure = 4500
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer3{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
+"WV" = (
+/obj/machinery/vending/hydroseeds,
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
 "WY" = (
 /obj/machinery/hydroponics/constructable,
 /turf/open/floor/grass,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
+"Xf" = (
+/obj/machinery/hydroponics/constructable,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/grass,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/hydroponics)
+"XF" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/effect/turf_decal/trimline/red/filled/corner{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/circuits)
+"Yt" = (
+/obj/structure/window/plasma/reinforced/spawner/east,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/engine,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/xenobiology)
 "YK" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/layer3{
 	dir = 8;
@@ -6652,6 +7472,17 @@
 	piping_layer = 3
 	},
 /turf/open/floor/engine/plasma,
+/area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
+"Zp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/components/trinary/filter/atmos/flipped/n2{
+	dir = 1;
+	piping_layer = 3
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
+	},
+/turf/open/floor/plasteel,
 /area/ruin/lavaland/unpowered/syndicate_lava_base/engineering)
 
 (1,1,1) = {"
@@ -7035,8 +7866,6 @@ ab
 ab
 ab
 ab
-ab
-ab
 Oc
 ae
 ae
@@ -7045,6 +7874,8 @@ ae
 ae
 ae
 Oc
+ab
+ab
 ab
 ab
 ab
@@ -7097,16 +7928,16 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
+gC
+PY
 wz
 uN
 Rz
 qW
-Sd
-bi
 ae
+ab
+ab
 ab
 ab
 ab
@@ -7159,16 +7990,16 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-aF
-aF
+Vx
+bU
+Hf
+Sd
 aK
-Sd
-Sd
-bj
+JJ
 ae
+ab
+ab
 ab
 ab
 ab
@@ -7221,15 +8052,13 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-aF
-aF
+HN
+bU
+td
 aJ
-Sd
-Sd
-Sd
+aJ
+Yt
 ae
 ab
 ab
@@ -7259,6 +8088,8 @@ mn
 mn
 mn
 aC
+ab
+ab
 ab
 ab
 ab
@@ -7283,15 +8114,13 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-aF
-uN
-Rz
+HN
+KJ
+wz
 Fr
 aN
-aN
+HQ
 ae
 ab
 ab
@@ -7335,6 +8164,8 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (12,1,1) = {"
 aa
@@ -7345,15 +8176,13 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-wz
-aF
+wR
+bU
+Hf
+Sd
 aK
-Sd
-Sd
-bk
+zt
 ae
 ab
 ab
@@ -7397,6 +8226,8 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (13,1,1) = {"
 aa
@@ -7407,15 +8238,13 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-aF
-aF
+HN
+bU
+td
 aJ
-Sd
-Sd
-Sd
+aJ
+Yt
 ae
 ab
 hW
@@ -7459,6 +8288,8 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (14,1,1) = {"
 aa
@@ -7469,21 +8300,19 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-aF
-uN
-Rz
+HN
+KJ
+wz
 Fr
 aN
-aN
+HQ
 ae
 ac
 ha
 eG
 fh
-eI
+Vk
 aj
 ha
 ha
@@ -7502,13 +8331,15 @@ ab
 ab
 ab
 ab
-mp
+TK
 mP
 ni
 nH
 oh
 mn
 mn
+ab
+ab
 ab
 ab
 ab
@@ -7531,15 +8362,13 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-aF
-aF
-aK
+Vx
+bU
+Hf
 Sd
-Sd
-bj
+FA
+JJ
 ae
 ab
 ha
@@ -7547,7 +8376,7 @@ eH
 fg
 fy
 gp
-eI
+Vk
 hp
 hE
 ha
@@ -7564,13 +8393,15 @@ ab
 ab
 ab
 ab
-mp
+TK
 mP
 nk
 nI
 oi
 ou
 mn
+ab
+ab
 ab
 ab
 ab
@@ -7593,21 +8424,19 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-wz
-aF
+HN
+bU
+td
 aJ
-Sd
-Sd
-bi
+aJ
+Yt
 ae
 ac
 ha
-eI
-eI
-eI
+Vk
+Vk
+Vk
 gq
 gT
 hq
@@ -7626,13 +8455,15 @@ ab
 ab
 ab
 ab
-mp
+TK
 mQ
 nl
 nJ
 oj
 ov
 mn
+ab
+ab
 ab
 ab
 ab
@@ -7655,23 +8486,21 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-aF
-uN
-Rz
+HN
+KJ
+wz
 Fr
 aN
-aN
+HQ
 ae
 ac
 ha
 eG
 fh
-eI
+Vk
 gr
-eI
+Vk
 hr
 hG
 ha
@@ -7688,13 +8517,15 @@ ab
 ab
 ab
 ab
-mp
+TK
 mR
 nm
 nK
 ok
 mn
 aC
+ab
+ab
 ab
 ab
 ab
@@ -7717,15 +8548,13 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-aF
-aF
+Vx
+bU
+Hf
+Sd
 aK
-Sd
-Sd
-bj
+JJ
 ae
 ab
 ha
@@ -7768,6 +8597,8 @@ ab
 ab
 ab
 ab
+ab
+ab
 aa
 "}
 (19,1,1) = {"
@@ -7779,25 +8610,23 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-aF
-aF
+HN
+bU
+td
 aJ
-Sd
-Sd
-Sd
+aJ
+Yt
 ae
 ab
 ha
 ha
-eI
-eI
+Vk
+Vk
 gt
 gU
 hs
-hH
+VR
 ab
 ab
 ab
@@ -7829,6 +8658,8 @@ ab
 ab
 ab
 ab
+ab
+ab
 aa
 aa
 "}
@@ -7841,15 +8672,13 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
+HN
+KJ
 wz
-uN
-Rz
 Fr
 aN
-aN
+HQ
 ae
 ab
 ac
@@ -7859,7 +8688,7 @@ fA
 gu
 gV
 ht
-hH
+VR
 ab
 ab
 ab
@@ -7892,6 +8721,8 @@ ab
 ab
 ab
 ab
+ab
+ab
 aa
 "}
 (21,1,1) = {"
@@ -7903,15 +8734,13 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-aF
-aF
+Vx
+bU
+Hf
+Sd
 aK
-Sd
-Sd
-bj
+JJ
 ae
 ab
 ei
@@ -7921,7 +8750,7 @@ fB
 gv
 gW
 hu
-hH
+VR
 ab
 ab
 ab
@@ -7931,8 +8760,8 @@ dG
 ig
 je
 jk
-jx
-jx
+LD
+LD
 jy
 jy
 jy
@@ -7942,6 +8771,8 @@ no
 nN
 ol
 mT
+ab
+ab
 ab
 ab
 ab
@@ -7965,15 +8796,13 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-aF
-aF
-aJ
-Sd
-Sd
-Sd
+HN
+bU
+td
+um
+wP
+VN
 ae
 ae
 wx
@@ -7983,7 +8812,7 @@ fC
 gw
 gX
 hv
-hH
+VR
 ab
 ab
 ab
@@ -7992,8 +8821,8 @@ dG
 ig
 je
 jk
-jx
-jx
+LD
+LD
 kG
 lf
 lx
@@ -8017,6 +8846,8 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (23,1,1) = {"
 aa
@@ -8027,11 +8858,9 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-aH
-aH
+cx
+Ax
 ae
 ae
 ae
@@ -8053,21 +8882,23 @@ dG
 ig
 je
 jk
-jx
-jx
+LD
+LD
 jN
 kH
 jN
 jZ
 lU
 ax
-mU
+xZ
 nq
 nP
 EZ
 oI
 oD
 St
+ab
+ab
 ab
 ab
 ab
@@ -8087,20 +8918,18 @@ ab
 ab
 ab
 ab
-ab
-ab
 Oc
 ae
 ae
-wz
-aF
+wR
+bU
+AN
+sy
 sy
 NA
 aF
-aF
-Ms
 dQ
-ek
+Ms
 eL
 wx
 fE
@@ -8114,8 +8943,8 @@ iu
 iu
 je
 jk
-jx
-jx
+LD
+LD
 jN
 jZ
 jN
@@ -8141,6 +8970,8 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (25,1,1) = {"
 aa
@@ -8149,19 +8980,17 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
 an
+td
+HN
 nB
-Ae
-aF
-aF
+Mz
+Mz
+Mz
 ze
-aF
+LR
 aQ
-aF
-dR
 el
 eM
 wx
@@ -8176,7 +9005,7 @@ jk
 iM
 jk
 jk
-jx
+LD
 jL
 jY
 jN
@@ -8185,20 +9014,22 @@ lV
 ly
 lV
 jZ
-mU
+xZ
 nr
 nR
 oo
 Wk
+zQ
+WV
 vs
-yb
-pu
-yb
+PF
 WY
 WY
-WY
+Xf
 WY
 Wk
+ab
+ab
 ab
 ab
 ab
@@ -8211,18 +9042,16 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-ar
+Az
 oq
-UZ
-aF
-aF
-aF
-aF
-aY
-Vl
+ar
+LA
+LA
+LA
+LA
+UY
+Pi
 ae
 em
 eN
@@ -8252,15 +9081,17 @@ jy
 nS
 on
 Wk
+Ep
 He
-yb
-KZ
-yb
-yb
+He
+gD
 yb
 yb
 yb
-OX
+yb
+Rr
+ab
+ab
 ab
 ab
 ab
@@ -8273,19 +9104,17 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
 au
-nB
-Sj
-aF
-aF
-aF
-aF
+td
+AJ
+LA
+LA
+LA
+LA
+Px
+ss
 bl
-Vl
-dS
 eo
 eO
 fk
@@ -8313,16 +9142,18 @@ ah
 jy
 nu
 oo
+oN
+Ep
 ox
+zy
+VM
 yb
-yb
-yb
-yb
-LC
 WY
 WY
 WY
-OX
+Rr
+ab
+ab
 ab
 ab
 ab
@@ -8335,19 +9166,17 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
 aE
-nB
+td
+Lx
+fK
 sa
-bc
+sb
 Pd
 bc
 bh
 bm
-bn
-BF
 ep
 eP
 fl
@@ -8376,15 +9205,17 @@ jP
 nT
 op
 Wk
-Wr
-yb
-Lg
-yb
-yb
-yb
+Ep
+He
+He
+KS
 yb
 yb
-OX
+yb
+yb
+Rr
+ab
+ab
 ab
 ab
 ab
@@ -8397,19 +9228,17 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
-ap
-ap
+ae
+ae
 aG
 co
 ae
+GX
+xW
 VU
 Wl
-NY
-zz
-dS
+bl
 eq
 eQ
 wx
@@ -8438,15 +9267,17 @@ jy
 nU
 oo
 Wk
+xV
+Ij
 bX
-yb
-RX
-SN
-WY
+Qg
 WY
 WY
 wo
+WY
 Wk
+ab
+ab
 ab
 ab
 ab
@@ -8454,8 +9285,6 @@ ab
 "}
 (30,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -8513,11 +9342,11 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (31,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -8527,7 +9356,7 @@ ae
 bb
 PA
 qe
-Sd
+Et
 ae
 pq
 as
@@ -8562,12 +9391,14 @@ nt
 nW
 oo
 Pa
+us
+VJ
 am
 ao
+Bk
 Pa
-Fs
-Hi
-Pa
+ab
+ab
 ab
 ab
 ab
@@ -8578,8 +9409,6 @@ ab
 "}
 (32,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -8624,12 +9453,14 @@ nu
 nW
 MP
 Pa
+xi
+sH
 aT
 ba
 bd
 aS
-aS
-Pa
+ab
+ab
 ab
 ab
 ab
@@ -8645,15 +9476,13 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
 ay
 Sd
 yp
-aI
+VK
 ab
-at
+aI
 aM
 dv
 dC
@@ -8685,13 +9514,15 @@ mX
 nv
 nY
 aW
+ej
+XF
 aO
 aU
-aS
+dj
 be
-aS
-aS
-QZ
+sm
+ab
+ab
 ab
 ab
 ab
@@ -8707,15 +9538,13 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
 Sd
 Sd
 SO
-aI
+VK
 ab
-at
+aI
 cA
 dw
 dC
@@ -8747,13 +9576,15 @@ mY
 nw
 nZ
 Pa
+FF
+ga
 aP
 aV
-aS
-be
-aS
-aS
-QZ
+uC
+uC
+sm
+ab
+ab
 ab
 ab
 ab
@@ -8769,15 +9600,13 @@ ab
 ab
 ab
 ab
-ab
-ab
 ae
 Sd
 Sd
 Sd
-aI
+VK
 ab
-at
+aI
 cG
 dx
 dE
@@ -8810,12 +9639,14 @@ nx
 kR
 Pa
 Pa
+Ft
+sH
 aX
-aS
+uM
 bg
-aS
-aS
-QZ
+sm
+ab
+ab
 ab
 ab
 ab
@@ -8826,8 +9657,6 @@ ab
 "}
 (36,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -8872,12 +9701,14 @@ ny
 oa
 or
 Pa
-aS
-aS
-aS
-aS
-aS
-bZ
+wf
+sH
+bw
+Ik
+bd
+cB
+ab
+ab
 ab
 ab
 ab
@@ -8888,8 +9719,6 @@ aa
 "}
 (37,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -8934,12 +9763,14 @@ nz
 ob
 al
 Pa
-bd
+CL
+LB
+Fa
 La
-aD
-Vv
-aS
+Bk
 Pa
+ab
+ab
 ab
 ab
 ab
@@ -8950,8 +9781,6 @@ ab
 "}
 (38,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -9009,11 +9838,11 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (39,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -9033,7 +9862,7 @@ eb
 ey
 eX
 fs
-fa
+xL
 gM
 hi
 hB
@@ -9071,11 +9900,11 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (40,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -9133,11 +9962,11 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (41,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -9195,11 +10024,11 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (42,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -9217,7 +10046,7 @@ ac
 dy
 dy
 eA
-fa
+xL
 dy
 fY
 gP
@@ -9257,11 +10086,11 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (43,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -9319,11 +10148,11 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (44,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -9357,8 +10186,8 @@ jw
 jI
 jW
 kk
-kz
-kX
+Rl
+Zp
 lr
 lN
 mi
@@ -9381,11 +10210,11 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (45,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -9420,11 +10249,11 @@ jJ
 kl
 kl
 kA
+rz
 kY
+kY
+WQ
 ls
-ls
-mj
-mI
 RV
 tW
 RE
@@ -9443,11 +10272,11 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (46,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -9505,6 +10334,8 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (47,1,1) = {"
 aa
@@ -9523,16 +10354,14 @@ ab
 ab
 ab
 ab
-ab
-ab
 dy
-eF
-eF
+Kw
+Kw
 dy
 gf
 dy
-eF
-eF
+Kw
+Kw
 aA
 ab
 ab
@@ -9567,11 +10396,11 @@ ab
 ab
 ab
 ab
+ab
+ab
 "}
 (48,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -9628,12 +10457,12 @@ ab
 ab
 ab
 ab
+ab
+ab
 aa
 "}
 (49,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -9690,12 +10519,12 @@ ab
 ab
 ab
 ab
+ab
+ab
 aa
 "}
 (50,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -9751,13 +10580,13 @@ ab
 ab
 ab
 ab
+ab
+ab
 aa
 aa
 "}
 (51,1,1) = {"
 aa
-ab
-ab
 ab
 ab
 ab
@@ -9797,6 +10626,8 @@ IZ
 ju
 ju
 ju
+ab
+ab
 ab
 ab
 ab
