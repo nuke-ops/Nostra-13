@@ -3836,6 +3836,7 @@
 #include "modular_nostra\code\modules\mob\living\simple_animal\hostile\cargo_carp.dm"
 #include "modular_nostra\code\modules\paperwork\origami.dm"
 #include "modular_nostra\code\modules\research\designs\bluespace_designs.dm"
+#include "modular_nostra\code\modules\research\techweb\nodes\bluespace_nodes.dm"
 #include "modular_nostra\code\modules\shuttle\elevator.dm"
 #include "modular_nostra\code\modules\spells\spell_types\mime.dm"
 #include "modular_nostra\code\modules\uplink\uplink_bundles_plus.dm"
