@@ -1,0 +1,6 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - bugfix: Fixed doubled spare on KiloStation.
+  - bugfix: Fixed walls in mad xenobio ship.
+  - bugfix: Fixed creatures pens in mad xenobio ship.
