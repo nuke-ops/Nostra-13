@@ -25506,17 +25506,29 @@
 /turf/open/floor/plasteel/dark,
 /area/science/explab)
 "aTC" = (
+/obj/machinery/droneDispenser/preloaded,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/rack,
-/obj/item/tank/internals/oxygen,
-/obj/item/clothing/mask/gas,
-/obj/effect/turf_decal/bot,
-/turf/open/floor/plating,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating{
+	icon_state = "platingdmg3"
+	},
 /area/maintenance/starboard)
 "aTD" = (
+/obj/structure/table,
+/obj/item/stack/sheet/metal{
+	amount = 30
+	},
+/obj/item/stack/sheet/glass{
+	amount = 30
+	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/l3closet/virology,
-/turf/open/floor/plating,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small,
+/turf/open/floor/plating{
+	icon_state = "platingdmg3"
+	},
 /area/maintenance/starboard)
 "aTF" = (
 /obj/effect/turf_decal/tile/yellow,
@@ -33880,6 +33892,9 @@
 /obj/item/assembly/flash/handheld,
 /obj/item/assembly/flash/handheld,
 /obj/item/assembly/flash/handheld,
+/obj/machinery/posialert{
+	pixel_x = -32
+	},
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
 "bhD" = (
@@ -61050,7 +61065,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/engine,
-/area/space)
+/area/ai_monitored/turret_protected/aisat/foyer)
 "cdw" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
@@ -63352,7 +63367,7 @@
 	dir = 4
 	},
 /turf/open/floor/engine,
-/area/space)
+/area/ai_monitored/turret_protected/aisat_interior)
 "chX" = (
 /obj/machinery/porta_turret/ai{
 	dir = 4
@@ -83393,6 +83408,12 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/camera{
+	c_tag = "Laser Room Port";
+	dir = 1;
+	name = "laser room camera";
+	network = list("ss13","engine")
+	},
 /turf/open/floor/plating,
 /area/engineering/main)
 "swt" = (
@@ -83436,7 +83457,6 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/card/id/captains_spare,
 /turf/open/floor/carpet,
 /area/command/heads_quarters/captain)
 "sBq" = (
@@ -85694,12 +85714,6 @@
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = -26
-	},
-/obj/machinery/camera{
-	c_tag = "Laser Room Port";
-	dir = 1;
-	name = "laser room camera";
-	network = list("ss13","engine")
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
