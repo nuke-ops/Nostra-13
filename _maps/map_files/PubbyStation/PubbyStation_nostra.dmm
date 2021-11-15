@@ -2263,6 +2263,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
 "afE" = (
@@ -2625,6 +2626,7 @@
 	dir = 1
 	},
 /obj/item/toy/plush/slimeplushie,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "agK" = (
@@ -2669,6 +2671,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "agN" = (
@@ -57072,6 +57075,7 @@
 /area/engineering/atmos)
 "lGp" = (
 /obj/structure/weightmachine/weightlifter,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
 "lGv" = (

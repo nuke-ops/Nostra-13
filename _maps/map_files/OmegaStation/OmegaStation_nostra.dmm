@@ -2837,6 +2837,7 @@
 /obj/structure/chair/stool{
 	pixel_y = 15
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aeG" = (
@@ -26792,6 +26793,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/bot,
+/obj/effect/landmark/start/chemist,
 /turf/open/floor/plasteel,
 /area/medical/chemistry)
 "aSn" = (
@@ -43137,6 +43139,7 @@
 	pixel_x = 32
 	},
 /obj/item/toy/plush/snakeplushie,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "fBb" = (
@@ -43326,6 +43329,7 @@
 	pixel_x = 32
 	},
 /obj/item/toy/plush/beeplushie,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "fVU" = (
@@ -43787,6 +43791,7 @@
 	pixel_x = 32
 	},
 /obj/item/toy/plush/carpplushie,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "gUt" = (
@@ -43864,6 +43869,13 @@
 	},
 /turf/closed/wall,
 /area/maintenance/starboard/central)
+"gXC" = (
+/obj/effect/turf_decal/tile/yellow{
+	dir = 8
+	},
+/obj/effect/landmark/start/chemist,
+/turf/open/floor/plasteel/white,
+/area/medical/chemistry)
 "gXJ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
@@ -47504,6 +47516,16 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/xenobiology)
+"pFD" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/plasteel/cafeteria,
+/area/security/prison)
 "pFG" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/atmospherics/components/unary/outlet_injector/on/layer3,
@@ -84489,7 +84511,7 @@ aac
 aad
 rRe
 sgt
-rdn
+pFD
 rdn
 ajm
 uba
@@ -92501,7 +92523,7 @@ aRf
 aVP
 aTr
 aUt
-aVl
+gXC
 aWg
 aRf
 aXr

@@ -482,6 +482,7 @@
 /area/security/prison)
 "abD" = (
 /obj/structure/chair/stool,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "abF" = (
@@ -1316,6 +1317,7 @@
 	c_tag = "Prison Cell 3";
 	network = list("ss13","prison")
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "adt" = (
@@ -1345,6 +1347,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "adw" = (
@@ -49557,6 +49560,10 @@
 	},
 /turf/open/floor/engine,
 /area/engineering/main)
+"dOa" = (
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "dOw" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -67383,6 +67390,13 @@
 	},
 /turf/open/floor/plating,
 /area/engineering/break_room)
+"oCB" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "oCQ" = (
 /obj/machinery/computer/crew,
 /obj/effect/turf_decal/tile/green{
@@ -107193,7 +107207,7 @@ aaf
 aaa
 aax
 aaC
-aaI
+oCB
 aaR
 abb
 aaI
@@ -107974,7 +107988,7 @@ aaR
 aaR
 ade
 aaR
-aaR
+dOa
 aeo
 aeV
 afP
