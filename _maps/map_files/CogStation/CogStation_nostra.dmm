@@ -7817,6 +7817,7 @@
 	c_tag = "Security - Prison Bathroom";
 	dir = 4
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel/freezer,
 /area/security/prison)
 "asA" = (
@@ -16267,6 +16268,7 @@
 /obj/machinery/atmospherics/pipe/simple/orange/hidden{
 	dir = 8
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aJP" = (
@@ -20517,6 +20519,7 @@
 /obj/structure/chair/stool,
 /obj/machinery/light,
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aTa" = (
@@ -36745,9 +36748,6 @@
 /obj/structure/table,
 /obj/machinery/light/small{
 	dir = 4
-	},
-/obj/item/storage/box/engineer{
-	pixel_y = 4
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/disposal)
@@ -68021,7 +68021,7 @@
 /turf/closed/wall/r_wall,
 /area/engineering/atmos)
 "cLY" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/incinerator_output{
+/obj/machinery/atmospherics/components/unary/vent_scrubber{
 	dir = 4
 	},
 /turf/open/floor/engine/vacuum,
@@ -70922,6 +70922,11 @@
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plating,
 /area/engineering/storage/tech)
+"htN" = (
+/obj/structure/lattice,
+/obj/item/stack/cable_coil,
+/turf/open/space/basic,
+/area/space/nearstation)
 "hDz" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plasteel,
@@ -71003,6 +71008,15 @@
 	},
 /turf/open/floor/plasteel,
 /area/engineering/atmos)
+"lOZ" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/hidden{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/open/floor/plating/airless,
+/area/space/nearstation)
 "lRy" = (
 /obj/machinery/light{
 	dir = 1
@@ -71013,6 +71027,18 @@
 	},
 /turf/open/floor/plasteel,
 /area/engineering/atmos)
+"lXA" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/plasteel,
+/area/security/prison)
+"mkU" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/hidden{
+	dir = 4
+	},
+/obj/item/stack/cable_coil,
+/turf/open/floor/plating/airless,
+/area/space/nearstation)
 "mqB" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 4;
@@ -71088,6 +71114,11 @@
 	},
 /turf/open/floor/plating,
 /area/engineering/atmos)
+"olN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/plating,
+/area/security/prison)
 "ony" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/manifold/brown/visible{
@@ -71317,10 +71348,25 @@
 	},
 /turf/open/floor/plasteel,
 /area/engineering/atmos)
+"vCm" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/hidden{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plating/airless,
+/area/space/nearstation)
 "wbu" = (
 /obj/machinery/atmospherics/pipe/simple/violet/visible,
 /turf/closed/wall/r_wall,
 /area/engineering/atmos)
+"wmc" = (
+/obj/machinery/atmospherics/pipe/simple/cyan/hidden{
+	dir = 4
+	},
+/turf/open/floor/plating/airless,
+/area/space/nearstation)
 "wPS" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/violet/visible{
@@ -85612,7 +85658,7 @@ aaa
 aaa
 aaU
 aEa
-aPT
+vCm
 aaU
 aaa
 aaa
@@ -85869,7 +85915,7 @@ aaa
 aaa
 aaU
 aEa
-aPT
+wmc
 aaU
 aaa
 aaa
@@ -86126,7 +86172,7 @@ aaa
 aaa
 aaU
 aEa
-aPT
+wmc
 aaU
 aaa
 aaa
@@ -86383,7 +86429,7 @@ aaa
 aaa
 aaU
 aEa
-aPT
+wmc
 aaU
 aaa
 aaa
@@ -86640,7 +86686,7 @@ aaa
 aaa
 aaU
 aEa
-aPT
+wmc
 aaU
 aaa
 aaa
@@ -86897,7 +86943,7 @@ aaa
 aaa
 aaU
 aEa
-aPT
+wmc
 aaU
 aaa
 aaa
@@ -87154,7 +87200,7 @@ aaa
 aaa
 aaU
 aEb
-aPT
+mkU
 aaU
 aaa
 aaa
@@ -87411,7 +87457,7 @@ aaa
 aaa
 aaU
 aEa
-aPT
+wmc
 aaU
 aaa
 aaa
@@ -87668,7 +87714,7 @@ aaa
 aaa
 aaU
 aEa
-aPT
+wmc
 aaU
 aaa
 aaa
@@ -87925,7 +87971,7 @@ aaa
 aaa
 aaU
 aEa
-aPT
+wmc
 aaU
 aaa
 aaa
@@ -88180,9 +88226,9 @@ aaM
 abi
 aaa
 aaa
-aaU
+htN
 aEa
-aPT
+wmc
 aaU
 aaa
 aaa
@@ -88439,7 +88485,7 @@ aaa
 aaa
 aaU
 aEa
-aPT
+wmc
 aaU
 aaa
 aaa
@@ -88696,7 +88742,7 @@ aaa
 aaa
 aaU
 aEa
-aPT
+wmc
 aaU
 aaU
 aaa
@@ -88953,7 +88999,7 @@ aaU
 aaU
 aaU
 aEa
-aPT
+lOZ
 aaU
 aaU
 aPV
@@ -96127,7 +96173,7 @@ aeN
 abS
 aew
 afJ
-agP
+olN
 agP
 ajB
 akv
@@ -96390,7 +96436,7 @@ aiL
 akv
 anw
 akv
-akv
+lXA
 akv
 akv
 aAh
