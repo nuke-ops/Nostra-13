@@ -56,7 +56,7 @@
 	return genit_list
 
 /obj/item/organ/genital/proc/climaxable(mob/living/carbon/human/H, silent = FALSE) //returns the fluid source (ergo reagents holder) if found.
-	if(CHECK_BITFIELD(genital_flags, GENITAL_FUID_PRODUCTION))
+	if((genital_flags & GENITAL_FUID_PRODUCTION))
 		. = reagents
 	else
 		if(linked_organ)
@@ -131,7 +131,7 @@
 	var/list/worn_stuff = get_equipped_items()
 
 	for(var/obj/item/organ/genital/G in internal_organs)
-		if(CHECK_BITFIELD(G.genital_flags, CAN_CLIMAX_WITH) && G.is_exposed(worn_stuff)) //filter out what you can't masturbate with
+		if((G.genital_flags & CAN_CLIMAX_WITH) && G.is_exposed(worn_stuff)) //filter out what you can't masturbate with
 			LAZYADD(genitals_list, G)
 	if(LAZYLEN(genitals_list))
 		var/obj/item/organ/genital/ret_organ = input(src, "with what?", "Climax", null) as null|obj in genitals_list
@@ -220,8 +220,40 @@
 	if(forced_climax) //Something forced us to cum, this is not a masturbation thing and does not progress to the other checks
 		log_message("was forced to climax by [cause]",LOG_EMOTE)
 		for(var/obj/item/organ/genital/G in internal_organs)
-			if(!CHECK_BITFIELD(G.genital_flags, CAN_CLIMAX_WITH)) //Skip things like wombs and testicles
+			if(!(G.genital_flags & CAN_CLIMAX_WITH)) //Skip things like wombs and testicles
 				continue
+			var/mob/living/partner
+			var/check_target
+			var/list/worn_stuff = get_equipped_items()
+
+			if(G.is_exposed(worn_stuff))
+				if(pulling) //Are we pulling someone? Priority target, we can't be making option menus for this, has to be quick
+					if(isliving(pulling)) //Don't fuck objects
+						check_target = pulling
+				if(pulledby && !check_target) //prioritise pulled over pulledby
+					if(isliving(pulledby))
+						check_target = pulledby
+				//Now we should have a partner, or else we have to come alone
+				if(check_target)
+					if(iscarbon(check_target)) //carbons can have clothes
+						var/mob/living/carbon/C = check_target
+						if(C.exposed_genitals.len || C.is_groin_exposed() || C.is_chest_exposed()) //Are they naked enough?
+							partner = C
+					else //A cat is fine too
+						partner = check_target
+				//skyrat edit
+				if(forced_partner)
+					if((forced_partner == "none") || (!istype(forced_partner)))
+						partner = null
+					else
+						partner = forced_partner
+				//
+				if(partner) //Did they pass the clothing checks?
+					//skyrat edit
+					mob_climax_partner(G, partner, spillage = forced_spillage, mb_time = 0) //Instant climax due to forced
+					//
+					continue //You've climaxed once with this organ, continue on
+			//not exposed OR if no partner was found while exposed, climax alone
 			mob_climax_outside(G, mb_time = 0) //removed climax timer for sudden, forced orgasms
 		//Now all genitals that could climax, have.
 		//Since this was a forced climax, we do not need to continue with the other stuff

@@ -605,7 +605,7 @@
 	set name="Start Now"
 	if(!isnull(usr.client.address)) //skyrat edit - confirm early game start unless connecting locally
 		message_admins("[key_name(usr)] is deciding to start the game early")
-		if(alert(usr, "Start game NOW?", "Game Start Confirmation", "Yes", "No")!= "Yes")
+		if(tgui_alert(usr, "Start game NOW?", "Game Start Confirmation", list("Yes", "No"))!= "Yes")
 			message_admins("[key_name(usr)] has cancelled starting the game early")
 			return FALSE //end skyrat edit
 	if(SSticker.current_state == GAME_STATE_PREGAME || SSticker.current_state == GAME_STATE_STARTUP)

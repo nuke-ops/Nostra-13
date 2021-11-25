@@ -60,7 +60,7 @@
 					message = (user == M) ? pick("pumps [src] on [possessive_verb] penis") : pick("pumps \the [src] on [M]'s penis")
 					lust_amt = NORMAL_LUST
 	if(message)
-		user.visible_message("<font color=purple>[user] [message].</font>")
+		user.visible_message("<span class='lewd'>[user] [message].</span>")
 		M.handle_post_sex(lust_amt, null, user)
 		playlewdinteractionsound(loc, pick('modular_sand/sound/interactions/bang4.ogg',
 							'modular_sand/sound/interactions/bang5.ogg',
@@ -74,7 +74,6 @@
 */
 
 /obj/item/portallight
-	name 				= "fleshlight"
 	name 				= "portal fleshlight"
 	desc 				= "A silver love(TM) fleshlight, used to stimulate someones penis, with bluespace tech that allows lovers to hump at a distance."
 	icon 				= 'modular_sand/icons/obj/fleshlight.dmi'
@@ -104,16 +103,24 @@
 /obj/item/portallight/attack(mob/living/carbon/human/M, mob/living/carbon/human/user)
 	var/message = ""
 	var/lust_amt = 0
+	var/arouse_only_target = FALSE
+	var/obj/item/organ/genital/penis/P
+	var/obj/item/organ/genital/vagina/V
+	var/target
 	if(ishuman(M) && (M?.client?.prefs?.toggles & VERB_CONSENT) && useable) // I promise all those checks are worth it!
 		switch(user.zone_selected)
 			if(BODY_ZONE_PRECISE_GROIN)
 				if(M.has_penis(REQUIRE_EXPOSED))
 					message = (user == M) ? pick("fucks into [src]") : pick("forces [M] to fuck into [src]")
 					lust_amt = NORMAL_LUST
+					P = M.getorganslot(ORGAN_SLOT_PENIS)
+					target = P
 			if(BODY_ZONE_PRECISE_MOUTH)
 				if(M.has_mouth() && !M.is_mouth_covered())
 					message = (user == M) ? pick("licks into [src]") : pick("forces [M] to lick into [src]")
 					lust_amt = NORMAL_LUST
+					arouse_only_target = TRUE
+					target = "mouth"
 			if(BODY_ZONE_R_ARM)
 				if(M.has_hand(REQUIRE_ANY))
 					var/can_interact = FALSE
@@ -122,6 +129,8 @@
 					if(can_interact)
 						message = (user == M) ? pick("touches softly against [src]") : pick("forces [M]'s finger on [src]")
 						lust_amt = NORMAL_LUST
+						arouse_only_target = TRUE
+						target = "hand"
 			if(BODY_ZONE_L_ARM)
 				if(M.has_hand(REQUIRE_ANY))
 					var/can_interact = FALSE
@@ -130,13 +139,20 @@
 					if(can_interact)
 						message = (user == M) ? pick("touches softly against [src]") : pick("forces [M]'s finger on [src]")
 						lust_amt = NORMAL_LUST
+						arouse_only_target = TRUE
+						target = "hand"
 	if(!useable)
 		to_chat(user, "<span class='notice'>It seems the device has failed or your partner is not wearing their device.</span>")
 	if(message)
 		var/mob/living/carbon/human/portal_target = ishuman(portalunderwear.loc) && portalunderwear.current_equipped_slot == SLOT_W_UNDERWEAR ? portalunderwear.loc : null
-		if(portal_target && (portal_target?.client?.prefs.toggles & VERB_CONSENT))
-			user.visible_message("<font color=purple>[user] [message].</font>")
-			M.handle_post_sex(lust_amt, null, user)
+		if(portalunderwear.targetting == "vagina")
+			V = portal_target.getorganslot(ORGAN_SLOT_VAGINA)
+		if(portal_target && (portal_target?.client?.prefs.toggles & VERB_CONSENT || !portal_target.ckey))
+			user.visible_message("<span class='lewd'>[user] [message].</span>")
+			if(!arouse_only_target)
+				if(M.handle_post_sex(lust_amt, null, null))
+					if(P)
+						to_chat(portal_target, "<span class='userlove'>You feel a [P.shape] penis of [P.length] inches go deep into your [portalunderwear.targetting] and cum!</span>")
 			switch(user.zone_selected)
 				if(BODY_ZONE_PRECISE_GROIN)
 					playlewdinteractionsound(loc, pick('modular_sand/sound/interactions/bang4.ogg',
@@ -153,8 +169,13 @@
 			if(M != user)
 				message = replacetext(message, "[M]", "someone")
 			message = replacetext(message, "[src]", "your [targeted]")
-			to_chat(portal_target, "<font color=purple>You feel something on your panties, it [message].</font>")
-			portal_target.handle_post_sex(lust_amt, null, M)
+			to_chat(portal_target, "<span class='lewd'>You feel something on your panties, it [message][P ? ", it is a [P.shape] penis of [P.length] inches" : ""].</span>")
+			if(portal_target.handle_post_sex(lust_amt, null, null))
+				switch(portalunderwear.targetting)
+					if("vagina")
+						to_chat(M, "<span class='userlove'>You feel \the [V] squirt over your [target]!</span>")
+					if("anus")
+						to_chat(M, "<span class='userlove'>You feel the anus constrict on your [target]!</span>")
 			portal_target.do_jitter_animation() //make your partner shake too!
 		else
 			user.visible_message("<span class='warning'>\The [src] beeps and does not let [M] through.</span>")
@@ -204,6 +225,15 @@
 		add_overlay(organ)
 	else
 		useable = FALSE
+
+/obj/item/portallight/Destroy()
+	if(portalunderwear)
+		portalunderwear.portallight = null
+		if(isliving(portalunderwear.loc))
+			portalunderwear.audible_message("[icon2html(portalunderwear, hearers(portalunderwear))] *beep* *beep* *beep*")
+			playsound(portalunderwear, 'sound/machines/triple_beep.ogg', ASSEMBLY_BEEP_VOLUME, TRUE)
+			to_chat(portalunderwear.loc, "<span class='notice'>The panties beep as the link to the [src] is lost.</span>")
+	. = ..()
 
 /**
  * # Hyperstation 13 portal underwear
@@ -274,9 +304,29 @@
 				update_portal()
 		else
 			update_portal()
+	RegisterSignal(user, COMSIG_PARENT_QDELETING, .proc/drop_out)
 
 /obj/item/clothing/underwear/briefs/panties/portalpanties/dropped(mob/user)
+	UnregisterSignal(user, COMSIG_PARENT_QDELETING)
 	. = ..()
+	update_portal()
+
+/obj/item/clothing/underwear/briefs/panties/portalpanties/Destroy()
+	if(portallight)
+		var/obj/item/portallight/temp = portallight
+		moveToNullspace() // loc cannot be human so let's destroy ourselves out of anything
+		portallight.portalunderwear = null
+		temp.updatesleeve()
+	. = ..()
+
+/obj/item/clothing/underwear/briefs/panties/portalpanties/proc/drop_out()
+	var/mob/living/carbon/human/deleted
+	if(ishuman(loc))
+		deleted = loc
+	forceMove(get_turf(loc))
+	dropped(deleted) // Act like we've been dropped
+	plane = initial(plane)
+	layer = initial(layer)
 	update_portal()
 
 /obj/item/clothing/underwear/briefs/panties/portalpanties/proc/update_portal()

@@ -24,7 +24,7 @@
 	set hidden = 1
 	var/discordurl = CONFIG_GET(string/discordurl)
 	if(discordurl)
-		if(alert("This will open the discord invite in your browser. Are you sure?",,"Yes","No")!="Yes")
+		if(alert(src, "This will open the discord invite in your browser. Are you sure?",,"Yes","No")!="Yes")
 			return
 		src << link(discordurl)
 	else
