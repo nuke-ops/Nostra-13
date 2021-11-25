@@ -23208,6 +23208,10 @@
 /obj/machinery/telecomms/server/presets/service,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/tcommsat/server)
+"roj" = (
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/plasteel/dark,
+/area/security/prison)
 "rou" = (
 /obj/effect/spawner/structure/window/plasma/reinforced,
 /obj/structure/cable/yellow{
@@ -24339,6 +24343,11 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/command/bridge)
+"sov" = (
+/obj/structure/bed,
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/plasteel/dark,
+/area/security/prison)
 "soz" = (
 /obj/structure/table,
 /obj/item/stack/sheet/glass/fifty,
@@ -39951,13 +39960,13 @@ jBz
 hrN
 nle
 sGQ
+roj
 tiz
 tiz
 tiz
 tiz
 tiz
-tiz
-tiz
+roj
 xev
 jQB
 tQf
@@ -41493,7 +41502,7 @@ elH
 iLg
 qFd
 nle
-tiz
+roj
 tiz
 tiz
 tiz
@@ -41754,7 +41763,7 @@ ncj
 tiz
 tiz
 tiz
-tiz
+roj
 mZH
 enX
 aiz
@@ -42009,7 +42018,7 @@ elH
 iLg
 qyL
 vRp
-pjd
+sov
 pjd
 psk
 qyL

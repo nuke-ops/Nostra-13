@@ -1796,6 +1796,7 @@
 	pixel_x = 38;
 	pixel_y = 24
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/maintenance/department/shuttle/brig)
 "jK" = (
@@ -4346,6 +4347,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel/cafeteria,
 /area/maintenance/department/shuttle/brig)
 "xp" = (
@@ -5143,6 +5145,7 @@
 /obj/structure/bed,
 /obj/effect/spawner/lootdrop/bedsheet,
 /obj/item/toy/plush/borgplushie,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/maintenance/department/shuttle/brig)
 "BI" = (

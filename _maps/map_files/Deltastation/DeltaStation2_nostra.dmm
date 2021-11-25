@@ -17117,6 +17117,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aIg" = (
@@ -24748,6 +24749,7 @@
 /obj/effect/turf_decal/tile/red{
 	dir = 8
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aUw" = (
@@ -26096,6 +26098,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aWi" = (
@@ -125939,6 +125942,23 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/research)
+"jeq" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "jeu" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -126995,6 +127015,12 @@
 	},
 /turf/open/floor/plasteel,
 /area/engineering/atmos)
+"opc" = (
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/plating{
+	icon_state = "platingdmg3"
+	},
+/area/security/prison)
 "osD" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible,
@@ -181072,7 +181098,7 @@ aFm
 aFm
 aFm
 aMf
-aNB
+jeq
 aPj
 aRb
 aKV
@@ -183385,7 +183411,7 @@ aaa
 aad
 aFn
 aMo
-aNJ
+opc
 aPs
 aKZ
 aKZ
