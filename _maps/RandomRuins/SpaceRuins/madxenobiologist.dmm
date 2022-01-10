@@ -1,113 +1,273 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ab" = (
+/obj/effect/turf_decal/delivery,
+/obj/machinery/light/small/broken,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"ae" = (
+/obj/machinery/door/airlock,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
 "ao" = (
 /obj/structure/girder,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
+"aP" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
 "aT" = (
 /turf/closed/wall/mineral/titanium/interior,
 /area/ruin/space/has_grav/madscientistship)
-"bs" = (
-/obj/machinery/camera{
-	dir = 8;
-	network = list("ss13","xenobiology")
+"bD" = (
+/obj/structure/closet/crate,
+/obj/item/storage/belt/utility/full/engi,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"cf" = (
+/obj/structure/mirror/magic{
+	choosable_races = list("human","felinid","insect","slimeperson");
+	name = "Science Mirror";
+	pixel_y = 37
 	},
-/obj/machinery/light/small/broken{
+/obj/structure/toilet{
+	pixel_y = 9
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/blue{
 	dir = 4
+	},
+/turf/open/floor/plasteel/cafeteria,
+/area/ruin/space/has_grav/madscientistship)
+"cs" = (
+/obj/structure/table,
+/obj/item/storage/firstaid,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
-"bD" = (
+"cM" = (
 /obj/structure/cable{
-	icon_state = "2-4"
+	icon_state = "0-4"
+	},
+/obj/machinery/power/port_gen/pacman,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"da" = (
+/obj/structure/fluff/empty_sleeper{
+	dir = 8
+	},
+/obj/structure/window/reinforced/spawner/east,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"df" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"ds" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 6
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/light/small/broken{
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
-"bK" = (
-/obj/machinery/door/airlock/external,
-/obj/structure/fans/tiny,
+"dA" = (
+/obj/effect/turf_decal/loading_area{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/machinery/door/window/northleft{
+	dir = 4;
+	name = "Creature Cell";
+	req_access_txt = "55"
+	},
+/obj/machinery/door/window/northleft{
+	dir = 8;
+	name = "Creature Cell";
+	req_access_txt = "55"
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "dJ" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/box/syringes,
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"dZ" = (
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/storage/bag/bio,
 /obj/structure/cable{
-	icon_state = "1-4"
+	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/obj/machinery/light/small/broken,
+/obj/structure/window/reinforced/spawner/east,
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"eA" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
 "eG" = (
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 6
+/obj/structure/cable{
+	icon_state = "2-8"
 	},
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"eM" = (
-/obj/effect/mob_spawn/slime{
-	death = 0
+/obj/structure/cable{
+	icon_state = "2-4"
 	},
-/turf/open/floor/engine,
-/area/ruin/space/has_grav/madscientistship)
-"eO" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "eS" = (
 /turf/open/floor/plating/foam,
 /area/ruin/space/has_grav/madscientistship)
 "fi" = (
-/obj/structure/closet/firecloset/full,
-/obj/machinery/light/small/broken,
-/turf/open/floor/plasteel/shuttle,
-/area/ruin/space/has_grav/madscientistship)
-"fr" = (
-/obj/structure/cable{
-	icon_state = "2-8"
+/obj/structure/fluff/empty_sleeper{
+	dir = 4
 	},
-/turf/open/floor/plasteel/dark,
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
 "fC" = (
-/obj/structure/window/plasma/reinforced/spawner,
-/obj/structure/window/plasma/reinforced/spawner/east,
-/turf/open/floor/circuit,
-/area/ruin/space/has_grav/madscientistship)
-"fN" = (
-/obj/structure/closet/crate,
-/obj/item/stack/sheet/mineral/plasma{
-	amount = 2
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
 	},
-/obj/structure/window/plasma/reinforced/spawner/west,
-/obj/machinery/light/small,
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"fD" = (
+/obj/machinery/monkey_recycler,
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
 "gl" = (
-/obj/structure/closet/emcloset/anchored,
-/turf/open/floor/plasteel/shuttle,
+/obj/structure/fluff/empty_sleeper{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
 "gt" = (
 /turf/template_noop,
 /area/template_noop)
+"gV" = (
+/obj/machinery/door/window{
+	dir = 1
+	},
+/obj/machinery/door/window,
+/obj/structure/fans/tiny,
+/obj/effect/turf_decal/loading_area,
+/obj/machinery/atmospherics/pipe/simple/general/hidden{
+	dir = 10
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
 "ha" = (
 /obj/item/stack/rods/ten,
 /turf/template_noop,
 /area/template_noop)
 "hj" = (
-/obj/machinery/atmospherics/components/unary/tank/air,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
 "hK" = (
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/dropper,
-/turf/open/floor/plasteel/dark,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/obj/machinery/light/small/broken,
+/obj/structure/window/reinforced/spawner/west,
+/turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
-"ij" = (
-/obj/structure/grille,
-/obj/effect/spawner/structure/window,
+"hT" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/turf_decal{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"ip" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/window/plasma/reinforced/spawner,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"iu" = (
+/obj/structure/table,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "iw" = (
@@ -118,6 +278,27 @@
 	},
 /turf/open/floor/plating/foam,
 /area/ruin/space/has_grav/madscientistship)
+"iZ" = (
+/obj/effect/turf_decal{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"jm" = (
+/obj/structure/foamedmetal/iron,
+/turf/template_noop,
+/area/ruin/space/has_grav/madscientistship)
+"jr" = (
+/obj/structure/window/reinforced/spawner/east,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"ju" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
 "jK" = (
 /turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
@@ -126,7 +307,28 @@
 /obj/machinery/light/small/broken{
 	dir = 1
 	},
-/turf/open/floor/plasteel/shuttle,
+/obj/effect/turf_decal/stripes/corner,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"jY" = (
+/obj/machinery/light/small/broken{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "kg" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
@@ -141,13 +343,18 @@
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "kl" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/effect/turf_decal{
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"kt" = (
+/obj/machinery/computer,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/circuit,
 /area/ruin/space/has_grav/madscientistship)
 "kv" = (
 /obj/effect/mob_spawn/slime{
@@ -164,27 +371,45 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
-"kU" = (
-/obj/structure/window/plasma/reinforced/spawner/north,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"lj" = (
-/obj/item/paper/fluff{
-	info = "I will make them pay... I will make them all pay!";
-	name = "My Goal"
+"la" = (
+/obj/structure/fluff/empty_sleeper{
+	dir = 4
 	},
-/turf/open/floor/plasteel/shuttle,
-/area/ruin/space/has_grav/madscientistship)
-"lE" = (
-/obj/machinery/computer/camera_advanced/xenobio,
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"mC" = (
-/obj/machinery/light/small{
+/obj/structure/window/reinforced/spawner/west,
+/obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"lj" = (
+/obj/structure/fluff/empty_sleeper{
+	dir = 4
+	},
+/obj/structure/window/reinforced/spawner/west,
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"lt" = (
+/obj/machinery/camera{
+	dir = 8;
+	network = list("ss13","xenobiology")
+	},
 /turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"lE" = (
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/spawner/structure/window/shuttle,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
 "mM" = (
 /obj/structure/table/reinforced,
@@ -192,47 +417,138 @@
 	id = 69;
 	name = "Command Shutters: Port"
 	},
-/turf/open/floor/plasteel/shuttle,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "mY" = (
 /obj/item/stock_parts/matter_bin,
 /turf/open/floor/plating/foam,
 /area/ruin/space/has_grav/madscientistship)
+"ng" = (
+/obj/structure/fluff/empty_sleeper{
+	dir = 8
+	},
+/obj/structure/window/reinforced/spawner/east,
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"no" = (
+/obj/effect/mob_spawn/slime{
+	death = 0
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/end,
+/turf/open/floor/circuit,
+/area/ruin/space/has_grav/madscientistship)
 "np" = (
 /obj/machinery/computer,
-/turf/open/floor/plasteel/shuttle,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/circuit,
 /area/ruin/space/has_grav/madscientistship)
 "nq" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/box/beakers,
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"nt" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
 "nx" = (
-/obj/structure/closet/crate,
-/obj/item/stack/sheet/mineral/plasma{
-	amount = 5
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal{
+	dir = 1
 	},
-/obj/item/stack/sheet/metal{
-	amount = 50
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
 	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "nF" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/open/floor/engine,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/end,
+/turf/open/floor/circuit,
 /area/ruin/space/has_grav/madscientistship)
-"oB" = (
-/obj/structure/fluff/empty_sleeper,
-/turf/open/floor/plasteel/shuttle,
+"nO" = (
+/obj/item/soap/nanotrasen,
+/obj/item/toy/plush/slimeplushie,
+/obj/machinery/shower{
+	dir = 4
+	},
+/obj/effect/turf_decal/bot,
+/obj/structure/curtain,
+/turf/open/floor/plasteel/showroomfloor/shower,
+/area/ruin/space/has_grav/madscientistship)
+"nW" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"ob" = (
+/obj/structure/window/plasma/reinforced/spawner/east,
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/bz,
+/turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "oD" = (
-/obj/machinery/door/airlock/command,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = 70
 	},
-/turf/open/floor/plasteel/shuttle,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/effect/spawner/structure/window/shuttle,
+/turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
 "oV" = (
 /obj/item/stack/rods,
@@ -240,9 +556,55 @@
 /area/template_noop)
 "pe" = (
 /obj/structure/fans/tiny,
-/obj/effect/turf_decal/loading_area,
-/obj/effect/turf_decal,
+/obj/machinery/door/window/brigdoor{
+	id = null
+	},
+/obj/machinery/door/window/brigdoor{
+	dir = 1;
+	id = null
+	},
+/obj/effect/turf_decal/loading_area{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden,
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"pG" = (
+/obj/machinery/smartfridge/extract/preloaded,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"pR" = (
+/obj/machinery/door/airlock/external,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/effect/turf_decal{
+	dir = 8
+	},
+/obj/effect/turf_decal{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"pY" = (
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"qe" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/table/reinforced,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
 "qh" = (
 /obj/machinery/camera{
@@ -251,24 +613,43 @@
 	},
 /turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
-"qu" = (
-/obj/structure/window/plasma/reinforced/spawner/east,
-/obj/machinery/light/small,
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"qR" = (
-/obj/machinery/camera{
-	dir = 4;
-	network = list("ss13","xenobiology")
+"qS" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
 	},
-/obj/machinery/light/small/broken{
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+/obj/effect/turf_decal/stripes/line,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
-"qS" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/firstaid,
+"qX" = (
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "rB" = (
@@ -278,42 +659,57 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
-"rG" = (
-/obj/structure/closet/emcloset/anchored,
-/turf/open/floor/plasteel/dark/side,
-/area/ruin/space/has_grav/madscientistship)
-"ss" = (
-/obj/effect/turf_decal{
+"rT" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
-/obj/machinery/light/small{
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/meter,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"si" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/effect/turf_decal/delivery,
+/obj/machinery/light/small/broken,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
 	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"ss" = (
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "sy" = (
 /obj/item/shard,
-/obj/effect/turf_decal{
-	dir = 4
-	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
-"sH" = (
-/obj/structure/window/fulltile,
-/obj/structure/grille,
-/obj/machinery/door/poddoor/shutters{
-	id = 69
+"tk" = (
+/obj/machinery/power/smes,
+/obj/structure/cable{
+	icon_state = "0-4"
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
-"tk" = (
-/obj/structure/closet/crate,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/madscientistship)
-"ty" = (
-/obj/structure/table/reinforced,
-/obj/item/disk/xenobio_console_upgrade/monkey,
-/obj/item/disk/xenobio_console_upgrade/slimeadv,
+"tl" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "tT" = (
@@ -324,10 +720,15 @@
 /turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
 "tX" = (
-/turf/open/floor/plasteel/dark/side,
+/obj/machinery/camera{
+	dir = 4;
+	network = list("ss13","xenobiology")
+	},
+/turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "uk" = (
-/turf/open/floor/plasteel/shuttle,
+/obj/machinery/light/small/broken,
+/turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
 "ut" = (
 /obj/structure/table/reinforced,
@@ -337,7 +738,20 @@
 	},
 /obj/item/crowbar/red,
 /obj/item/flashlight,
-/turf/open/floor/plasteel/shuttle,
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "uI" = (
 /obj/machinery/airalarm/directional/north{
@@ -345,64 +759,180 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
-"vE" = (
-/obj/structure/table/reinforced,
-/obj/machinery/reagentgrinder,
+"vc" = (
+/obj/machinery/processor/slime,
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"vh" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
+"vE" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"vN" = (
+/obj/structure/shuttle/engine/large,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"ws" = (
+/obj/effect/mob_spawn/slime{
+	death = 0
+	},
+/obj/machinery/camera{
+	dir = 4;
+	network = list("ss13","xenobiology")
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"wy" = (
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/effect/spawner/structure/window/shuttle,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"wC" = (
+/obj/machinery/door/airlock/external,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/effect/turf_decal{
+	dir = 8
+	},
+/obj/effect/turf_decal{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
 "wY" = (
-/obj/item/wrench,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"xa" = (
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer,
+/obj/structure/window/plasma/reinforced/spawner/west,
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "xg" = (
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/storage/bag/bio,
+/obj/item/storage/box/beakers,
+/obj/item/storage/box/syringes,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/window/reinforced/spawner/east,
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"xw" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
-"xo" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 1
-	},
-/turf/open/floor/plasteel/shuttle,
-/area/ruin/space/has_grav/madscientistship)
 "xB" = (
-/obj/machinery/door/airlock/external,
-/obj/structure/fans/tiny,
-/turf/open/floor/plasteel/shuttle,
-/area/ruin/space/has_grav/madscientistship)
-"xW" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/effect/spawner/structure/window/shuttle,
+/obj/machinery/door/poddoor/shutters{
+	id = 69
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
-"yx" = (
-/obj/structure/foamedmetal/iron,
-/turf/template_noop,
-/area/template_noop)
-"yF" = (
-/obj/item/stock_parts/manipulator,
-/turf/open/floor/engine,
-/area/ruin/space/has_grav/madscientistship)
-"zg" = (
-/obj/machinery/camera{
-	dir = 1;
-	network = list("ss13","xenobiology")
+"xW" = (
+/obj/machinery/atmospherics/components/unary/tank/air{
+	dir = 8
 	},
-/obj/machinery/light/small,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"zu" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light/small/broken{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
-"zh" = (
-/obj/structure/window/plasma/reinforced/spawner/west,
-/turf/closed/wall/mineral/titanium/interior,
+"zV" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 5
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
-"zU" = (
-/obj/machinery/door/window{
+"Ab" = (
+/obj/structure/table,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
 	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Am" = (
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"An" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/remains/human,
+/obj/item/clothing/head/centhat{
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Aw" = (
+/obj/structure/closet/l3closet/scientist,
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
@@ -413,17 +943,28 @@
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "Bk" = (
-/obj/structure/window/plasma/reinforced/unanchored,
-/turf/closed/wall/mineral/titanium/interior,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/table/reinforced,
+/obj/item/disk/xenobio_console_upgrade/monkey,
+/obj/item/disk/xenobio_console_upgrade/slimeadv,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"BA" = (
+/obj/machinery/computer,
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/circuit,
 /area/ruin/space/has_grav/madscientistship)
 "BK" = (
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/glass/beaker/large,
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"BU" = (
-/obj/machinery/power/smes,
-/turf/open/floor/plating,
+/obj/machinery/reagentgrinder,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/structure/window/reinforced/spawner/west,
+/turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
 "BV" = (
 /obj/structure/cable{
@@ -431,97 +972,232 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
+"BY" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
 "Ce" = (
-/obj/structure/grille,
-/obj/effect/spawner/structure/window/reinforced,
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"Cw" = (
-/obj/machinery/door/airlock/science,
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"CC" = (
-/obj/structure/grille,
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 8
-	},
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"Dh" = (
-/obj/machinery/atmospherics/components/unary/outlet_injector/on{
-	dir = 1
-	},
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"Ds" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/engineering,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/madscientistship)
-"EL" = (
-/turf/template_noop,
-/area/ruin/space/has_grav/madscientistship)
-"Fl" = (
-/obj/machinery/portable_atmospherics/canister/bz,
-/obj/machinery/atmospherics/components/unary/portables_connector/visible,
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"Fr" = (
-/obj/structure/window/plasma/reinforced/spawner/west,
-/obj/machinery/atmospherics/components/unary/vent_pump/on{
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/machinery/camera{
-	dir = 6;
-	network = list("ss13","xenobiology")
+/obj/machinery/door/airlock/engineering,
+/obj/effect/turf_decal{
+	dir = 4
 	},
-/obj/machinery/light/small{
+/obj/effect/turf_decal{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"Cp" = (
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Cw" = (
+/obj/machinery/light/small/broken,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"CC" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ruin/space/has_grav/madscientistship)
+"CW" = (
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ruin/space/has_grav/madscientistship)
+"Dm" = (
+/obj/structure/chair/comfy/shuttle{
 	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"DD" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/window/plasma/reinforced/spawner,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"DG" = (
+/obj/structure/window/plasma/reinforced/spawner/north,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"DL" = (
+/obj/machinery/computer,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
 	},
 /turf/open/floor/circuit,
 /area/ruin/space/has_grav/madscientistship)
-"Fw" = (
-/obj/machinery/power/port_gen/pacman,
-/obj/structure/cable,
+"DW" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
-"Fz" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 5
-	},
-/obj/structure/fans/tiny,
-/obj/effect/turf_decal/loading_area{
-	dir = 1
-	},
-/obj/effect/turf_decal{
+"EF" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Fg" = (
+/obj/machinery/light/small/broken{
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Fl" = (
+/obj/structure/window/plasma/reinforced/spawner/east,
+/obj/effect/turf_decal/stripes/line{
+	dir = 5
+	},
+/obj/machinery/atmospherics/components/unary/portables_connector/visible{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Fo" = (
+/obj/machinery/light/small/broken{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Fw" = (
+/obj/structure/closet/crate,
+/obj/item/stack/sheet/metal{
+	amount = 50
+	},
+/obj/item/stack/sheet/glass{
+	amount = 50
+	},
+/obj/item/stack/sheet/mineral/plasma{
+	amount = 30
+	},
+/obj/machinery/light/small/broken{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"Fz" = (
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/box,
+/turf/open/floor/circuit,
+/area/ruin/space/has_grav/madscientistship)
+"FH" = (
+/obj/machinery/door/airlock{
+	id_tag = "Toilet1";
+	name = "Unit 1"
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/turf/open/floor/plasteel/cafeteria,
 /area/ruin/space/has_grav/madscientistship)
 "FY" = (
 /obj/item/circuitboard/machine/chem_dispenser,
 /turf/open/floor/plating/foam,
 /area/ruin/space/has_grav/madscientistship)
-"Gn" = (
-/obj/structure/window/plasma/reinforced/spawner/west,
-/obj/structure/window/plasma/reinforced/spawner,
+"Gg" = (
+/obj/effect/mob_spawn/slime{
+	death = 0
+	},
+/obj/machinery/light/small,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/end{
+	dir = 1
+	},
 /turf/open/floor/circuit,
 /area/ruin/space/has_grav/madscientistship)
-"Gu" = (
-/obj/structure/closet/crate,
-/obj/item/stack/sheet/mineral/plasma{
-	amount = 5
+"Gh" = (
+/obj/machinery/light/small/broken{
+	dir = 8
 	},
-/obj/item/stack/sheet/glass{
-	amount = 50
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Gl" = (
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Gn" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 9
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"Gu" = (
+/obj/item/shard,
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"Gw" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"GO" = (
+/obj/machinery/door/airlock/external,
+/obj/structure/fans/tiny,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/effect/turf_decal{
+	dir = 8
 	},
 /obj/effect/turf_decal{
 	dir = 4
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
 "GX" = (
 /obj/structure/table/reinforced,
@@ -529,40 +1205,192 @@
 	id = 70;
 	name = "Command Shutters: Door"
 	},
-/turf/open/floor/plasteel/shuttle,
-/area/ruin/space/has_grav/madscientistship)
-"If" = (
-/obj/structure/window/plasma/reinforced/spawner/north,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
-"In" = (
-/obj/structure/grille,
-/obj/effect/spawner/structure/window,
+"He" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = 70
 	},
-/turf/open/floor/plasteel/shuttle,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/effect/spawner/structure/window/shuttle,
+/turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
-"It" = (
-/obj/machinery/door/airlock/public,
+"HH" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 10
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"HM" = (
+/obj/machinery/camera{
+	dir = 1;
+	network = list("ss13","xenobiology")
+	},
+/obj/effect/turf_decal/stripes/corner,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
 /turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"In" = (
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = 70
+	},
+/obj/machinery/door/airlock/command,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"IA" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ruin/space/has_grav/madscientistship)
+"IJ" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/obj/machinery/airalarm/directional/west,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"IM" = (
+/obj/structure/table,
+/obj/machinery/light/small/broken{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "IP" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plasteel/shuttle,
-/area/ruin/space/has_grav/madscientistship)
-"Kj" = (
-/obj/structure/cable{
-	icon_state = "4-8"
+/obj/effect/decal/remains/human,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
 	},
-/obj/machinery/door/airlock/public,
-/turf/open/floor/plating,
+/turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
-"La" = (
-/obj/effect/turf_decal{
+"IZ" = (
+/obj/structure/chair/comfy/shuttle,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+/obj/structure/window/reinforced/spawner/north,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Jc" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Jr" = (
+/obj/machinery/power/apc/auto_name/east,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Jw" = (
+/obj/structure/chair/comfy/shuttle,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/structure/window/reinforced/spawner/north,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"JQ" = (
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"Ky" = (
+/obj/item/stack/sheet/mineral/titanium,
+/obj/item/stack/sheet/mineral/titanium,
+/obj/item/stack/sheet/mineral/titanium,
+/obj/item/stack/sheet/mineral/titanium,
+/obj/item/stack/sheet/mineral/titanium,
+/turf/open/floor/plating/foam,
+/area/ruin/space/has_grav/madscientistship)
+"La" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 9
+	},
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
@@ -571,31 +1399,28 @@
 /obj/item/stock_parts/capacitor,
 /turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
-"Mr" = (
-/obj/item/toy/plush/slimeplushie,
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/madscientistship)
 "MG" = (
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
-"ML" = (
-/obj/structure/window/plasma/reinforced/spawner/east,
-/obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
-	dir = 8
-	},
-/obj/machinery/light/small{
+"Nh" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
 	dir = 1
 	},
-/turf/open/floor/circuit,
-/area/ruin/space/has_grav/madscientistship)
-"Nh" = (
-/turf/open/floor/plasteel/white/side,
-/area/ruin/space/has_grav/madscientistship)
-"Nn" = (
-/obj/structure/closet/l3closet/scientist,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/closet/firecloset/full,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "Ny" = (
@@ -604,57 +1429,55 @@
 	icon_state = "platingdmg1"
 	},
 /area/ruin/space/has_grav/madscientistship)
-"NA" = (
-/obj/machinery/light/small,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/madscientistship)
 "NK" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood/gibs/body,
-/turf/open/floor/plasteel/shuttle,
+/turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "NO" = (
-/obj/structure/window/plasma/reinforced/unanchored,
-/obj/machinery/camera{
-	dir = 1;
-	network = list("ss13","xenobiology")
+/obj/machinery/atmospherics/components/unary/outlet_injector/on{
+	dir = 1
 	},
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/stripes/box,
+/turf/open/floor/circuit,
+/area/ruin/space/has_grav/madscientistship)
+"NP" = (
+/obj/effect/mob_spawn/human/madxenobiologist{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
 "Ow" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
-"Oy" = (
-/obj/effect/mob_spawn/human/madxenobiologist,
-/turf/open/floor/plasteel/shuttle,
-/area/ruin/space/has_grav/madscientistship)
-"OA" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes,
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"OG" = (
-/obj/item/storage/belt/utility/full/engi,
-/obj/structure/mirror/magic{
-	choosable_races = list("human","felinid","insect","slimeperson");
-	name = "Science Mirror";
-	pixel_y = 30
-	},
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/madscientistship)
-"OZ" = (
-/obj/structure/closet/crate,
-/obj/machinery/light/small{
+"OH" = (
+/obj/structure/chair/comfy/shuttle{
 	dir = 1
 	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/line,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Pf" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
 "Pl" = (
@@ -663,17 +1486,32 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
+"Pq" = (
+/obj/item/stock_parts/manipulator,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
 "PB" = (
 /obj/item/shard,
 /obj/structure/girder,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
+"PC" = (
+/obj/machinery/atmospherics/components/unary/outlet_injector/on{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
 "PG" = (
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "PN" = (
-/obj/structure/window/plasma/reinforced/unanchored,
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/engine,
 /area/ruin/space/has_grav/madscientistship)
 "PO" = (
 /obj/structure/foamedmetal/iron,
@@ -682,57 +1520,169 @@
 "PP" = (
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
+"PS" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/components/binary/pump{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"PY" = (
+/obj/effect/turf_decal/loading_area{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/machinery/door/window/northleft{
+	dir = 4;
+	name = "Creature Cell";
+	req_access_txt = "55"
+	},
+/obj/machinery/door/window/northleft{
+	dir = 8;
+	name = "Creature Cell";
+	req_access_txt = "55"
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
 "Qp" = (
 /turf/closed/wall/mineral/titanium,
 /area/ruin/space/has_grav/madscientistship)
 "QB" = (
-/obj/structure/window/plasma/reinforced/spawner/west,
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"QH" = (
-/obj/machinery/light/small,
-/turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"QI" = (
-/obj/effect/turf_decal{
-	dir = 8
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
-"QP" = (
+"QG" = (
+/obj/item/storage/box/lights/mixed,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"QI" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
-	dir = 9
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"QP" = (
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "Rq" = (
-/obj/structure/window/plasma/reinforced/spawner/east,
+/obj/effect/turf_decal/stripes/corner,
+/obj/item/wrench,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "Rw" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
+	dir = 6
+	},
+/obj/machinery/meter,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"RA" = (
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"RQ" = (
+/obj/structure/chair/comfy/shuttle,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/turf/open/floor/plating,
+/obj/structure/window/reinforced/spawner/north,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "Sb" = (
 /obj/structure/girder,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
-"TB" = (
-/obj/machinery/door/window/brigdoor{
-	id = null
+"SE" = (
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/circuit,
+/turf/closed/wall/mineral/titanium,
 /area/ruin/space/has_grav/madscientistship)
-"Um" = (
-/obj/structure/shuttle/engine/large,
-/turf/template_noop,
-/area/template_noop)
-"Up" = (
+"SP" = (
+/obj/structure/window/plasma/reinforced/spawner/north,
+/obj/effect/turf_decal/stripes/corner,
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"Tl" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"TB" = (
+/obj/machinery/camera{
+	dir = 6;
+	network = list("ss13","xenobiology")
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/corner{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"TY" = (
+/obj/structure/window/plasma/reinforced/spawner/west,
+/obj/effect/turf_decal/stripes/line{
+	dir = 10
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Ug" = (
+/obj/machinery/door/airlock/external,
+/obj/structure/fans/tiny,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/effect/turf_decal{
+	dir = 8
+	},
 /obj/effect/turf_decal{
 	dir = 4
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/madscientistship)
+"Up" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
@@ -745,17 +1695,24 @@
 /obj/item/gps/mining/off{
 	gpstag = "Xenobiology Prototype Ship"
 	},
-/turf/open/floor/plasteel/shuttle,
-/area/ruin/space/has_grav/madscientistship)
-"UR" = (
-/obj/machinery/power/apc/auto_name/north{
-	locked = 0;
-	start_charge = 0
+/obj/effect/turf_decal/stripes/line{
+	dir = 6
 	},
-/obj/structure/cable{
-	icon_state = "0-2"
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"UW" = (
+/obj/machinery/atmospherics/components/binary/pump,
+/turf/open/floor/plating,
 /area/ruin/space/has_grav/madscientistship)
 "Vz" = (
 /obj/item/stock_parts/matter_bin,
@@ -764,42 +1721,154 @@
 	},
 /turf/open/floor/plating/foam,
 /area/ruin/space/has_grav/madscientistship)
+"Wc" = (
+/obj/machinery/door/airlock/science,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Wr" = (
+/obj/structure/fluff/empty_sleeper{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"WI" = (
+/obj/effect/turf_decal{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/general/hidden,
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"WO" = (
+/obj/item/paper/fluff{
+	info = "I will make them pay... I will make them all pay!";
+	name = "My Goal"
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
 "WS" = (
-/obj/machinery/processor/slime,
-/obj/structure/window/plasma/reinforced/unanchored,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/computer/camera_advanced/xenobio{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"WT" = (
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
 "Xh" = (
 /obj/structure/cable{
-	icon_state = "1-8"
+	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
-/area/ruin/space/has_grav/madscientistship)
-"Xm" = (
-/obj/structure/window/plasma/reinforced/spawner/east,
-/turf/closed/wall/mineral/titanium/interior,
 /area/ruin/space/has_grav/madscientistship)
 "Xo" = (
-/obj/machinery/atmospherics/components/unary/thermomachine/freezer,
+/obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/turf_decal{
+	dir = 4
+	},
+/turf/open/floor/engine,
+/area/ruin/space/has_grav/madscientistship)
+"Ys" = (
+/obj/structure/chair/comfy/shuttle,
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/structure/window/reinforced/spawner/north,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
-"XP" = (
-/obj/structure/closet/crate,
-/obj/structure/cable{
-	icon_state = "0-2"
+"YF" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
 	},
-/turf/open/floor/plating,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
+/turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/madscientistship)
-"XX" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden{
+"YU" = (
+/obj/structure/closet/emcloset/anchored,
+/obj/machinery/light/small/broken{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/ruin/space/has_grav/madscientistship)
+"Za" = (
+/obj/machinery/light/small,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/effect/turf_decal/stripes/end{
 	dir = 1
 	},
 /turf/open/floor/circuit,
 /area/ruin/space/has_grav/madscientistship)
-"Za" = (
-/obj/machinery/light/small,
-/turf/open/floor/engine,
+"Zj" = (
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/machinery/light/small/broken,
+/turf/open/floor/plasteel/cafeteria,
 /area/ruin/space/has_grav/madscientistship)
 
 (1,1,1) = {"
@@ -920,13 +1989,13 @@ gt
 gt
 gt
 gt
-Qp
-Qp
-Qp
-Qp
-Qp
-Qp
 gt
+Qp
+CW
+CW
+CW
+CW
+Qp
 gt
 gt
 "}
@@ -950,15 +2019,15 @@ gt
 gt
 gt
 gt
+gt
 Qp
-Qp
-Qp
-OG
+CW
+CW
 bD
 Fw
-Qp
-Qp
-gt
+cM
+CW
+CW
 gt
 gt
 "}
@@ -975,23 +2044,23 @@ gt
 gt
 gt
 gt
-Qp
-Qp
-Qp
-Qp
-Qp
-Qp
-Qp
-Qp
-aT
-aT
-aT
-Ds
-aT
-Qp
-EL
-Um
 gt
+Qp
+CW
+CW
+CW
+CW
+CW
+CW
+CW
+CW
+CW
+jr
+jr
+BV
+CW
+PP
+vN
 gt
 "}
 (7,1,1) = {"
@@ -1006,24 +2075,24 @@ gt
 gt
 gt
 gt
+gt
 Qp
-Qp
-aT
+CW
+CW
 jK
-eM
+ws
+CW
 qh
 jK
-jK
-aT
-Mr
+CW
 tk
-PP
-BV
+Am
 hj
-Qp
-EL
-gt
-gt
+hj
+MG
+CW
+PP
+PP
 gt
 "}
 (8,1,1) = {"
@@ -1036,25 +2105,25 @@ gt
 gt
 gt
 gt
-gt
 Qp
+Ug
 Qp
-eO
-aT
-nF
+CW
+nO
+CW
 jK
-jK
-eM
 Za
-aT
-OZ
-tk
+CW
+no
+jK
+CW
+ds
+rT
+zV
 PP
-BV
-NA
-Qp
-Qp
-gt
+PP
+CW
+CW
 gt
 gt
 "}
@@ -1066,379 +2135,379 @@ xB
 aT
 gt
 aT
-bK
-aT
-Qp
-Qp
-Nn
-PG
-aT
+CW
+CW
+CW
+PP
+CW
+cf
+Zj
+CW
 jK
+BY
+CW
+BY
 jK
-jK
-jK
-jK
-aT
-BU
-XP
+CW
 xW
-MG
+xW
+PS
 Rw
-aT
-Qp
-gt
+UW
+IA
+PC
 gt
 gt
 "}
 (10,1,1) = {"
 Qp
-Qp
-Qp
-uk
-Qp
-Qp
-Qp
+CW
+CW
+iu
+CW
+CW
+CW
 Nh
-Qp
-rG
-aT
-mC
-PG
-aT
-Ce
-Ce
-It
-Ce
-Ce
-aT
-Ce
-Ce
-Kj
+YU
+CW
+wC
+CW
+CW
+FH
+CW
+DW
+PY
+CW
+PY
+DW
+CW
+CW
+CW
 Ce
 CC
-Qp
-Qp
-gt
+CW
+CW
+CW
 gt
 gt
 "}
 (11,1,1) = {"
-Qp
+CW
 jN
 UC
-uk
+PG
 gl
 fi
-aT
-Nh
-qR
+CW
+PG
+PG
 tX
-aT
-UR
-dZ
-QI
-QI
-QI
-QI
-QI
-QI
+PG
+CW
+PG
+PG
+Gh
 ss
-QI
-QI
+HH
+YF
+WT
+Tl
+jY
+kl
 kl
 QI
 La
-Qp
-EL
-Um
-gt
+Aw
+CW
+PP
+vN
 gt
 "}
 (12,1,1) = {"
 Qp
 np
-xo
-uk
-uk
-uk
-In
-Nh
 Pl
-tX
-ij
 PG
-fr
-kk
-kk
-kk
-kk
-kk
-kk
+JQ
+uk
+CW
+Fg
+PG
+PG
+PG
+Wc
+PG
+vh
+Ow
+tl
+rB
+Jr
+rB
 eG
 rB
-rB
+nW
 Xh
-Ow
+Cp
 QP
-Qp
-EL
-gt
-gt
+si
+CW
+PP
+PP
 gt
 "}
 (13,1,1) = {"
-sH
+xB
 mM
-IP
-uk
-uk
-uk
-oD
-Nh
+An
 PG
-tX
+da
+ng
+CW
+PG
+Dm
+Ys
 Cw
-PG
-PG
+CW
+Gn
 vE
 BK
 hK
-PG
-PG
-PG
-Bj
-wY
-Rq
-Rq
-Rq
-qu
-Xm
+CW
 Qp
-gt
+Qp
+SE
+wY
+Jc
+Bj
+Rq
+CW
+CW
+CW
+CW
 gt
 gt
 "}
 (14,1,1) = {"
-sH
-np
-xo
-uk
-oB
-uk
-oD
-Nh
+xB
+kt
 Pl
-tX
-ij
-ty
 PG
 PG
-QH
+PG
+oD
+PG
+OH
+IZ
+PG
+Pf
+vc
+jK
+jK
 Bk
-Fr
-Gn
-PG
-Bj
-Fl
-kU
-Dh
-PG
-PG
-PN
 Qp
-gt
+Gn
+hT
+DD
+Fl
+Jc
+Bj
+ob
+DG
+PN
+df
+CW
 gt
 gt
 "}
 (15,1,1) = {"
-sH
-np
-xo
-uk
-oB
-uk
+xB
+BA
+Pl
+PG
+PG
+PG
 In
-Nh
+kk
 qS
-tX
-ij
+RQ
+kk
 lE
-PG
-PG
-PG
+pG
+aP
+aP
 WS
-XX
+Qp
 TB
 Fz
-kg
+nt
 pe
-zU
-PG
-PG
-PG
+Jc
+Bj
+gV
+WI
 NO
-Qp
-gt
+HM
+CW
 gt
 gt
 "}
 (16,1,1) = {"
-sH
-np
+xB
+DL
 NK
-uk
-Oy
-uk
-oD
-Nh
-Pl
-tX
-ij
-OA
 PG
 PG
-zg
-Bk
-ML
+PG
+He
+PG
+OH
+IZ
+PG
+wy
+fD
+jK
+jK
+qe
+Qp
 fC
 Xo
-PG
-PG
-If
-PG
-PG
-PG
-PN
-Qp
-gt
+ip
+xa
+Jc
+Bj
+TY
+SP
+iZ
+eA
+CW
 gt
 gt
 "}
 (17,1,1) = {"
-sH
+xB
 GX
-uk
-uk
-uk
+PG
+WO
+la
 lj
-oD
-Nh
+CW
 PG
-tX
+qX
+Jw
 Cw
-PG
-PG
+CW
+fC
 nq
 xg
 dJ
-PG
-PG
-PG
-PG
-PG
-QB
-QB
-QB
-fN
-zh
+CW
 Qp
-gt
+Qp
+SE
+pY
+Jc
+Bj
+QB
+CW
+CW
+CW
+CW
 gt
 gt
 "}
 (18,1,1) = {"
 Qp
 np
-xo
-uk
+Pl
+PG
 IP
 uk
-In
-Nh
-Pl
-tX
-ij
+CW
+Fg
 PG
 PG
 PG
+Wc
 PG
-PG
-PG
-PG
-PG
-PG
-PG
-PG
-PG
+ju
+EF
+Tl
+kl
+IJ
+kl
+Tl
+EF
+xw
+kg
 PG
 nx
-Qp
-EL
-Um
-gt
+ab
+CW
+PP
+vN
 gt
 "}
 (19,1,1) = {"
-Qp
-jN
+CW
+zu
 ut
-uk
-gl
-fi
-aT
-Nh
-bs
-tX
+PG
+NP
+Wr
+CW
+PG
+PG
+lt
+PG
 aT
 uI
 PG
+Fo
+ss
+Jc
 Up
-Up
-Up
-Up
-Up
-Up
-Up
-Up
-Up
-sy
+Jc
+ss
+PG
+PG
+PG
 sy
 Gu
-Qp
-EL
-gt
-gt
+Gl
+CW
+PP
+PP
 gt
 "}
 (20,1,1) = {"
 Qp
-Qp
-Qp
-uk
-Qp
-Qp
-Qp
-Nh
-Qp
-rG
-aT
-mC
-PG
-aT
-Ce
-Ce
-It
-Ce
-Ce
+CW
+CW
+Ab
+CW
+CW
+CW
+cs
+IM
+CW
+pR
+CW
+CW
+ae
+CW
+Gw
+dA
+CW
+dA
+Gw
 ao
-jK
-yF
-jK
-jK
+PP
+Pq
+PP
+PP
 iw
 Sb
-Qp
-gt
+CW
 gt
 gt
 "}
@@ -1450,17 +2519,18 @@ xB
 aT
 gt
 aT
-bK
-aT
-Qp
-Qp
-Nn
-PG
-aT
+CW
+CW
+CW
+PP
+CW
+RA
+PP
+CW
 jK
-jK
-jK
-jK
+BY
+CW
+BY
 jK
 ao
 jK
@@ -1469,8 +2539,7 @@ PP
 PP
 eS
 PO
-Sb
-gt
+PP
 gt
 gt
 "}
@@ -1484,15 +2553,16 @@ gt
 gt
 gt
 gt
-gt
 Qp
+GO
 Qp
-eO
-aT
+CW
+QG
+CW
+jK
+Gg
+CW
 nF
-eM
-jK
-jK
 jK
 ao
 LK
@@ -1503,7 +2573,6 @@ mY
 PO
 PO
 oV
-gt
 gt
 "}
 (23,1,1) = {"
@@ -1518,13 +2587,14 @@ gt
 gt
 gt
 gt
+gt
 Qp
-Qp
-aT
-jK
+CW
+CW
 jK
 tT
-jK
+CW
+tT
 jK
 PB
 jK
@@ -1536,7 +2606,6 @@ PO
 PO
 gt
 ha
-gt
 "}
 (24,1,1) = {"
 gt
@@ -1551,24 +2620,24 @@ gt
 gt
 gt
 gt
-Qp
-Qp
-Qp
-Qp
-Qp
-Qp
-Qp
-Qp
-FY
-eS
-eS
-PO
-PO
-PO
-PO
-yx
-yx
 gt
+Qp
+CW
+CW
+CW
+CW
+CW
+CW
+CW
+FY
+Ky
+eS
+PO
+PO
+PO
+PO
+jm
+jm
 "}
 (25,1,1) = {"
 gt
@@ -1590,16 +2659,16 @@ gt
 gt
 gt
 gt
-Qp
-Qp
-Sb
-PO
-PO
-PO
-PO
-Sb
-yx
 gt
+Qp
+CW
+Sb
+PO
+PO
+PO
+PO
+Sb
+jm
 gt
 "}
 (26,1,1) = {"
@@ -1624,13 +2693,13 @@ gt
 gt
 gt
 gt
+gt
 PP
 Sb
 Sb
 Sb
 Sb
 Sb
-gt
 gt
 gt
 "}
@@ -1655,16 +2724,16 @@ gt
 gt
 gt
 gt
-oV
-gt
-gt
-gt
-gt
-gt
-gt
 gt
 oV
 gt
+gt
+gt
+gt
+gt
+gt
+gt
+oV
 "}
 (28,1,1) = {"
 gt
@@ -1724,8 +2793,8 @@ gt
 gt
 gt
 gt
-ha
 gt
+ha
 gt
 gt
 gt

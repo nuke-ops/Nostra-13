@@ -301,6 +301,7 @@
 /area/command/heads_quarters/hos)
 "aaN" = (
 /obj/structure/chair/sofa/right,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "aaO" = (
@@ -662,6 +663,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "abM" = (
@@ -1340,6 +1342,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "adf" = (
@@ -54813,6 +54816,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/central)
+"gpz" = (
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/plasteel,
+/area/security/prison)
 "gpD" = (
 /obj/machinery/light_switch{
 	pixel_y = 28
@@ -62644,6 +62651,7 @@
 	color = "#596479";
 	dir = 1
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel,
 /area/security/prison)
 "xPk" = (
@@ -87877,7 +87885,7 @@ aat
 aat
 aat
 ace
-aat
+gpz
 aat
 adH
 aei

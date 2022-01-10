@@ -1894,7 +1894,7 @@
 "anw" = (
 /obj/machinery/hydroponics/soil,
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "anA" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/table/wood,
@@ -4058,6 +4058,7 @@
 	c_tag = "Brig Genpop South"
 	},
 /obj/structure/chair/comfy/brown,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
 "aNg" = (
@@ -4987,7 +4988,7 @@
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/ambrosia,
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "blR" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -5251,6 +5252,7 @@
 /obj/machinery/shower{
 	dir = 8
 	},
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel/freezer,
 /area/security/prison)
 "brE" = (
@@ -5799,7 +5801,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "byP" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
@@ -6889,13 +6891,13 @@
 	dir = 1
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "bGq" = (
 /obj/structure/fence/cut/large{
 	dir = 4
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "bGt" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -6921,6 +6923,7 @@
 	dir = 8
 	},
 /obj/item/toy/plush/beeplushie,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
 "bGy" = (
@@ -8274,7 +8277,7 @@
 "bVT" = (
 /obj/item/cultivator,
 /turf/open/floor/plating/snowed/smoothed/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "bVW" = (
 /turf/open/floor/carpet,
 /area/security/detectives_office)
@@ -9270,7 +9273,7 @@
 "cqC" = (
 /obj/machinery/biogenerator,
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "cqG" = (
 /obj/structure/disposalpipe/sorting/mail{
 	dir = 8;
@@ -9636,7 +9639,7 @@
 "cBv" = (
 /obj/structure/fence,
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "cBy" = (
 /turf/open/floor/plasteel/dark,
 /area/security/office)
@@ -9946,7 +9949,7 @@
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/tower,
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "cJp" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -15126,7 +15129,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "fAK" = (
 /obj/structure/table,
 /obj/item/integrated_circuit_printer,
@@ -15402,7 +15405,7 @@
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/potato,
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "fIU" = (
 /obj/machinery/light,
 /obj/structure/chair/comfy/black{
@@ -15637,6 +15640,9 @@
 /obj/structure/cable,
 /turf/open/floor/plating/snowed/smoothed/icemoon,
 /area/solars/starboard/aft)
+"fNA" = (
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/security/prison)
 "fNC" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -15804,7 +15810,7 @@
 "fQi" = (
 /obj/machinery/seed_extractor,
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "fQs" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 1
@@ -18285,7 +18291,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "hlT" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -20482,7 +20488,7 @@
 "ipL" = (
 /obj/item/plant_analyzer,
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "ipV" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/poddoor{
@@ -22035,7 +22041,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/snowed/smoothed/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "jiY" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
@@ -23710,7 +23716,7 @@
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/glowshroom,
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "kij" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/disposalpipe/segment,
@@ -24574,7 +24580,7 @@
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/grass,
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "kKY" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -29676,7 +29682,7 @@
 /obj/machinery/hydroponics/soil,
 /obj/item/seeds/carrot,
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "nCU" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -31196,6 +31202,10 @@
 /obj/machinery/vending/cigarette,
 /turf/open/floor/carpet,
 /area/hallway/secondary/exit/departure_lounge)
+"oqi" = (
+/obj/effect/landmark/start/prisoner,
+/turf/open/floor/plasteel/dark,
+/area/security/prison)
 "oql" = (
 /obj/effect/turf_decal/tile/bar,
 /obj/effect/turf_decal/tile/bar{
@@ -38703,7 +38713,7 @@
 	},
 /obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/plating/snowed/smoothed/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "swI" = (
 /turf/open/floor/wood,
 /area/command/heads_quarters/hop)
@@ -40420,6 +40430,9 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
+"tqO" = (
+/turf/open/floor/plating/asteroid/snow/icemoon,
+/area/security/prison)
 "trb" = (
 /obj/structure/closet/firecloset/full{
 	anchored = 1
@@ -45897,6 +45910,12 @@
 /obj/machinery/door/airlock/external/glass,
 /turf/open/floor/plating,
 /area/hallway/primary/aft)
+"weZ" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/snowed/smoothed/icemoon,
+/area/security/prison)
 "wfr" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -48387,7 +48406,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/asteroid/snow/icemoon,
-/area/icemoon/surface/outdoors)
+/area/security/prison)
 "xGP" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8
@@ -73460,11 +73479,11 @@ buI
 buJ
 fAj
 anw
-xUL
-xUL
-bBh
-xUL
-xUL
+fNA
+fNA
+weZ
+fNA
+fNA
 nCL
 fAj
 bHE
@@ -73717,11 +73736,11 @@ buI
 buJ
 fAj
 kKk
-xUL
+fNA
 cqC
-bBh
+weZ
 ipL
-xUL
+fNA
 anw
 fAj
 bHE
@@ -73974,11 +73993,11 @@ buI
 buJ
 fAj
 anw
-xUL
-avT
+fNA
+tqO
 svY
-avT
-xUL
+tqO
+fNA
 anw
 bGq
 bHE
@@ -74233,9 +74252,9 @@ xGN
 fIS
 bVT
 fQi
-bBh
-avT
-xUL
+weZ
+tqO
+fNA
 cJc
 fAj
 bHE
@@ -74490,8 +74509,8 @@ fAj
 kii
 tpl
 jix
-bBh
-xUL
+weZ
+fNA
 tpl
 blI
 fAj
@@ -75516,13 +75535,13 @@ kfv
 kfv
 kfv
 iBo
-bGu
+oqi
 bGu
 mRz
 bGu
 bGu
 bGu
-bGu
+oqi
 kfv
 pyY
 kfv
