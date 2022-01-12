@@ -18481,10 +18481,6 @@
 	},
 /turf/open/floor/wood,
 /area/service/bar)
-"aRx" = (
-/obj/machinery/computer/arcade/minesweeper,
-/turf/open/floor/wood,
-/area/service/bar)
 "aRy" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -5;
@@ -19709,9 +19705,11 @@
 	},
 /area/service/chapel/main)
 "aUL" = (
-/obj/machinery/computer/arcade,
 /obj/effect/turf_decal/tile/red{
 	dir = 8
+	},
+/obj/machinery/computer/arcade/orion_trail{
+	dir = 4
 	},
 /turf/open/floor/plasteel/white/corner{
 	dir = 1
@@ -56321,12 +56319,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/commons/fitness/pool)
-"jRw" = (
-/obj/machinery/computer/arcade/minesweeper{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/security/prison)
 "jSO" = (
 /obj/machinery/light{
 	dir = 4
@@ -58132,7 +58124,9 @@
 /turf/open/floor/plasteel,
 /area/commons/dorms)
 "nZL" = (
-/obj/machinery/computer/arcade/minesweeper,
+/obj/machinery/computer/arcade/battle{
+	dir = 8
+	},
 /turf/open/floor/wood,
 /area/command/heads_quarters/captain)
 "oax" = (
@@ -87625,7 +87619,7 @@ aai
 aai
 abf
 aaK
-jRw
+aaK
 aaU
 acd
 acC
@@ -96926,7 +96920,7 @@ aKR
 fxe
 aPY
 kAO
-aRx
+aQa
 aKR
 iTU
 pqe
