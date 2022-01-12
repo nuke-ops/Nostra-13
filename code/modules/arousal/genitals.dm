@@ -114,7 +114,7 @@
 
 	var/list/genital_list = list()
 	for(var/obj/item/organ/genital/G in internal_organs)
-		if(!CHECK_BITFIELD(G.genital_flags, GENITAL_INTERNAL))
+		if(!(G.genital_flags & GENITAL_INTERNAL))
 			genital_list += G
 	if(!genital_list.len) //There is nothing to expose
 		return
@@ -127,7 +127,7 @@
 			picked_organ.toggle_visibility(picked_visibility)
 
 	if(picked_organ == "anus")
-		var/picked_visibility = input(src, "Chose visibility setting", "Expose/Hide genitals") as null|anything in GLOB.genitals_visibility_toggles - list(GEN_VISIBLE_NO_CLOTHES)
+		var/picked_visibility = tgui_input_list(src, "Chose visibility setting", "Expose/Hide genitals", GLOB.genitals_visibility_toggles - list(GEN_VISIBLE_NO_CLOTHES))
 		anus_toggle_visibility(picked_visibility)
 	return
 
