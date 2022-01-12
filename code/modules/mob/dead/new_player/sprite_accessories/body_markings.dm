@@ -367,7 +367,3 @@
 /datum/sprite_accessory/insect_fluff/witchwing
 	name = "Witch Wing"
 	icon_state = "witchwing"
-
-/datum/sprite_accessory/insect_fluff/shaved
-    name = "Shaved"
-    icon_state = "shaved"
