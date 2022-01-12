@@ -297,11 +297,11 @@
 	nutriment_factor = 3 * REAGENTS_METABOLISM
 
 /datum/reagent/consumable/ethanol/protein_blend/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
-	M.adjust_nutrition(2 * REM * delta_time)
+	M.adjust_nutrition(2 * delta_time)
 	if(!islizard(M))
-		M.adjust_disgust(5 * REM * delta_time)
+		M.adjust_disgust(5 * delta_time)
 	else
-		M.adjust_disgust(2 * REM * delta_time)
+		M.adjust_disgust(2 * delta_time)
 	..()
 
 /datum/reagent/consumable/mushroom_tea
@@ -316,7 +316,7 @@
 
 /datum/reagent/consumable/mushroom_tea/on_mob_life(mob/living/carbon/M, delta_time, times_fired)
 	if(islizard(M))
-		M.adjustOxyLoss(-0.5 * REM * delta_time, 0)
+		M.adjustOxyLoss(-0.5 * delta_time, 0)
 	..()
 	. = TRUE
 
