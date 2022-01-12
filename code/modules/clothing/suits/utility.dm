@@ -124,6 +124,7 @@
 
 /obj/item/clothing/head/radiation
 	name = "radiation hood"
+	icon = 'modular_nostra/icons/mob/clothing/suit_digi.dmi'
 	icon_state = "rad"
 	desc = "A hood with radiation protective properties. The label reads, 'Made with lead. Please do not consume insulation.'"
 	clothing_flags = THICKMATERIAL
@@ -139,6 +140,7 @@
 /obj/item/clothing/suit/radiation
 	name = "radiation suit"
 	desc = "A suit that protects against radiation. The label reads, 'Made with lead. Please do not consume insulation.'"
+	icon = 'modular_nostra/icons/mob/clothing/suit_digi.dmi'
 	icon_state = "rad"
 	item_state = "rad_suit"
 	w_class = WEIGHT_CLASS_BULKY

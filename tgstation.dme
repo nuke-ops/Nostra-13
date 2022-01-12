@@ -3832,7 +3832,6 @@
 #include "modular_nostra\code\modules\hydroponics\grown\misc.dm"
 #include "modular_nostra\code\modules\jobs\job_types\_job_alt_titles.dm"
 #include "modular_nostra\code\modules\keybindings\keybind\carbon.dm"
-#include "modular_nostra\code\modules\mob\dead\new_player\sprite_accessories\body_markings.dm
 #include "modular_nostra\code\modules\mob\dead\new_player\sprite_accessories\legs_and_taurs.dm"
 #include "modular_nostra\code\modules\mob\living\living.dm"
 #include "modular_nostra\code\modules\mob\living\living_movement.dm"
