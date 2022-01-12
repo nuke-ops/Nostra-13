@@ -268,7 +268,11 @@
 		if(rid == /datum/reagent/consumable/nutriment || rid == /datum/reagent/consumable/nutriment/vitamin)
 			// apple tastes of apple.
 			data = T.tastes
-
+			// Nostra Change Start
+			if(get_gene(/datum/plant_gene/trait/brewing) && T.distill_reagent)
+				T.reagents.add_reagent(T.distill_reagent, amount/2)
+				continue
+			//Nostra Change End
 		T.reagents.add_reagent(rid, amount, data)
 
 

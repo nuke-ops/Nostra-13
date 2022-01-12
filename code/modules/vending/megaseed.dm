@@ -22,8 +22,10 @@
 					/obj/item/seeds/eggplant = 3,
 					/obj/item/seeds/grape = 3,
 					/obj/item/seeds/grass = 3,
+					/obj/item/seeds/korta_nut = 3, // Nostra Change
 					/obj/item/seeds/lemon = 3,
 					/obj/item/seeds/lime = 3,
+					/obj/item/seeds/olives = 3, //Nostra Change
 					/obj/item/seeds/onion = 3,
 					/obj/item/seeds/orange = 3,
 					/obj/item/seeds/peach = 3,
@@ -53,6 +55,7 @@
 					/obj/item/seeds/plump = 2,
 					/obj/item/seeds/reishi = 2,
 					/obj/item/seeds/cannabis = 3,
+					/obj/item/seeds/kronkus = 2, //Nostra Change
 					/obj/item/seeds/starthistle = 2,
 					/obj/item/seeds/random = 2)
 	premium = list(/obj/item/reagent_containers/spray/waterflower = 1)
