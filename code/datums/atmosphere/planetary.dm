@@ -7,9 +7,9 @@
 		GAS_N2=10,
 	)
 	normal_gases = list(
-		GAS_O2=10,
-		GAS_N2=10,
-		GAS_CO2=10,
+		GAS_O2=5,
+		GAS_N2=5,
+		GAS_CO2=5,
 	)
 	restricted_gases = list(
 		GAS_BZ=0.1,
@@ -20,7 +20,7 @@
 	minimum_pressure = HAZARD_LOW_PRESSURE + 10
 	maximum_pressure = LAVALAND_EQUIPMENT_EFFECT_PRESSURE - 1
 
-	minimum_temp = 270
+	minimum_temp = 281
 	maximum_temp = 320
 
 /datum/atmosphere/lavaland/check_for_sanity(datum/gas_mixture/mix)

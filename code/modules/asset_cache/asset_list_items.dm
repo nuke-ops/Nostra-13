@@ -273,24 +273,6 @@
 		"frenching" = 'icons/UI_Icons/Achievements/Misc/frenchingthebubble.png'
 	)
 
-/datum/asset/spritesheet/simple/minesweeper
-	name = "minesweeper"
-	assets = list(
-		"1" = 'icons/UI_Icons/minesweeper_tiles/one.png',
-		"2" = 'icons/UI_Icons/minesweeper_tiles/two.png',
-		"3" = 'icons/UI_Icons/minesweeper_tiles/three.png',
-		"4" = 'icons/UI_Icons/minesweeper_tiles/four.png',
-		"5" = 'icons/UI_Icons/minesweeper_tiles/five.png',
-		"6" = 'icons/UI_Icons/minesweeper_tiles/six.png',
-		"7" = 'icons/UI_Icons/minesweeper_tiles/seven.png',
-		"8" = 'icons/UI_Icons/minesweeper_tiles/eight.png',
-		"empty" = 'icons/UI_Icons/minesweeper_tiles/empty.png',
-		"flag" = 'icons/UI_Icons/minesweeper_tiles/flag.png',
-		"hidden" = 'icons/UI_Icons/minesweeper_tiles/hidden.png',
-		"mine" = 'icons/UI_Icons/minesweeper_tiles/mine.png',
-		"minehit" = 'icons/UI_Icons/minesweeper_tiles/minehit.png'
-	)
-
 /datum/asset/spritesheet/simple/pills
 	name = "pills"
 	assets = list(
@@ -560,6 +542,34 @@
 // 			continue
 // 		Insert(id, fish_icon, fish_icon_state)
 // 	..()
+
+/datum/asset/simple/inventory
+	assets = list(
+		"inventory-glasses.png" = 'icons/UI_Icons/inventory/glasses.png',
+		"inventory-head.png" = 'icons/UI_Icons/inventory/head.png',
+		"inventory-neck.png" = 'icons/UI_Icons/inventory/neck.png',
+		"inventory-mask.png" = 'icons/UI_Icons/inventory/mask.png',
+		"inventory-ears.png" = 'icons/UI_Icons/inventory/ears.png',
+		"inventory-uniform.png" = 'icons/UI_Icons/inventory/uniform.png',
+		"inventory-suit.png" = 'icons/UI_Icons/inventory/suit.png',
+		"inventory-gloves.png" = 'icons/UI_Icons/inventory/gloves.png',
+		"inventory-hand_l.png" = 'icons/UI_Icons/inventory/hand_l.png',
+		"inventory-hand_r.png" = 'icons/UI_Icons/inventory/hand_r.png',
+		"inventory-shoes.png" = 'icons/UI_Icons/inventory/shoes.png',
+		"inventory-suit_storage.png" = 'icons/UI_Icons/inventory/suit_storage.png',
+		"inventory-id.png" = 'icons/UI_Icons/inventory/id.png',
+		"inventory-belt.png" = 'icons/UI_Icons/inventory/belt.png',
+		"inventory-back.png" = 'icons/UI_Icons/inventory/back.png',
+		"inventory-pocket.png" = 'icons/UI_Icons/inventory/pocket.png',
+		"inventory-collar.png" = 'icons/UI_Icons/inventory/collar.png',
+
+		///Sandstorm content
+		"inventory-ears_extra.png" = 'modular_sand/icons/UI_Icons/inventory/ears_extra.png',
+		"inventory-underwear.png" = 'modular_sand/icons/UI_Icons/inventory/underwear.png',
+		"inventory-socks.png" = 'modular_sand/icons/UI_Icons/inventory/socks.png',
+		"inventory-undershirt.png" = 'modular_sand/icons/UI_Icons/inventory/undershirt.png',
+		"inventory-wrists.png" = 'modular_sand/icons/UI_Icons/inventory/wrists.png',
+	)
 
 /// Removes all non-alphanumerics from the text, keep in mind this can lead to id conflicts
 /proc/sanitize_css_class_name(name)

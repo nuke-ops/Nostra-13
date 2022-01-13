@@ -403,6 +403,9 @@
 		if("incheck")
 			send_signal(device_id, list("checks" = text2num(params["val"])^2), usr)
 			. = TRUE
+		if("direction")
+			send_signal(device_id, list("direction" = text2num(params["val"])), usr)
+			. = TRUE
 		if("set_external_pressure", "set_internal_pressure")
 
 			var/target = params["value"]
@@ -532,7 +535,7 @@
 			for(var/device_id in A.air_scrub_names)
 				send_signal(device_id, list(
 					"power" = 1,
-					"set_filters" = list(GAS_CO2, GAS_MIASMA),
+					"set_filters" = list(GAS_CO2, GAS_MIASMA, GAS_GROUP_CHEMICALS),
 					"scrubbing" = 1,
 					"widenet" = 0,
 				))
@@ -551,6 +554,7 @@
 						GAS_MIASMA,
 						GAS_PLASMA,
 						GAS_H2O,
+						GAS_HYDROGEN,
 						GAS_HYPERNOB,
 						GAS_NITROUS,
 						GAS_NITRYL,
@@ -559,7 +563,8 @@
 						GAS_STIMULUM,
 						GAS_PLUOXIUM,
 						GAS_METHANE,
-						GAS_METHYL_BROMIDE
+						GAS_METHYL_BROMIDE,
+						GAS_GROUP_CHEMICALS
 					),
 					"scrubbing" = 1,
 					"widenet" = 1,
@@ -579,9 +584,16 @@
 				))
 			for(var/device_id in A.air_vent_names)
 				send_signal(device_id, list(
+					"is_pressurizing" = 1,
 					"power" = 1,
 					"checks" = 1,
-					"set_external_pressure" = ONE_ATMOSPHERE*2
+					"set_external_pressure" = ONE_ATMOSPHERE*1.4
+				))
+				send_signal(device_id, list(
+					"is_siphoning" = 1,
+					"power" = 1,
+					"checks" = 1,
+					"set_external_pressure" = ONE_ATMOSPHERE/1.4
 				))
 		if(AALARM_MODE_REFILL)
 			for(var/device_id in A.air_scrub_names)
@@ -593,9 +605,14 @@
 				))
 			for(var/device_id in A.air_vent_names)
 				send_signal(device_id, list(
+					"is_pressurizing" = 1,
 					"power" = 1,
 					"checks" = 1,
 					"set_external_pressure" = ONE_ATMOSPHERE * 3
+				))
+				send_signal(device_id, list(
+					"is_siphoning" = 1,
+					"power" = 0,
 				))
 		if(AALARM_MODE_PANIC,
 			AALARM_MODE_REPLACEMENT)
@@ -607,7 +624,13 @@
 				))
 			for(var/device_id in A.air_vent_names)
 				send_signal(device_id, list(
+					"is_pressurizing" = 1,
 					"power" = 0
+				))
+				send_signal(device_id, list(
+					"is_siphoning" = 1,
+					"power" = 1,
+					"checks" = 0
 				))
 		if(AALARM_MODE_SIPHON)
 			for(var/device_id in A.air_scrub_names)
@@ -618,9 +641,14 @@
 				))
 			for(var/device_id in A.air_vent_names)
 				send_signal(device_id, list(
+					"is_pressurizing" = 1,
 					"power" = 0
 				))
-
+				send_signal(device_id, list(
+					"is_siphoning" = 1,
+					"power" = 1,
+					"checks" = 0
+				))
 		if(AALARM_MODE_OFF)
 			for(var/device_id in A.air_scrub_names)
 				send_signal(device_id, list(
@@ -638,8 +666,12 @@
 			for(var/device_id in A.air_vent_names)
 				send_signal(device_id, list(
 					"power" = 1,
-					"checks" = 2,
-					"set_internal_pressure" = 0
+					"checks" = 0,
+					"is_pressurizing" = 1
+				))
+				send_signal(device_id, list(
+					"power" = 0,
+					"is_siphoning" = 1
 				))
 
 /obj/machinery/airalarm/update_icon_state()

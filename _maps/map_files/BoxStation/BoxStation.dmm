@@ -23,7 +23,7 @@
 "aac" = (
 /obj/machinery/camera{
 	c_tag = "Bar";
-	dir = 8
+	dir = 9
 	},
 /obj/structure/table,
 /obj/machinery/chem_dispenser/drinks{
@@ -5627,7 +5627,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
 /area/security/brig)
@@ -8978,8 +8977,8 @@
 /turf/open/floor/plasteel,
 /area/security/processing)
 "ast" = (
-/obj/structure/bed,
-/obj/item/bedsheet/random,
+/obj/structure/bed/double,
+/obj/item/bedsheet/random/double,
 /turf/open/floor/carpet,
 /area/commons/dorms)
 "asu" = (
@@ -14657,6 +14656,9 @@
 	pixel_x = 5;
 	pixel_y = 24
 	},
+/obj/structure/sign/painting/library{
+	pixel_x = -32
+	},
 /turf/open/floor/wood,
 /area/service/library)
 "aIs" = (
@@ -14670,6 +14672,9 @@
 /obj/machinery/light{
 	dir = 1;
 	light_color = "#c1caff"
+	},
+/obj/structure/sign/painting/library{
+	pixel_y = 32
 	},
 /turf/open/floor/wood,
 /area/service/library)
@@ -14700,6 +14705,9 @@
 	dir = 4
 	},
 /obj/structure/chair/sofa/left,
+/obj/structure/sign/painting/library{
+	pixel_y = 32
+	},
 /turf/open/floor/wood,
 /area/service/library)
 "aIx" = (
@@ -14708,6 +14716,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
+	},
+/obj/structure/sign/painting/library{
+	pixel_x = 32
 	},
 /turf/open/floor/wood,
 /area/service/library)
@@ -17415,11 +17426,17 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/sign/painting/library{
+	pixel_x = -32
+	},
 /turf/open/floor/wood,
 /area/service/library)
 "aQq" = (
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/structure/sign/painting/library{
+	pixel_x = 32
 	},
 /turf/open/floor/wood,
 /area/service/library)
@@ -17833,7 +17850,7 @@
 /turf/open/floor/wood,
 /area/service/bar)
 "aRx" = (
-/obj/machinery/computer/arcade/minesweeper,
+/obj/machinery/computer/arcade/orion_trail,
 /turf/open/floor/wood,
 /area/service/bar)
 "aRy" = (
@@ -21372,6 +21389,9 @@
 "bav" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/structure/sign/painting/library{
+	pixel_x = -32
 	},
 /turf/open/floor/wood,
 /area/service/library)
@@ -44577,6 +44597,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
+/obj/machinery/camera{
+	c_tag = "Atmospherics - Incinerator";
+	name = "atmospherics camera"
+	},
 /turf/open/floor/plasteel,
 /area/maintenance/disposal/incinerator)
 "cga" = (
@@ -53980,11 +54004,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/obj/machinery/button/door{
-	id = "permacells3";
-	name = "Privacy Shutters";
-	pixel_y = -25
-	},
 /turf/open/floor/plasteel/dark,
 /area/security/prison/cells)
 "fhu" = (
@@ -54980,6 +54999,7 @@
 /area/security/brig)
 "gyy" = (
 /obj/machinery/door/airlock/security{
+	aiControlDisabled = 1;
 	name = "Isolation Cell";
 	req_access_txt = "2"
 	},
@@ -55698,6 +55718,12 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
+"hIi" = (
+/obj/structure/sign/painting/library{
+	pixel_x = -32
+	},
+/turf/open/floor/wood,
+/area/service/library)
 "hIL" = (
 /obj/structure/sign/poster/contraband/space_up{
 	pixel_x = -32;
@@ -55854,6 +55880,28 @@
 	},
 /turf/open/floor/plasteel,
 /area/commons/fitness)
+"hWm" = (
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/light/small,
+/obj/machinery/button/door{
+	id = "permacells3";
+	name = "Privacy Shutters";
+	pixel_y = -25
+	},
+/turf/open/floor/plasteel/dark,
+/area/security/prison/cells)
 "hYd" = (
 /obj/machinery/door/airlock/medical{
 	name = "Morgue";
@@ -55980,7 +56028,9 @@
 /obj/item/wrench,
 /obj/item/clothing/head/helmet,
 /obj/item/assembly/signaler,
-/obj/machinery/light/small,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 4
 	},
@@ -57286,11 +57336,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
-	},
-/obj/machinery/button/door{
-	id = "permacells3";
-	name = "Privacy Shutters";
-	pixel_y = -25
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/prison/cells)
@@ -60196,7 +60241,7 @@
 /turf/open/floor/plasteel,
 /area/commons/dorms)
 "nZL" = (
-/obj/machinery/computer/arcade/minesweeper,
+/obj/machinery/computer/arcade/orion_trail,
 /turf/open/floor/wood,
 /area/command/heads_quarters/captain)
 "oax" = (
@@ -61126,9 +61171,9 @@
 "pBd" = (
 /obj/machinery/power/apc{
 	areastring = "/area/maintenance/prison/starboard";
-	dir = 4;
+	dir = 8;
 	name = "Prison Central Maintenance APC";
-	pixel_x = 24
+	pixel_x = -24
 	},
 /obj/effect/turf_decal/bot,
 /obj/effect/decal/cleanable/dirt,
@@ -61708,7 +61753,6 @@
 /area/security/prison/upper)
 "qtw" = (
 /obj/machinery/door/airlock/external{
-	dir = 2;
 	name = "Port Docking Bay 4"
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
@@ -65013,7 +65057,7 @@
 /turf/open/floor/plasteel,
 /area/security/prison/upper)
 "vim" = (
-/obj/machinery/computer/arcade/minesweeper,
+/obj/machinery/computer/arcade/battle,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -88501,7 +88545,7 @@ giE
 rBK
 lJA
 fgy
-rBK
+hWm
 abc
 obs
 rBY
@@ -89783,7 +89827,7 @@ gZT
 hQw
 qCc
 kcR
-rBK
+hWm
 lJA
 weW
 xNV
@@ -109880,7 +109924,7 @@ qfD
 aRO
 aQp
 aRN
-aIt
+hIi
 aUB
 aFu
 aVN

@@ -126,29 +126,29 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 			var/list/json_from_file = json_decode(file2text(vr_path))
 			if(json_from_file)
 				if(json_from_file["digestable"])
-					ENABLE_BITFIELD(vore_flags,DIGESTABLE)
+					vore_flags |= DIGESTABLE
 				if(json_from_file["devourable"])
-					ENABLE_BITFIELD(vore_flags,DEVOURABLE)
+					vore_flags |= DEVOURABLE
 				if(json_from_file["feeding"])
-					ENABLE_BITFIELD(vore_flags,FEEDING)
+					vore_flags |= FEEDING
 				if(json_from_file["lickable"])
-					ENABLE_BITFIELD(vore_flags,LICKABLE)
+					vore_flags |= LICKABLE
 				belly_prefs = json_from_file["belly_prefs"]
 				vore_taste = json_from_file["vore_taste"]
 
 		for(var/V in all_quirks) // quirk migration
 			switch(V)
 				if("Acute hepatic pharmacokinesis")
-					DISABLE_BITFIELD(cit_toggles, PENIS_ENLARGEMENT)
-					DISABLE_BITFIELD(cit_toggles, BREAST_ENLARGEMENT)
-					ENABLE_BITFIELD(cit_toggles,FORCED_FEM)
-					ENABLE_BITFIELD(cit_toggles,FORCED_MASC)
+					cit_toggles &= ~(PENIS_ENLARGEMENT)
+					cit_toggles &= ~(BREAST_ENLARGEMENT)
+					cit_toggles |= FORCED_FEM
+					cit_toggles |= FORCED_MASC
 					all_quirks -= V
 				if("Crocin Immunity")
-					ENABLE_BITFIELD(cit_toggles,NO_APHRO)
+					cit_toggles |= NO_APHRO
 					all_quirks -= V
 				if("Buns of Steel")
-					ENABLE_BITFIELD(cit_toggles,NO_ASS_SLAP)
+					cit_toggles |= NO_ASS_SLAP
 					all_quirks -= V
 
 		if(features["meat_type"] == "Inesct")
@@ -178,13 +178,13 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		S["feeding"]						>> feeding
 		S["lickable"]						>> lickable
 		if(digestable)
-			ENABLE_BITFIELD(vore_flags,DIGESTABLE)
+			vore_flags |= DIGESTABLE
 		if(devourable)
-			ENABLE_BITFIELD(vore_flags,DEVOURABLE)
+			vore_flags |= DEVOURABLE
 		if(feeding)
-			ENABLE_BITFIELD(vore_flags,FEEDING)
+			vore_flags |= FEEDING
 		if(lickable)
-			ENABLE_BITFIELD(vore_flags,LICKABLE)
+			vore_flags |= LICKABLE
 
 	if(current_version < 30)
 		switch(features["taur"])
@@ -413,6 +413,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["ambientocclusion"]	>> ambientocclusion
 	S["auto_fit_viewport"]	>> auto_fit_viewport
 	S["widescreenpref"]		>> widescreenpref
+	S["long_strip_menu"]	>> long_strip_menu
 	S["pixel_size"]	    	>> pixel_size
 	S["scaling_method"]	    >> scaling_method
 	S["hud_toggle_flash"]	>> hud_toggle_flash
@@ -475,6 +476,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	ambientocclusion	= sanitize_integer(ambientocclusion, 0, 1, initial(ambientocclusion))
 	auto_fit_viewport	= sanitize_integer(auto_fit_viewport, 0, 1, initial(auto_fit_viewport))
 	widescreenpref		= sanitize_integer(widescreenpref, 0, 1, initial(widescreenpref))
+	long_strip_menu		= sanitize_integer(long_strip_menu, 0, 1, initial(long_strip_menu))
 	pixel_size		= sanitize_integer(pixel_size, PIXEL_SCALING_AUTO, PIXEL_SCALING_3X, initial(pixel_size))
 	scaling_method  = sanitize_text(scaling_method, initial(scaling_method))
 	hud_toggle_flash = sanitize_integer(hud_toggle_flash, 0, 1, initial(hud_toggle_flash))
@@ -611,6 +613,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["damagescreenshake"], damagescreenshake)
 	WRITE_FILE(S["arousable"], arousable)
 	WRITE_FILE(S["widescreenpref"], widescreenpref)
+	WRITE_FILE(S["long_strip_menu"], long_strip_menu)
 	WRITE_FILE(S["autostand"], autostand)
 	WRITE_FILE(S["cit_toggles"], cit_toggles)
 	WRITE_FILE(S["preferred_chaos"], preferred_chaos)

@@ -108,7 +108,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/be_random_body = 0				//whether we'll have a random body every round
 	var/gender = MALE					//gender of character (well duh)
 	var/age = 30						//age of character
-	//SKYRAT CHANGES BEGIN
+	//Sandstorm CHANGES BEGIN
 	var/erppref = "Ask"
 	var/nonconpref = "Ask"
 	var/vorepref = "Ask"
@@ -118,7 +118,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/enable_personal_chat_color = FALSE
 	var/personal_chat_color = "#ffffff"
 	var/list/alt_titles_preferences = list()
-	//SKYRAT CHANGES END
+	var/lust_tolerance = 100
+	var/sexual_potency = 15
+	//Sandstorm CHANGES END
 	var/underwear = "Nude"				//underwear type
 	var/undie_color = "FFFFFF"
 	var/undershirt = "Nude"				//undershirt type
@@ -183,6 +185,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/auto_fit_viewport = FALSE
 	///Should we be in the widescreen mode set by the config?
 	var/widescreenpref = TRUE
+	///Strip menu style
+	var/long_strip_menu = FALSE
 	///What size should pixels be displayed as? 0 is strech to fit
 	var/pixel_size = 0
 	///What scaling method should we use?
@@ -706,7 +710,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<b>Uplink Location:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=uplink_loc;task=input'>[uplink_spawn_loc]</a>"
 			dat += "</td>"
 
-			dat +="<td width='220px' height='300px' valign='top'>"
+			dat += "<td width='220px' height='300px' valign='top'>"
+			dat += "<h3>Lewd preferences</h3>"
+			dat += "<b>Lust tolerance:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=lust_tolerance;task=input'>[lust_tolerance]</a>"
+			dat += "<b>Sexual potency:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=sexual_potency;task=input'>[sexual_potency]</a>"
+			dat += "</td>"
+			dat += APPEARANCE_CATEGORY_COLUMN
 			if(NOGENITALS in pref_species.species_traits)
 				dat += "<b>Your species ([pref_species.name]) does not support genitals!</b><br>"
 			else
@@ -892,6 +901,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			dat += "<h2>Citadel Preferences</h2>" //Because fuck me if preferences can't be fucking modularized and expected to update in a reasonable timeframe.
 			dat += "<b>Widescreen:</b> <a href='?_src_=prefs;preference=widescreenpref'>[widescreenpref ? "Enabled ([CONFIG_GET(string/default_view)])" : "Disabled (15x15)"]</a><br>"
+			dat += "<b>Long strip menu:</b> <a href='?_src_=prefs;preference=long_strip_menu'>[long_strip_menu ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Auto stand:</b> <a href='?_src_=prefs;preference=autostand'>[autostand ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Auto OOC:</b> <a href='?_src_=prefs;preference=auto_ooc'>[auto_ooc ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Force Slot Storage HUD:</b> <a href='?_src_=prefs;preference=no_tetris_storage'>[no_tetris_storage ? "Enabled" : "Disabled"]</a><br>"
@@ -2318,6 +2328,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						features["color_scheme"] = ADVANCED_CHARACTER_COLORING
 
 				//Genital code
+				if("lust_tolerance")
+					var/lust_tol = input(user, "Set how long you can last without climaxing. \n(75 = minimum, 200 = maximum.)", "Character Preference", lust_tolerance) as num|null
+					if(lust_tol)
+						lust_tolerance = clamp(lust_tol, 75, 200)
+				if("sexual_potency")
+					var/sexual_pot = input(user, "Set your sexual potency. \n(10 = minimum, 25 = maximum.)", "Character Preference", sexual_potency) as num|null
+					if(sexual_pot)
+						sexual_potency = clamp(sexual_pot, 10, 25)
+
 				if("cock_color")
 					var/new_cockcolor = input(user, "Penis color:", "Character Preference","#"+features["cock_color"]) as color|null
 					if(new_cockcolor)
@@ -2507,18 +2526,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if (!isnull(desiredlength))
 						max_chat_length = clamp(desiredlength, 1, CHAT_MESSAGE_MAX_LENGTH)
 
-				//Skyrat changes begin
+				//Sandstorm changes begin
 				if("personal_chat_color")
 					var/new_chat_color = input(user, "Choose your character's runechat color:", "Character Preference",personal_chat_color) as color|null
 					if(new_chat_color)
-						var/list/temp_hsl = rgb2hsl(ReadRGB(new_chat_color)[1],ReadRGB(new_chat_color)[2],ReadRGB(new_chat_color)[3])
-						if(new_chat_color == "#000000")
-							personal_chat_color = "#FFFFFF"
-						else if(temp_hsl[3] >= 0.65 && temp_hsl[2] >= 0.15)
-							personal_chat_color = sanitize_hexcolor(new_chat_color, 6, 1)
+						if(color_hex2num(new_chat_color) > 200)
+							personal_chat_color = sanitize_hexcolor(new_chat_color, 6, TRUE)
 						else
 							to_chat(user, "<span class='danger'>Invalid color. Your color is not bright enough.</span>")
-				//End of skyrat changes
+				//End of sandstorm changes
 
 				if("hud_toggle_color")
 					var/new_toggle_color = input(user, "Choose your HUD toggle flash color:", "Game Preference",hud_toggle_color) as color|null
@@ -2541,7 +2557,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					gender = chosengender
 
 				if("body_size")
-					var/new_body_size = input(user, "Choose your desired sprite size: (90-125%)\nWarning: This may make your character look distorted. Additionally, any size under 100% takes a 10% maximum health penalty", "Character Preference", features["body_size"]*100) as num|null
+					var/new_body_size = input(user, "Choose your desired sprite size: ([CONFIG_GET(number/body_size_min)]-[CONFIG_GET(number/body_size_max)]%)\nWarning: This may make your character look distorted. Additionally, any size under 100% takes a 10% maximum health penalty", "Character Preference", features["body_size"]*100) as num|null
 					if(new_body_size)
 						features["body_size"] = clamp(new_body_size * 0.01, CONFIG_GET(number/body_size_min), CONFIG_GET(number/body_size_max))
 
@@ -2691,6 +2707,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if("widescreenpref")
 					widescreenpref = !widescreenpref
 					user.client.view_size.setDefault(getScreenSize(widescreenpref))
+				if("long_strip_menu")
+					long_strip_menu = !long_strip_menu
 
 				if("pixel_size")
 					switch(pixel_size)
@@ -3250,6 +3268,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		character.Digitigrade_Leg_Swap(FALSE)
 	else
 		character.Digitigrade_Leg_Swap(TRUE)
+
+	character.dna.features["lust_tolerance"] = lust_tolerance
+	character.dna.features["sexual_potency"] = sexual_potency
 
 	character.give_genitals(TRUE) //character.update_genitals() is already called on genital.update_appearance()
 

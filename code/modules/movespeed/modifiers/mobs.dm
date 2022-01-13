@@ -15,6 +15,7 @@
 
 /datum/movespeed_modifier/hunger
 	variable = TRUE
+	blacklisted_movetypes = FLOATING|FLYING
 
 /datum/movespeed_modifier/slaughter
 	multiplicative_slowdown = -1
@@ -166,4 +167,7 @@
 	multiplicative_slowdown = -0.5
 
 /datum/movespeed_modifier/dragon_depression
+	multiplicative_slowdown = 5
+
+/datum/movespeed_modifier/gauntlet_concussion
 	multiplicative_slowdown = 5

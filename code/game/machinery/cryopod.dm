@@ -158,11 +158,8 @@
 	name = "Circuit board (Cryogenic Oversight Console)"
 	build_path = "/obj/machinery/computer/cryopod"
 
-/obj/machinery/computer/cryopod/contents_explosion()
+/obj/machinery/computer/cryopod/contents_explosion(severity, target, origin)
 	return
-
-/obj/machinery/computer/cryopod/contents_explosion()
-	return			//don't blow everyone's shit up.
 
 /// The box
 /obj/item/storage/box/blue/cryostorage_items
@@ -223,19 +220,13 @@
 			despawn_world_time = world.time + (time_till_despawn * 0.1)
 		else
 			despawn_world_time = world.time + time_till_despawn
-	if(!tele)
-		icon_state = "cryopod"
-	else
-		icon_state = "implantchair_occupied"
+	icon_state = "cryopod"
 
 /obj/machinery/cryopod/open_machine()
 	if(occupant)
 		investigate_log("[src] opened with occupant [key_name(occupant)] inside.", INVESTIGATE_CRYOGENICS)
 	..()
-	if(!tele)
-		icon_state = "cryopod-open"
-	else
-		icon_state = "implantchair_open"
+	icon_state = "cryopod-open"
 	density = TRUE
 	name = initial(name)
 

@@ -7,20 +7,8 @@
 - Fuck you, Vic. ERP is back. - TT
 - >using var/ on everything, also TRUE
 - "TGUIzes" the panel because yes - SandPoot
-- Makes all the code because yes as well - SandPoot
+- Makes all the code good because yes as well - SandPoot
 **/
-
-
-// Rectum? Damn near killed 'em.
-GLOBAL_LIST_EMPTY(interactions)
-
-/// Makes the interactions, they're also a global list because having it as a list and just hanging around there is stupid
-/proc/make_interactions()
-	if(!GLOB.interactions || !length(GLOB.interactions))
-		GLOB.interactions = list()
-		for(var/itype in subtypesof(/datum/interaction))
-			var/datum/interaction/I = new itype()
-			GLOB.interactions[I.command] = I
 
 /mob/living/proc/list_interaction_attributes()
 	var/dat = list()
@@ -53,11 +41,13 @@ GLOBAL_LIST_EMPTY(interactions)
 
 /// Checks if user can do an interaction, action_check is for whether you're actually doing it or not (useful for the menu and not removing the buttons)
 /datum/interaction/proc/evaluate_user(mob/living/user, silent = TRUE, action_check = TRUE)
+	/* Temporarily closed
 	if(user.get_refraction_dif())
 		if(!silent) //bye spam
 			to_chat(user, "<span class='warning'>You're still exhausted from the last time. You need to wait [DisplayTimeText(user.get_refraction_dif(), TRUE)] until you can do that!</span>")
 		if(action_check)
 			return FALSE
+	*/
 
 	if(require_user_mouth)
 		if(!user.has_mouth() && !issilicon(user)) //Again, silicons do not have the required parts normally.

@@ -11,10 +11,13 @@
 
 // Atomic classes
 @include meta.load-css('./atomic/candystripe.scss');
+@include meta.load-css('./atomic/centered-image.scss');
 @include meta.load-css('./atomic/color.scss');
 @include meta.load-css('./atomic/debug-layout.scss');
 @include meta.load-css('./atomic/outline.scss');
 @include meta.load-css('./atomic/text.scss');
+@include meta.load-css('./atomic/TexMath.scss');
+@include meta.load-css('./atomic/KaTeX.scss');
 
 // Components
 @include meta.load-css('./components/BlockQuote.scss');

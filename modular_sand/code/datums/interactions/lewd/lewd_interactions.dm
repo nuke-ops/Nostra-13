@@ -12,8 +12,8 @@
 	write_log_user = "ass-slapped"
 	write_log_target = "was ass-slapped by"
 
-	var/user_not_tired
-	var/target_not_tired
+	var/user_not_tired = FALSE
+	var/target_not_tired = FALSE
 	//Avoid using these!
 	//Should only really use in case there are no related organs
 	//but you want the target or user to be topless/bottomless.
@@ -280,7 +280,7 @@
 					return FALSE
 
 		if(require_ooc_consent)
-			if(user.client && user.client.prefs.toggles & VERB_CONSENT)
+			if((!user.ckey) || (user.client && user.client.prefs.toggles & VERB_CONSENT))
 				return TRUE
 		if(action_check)
 			return FALSE
@@ -481,7 +481,7 @@
 
 		if(require_target_bottomless && !target.is_bottomless())
 			if(!silent)
-				to_chat(user, "<span class='warning'>Their clothes are in the way.</span>")
+				to_chat(user, "<span class='warning'>Their pants are in the way.</span>")
 			return FALSE
 
 		if(require_target_topless && !target.is_topless())
@@ -496,11 +496,6 @@
 					if(!silent)
 						to_chat(user, "<span class='warning'>For some reason, you don't want to do this to [target].</span>")
 					return FALSE
-
-		if(require_target_bottomless && !target.is_bottomless())
-			if(!silent)
-				to_chat(user, "<span class='warning'>Their pants are in the way.</span>")
-			return FALSE
 
 		if(require_ooc_consent)
 			if((!target.ckey) || (target.client && target.client.prefs.toggles & VERB_CONSENT)) //sneaky change, let hell go through earth
@@ -523,14 +518,15 @@
 	var/dat = ..()
 	if(get_refraction_dif())
 		dat += "...are sexually exhausted for the time being."
-	if(a_intent == INTENT_HELP)
-		dat += "...are acting gentle."
-	else if (a_intent == INTENT_DISARM)
-		dat += "...are acting playful."
-	else if (a_intent == INTENT_GRAB)
-		dat += "...are acting rough."
-	else if(a_intent == INTENT_HARM)
-		dat += "...are fighting anyone who comes near."
+	switch(a_intent)
+		if(INTENT_HELP)
+			dat += "...are acting gentle."
+		if(INTENT_DISARM)
+			dat += "...are acting playful."
+		if(INTENT_GRAB)
+			dat += "...are acting rough."
+		if(INTENT_HARM)
+			dat += "...are fighting anyone who comes near."
 	//Here comes the fucking weird shit.
 	if(client)
 		var/client/cli = client
@@ -552,7 +548,7 @@
 				else
 					dat += "...have covered eyes."
 	//
-	if(is_topless()  && is_bottomless())
+	if(is_topless() && is_bottomless())
 		dat += "...are naked."
 	else
 		if((is_topless() && !is_bottomless()) || (!is_topless() && is_bottomless()))

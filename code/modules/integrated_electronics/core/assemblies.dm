@@ -34,7 +34,6 @@
 	var/creator // circuit creator if any
 	var/static/next_assembly_id = 0
 	var/sealed = FALSE
-	var/datum/weakref/idlock = null
 
 	hud_possible = list(DIAG_STAT_HUD, DIAG_BATT_HUD, DIAG_TRACK_HUD, DIAG_CIRCUIT_HUD) //diagnostic hud overlays
 	max_integrity = 50
@@ -618,27 +617,6 @@
 /obj/item/electronic_assembly/attackby(obj/item/I, mob/living/user)
 	if(can_anchor && default_unfasten_wrench(user, I, 20))
 		return
-
-	// ID-Lock part: check if we have an id-lock and only lock if we're not trying to get values from it, to prevent accidents
-	if(istype(I, /obj/item/integrated_electronics/debugger))
-		var/obj/item/integrated_electronics/debugger/debugger = I
-		if(debugger.idlock)
-			// check if unlocked to lock
-			if(!idlock)
-				idlock = debugger.idlock
-				to_chat(user,"<span class='notice'>You lock \the [src].</span>")
-
-			//if locked, unlock if ids match
-			else
-				if(idlock.resolve() == debugger.idlock.resolve())
-					idlock = null
-					to_chat(user,"<span class='notice'>You unlock \the [src].</span>")
-
-				else
-					to_chat(user,"<span class='notice'>The scanned ID doesn't match with \the [src]'s lock.</span>")
-
-			debugger.idlock = null
-			return
 
 	if(istype(I, /obj/item/integrated_circuit))
 		if(!user.canUnEquip(I))
