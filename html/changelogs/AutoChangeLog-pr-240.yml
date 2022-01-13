@@ -1,4 +1,0 @@
-author: maksxpl
-delete-after: true
-changes:
-  - refactor: moved rad suits and shaved moths to modular_nostra
