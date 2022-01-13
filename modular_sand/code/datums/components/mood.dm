@@ -1,6 +1,6 @@
 /datum/component/mood
 	var/atom/movable/screen/sanity/screen_obj_sanity
-
+/* Nostra Change
 /datum/component/mood/proc/HandleThirst(mob/living/L)
 	if(HAS_TRAIT(L, TRAIT_NOTHIRST))
 		return FALSE //no mood events for thirst
@@ -15,3 +15,4 @@
 			add_event(null, "thirst", /datum/mood_event/thirsty)
 		if(0 to THIRST_LEVEL_PARCHED)
 			add_event(null, "thirst", /datum/mood_event/dehydrated)
+*/
