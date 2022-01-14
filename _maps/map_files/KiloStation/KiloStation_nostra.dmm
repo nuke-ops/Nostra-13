@@ -283,7 +283,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "aaN" = (
 /obj/structure/table/glass,
 /obj/effect/turf_decal/tile/neutral,
@@ -478,14 +478,6 @@
 	luminosity = 2
 	},
 /area/ai_monitored/turret_protected/ai)
-"abk" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating/asteroid/airless{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
-	},
-/area/maintenance/central/secondary)
 "abl" = (
 /obj/item/toy/beach_ball{
 	pixel_y = 6
@@ -3259,7 +3251,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "agX" = (
 /turf/closed/wall/r_wall,
 /area/security/warden)
@@ -3404,7 +3396,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "aho" = (
 /obj/machinery/atmospherics/components/unary/tank/air,
 /obj/effect/turf_decal/tile/neutral{
@@ -8029,7 +8021,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "apB" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1,
@@ -8255,7 +8247,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "apW" = (
 /obj/machinery/camera{
 	c_tag = "Xenobiology Cell 3";
@@ -8287,15 +8279,6 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/service/theater)
-"apZ" = (
-/obj/structure/flora/grass/jungle,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating/asteroid/airless{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
-	},
-/area/maintenance/central/secondary)
 "aqa" = (
 /obj/docking_port/stationary{
 	dheight = 1;
@@ -10356,7 +10339,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "atz" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
@@ -10979,7 +10962,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "auz" = (
 /obj/machinery/door/airlock/maintenance/external{
 	name = "transit intersection";
@@ -25542,12 +25525,6 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/medical/chemistry)
-"aTG" = (
-/obj/structure/flora/grass/jungle/b,
-/turf/open/floor/plating/asteroid/airless{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
-	},
-/area/maintenance/central/secondary)
 "aTH" = (
 /obj/effect/turf_decal/tile/red,
 /obj/effect/turf_decal/tile/red{
@@ -28042,7 +28019,7 @@
 /turf/open/floor/plating/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "aXL" = (
 /obj/structure/bookcase/random/religion,
 /obj/effect/turf_decal/tile/neutral{
@@ -29033,7 +29010,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "aZt" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -30756,7 +30733,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bcr" = (
 /obj/effect/turf_decal/tile/purple,
 /obj/effect/turf_decal/tile/purple{
@@ -33061,7 +33038,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bgb" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger{
@@ -35309,21 +35286,21 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bjT" = (
 /obj/structure/window/reinforced,
 /obj/structure/flora/ausbushes/palebush,
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bjU" = (
 /obj/structure/window/reinforced,
 /obj/structure/flora/grass/jungle/b,
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bjV" = (
 /obj/structure/sign/poster/official/random,
 /turf/closed/wall,
@@ -35376,7 +35353,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bka" = (
 /obj/structure/window/reinforced,
 /obj/machinery/light/small{
@@ -35385,7 +35362,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bkb" = (
 /obj/machinery/rnd/production/techfab/department/service,
 /obj/machinery/light/small{
@@ -37126,7 +37103,7 @@
 "bnn" = (
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall,
-/area/maintenance/central)
+/area/medical/virology)
 "bno" = (
 /obj/structure/chair/sofa{
 	color = "#c45c57"
@@ -40288,20 +40265,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
-"bsx" = (
-/obj/structure/flora/ausbushes/sparsegrass,
-/obj/structure/flora/ausbushes/lavendergrass,
-/obj/structure/flora/ausbushes/fernybush,
-/turf/open/floor/plating/asteroid/airless{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
-	},
-/area/maintenance/central/secondary)
-"bsy" = (
-/obj/structure/flora/rock/pile,
-/turf/open/floor/plating/asteroid/airless{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
-	},
-/area/maintenance/central/secondary)
 "bsz" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -41267,7 +41230,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bum" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -41291,7 +41254,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bup" = (
 /obj/structure/table/wood,
 /obj/effect/turf_decal/tile/neutral,
@@ -44515,12 +44478,6 @@
 	icon_state = "platingdmg3"
 	},
 /area/maintenance/central)
-"bzY" = (
-/obj/structure/flora/grass/jungle,
-/turf/open/floor/plating/asteroid/airless{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
-	},
-/area/maintenance/central/secondary)
 "bzZ" = (
 /obj/effect/spawner/structure/window/reinforced/tinted,
 /turf/open/floor/plating,
@@ -44581,7 +44538,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bAf" = (
 /obj/structure/transit_tube/curved/flipped{
 	dir = 4
@@ -44677,7 +44634,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bAp" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/red,
@@ -47152,7 +47109,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bEO" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/blue{
@@ -47351,7 +47308,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bFm" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -49883,12 +49840,6 @@
 /obj/effect/landmark/start/assistant,
 /turf/open/floor/wood,
 /area/commons/locker)
-"bKf" = (
-/obj/structure/flora/ausbushes/palebush,
-/turf/open/floor/plating/asteroid/airless{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
-	},
-/area/maintenance/central/secondary)
 "bKg" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -51442,7 +51393,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bMC" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/delivery,
@@ -51470,7 +51421,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bMF" = (
 /obj/machinery/door/airlock/maintenance{
 	req_access_txt = "12"
@@ -55191,7 +55142,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bTi" = (
 /obj/structure/table,
 /obj/item/clothing/gloves/color/yellow,
@@ -55210,7 +55161,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "bTk" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
@@ -56645,11 +56596,6 @@
 /obj/structure/sign/departments/evac,
 /turf/closed/wall/rust,
 /area/hallway/secondary/exit/departure_lounge)
-"bVK" = (
-/turf/open/floor/plating/asteroid/airless{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
-	},
-/area/maintenance/central/secondary)
 "bVL" = (
 /obj/effect/turf_decal/plaque{
 	icon_state = "L1"
@@ -59291,7 +59237,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "caj" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/computer/atmos_control,
@@ -61193,7 +61139,7 @@
 /turf/open/floor/circuit/green{
 	luminosity = 2
 	},
-/area/space)
+/area/ai_monitored/turret_protected/ai)
 "cdJ" = (
 /obj/machinery/telecomms/server/presets/command,
 /turf/open/floor/circuit/green/telecomms/mainframe,
@@ -62660,7 +62606,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "cgL" = (
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/yellow,
@@ -63075,7 +63021,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "cht" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer1{
 	dir = 8
@@ -74721,16 +74667,6 @@
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
 /area/maintenance/fore)
-"cGq" = (
-/obj/structure/flora/ausbushes/lavendergrass,
-/obj/structure/flora/ausbushes/sparsegrass,
-/obj/structure/flora/ausbushes/ywflowers,
-/obj/structure/flora/ausbushes/grassybush,
-/obj/structure/flora/ausbushes/palebush,
-/turf/open/floor/plating/asteroid/airless{
-	initial_gas_mix = "o2=14;n2=23;TEMP=300"
-	},
-/area/maintenance/central/secondary)
 "cGs" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/structure/window/reinforced,
@@ -74794,7 +74730,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "cGD" = (
 /turf/open/floor/grass,
 /area/security/prison)
@@ -74824,7 +74760,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "cGT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -74936,7 +74872,7 @@
 /turf/open/floor/plating/asteroid/airless{
 	initial_gas_mix = "o2=14;n2=23;TEMP=300"
 	},
-/area/maintenance/central/secondary)
+/area/space/nearstation)
 "cHh" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -115284,12 +115220,12 @@ aox
 cCj
 aox
 aox
-bzY
-bVK
+bOV
+aDQ
 bEN
-cGq
-bKf
-bsx
+bJm
+bOX
+acR
 aox
 bPU
 aox
@@ -115538,8 +115474,8 @@ anX
 oPf
 aLV
 aLX
-bVK
-cGq
+aDQ
+bJm
 aXJ
 bAe
 bTh
@@ -115795,7 +115731,7 @@ bgK
 aHq
 aLV
 aLX
-cGq
+bJm
 bul
 arl
 arl
@@ -115803,7 +115739,7 @@ bzc
 bfT
 arl
 arl
-abk
+cIK
 aqb
 bPX
 atT
@@ -116052,7 +115988,7 @@ bVL
 aKg
 boi
 aLX
-aTG
+bBO
 arl
 arl
 bsI
@@ -116830,7 +116766,7 @@ aZb
 byT
 bzo
 bHT
-cGq
+bJm
 apy
 aqC
 avB
@@ -117594,7 +117530,7 @@ atF
 aLk
 bos
 aLX
-bsx
+acR
 arl
 arl
 aZn
@@ -117851,7 +117787,7 @@ anY
 aKe
 bou
 aLX
-aTG
+bBO
 buo
 arl
 arl
@@ -117859,7 +117795,7 @@ bcm
 bFb
 arl
 arl
-apZ
+asO
 ass
 bQa
 atT
@@ -118108,8 +118044,8 @@ auo
 bkm
 bou
 aLX
-bsy
-cGq
+bQq
+bJm
 aXJ
 aZs
 bco
@@ -118374,7 +118310,7 @@ bFl
 cah
 bga
 bME
-cGq
+bJm
 bjT
 bTw
 atT
@@ -119133,7 +119069,7 @@ aKi
 cIw
 cKd
 bhK
-aox
+aGh
 aGh
 bqh
 aGh
