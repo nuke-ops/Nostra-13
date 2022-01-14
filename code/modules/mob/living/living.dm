@@ -144,6 +144,11 @@
 	if(moving_diagonally)//no mob swap during diagonal moves.
 		return 1
 
+	//handle micro bumping on help intent
+	if(a_intent == INTENT_HELP)
+		if(handle_micro_bump_helping(M))
+			return TRUE
+
 	if(!M.buckled && !M.has_buckled_mobs())
 		var/mob_swap = FALSE
 		var/too_strong = (M.move_resist > move_force) //can't swap with immovable objects unless they help us
@@ -189,6 +194,8 @@
 	//not if he's not CANPUSH of course
 	if(!(M.status_flags & CANPUSH))
 		return 1
+	if(handle_micro_bump_other(M))
+		return TRUE
 	if(isliving(M))
 		var/mob/living/L = M
 		if(HAS_TRAIT(L, TRAIT_PUSHIMMUNE))
@@ -944,13 +951,6 @@
 						what.forceMove(drop_location())
 					log_combat(src, who, "stripped [what] off")
 
-	if(Adjacent(who)) //update inventory window
-		who.show_inv(src)
-	else
-		src << browse(null,"window=mob[REF(who)]")
-
-	who.update_equipment_speed_mods() // Updates speed in case stripped speed affecting item
-
 // The src mob is trying to place an item on someone
 // Override if a certain mob should be behave differently when placing items (can't, for example)
 /mob/living/stripPanelEquip(obj/item/what, mob/who, where)
@@ -1305,6 +1305,12 @@
 				add_to_dead_mob_list()
 		if(NAMEOF(src, health)) //this doesn't work. gotta use procs instead.
 			return FALSE
+		if(NAMEOF(src, resize))
+			update_size(var_value)
+			return FALSE
+		if(NAMEOF(src, size_multiplier))
+			update_size(var_value)
+			return FALSE
 	. = ..()
 	switch(var_name)
 		if(NAMEOF(src, eye_blind))
@@ -1313,8 +1319,6 @@
 			set_blurriness(var_value)
 		if(NAMEOF(src, maxHealth))
 			updatehealth()
-		if(NAMEOF(src, resize))
-			update_transform()
 		if(NAMEOF(src, lighting_alpha))
 			sync_lighting_plane_alpha()
 

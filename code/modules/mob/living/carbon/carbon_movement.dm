@@ -29,7 +29,8 @@
 			var/loss = HUNGER_FACTOR/10
 			if(m_intent == MOVE_INTENT_RUN)
 				loss *= 2
-			adjust_nutrition(loss)
+			adjust_nutrition(-loss)
+
 /* Nostra change
 		if(HAS_TRAIT(src, TRAIT_NOTHIRST))
 			set_thirst(THIRST_LEVEL_BIT_THIRSTY - 1)
@@ -39,6 +40,7 @@
 				loss *= 2
 			adjust_thirst(-loss)
 */
+
 /mob/living/carbon/can_move_under_living(mob/living/other)
 	. = ..()
 	if(!.)		//we failed earlier don't need to fail again

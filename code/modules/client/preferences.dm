@@ -185,6 +185,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/auto_fit_viewport = FALSE
 	///Should we be in the widescreen mode set by the config?
 	var/widescreenpref = TRUE
+	///Strip menu style
+	var/long_strip_menu = FALSE
 	///What size should pixels be displayed as? 0 is strech to fit
 	var/pixel_size = 0
 	///What scaling method should we use?
@@ -899,6 +901,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 			dat += "<h2>Citadel Preferences</h2>" //Because fuck me if preferences can't be fucking modularized and expected to update in a reasonable timeframe.
 			dat += "<b>Widescreen:</b> <a href='?_src_=prefs;preference=widescreenpref'>[widescreenpref ? "Enabled ([CONFIG_GET(string/default_view)])" : "Disabled (15x15)"]</a><br>"
+			dat += "<b>Long strip menu:</b> <a href='?_src_=prefs;preference=long_strip_menu'>[long_strip_menu ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Auto stand:</b> <a href='?_src_=prefs;preference=autostand'>[autostand ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Auto OOC:</b> <a href='?_src_=prefs;preference=auto_ooc'>[auto_ooc ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Force Slot Storage HUD:</b> <a href='?_src_=prefs;preference=no_tetris_storage'>[no_tetris_storage ? "Enabled" : "Disabled"]</a><br>"
@@ -2326,13 +2329,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				//Genital code
 				if("lust_tolerance")
-					var/lust_tol = input(user, "Set how long you can last without climaxing. \n(75 = minimum, 200 = maximum.)", "Character Preference", lust_tolerance) as num
-					if(clamp(lust_tol, 75, 200))
-						lust_tolerance = lust_tol
+					var/lust_tol = input(user, "Set how long you can last without climaxing. \n(75 = minimum, 200 = maximum.)", "Character Preference", lust_tolerance) as num|null
+					if(lust_tol)
+						lust_tolerance = clamp(lust_tol, 75, 200)
 				if("sexual_potency")
-					var/sexual_pot = input(user, "Set your sexual potency. \n(10 = minimum, 25 = maximum.)", "Character Preference", sexual_potency) as num
-					if(clamp(sexual_pot, 10, 25))
-						sexual_potency = sexual_pot
+					var/sexual_pot = input(user, "Set your sexual potency. \n(10 = minimum, 25 = maximum.)", "Character Preference", sexual_potency) as num|null
+					if(sexual_pot)
+						sexual_potency = clamp(sexual_pot, 10, 25)
 
 				if("cock_color")
 					var/new_cockcolor = input(user, "Penis color:", "Character Preference","#"+features["cock_color"]) as color|null
@@ -2554,7 +2557,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					gender = chosengender
 
 				if("body_size")
-					var/new_body_size = input(user, "Choose your desired sprite size: (90-125%)\nWarning: This may make your character look distorted. Additionally, any size under 100% takes a 10% maximum health penalty", "Character Preference", features["body_size"]*100) as num|null
+					var/new_body_size = input(user, "Choose your desired sprite size: ([CONFIG_GET(number/body_size_min)]-[CONFIG_GET(number/body_size_max)]%)\nWarning: This may make your character look distorted. Additionally, any size under 100% takes a 10% maximum health penalty", "Character Preference", features["body_size"]*100) as num|null
 					if(new_body_size)
 						features["body_size"] = clamp(new_body_size * 0.01, CONFIG_GET(number/body_size_min), CONFIG_GET(number/body_size_max))
 
@@ -2704,6 +2707,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if("widescreenpref")
 					widescreenpref = !widescreenpref
 					user.client.view_size.setDefault(getScreenSize(widescreenpref))
+				if("long_strip_menu")
+					long_strip_menu = !long_strip_menu
 
 				if("pixel_size")
 					switch(pixel_size)
