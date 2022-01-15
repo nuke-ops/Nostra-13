@@ -124,7 +124,11 @@
 
 /obj/item/clothing/head/radiation
 	name = "radiation hood"
-	icon = 'modular_nostra/icons/mob/clothing/suit_digi.dmi' // Nostra change
+	// Start of Nostra change
+	icon = 'modular_nostra/icons/obj/clothing/hats.dmi'
+	mob_overlay_icon = 'modular_nostra/icons/mob/clothing/head.dmi'
+	anthro_mob_worn_overlay = 'modular_nostra/icons/mob/clothing/head_muzzled.dmi'
+	// End of Nostra change
 	icon_state = "rad"
 	desc = "A hood with radiation protective properties. The label reads, 'Made with lead. Please do not consume insulation.'"
 	clothing_flags = THICKMATERIAL
@@ -140,7 +144,11 @@
 /obj/item/clothing/suit/radiation
 	name = "radiation suit"
 	desc = "A suit that protects against radiation. The label reads, 'Made with lead. Please do not consume insulation.'"
-	icon = 'modular_nostra/icons/mob/clothing/suit_digi.dmi' // Nostra change
+	// Start of Nostra change
+	icon = 'modular_nostra/icons/mob/clothing/suit.dmi'
+	mob_overlay_icon = 'modular_nostra/icons/obj/clothing/suits.dmi'
+	anthro_mob_worn_overlay = 'modular_nostra/icons/mob/clothing/suit_digi.dmi'
+	// End of Nostra change
 	icon_state = "rad"
 	item_state = "rad_suit"
 	w_class = WEIGHT_CLASS_BULKY
