@@ -145,8 +145,8 @@
 	name = "radiation suit"
 	desc = "A suit that protects against radiation. The label reads, 'Made with lead. Please do not consume insulation.'"
 	// Start of Nostra change
-	icon = 'modular_nostra/icons/mob/clothing/suit.dmi'
-	mob_overlay_icon = 'modular_nostra/icons/obj/clothing/suits.dmi'
+	icon = 'modular_nostra/icons/obj/clothing/suit.dmi'
+	mob_overlay_icon = 'modular_nostra/icons/mob/clothing/suits.dmi'
 	anthro_mob_worn_overlay = 'modular_nostra/icons/mob/clothing/suit_digi.dmi'
 	// End of Nostra change
 	icon_state = "rad"
