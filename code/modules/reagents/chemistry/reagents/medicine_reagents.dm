@@ -1055,6 +1055,7 @@
 	name = "Mannitol"
 	description = "Efficiently restores brain damage."
 	color = "#DCDCFF"
+	taste_description = "sweetness"
 	pH = 10.4
 	chemical_flags = REAGENT_ALL_PROCESS
 

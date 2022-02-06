@@ -104,6 +104,7 @@
 #define TRAIT_RESISTCOLD		"resist_cold"
 #define TRAIT_RESISTHIGHPRESSURE	"resist_high_pressure"
 #define TRAIT_RESISTLOWPRESSURE	"resist_low_pressure"
+#define TRAIT_LOWPRESSURECOOLING "low_pressure_cooling"
 #define TRAIT_BOMBIMMUNE		"bomb_immunity"
 #define TRAIT_RADIMMUNE			"rad_immunity"
 #define TRAIT_GENELESS			"geneless"
@@ -121,6 +122,7 @@
 #define TRAIT_ROBOTIC_ORGANISM	"robotic_organism"
 #define TRAIT_ROBOT_RADSHIELDING	"robot_radshielding"
 #define TRAIT_NOBREATH			"no_breath"
+#define TRAIT_AUXILIARY_LUNGS	"auxiliary_lungs"	//Lungs not neccessary required due to nobreath, but provides some other helpful function.
 #define TRAIT_ANTIMAGIC			"anti_magic"
 #define TRAIT_HOLY				"holy"
 #define TRAIT_DEPRESSION		"depression"

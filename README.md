@@ -22,7 +22,7 @@ Based and maintained from Sandstorm.
 
 **(Upstream) Sandstorm Information**
 * **Code:** <https://github.com/SandPoot/Sandstorm-Station-13>
-* **Discord:** <https://discord.gg/Jx7A7dW>
+* **Discord:**  <https://discord.gg/quXTqa6cp9> (updated 19/01/2022)
 
 **Citadel Station Information**
 * **Website:** <http://citadel-station.net>
