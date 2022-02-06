@@ -160,7 +160,6 @@
 #include "code\__DEFINES\sandcode\language.dm"
 #include "code\__DEFINES\sandcode\loadout.dm"
 #include "code\__DEFINES\sandcode\medical_defines.dm"
-#include "code\__DEFINES\sandcode\mobs.dm"
 #include "code\__DEFINES\sandcode\runechat_defines.dm"
 #include "code\__DEFINES\sandcode\signals.dm"
 #include "code\__DEFINES\sandcode\sizecode.dm"
