@@ -5156,7 +5156,7 @@
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/blood/gibs,
-/obj/item/kitchen/knife/carrotshiv,
+/obj/item/kitchen/knife/shiv/carrot,
 /turf/open/floor/plating{
 	icon_state = "platingdmg3"
 	},
@@ -11282,6 +11282,7 @@
 /obj/structure/flora/rock/pile/largejungle,
 /obj/structure/flora/rock{
 	desc = "Yo, Angelo..";
+	layer = 3;
 	name = "Angelo Stone"
 	},
 /turf/open/floor/grass,
