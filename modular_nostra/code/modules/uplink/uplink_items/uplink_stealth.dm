@@ -5,7 +5,7 @@
 	item = /obj/item/storage/box/syndie_kit/origami_bundle
 	cost = 6
 	surplus = 20
-	exclude_modes = list(/datum/game_mode/nuclear)
+	purchasable_from = UPLINK_TRAITORS
 
 /datum/uplink_item/stealthy_tools/chambowman
 	name = "Chameleon Bangproof Headset"

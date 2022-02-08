@@ -59,6 +59,8 @@ GLOBAL_LIST_INIT(modular_ui_styles, list(
 
 	var/atom/movable/screen/devil/soul_counter/devilsouldisplay
 
+	var/atom/movable/screen/synth/coolant_counter/coolant_display
+
 	var/atom/movable/screen/action_intent
 	var/atom/movable/screen/zone_select
 	var/atom/movable/screen/pull_icon
@@ -263,6 +265,7 @@ GLOBAL_LIST_INIT(modular_ui_styles, list(
 		return
 	var/mob/screenmob = viewmob || mymob
 	hidden_inventory_update(screenmob)
+	extra_inventory_update(screenmob)
 
 /datum/hud/robot/show_hud(version = 0, mob/viewmob)
 	. = ..()

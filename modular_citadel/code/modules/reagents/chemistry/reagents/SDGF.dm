@@ -66,6 +66,7 @@ IMPORTANT FACTORS TO CONSIDER WHILE BALANCING
 	switch(current_cycle)
 		if(1)
 			startHunger = M.nutrition
+			// startThirst = get_thirst(M) // Nostra change
 			if(pollStarted == FALSE)
 				pollStarted = TRUE
 				ghosts = pollGhostCandidates("Do you want to play as [M]'s SDGF clone? (Don't ERP without permission from the original, and respect their character.)", ignore_category = POLL_IGNORE_CLONE)
@@ -304,6 +305,7 @@ IMPORTANT FACTORS TO CONSIDER WHILE BALANCING
 /datum/reagent/fermi/SDGFheal
 	name = "synthetic-derived healing factor"
 	description = "Leftover SDGF is transferred into the resulting clone, which quickly heals up the stresses from suddenly splitting. Restores blood, nutrition, and repaires brain and clone damage quickly. Only obtainable from using excess SDGF, and only enters the cloned body."
+	taste_description = "slime"
 	metabolization_rate = 0.8
 	can_synth = FALSE
 

@@ -1,3 +1,12 @@
+/* Nostra change
+/datum/reagent/water
+	hydration = 5
+
+/datum/reagent/water/on_mob_life(mob/living/carbon/M)
+	M.adjust_thirst(hydration)
+	. = ..()
+*/
+
 /datum/reagent/dragon_blood
 	name = "Dragon blood"
 	description = "Dragon blood, who woulda thought!"
