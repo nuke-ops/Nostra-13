@@ -127,7 +127,6 @@
 	for(var/atom/movable/M in A)
 		if(M == src) // in case someone somehow manages to teleport the bluespace locker inside of itself
 			continue
-		M.update_parallax_contents()
 	var/turf/internal_origin
 	var/turf/external_origin = get_turf(get_other_locker())
 	for(var/obj/effect/landmark/bluespace_locker_origin/L in A)
