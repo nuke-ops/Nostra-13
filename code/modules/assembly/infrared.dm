@@ -4,6 +4,8 @@
 	icon_state = "infrared"
 	custom_materials = list(/datum/material/iron=1000, /datum/material/glass=500)
 	is_position_sensitive = TRUE
+	drop_sound = 'sound/items/handling/component_drop.ogg'
+	pickup_sound = 'sound/items/handling/component_pickup.ogg'
 	var/on = FALSE
 	var/visible = FALSE
 	var/maxlength = 8
@@ -220,7 +222,8 @@
 	icon_state = "ibeam"
 	anchored = TRUE
 	density = FALSE
-	pass_flags = PASSTABLE|PASSGLASS|PASSGRILLE|LETPASSTHROW
+	pass_flags = PASSTABLE|PASSGLASS|PASSGRILLE
+	pass_flags_self = LETPASSTHROW
 	var/obj/item/assembly/infra/master
 
 /obj/effect/beam/i_beam/Crossed(atom/movable/AM as mob|obj)

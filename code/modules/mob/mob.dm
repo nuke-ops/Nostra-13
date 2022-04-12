@@ -1,25 +1,3 @@
-/mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
-	remove_from_mob_list()
-	remove_from_dead_mob_list()
-	remove_from_alive_mob_list()
-	GLOB.all_clockwork_mobs -= src
-	focus = null
-	LAssailant = null
-	movespeed_modification = null
-	for (var/alert in alerts)
-		clear_alert(alert, TRUE)
-	if(observers && observers.len)
-		for(var/M in observers)
-			var/mob/dead/observe = M
-			observe.reset_perspective(null)
-	qdel(hud_used)
-	for(var/cc in client_colours)
-		qdel(cc)
-	client_colours = null
-	ghostize()
-	..()
-	return QDEL_HINT_HARDDEL
-
 /mob/Initialize()
 	add_to_mob_list()
 	if(stat == DEAD)
@@ -39,7 +17,31 @@
 	update_config_movespeed()
 	update_movespeed(TRUE)
 	initialize_actionspeed()
+	init_rendering()
 	hook_vr("mob_new",list(src))
+
+/mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
+	remove_from_mob_list()
+	remove_from_dead_mob_list()
+	remove_from_alive_mob_list()
+	GLOB.all_clockwork_mobs -= src
+	focus = null
+	LAssailant = null
+	movespeed_modification = null
+	for (var/alert in alerts)
+		clear_alert(alert, TRUE)
+	if(observers && observers.len)
+		for(var/M in observers)
+			var/mob/dead/observe = M
+			observe.reset_perspective(null)
+	dispose_rendering()
+	qdel(hud_used)
+	for(var/cc in client_colours)
+		qdel(cc)
+	client_colours = null
+	ghostize()
+	..()
+	return QDEL_HINT_HARDDEL
 
 /mob/GenerateTag()
 	tag = "mob_[next_mob_id++]"
@@ -343,7 +345,14 @@
 	else
 		result = A.examine(src) // if a tree is examined but no client is there to see it, did the tree ever really exist?
 
-	to_chat(src, result.Join("\n"))
+	if(result.len)
+		for(var/i = 1, i <= result.len, i++)
+			if(!findtext(result[i], "<hr>"))
+				result[i] += "\n"
+	else
+		result = list("You examine \the [A], seems like noone really cares about it.")
+
+	to_chat(src, examine_block("<span class='infoplain'>[result.Join()]</span>"))
 	SEND_SIGNAL(src, COMSIG_MOB_EXAMINATE, A)
 
 /mob/proc/clear_from_recent_examines(atom/A)
@@ -464,7 +473,11 @@
 	set category = "IC"
 	set desc = "View your character's notes memory."
 	if(mind)
-		mind.show_memory(src)
+//ambition start
+		var/datum/browser/popup = new(src, "memory", "Memory and Notes")
+		popup.set_content(mind.show_memory())
+		popup.open()
+//ambition end
 	else
 		to_chat(src, "You don't have a mind datum for some reason, so you can't look at your notes, if you had any.")
 
@@ -908,7 +921,7 @@ GLOBAL_VAR_INIT(exploit_warn_spam_prevention, 0)
 	else if(examine_cursor_icon && client.keys_held["Shift"]) //mouse shit is hardcoded, make this non hard-coded once we make mouse modifiers bindable
 		client.mouse_pointer_icon = examine_cursor_icon
 	else if (ismecha(loc))
-		var/obj/mecha/M = loc
+		var/obj/vehicle/sealed/mecha/M = loc
 		if(M.mouse_pointer)
 			client.mouse_pointer_icon = M.mouse_pointer
 

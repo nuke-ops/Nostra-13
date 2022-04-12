@@ -3,7 +3,7 @@
 	desc = "A rechargeable, detachable battery that serves as a magazine for laser rifles."
 	icon_state = "oldrifle-20"
 	ammo_type = /obj/item/ammo_casing/caseless/laser
-	caliber = "laser"
+	caliber = LASER
 	max_ammo = 20
 
 /obj/item/ammo_box/magazine/recharge/update_icon()
@@ -54,7 +54,7 @@
 	desc = "A miniature battery for an energy weapon."
 	icon = 'icons/obj/ammo.dmi'
 	icon_state = "mws_batt"
-	slot_flags = SLOT_BELT | SLOT_EARS_LEFT | SLOT_EARS_RIGHT //skyrat edit
+	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_EARS
 	throwforce = 1
 
 	caliber = "mws"

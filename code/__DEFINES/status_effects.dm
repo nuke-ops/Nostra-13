@@ -136,6 +136,10 @@
 
 #define STATUS_EFFECT_INLOVE /datum/status_effect/in_love //Displays you as being in love with someone else, and makes hearts appear around them.
 
+#define STATUS_EFFECT_OFFERING /datum/status_effect/offering // you are offering up an item to people
+
+#define STATUS_EFFECT_HANDSHAKE /datum/status_effect/offering/secret_handshake // you are attempting to perform a secret Family handshake
+
 /////////////
 //  SLIME  //
 /////////////
@@ -148,4 +152,9 @@
 // GROUPED //
 /////////////
 
+#define STASIS_MACHINE_EFFECT "stasis_machine"
+
 #define STASIS_ASCENSION_EFFECT "heretic_ascension"
+
+/// If the incapacitated status effect will ignore a mob in stasis (stasis beds)
+#define IGNORE_STASIS (1<<1)
