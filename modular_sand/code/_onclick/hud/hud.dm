@@ -7,7 +7,7 @@
 	/// UI element for hunger
 	var/atom/movable/screen/hunger
 	/// UI element for thirst
-	var/atom/movable/screen/thirst
+	// var/atom/movable/screen/thirst // Nostra change
 
 // Used for getting icons for extra inventory slots
 GLOBAL_LIST_INIT(modular_ui_styles, list(
