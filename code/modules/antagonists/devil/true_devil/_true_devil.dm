@@ -63,7 +63,7 @@
 
 
 /mob/living/carbon/true_devil/examine(mob/user)
-	. = list("<div class='infobox'><span class='info'>This is [icon2html(src, user)] <b>[src]</b>!")
+	. = list("<span class='info'>This is [icon2html(src, user)] <b>[src]</b>!")
 
 	//Left hand items
 	for(var/obj/item/I in held_items)
@@ -81,7 +81,10 @@
 		. += "<span class='warning'>You can see hellfire inside its gaping wounds.</span>"
 	else if(health < (maxHealth/2))
 		. += "<span class='warning'>You can see hellfire inside its wounds.</span>"
-	. += "</span></div>"
+
+	if(length(.) > 1)
+		.[1] += "<hr>"
+	. += "</span>"
 
 /mob/living/carbon/true_devil/IsAdvancedToolUser()
 	return 1
@@ -104,7 +107,7 @@
 /mob/living/carbon/true_devil/assess_threat(judgement_criteria, lasercolor = "", datum/callback/weaponcheck=null)
 	return 666
 
-/mob/living/carbon/true_devil/flash_act(intensity = 1, override_blindness_check = 0, affect_silicon = 0, visual = 0, type = /atom/movable/screen/fullscreen/flash, override_protection = 0)
+/mob/living/carbon/true_devil/flash_act(intensity = 1, override_blindness_check = 0, affect_silicon = 0, visual = 0, type = /atom/movable/screen/fullscreen/tiled/flash, override_protection = 0)
 	if(mind && has_bane(BANE_LIGHT))
 		mind.disrupt_spells(-500)
 		return ..() //flashes don't stop devils UNLESS it's their bane.

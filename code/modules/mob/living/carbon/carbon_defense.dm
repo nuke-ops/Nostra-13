@@ -354,19 +354,18 @@
 				embeds = TRUE
 				// this way, we only visibly try to examine ourselves if we have something embedded, otherwise we'll still hug ourselves :)
 				visible_message("<span class='notice'>[src] examines [p_them()]self.</span>", "")
-				output += "<span class='notice'>You check yourself for shrapnel.</span>"
+				output = "<span class='notice'>You check yourself for shrapnel.</span><hr>"
 			if(I.isEmbedHarmless())
 				output += "\n\t <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] stuck to your [LB.name]!</a>"
 			else
 				output += "\n\t <a href='?src=[REF(src)];embedded_object=[REF(I)];embedded_limb=[REF(LB)]' class='warning'>There is \a [I] embedded in your [LB.name]!</a>"
 
 	if(output)
-		output += "</div>"
-		to_chat(src, output)
+		to_chat(src, examine_block(output))
 
 	return embeds
 
-/mob/living/carbon/flash_act(intensity = 1, override_blindness_check = 0, affect_silicon = 0, visual = 0, type = /atom/movable/screen/fullscreen/flash, override_protection = 0)
+/mob/living/carbon/flash_act(intensity = 1, override_blindness_check = 0, affect_silicon = 0, visual = 0, type = /atom/movable/screen/fullscreen/tiled/flash, override_protection = 0)
 	. = ..()
 
 	var/damage = override_protection ? intensity : intensity - get_eye_protection()

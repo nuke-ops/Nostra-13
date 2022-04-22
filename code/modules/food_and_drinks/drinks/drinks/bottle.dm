@@ -31,11 +31,11 @@
 	var/obj/item/bodypart/affecting = user.zone_selected //Find what the player is aiming at
 
 	var/headarmor = 0 // Target's head armor
-	var/armor_block = min(90, target.run_armor_check(affecting, "melee", null, null,armour_penetration)) // For normal attack damage
+	var/armor_block = min(90, target.run_armor_check(affecting, MELEE, null, null,armour_penetration)) // For normal attack damage
 
 	//If they have a hat/helmet and the user is targeting their head.
 	if(affecting == BODY_ZONE_HEAD)
-		var/obj/item/I = target.get_item_by_slot(SLOT_HEAD)
+		var/obj/item/I = target.get_item_by_slot(ITEM_SLOT_HEAD)
 		if(I)
 			headarmor = I.armor.melee
 

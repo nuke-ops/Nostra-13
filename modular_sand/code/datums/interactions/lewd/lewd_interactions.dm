@@ -402,7 +402,7 @@
 							to_chat(user, "<span class='warning'>Their feet need to be unexposed.</span>")
 						return FALSE
 
-		if(require_target_num_feet && (user.get_num_feet() < require_target_num_feet))
+		if(require_target_num_feet && (target.get_num_feet() < require_target_num_feet))
 			if(!silent)
 				to_chat(user, "<span class='warning'>They don't have enough feet.</span>")
 			return FALSE
@@ -514,7 +514,7 @@
 	user.cleartimer = addtimer(CALLBACK(user, /mob/living/proc/clear_lewd_datum), 300, TIMER_STOPPABLE)
 	return ..()
 
-/mob/living/list_interaction_attributes(var/mob/living/LM)
+/mob/living/list_interaction_attributes(mob/living/LM)
 	var/dat = ..()
 	if(get_refraction_dif())
 		dat += "...are sexually exhausted for the time being."
@@ -533,7 +533,7 @@
 		var/client/ucli = LM.client
 		if(cli.prefs.extremepref != "No")
 			if(!ucli || (ucli.prefs.extremepref != "No"))
-				if(!get_item_by_slot(ITEM_SLOT_EARS))
+				if(!get_item_by_slot(ITEM_SLOT_EARS_LEFT) && !get_item_by_slot(ITEM_SLOT_EARS_RIGHT))
 					if(has_ears())
 						dat += "...have unprotected ears."
 					else
@@ -548,10 +548,13 @@
 				else
 					dat += "...have covered eyes."
 	//
-	if(is_topless() && is_bottomless())
+	// check those loops only once, thanks
+	var/is_topless = is_topless()
+	var/is_bottomless = is_bottomless()
+	if(is_topless && is_bottomless)
 		dat += "...are naked."
 	else
-		if((is_topless() && !is_bottomless()) || (!is_topless() && is_bottomless()))
+		if((is_topless && !is_bottomless) || (!is_topless && is_bottomless))
 			dat += "...are partially clothed."
 		else
 			dat += "...are clothed."

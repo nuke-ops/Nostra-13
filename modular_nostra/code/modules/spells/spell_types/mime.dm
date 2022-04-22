@@ -36,7 +36,7 @@
 			return
 		else
 			to_chat(H, "<span class='warning'>Nothing forms around your body!</span>")
-			H.equip_to_slot_if_possible(make_item(), SLOT_WEAR_SUIT)
+			H.equip_to_slot_if_possible(make_item(), ITEM_SLOT_OCLOTHING)
 
 /obj/item/clothing/suit/space/hardsuit/invmime
 	name = "suspenders"

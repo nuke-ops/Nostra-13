@@ -191,7 +191,7 @@
 			continue
 		visible_message("<span class='danger'>[src] grabs hold of [L]!</span>")
 		var/mob/living/carbon/C = L
-		var/obj/item/clothing/S = C.get_item_by_slot(SLOT_WEAR_SUIT)
+		var/obj/item/clothing/S = C.get_item_by_slot(ITEM_SLOT_OCLOTHING)
 		if(S && S.resistance_flags & GOLIATH_RESISTANCE)
 			L.Stun(25)
 		else if(S && S.resistance_flags & GOLIATH_WEAKNESS)
@@ -200,7 +200,7 @@
 			L.Stun(75)
 		L.adjustBruteLoss(rand(15,20)) // Less stun more harm
 		latched = TRUE
-	for(var/obj/mecha/M in loc)
+	for(var/obj/vehicle/sealed/mecha/M in loc)
 		M.take_damage(20, BRUTE, null, null, null, 25)
 	if(!latched)
 		retract()
