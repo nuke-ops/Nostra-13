@@ -47,3 +47,9 @@
       else.
   - bugfix: Splits interactions that expected you to only have one genital.
   - code_imp: Files have been created for labeling reasons.
+2022-04-23:
+  maksxpl:
+  - rscadd: Added sprites bluespace_extinguisher0 and bluespace_extinguisher1
+  - tweak: tweaked bluespace extinguisher description
+  - bugfix: fixed bluespace extingiuisher going invisible when in active form
+  - bugfix: Fixes the radsuit sprites.
