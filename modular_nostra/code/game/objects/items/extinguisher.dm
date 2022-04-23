@@ -1,9 +1,11 @@
 /obj/item/extinguisher/bluespace
 	name = "bluespace fire extinguisher"
 	desc = "Even more advanced fire extinguisher for all your needs!"
+	desc = "An advanced fire extinguisher with extended capacity and range."
 	icon = 'modular_nostra/icons/obj/items_and_weapons.dmi'
 	icon_state = "bluespace_extinguisher0"
 	item_state = "bluespace_extinguisher"
+	sprite_name = "bluespace_extinguisher"
 	lefthand_file = 'modular_nostra/icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'modular_nostra/icons/mob/inhands/items_righthand.dmi'
 	hitsound = 'sound/weapons/smash.ogg'
