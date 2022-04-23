@@ -1,0 +1,7 @@
+author: maksxpl
+delete-after: true
+changes:
+  - rscadd: Added sprites bluespace_extinguisher0 and bluespace_extinguisher1
+  - tweak: tweaked bluespace extinguisher description
+  - bugfix: fixed bluespace extingiuisher going invisible when in active form
+  - bugfix: Fixes the radsuit sprites.
