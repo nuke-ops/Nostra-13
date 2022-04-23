@@ -12,7 +12,7 @@
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy, /obj/item/storage/fancy/cigarettes, /obj/item/lighter)
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
-/obj/item/clothing/head/hooded/winterhood
+/obj/item/clothing/head/hooded/winterhood/utility
 	name = "utility winter hood"
 	desc = "A hood attached to a bright winter coat."
 	mob_overlay_icon = 'modular_nostra/icons/mob/clothing/head.dmi'
@@ -38,7 +38,7 @@
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/toy, /obj/item/storage/fancy/cigarettes, /obj/item/lighter)
 	mutantrace_variation = STYLE_DIGITIGRADE|STYLE_NO_ANTHRO_ICON
 
-/obj/item/clothing/head/hooded/winterhood
+/obj/item/clothing/head/hooded/winterhood/armor
 	name = "armored winter hood"
 	desc = "A hood attached to a heavily armored winter coat."
 	mob_overlay_icon = 'modular_nostra/icons/mob/clothing/head.dmi'
