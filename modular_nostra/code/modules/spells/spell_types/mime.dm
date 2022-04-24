@@ -39,12 +39,14 @@
 			H.equip_to_slot_if_possible(make_item(), ITEM_SLOT_OCLOTHING)
 
 /obj/item/clothing/suit/space/hardsuit/invmime
-	name = "suspenders"
+	name = "..."
 	desc = "..."
 	alt_desc = "..."
-	icon = 'icons/obj/clothing/belts.dmi'
-	icon_state = "suspenders"
-	item_state = null
+	icon = 'modular_nostra/icons/obj/clothing/suits.dmi'
+	mob_overlay_icon = 'modular_nostra/icons/mob/clothing/suit.dmi'
+	anthro_mob_worn_overlay = 'modular_nostra/icons/mob/clothing/suit_digi.dmi'
+	icon_state = "invis_mime"
+	item_state = "invis_mime"
 	hardsuit_type = "white"
 	slowdown = 0
 	flags_inv = null
@@ -58,13 +60,16 @@
 	visor_flags = STOPSPRESSUREDAMAGE
 
 /obj/item/clothing/head/helmet/space/hardsuit/invismime/update_icon_state()
-	icon_state = "beretblack"
+	icon_state = "invis_mime"
 
 /obj/item/clothing/head/helmet/space/hardsuit/invismime
 	name = "french beret"
 	desc = "..."
-	icon_state = "beretblack"
-	item_state = null
+	icon = 'modular_nostra/icons/obj/clothing/hats.dmi'
+	mob_overlay_icon = 'modular_nostra/icons/mob/clothing/head.dmi'
+	anthro_mob_worn_overlay = 'modular_nostra/icons/mob/clothing/head_muzzled.dmi'
+	icon_state = null
+	item_state = "invis_mime"
 	flags_inv = null
 	hardsuit_type = null
 	armor = list("melee" = 30, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 50, "bio" = 30, "rad" = 50, "fire" = 100, "acid" = 40, "wound" = 5)
