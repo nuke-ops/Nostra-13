@@ -1645,9 +1645,7 @@
 "aMh" = (
 /obj/structure/frame/machine,
 /turf/open/floor/plasteel/white,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "aMi" = (
 /obj/structure/dresser,
 /turf/open/floor/carpet,
@@ -3797,9 +3795,7 @@
 	},
 /obj/machinery/airalarm/directional/south,
 /turf/open/floor/plasteel/white,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "bOV" = (
 /obj/structure/transit_tube/curved{
 	dir = 8
@@ -5299,9 +5295,7 @@
 /obj/structure/plasticflaps/opaque,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "cCQ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/turf_decal/tile{
@@ -17280,9 +17274,7 @@
 	},
 /obj/effect/landmark/start/scientist,
 /turf/open/floor/plasteel/white,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "hZS" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/disposalpipe/junction{
@@ -19133,9 +19125,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "iQS" = (
 /obj/machinery/door/airlock/maintenance{
 	req_access_txt = "12"
@@ -19156,17 +19146,13 @@
 /obj/structure/frame/machine,
 /obj/item/wirecutters,
 /turf/open/floor/plasteel/white,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "iRq" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on{
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "iRr" = (
 /turf/open/floor/plasteel/dark,
 /area/engineering/gravity_generator)
@@ -19184,9 +19170,7 @@
 	dir = 4
 	},
 /turf/closed/wall,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "iRD" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -19982,9 +19966,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/white,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "jir" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /obj/structure/cable{
@@ -20361,9 +20343,7 @@
 	},
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/plasteel/white,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "jrr" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
@@ -21087,9 +21067,7 @@
 "jKo" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/closed/wall,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "jKp" = (
 /obj/structure/table,
 /obj/item/flashlight,
@@ -23024,9 +23002,7 @@
 	},
 /obj/machinery/power/apc/auto_name/north,
 /turf/open/floor/plasteel/white,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "kCQ" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /obj/effect/turf_decal/tile/neutral{
@@ -29449,9 +29425,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "nih" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
@@ -31685,9 +31659,7 @@
 	dir = 6
 	},
 /turf/open/floor/plasteel/white,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "odA" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
@@ -37000,9 +36972,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "qnZ" = (
 /obj/machinery/light{
 	dir = 4
@@ -38980,9 +38950,7 @@
 	c_tag = "Research Storage"
 	},
 /turf/open/floor/plasteel/white,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "reL" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -39282,9 +39250,7 @@
 	icon_state = "1-4"
 	},
 /turf/open/floor/plasteel/white,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "rly" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -48930,9 +48896,7 @@
 /area/command/heads_quarters/hop)
 "vmk" = (
 /turf/closed/wall,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "vmm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 9
@@ -52891,9 +52855,7 @@
 /obj/structure/frame/machine,
 /obj/item/stack/cable_coil,
 /turf/open/floor/plasteel/white,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "wHq" = (
 /obj/structure/table,
 /obj/item/razor,
@@ -53071,9 +53033,7 @@
 /area/maintenance/central)
 "wKD" = (
 /turf/closed/wall/r_wall,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "wKM" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel,
@@ -55599,9 +55559,7 @@
 /obj/structure/window/reinforced/spawner,
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/plasteel,
-/area/science/lab{
-	name = "Mineral Storeroom"
-	})
+/area/science/lab)
 "xHo" = (
 /turf/open/floor/plasteel,
 /area/service/hydroponics)
