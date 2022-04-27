@@ -3987,9 +3987,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "bVk" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -6474,9 +6472,7 @@
 	req_access_txt = "5;47"
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "deH" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -10408,9 +10404,7 @@
 	pixel_y = 28
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "faX" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -13763,9 +13757,7 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "gAG" = (
 /obj/structure/closet/crate,
 /obj/item/assembly/infra,
@@ -17028,9 +17020,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "hTS" = (
 /obj/structure/table,
 /obj/item/newspaper,
@@ -17416,9 +17406,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "idt" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -20620,9 +20608,7 @@
 	},
 /obj/machinery/sleeper,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "jyb" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/structure/chair/office{
@@ -23331,9 +23317,7 @@
 /obj/structure/rack,
 /obj/item/storage/toolbox/emergency/old,
 /turf/open/floor/plasteel,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "kLq" = (
 /obj/structure/window/reinforced/spawner{
 	dir = 8
@@ -23563,9 +23547,7 @@
 	dir = 4
 	},
 /turf/closed/wall/r_wall,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "kQe" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -23878,9 +23860,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "kWB" = (
 /turf/open/floor/wood{
 	icon_state = "wood-broken5"
@@ -23993,9 +23973,7 @@
 	},
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "laa" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on{
 	dir = 1
@@ -28549,9 +28527,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "mQa" = (
 /obj/machinery/light{
 	dir = 4
@@ -32055,9 +32031,7 @@
 	dir = 9
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "olJ" = (
 /obj/structure/table/optable,
 /turf/open/floor/plasteel/dark,
@@ -32867,9 +32841,7 @@
 	name = "Medical Research Chemistry Shutters"
 	},
 /turf/open/floor/plating,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "oCm" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel,
@@ -35719,9 +35691,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "pRN" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
@@ -35815,9 +35785,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "pTE" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters{
@@ -35825,9 +35793,7 @@
 	name = "Medical Research Chemistry Shutters"
 	},
 /turf/open/floor/plating,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "pTJ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -35843,9 +35809,7 @@
 	},
 /obj/item/storage/firstaid,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "pTP" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -35856,9 +35820,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "pTR" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -35874,9 +35836,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "pUr" = (
 /obj/structure/plasticflaps/opaque,
 /obj/machinery/navbeacon{
@@ -37176,9 +37136,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "qsZ" = (
 /obj/machinery/camera{
 	c_tag = "Terarrium North";
@@ -37206,9 +37164,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "qtO" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
@@ -37246,9 +37202,7 @@
 	name = "Medical Research Chemistry Shutters"
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "qvm" = (
 /obj/machinery/door/airlock/research{
 	name = "Toxins Lab";
@@ -37268,9 +37222,7 @@
 "qvG" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "qvP" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -38561,17 +38513,13 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "qXo" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "qXK" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/machinery/door/airlock/atmos{
@@ -38618,9 +38566,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "qYj" = (
 /obj/machinery/light{
 	dir = 8
@@ -38650,9 +38596,7 @@
 "qYA" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "qYH" = (
 /obj/machinery/atmospherics/miner/nitrogen,
 /turf/open/floor/engine/n2,
@@ -38678,9 +38622,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "qYT" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -39289,9 +39231,7 @@
 	},
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "rlT" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/closed/wall,
@@ -39309,9 +39249,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "rmH" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -39449,15 +39387,11 @@
 	name = "Medical Research Chemistry Shutters"
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "roE" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "rpp" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
@@ -39493,9 +39427,7 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/east,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "rqY" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -40388,9 +40320,7 @@
 /area/hallway/primary/starboard)
 "rNb" = (
 /turf/closed/wall,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "rNu" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/structure/bed/roller,
@@ -40401,9 +40331,7 @@
 	pixel_x = -23
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "rNx" = (
 /obj/structure/table,
 /obj/item/scalpel{
@@ -40411,9 +40339,7 @@
 	},
 /obj/item/circular_saw,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "rND" = (
 /obj/structure/table,
 /obj/machinery/light{
@@ -40421,9 +40347,7 @@
 	},
 /obj/item/retractor,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "rOb" = (
 /obj/machinery/door/airlock/engineering/abandoned{
 	name = "Electrical Maintenance";
@@ -41692,17 +41616,13 @@
 	req_access_txt = "13"
 	},
 /turf/open/floor/plating,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "slm" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "sly" = (
 /obj/structure/bed/roller,
 /obj/effect/turf_decal/tile/blue{
@@ -41797,9 +41717,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "snd" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/closed/wall/r_wall,
@@ -41906,9 +41824,7 @@
 /obj/structure/table,
 /obj/item/hemostat,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "soE" = (
 /obj/machinery/camera{
 	c_tag = "MiniSat External SouthWest";
@@ -41931,9 +41847,7 @@
 "spj" = (
 /obj/structure/table/optable,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "spn" = (
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 4
@@ -41976,9 +41890,7 @@
 /obj/item/razor,
 /obj/item/surgical_drapes,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "sra" = (
 /obj/structure/rack,
 /obj/item/gun/energy/e_gun{
@@ -42445,9 +42357,7 @@
 "sBL" = (
 /obj/machinery/rnd/production/protolathe/department/science,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "sBP" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/high_volume/on{
 	dir = 1
@@ -42468,9 +42378,7 @@
 /obj/item/stack/cable_coil,
 /obj/structure/table/glass,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "sCn" = (
 /obj/structure/table,
 /obj/item/paper_bin,
@@ -42501,17 +42409,13 @@
 /obj/item/clothing/suit/apron/surgical,
 /obj/item/clothing/mask/surgical,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "sDr" = (
 /obj/machinery/computer/operating{
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "sDx" = (
 /obj/structure/chair/office{
 	dir = 8
@@ -42545,9 +42449,7 @@
 	pixel_x = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "sEq" = (
 /turf/closed/wall/r_wall,
 /area/ai_monitored/turret_protected/ai_upload)
@@ -42557,9 +42459,7 @@
 	pixel_y = 5
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "sEQ" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
@@ -42833,9 +42733,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "sJx" = (
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral,
@@ -45408,9 +45306,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "tOp" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "EVA Storage";
@@ -46121,9 +46017,7 @@
 /obj/structure/table/glass,
 /obj/item/storage/box/syringes,
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "ugZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -46574,9 +46468,7 @@
 /area/hallway/primary/fore)
 "upP" = (
 /turf/closed/wall/r_wall,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "upZ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 9
@@ -51072,9 +50964,7 @@
 /area/service/library)
 "waA" = (
 /turf/open/floor/plasteel,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "waO" = (
 /obj/machinery/computer/scan_consolenew{
 	dir = 4
@@ -52426,9 +52316,7 @@
 	icon_state = "2-4"
 	},
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "wzk" = (
 /obj/structure/closet/secure_closet/hydroponics,
 /obj/item/storage/bag/plants/portaseeder,
@@ -54287,9 +54175,7 @@
 /area/command/teleporter)
 "xjs" = (
 /turf/open/floor/plasteel/white,
-/area/science/research{
-	name = "Medical Research"
-	})
+/area/science/research/abandoned)
 "xjB" = (
 /turf/closed/wall,
 /area/service/chapel/main)
