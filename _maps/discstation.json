@@ -1,0 +1,11 @@
+{
+    "map_name": "Disc Station",
+    "map_path": "map_files/DiscStation",
+    "map_file": "DiscStation.dmm",
+    "shuttles": {
+	    "emergency": "emergency_disc",
+	    "ferry": "ferry_fancy",
+	    "cargo": "cargo_box",
+	    "whiteship": "whiteship_box"
+    }
+}
