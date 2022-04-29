@@ -63,3 +63,5 @@ endmap
 map diystation
 endmap
 
+map discstation
+endmap
