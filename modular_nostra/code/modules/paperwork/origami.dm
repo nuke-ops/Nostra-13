@@ -113,7 +113,7 @@
 		return
 
 	var/list/radial_list = list(
-		"Paper plane" = image(icon = 'modular_nostra/icons/obj/bureaucracy.dmi', icon_state = "paperplane"),
+		"Paper plane" = image(icon = 'icons/obj/bureaucracy.dmi', icon_state = "paperplane"),
 		"Paper crane" = image(icon = 'modular_nostra/icons/obj/bureaucracy.dmi', icon_state = "papercrane"),
 		"Paper frog" = image(icon = 'modular_nostra/icons/obj/bureaucracy.dmi', icon_state = "paperfrog"),
 		"Paper boat" = image(icon = 'modular_nostra/icons/obj/bureaucracy.dmi', icon_state = "paperboat")

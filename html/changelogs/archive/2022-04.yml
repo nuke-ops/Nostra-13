@@ -87,3 +87,33 @@
       how to use them)
   timothyteakettle:
   - spellcheck: trashcan quirk now uses correct grammar
+2022-04-23:
+  maksxpl:
+  - rscadd: Added sprites bluespace_extinguisher0 and bluespace_extinguisher1
+  - tweak: tweaked bluespace extinguisher description
+  - bugfix: fixed bluespace extingiuisher going invisible when in active form
+  - bugfix: Fixes the radsuit sprites.
+2022-04-24:
+  Walks-In-Shadows:
+  - rscadd: Sundowners Armor - "I'm fucking invincible!", Comes with a deployable
+      shield!
+  - rscadd: Bloodlust - "I'll split you in two!", a heavy blade able to dish out some
+      wicked damage. Try not to slip or you might be fucked.
+  - rscadd: Jetstream Sams Armor - "Show me a good time Jack!", some light speedy
+      armor so you can really cause some Blood-shed.
+  - rscadd: Murasama - "The only thing I know for real...", able to deflect *most*
+      bullets just as Jetstream Sam can! Doesn't block everything, so your not fucking
+      invincible.
+  - rscadd: Bladewolf Borg Summon, included in the Jetstream Sam Uplink package.
+  - rscadd: Monsoons Armor - Able to manipulate the forces of- **MAGNETIC POWER!!!!**
+  - rscadd: Dystopia - Small blade, that pack a hefty punch when thrown, also return
+      to the user!
+  - rscadd: Bamboo Samurai Armor, available in the crafting menu. Gives Botany more
+      purpose then just Durathread.
+  - rscadd: Carrot Glaive, honestly it's just as stupid as it sounds.
+  - tweak: Origami.dm, no more invisible default airplanes!
+  - imageadd: MGR Suits, Weaponry and Spell Icons.
+  - soundadd: Shield Deploy and Retract SFX's
+2022-04-29:
+  RanDoomGuy21:
+  - rscadd: added disc into rotation
