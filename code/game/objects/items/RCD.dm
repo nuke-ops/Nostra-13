@@ -554,7 +554,7 @@ RLD
 	playsound(src.loc, 'sound/machines/click.ogg', 50, TRUE)
 	return TRUE
 
-/obj/item/construction/rcd/Initialize()
+/obj/item/construction/rcd/Initialize(mapload)
 	. = ..()
 	airlock_electronics = new(src)
 	airlock_electronics.name = "Access Control"
@@ -684,7 +684,7 @@ RLD
 		cut_overlays()	//To prevent infinite stacking of overlays
 		add_overlay("[icon_state]_charge[ratio]")
 
-/obj/item/construction/rcd/Initialize()
+/obj/item/construction/rcd/Initialize(mapload)
 	. = ..()
 	update_icon()
 
@@ -821,7 +821,7 @@ RLD
 	var/color_choice = null
 
 
-/obj/item/construction/rld/Initialize()
+/obj/item/construction/rld/Initialize(mapload)
 	. = ..()
 	update_icon()
 
