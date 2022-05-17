@@ -419,6 +419,11 @@
 	description = "The Nanotrasen Emergency Shuttle Port(NES Port for short) is a shuttle used at other less known Nanotrasen facilities and has a more open inside for larger crowds, but fewer onboard shuttle facilities."
 	credit_cost = 500
 
+/datum/map_template/shuttle/emergency/disc
+   suffix = "disc"
+   name = "discstation emergency shuttle"
+   can_be_bought = FALSE
+   
 // /datum/map_template/shuttle/emergency/rollerdome
 // 	suffix = "rollerdome"
 // 	name = "Uncle Pete's Rollerdome"
@@ -607,6 +612,10 @@
 // /datum/map_template/shuttle/arrival/donut
 // 	suffix = "donut"
 // 	name = "arrival shuttle (Donut)"
+
+/datum/map_template/shuttle/arrival/disc
+    suffix = "disc"
+    name = "arrival shuttle (disc)"
 
 /datum/map_template/shuttle/infiltrator/basic
 	suffix = "basic"
