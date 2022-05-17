@@ -39,3 +39,16 @@
       disk
   - balance: Synths and non Synths can now be brainwashed equally
   - bugfix: Brainwash surgery not working with synths due to metal heads
+2022-05-17:
+  RanDoomGuy21:
+  - rscadd: cryogenic to dorm
+  - rscadd: added a few things here and there in bar, including a jukebox. i tried.
+  - rscadd: added Action Figures all over DiscStation.
+  - rscadd: added more vendors to every department.
+  - rscadd: put a few things into cargo to sell, very useful.
+  - bugfix: HOPEFULLY fixed the shuttle issue on DiscStation
+  - bugfix: added Pipes to Disc Atmos that were missing.
+  - tweak: changed access on the maintenance doors going from engie hall and departures
+      hall to brig maint, also changed departures bar access to bartender only
+  - tweak: Moth fluff no longer hidden when wearing hardsuits. (i hope)
+  - balance: removed the deagle mags from vault, obvious reasons.
