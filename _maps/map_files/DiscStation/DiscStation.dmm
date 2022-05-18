@@ -564,6 +564,15 @@
 "anN" = (
 /turf/open/floor/holofloor/plating,
 /area/holodeck/rec_center)
+"aob" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
 "aoq" = (
 /obj/machinery/vending/medical,
 /obj/effect/turf_decal/tile/neutral,
@@ -73796,7 +73805,7 @@ sEQ
 lnW
 jVv
 dIz
-uXd
+aob
 uaS
 sSe
 uaS
