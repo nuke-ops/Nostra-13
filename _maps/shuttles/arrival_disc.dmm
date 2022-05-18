@@ -2,6 +2,10 @@
 "a" = (
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/arrival)
+"f" = (
+/obj/structure/lattice,
+/turf/template_noop,
+/area/template_noop)
 "g" = (
 /obj/docking_port/mobile/arrivals{
 	dwidth = 5;
@@ -93,8 +97,13 @@
 "J" = (
 /turf/open/floor/mineral/titanium/tiled/blue,
 /area/shuttle/arrival)
+"K" = (
+/obj/structure/closet/emcloset,
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/shuttle/arrival)
 "M" = (
 /obj/structure/closet/wardrobe/green,
+/obj/item/storage/toolbox/emergency/old,
 /turf/open/floor/mineral/titanium/tiled/blue,
 /area/shuttle/arrival)
 "Q" = (
@@ -137,7 +146,7 @@ V
 l
 V
 a
-h
+f
 a
 V
 l
@@ -148,7 +157,7 @@ a
 a
 z
 J
-J
+K
 a
 h
 a
@@ -189,7 +198,7 @@ t
 J
 t
 V
-h
+f
 V
 t
 J
@@ -241,7 +250,7 @@ w
 V
 w
 B
-h
+f
 B
 w
 V
