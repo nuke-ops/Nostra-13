@@ -52,3 +52,11 @@
       hall to brig maint, also changed departures bar access to bartender only
   - tweak: Moth fluff no longer hidden when wearing hardsuits. (i hope)
   - balance: removed the deagle mags from vault, obvious reasons.
+2022-05-19:
+  RanDoomGuy21:
+  - rscadd: added a emergency toolbox to each arrival shuttle pod
+  - rscadd: added missing lathes to departments
+  - rscadd: added a axes to atmos and bridge
+  - bugfix: added a few missing wires and wired a few wires to the main grid
+  - rscdel: removed some windows in the windowed space maintenance so the doors can
+      close

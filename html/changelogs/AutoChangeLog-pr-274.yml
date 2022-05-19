@@ -1,9 +1,0 @@
-author: RanDoomGuy21
-delete-after: true
-changes:
-  - rscadd: added a emergency toolbox to each arrival shuttle pod
-  - rscadd: added missing lathes to departments
-  - rscadd: added a axes to atmos and bridge
-  - bugfix: added a few missing wires and wired a few wires to the main grid
-  - rscdel: removed some windows in the windowed space maintenance so the doors can
-      close
