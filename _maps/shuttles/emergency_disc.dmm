@@ -197,6 +197,12 @@
 	name = "Disc Emergency Shuttle";
 	width = 18
 	},
+/obj/structure/fans/tiny,
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/shuttle/escape)
+"vJ" = (
+/obj/machinery/door/airlock/shuttle/glass,
+/obj/structure/fans/tiny,
 /turf/open/floor/mineral/titanium/tiled/blue,
 /area/shuttle/escape)
 "wa" = (
@@ -415,12 +421,12 @@ Hg
 Hg
 Hg
 dF
-KZ
+vJ
 dF
-KZ
+vJ
 uV
 dF
-KZ
+vJ
 dF
 Hg
 Hg
