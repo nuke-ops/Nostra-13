@@ -1,9 +1,0 @@
-author: RanDoomGuy21
-delete-after: true
-changes:
-  - rscadd: Added cams to xenobio
-  - rscadd: added a few wires missing
-  - rscadd: added a few buttons to areas so people dont get locked in
-  - rscadd: added forgotten cameras in xenobio and moved a table
-  - rscadd: added a few pipes and fixes the toxins chamber
-  - bugfix: fixed mineral piles across the station
