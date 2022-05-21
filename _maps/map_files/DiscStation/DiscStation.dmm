@@ -16326,7 +16326,8 @@
 /obj/machinery/button{
 	id = "arrivaleva";
 	name = "Arrivals EVA";
-	pixel_y = -32
+	pixel_y = -32;
+	req_access_txt = "18"
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/checkpoint/auxiliary)
@@ -24572,7 +24573,8 @@
 /obj/machinery/button{
 	id = "arrivalsec";
 	name = "Arrivals Security Shutters";
-	pixel_x = -25
+	pixel_x = -25;
+	req_access_txt = "63"
 	},
 /turf/open/floor/plasteel,
 /area/security/checkpoint/auxiliary)
