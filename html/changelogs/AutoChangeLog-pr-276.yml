@@ -1,0 +1,9 @@
+author: RanDoomGuy21
+delete-after: true
+changes:
+  - rscadd: Added a locker with old stuff.
+  - rscdel: Removed the door leading into space in maints, completely useless and
+      made that room its own tiny wall mistery.
+  - tweak: changed the atmos room in arrivals to be atmos only, since you can pretty
+      much sabotage atmos from there.
+  - bugfix: fixed the buttons that didnt close shutters, yay!
