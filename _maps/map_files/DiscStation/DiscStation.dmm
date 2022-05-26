@@ -3709,7 +3709,13 @@
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
 "bFZ" = (
-/obj/machinery/suit_storage_unit/standard_unit,
+/obj/structure/rack,
+/obj/item/clothing/shoes/sneakers/black,
+/obj/item/clothing/under/color/black,
+/obj/item/clothing/suit/space,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/head/helmet/space,
+/obj/item/clothing/gloves/color/black,
 /turf/open/floor/plasteel/dark,
 /area/security/checkpoint/auxiliary)
 "bGk" = (
@@ -17651,85 +17657,7 @@
 	name = "dusty security helmet"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/closet/secure_closet/personal{
-	desc = "it smells like security, probably left here by the warden.";
-	name = "Old and Dusty locker";
-	req_access_txt = "1"
-	},
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/effect/decal/cleanable/cobweb,
-/obj/item/clothing/shoes/sneakers/black{
-	desc = "A pair of old black shoes used by the security force... years ago.";
-	name = "old black shoes"
-	},
-/obj/item/clothing/shoes/sneakers/black{
-	desc = "A pair of old black shoes used by the security force... years ago.";
-	name = "old black shoes"
-	},
-/obj/item/clothing/shoes/sneakers/black{
-	desc = "A pair of old black shoes used by the security force... years ago.";
-	name = "old black shoes"
-	},
-/obj/item/clothing/under/color/red{
-	desc = "A standard issue Security jumpsuit. this one seems old and dusty, the armor in it has crumbled";
-	name = "Old Security jumpsuit"
-	},
-/obj/item/clothing/under/color/red{
-	desc = "A standard issue Security jumpsuit. this one seems old and dusty, the armor in it has crumbled";
-	name = "Old Security jumpsuit"
-	},
-/obj/item/clothing/under/color/red{
-	desc = "A standard issue Security jumpsuit. this one seems old and dusty, the armor in it has crumbled";
-	name = "Old Security jumpsuit"
-	},
-/obj/item/clothing/suit/armor/vest/alt{
-	desc = "An Old and Dusty Type I armored vest, despite that it works flawlessly.";
-	name = "dusty armor vest"
-	},
-/obj/item/clothing/suit/armor/vest/alt{
-	desc = "An Old and Dusty Type I armored vest, despite that it works flawlessly.";
-	name = "dusty armor vest"
-	},
-/obj/item/clothing/suit/armor/vest/alt{
-	desc = "An Old and Dusty Type I armored vest, despite that it works flawlessly.";
-	name = "dusty armor vest"
-	},
-/obj/item/clothing/gloves/color/black{
-	desc = "shake them out before putting them on, you might cause another spider infestation!";
-	name = "old and dusty black gloves"
-	},
-/obj/item/clothing/gloves/color/black{
-	desc = "shake them out before putting them on, you might cause another spider infestation!";
-	name = "old and dusty black gloves"
-	},
-/obj/item/clothing/gloves/color/black{
-	desc = "shake them out before putting them on, you might cause another spider infestation!";
-	name = "old and dusty black gloves"
-	},
-/obj/item/clothing/head/helmet{
-	desc = "An old Standard Security gear helmet. Despite that protects from damage flawlessly.";
-	name = "dusty security helmet"
-	},
-/obj/item/clothing/head/helmet{
-	desc = "An old Standard Security gear helmet. Despite that protects from damage flawlessly.";
-	name = "dusty security helmet"
-	},
-/obj/item/clothing/head/helmet{
-	desc = "An old Standard Security gear helmet. Despite that protects from damage flawlessly.";
-	name = "dusty security helmet"
-	},
-/obj/item/gun/energy/taser{
-	desc = "A low-capacity, energy-based stun gun used by security teams to subdue targets at range. sadly this one does not work as well as it used to.";
-	name = "old taser gun"
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/closet/secure_closet/personal{
-	desc = "it smells like security, probably left here by the warden.";
-	name = "Old and Dusty locker";
-	req_access_txt = "1"
-	},
+/obj/structure/closet,
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "hPi" = (
@@ -22671,10 +22599,6 @@
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
 "jYF" = (
-/obj/structure/table/glass,
-/obj/item/clothing/glasses/hud/health,
-/obj/item/stamp/cmo,
-/obj/item/folder/white,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -22688,6 +22612,7 @@
 	dir = 4;
 	pixel_x = -24
 	},
+/obj/machinery/computer/card/minor/cmo,
 /turf/open/floor/plasteel/white,
 /area/command/heads_quarters/cmo)
 "jYH" = (
@@ -23218,6 +23143,10 @@
 	dir = 4
 	},
 /obj/machinery/airalarm/directional/north,
+/obj/item/toy/figure/qm{
+	pixel_x = -1;
+	pixel_y = 10
+	},
 /turf/open/floor/plasteel,
 /area/cargo/qm)
 "kjq" = (
@@ -23235,6 +23164,9 @@
 	name = "Chief Medical Officer RC";
 	pixel_x = -32
 	},
+/obj/item/stamp/cmo,
+/obj/item/folder/white,
+/obj/item/clothing/glasses/hud/health,
 /turf/open/floor/plasteel/white,
 /area/command/heads_quarters/cmo)
 "kjz" = (
@@ -26656,22 +26588,6 @@
 	pixel_x = -26;
 	req_access_txt = "1"
 	},
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on,
-/obj/effect/turf_decal/tile/red{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/red{
-	dir = 1
-	},
-/obj/machinery/button/door{
-	id = "Arrivals Security Shutters";
-	name = "Shutters";
-	pixel_x = -26;
-	req_access_txt = "1"
-	},
 /turf/open/floor/plasteel,
 /area/security/checkpoint/auxiliary)
 "lEK" = (
@@ -29752,18 +29668,6 @@
 	pixel_y = -26;
 	req_access_txt = "19"
 	},
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/machinery/door/poddoor/shutters{
-	id = "arrivaleva";
-	name = "E.V.A. Arrivals shutter"
-	},
-/obj/machinery/button/door{
-	name = "Arrivals E.V.A.";
-	pixel_y = -26;
-	req_access_txt = "19"
-	},
 /turf/open/floor/plasteel/dark,
 /area/security/checkpoint/auxiliary)
 "mOk" = (
@@ -32809,13 +32713,6 @@
 /obj/machinery/door/airlock/external{
 	name = "Escape Pod One"
 	},
-/obj{
-	name = "---Merge conflict marker---"
-	},
-/obj/machinery/door/airlock/external{
-	name = "Escape Pod One"
-	},
-/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/hallway/primary/starboard)
 "nZe" = (
@@ -35376,6 +35273,12 @@
 	},
 /turf/open/floor/plasteel,
 /area/engineering/atmos)
+"oXx" = (
+/obj/machinery/computer/card/minor/ce{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/command/heads_quarters/ce)
 "oXH" = (
 /obj/structure/window/reinforced/spawner,
 /obj/machinery/door/window/eastleft{
@@ -52490,8 +52393,9 @@
 /turf/open/floor/plasteel,
 /area/service/theater/mime)
 "vMO" = (
-/obj/structure/table,
-/obj/item/toy/figure/qm,
+/obj/machinery/computer/card/minor/qm{
+	dir = 1
+	},
 /turf/open/floor/plasteel,
 /area/cargo/qm)
 "vMT" = (
@@ -53262,9 +53166,6 @@
 "war" = (
 /obj/machinery/atmospherics/pipe/simple/general/hidden{
 	dir = 6
-	},
-/obj/structure/closet/secure_closet/personal{
-	req_access_txt = "1"
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
@@ -86703,7 +86604,7 @@ jYb
 tdm
 cgT
 aqY
-cgT
+oXx
 jYb
 jas
 jas
