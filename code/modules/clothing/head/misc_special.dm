@@ -16,11 +16,9 @@
 /obj/item/clothing/head/welding
 	name = "welding helmet"
 	desc = "A head-mounted face cover designed to protect the wearer completely from space-arc eye."
-	//nostra changes start
-	icon = 'modular_nostra/icons/obj/clothing/hats.dmi'
+	icon = 'modular_nostra/icons/obj/clothing/hats.dmi' 	//nostra changes start
 	mob_overlay_icon = 'modular_nostra/icons/mob/clothing/head.dmi'
-	anthro_mob_worn_overlay = 'modular_nostra/icons/mob/clothing/head_muzzled.dmi'
-	//nostra changes end
+	anthro_mob_worn_overlay = 'modular_nostra/icons/mob/clothing/head_muzzled.dmi'  	//nostra changes end
 	icon_state = "welding"
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	item_state = "welding"
