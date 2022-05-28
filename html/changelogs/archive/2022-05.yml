@@ -79,6 +79,7 @@
 2022-05-28:
   AnonChangechong:
   - rscadd: Added two new rooms to Charlie Station.
+  - bugfix: Deletes slipped meteor thingy.
   RanDoomGuy21:
   - rscdel: Removed tazer, very sad
   - rscdel: removed tiny fans in some pod bays
