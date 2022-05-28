@@ -7862,7 +7862,6 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/ancientstation)
 "Nv" = (
-/obj/effect/meteor/irradiated,
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/airless{
 	icon_state = "platingdmg3"
