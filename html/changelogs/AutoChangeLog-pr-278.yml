@@ -1,0 +1,7 @@
+author: RanDoomGuy21
+delete-after: true
+changes:
+  - rscdel: Removed tazer, very sad
+  - rscdel: removed tiny fans in some pod bays
+  - bugfix: fixed solar smes being setup weird
+  - bugfix: fixed shutters
