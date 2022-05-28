@@ -76,3 +76,6 @@
   - tweak: changed the atmos room in arrivals to be atmos only, since you can pretty
       much sabotage atmos from there.
   - bugfix: fixed the buttons that didnt close shutters, yay!
+2022-05-28:
+  AnonChangechong:
+  - rscadd: Added two new rooms to Charlie Station.
