@@ -57471,7 +57471,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/closed/wall,
+/turf/open/floor/plating,
 /area/maintenance/department/security/brig)
 "mtI" = (
 /obj/structure/cable{

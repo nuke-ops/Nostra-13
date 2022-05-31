@@ -9840,19 +9840,12 @@
 /turf/open/floor/plasteel/freezer,
 /area/commons/toilet/restrooms)
 "aqq" = (
-/obj/structure/rack,
-/obj/item/storage/toolbox/emergency{
-	pixel_x = -3;
-	pixel_y = 3
-	},
-/obj/item/pickaxe,
-/obj/item/storage/toolbox/emergency,
-/obj/item/shovel,
 /obj/machinery/camera{
 	c_tag = "Mining Dock";
 	dir = 4
 	},
 /obj/effect/turf_decal/bot,
+/obj/structure/closet/wardrobe/miner,
 /turf/open/floor/plasteel,
 /area/cargo/miningdock)
 "aqr" = (
@@ -10384,6 +10377,13 @@
 /obj/item/paper_bin,
 /obj/item/pen,
 /obj/effect/turf_decal/bot,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/pickaxe,
+/obj/item/shovel,
 /turf/open/floor/plasteel,
 /area/cargo/miningdock)
 "arl" = (
