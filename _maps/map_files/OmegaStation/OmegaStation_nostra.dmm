@@ -41495,6 +41495,14 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /turf/closed/wall/mineral/plastitanium,
 /area/hallway/secondary/exit)
+"bUt" = (
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/structure/closet/wardrobe/miner,
+/turf/open/floor/plasteel/dark,
+/area/cargo/storage)
 "bWO" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
@@ -44884,6 +44892,21 @@
 /obj/item/book/codex_gigas,
 /turf/open/floor/wood,
 /area/service/library)
+"jot" = (
+/obj/effect/turf_decal/delivery,
+/obj/effect/turf_decal/stripes/line{
+	dir = 4
+	},
+/obj/machinery/status_display/supply{
+	pixel_x = -32
+	},
+/obj/machinery/light{
+	dir = 8;
+	light_color = "#e8eaff"
+	},
+/obj/structure/closet/wardrobe/miner,
+/turf/open/floor/plasteel/dark,
+/area/cargo/storage)
 "jpv" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
 /obj/machinery/light{
@@ -45607,13 +45630,11 @@
 /turf/open/floor/plasteel,
 /area/engineering/atmos)
 "kWJ" = (
-/obj/structure/closet/wardrobe/cargotech{
-	anchored = 1
-	},
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
 	},
+/obj/structure/closet/wardrobe/miner,
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
 "kWS" = (
@@ -98673,8 +98694,8 @@ bCV
 jju
 hbo
 kWJ
-xcN
-aoA
+jot
+bUt
 adn
 alz
 akK
