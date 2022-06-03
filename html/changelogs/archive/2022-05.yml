@@ -85,3 +85,39 @@
   - rscdel: removed tiny fans in some pod bays
   - bugfix: fixed solar smes being setup weird
   - bugfix: fixed shutters
+2022-05-14:
+  Putnam3145:
+  - rscadd: Smelly gases (Bromine, methane, ammonia, nitric oxide and stimulum in
+      particular)
+  - rscadd: Easier-to-make-visible gases; gases made visible with this system are
+      bromine and hydrogen (plus nitryl, but that was already visible in the same
+      way)
+  - bugfix: 'Scrubbers scrub chems properly tweak: Air alarms now show all gases,
+      not just ones they''re hardcoded to show tweak: Contaminated now only removes
+      "dangerous" gases (this is actually a consequence of the hardcode reduction)
+      tweak: Water vapor is now counted as DANGEROUS (this makes it included in "contaminated"
+      and adds admin logging when people open water vapor cans)'
+2022-05-17:
+  timothyteakettle:
+  - rscadd: poly alt cloak can now be renamed/dedescriptioned in loadout
+2022-05-19:
+  BongaTheProto:
+  - admin: Added logging for stepping/trampling on people
+  timothyteakettle:
+  - rscadd: quirks are now organised into three tabs for positive, neutral and negative
+2022-05-21:
+  Bhijn & Myr:
+  - bugfix: Blood trails no longer have a duplicate directionless iconstate as their
+      base sprite, fixing the Wonkiness of blood trails going west/east.
+  SandPoot:
+  - bugfix: Silicon flavor texts are no longer broken... maybe?
+2022-05-23:
+  BongaTheProto:
+  - bugfix: fixes the bug where reagents won't add through view variables if you enter
+      their full path
+2022-05-24:
+  SandPoot:
+  - rscadd: You can now make shuttle seats with titanium.
+2022-05-27:
+  BongaTheProto:
+  - bugfix: fixes extreme and harmful prefs so they're ABLE TO BE SAVED!! FINALLY!!!
