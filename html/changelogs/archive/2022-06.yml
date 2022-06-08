@@ -1,6 +1,4 @@
 2022-06-01:
-  RanDoomGuy21:
-  - rscadd: replaces 3 cargo wardrobe lockers with 3 miner wardrobe lockers on omega
   Bhijn & Myr:
   - bugfix: You can no longer attach multiple tracking beacons to a single mech, fixing
       an exploit where mechs can be nuked with minimal effort.
@@ -41,6 +39,8 @@
   Putnam3145:
   - balance: Nitryl is higher risk, can't be sold for as much
   - refactor: Gas prices are now part of the gas data structure
+  RanDoomGuy21:
+  - rscadd: replaces 3 cargo wardrobe lockers with 3 miner wardrobe lockers on omega
   TrojanCoyote:
   - rscadd: sprites for muzzled and non muzzled mobs for the masks, along with the
       adjusted versions, icons for the masks as well.
@@ -94,3 +94,7 @@
   Bhijn & Myr:
   - bugfix: Solar panels now actually face the proper direction. This is achieved
       by reducing the iconstate to only 1 dir.
+2022-06-08:
+  RanDoomGuy21:
+  - rscadd: Added a shit load of decals everywhere
+  - rscadd: Added a missing pipe
