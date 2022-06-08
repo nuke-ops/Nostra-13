@@ -95,6 +95,10 @@
   - bugfix: Solar panels now actually face the proper direction. This is achieved
       by reducing the iconstate to only 1 dir.
 2022-06-08:
+  AnonChangechong:
+  - tweak: Reworked Engineering on SmolStation.
+  - tweak: Reworked Atmospherics on SmolStation.
+  - tweak: Reworked Cargo on SmolStation.
   RanDoomGuy21:
   - rscadd: Added a shit load of decals everywhere
   - rscadd: Added a missing pipe
