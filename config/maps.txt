@@ -55,3 +55,6 @@ endmap
 map diystation
 endmap
 
+map The_Rockies
+endmap
+

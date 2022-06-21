@@ -1835,3 +1835,425 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	area_flags = UNIQUE_AREA // fuc u
 	outdoors = TRUE
 	ambientsounds = SPACE
+
+//general store
+
+/area/maintenance/department/Shop/Generalstore
+	name = "Krzychu&Stachu General Store"
+	icon_state = "fpmaint"
+
+//cargo areas
+
+/area/cargo/warehouse/mountain
+	name = "Mt Indomitable base Warehouse"
+	icon_state = "cargo_warehouse"
+	sound_environment = SOUND_AREA_LARGE_ENCLOSED
+
+/area/cargo/office/mountain
+	name = "Mt Indomitable main base"
+	icon_state = "cargo_office"
+
+/area/cargo/qm/mountain
+	name = "Mt Indomitable QM office"
+	icon_state = "quart_office"
+
+/area/maintenance/department/crew_quarters/dorms/mountain
+	name = "Mt Indomitable base worker dorms"
+	icon_state = "maint_dorms"
+
+/area/service/hydroponics/upper/mountain
+	name = "Mt Indomitable base hydroponics"
+	icon_state = "hydro"
+
+/area/cargo/miningdock/mountain
+	name = "Mt Indomitable mining bay"
+	icon_state = "mining"
+
+/area/maintenance/department/crew_quarters/mountain
+	name = "Mt Indomitable base break room"
+	icon_state = "maint_locker"
+
+/area/service/theater/clown/club
+	name = "Klub Kave"
+	icon_state = "theatre"
+
+/area/service/janitor/dump
+	name = "New Lunenburg Regional Community Recycling Center"
+	icon_state = "janitor"
+	sound_environment = SOUND_AREA_SMALL_ENCLOSED
+	area_flags = BLOBS_ALLOWED | UNIQUE_AREA | CULT_PERMITTED
+
+/area/maintenance/department/General/Hunting
+	name = "Adventure lodge"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/clubmaint
+	name = "Klub kave janitorial closet"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/apartmaint
+	name = "Sandy hollow janitorial closet"
+	icon_state = "fpmaint"
+
+/area/commons/dorms/apartment
+	name = "Sandy hollow apartment complex"
+	icon_state = "dorms"
+
+/area/commons/locker/apartment
+	name = "Sandy hollow recreation area"
+	icon_state = "locker"
+
+/area/commons/fitness/pool/apartment
+	name = "Sandy hollow pool"
+	icon_state = "pool"
+
+/area/service/hydroponics/lobby/lunenburg
+	name = "New Lunenburg greenhouse"
+	icon_state = "hydro"
+
+/area/service/bar/lunenburg
+	name = "27 south"
+	icon_state = "bar"
+	// mood_bonus = 5
+	// mood_message = "<span class='nicegreen'>I love being in the bar!</span>\n"
+	// mood_trait = TRAIT_EXTROVERT
+	// airlock_wires = /datum/wires/airlock/service
+	nightshift_public_area = NIGHTSHIFT_AREA_RECREATION
+	sound_environment = SOUND_AREA_WOODFLOOR
+
+// /area/service/bar/Initialize(mapload)
+// 	. = ..()
+// 	GLOB.bar_areas += src
+
+/area/security/courtroom/lunenburg
+	name = "New lunenburg county courthouse"
+	icon_state = "courtroom"
+	sound_environment = SOUND_AREA_LARGE_ENCLOSED
+
+/area/maintenance/department/chapel/lunenburg
+	name = "St John's angelican church morgue"
+	icon_state = "maint_chapel"
+
+/area/service/chapel/main/monastery/lunenburg
+	name = "St John's angelican church"
+	nightshift_public_area = NIGHTSHIFT_AREA_NONE
+
+/area/service/chapel/office/lunenburg
+	name = "St John's angelican church Office"
+	icon_state = "chapeloffice"
+
+/area/maintenance/bar/lunenburg
+	name = "Mushamush beach bar"
+	icon_state = "bar"
+
+/area/commons/fitness/dojo
+	name = "New Lunenburg muay thai dojo"
+	icon_state = "fitness"
+
+/area/arrival/start/lunenburg
+	name = "New Lunenburg airport"
+	icon_state = "start"
+
+/area/security/lunenburg
+	name = "New Lunenburg RCMP station"
+	icon_state = "security"
+	// ambience_index = AMBIENCE_DANGER
+	ambientsounds = HIGHSEC
+	// airlock_wires = /datum/wires/airlock/security
+	sound_environment = SOUND_AREA_STANDARD_STATION
+
+//Security - AI Monitored
+/area/ai_monitored/security/armory/lunenburg
+	name = "RCMP station armory"
+	icon_state = "armory"
+	// ambience_index = AMBIENCE_DANGER
+	ambientsounds = HIGHSEC
+	clockwork_warp_allowed = FALSE // n omegalul
+	// airlock_wires = /datum/wires/airlock/security
+
+/area/security/checkpoint/lunenburg
+	name = "RCMP station entryway"
+	icon_state = "checkpoint1"
+
+/area/maintenance/department/General/badbois
+	name = "RCMP station prisoner detainment area"
+	icon_state = "fpmaint"
+
+/area/security/lunenburg/spy
+	name = "New Lunenburg RCMP station surveillance room"
+	icon_state = "security"
+	// ambience_index = AMBIENCE_DANGER
+	ambientsounds = HIGHSEC
+	// airlock_wires = /datum/wires/airlock/security
+	sound_environment = SOUND_AREA_STANDARD_STATION
+
+/area/security/lunenburg/outpost
+	name = "New Lunenburg RCMP surveillance post #1"
+	icon_state = "security"
+	// ambience_index = AMBIENCE_DANGER
+	ambientsounds = HIGHSEC
+	// airlock_wires = /datum/wires/airlock/security
+	sound_environment = SOUND_AREA_STANDARD_STATION
+
+/area/engineering/supermatter/lunenburg
+	name = "New Lunenburg tritium generating station reactor"
+	icon_state = "engine_sm"
+	area_flags = BLOBS_ALLOWED | UNIQUE_AREA | CULT_PERMITTED
+	sound_environment = SOUND_AREA_SMALL_ENCLOSED
+
+/area/engineering/engine_smes/lunenburg
+	name = "New Lunenburg tritium generating station power & maintenance room"
+	icon_state = "engine_smes"
+
+/area/command/heads_quarters/ce/lunenburg
+	name = "New Lunenburg tritium generating station chief engineer office"
+	icon_state = "ce_office"
+
+/area/engineering/break_room/lunenburg
+	name = "New Lunenburg tritium generating station break room"
+	icon_state = "engine_break"
+	sound_environment = SOUND_AREA_SMALL_ENCLOSED
+
+/area/engineering/storage/lunenburg
+	name = "New Lunenburg tritium generating station equipment storage"
+	icon_state = "engi_storage"
+	sound_environment = SOUND_AREA_SMALL_ENCLOSED
+
+/area/engineering/lobby/lunenburg
+	name = "New Lunenburg tritium generating station lobby"
+	icon_state = "engi_lobby"
+
+/area/engineering/workshop/lunenburg
+	name = "New Lunenburg tritium generating station workshop"
+	icon_state = "engine"
+
+/area/command/heads_quarters/hop/lunenburg
+	name = "New lunenburg mayor's office lobby"
+	icon_state = "hop_office"
+
+/area/command/lunenburg
+	name = "New Lunenburg mayor's office & quarters"
+	icon_state = "Bridge"
+	ambientsounds = list('sound/ambience/signal.ogg')
+	// airlock_wires = /datum/wires/airlock/command
+	sound_environment = SOUND_AREA_STANDARD_STATION
+
+/area/medical/medbay/lobby/lunenburg
+	name = "Fisherman's memorial hospital lobby"
+	icon_state = "med_lobby"
+
+/area/medical/break_room/lunenburg
+	name = "Fisherman's memorial hospital break room"
+	icon_state = "med_break"
+
+/area/medical/chemistry/lunenburg
+	name = "Fisherman's memorial hospital chemical lab"
+	icon_state = "chem"
+
+/area/medical/genetics/cloning/lunenburg
+	name = "Fisherman's memorial hospital patient reconstruction lab"
+	icon_state = "cloning"
+
+/area/medical/storage/lunenburg
+	name = "Fisherman's memorial hospital medical storage"
+	icon_state = "med_storage"
+
+/area/medical/surgery/lunenburg
+	name = "Fisherman's memorial hospital operating theatre"
+	icon_state = "surgery"
+
+/area/medical/genetics/lunenburg
+	name = "Fisherman's memorial hospital general care room"
+	icon_state = "genetics"
+
+/area/command/heads_quarters/cmo/lunenburg
+	name = "Fisherman's memorial hospital CMO office"
+	icon_state = "cmo_office"
+
+/area/maintenance/department/medical/morgue/lunenburg
+	name = "Fisherman's memorial hospital morgue"
+	icon_state = "morgue_maint"
+
+/area/service/library/lunenburg
+	name = "Margaret Hennigar library"
+	icon_state = "library"
+	// mood_bonus = 5
+	// mood_message = "<span class='nicegreen'>I love being in the library!</span>\n"
+	// mood_trait = TRAIT_INTROVERT
+	area_flags = BLOBS_ALLOWED | UNIQUE_AREA | CULT_PERMITTED
+	sound_environment = SOUND_AREA_LARGE_SOFTFLOOR
+
+/area/science/lab/lunenburg
+	name = "New Lunenburg research lab"
+	icon_state = "research"
+
+/area/science/robotics/lunenburg
+	name = "New Lunenburg technology lab"
+	icon_state = "robotics"
+
+/area/science/xenobiology/lunenburg
+	name = "New Lunenburg xenobiological studies lab"
+	icon_state = "xenobio"
+
+/area/command/heads_quarters/rd/lunenburg
+	name = "New Lunenburg research labs RD office"
+	icon_state = "rd_office"
+
+/area/maintenance/department/General/mech
+	name = "New Lunenburg technology lab garage"
+	icon_state = "fpmaint"
+
+/area/hallway/secondary/entry/lunenburg
+	name = "New Lunenburg arrival centre"
+	icon_state = "entry"
+
+/area/maintenance/department/General/apartporter
+	name = "Sandy hollow complementary CC teleporter storage"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/cabin
+	name = "Suspicious cabin"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/mabin
+	name = "Eerie cabin"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/cult
+	name = "Menacing ruin"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/spicy
+	name = "Chilly ruin"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/retard
+	name = "Shitbag ruin"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/words
+	name = "Knowledge ruin"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/blyat
+	name = "Soviet mining outpost"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/glacier1
+	name = "Unnaturally dense glacier #1"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/glacier2
+	name = "Unnaturally dense glacier #2"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/cave1
+	name = "Cannibal cave"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/cave2
+	name = "Wendigo cave"
+	icon_state = "fpmaint"
+
+/area/science/research/lunenburg
+	name = "Vault 69 main hall"
+	icon_state = "science"
+
+/area/engineering/atmos/lunenburg
+	name = "Vault 69 atmospherics lab"
+	icon_state = "atmos"
+
+/area/ai_monitored/command/nuke_storage/lunenburg
+	name = "Vault 69 {REDACTED} storage"
+	icon_state = "nuke_storage"
+	// airlock_wires = /datum/wires/airlock/command
+	ambientsounds = HIGHSEC
+
+/area/maintenance/disposal/incinerator/lunenburg
+	name = "Vault 69 atmospherics lab incinerator wing"
+	icon_state = "incinerator"
+
+/area/medical/virology/lunenburg
+	name = "Vault 69 bioterror department"
+	icon_state = "virology"
+
+/area/ai_monitored/turret_protected/ai/lunenburg
+	name = "Vault 69 artificial intelligence chamber"
+	icon_state = "ai_chamber"
+
+/area/science/server/lunenburg
+	name = "Vault 69 RnD server farm"
+	icon_state = "server"
+
+/area/maintenance/department/General/radsafe
+	name = "Vault 69 radiation saferoom"
+	icon_state = "fpmaint"
+
+/area/command/heads_quarters/hos/lunenburg
+	name = "Vault 69 head of security office"
+	icon_state = "hos_office"
+
+/area/tcommsat/server/lunenburg
+	name = "Vault 69 communications relay"
+	icon_state = "tcomsatcham"
+
+/area/tcommsat/computer/lunenburg
+	name = "Vault 69 communications relay control room"
+	icon_state = "tcomsatcomp"
+	sound_environment = SOUND_AREA_MEDIUM_SOFTFLOOR
+
+/area/medical/genetics/lunenvault
+	name = "Vault 69 CRISPR experimentation lab"
+	icon_state = "genetics"
+
+/area/science/mixing/lunenburg
+	name = "Vault 69 high yield explosives lab"
+	icon_state = "tox_mix"
+
+/area/engineering/atmos/supermatter
+	name = "Vault 69 supermatter fuel chamber"
+	icon_state = "atmos"
+
+/area/engineering/lobby/vault
+	name = "Vault 69 supermatter engine maintenance & observation"
+	icon_state = "engi_lobby"
+
+/area/engineering/supermatter/lunenburg2
+	name = "Vault 69 supermatter engine chamber"
+	icon_state = "engine_sm"
+	area_flags = BLOBS_ALLOWED | UNIQUE_AREA | CULT_PERMITTED
+	sound_environment = SOUND_AREA_SMALL_ENCLOSED
+
+/area/engineering/atmospherics_engine/lunenburg
+	name = "New Lunenburg tritium generating station reactor room"
+	icon_state = "atmos_engine"
+	area_flags = BLOBS_ALLOWED | UNIQUE_AREA | CULT_PERMITTED
+
+/area/maintenance/department/General/vaultentry
+	name = "Vault 69 entrance hallway"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/sauna
+	name = "Village sauna"
+	icon_state = "fpmaint"
+
+/area/maintenance/department/General/junkbreak
+	name = "Recycling plant break room"
+	icon_state = "fpmaint"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
