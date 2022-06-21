@@ -1,0 +1,11 @@
+{
+    "map_name": "The_Rockies",
+    "map_path": "map_files\The_Rockies",
+    "map_file": "The_Rockies.dmm",
+    "shuttles": {
+	    "emergency": "emergency_omega",
+	    "ferry": "ferry_kilo",
+	    "cargo": "cargo_delta",
+	    "whiteship": "whiteship_meta"
+    }
+}

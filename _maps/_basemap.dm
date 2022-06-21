@@ -14,6 +14,7 @@
 		#include "map_files\LambdaStation\lambda_nostra.dmm"
 		#include "map_files\DIYstation/DIYstation.dmm"
 		#include "map_files\SpookyStation\SpookyStation.dmm"
+		#include "map_files\The_Rockies\The_Rockies.dmm"
 
 		#ifdef CIBUILDING
 			#include "templates.dm"

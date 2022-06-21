@@ -65,3 +65,6 @@ endmap
 
 map discstation
 endmap
+
+map The_Rockies
+endmap
