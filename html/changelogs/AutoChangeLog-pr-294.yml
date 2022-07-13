@@ -1,0 +1,6 @@
+author: AnonChangechong
+delete-after: true
+changes:
+  - bugfix: Connected disposal system in SmolStation medbay.
+  - bugfix: Deleted useless pipes leading to nothing on SmolStation.
+  - bugfix: Added more lights in SmolStation medbay.
