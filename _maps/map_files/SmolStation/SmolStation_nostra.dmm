@@ -17625,6 +17625,9 @@
 /obj/item/storage/backpack/duffelbag/med/surgery{
 	pixel_y = 5
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/surgery)
 "lVS" = (
@@ -21357,9 +21360,6 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/structure/sign/poster/random{
 	pixel_x = 32
 	},
@@ -25335,6 +25335,9 @@
 /obj/machinery/camera/autoname{
 	dir = 4
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/medical/surgery)
 "rnu" = (
@@ -28872,13 +28875,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/machinery/door/airlock/virology{
-	autoclose = 0;
-	frequency = 1449;
-	id_tag = "virology_airlock_exterior";
-	name = "Virology Exterior Airlock";
-	req_access_txt = "39"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
@@ -28887,6 +28883,10 @@
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/virology{
+	name = "Virology Access";
+	req_access_txt = "39"
 	},
 /turf/open/floor/plasteel/dark,
 /area/medical/virology)
