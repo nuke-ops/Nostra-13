@@ -4,3 +4,6 @@
 2022-07-13:
   AnonChangechong:
   - tweak: Reworked medbay on SmolStation.
+  - bugfix: Connected disposal system in SmolStation medbay.
+  - bugfix: Deleted useless pipes leading to nothing on SmolStation.
+  - bugfix: Added more lights in SmolStation medbay.
