@@ -56,6 +56,7 @@
 #define span_icon(str) ("<span class='icon'>" + str + "</span>")
 #define span_info(str) ("<span class='info'>" + str + "</span>")
 #define span_interface(str) ("<span class='interface'>" + str + "</span>")
+#define span_linkify(str) ("<span class='linkify'>" + str + "</span>")
 #define span_looc(str) ("<span class='looc'>" + str + "</span>")
 #define span_medal(str) ("<span class='medal'>" + str + "</span>")
 #define span_medradio(str) ("<span class='medradio'>" + str + "</span>")
@@ -113,3 +114,6 @@
 #define span_warning(str) ("<span class='warning'>" + str + "</span>")
 #define span_yell(str) ("<span class='yell'>" + str + "</span>")
 #define span_yellowteamradio(str) ("<span class='yellowteamradio'>" + str + "</span>")
+
+//SANDSTORM DEFINES
+#define span_love(str) ("<span class='love'>" + str + "</span>")
