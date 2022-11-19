@@ -14379,14 +14379,13 @@
 /obj/machinery/status_display/supply{
 	pixel_y = 32
 	},
-/obj/structure/table,
-/obj/item/folder/yellow,
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
+/obj/machinery/computer/piratepad_control/civilian,
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "baB" = (
@@ -14399,6 +14398,7 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
+/obj/machinery/piratepad/civilian,
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
 "baC" = (
@@ -57243,7 +57243,7 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
-/mob/living/simple_animal/parrot/Poly,
+/mob/living/simple_animal/parrot/Polly,
 /turf/open/floor/plasteel/dark,
 /area/command/heads_quarters/ce)
 "ixH" = (
@@ -64716,13 +64716,13 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/computer/bounty,
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
 	},
+/obj/machinery/computer/piratepad_control/civilian,
 /turf/open/floor/plasteel,
 /area/cargo/qm)
 "mSd" = (
@@ -70855,7 +70855,6 @@
 	departmentType = 2;
 	pixel_y = 30
 	},
-/obj/machinery/computer/bounty,
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
 	},
@@ -70865,6 +70864,7 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
+/obj/machinery/computer/piratepad_control/civilian,
 /turf/open/floor/plasteel,
 /area/cargo/office)
 "qBq" = (
@@ -74976,7 +74976,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/machinery/computer/bounty{
+/obj/machinery/computer/piratepad_control/civilian{
 	dir = 4
 	},
 /turf/open/floor/wood,

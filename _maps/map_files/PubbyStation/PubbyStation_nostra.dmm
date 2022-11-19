@@ -19246,11 +19246,15 @@
 /turf/open/floor/plasteel,
 /area/cargo/qm/private)
 "aTe" = (
-/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/firedoor,
+/obj/machinery/mineral/ore_redemption{
+	input_dir = 4;
+	output_dir = 8
+	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/dark,
 /area/cargo/qm/private)
 "aTf" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
@@ -19749,10 +19753,6 @@
 /turf/open/floor/plasteel,
 /area/cargo/qm/private)
 "aUo" = (
-/obj/machinery/door/airlock/mining/glass{
-	name = "Cargo Bay";
-	req_one_access_txt = "31;48"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -19760,6 +19760,10 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/mining/glass{
+	name = "Cargo Bay";
+	req_one_access_txt = "31;48"
+	},
 /turf/open/floor/plasteel,
 /area/cargo/qm/private)
 "aUp" = (
@@ -20276,19 +20280,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
-/obj/effect/turf_decal/loading_area{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/cargo/qm/private)
-"aVs" = (
-/obj/structure/plasticflaps/opaque,
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "cargodeliver"
-	},
-/obj/effect/turf_decal/delivery,
-/obj/machinery/door/firedoor,
+/obj/machinery/piratepad/civilian,
 /turf/open/floor/plasteel,
 /area/cargo/qm/private)
 "aVt" = (
@@ -20740,14 +20732,6 @@
 "aWu" = (
 /obj/effect/turf_decal/tile/brown,
 /turf/open/floor/plasteel,
-/area/cargo/qm/private)
-"aWv" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/mineral/ore_redemption{
-	input_dir = 4;
-	output_dir = 8
-	},
-/turf/open/floor/plasteel/dark,
 /area/cargo/qm/private)
 "aWw" = (
 /obj/effect/turf_decal/tile/brown,
@@ -22199,7 +22183,7 @@
 /obj/machinery/status_display/supply{
 	pixel_x = -32
 	},
-/obj/machinery/computer/bounty{
+/obj/machinery/computer/piratepad_control/civilian{
 	dir = 4
 	},
 /turf/open/floor/plasteel,
@@ -24082,12 +24066,12 @@
 /turf/open/floor/plasteel,
 /area/cargo/qm)
 "bdH" = (
-/obj/machinery/computer/bounty{
-	dir = 8
-	},
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
+	},
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/cargo/qm)
@@ -43936,7 +43920,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
-/mob/living/simple_animal/parrot/Poly,
+/mob/living/simple_animal/parrot/Polly,
 /turf/open/floor/plasteel,
 /area/command/heads_quarters/ce)
 "bVE" = (
@@ -59034,7 +59018,7 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
 "pHo" = (
-/obj/machinery/computer/bounty{
+/obj/machinery/computer/piratepad_control/civilian{
 	dir = 1
 	},
 /turf/open/floor/wood,
@@ -61321,6 +61305,13 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/department/chapel/monastery)
+"uUF" = (
+/obj/effect/turf_decal/tile/brown,
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/cargo/qm/private)
 "uUQ" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Engineering Maintenance";
@@ -100452,7 +100443,7 @@ aSf
 aTd
 aUn
 aVr
-aWu
+uUF
 aLf
 aYs
 aZk
@@ -100708,8 +100699,8 @@ aRj
 lAs
 aTe
 aUo
-aVs
-aWv
+aPW
+aPW
 aLf
 aPW
 aZl
