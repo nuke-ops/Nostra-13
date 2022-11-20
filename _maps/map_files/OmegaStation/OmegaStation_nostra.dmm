@@ -7464,11 +7464,11 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard/fore)
 "amv" = (
-/obj/machinery/computer/bounty{
-	dir = 4
-	},
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 10
+	},
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/cargo/storage)
@@ -9480,11 +9480,11 @@
 	name = "Cargo Office RC";
 	pixel_x = 32
 	},
-/obj/machinery/computer/bounty{
-	dir = 8
-	},
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 4
+	},
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/cargo/storage)
@@ -11203,7 +11203,6 @@
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/starboard/fore)
 "ass" = (
-/obj/machinery/mineral/mint,
 /obj/structure/sign/poster/official/random{
 	pixel_y = 32
 	},
@@ -19936,7 +19935,7 @@
 	dir = 4;
 	light_color = "#e8eaff"
 	},
-/mob/living/simple_animal/parrot/Poly,
+/mob/living/simple_animal/parrot/Polly,
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -44768,9 +44767,6 @@
 /turf/open/floor/plasteel/dark,
 /area/science/mixing)
 "jdn" = (
-/obj/structure/chair{
-	dir = 1
-	},
 /obj/machinery/airalarm{
 	dir = 1;
 	pixel_y = -22
@@ -44779,6 +44775,7 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
+/obj/machinery/piratepad/civilian,
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard/fore)
 "jfl" = (
@@ -48249,6 +48246,16 @@
 /obj/item/circuitboard/machine/microwave,
 /turf/open/floor/wood,
 /area/maintenance/starboard/aft)
+"rEd" = (
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/tile/brown{
+	dir = 8
+	},
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/starboard/fore)
 "rEx" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 4
@@ -101020,7 +101027,7 @@ amA
 atz
 aog
 apg
-xoE
+rEd
 abt
 abN
 acy

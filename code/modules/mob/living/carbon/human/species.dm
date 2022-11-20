@@ -611,6 +611,10 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		for(var/obj/item/bodypart/B in C.bodyparts)
 			B.change_bodypart_status(initial(B.status), FALSE, TRUE)
 
+	if((TRAIT_ROBOTIC_ORGANISM in inherent_traits) && C.hud_used)
+		C.hud_used.coolant_display.clear()
+
+	SEND_SIGNAL(C, COMSIG_SPECIES_LOSS, src)
 
 // shamelessly inspired by antag_datum.remove_blacklisted_quirks()
 /datum/species/proc/remove_blacklisted_quirks(mob/living/carbon/C)
@@ -836,13 +840,13 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				var/left_state = DEFAULT_LEFT_EYE_STATE
 				var/right_state = DEFAULT_RIGHT_EYE_STATE
 				if(eye_type in GLOB.eye_types)
-					left_state = eye_type + "_left_eye"
-					right_state = eye_type + "_right_eye"
+					left_state = "[eye_type]_left_eye"
+					right_state = "[eye_type]_right_eye"
 				var/mutable_appearance/left_eye = mutable_appearance('icons/mob/eyes.dmi', left_state, -BODY_LAYER)
 				var/mutable_appearance/right_eye = mutable_appearance('icons/mob/eyes.dmi', right_state, -BODY_LAYER)
 				if((EYECOLOR in species_traits) && has_eyes)
-					left_eye.color = "#" + H.left_eye_color
-					right_eye.color = "#" + H.right_eye_color
+					left_eye.color = "#[H.left_eye_color]"
+					right_eye.color = "#[H.right_eye_color]"
 				if(OFFSET_EYES in offset_features)
 					left_eye.pixel_x += offset_features[OFFSET_EYES][1]
 					left_eye.pixel_y += offset_features[OFFSET_EYES][2]
@@ -2581,6 +2585,13 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	if(H.movement_type & FLYING)
 		return TRUE
 	return FALSE
+
+////////////////
+//Blood Stuff///
+////////////////
+// true = handle blood normally, false = do not (and then handle blood in this proc instead please!!)
+/datum/species/proc/handle_blood(mob/living/carbon/human/H, delta_time, times_fired)
+	return TRUE
 
 ////////////////
 //Tail Wagging//

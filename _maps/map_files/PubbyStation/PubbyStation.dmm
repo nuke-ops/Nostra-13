@@ -15742,7 +15742,7 @@
 /area/service/cafeteria/lunchroom)
 "aNb" = (
 /obj/machinery/vending/sustenance{
-	contraband = list(/obj/item/kitchen/knife = 6, /obj/item/reagent_containers/food/drinks/coffee = 12);
+	contraband = list(/obj/item/kitchen/knife=6,/obj/item/reagent_containers/food/drinks/coffee=12);
 	desc = "A vending machine which vends food.";
 	product_ads = "Sufficiently healthy."
 	},
@@ -18187,11 +18187,14 @@
 /turf/open/floor/plasteel,
 /area/cargo/office)
 "aTe" = (
-/obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
 	},
-/turf/open/floor/plating,
+/obj/machinery/mineral/ore_redemption{
+	input_dir = 4;
+	output_dir = 8
+	},
+/turf/open/floor/plasteel,
 /area/cargo/office)
 "aTf" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
@@ -19695,12 +19698,11 @@
 /turf/open/floor/plasteel,
 /area/cargo/office)
 "aWv" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/mineral/ore_redemption{
-	input_dir = 4;
-	output_dir = 8
+/obj/effect/turf_decal/tile/brown,
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 1
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/plasteel,
 /area/cargo/office)
 "aWw" = (
 /obj/effect/turf_decal/tile/brown,
@@ -21140,9 +21142,6 @@
 "aZj" = (
 /obj/machinery/status_display/supply{
 	pixel_x = -32
-	},
-/obj/machinery/computer/bounty{
-	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/cargo/office)
@@ -23008,9 +23007,6 @@
 /turf/open/floor/plasteel,
 /area/cargo/qm)
 "bdH" = (
-/obj/machinery/computer/bounty{
-	dir = 8
-	},
 /obj/effect/turf_decal/tile/brown,
 /obj/effect/turf_decal/tile/brown{
 	dir = 4
@@ -26308,9 +26304,6 @@
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
-	},
-/obj/machinery/posialert{
-	pixel_y = 26
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
@@ -29633,6 +29626,9 @@
 	},
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
+	},
+/obj/machinery/posialert{
+	pixel_x = -32
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/robotics/lab)
@@ -38803,7 +38799,7 @@
 	input_tag = "mix_in";
 	name = "Gas Mix Tank Control";
 	output_tag = "mix_in";
-	sensors = list("mix_sensor" = "Tank")
+	sensors = list("mix_sensor"="Tank")
 	},
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
@@ -40292,7 +40288,7 @@
 	input_tag = "n2o_in";
 	name = "Nitrous Oxide Supply Control";
 	output_tag = "n2o_out";
-	sensors = list("n2o_sensor" = "Tank")
+	sensors = list("n2o_sensor"="Tank")
 	},
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
@@ -41681,7 +41677,7 @@
 	input_tag = "tox_in";
 	name = "Plasma Supply Control";
 	output_tag = "tox_out";
-	sensors = list("tox_sensor" = "Tank")
+	sensors = list("tox_sensor"="Tank")
 	},
 /obj/effect/turf_decal/tile/yellow,
 /obj/effect/turf_decal/tile/yellow{
@@ -42927,7 +42923,7 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
-/mob/living/simple_animal/parrot/Poly,
+/mob/living/simple_animal/parrot/Polly,
 /turf/open/floor/plasteel,
 /area/command/heads_quarters/ce)
 "bVE" = (
@@ -59289,11 +59285,10 @@
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
 "pHo" = (
-/obj/machinery/computer/bounty{
-	dir = 1
-	},
-/turf/open/floor/wood,
-/area/command/heads_quarters/hop)
+/obj/effect/turf_decal/tile/brown,
+/obj/machinery/piratepad/civilian,
+/turf/open/floor/plasteel,
+/area/cargo/office)
 "pJy" = (
 /obj/structure/rack,
 /obj/item/crowbar,
@@ -97203,7 +97198,7 @@ aAG
 aBA
 aCQ
 aDS
-pHo
+aCS
 aAH
 aGu
 aHh
@@ -101589,7 +101584,7 @@ aSe
 aTc
 aOT
 aVp
-aWu
+pHo
 aPW
 aYr
 aOV
@@ -101846,7 +101841,7 @@ aSf
 aTd
 aUn
 aVr
-aWu
+aWv
 aLf
 aYs
 aZk
@@ -102103,7 +102098,7 @@ lAs
 aTe
 aUo
 aVs
-aWv
+aLf
 aLf
 aPW
 aZl
