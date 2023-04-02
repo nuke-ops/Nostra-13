@@ -1,4 +1,3 @@
-/* Nostra change
 // Configuration defines
 #define JOB_MINIMAL_ACCESS CONFIG_GET(flag/jobs_have_minimal_access)
 #define PROTOLOCK_DURING_LOWPOP CONFIG_GET(flag/protolock_during_lowpop)
@@ -22,6 +21,7 @@
 		LAZYSET(context[SCREENTIP_CONTEXT_CTRL_SHIFT_LMB], INTENT_ANY, "Interact with")
 		return CONTEXTUAL_SCREENTIP_SET
 
+/* Nostra change
 ///Adjust the thirst of a mob
 /mob/proc/adjust_thirst(change, max = THIRST_LEVEL_THRESHOLD)
 	thirst = clamp(thirst + change, 0, max)
