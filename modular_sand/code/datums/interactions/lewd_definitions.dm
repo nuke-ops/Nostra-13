@@ -18,8 +18,11 @@
 
 /mob/living
 	var/has_penis = FALSE
+	var/has_balls = FALSE
 	var/has_vagina = FALSE
 	var/has_anus = TRUE
+	var/has_butt = FALSE
+	var/anus_always_accessible = FALSE
 	var/has_breasts = FALSE
 	var/anus_exposed = FALSE
 	var/last_partner
@@ -83,99 +86,48 @@
 	lust = num
 	lastlusttime = world.time
 
-/mob/living/proc/has_penis(visibility = REQUIRE_ANY)
+/mob/living/proc/toggle_anus_always_accessible()
+	anus_always_accessible = !anus_always_accessible
+
+/mob/living/proc/has_genital(slot, visibility = REQUIRE_ANY)
 	var/mob/living/carbon/C = src
-	if(has_penis && !istype(C))
-		return TRUE
 	if(istype(C))
-		var/obj/item/organ/genital/peepee = C.getorganslot(ORGAN_SLOT_PENIS)
-		if(peepee)
+		var/obj/item/organ/genital/genital = C.getorganslot(slot)
+		if(genital)
 			switch(visibility)
 				if(REQUIRE_ANY)
 					return TRUE
 				if(REQUIRE_EXPOSED)
-					if(peepee.is_exposed())
-						return TRUE
-					else
-						return FALSE
+					return genital.is_exposed() || genital.always_accessible
 				if(REQUIRE_UNEXPOSED)
-					if(!peepee.is_exposed())
-						return TRUE
-					else
-						return FALSE
+					return !genital.is_exposed()
 				else
 					return TRUE
 	return FALSE
 
+/mob/living/proc/has_penis(visibility = REQUIRE_ANY)
+	var/mob/living/carbon/C = src
+	if(has_penis && !istype(C))
+		return TRUE
+	return has_genital(ORGAN_SLOT_PENIS, visibility)
+
 /mob/living/proc/has_balls(visibility = REQUIRE_ANY)
 	var/mob/living/carbon/C = src
-	if(istype(C))
-		var/obj/item/organ/genital/peepee = C.getorganslot(ORGAN_SLOT_TESTICLES)
-		if(peepee)
-			switch(visibility)
-				if(REQUIRE_ANY)
-					return TRUE
-				if(REQUIRE_EXPOSED)
-					if(peepee.is_exposed())
-						return TRUE
-					else
-						return FALSE
-				if(REQUIRE_UNEXPOSED)
-					if(!peepee.is_exposed())
-						return TRUE
-					else
-						return FALSE
-				else
-					return TRUE
-	return FALSE
+	if(has_balls && !istype(C))
+		return TRUE
+	return has_genital(ORGAN_SLOT_TESTICLES, visibility)
 
 /mob/living/proc/has_vagina(visibility = REQUIRE_ANY)
 	var/mob/living/carbon/C = src
 	if(has_vagina && !istype(C))
 		return TRUE
-	if(istype(C))
-		var/obj/item/organ/genital/peepee = C.getorganslot(ORGAN_SLOT_VAGINA)
-		if(peepee)
-			switch(visibility)
-				if(REQUIRE_ANY)
-					return TRUE
-				if(REQUIRE_EXPOSED)
-					if(peepee.is_exposed())
-						return TRUE
-					else
-						return FALSE
-				if(REQUIRE_UNEXPOSED)
-					if(!peepee.is_exposed())
-						return TRUE
-					else
-						return FALSE
-				else
-					return TRUE
-	return FALSE
+	return has_genital(ORGAN_SLOT_VAGINA, visibility)
 
 /mob/living/proc/has_breasts(visibility = REQUIRE_ANY)
 	var/mob/living/carbon/C = src
 	if(has_breasts && !istype(C))
 		return TRUE
-	if(istype(C))
-		var/obj/item/organ/genital/peepee = C.getorganslot(ORGAN_SLOT_BREASTS)
-		if(peepee)
-			switch(visibility)
-				if(REQUIRE_ANY)
-					return TRUE
-				if(REQUIRE_EXPOSED)
-					if(peepee.is_exposed())
-						return TRUE
-					else
-						return FALSE
-				if(REQUIRE_UNEXPOSED)
-					if(!peepee.is_exposed())
-						return TRUE
-					else
-						return FALSE
-				else
-					return TRUE
-	return FALSE
+	return has_genital(ORGAN_SLOT_BREASTS, visibility)
 
 /mob/living/proc/has_anus(visibility = REQUIRE_ANY)
 	if(has_anus && !iscarbon(src))
@@ -184,6 +136,8 @@
 		if(REQUIRE_ANY)
 			return TRUE
 		if(REQUIRE_EXPOSED)
+			if (has_anus && anus_always_accessible)
+				return TRUE
 			switch(anus_exposed)
 				if(-1)
 					return FALSE
@@ -363,6 +317,12 @@
 					return TRUE
 	return FALSE
 
+/mob/living/proc/has_butt(visibility = REQUIRE_ANY)
+	var/mob/living/carbon/C = src
+	if(has_butt && !istype(C))
+		return TRUE
+	return has_genital(ORGAN_SLOT_BUTT, visibility)
+
 ///Are we wearing something that covers our chest?
 /mob/living/proc/is_topless()
 	for(var/slot in GLOB.slots)
@@ -412,9 +372,9 @@
 	if(moan == lastmoan)
 		moan--
 	if(!is_muzzled())
-		visible_message(message = "<span class='lewd'><B>\The [src]</B> [pick("moans", "moans in pleasure")].</span>", ignored_mobs = get_unconsenting())
+		visible_message(message = span_lewd("<B>\The [src]</B> [pick("moans", "moans in pleasure")]."), ignored_mobs = get_unconsenting())
 	if(is_muzzled())//immursion
-		audible_message("<span class='lewd'><B>[src]</B> [pick("mimes a pleasured moan","moans in silence")].</span>")
+		audible_message(span_lewd("<B>[src]</B> [pick("mimes a pleasured moan","moans in silence")]."))
 	lastmoan = moan
 
 /mob/living/proc/cum(mob/living/partner, target_orifice)
@@ -775,7 +735,7 @@
 		playlewdinteractionsound(loc, pick('modular_sand/sound/interactions/final_f1.ogg',
 							'modular_sand/sound/interactions/final_f2.ogg',
 							'modular_sand/sound/interactions/final_f3.ogg'), 70, 1, 0)
-	visible_message(message = "<span class='userlove'><b>\The [src]</b> [message]</span>", ignored_mobs = get_unconsenting())
+	visible_message(message = span_userlove("<b>\The [src]</b> [message]"), ignored_mobs = get_unconsenting())
 	multiorgasms += 1
 
 	COOLDOWN_START(src, refractory_period, (rand(300, 900) - get_sexual_potency()))//sex cooldown
