@@ -9,7 +9,7 @@ export const NaniteRemote = (props, context) => {
       width={420}
       height={500}
       resizable>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <NaniteRemoteContent />
       </Window.Content>
     </Window>

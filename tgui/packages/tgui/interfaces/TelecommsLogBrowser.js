@@ -27,7 +27,7 @@ export const TelecommsLogBrowser = (props, context) => {
       theme="ntos"
       width={575}
       height={400}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Fragment>
           {!!notice && (
             <NoticeBox>

@@ -24,7 +24,7 @@ export const InterviewManager = (props, context) => {
     <Window
       width={500}
       height={600}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Section title="Active Interviews">
           {open_interviews.map(({ id, ckey, status, queued, disconnected }) => (
             <Button

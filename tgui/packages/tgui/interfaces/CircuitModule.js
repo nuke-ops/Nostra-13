@@ -11,7 +11,7 @@ export const CircuitModule = (props, context) => {
   } = data;
   return (
     <Window width={600} height={300}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Stack vertical>
           <Stack.Item>
             <Button

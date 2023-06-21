@@ -24,7 +24,7 @@ export const Autolathe = (props, context) => {
     <Window
       width={600}
       height={600}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Section title="Total Materials">
           <LabeledList>
             <LabeledList.Item

@@ -14,7 +14,7 @@ export const RoboticsControlConsole = (props, context) => {
     <Window
       width={500}
       height={460}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Tabs>
           <Tabs.Tab
             icon="list"

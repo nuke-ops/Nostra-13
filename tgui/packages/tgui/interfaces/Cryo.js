@@ -27,7 +27,7 @@ export const Cryo = () => {
     <Window
       width={400}
       height={550}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <CryoContent />
       </Window.Content>
     </Window>

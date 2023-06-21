@@ -8,7 +8,7 @@ export const RequestKiosk = (props, context) => {
     <Window
       width={550}
       height={600}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <RequestKioskContent />
       </Window.Content>
     </Window>

@@ -12,7 +12,7 @@ export const MalfunctionModulePicker = (props, context) => {
       width={620}
       height={525}
       theme="malfunction">
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <GenericUplink
           currencyAmount={processingTime}
           currencySymbol="PT" />

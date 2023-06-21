@@ -17,7 +17,7 @@ export const ChemDebugSynthesizer = (props, context) => {
       width={390}
       height={330}
       resizable>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Section
           title="Recipient"
           buttons={isBeakerLoaded ? (

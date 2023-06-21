@@ -13,7 +13,7 @@ export const PlayerPlaytimes = (props, context) => {
       width={600}
       height={700}
       resizable>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Section>
           <Table>
             <Table.Row>

@@ -7,7 +7,7 @@ export const StationAlertConsole = () => {
     <Window
       width={325}
       height={500}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <StationAlertConsoleContent />
       </Window.Content>
     </Window>

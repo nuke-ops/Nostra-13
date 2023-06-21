@@ -7,7 +7,7 @@ export const AiRestorer = () => {
     <Window
       width={370}
       height={360}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <AiRestorerContent />
       </Window.Content>
     </Window>

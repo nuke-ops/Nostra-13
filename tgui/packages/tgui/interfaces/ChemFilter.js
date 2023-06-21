@@ -55,7 +55,7 @@ export const ChemFilter = (props, context) => {
       width={500}
       height={300}
       resizable>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Flex spacing={1}>
           <Flex.Item grow={1}>
             <ChemFilterPane

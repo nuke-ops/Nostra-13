@@ -21,7 +21,7 @@ export const NtosAtmos = (props, context) => {
     <NtosWindow
       width={300}
       height={350}>
-      <NtosWindow.Content overflow="auto">
+      <NtosWindow.Content scrollable>
         <Section>
           <LabeledList>
             <LabeledList.Item label="Temperature">

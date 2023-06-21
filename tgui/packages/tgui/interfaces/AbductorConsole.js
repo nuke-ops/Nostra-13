@@ -10,7 +10,7 @@ export const AbductorConsole = (props, context) => {
       theme="abductor"
       width={600}
       height={532}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Tabs>
           <Tabs.Tab
             icon="list"

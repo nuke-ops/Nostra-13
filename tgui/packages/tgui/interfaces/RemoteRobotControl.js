@@ -9,7 +9,7 @@ export const RemoteRobotControl = (props, context) => {
       title="Remote Robot Control"
       width={500}
       height={500}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <RemoteRobotControlContent />
       </Window.Content>
     </Window>

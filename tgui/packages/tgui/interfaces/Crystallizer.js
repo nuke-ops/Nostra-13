@@ -21,7 +21,7 @@ export const Crystallizer = (props, context) => {
     <Window
       width={500}
       height={600}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Section title="Controls">
           <LabeledList>
             <LabeledList.Item label="Power">

@@ -33,7 +33,7 @@ export const OperatingComputer = (props, context) => {
       width={350}
       height={470}
       resizable>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Tabs>
           <Tabs.Tab
             selected={tab === 1}

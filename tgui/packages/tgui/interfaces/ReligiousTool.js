@@ -22,7 +22,7 @@ export const ReligiousTool = (props, context) => {
       title={toolname}
       width={560}
       height={500}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Stack vertical fill>
           <Stack.Item>
             <Tabs textAlign="center" fluid>

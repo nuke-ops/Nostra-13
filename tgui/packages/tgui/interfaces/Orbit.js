@@ -124,7 +124,7 @@ export const Orbit = (props, context) => {
       title="Orbit"
       width={350}
       height={700}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Section>
           <Flex>
             <Flex.Item>

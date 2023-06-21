@@ -21,7 +21,7 @@ export const EngravedMessage = (props, context) => {
     <Window
       width={600}
       height={300}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Section>
           <Box
             bold

@@ -200,7 +200,7 @@ export const LaunchpadConsole = (props, context) => {
     <Window
       width={475}
       height={260}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         {launchpads.length === 0 && (
           <NoticeBox>
             No Pads Connected

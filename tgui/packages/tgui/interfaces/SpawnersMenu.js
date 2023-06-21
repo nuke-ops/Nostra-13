@@ -10,7 +10,7 @@ export const SpawnersMenu = (props, context) => {
       title="Spawners Menu"
       width={700}
       height={600}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Section>
           {spawners.map(spawner => (
             <Section
