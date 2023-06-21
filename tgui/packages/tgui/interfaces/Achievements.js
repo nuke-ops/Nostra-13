@@ -16,7 +16,7 @@ export const Achievements = (props, context) => {
       title="Achievements"
       width={540}
       height={680}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Tabs>
           {categories.map(category => (
             <Tabs.Tab

@@ -209,7 +209,7 @@ export const Vending = (props, context) => {
       title="Vending Machine"
       width={450}
       height={600}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         {!!onstation && (
           <Section title="User">
             {user && (

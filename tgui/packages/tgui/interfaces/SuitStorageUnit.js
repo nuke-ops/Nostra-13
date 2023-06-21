@@ -14,7 +14,7 @@ export const SuitStorageUnit = (props, context) => {
     suit,
     helmet,
     mask,
-    shoes,
+    mod,
     storage,
   } = data;
   return (
@@ -90,13 +90,13 @@ export const SuitStorageUnit = (props, context) => {
                       item: 'mask',
                     })} />
                 </LabeledList.Item>
-                <LabeledList.Item label="Shoes">
+                <LabeledList.Item label="MOD">
                   <Button
-                    icon={shoes ? 'square' : 'square-o'}
-                    content={shoes || 'Empty'}
-                    disabled={!shoes}
+                    icon={mod ? 'square' : 'square-o'}
+                    content={mod || 'Empty'}
+                    disabled={!mod}
                     onClick={() => act('dispense', {
-                      item: 'shoes',
+                      item: 'mod',
                     })} />
                 </LabeledList.Item>
                 <LabeledList.Item label="Storage">

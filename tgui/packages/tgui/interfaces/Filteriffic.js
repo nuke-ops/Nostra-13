@@ -250,7 +250,7 @@ export const Filteriffic = (props, context) => {
       title="Filteriffic"
       width={500}
       height={500}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <NoticeBox danger>
           DO NOT MESS WITH EXISTING FILTERS IF YOU DO NOT KNOW THE CONSEQUENCES.
           YOU HAVE BEEN WARNED.

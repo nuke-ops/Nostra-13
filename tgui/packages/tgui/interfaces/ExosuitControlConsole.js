@@ -12,7 +12,7 @@ export const ExosuitControlConsole = (props, context) => {
     <Window
       width={500}
       height={500}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         {mechs.length === 0 && (
           <NoticeBox>
             No exosuits detected

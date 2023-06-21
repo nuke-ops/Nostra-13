@@ -9,7 +9,7 @@ export const NaniteChamberControl = (props, context) => {
       width={380}
       height={570}
       resizable>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <NaniteChamberControlContent />
       </Window.Content>
     </Window>

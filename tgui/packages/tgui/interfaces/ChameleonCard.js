@@ -48,7 +48,7 @@ export const ChameleonCard = (props, context) => {
     <Window
       width={500}
       height={620}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <AccessList
           accesses={parsedAccess}
           selectedList={selectedList}

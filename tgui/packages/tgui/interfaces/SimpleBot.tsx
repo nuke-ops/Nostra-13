@@ -236,12 +236,6 @@ const ControlHelper = (props, context) => {
     return <FloorbotTiles control={control} />;
   } else if (control[0] === 'line_mode') {
     return <FloorbotLine control={control} />;
-  } else if (control[0] === 'maximum_sanity') {
-    /** Control is for maximum sanity - this is hugbot specific */
-    return <MaximumSanity control={control} />;
-  } else if (control[0] === 'mode_selected') {
-    /** Control is for zone selection - this is hugbot specific */
-    return <ModeSelection control={control} />;
   } else {
     /** Control is a boolean of some type */
     return (
@@ -351,55 +345,6 @@ const FloorbotLine = (props, context) => {
         size={!control[1] ? 2 : 1.5}>
         {' '}
         {control[1] ? control[1].toString().charAt(0).toUpperCase() : ''}
-      </Icon>
-    </Tooltip>
-  );
-};
-
-/** Slider button for hugbot assistance thresholds */
-const MaximumSanity = (props, context) => {
-  const { act } = useBackend<SimpleBotContext>(context);
-  const { control } = props;
-
-  return (
-    <Tooltip content="Adjusts the maximum sanity for interacting, only interacts if lower.">
-      <Slider
-        minValue={0}
-        maxValue={125}
-        ranges={{
-          bad: [-Infinity, 25],
-          average: [26, 75],
-          good: [76, Infinity],
-        }}
-        step={10}
-        unit="u"
-        value={control[1]}
-        onChange={(_, value) => act(control[0], { amount: value })}
-      />
-    </Tooltip>
-  );
-};
-
-const limbToInteraction = {
-  "chest": "Hug",
-  "head": "Pat",
-  "mouth": "Boop",
-};
-
-/** Active mode for hugbots. */
-const ModeSelection = (props, context) => {
-  const { act } = useBackend<SimpleBotContext>(context);
-  const { control } = props;
-
-  return (
-    <Tooltip content="Dictates what interaction will be made.">
-      <Icon
-        color={control[1] ? 'good' : 'gray'}
-        name={control[1] ? limbToInteraction[control[1]] : 'toggle-off'}
-        onClick={() => act('op_mode')}
-        size={!control[1] ? 2 : 1.5}>
-        {' '}
-        {control[1] ? limbToInteraction[control[1]] : ''}
       </Icon>
     </Tooltip>
   );

@@ -29,7 +29,7 @@ export const MassSpec = (props, context) => {
     <Window
       width={490}
       height={650}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         {!!processing && (
           <Dimmer fontSize="32px">
             <Icon name="cog" spin={1} />

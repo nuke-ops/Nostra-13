@@ -12,7 +12,7 @@ export const NtosFileManager = (props, context) => {
   } = data;
   return (
     <NtosWindow theme={PC_device_theme}>
-      <NtosWindow.Content overflow="auto">
+      <NtosWindow.Content scrollable>
         <Section>
           <FileTable
             files={files}

@@ -89,10 +89,6 @@
 	basic_modules += /obj/item/reagent_containers/borghypo/borgshaker/miscshaker
 	. = ..()
 
-/obj/item/robot_module/miner/Initialize(mapload)
-	basic_modules += /obj/item/card/id/miningborg
-	. = ..()
-
 /datum/robot_energy_storage/plasma
 	name = "Plasma Buffer Container"
 	recharge_rate = 0
@@ -210,6 +206,6 @@
 	moduleselect_icon = "standard"
 	hat_offset = -3
 
-/obj/item/robot_module/Initialize(mapload)
+/obj/item/robot_module/butler/Initialize(mapload)
 	basic_modules += /obj/item/dildo/custom
 	. = ..()

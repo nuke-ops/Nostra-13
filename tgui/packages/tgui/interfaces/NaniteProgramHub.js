@@ -25,7 +25,7 @@ export const NaniteProgramHub = (props, context) => {
       width={500}
       height={700}
       resizable>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Section
           title="Program Disk"
           buttons={(

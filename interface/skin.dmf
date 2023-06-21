@@ -46,6 +46,7 @@ menu "menu"
 		category = "&Help"
 		saved-params = "is-checked"
 
+
 window "mainwindow"
 	elem "mainwindow"
 		type = MAIN

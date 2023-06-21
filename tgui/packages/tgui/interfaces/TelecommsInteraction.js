@@ -33,7 +33,7 @@ export const TelecommsInteraction = (props, context) => {
       resizable
       width={520}
       height={500}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <>
           {!!notice && (
             <NoticeBox>

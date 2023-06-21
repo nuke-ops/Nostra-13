@@ -36,7 +36,7 @@ export const Stack = (props, context) => {
     <Window
       width={400}
       height={Math.min(height, 500)}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Section
           title={"Amount: " + amount}
           buttons={(

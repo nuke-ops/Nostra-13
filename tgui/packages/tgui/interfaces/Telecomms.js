@@ -30,7 +30,7 @@ export const Telecomms = (props, context) => {
       title={id}
       width={400}
       height={600}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         {!multitool && (
           <NoticeBox>Use a multitool to make changes.</NoticeBox>
         )}

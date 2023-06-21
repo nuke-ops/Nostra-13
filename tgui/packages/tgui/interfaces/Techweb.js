@@ -91,7 +91,7 @@ export const Techweb = (props, context) => {
     <Window
       width={640}
       height={735}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         {!!locked && (
           <Modal width="15em" align="center" className="Techweb__LockedModal">
             <div><b>Console Locked</b></div>
@@ -117,7 +117,7 @@ export const AppTechweb = (props, context) => {
     <NtosWindow
       width={640}
       height={735}>
-      <NtosWindow.Content overflow="auto">
+      <NtosWindow.Content scrollable>
         {!!locked && (
           <Modal width="15em" align="center" className="Techweb__LockedModal">
             <div><b>Console Locked</b></div>

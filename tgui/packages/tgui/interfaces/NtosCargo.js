@@ -6,7 +6,7 @@ export const NtosCargo = (props, context) => {
     <NtosWindow
       width={800}
       height={500}>
-      <NtosWindow.Content overflow="auto">
+      <NtosWindow.Content scrollable>
         <CargoContent />
       </NtosWindow.Content>
     </NtosWindow>

@@ -1,3 +1,4 @@
+/* Nostra Change
 /datum/reagent/consumable
 	hydration = 1 //Just so "etc" drinks don't give nothing
 
@@ -153,3 +154,4 @@
 
 /datum/reagent/consumable/bungojuice
 	hydration = 5
+*/

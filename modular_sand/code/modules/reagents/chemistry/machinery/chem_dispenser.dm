@@ -10,6 +10,8 @@
 
 /obj/machinery/chem_dispenser/drinks
 	upgrade_reagents4 = list(
+		/datum/reagent/toxin/teapowder,
+		/datum/reagent/consumable/bungojuice,
 		/datum/reagent/consumable/caramel
 	)
 

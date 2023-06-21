@@ -11,7 +11,7 @@ export const GulagItemReclaimer = (props, context) => {
     <Window
       width={325}
       height={400}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         {mobs.length === 0 && (
           <NoticeBox>
             No stored items

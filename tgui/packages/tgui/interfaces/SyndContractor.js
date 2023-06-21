@@ -67,7 +67,7 @@ export const SyndContractor = (props, context) => {
       width={500}
       height={600}
       theme="syndicate">
-      <NtosWindow.Content overflow="auto">
+      <NtosWindow.Content scrollable>
         <SyndContractorContent />
       </NtosWindow.Content>
     </NtosWindow>

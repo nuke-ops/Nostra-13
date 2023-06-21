@@ -19,7 +19,7 @@ export const BluespaceLocator = (props, context) => {
     <Window
       width={300}
       height={300}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Tabs>
           <Tabs.Tab
             selected={tab === "implant"}

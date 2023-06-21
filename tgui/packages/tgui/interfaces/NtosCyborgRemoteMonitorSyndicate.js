@@ -7,7 +7,7 @@ export const NtosCyborgRemoteMonitorSyndicate = (props, context) => {
       width={600}
       height={800}
       theme="syndicate">
-      <NtosWindow.Content overflow="auto">
+      <NtosWindow.Content scrollable>
         <NtosCyborgRemoteMonitorContent />
       </NtosWindow.Content>
     </NtosWindow>

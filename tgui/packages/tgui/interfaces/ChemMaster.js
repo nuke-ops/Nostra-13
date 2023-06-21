@@ -11,7 +11,7 @@ export const ChemMaster = (props, context) => {
       width={465}
       height={550}
       resizable>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         {screen === 'analyze' && (
           <AnalysisResults />
         ) || (

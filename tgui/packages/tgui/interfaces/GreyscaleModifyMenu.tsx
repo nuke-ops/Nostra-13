@@ -288,7 +288,7 @@ export const GreyscaleModifyMenu = (props, context) => {
       title="Color Configuration"
       width={325}
       height={800}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <ConfigDisplay />
         <ColorDisplay />
         <IconStatesDisplay />

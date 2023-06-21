@@ -6,7 +6,7 @@ export const NtosRequestKiosk = (props, context) => {
     <NtosWindow
       width={550}
       height={600}>
-      <NtosWindow.Content overflow="auto">
+      <NtosWindow.Content scrollable>
         <RequestKioskContent />
       </NtosWindow.Content>
     </NtosWindow>

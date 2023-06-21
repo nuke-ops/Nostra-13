@@ -5,7 +5,7 @@ import { Window } from '../layouts';
 export const Gateway = () => {
   return (
     <Window>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <GatewayContent />
       </Window.Content>
     </Window>

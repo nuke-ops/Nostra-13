@@ -64,7 +64,7 @@ export const AtmosControlPanel = (props, context) => {
         </Flex>
       </Section>
       <Box fillPositionedParent top="45px">
-        <Window.Content overflow="auto">
+        <Window.Content scrollable>
           <Section>
             <Table>
               <Table.Row header>

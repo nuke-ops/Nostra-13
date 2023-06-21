@@ -19,7 +19,7 @@ export const Intellicard = (props, context) => {
     <Window
       width={500}
       height={500}>
-      <Window.Content overflow="auto">
+      <Window.Content scrollable>
         <Section
           title={name || "Empty Card"}
           buttons={!!name && (

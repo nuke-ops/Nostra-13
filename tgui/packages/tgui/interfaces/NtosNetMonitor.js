@@ -20,7 +20,7 @@ export const NtosNetMonitor = (props, context) => {
   } = data;
   return (
     <NtosWindow>
-      <NtosWindow.Content overflow="auto">
+      <NtosWindow.Content scrollable>
         <NoticeBox>
           WARNING: Disabling wireless transmitters when using
           a wireless device may prevent you from reenabling them!

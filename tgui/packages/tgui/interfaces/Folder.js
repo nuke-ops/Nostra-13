@@ -12,7 +12,7 @@ export const Folder = (props, context) => {
       width={400}
       height={500}
     >
-      <Window.Content backgroundColor={bg_color || "#7f7f7f"} overflow="auto">
+      <Window.Content backgroundColor={bg_color || "#7f7f7f"} scrollable>
         {contents.map((item, index) => (
           <Flex
             key={contents_ref[index]}
