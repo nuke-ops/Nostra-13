@@ -4544,9 +4544,9 @@ __metadata:
   linkType: hard
 
 "http-cache-semantics@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "http-cache-semantics@npm:4.1.0"
-  checksum: 974de94a81c5474be07f269f9fd8383e92ebb5a448208223bfb39e172a9dbc26feff250192ecc23b9593b3f92098e010406b0f24bd4d588d631f80214648ed42
+  version: 4.1.1
+  resolution: "http-cache-semantics@npm:4.1.1"
+  checksum: 83ac0bc60b17a3a36f9953e7be55e5c8f41acc61b22583060e8dedc9dd5e3607c823a88d0926f9150e571f90946835c7fe150732801010845c72cd8bbff1a236
   languageName: node
   linkType: hard
 
@@ -6107,6 +6107,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minipass@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "minipass@npm:5.0.0"
+  checksum: 425dab288738853fded43da3314a0b5c035844d6f3097a8e3b5b29b328da8f3c1af6fc70618b32c29ff906284cf6406b6841376f21caaadd0793c1d5a6a620ea
+  languageName: node
+  linkType: hard
+
 "minizlib@npm:^2.0.0, minizlib@npm:^2.1.1":
   version: 2.1.2
   resolution: "minizlib@npm:2.1.2"
@@ -6582,9 +6589,9 @@ __metadata:
   linkType: hard
 
 "path-parse@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "path-parse@npm:1.0.6"
-  checksum: 962a85dd384d68d469ec5ba4010df8f8f9b7e936ce603bbe3211476c5615feb3c2b1ca61211a78445fadc833f0b1a86ea6484c861035ec4ac93011ba9aff9a11
+  version: 1.0.7
+  resolution: "path-parse@npm:1.0.7"
+  checksum: 49abf3d81115642938a8700ec580da6e830dde670be21893c62f4e10bd7dd4c3742ddc603fe24f898cba7eb0c6bc1777f8d9ac14185d34540c6d4d80cd9cae8a
   languageName: node
   linkType: hard
 
@@ -7768,16 +7775,16 @@ resolve@^2.0.0-next.3:
   linkType: hard
 
 "tar@npm:^6.0.2, tar@npm:^6.1.0":
-  version: 6.1.8
-  resolution: "tar@npm:6.1.8"
+  version: 6.2.0
+  resolution: "tar@npm:6.2.0"
   dependencies:
     chownr: ^2.0.0
     fs-minipass: ^2.0.0
-    minipass: ^3.0.0
+    minipass: ^5.0.0
     minizlib: ^2.1.1
     mkdirp: ^1.0.3
     yallist: ^4.0.0
-  checksum: f5aa41340d3415ef6f19ed0ee620db1f7cb9ea3f5ea7bfef5ea199bdb39e978d11f31d347231193e0d9262f81de3e358aa3dda6ed0c1909f22a8ce3e3a743dad
+  checksum: db4d9fe74a2082c3a5016630092c54c8375ff3b280186938cfd104f2e089c4fd9bad58688ef6be9cf186a889671bf355c7cda38f09bbf60604b281715ca57f5c
   languageName: node
   linkType: hard
 
@@ -7918,7 +7925,7 @@ resolve@^2.0.0-next.3:
     terser-webpack-plugin: ^5.1.4
     typescript: ^4.3.5
     url-loader: ^4.1.1
-    webpack: ^5.75.0
+    webpack: ^5.76.0
     webpack-bundle-analyzer: ^4.4.2
     webpack-cli: ^4.7.2
   languageName: unknown
@@ -7960,9 +7967,9 @@ resolve@^2.0.0-next.3:
   linkType: hard
 
 "tmpl@npm:1.0.x":
-  version: 1.0.4
-  resolution: "tmpl@npm:1.0.4"
-  checksum: 72c93335044b5b8771207d2e9cf71e8c26b110d0f0f924f6d6c06b509d89552c7c0e4086a574ce4f05110ac40c1faf6277ecba7221afeb57ebbab70d8de39cc4
+  version: 1.0.5
+  resolution: "tmpl@npm:1.0.5"
+  checksum: cd922d9b853c00fe414c5a774817be65b058d54a2d01ebb415840960406c669a0fc632f66df885e24cb022ec812739199ccbdb8d1164c3e513f85bfca5ab2873
   languageName: node
   linkType: hard
 
@@ -8510,9 +8517,9 @@ typescript@^4.3.5:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.75.0":
-  version: 5.75.0
-  resolution: "webpack@npm:5.75.0"
+"webpack@npm:^5.76.0":
+  version: 5.76.1
+  resolution: "webpack@npm:5.76.1"
   dependencies:
     "@types/eslint-scope": ^3.7.3
     "@types/estree": ^0.0.51
@@ -8543,7 +8550,7 @@ typescript@^4.3.5:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 2bcc5f3c195f375944e8af2f00bf2feea39cb9fda5f763b0d1b00077f1c51783db25c94d3fae96a07dead9fa085e6ae7474417e5ab31719c9776ea5969ceb83a
+  checksum: b01fe0bc2dbca0e10d290ddb0bf81e807a031de48028176e2b21afd696b4d3f25ab9accdad888ef4a1f7c7f4d41f13d5bf2395b7653fdf3e5e3dafa54e56dab2
   languageName: node
   linkType: hard
 
@@ -8615,9 +8622,9 @@ typescript@^4.3.5:
   linkType: hard
 
 "word-wrap@npm:^1.2.3, word-wrap@npm:~1.2.3":
-  version: 1.2.4
-  resolution: "word-wrap@npm:1.2.4"
-  checksum: 8f1f2e0a397c0e074ca225ba9f67baa23f99293bc064e31355d426ae91b8b3f6b5f6c1fc9ae5e9141178bb362d563f55e62fd8d5c31f2a77e3ade56cb3e35bd1
+  version: 1.2.5
+  resolution: "word-wrap@npm:1.2.5"
+  checksum: f93ba3586fc181f94afdaff3a6fef27920b4b6d9eaefed0f428f8e07adea2a7f54a5f2830ce59406c8416f033f86902b91eb824072354645eea687dff3691ccb
   languageName: node
   linkType: hard
 
