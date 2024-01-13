@@ -9,13 +9,14 @@ export const CryopodConsole = (props, context) => {
   const welcomeTitle = `Hello, ${account_name || '[REDACTED]'}!`;
 
   return (
-    <Window title="Cryopod Console" width={400} height={480}>
+    <Window title="Storage Console" width={400} height={480}>
       <Window.Content>
         <Stack vertical fill>
           <Stack.Item>
             <Section title={welcomeTitle}>
-              This automated cryogenic freezing unit will safely store your
-              corporeal form until your next assignment.
+              {
+                "This device will store your things until they're needed again."
+              }
             </Section>
           </Stack.Item>
           <Stack.Item grow>

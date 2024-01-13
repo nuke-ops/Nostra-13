@@ -175,7 +175,7 @@ export const NtosRobotactContent = (props, context) => {
                       label="Maintenance Cover">
                       <Button.Confirm
                         content="Unlock"
-                        disabled={cover==="UNLOCKED"}
+                        disabled={(cover==="UNLOCKED") || (borgType ==="Roleplay")}
                         onClick={() => act('coverunlock')} />
                     </LabeledList.Item>
                     <LabeledList.Item
