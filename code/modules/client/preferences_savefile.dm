@@ -5,7 +5,7 @@
 //	You do not need to raise this if you are adding new values that have sane defaults.
 //	Only raise this value when changing the meaning/format/name/layout of an existing value
 //	where you would want the updater procs below to run
-#define SAVEFILE_VERSION_MAX	57
+#define SAVEFILE_VERSION_MAX	58
 
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
@@ -382,6 +382,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 			else
 				S["all_quirks"] = list("Dullahan")
 
+	// So, we're already on 57 even though we were meant to be on like, 56? i'm gonna try to correct this,
+	// And i'm so sorry for this.
+	if(current_version < 58)
+		S["screentip_images"] = TRUE // This was meant to default active, i'm so sorry. Turn it off if you must.
+
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
 	if(!ckey)
 		return
@@ -423,7 +428,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["outline_enabled"] >> outline_enabled
 	S["screentip_pref"] >> screentip_pref
 	S["screentip_color"] >> screentip_color
-	S["screentip_allow_images"] >> screentip_allow_images
+	S["screentip_images"] >> screentip_images
 	S["hotkeys"] >> hotkeys
 	S["chat_on_map"] >> chat_on_map
 	S["max_chat_length"] >> max_chat_length
@@ -621,7 +626,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["outline_color"], outline_color)
 	WRITE_FILE(S["screentip_pref"], screentip_pref)
 	WRITE_FILE(S["screentip_color"], screentip_color)
-	WRITE_FILE(S["screentip_allow_images"], screentip_allow_images)
+	WRITE_FILE(S["screentip_images"], screentip_images)
 	WRITE_FILE(S["hotkeys"], hotkeys)
 	WRITE_FILE(S["chat_on_map"], chat_on_map)
 	WRITE_FILE(S["max_chat_length"], max_chat_length)
@@ -684,9 +689,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	return 1
 
-/datum/preferences/proc/load_character(slot, bypass_cooldown = FALSE)
-	if(!path)
-		return FALSE
+/datum/preferences/proc/load_character(slot, bypass_cooldown = FALSE, savefile/provided)
+	if(!provided)
+		if(!path)
+			return FALSE
 	if(!bypass_cooldown)
 		if(world.time < loadcharcooldown) //This is before the check to see if the filepath exists to ensure that BYOND can't get hung up on read attempts when the hard drive is a little slow
 			if(istype(parent))
@@ -695,10 +701,13 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		loadcharcooldown = world.time + PREF_SAVELOAD_COOLDOWN
 	if(!fexists(path))
 		return FALSE
-	var/savefile/S = new /savefile(path)
+	var/savefile/S
+	if(provided)
+		S = provided
+	else
+		S = new /savefile(path)
 	if(!S)
 		return FALSE
-	features = list("mcolor" = "FFFFFF", "mcolor2" = "FFFFFF", "mcolor3" = "FFFFFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "horns_color" = "85615a", "ears" = "None", "wings" = "None", "wings_color" = "FFF", "frills" = "None", "deco_wings" = "None", "spines" = "None", "legs" = "Plantigrade", "insect_wings" = "Plain", "insect_fluff" = "None", "insect_markings" = "None", "arachnid_legs" = "Plain", "arachnid_spinneret" = "Plain", "arachnid_mandibles" = "Plain", "mam_body_markings" = "Plain", "mam_ears" = "None", "mam_snouts" = "None", "mam_tail" = "None", "mam_tail_animated" = "None", "xenodorsal" = "Standard", "xenohead" = "Standard", "xenotail" = "Xenomorph Tail", "taur" = "None", "genitals_use_skintone" = FALSE, "has_cock" = FALSE, "cock_shape" = DEF_COCK_SHAPE, "cock_length" = COCK_SIZE_DEF, "cock_diameter_ratio" = COCK_DIAMETER_RATIO_DEF, "cock_color" = "ffffff", "cock_taur" = FALSE, "has_balls" = FALSE, "balls_color" = "ffffff", "balls_shape" = DEF_BALLS_SHAPE, "balls_size" = BALLS_SIZE_DEF, "balls_cum_rate" = CUM_RATE, "balls_cum_mult" = CUM_RATE_MULT, "balls_efficiency" = CUM_EFFICIENCY, "has_breasts" = FALSE, "breasts_color" = "ffffff", "breasts_size" = BREASTS_SIZE_DEF, "breasts_shape" = DEF_BREASTS_SHAPE, "breasts_producing" = FALSE, "has_vag" = FALSE, "vag_shape" = DEF_VAGINA_SHAPE, "vag_color" = "ffffff", "has_womb" = FALSE, "has_butt" = FALSE, "butt_color" = "ffffff", "butt_size" = BUTT_SIZE_DEF, "balls_visibility"	= GEN_VISIBLE_NO_UNDIES, "breasts_visibility"= GEN_VISIBLE_NO_UNDIES, "cock_visibility"	= GEN_VISIBLE_NO_UNDIES, "vag_visibility"	= GEN_VISIBLE_NO_UNDIES, "butt_visibility"	= GEN_VISIBLE_NO_UNDIES, "ipc_screen" = "Sunburst", "ipc_antenna" = "None", "flavor_text" = "", "silicon_flavor_text" = "", "ooc_notes" = "", "meat_type" = "Mammalian", "body_model" = MALE, "body_size" = RESIZE_DEFAULT_SIZE, "color_scheme" = OLD_CHARACTER_COLORING)
 
 	S.cd = "/"
 	if(!slot)
@@ -708,12 +717,15 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		default_slot = slot
 		WRITE_FILE(S["default_slot"] , slot)
 
-	S.cd = "/character[slot]"
+	if(!provided)
+		S.cd = "/character[slot]"
 	var/needs_update = savefile_needs_update(S)
 	if(needs_update == -2)		//fatal, can't load any data
 		return FALSE
 
 	. = TRUE
+
+	features = list("mcolor" = "FFFFFF", "mcolor2" = "FFFFFF", "mcolor3" = "FFFFFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "horns_color" = "85615a", "ears" = "None", "wings" = "None", "wings_color" = "FFF", "frills" = "None", "deco_wings" = "None", "spines" = "None", "legs" = "Plantigrade", "insect_wings" = "Plain", "insect_fluff" = "None", "insect_markings" = "None", "arachnid_legs" = "Plain", "arachnid_spinneret" = "Plain", "arachnid_mandibles" = "Plain", "mam_body_markings" = "Plain", "mam_ears" = "None", "mam_snouts" = "None", "mam_tail" = "None", "mam_tail_animated" = "None", "xenodorsal" = "Standard", "xenohead" = "Standard", "xenotail" = "Xenomorph Tail", "taur" = "None", "genitals_use_skintone" = FALSE, "has_cock" = FALSE, "cock_shape" = DEF_COCK_SHAPE, "cock_length" = COCK_SIZE_DEF, "cock_diameter_ratio" = COCK_DIAMETER_RATIO_DEF, "cock_color" = "ffffff", "cock_taur" = FALSE, "has_balls" = FALSE, "balls_color" = "ffffff", "balls_shape" = DEF_BALLS_SHAPE, "balls_size" = BALLS_SIZE_DEF, "balls_cum_rate" = CUM_RATE, "balls_cum_mult" = CUM_RATE_MULT, "balls_efficiency" = CUM_EFFICIENCY, "has_breasts" = FALSE, "breasts_color" = "ffffff", "breasts_size" = BREASTS_SIZE_DEF, "breasts_shape" = DEF_BREASTS_SHAPE, "breasts_producing" = FALSE, "has_vag" = FALSE, "vag_shape" = DEF_VAGINA_SHAPE, "vag_color" = "ffffff", "has_womb" = FALSE, "has_butt" = FALSE, "butt_color" = "ffffff", "butt_size" = BUTT_SIZE_DEF, "balls_visibility" = GEN_VISIBLE_NO_UNDIES, "breasts_visibility"= GEN_VISIBLE_NO_UNDIES, "cock_visibility"	= GEN_VISIBLE_NO_UNDIES, "vag_visibility"	= GEN_VISIBLE_NO_UNDIES, "butt_visibility"	= GEN_VISIBLE_NO_UNDIES, "breasts_accessible" = FALSE, "cock_accessible" = FALSE, "vag_accessible" = FALSE, "butt_accessible" = FALSE, "anus_accessible" = FALSE,"ipc_screen" = "Sunburst", "ipc_antenna" = "None", "flavor_text" = "", "silicon_flavor_text" = "", "ooc_notes" = "", "meat_type" = "Mammalian", "body_model" = MALE, "body_size" = RESIZE_DEFAULT_SIZE, "color_scheme" = OLD_CHARACTER_COLORING)
 
 	//Species
 	var/species_id
@@ -860,12 +872,14 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["feature_cock_diameter"] >> features["cock_diameter"]
 	S["feature_cock_taur"] >> features["cock_taur"]
 	S["feature_cock_visibility"] >> features["cock_visibility"]
+	S["feature_cock_accessible"] >> features["cock_accessible"]
 	//balls features
 	S["feature_has_balls"] >> features["has_balls"]
 	S["feature_balls_color"] >> features["balls_color"]
 	S["feature_balls_shape"] >> features["balls_shape"]
 	S["feature_balls_size"] >> features["balls_size"]
 	S["feature_balls_visibility"] >> features["balls_visibility"]
+	S["feature_balls_accessible"] >> features["balls_accessible"]
 	//breasts features
 	S["feature_has_breasts"] >> features["has_breasts"]
 	S["feature_breasts_size"] >> features["breasts_size"]
@@ -873,11 +887,13 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["feature_breasts_color"] >> features["breasts_color"]
 	S["feature_breasts_producing"] >> features["breasts_producing"]
 	S["feature_breasts_visibility"] >> features["breasts_visibility"]
+	S["feature_breasts_accessible"] >> features["breasts_accessible"]
 	//vagina features
 	S["feature_has_vag"] >> features["has_vag"]
 	S["feature_vag_shape"] >> features["vag_shape"]
 	S["feature_vag_color"] >> features["vag_color"]
 	S["feature_vag_visibility"] >> features["vag_visibility"]
+	S["feature_vag_accessible"] >> features["vag_accessible"]
 	//womb features
 	S["feature_has_womb"] >> features["has_womb"]
 	//butt features
@@ -885,6 +901,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["feature_butt_color"] >> features["butt_color"]
 	S["feature_butt_size"] >> features["butt_size"]
 	S["feature_butt_visibility"] >> features["butt_visibility"]
+	S["feature_butt_accessible"] >> features["butt_accessible"]
+	//anus features
+	S["feature_anus_accessible"] >> features["anus_accessible"]
 
 	// Flavor texts, Made into a standard.
 	S["feature_flavor_text"] >> features["flavor_text"]
@@ -1008,10 +1027,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(!max_B)
 		max_B = CONFIG_GET(number/butt_max_size_prefs)
 
-	var/static/safe_visibilities
-	if(!safe_visibilities)
-		var/list/L = CONFIG_GET(keyed_list/safe_visibility_toggles)
-		safe_visibilities = L.Copy()
+	var/safe_visibilities = CONFIG_GET(str_list/safe_visibility_toggles)
 
 	features["breasts_size"] = sanitize_inlist(features["breasts_size"], B_sizes, BREASTS_SIZE_DEF)
 	features["cock_length"] = sanitize_integer(features["cock_length"], min_D, max_D, COCK_SIZE_DEF)
@@ -1087,6 +1103,33 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	all_quirks = SANITIZE_LIST(all_quirks)
 
+	language = SANITIZE_LIST(language)
+
+	if(length(language))
+		// This line, prevents wiping their languages because the subsystem was not ready
+		var/list/all_possible_languages = SSlanguage.initialized ? SSlanguage.languages_by_name : typesof(/datum/language)
+		var/list/lang_names
+		// Subsystem ready, let's do it with our cached stuff
+		if(length(SSlanguage.languages_by_name))
+			for(var/language_sanitization in all_possible_languages)
+				var/datum/language/language_sanitization_datum = all_possible_languages[language_sanitization]
+				// Don't check for existance, at this point, if it doesn't exist, we need a runtime.
+				if(!language_sanitization_datum.key)
+					continue
+				LAZYADD(lang_names, language_sanitization_datum.name)
+		// Subsystem NOT ready, let's do it the annoying way.
+		else
+			for(var/datum/language/language_sanitization as anything in all_possible_languages)
+				if(!initial(language_sanitization.key))
+					continue
+				LAZYADD(lang_names, initial(language_sanitization.name))
+		for(var/language_entry in language)
+			// Valid language, just ignore it
+			if(LAZYFIND(lang_names, language_entry))
+				continue
+			// Remove the entry if the language does not exist in the codebase
+			LAZYREMOVE(language, language_entry)
+
 	vore_flags = sanitize_integer(vore_flags, 0, MAX_VORE_FLAG, 0)
 	vore_taste = copytext(vore_taste, 1, MAX_TASTE_LEN)
 	vore_smell = copytext(vore_smell, 1, MAX_TASTE_LEN)
@@ -1096,7 +1139,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	return 1
 
-/datum/preferences/proc/save_character(bypass_cooldown = FALSE)
+/datum/preferences/proc/save_character(bypass_cooldown = FALSE, export = FALSE)
 	if(!path)
 		return 0
 	if(!bypass_cooldown)
@@ -1105,10 +1148,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 				to_chat(parent, "<span class='warning'>You're attempting to save your character a little too fast. Wait half a second, then try again.</span>")
 			return 0
 		savecharcooldown = world.time + PREF_SAVELOAD_COOLDOWN
-	var/savefile/S = new /savefile(path)
+	var/savefile/S = new /savefile(export ? null : path)
 	if(!S)
 		return 0
-	S.cd = "/character[default_slot]"
+	if(!export)
+		S.cd = "/character[default_slot]"
 
 	WRITE_FILE(S["version"]			, SAVEFILE_VERSION_MAX)	//load_character will sanitize any bad data, so assume up-to-date.)
 
@@ -1180,12 +1224,14 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_cock_length"], features["cock_length"])
 	WRITE_FILE(S["feature_cock_taur"], features["cock_taur"])
 	WRITE_FILE(S["feature_cock_visibility"], features["cock_visibility"])
+	WRITE_FILE(S["feature_cock_accessible"], features["cock_accessible"])
 
 	WRITE_FILE(S["feature_has_balls"], features["has_balls"])
 	WRITE_FILE(S["feature_balls_color"], features["balls_color"])
 	WRITE_FILE(S["feature_balls_shape"], features["balls_shape"])
 	WRITE_FILE(S["feature_balls_size"], features["balls_size"])
 	WRITE_FILE(S["feature_balls_visibility"], features["balls_visibility"])
+	WRITE_FILE(S["feature_balls_accessible"], features["balls_accessible"])
 
 	WRITE_FILE(S["feature_has_breasts"], features["has_breasts"])
 	WRITE_FILE(S["feature_breasts_size"], features["breasts_size"])
@@ -1193,11 +1239,13 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_breasts_color"], features["breasts_color"])
 	WRITE_FILE(S["feature_breasts_producing"], features["breasts_producing"])
 	WRITE_FILE(S["feature_breasts_visibility"], features["breasts_visibility"])
+	WRITE_FILE(S["feature_breasts_accessible"], features["breasts_accessible"])
 
 	WRITE_FILE(S["feature_has_vag"], features["has_vag"])
 	WRITE_FILE(S["feature_vag_shape"], features["vag_shape"])
 	WRITE_FILE(S["feature_vag_color"], features["vag_color"])
 	WRITE_FILE(S["feature_vag_visibility"], features["vag_visibility"])
+	WRITE_FILE(S["feature_vag_accessible"], features["vag_accessible"])
 
 	WRITE_FILE(S["feature_has_womb"], features["has_womb"])
 
@@ -1205,10 +1253,13 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_butt_color"], features["butt_color"])
 	WRITE_FILE(S["feature_butt_size"], features["butt_size"])
 	WRITE_FILE(S["feature_butt_visibility"], features["butt_visibility"])
+	WRITE_FILE(S["feature_butt_accessible"], features["butt_accessible"])
 
 	WRITE_FILE(S["feature_ooc_notes"], features["ooc_notes"])
 
 	WRITE_FILE(S["feature_color_scheme"], features["color_scheme"])
+
+	WRITE_FILE(S["feature_anus_accessible"], features["anus_accessible"])
 
 	//save every advanced coloring mode thing in one go
 	for(var/feature in features)
@@ -1293,7 +1344,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	cit_character_pref_save(S)
 
-	return 1
+	return S
 
 
 #undef SAVEFILE_VERSION_MAX

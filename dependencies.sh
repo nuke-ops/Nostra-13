@@ -11,8 +11,8 @@ export BYOND_MINOR=1589
 export RUST_G_VERSION=0.4.10
 
 #node version
-export NODE_VERSION=12
-export NODE_VERSION_PRECISE=12.22.4
+export NODE_VERSION=16
+export NODE_VERSION_PRECISE=16.13.1
 
 # SpacemanDMM git tag
 export SPACEMAN_DMM_VERSION=suite-1.7
@@ -21,7 +21,7 @@ export SPACEMAN_DMM_VERSION=suite-1.7
 export PYTHON_VERSION=3.7.9
 
 # Auxmos git tag
-export AUXMOS_VERSION=v2.2.1
+export AUXMOS_VERSION=v2.4.1
 
 # Extools git tag
 export EXTOOLS_VERSION=v0.0.7
