@@ -274,7 +274,7 @@
 		else
 			new framestack(T, framestackamount)
 	qdel(src)
-
+// Start of Nostra change
 /obj/structure/table/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
 	switch(the_rcd.mode)
 		if(RCD_DECONSTRUCT)
@@ -288,6 +288,7 @@
 			qdel(src)
 			return TRUE
 	return FALSE
+// End of Nostra change
 
 /**
  * Gets all connected tables

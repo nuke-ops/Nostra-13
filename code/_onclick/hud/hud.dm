@@ -85,7 +85,6 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	var/atom/movable/screen/internals
 
 	var/atom/movable/screen/wanted/wanted_lvl
-
 	// subtypes can override this to force a specific UI style
 	var/ui_style
 
@@ -136,6 +135,9 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	healthdoll = null
 	wanted_lvl = null
 	internals = null
+
+	hunger = null
+	// thirst = null // Nostra change
 
 	lingchemdisplay = null
 	devilsouldisplay = null
