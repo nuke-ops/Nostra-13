@@ -11987,29 +11987,6 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/service)
-"aSc" = (
-/obj/structure/table/reinforced,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/obj/item/clothing/gloves/color/latex{
-	pixel_y = 10
-	},
-/obj/item/clothing/suit/apron/surgical,
-/obj/item/clothing/mask/surgical{
-	pixel_y = -6
-	},
-/turf/open/floor/plasteel/white,
-/area/medical/surgery)
 "aSd" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
@@ -54067,6 +54044,27 @@
 /obj/structure/closet/secure_closet/medical2,
 /turf/open/floor/plasteel/white,
 /area/medical/surgery)
+"dsO" = (
+/obj/structure/table/reinforced,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue,
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/item/clothing/gloves/color/latex{
+	pixel_y = 10
+	},
+/obj/item/clothing/suit/apron/surgical,
+/obj/item/clothing/mask/surgical{
+	pixel_y = -6
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/surgery)
 "dsP" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden{
 	dir = 1
@@ -54082,6 +54080,29 @@
 	dir = 8
 	},
 /obj/machinery/limbgrower,
+/turf/open/floor/plasteel/white,
+/area/medical/surgery)
+"dsQ" = (
+/obj/structure/table/reinforced,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/blue{
+	dir = 8
+	},
+/obj/item/clothing/gloves/color/latex{
+	pixel_y = 10
+	},
+/obj/item/clothing/suit/apron/surgical,
+/obj/item/clothing/mask/surgical{
+	pixel_y = -6
+	},
 /turf/open/floor/plasteel/white,
 /area/medical/surgery)
 "dsR" = (
@@ -72598,30 +72619,6 @@
 /obj/structure/table/wood,
 /turf/open/floor/plasteel/grimy,
 /area/service/library)
-"eFT" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/machinery/newscaster{
-	pixel_y = -32
-	},
-/obj/item/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = 28
-	},
-/obj/effect/turf_decal/tile/brown,
-/obj/effect/turf_decal/tile/brown{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/brown{
-	dir = 8
-	},
-/obj/machinery/computer/bounty{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/cargo/office)
 "eFY" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -94985,28 +94982,6 @@
 	},
 /turf/open/floor/plating,
 /area/service/chapel/office)
-"mjP" = (
-/obj/machinery/requests_console{
-	department = "Quartermaster's Desk";
-	name = "Quartermaster RC";
-	pixel_x = 32;
-	pixel_y = -32
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/obj/machinery/light_switch{
-	pixel_x = 23
-	},
-/obj/effect/turf_decal/tile/brown,
-/obj/effect/turf_decal/tile/brown{
-	dir = 4
-	},
-/obj/machinery/computer/bounty{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/cargo/qm)
 "mkm" = (
 /obj/machinery/atmospherics/components/binary/valve,
 /obj/machinery/embedded_controller/radio/airlock_controller/incinerator_toxmix{
@@ -115818,6 +115793,28 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/command/heads_quarters/ce)
+"tvM" = (
+/obj/machinery/requests_console{
+	department = "Quartermaster's Desk";
+	name = "Quartermaster RC";
+	pixel_x = 32;
+	pixel_y = -32
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
+	dir = 4
+	},
+/obj/machinery/light_switch{
+	pixel_x = 23
+	},
+/obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+	},
+/obj/machinery/computer/bounty{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/cargo/qm)
 "twd" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -121707,6 +121704,30 @@
 	},
 /turf/open/floor/plating,
 /area/engineering/main)
+"vEF" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/newscaster{
+	pixel_y = -32
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = 28
+	},
+/obj/effect/turf_decal/tile/brown,
+/obj/effect/turf_decal/tile/brown{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/brown{
+	dir = 8
+	},
+/obj/machinery/computer/bounty{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/cargo/office)
 "vEI" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -123583,27 +123604,6 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plasteel,
 /area/commons/storage/primary)
-"wqd" = (
-/obj/structure/table/reinforced,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/blue{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/blue,
-/obj/effect/turf_decal/tile/blue{
-	dir = 4
-	},
-/obj/item/clothing/gloves/color/latex{
-	pixel_y = 10
-	},
-/obj/item/clothing/suit/apron/surgical,
-/obj/item/clothing/mask/surgical{
-	pixel_y = -6
-	},
-/turf/open/floor/plasteel/white,
-/area/medical/surgery)
 "wqi" = (
 /obj/structure/cable/white{
 	icon_state = "1-2"
@@ -171030,7 +171030,7 @@ nOU
 tnL
 xRR
 hbT
-eFT
+vEF
 vhK
 bdV
 bdU
@@ -175654,7 +175654,7 @@ sOq
 keW
 fJF
 lgx
-mjP
+tvM
 vdx
 sOq
 aad
@@ -177272,7 +177272,7 @@ dmc
 dnH
 dnG
 dro
-wqd
+dsO
 dtR
 dvF
 dxm
@@ -177786,7 +177786,7 @@ dme
 dnJ
 dnG
 dro
-aSc
+dsQ
 dtT
 dvH
 dxo
