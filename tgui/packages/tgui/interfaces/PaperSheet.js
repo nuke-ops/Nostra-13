@@ -45,8 +45,16 @@ const textWidth = (text, font, fontsize) => {
   const c = document.createElement('canvas');
   const ctx = c.getContext("2d");
   ctx.font = font;
+  if (text) {
+    const width = ctx.measureText(text).width;
+    return width;
+  } else {
+    return 0;
+  }
+  /*
   const width = ctx.measureText(text).width;
   return width;
+  */
 };
 
 const setFontinText = (text, font, color, bold=false) => {
@@ -379,7 +387,7 @@ class PaperSheetStamper extends Component {
 
 // This creates the html from marked text as well as the form fields
 const createPreview = (
-  value, 
+  value,
   text,
   do_fields = false,
   field_counter,
@@ -441,7 +449,7 @@ class PaperSheetEdit extends Component {
 
   createPreviewFromData(value, do_fields = false) {
     const { data } = useBackend(this.context);
-    return createPreview(value, 
+    return createPreview(value,
       this.state.old_text,
       do_fields,
       this.state.counter,
@@ -669,7 +677,7 @@ export const PaperSheet = (props, context) => {
       height={sizeY || 500}>
       <Window.Content
         backgroundColor={paper_color}
-        scrollable>
+        overflow="auto">
         <Box
           id="page"
           fitted

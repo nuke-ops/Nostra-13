@@ -124,11 +124,11 @@
 		. = . || (caller.pass_flags & PASSTABLE)
 
 /obj/structure/table/proc/tableplace(mob/living/user, mob/living/pushed_mob)
-	pushed_mob.forceMove(src.loc)
-	pushed_mob.set_resting(TRUE, FALSE)
-	pushed_mob.visible_message("<span class='notice'>[user] places [pushed_mob] onto [src].</span>", \
-								"<span class='notice'>[user] places [pushed_mob] onto [src].</span>")
-	log_combat(user, pushed_mob, "placed")
+	pushed_mob.forceMove(loc)
+	pushed_mob.set_resting(TRUE, TRUE)
+	pushed_mob.visible_message(span_notice("[user] places [pushed_mob] onto [src]."), \
+								span_notice("[user] places [pushed_mob] onto [src]."))
+	log_combat(user, pushed_mob, "places", null, "onto [src]")
 
 /obj/structure/table/proc/tablepush(mob/living/user, mob/living/pushed_mob)
 	if(HAS_TRAIT(user, TRAIT_PACIFISM))
@@ -205,6 +205,30 @@
 			return
 		// If the tray IS empty, continue on (tray will be placed on the table like other items)
 
+	if(istype(I, /obj/item/riding_offhand))
+		var/obj/item/riding_offhand/riding_item = I
+		var/mob/living/carried_mob = riding_item.rider
+		if(carried_mob == user) //Piggyback user.
+			return
+		if(user.a_intent == INTENT_HARM)
+			user.unbuckle_mob(carried_mob)
+			tablelimbsmash(user, carried_mob)
+		else
+			var/tableplace_delay = 3.5 SECONDS
+			var/skills_space = ""
+			if(HAS_TRAIT(user, TRAIT_QUICKER_CARRY))
+				tableplace_delay = 2 SECONDS
+				skills_space = " expertly"
+			else if(HAS_TRAIT(user, TRAIT_QUICK_CARRY))
+				tableplace_delay = 2.75 SECONDS
+				skills_space = " quickly"
+			carried_mob.visible_message(span_notice("[user] begins to[skills_space] place [carried_mob] onto [src]..."),
+				span_userdanger("[user] begins to[skills_space] place [carried_mob] onto [src]..."))
+			if(do_after(user, tableplace_delay, target = carried_mob))
+				user.unbuckle_mob(carried_mob)
+				tableplace(user, carried_mob)
+		return TRUE
+
 	if(user.a_intent != INTENT_HARM && !(I.item_flags & ABSTRACT))
 		if(user.transferItemToLoc(I, drop_location()))
 			var/list/click_params = params2list(params)
@@ -250,7 +274,7 @@
 		else
 			new framestack(T, framestackamount)
 	qdel(src)
-
+// Start of Nostra change
 /obj/structure/table/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
 	switch(the_rcd.mode)
 		if(RCD_DECONSTRUCT)
@@ -264,6 +288,7 @@
 			qdel(src)
 			return TRUE
 	return FALSE
+// End of Nostra change
 
 /**
  * Gets all connected tables

@@ -175,27 +175,28 @@ export class Changelog extends Component {
 
     const header = (
       <Section>
-        <h1>Citadel Station 13</h1>
+        <h1>Sandstorm Station 13</h1>
         <p>
           <b>Thanks to: </b>
-          /tg/station, Baystation 12, /vg/station, NTstation, CDK Station devs,
-          FacepunchStation, GoonStation devs, the original Space Station 13
-          developers, Invisty for the title image and the countless others who
-          have contributed to the game, issue tracker or wiki over the years.
+          Citadel Station 13, /tg/station, Baystation 12, /vg/station,
+          NTstation, CDK Station devs, FacepunchStation, GoonStation devs,
+          the original Space Station 13 developers, Invisty for the title image
+          and the countless others who have contributed to the game,
+          issue tracker or wiki over the years.
         </p>
         <p>
           {'Current project maintainers can be found '}
-          <a href="https://github.com/orgs/Citadel-Station-13/people">
+          <a href="https://github.com/orgs/Sandstorm-Station/people">
             here
           </a>
           {', recent GitHub contributors can be found '}
-          <a href="https://github.com/Citadel-Station-13/Citadel-Station-13/pulse/monthly">
+          <a href="https://github.com/Sandstorm-Station/Sandstorm-Station-13/pulse/monthly">
             here
           </a>.
         </p>
         <p>
           {'You can also join our discord '}
-          <a href="https://discord.com/invite/citadelstation">
+          <a href="https://discord.com/invite/quXTqa6cp9">
             here
           </a>.
         </p>
@@ -335,7 +336,7 @@ export class Changelog extends Component {
 
     return (
       <Window title="Changelog" width={675} height={650}>
-        <Window.Content scrollable>
+        <Window.Content overflow="auto">
           {header}
           {changes}
           {typeof data === 'string' && <p>{data}</p>}

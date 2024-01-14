@@ -354,7 +354,7 @@
 				INVOKE_ASYNC(src, .proc/close)
 		if("touch")
 			INVOKE_ASYNC(src, .proc/open_and_close)
-
+// Start of Nostra change
 /obj/machinery/door/window/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
 	switch(the_rcd.mode)
 		if(RCD_DECONSTRUCT)
@@ -368,6 +368,7 @@
 			qdel(src)
 			return TRUE
 	return FALSE
+// End of Nostra change
 
 /obj/machinery/door/window/brigdoor
 	name = "secure door"

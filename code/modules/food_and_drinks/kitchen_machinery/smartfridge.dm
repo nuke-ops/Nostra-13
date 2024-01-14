@@ -188,7 +188,7 @@
 				listofitems[md5name]["amount"]++	// The good news is, #30519 made smartfridge UIs non-auto-updating
 			else
 				listofitems[md5name] = list("name" = O.name, "type" = O.type, "amount" = 1)
-	sortList(listofitems)
+	sort_list(listofitems)
 
 	.["contents"] = listofitems
 	.["name"] = name
@@ -428,7 +428,7 @@
 	var/repair_rate = 0
 
 /obj/machinery/smartfridge/organ/accept_check(obj/item/O)
-	if(istype(O, /obj/item/organ) || istype (O, /obj/item/bodypart))
+	if(isorgan(O) || isbodypart(O))
 		return TRUE
 	if(istype(O, /obj/item/reagent_containers/syringe)) //other medical things.
 		return TRUE

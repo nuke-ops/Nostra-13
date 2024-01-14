@@ -86,51 +86,18 @@
 		if(!(m in R.held_items))
 			. += m
 
-/obj/item/robot_module/proc/get_or_create_estorage(var/storage_type)
+/obj/item/robot_module/proc/get_or_create_estorage(storage_type)
 	for(var/datum/robot_energy_storage/S in storages)
 		if(istype(S, storage_type))
 			return S
 
 	return new storage_type(src)
 
-/* /obj/item/robot_module/proc/add_module(obj/item/I, nonstandard, requires_rebuild)
+/obj/item/robot_module/proc/add_module(obj/item/I, nonstandard, requires_rebuild)
 	rad_flags |= RAD_NO_CONTAMINATE
-	if(istype(I, /obj/item/stack))
-		var/obj/item/stack/S = I
-
-		if(is_type_in_list(S, list(/obj/item/stack/sheet/metal, /obj/item/stack/rods, /obj/item/stack/tile/plasteel)))
-			if(S.custom_materials?.len && S.custom_materials[SSmaterials.GetMaterialRef(/datum/material/iron)])
-				S.cost = S.custom_materials[SSmaterials.GetMaterialRef(/datum/material/iron)] * 0.25
-			S.source = get_or_create_estorage(/datum/robot_energy_storage/metal)
-
-		else if(istype(S, /obj/item/stack/sheet/glass))
-			S.cost = 500
-			S.source = get_or_create_estorage(/datum/robot_energy_storage/glass)
-
-		else if(istype(S, /obj/item/stack/sheet/rglass/cyborg))
-			var/obj/item/stack/sheet/rglass/cyborg/G = S
-			G.source = get_or_create_estorage(/datum/robot_energy_storage/metal)
-			G.glasource = get_or_create_estorage(/datum/robot_energy_storage/glass)
-
-		else if(istype(S, /obj/item/stack/medical))
-			S.cost = 250
-			S.source = get_or_create_estorage(/datum/robot_energy_storage/medical)
-
-		else if(istype(S, /obj/item/stack/cable_coil))
-			S.cost = 1
-			S.source = get_or_create_estorage(/datum/robot_energy_storage/wire)
-
-		else if(istype(S, /obj/item/stack/marker_beacon))
-			S.cost = 1
-			S.source = get_or_create_estorage(/datum/robot_energy_storage/beacon)
-
-		else if(istype(S, /obj/item/stack/packageWrap))
-			S.cost = 1
-			S.source = get_or_create_estorage(/datum/robot_energy_storage/wrapping_paper)
-
-		if(S && S.source)
-			S.set_custom_materials(null)
-			S.is_cyborg = 1
+	var/obj/item/stack/S = I
+	if(istype(I, /obj/item/stack) && !S.is_cyborg) // Now handled in the type itself
+		stack_trace("Non-cyborg variant of /obj/item/stack added to a cyborg's modules.")
 
 	if(I.loc != src)
 		I.forceMove(src)
@@ -142,7 +109,6 @@
 	if(requires_rebuild)
 		rebuild_modules()
 	return I
-*/ //replaced by the one in modular_sand
 
 //Adds flavoursome dogborg items to dogborg variants optionally without mechanical benefits
 /obj/item/robot_module/proc/dogborg_equip()
@@ -408,7 +374,7 @@
 			var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-med")
 			bad_snowflake.pixel_x = -16
 			med_icons["Alina"] = bad_snowflake
-		med_icons = sortList(med_icons)
+		med_icons = sort_list(med_icons)
 	var/med_borg_icon = show_radial_menu(R, R , med_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(med_borg_icon)
 		if("Default")
@@ -534,7 +500,7 @@
 			var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-eng")
 			bad_snowflake.pixel_x = -16
 			engi_icons["Alina"] = bad_snowflake
-		engi_icons = sortList(engi_icons)
+		engi_icons = sort_list(engi_icons)
 	var/engi_borg_icon = show_radial_menu(R, R , engi_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(engi_borg_icon)
 		if("Default")
@@ -637,7 +603,7 @@
 			var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-sec")
 			bad_snowflake.pixel_x = -16
 			sec_icons["Alina"] = bad_snowflake
-		sec_icons = sortList(sec_icons)
+		sec_icons = sort_list(sec_icons)
 	var/sec_borg_icon = show_radial_menu(R, R , sec_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(sec_borg_icon)
 		if("Default")
@@ -728,7 +694,7 @@
 
 /obj/item/robot_module/peacekeeper/be_transformed_to(obj/item/robot_module/old_module)
 	var/mob/living/silicon/robot/R = loc
-	var/static/list/peace_icons = sortList(list(
+	var/static/list/peace_icons = sort_list(list(
 		"Default" = image(icon = 'icons/mob/robots.dmi', icon_state = "peace"),
 		"Borgi" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "borgi"),
 		"Spider" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "whitespider"),
@@ -893,7 +859,7 @@
 		"(Janitor) Marina" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "marinajan"),
 		"(Janitor) Sleek" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "sleekjan"),
 		"(Janitor) Can" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "canjan"),
-		"(Janitor) Heavy" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "heavyjan"),
+		"(Janitor) Heavy" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "heavyres"),
 		"(Janitor) Drake" = image(icon = 'modular_sand/icons/mob/cyborg/drakemech.dmi', icon_state = "drakejanitbox")
 		)
 		var/list/L = list("(Service) DarkK9" = "k50", "(Service) Vale" = "valeserv", "(Service) ValeDark" = "valeservdark",
@@ -906,7 +872,7 @@
 			var/image/bad_snowflake = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = "alina-sec")
 			bad_snowflake.pixel_x = -16
 			service_icons["Alina"] = bad_snowflake
-		service_icons = sortList(service_icons)
+		service_icons = sort_list(service_icons)
 	var/service_robot_icon = show_radial_menu(R, R , service_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(service_robot_icon)
 		if("(Service) Waitress")
@@ -994,9 +960,9 @@
 		/obj/item/gps/cyborg,
 		/obj/item/gripper/mining,
 		/obj/item/cyborg_clamp,
-		/obj/item/stack/marker_beacon,
+		/obj/item/stack/marker_beacon/cyborg,
 		/obj/item/destTagger,
-		/obj/item/stack/packageWrap,
+		/obj/item/stack/packageWrap/cyborg,
 		/obj/item/card/id/miningborg)
 	emag_modules = list(/obj/item/borg/stun)
 	ratvar_modules = list(
@@ -1026,7 +992,7 @@
 			var/image/wide = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = L[a])
 			wide.pixel_x = -16
 			mining_icons[a] = wide
-		mining_icons = sortList(mining_icons)
+		mining_icons = sort_list(mining_icons)
 	var/mining_borg_icon = show_radial_menu(R, R , mining_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 	switch(mining_borg_icon)
 		if("Lavaland")
@@ -1121,7 +1087,7 @@
 		/obj/item/surgicaldrill,
 		/obj/item/scalpel,
 		/obj/item/bonesetter,
-		/obj/item/stack/medical/bone_gel,
+		/obj/item/stack/medical/bone_gel/cyborg,
 		/obj/item/melee/transforming/energy/sword/cyborg/saw,
 		/obj/item/roller/robo,
 		/obj/item/card/emag,
@@ -1255,7 +1221,7 @@
 		/obj/item/surgicaldrill,
 		/obj/item/scalpel,
 		/obj/item/bonesetter,
-		/obj/item/stack/medical/bone_gel,
+		/obj/item/stack/medical/bone_gel/cyborg,
 		/obj/item/melee/transforming/energy/sword/cyborg/saw,
 		/obj/item/roller/robo,
 		/obj/item/stack/medical/gauze/cyborg,

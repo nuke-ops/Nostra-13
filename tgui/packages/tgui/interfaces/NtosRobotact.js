@@ -175,7 +175,7 @@ export const NtosRobotactContent = (props, context) => {
                       label="Maintenance Cover">
                       <Button.Confirm
                         content="Unlock"
-                        disabled={cover==="UNLOCKED"}
+                        disabled={(cover==="UNLOCKED") || (borgType ==="Roleplay")}
                         onClick={() => act('coverunlock')} />
                     </LabeledList.Item>
                     <LabeledList.Item
@@ -213,13 +213,16 @@ export const NtosRobotactContent = (props, context) => {
               )}
               {tab_sub === 2 && (
                 <Section>
-                  {borgUpgrades.map(upgrade => (
-                    <Box
-                      mb={1}
-                      key={upgrade}>
-                      {upgrade}
-                    </Box>
-                  ))}
+                  {borgUpgrades.filter((upgrade, index, arr) =>
+                    arr.indexOf(upgrade) === index).map(upgrade => {
+                    const upgradeCount = borgUpgrades.filter(u =>
+                      u === upgrade).length;
+                    return (
+                      <Box mb={1} key={upgrade}>
+                        {upgrade} {upgradeCount > 1 ? `x${upgradeCount}` : ''}
+                      </Box>
+                    );
+                  })}
                 </Section>
               )}
               {tab_sub === 3 && (

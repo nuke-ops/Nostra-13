@@ -18,8 +18,6 @@
 	var/list/can_hold_extra							//if this is set, it will also be able to hold these.
 	var/list/cant_hold								//if this is set, anything in this typecache will not be able to fit.
 
-	var/can_hold_description
-
 	var/list/mob/is_using							//lazy list of mobs looking at the contents of this storage.
 
 	var/locked = FALSE								//when locked nothing can see inside or use it.
@@ -130,24 +128,6 @@
 /datum/component/storage/PreTransfer()
 	update_actions()
 
-/datum/component/storage/proc/set_holdable(can_hold_list, cant_hold_list)
-	can_hold_description = generate_hold_desc(can_hold_list)
-
-	if (can_hold_list != null)
-		can_hold = string_list(typecacheof(can_hold_list))
-
-	if (cant_hold_list != null)
-		cant_hold = string_list(typecacheof(cant_hold_list))
-
-/datum/component/storage/proc/generate_hold_desc(can_hold_list)
-	var/list/desc = list()
-
-	for(var/valid_type in can_hold_list)
-		var/obj/item/valid_item = valid_type
-		desc += "\a [initial(valid_item.name)]"
-
-	return "\n\t<span class='notice'>[desc.Join("\n\t")]</span>"
-
 /datum/component/storage/proc/update_actions()
 	QDEL_NULL(modeswitch_action)
 	if(!isitem(parent) || !allow_quick_gather)
@@ -233,7 +213,7 @@
 		return
 	var/datum/progressbar/progress = new(M, len, I.loc)
 	var/list/rejections = list()
-	while(do_after(M, 10, TRUE, parent, FALSE, CALLBACK(src, .proc/handle_mass_pickup, things, I.loc, rejections, progress)))
+	while(do_after(M, 1 SECONDS, parent, NONE, FALSE, CALLBACK(src, .proc/handle_mass_pickup, things, I.loc, rejections, progress)))
 		stoplag(1)
 	progress.end_progress()
 	to_chat(M, "<span class='notice'>You put everything you could [insert_preposition] [parent].</span>")
@@ -291,7 +271,7 @@
 	var/turf/T = get_turf(A)
 	var/list/things = contents()
 	var/datum/progressbar/progress = new(M, length(things), T)
-	while (do_after(M, 10, TRUE, T, FALSE, CALLBACK(src, .proc/mass_remove_from_storage, T, things, progress, TRUE, M)))
+	while(do_after(M, 1 SECONDS, T, NONE, FALSE, CALLBACK(src, .proc/mass_remove_from_storage, T, things, progress, TRUE, M)))
 		stoplag(1)
 	progress.end_progress()
 	A.do_squish(0.8, 1.2)
@@ -458,7 +438,7 @@
 	if(isrevenant(M))
 		INVOKE_ASYNC(GLOBAL_PROC, .proc/RevenantThrow, over_object, M, source)
 		return
-	if(check_locked(null, M) || !M.CanReach(A) || (!M.CanReach(over_object) && !istype(over_object, /atom/movable/screen)))
+	if(check_locked(null, M) || !M.CanReach(A))
 		return
 	playsound(A, "rustle", 50, TRUE, -5)
 	A.do_jiggle()
@@ -694,7 +674,7 @@
 	var/atom/A = parent
 	update_actions()
 	for(var/mob/M in range(1, A))
-		if(M.active_storage == src)
+		if(M.active_storage == src && (M != user))
 			close(M)
 
 /datum/component/storage/proc/signal_take_obj(datum/source, atom/movable/AM, new_loc, force = FALSE)
