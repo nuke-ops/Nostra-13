@@ -5350,7 +5350,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/obj/structure/sign/poster/official/duelshotgun{
+/obj/structure/sign/poster/official/twelve_gauge{
 	pixel_y = -32
 	},
 /turf/open/floor/plasteel,

@@ -858,7 +858,7 @@
 /turf/open/floor/plating/airless,
 /area/router/aux)
 "acf" = (
-/obj/machinery/computer/arcade/minesweeper,
+/obj/machinery/computer/arcade/tetris,
 /turf/open/floor/carpet/arcade,
 /area/commons/arcade)
 "acg" = (
@@ -4508,7 +4508,7 @@
 /area/maintenance/solars/starboard/fore)
 "alg" = (
 /obj/structure/frame/machine,
-/obj/item/circuitboard/computer/arcade/minesweeper,
+/obj/item/circuitboard/computer/arcade/tetris,
 /turf/open/floor/plating,
 /area/construction/secondary)
 "alh" = (
@@ -5349,7 +5349,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/obj/structure/sign/poster/official/duelshotgun{
+/obj/structure/sign/poster/official/twelve_gauge{
 	pixel_y = -32
 	},
 /turf/open/floor/plasteel,
@@ -23665,14 +23665,14 @@
 	dir = 4;
 	light_color = "#e8eaff"
 	},
-/obj/item/aiModule/reset/purge{
+/obj/item/ai_module/reset/purge{
 	pixel_y = 6
 	},
-/obj/item/aiModule/reset{
+/obj/item/ai_module/reset{
 	pixel_x = -2;
 	pixel_y = 4
 	},
-/obj/item/aiModule/core/full/custom{
+/obj/item/ai_module/core/full/custom{
 	pixel_x = -4
 	},
 /obj/machinery/status_display{
@@ -24176,7 +24176,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/obj/item/aiModule/core/full/asimov{
+/obj/item/ai_module/core/full/asimov{
 	pixel_x = 2;
 	pixel_y = 10
 	},
@@ -24187,11 +24187,11 @@
 /obj/effect/spawner/lootdrop/aimodule_harmless{
 	pixel_y = 6
 	},
-/obj/item/aiModule/core/freeformcore{
+/obj/item/ai_module/core/freeformcore{
 	pixel_x = -1;
 	pixel_y = 2
 	},
-/obj/item/aiModule/supplied/freeform{
+/obj/item/ai_module/supplied/freeform{
 	pixel_x = -2
 	},
 /obj/structure/cable{
@@ -38065,22 +38065,22 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 4
 	},
-/obj/item/aiModule/supplied/oxygen{
+/obj/item/ai_module/supplied/oxygen{
 	pixel_x = 2;
 	pixel_y = 10
 	},
-/obj/item/aiModule/supplied/quarantine{
+/obj/item/ai_module/supplied/quarantine{
 	pixel_x = 1;
 	pixel_y = 8
 	},
-/obj/item/aiModule/zeroth/oneHuman{
+/obj/item/ai_module/zeroth/oneHuman{
 	pixel_y = 4
 	},
 /obj/effect/spawner/lootdrop/aimodule_harmful{
 	pixel_x = -1;
 	pixel_y = 2
 	},
-/obj/item/aiModule/supplied/protectStation{
+/obj/item/ai_module/supplied/protectStation{
 	pixel_x = -2
 	},
 /turf/open/floor/plasteel,
@@ -57320,7 +57320,7 @@
 	name = "Chief Engineer's RC";
 	pixel_y = -32
 	},
-/mob/living/simple_animal/parrot/Poly,
+/mob/living/simple_animal/parrot/Polly,
 /turf/open/floor/plasteel,
 /area/command/heads_quarters/ce)
 "csf" = (

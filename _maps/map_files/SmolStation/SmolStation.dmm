@@ -13838,7 +13838,7 @@
 /turf/open/floor/plasteel/dark,
 /area/security/brig)
 "kfA" = (
-/obj/structure/sign/poster/official/yes_erp{
+/obj/structure/sign/poster/official/no_erp{
 	pixel_x = -32
 	},
 /turf/open/floor/plating,
@@ -15263,7 +15263,7 @@
 /obj/structure/closet/secure_closet/engineering_chief,
 /obj/item/clothing/suit/space/hardsuit/engine/elite,
 /obj/item/clothing/shoes/magboots/advance,
-/mob/living/simple_animal/parrot/Poly,
+/mob/living/simple_animal/parrot/Polly,
 /turf/open/floor/plasteel,
 /area/engineering/main)
 "lhi" = (
@@ -17751,7 +17751,7 @@
 /obj/machinery/cryopod{
 	dir = 8
 	},
-/obj/effect/landmark/start/prisoner/prilate,
+/obj/effect/landmark/start/prisoner,
 /turf/open/floor/plasteel/dark,
 /area/security/prison)
 "nab" = (
@@ -29209,7 +29209,7 @@
 /turf/open/floor/plasteel,
 /area/commons/dorms)
 "vWK" = (
-/obj/machinery/computer/arcade/minesweeper{
+/obj/machinery/computer/arcade/tetris{
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
