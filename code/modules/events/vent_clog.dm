@@ -2,6 +2,7 @@
 	name = "Clogged Vents: Normal"
 	typepath = /datum/round_event/vent_clog
 	weight = 10
+	min_players = 6
 	max_occurrences = 3
 	category = EVENT_CATEGORY_HEALTH
 	description = "All the scrubbers onstation spit random chemicals in smoke form."
