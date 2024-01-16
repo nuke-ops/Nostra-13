@@ -2,7 +2,7 @@
 	name = "arm-mounted implant"
 	desc = "You shouldn't see this! Adminhelp and report this as an issue on github!"
 	icon_state = "implant-toolkit"
-	w_class = WEIGHT_CLASS_SMALL
+	w_class = WEIGHT_CLASS_SMALL // Nostra change - small instead of normal
 	zone = BODY_ZONE_R_ARM
 	organ_flags = ORGAN_SYNTHETIC
 	actions_types = list(/datum/action/item_action/organ_action/toggle)

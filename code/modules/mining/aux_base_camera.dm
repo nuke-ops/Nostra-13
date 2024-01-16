@@ -220,7 +220,7 @@
 /datum/action/innate/aux_base/window_type/Activate()
 	if(..())
 		return
-	B.RCD.toggle_window_glass()
+	B.RCD.toggle_window_glass() // Nostra change - glass instead of type
 
 /datum/action/innate/aux_base/place_fan
 	name = "Place Tiny Fan"

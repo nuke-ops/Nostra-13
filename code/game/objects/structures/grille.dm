@@ -51,9 +51,9 @@
 		if(RCD_DECONSTRUCT)
 			return list("mode" = RCD_DECONSTRUCT, "delay" = 20, "cost" = 5)
 		if(RCD_WINDOWGRILLE)
-			if(the_rcd.window_glass == RCD_WINDOW_REINFORCED)
+			if(the_rcd.window_glass == RCD_WINDOW_REINFORCED) // Nostra change
 				return list("mode" = RCD_WINDOWGRILLE, "delay" = 40, "cost" = 12)
-			return list("mode" = RCD_WINDOWGRILLE, "delay" = 20, "cost" = 8)
+			return list("mode" = RCD_WINDOWGRILLE, "delay" = 20, "cost" = 8) // Nostra change
 
 	return FALSE
 
@@ -64,14 +64,16 @@
 			qdel(src)
 			return TRUE
 		if(RCD_WINDOWGRILLE)
+			// Start of Nostra change
 			if(!isturf(loc))
 				return FALSE
 			var/turf/T = loc
 			var/window_dir = the_rcd.window_size == RCD_WINDOW_FULLTILE ? FULLTILE_WINDOW_DIR : user.dir
 			if(!valid_window_location(T, window_dir))
+			// End of Nostra change
 				return FALSE
 			to_chat(user, "<span class='notice'>You construct the window.</span>")
-			var/obj/structure/window/WD = new the_rcd.window_type(T, window_dir)
+			var/obj/structure/window/WD = new the_rcd.window_type(T, window_dir) // Nostra change
 			WD.setAnchored(TRUE)
 			return TRUE
 	return FALSE

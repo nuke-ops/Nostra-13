@@ -142,7 +142,7 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 	point_value = 2
 	tableVariant = /obj/structure/table
 	material_type = /datum/material/iron
-	matter_amount = 4
+	matter_amount = 4 // Nostra change
 
 /obj/item/stack/sheet/metal/ratvar_act()
 	new /obj/item/stack/tile/brass(loc, amount)
@@ -221,7 +221,7 @@ GLOBAL_LIST_INIT(plasteel_recipes, list ( \
 	grind_results = list(/datum/reagent/iron = 20, /datum/reagent/toxin/plasma = 20)
 	point_value = 23
 	tableVariant = /obj/structure/table/reinforced
-	matter_amount = 12
+	matter_amount = 12 // Nostra change
 
 /obj/item/stack/sheet/plasteel/get_main_recipes()
 	. = ..()

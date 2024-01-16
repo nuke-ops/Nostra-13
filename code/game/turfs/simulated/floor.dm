@@ -281,8 +281,11 @@
 			return list("mode" = RCD_MACHINE, "delay" = 20, "cost" = 25)
 		if(RCD_COMPUTER)
 			return list("mode" = RCD_COMPUTER, "delay" = 20, "cost" = 25)
+		// Start of Nostra change
 		if(RCD_FURNISHING)
 			return list("mode" = RCD_FURNISHING, "delay" = the_rcd.furnish_delay, "cost" = the_rcd.furnish_cost)
+		// End of Nostra change
+
 	return FALSE
 
 /turf/open/floor/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
@@ -306,20 +309,24 @@
 				new_window.update_icon()
 				return TRUE
 			to_chat(user, "<span class='notice'>You build an airlock.</span>")
-			var/obj/machinery/door/airlock/new_airlock = new the_rcd.airlock_type(src)
-			new_airlock.electronics = new /obj/item/electronics/airlock(new_airlock)
+			var/obj/machinery/door/airlock/A = new the_rcd.airlock_type(src)
+			// Start of Nostra change - use electronics instead of conf
+			A.electronics = new /obj/item/electronics/airlock(A)
 			if(the_rcd.airlock_electronics)
-				new_airlock.electronics.accesses = the_rcd.airlock_electronics.accesses.Copy()
-				new_airlock.electronics.one_access = the_rcd.airlock_electronics.one_access
-				new_airlock.electronics.unres_sides = the_rcd.airlock_electronics.unres_sides
-			if(new_airlock.electronics.one_access)
-				new_airlock.req_one_access = new_airlock.electronics.accesses
+				A.electronics.accesses = the_rcd.airlock_electronics.accesses.Copy()
+				A.electronics.one_access = the_rcd.airlock_electronics.one_access
+				A.electronics.unres_sides = the_rcd.airlock_electronics.unres_sides
+			// End of Nostra change
+			if(A.electronics.one_access)
+				A.req_one_access = A.electronics.accesses
 			else
-				new_airlock.req_access = new_airlock.electronics.accesses
-			if(new_airlock.electronics.unres_sides)
-				new_airlock.unres_sides = new_airlock.electronics.unres_sides
-			new_airlock.autoclose = TRUE
-			new_airlock.update_icon()
+				A.req_access = A.electronics.accesses
+			// Start of Nostra change
+			if(A.electronics.unres_sides)
+				A.unres_sides = A.electronics.unres_sides
+			// End of Nostra change
+			A.autoclose = TRUE
+			A.update_icon()
 		if(RCD_DECONSTRUCT)
 			if(!ScrapeAway(flags = CHANGETURF_INHERIT_AIR))
 				return FALSE
@@ -345,7 +352,7 @@
 				return FALSE
 			var/obj/structure/frame/computer/new_computer = new(src)
 			new_computer.set_anchored(TRUE)
-			new_computer.state = 1
+			new_computer.state = 1 // Nostra change
 			new_computer.setDir(the_rcd.computer_dir)
 			return TRUE
 		if(RCD_FURNISHING)

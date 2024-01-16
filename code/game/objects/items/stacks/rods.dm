@@ -25,7 +25,7 @@ GLOBAL_LIST_INIT(rod_recipes, list ( \
 	hitsound = 'sound/items/trayhit1.ogg'
 	embedding = list()
 	novariants = TRUE
-	matter_amount = 2
+	matter_amount = 2 // Nostra change
 
 /obj/item/stack/rods/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] begins to stuff \the [src] down [user.p_their()] throat! It looks like [user.p_theyre()] trying to commit suicide!</span>")//it looks like theyre ur mum

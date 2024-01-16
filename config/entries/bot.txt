@@ -8,10 +8,10 @@
 #CHAT_ANNOUNCE_NEW_GAME
 
 ## Announcements for when the round ends, pending server reboot.
-#CHAT_ROUNDEND_NOTICE_TAG
+CHAT_ROUNDEND_NOTICE_TAG tgs-logs
 
 ## For where should the one true bird speak?
-#CHAT_SQUAWK_TAG
+CHAT_SQUAWK_TAG ss13general
 
 ## Role ID that, when present, will be pinged every round end.
 #CHAT_REBOOT_ROLE
