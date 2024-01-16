@@ -4,8 +4,8 @@ import { Window } from '../layouts';
 
 export const CivCargoHoldTerminal = (props, context) => {
   const { act, data } = useBackend(context);
-  const { pad, sending, status_report, id_inserted, id_bounty_info, picking } =
-    data;
+  const { pad, sending, status_report, id_inserted, id_bounty_info, picking }
+    = data;
   const in_text = 'Welcome valued employee.';
   const out_text = 'To begin, insert your ID into the console.';
   return (
