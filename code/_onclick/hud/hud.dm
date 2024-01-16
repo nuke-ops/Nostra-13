@@ -11,7 +11,10 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	"Plasmafire" = 'icons/mob/screen_plasmafire.dmi',
 	"Slimecore" = 'icons/mob/screen_slimecore.dmi',
 	"Operative" = 'icons/mob/screen_operative.dmi',
+	"Glass" = 'icons/mob/screen_glass.dmi',
 	"Clockwork" = 'icons/mob/screen_clockwork.dmi',
+	"Trasen-Knox" = 'icons/mob/screen_trasenknox.dmi',
+	"Detective" = 'icons/mob/screen_detective.dmi',
 	"Liteweb" = 'modular_sand/icons/mob/screen_liteweb.dmi'
 ))
 
@@ -82,7 +85,6 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	var/atom/movable/screen/internals
 
 	var/atom/movable/screen/wanted/wanted_lvl
-
 	// subtypes can override this to force a specific UI style
 	var/ui_style
 
@@ -133,6 +135,9 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	healthdoll = null
 	wanted_lvl = null
 	internals = null
+
+	hunger = null
+	// thirst = null // Nostra change
 
 	lingchemdisplay = null
 	devilsouldisplay = null

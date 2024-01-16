@@ -393,6 +393,9 @@
 /area/shuttle/mining_large)
 "B" = (
 /obj/effect/turf_decal/box/white/corners,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/dark,
 /area/shuttle/mining_large)
 "C" = (

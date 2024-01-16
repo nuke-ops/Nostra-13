@@ -10,7 +10,7 @@ export const CivCargoHoldTerminal = (props, context) => {
   const out_text = 'To begin, insert your ID into the console.';
   return (
     <Window width={580} height={375}>
-      <Window.Content scrollable>
+      <Window.Content overflow="auto">
         <Flex>
           <Flex.Item>
             <NoticeBox color={!id_inserted ? 'default' : 'blue'}>

@@ -4512,7 +4512,7 @@
 "rZ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/mecha/working/ripley{
+/obj/vehicle/sealed/mecha/working/ripley{
 	armor = list("melee" = 50, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 50, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 100);
 	color = #c24e00;
 	desc = "This Autonomous Power Loader Unit served as a basis for new generation of APLU featuring thicker and more heavier hull compartment resulting in the capability of enduring more stress for the machine at the drawback of higher power consumption for each step.";
