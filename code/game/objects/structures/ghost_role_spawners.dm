@@ -380,7 +380,7 @@
 	new/obj/structure/fluff/empty_sleeper/syndicate(get_turf(src))
 	return ..()
 
-//Space Policeman
+// Start of Nostra change
 /obj/effect/mob_spawn/human/spacepolice
 	name = "space policeman"
 	desc = "A sleeper designed for long-term stasis."
@@ -399,6 +399,7 @@
 	flavour_text = "You are an agent assigned by Spearhead Industries and tasked with rooting out and eliminating those classified enemies of Central Command such as the Syndicate, Wizard Federation, or worshipers of the Elder Gods Nar'sie and Ratvar. With hopes that our kind deeds to enforce Space Law beyond the borders of Sol will allow us, Spearhead Industries to gain a foot-hold in Nanotrasens Military Operations."
 	important_info = "DO NOT HARM ANY LOYAL NANOTRASEN CREW, OR THOSE IN COMMAND HAVE FULL RIGHT FOR YOUR EXTERMINATION"
 	assignedrole = "Space Policeman"
+// End of Nostra change
 
 /datum/outfit/spacepoliceman
 	name = "Space Policeman"
@@ -617,6 +618,7 @@
 	implants = list(/obj/item/implant/mindshield) //No revolutionaries, he's MY friend.
 	id = /obj/item/card/id
 
+// Start of Nostra change
 /obj/effect/mob_spawn/human/syndicate_agent_base_comms
 	name = "Syndicate Telecommunications Agent"
 	roundstart = FALSE
@@ -629,6 +631,7 @@
 	flavour_text = "You have been assigned by MI13 in gathering intel about NT's latest technological breakthrough in Xeno-technology. Those slimes are more then Central Commmand is willing to give credit for, and this will bring their end too NT. Ensure no NT thugs come aboard your vessel at all costs."
 	important_info = "Do NOT kill the station crew unless your base has been discovered and breached by them."
 	objectives = "Gather as much intel about NT's Slime Operations as you can, ensure you and your fellow agent stay undetected."
+// End of Nostra change
 
 /obj/effect/mob_spawn/human/syndicate_agent_base_infl
 	name = "Syndicate Infiltration Agent"

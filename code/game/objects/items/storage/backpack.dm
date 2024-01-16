@@ -69,19 +69,21 @@
 	STR.storage_flags = STORAGE_FLAGS_VOLUME_DEFAULT
 	STR.max_volume = STORAGE_VOLUME_BAG_OF_HOLDING
 
-/obj/item/storage/backpack/holding/satchel/ComponentInitialize() // Nostra change
+// Start of Nostra change
+/obj/item/storage/backpack/holding/satchel/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_volume = STORAGE_VOLUME_BACKPACK
 	STR.storage_flags = STORAGE_FLAGS_VOLUME_DEFAULT
 	STR.max_w_class = MAX_WEIGHT_CLASS_BACKPACK
 
-/obj/item/storage/backpack/holding/duffel/ComponentInitialize() // Nostra change
+/obj/item/storage/backpack/holding/duffel/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_w_class = MAX_WEIGHT_CLASS_DUFFLEBAG_OF_HOLDING
 	STR.storage_flags = STORAGE_FLAGS_VOLUME_DEFAULT
 	STR.max_volume = STORAGE_VOLUME_DUFFLEBAG_OF_HOLDING
+// End of Nostra change
 
 /obj/item/storage/backpack/holding/suicide_act(mob/living/user)
 	user.visible_message("<span class='suicide'>[user] is jumping into [src]! It looks like [user.p_theyre()] trying to commit suicide.</span>")

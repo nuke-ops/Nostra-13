@@ -1,9 +1,9 @@
 /datum/interaction/lewd/jack
 	description = "Jerk yourself off."
 	interaction_sound = null
-	require_user_hands = TRUE
-	require_user_penis = REQUIRE_EXPOSED
-	user_is_target = TRUE
+	required_from_user = INTERACTION_REQUIRE_HANDS
+	required_from_user_exposed = INTERACTION_REQUIRE_PENIS
+	interaction_flags = INTERACTION_FLAG_OOC_CONSENT | INTERACTION_FLAG_USER_IS_TARGET
 	max_distance = 0
 	write_log_user = "jerked off"
 	write_log_target = null
@@ -47,5 +47,5 @@
 	playlewdinteractionsound(get_turf(user), pick('modular_sand/sound/interactions/bang1.ogg',
 						'modular_sand/sound/interactions/bang2.ogg',
 						'modular_sand/sound/interactions/bang3.ogg'), 70, 1, -1)
-	user.visible_message(message = span_lewd("<b>\The [user]</b> [message]."), ignored_mobs = user.get_unconsenting())
+	user.visible_message(span_lewd("<b>\The [user]</b> [message]."), ignored_mobs = user.get_unconsenting())
 	user.handle_post_sex(NORMAL_LUST, CUM_TARGET_HAND, liquid_container ? liquid_container : user)

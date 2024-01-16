@@ -18,6 +18,6 @@ linux_scripts:
   PreCompile.sh: tools/tgs4_scripts/PreCompile.sh
 # Same as above for Windows hosted servers
 windows_scripts:
-  PreCompile.bat: tools/tgs_scripts/PreCompile.bat
+  PreCompile.bat: tools/tgs4_scripts/PreCompile.bat
 # The security level the game should be run at
 security: Trusted

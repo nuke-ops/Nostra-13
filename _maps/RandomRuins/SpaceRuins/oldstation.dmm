@@ -558,7 +558,7 @@
 /area/ruin/space/has_grav/ancientstation/comm)
 "bA" = (
 /obj/structure/alien/weeds,
-/obj/structure/AIcore/deactivated,
+/obj/structure/ai_core/deactivated,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/deltaai)
 "bB" = (

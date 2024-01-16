@@ -64,7 +64,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/outline_color = COLOR_THEME_MIDNIGHT
 	var/screentip_pref = SCREENTIP_PREFERENCE_ENABLED
 	var/screentip_color = "#ffd391"
-	var/screentip_allow_images = FALSE
+	var/screentip_images = TRUE
 	var/buttons_locked = FALSE
 	var/hotkeys = FALSE
 
@@ -147,7 +147,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/eye_type = DEFAULT_EYES_TYPE	//Eye type
 	var/split_eye_colors = FALSE
 	var/datum/species/pref_species = new /datum/species/human()	//Mutant race
-	var/list/features = list("mcolor" = "FFFFFF", "mcolor2" = "FFFFFF", "mcolor3" = "FFFFFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "horns_color" = "85615a", "ears" = "None", "wings" = "None", "wings_color" = "FFF", "frills" = "None", "deco_wings" = "None", "spines" = "None", "legs" = "Plantigrade", "insect_wings" = "Plain", "insect_fluff" = "None", "insect_markings" = "None", "arachnid_legs" = "Plain", "arachnid_spinneret" = "Plain", "arachnid_mandibles" = "Plain", "mam_body_markings" = list(), "mam_ears" = "None", "mam_snouts" = "None", "mam_tail" = "None", "mam_tail_animated" = "None", "xenodorsal" = "Standard", "xenohead" = "Standard", "xenotail" = "Xenomorph Tail", "taur" = "None", "genitals_use_skintone" = FALSE, "has_cock" = FALSE, "cock_shape" = DEF_COCK_SHAPE, "cock_length" = COCK_SIZE_DEF, "cock_diameter_ratio" = COCK_DIAMETER_RATIO_DEF, "cock_color" = "ffffff", "cock_taur" = FALSE, "has_balls" = FALSE, "balls_color" = "ffffff", "balls_shape" = DEF_BALLS_SHAPE, "balls_size" = BALLS_SIZE_DEF, "balls_cum_rate" = CUM_RATE, "balls_cum_mult" = CUM_RATE_MULT, "balls_efficiency" = CUM_EFFICIENCY, "has_breasts" = FALSE, "breasts_color" = "ffffff", "breasts_size" = BREASTS_SIZE_DEF, "breasts_shape" = DEF_BREASTS_SHAPE, "breasts_producing" = FALSE, "has_vag" = FALSE, "vag_shape" = DEF_VAGINA_SHAPE, "vag_color" = "ffffff", "has_womb" = FALSE,  "has_butt" = FALSE, "butt_color" = "ffffff", "butt_size" = BUTT_SIZE_DEF, "balls_visibility"	= GEN_VISIBLE_NO_UNDIES, "breasts_visibility"= GEN_VISIBLE_NO_UNDIES, "cock_visibility"	= GEN_VISIBLE_NO_UNDIES, "vag_visibility"	= GEN_VISIBLE_NO_UNDIES, "butt_visibility" = GEN_VISIBLE_NO_UNDIES, "ipc_screen" = "Sunburst", "ipc_antenna" = "None", "flavor_text" = "", "silicon_flavor_text" = "", "ooc_notes" = "", "meat_type" = "Mammalian", "body_model" = MALE, "body_size" = RESIZE_DEFAULT_SIZE, "color_scheme" = OLD_CHARACTER_COLORING)
+	var/list/features = list("mcolor" = "FFFFFF", "mcolor2" = "FFFFFF", "mcolor3" = "FFFFFF", "tail_lizard" = "Smooth", "tail_human" = "None", "snout" = "Round", "horns" = "None", "horns_color" = "85615a", "ears" = "None", "wings" = "None", "wings_color" = "FFF", "frills" = "None", "deco_wings" = "None", "spines" = "None", "legs" = "Plantigrade", "insect_wings" = "Plain", "insect_fluff" = "None", "insect_markings" = "None", "arachnid_legs" = "Plain", "arachnid_spinneret" = "Plain", "arachnid_mandibles" = "Plain", "mam_body_markings" = list(), "mam_ears" = "None", "mam_snouts" = "None", "mam_tail" = "None", "mam_tail_animated" = "None", "xenodorsal" = "Standard", "xenohead" = "Standard", "xenotail" = "Xenomorph Tail", "taur" = "None", "genitals_use_skintone" = FALSE, "has_cock" = FALSE, "cock_shape" = DEF_COCK_SHAPE, "cock_length" = COCK_SIZE_DEF, "cock_diameter_ratio" = COCK_DIAMETER_RATIO_DEF, "cock_color" = "ffffff", "cock_taur" = FALSE, "has_balls" = FALSE, "balls_color" = "ffffff", "balls_shape" = DEF_BALLS_SHAPE, "balls_size" = BALLS_SIZE_DEF, "balls_cum_rate" = CUM_RATE, "balls_cum_mult" = CUM_RATE_MULT, "balls_efficiency" = CUM_EFFICIENCY, "has_breasts" = FALSE, "breasts_color" = "ffffff", "breasts_size" = BREASTS_SIZE_DEF, "breasts_shape" = DEF_BREASTS_SHAPE, "breasts_producing" = FALSE, "has_vag" = FALSE, "vag_shape" = DEF_VAGINA_SHAPE, "vag_color" = "ffffff", "has_womb" = FALSE,  "has_butt" = FALSE, "butt_color" = "ffffff", "butt_size" = BUTT_SIZE_DEF, "balls_visibility"	= GEN_VISIBLE_NO_UNDIES, "breasts_visibility"= GEN_VISIBLE_NO_UNDIES, "cock_visibility"	= GEN_VISIBLE_NO_UNDIES, "vag_visibility" = GEN_VISIBLE_NO_UNDIES, "butt_visibility" = GEN_VISIBLE_NO_UNDIES, "breasts_accessible" = FALSE, "cock_accessible" = FALSE, "balls_accessible" = FALSE, "vag_accessible" = FALSE, "butt_accessible" = FALSE, "anus_accessible" = FALSE,"ipc_screen" = "Sunburst", "ipc_antenna" = "None", "flavor_text" = "", "silicon_flavor_text" = "", "ooc_notes" = "", "meat_type" = "Mammalian", "body_model" = MALE, "body_size" = RESIZE_DEFAULT_SIZE, "color_scheme" = OLD_CHARACTER_COLORING)
 
 	var/custom_speech_verb = "default" //if your say_mod is to be something other than your races
 	var/custom_tongue = "default" //if your tongue is to be something other than your races
@@ -280,6 +280,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/list/tcg_cards = list()
 	var/list/tcg_decks = list()
 
+	var/loadout_errors = 0
+
+	var/silicon_lawset
+
 /datum/preferences/New(client/C)
 	parent = C
 
@@ -351,11 +355,27 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<HR>"
 
 			dat += "<center>"
+			var/client_file = user.client.Import()
+			var/savefile_name
+			if(client_file)
+				var/savefile/cache_savefile = new(user.client.Import())
+				if(!cache_savefile["deleted"] || savefile_needs_update(cache_savefile) != -2)
+					cache_savefile["real_name"] >> savefile_name
+			dat += "Local storage: [savefile_name ? savefile_name : "Empty"]"
+			dat += "<br />"
+			dat += "<a href='?_src_=prefs;preference=export_slot'>Export current slot</a>"
+			dat += "<a [savefile_name ? "href='?_src_=prefs;preference=import_slot' style='white-space:normal;'" : "class='linkOff'"]>Import into current slot</a>"
+			dat += "<a href='?_src_=prefs;preference=delete_local_copy' style='white-space:normal;background:#eb2e2e;'>Delete locally saved character</a>"
+			dat += "</center>"
+
+			dat += "<HR>"
+
+			dat += "<center>"
 			dat += "<a href='?_src_=prefs;preference=character_tab;tab=[GENERAL_CHAR_TAB]' [character_settings_tab == GENERAL_CHAR_TAB ? "class='linkOn'" : ""]>General</a>"
+			dat += "<a href='?_src_=prefs;preference=character_tab;tab=[BACKGROUND_CHAR_TAB]' [character_settings_tab == BACKGROUND_CHAR_TAB ? "class='linkOn'" : ""]>Background</a>"
 			dat += "<a href='?_src_=prefs;preference=character_tab;tab=[APPEARANCE_CHAR_TAB]' [character_settings_tab == APPEARANCE_CHAR_TAB ? "class='linkOn'" : ""]>Appearance</a>"
 			dat += "<a href='?_src_=prefs;preference=character_tab;tab=[MARKINGS_CHAR_TAB]' [character_settings_tab == MARKINGS_CHAR_TAB ? "class='linkOn'" : ""]>Markings</a>"
 			dat += "<a href='?_src_=prefs;preference=character_tab;tab=[SPEECH_CHAR_TAB]' [character_settings_tab == SPEECH_CHAR_TAB ? "class='linkOn'" : ""]>Speech</a>"
-			dat += "<a href='?_src_=prefs;preference=character_tab;tab=[BACKGROUND_CHAR_TAB]' [character_settings_tab == BACKGROUND_CHAR_TAB ? "class='linkOn'" : ""]>Background</a>"
 			dat += "<a href='?_src_=prefs;preference=character_tab;tab=[LOADOUT_CHAR_TAB]' [character_settings_tab == LOADOUT_CHAR_TAB ? "class='linkOn'" : ""]>Loadout</a>" //If you change the index of this tab, change all the logic regarding tab
 			dat += "</center>"
 
@@ -363,36 +383,48 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<center>"
 			dat += "<table width='100%'>"
 			dat += "<tr>"
-			dat += "<td width=35%>"
-			dat += "Preview:"
+			dat += "<td width=35% style=\"line-height:5px\">"
+			dat += "<center><b>Preview:</b></center><br>"
+			dat += "<center style=\"line-height:20px\">"
 			dat += "<a href='?_src_=prefs;preference=character_preview;tab=[PREVIEW_PREF_JOB]' [preview_pref == PREVIEW_PREF_JOB ? "class='linkOn'" : ""]>[PREVIEW_PREF_JOB]</a>"
 			dat += "<a href='?_src_=prefs;preference=character_preview;tab=[PREVIEW_PREF_LOADOUT]' [preview_pref == PREVIEW_PREF_LOADOUT ? "class='linkOn'" : ""]>[PREVIEW_PREF_LOADOUT]</a>"
 			dat += "<a href='?_src_=prefs;preference=character_preview;tab=[PREVIEW_PREF_NAKED]' [preview_pref == PREVIEW_PREF_NAKED ? "class='linkOn'" : ""]>[PREVIEW_PREF_NAKED]</a>"
+			dat += "<br>"
+			dat += "<a href='?_src_=prefs;preference=character_preview;tab=[PREVIEW_PREF_NAKED_AROUSED]' [preview_pref == PREVIEW_PREF_NAKED_AROUSED ? "class='linkOn'" : ""]>[PREVIEW_PREF_NAKED_AROUSED]</a>"
+			dat += "</center>"
 			dat += "</td>"
 			if(character_settings_tab == LOADOUT_CHAR_TAB) //if loadout
 				//calculate your gear points from the chosen item
 				gear_points = CONFIG_GET(number/initial_gear_points)
 				var/list/chosen_gear = loadout_data["SAVE_[loadout_slot]"]
 				if(chosen_gear)
+					loadout_errors = 0
 					for(var/loadout_item in chosen_gear)
 						var/loadout_item_path = loadout_item[LOADOUT_ITEM]
-						if(loadout_item_path)
-							var/datum/gear/loadout_gear = text2path(loadout_item_path)
-							if(loadout_gear)
-								gear_points -= initial(loadout_gear.cost)
+						if(!loadout_item_path)
+							loadout_errors++
+							continue
+						var/datum/gear/loadout_gear = text2path(loadout_item_path)
+						if(!loadout_gear)
+							loadout_errors++
+							continue
+						gear_points -= initial(loadout_gear.cost)
 				else
 					chosen_gear = list()
 
-				dat += "<td width=65%>"
-				dat += "<b><font color='[gear_points == 0 ? "#E62100" : "#CCDDFF"]'>[gear_points]</font> loadout point[gear_points == 1 ? "" : "s"] remaining <a href='?_src_=prefs;preference=gear;clear_loadout=1'>Clear Loadout</a></b>"
+				dat += "<td width=65% style=\"line-height:10px\">"
+				dat += "<center><b><font color='[gear_points == 0 ? "#E62100" : "#CCDDFF"]'>[gear_points]</font> loadout point[gear_points == 1 ? "" : "s"] remaining</center><br>"
+				dat += "<center><a href='?_src_=prefs;preference=gear;clear_loadout=1'>Clear Loadout</a></b></center>"
 				dat += "</td>"
 			else
-				dat += "<td width=35%>"
-				dat += "<b>Mismatched parts:</b> <a href='?_src_=prefs;preference=mismatched_markings;task=input'>[(show_mismatched_markings) ? "Enabled" : "Disabled"]</a>"
+				dat += "<td width=35% style=\"line-height:10px\">"
+				dat += "<center><b>Mismatched parts:</b></center><br>"
+				dat += "<center><a href='?_src_=prefs;preference=mismatched_markings;task=input'>[(show_mismatched_markings) ? "Enabled" : "Disabled"]</a></center>"
 				dat += "</td>"
 
-				dat += "<td width=30%>"
-				dat += "<b> Advanced colors:</b> <a href='?_src_=prefs;preference=color_scheme;task=input'>[(features["color_scheme"] == ADVANCED_CHARACTER_COLORING) ? "Enabled" : "Disabled"]</a>"
+				dat += "<td width=30% style=\"line-height:10px\">"
+				dat += "<center><b>Advanced colors:</b></center><br>"
+				dat += "<center><a href='?_src_=prefs;preference=color_scheme;task=input'>[(features["color_scheme"] == ADVANCED_CHARACTER_COLORING) ? "Enabled" : "Disabled"]</a></center>"
 				dat += "</td>"
 
 			dat += "</tr>"
@@ -407,21 +439,24 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(CONFIG_GET(flag/roundstart_traits))
 						dat += "<center><h2>Quirk Setup</h2>"
 						dat += "<a href='?_src_=prefs;preference=trait;task=menu'>Configure Quirks</a><br></center>"
-						dat += "<center><b>Current Quirks:</b> [all_quirks.len ? all_quirks.Join(", ") : "None"]</center>"
+						dat += "<center><b>Current Quirks:</b> [english_list(all_quirks, "None")]</center>"
 					dat += "<h2>Identity</h2>"
-					dat += "<table width='100%'><tr><td width='75%' valign='top'>"
+					dat += "<table width='100%'><tr><td width='30%' valign='top'>"
 					if(jobban_isbanned(user, "appearance"))
 						dat += "<b>You are banned from using custom names and appearances. You can continue to adjust your characters, but you will be randomised once you join the game.</b><br>"
-					dat += "<a style='display:block;width:100px' href='?_src_=prefs;preference=name;task=random'>Random Name</A> "
-					dat += "<b>Always Random Name:</b><a style='display:block;width:30px' href='?_src_=prefs;preference=name'>[be_random_name ? "Yes" : "No"]</a><BR>"
 
-					dat += "<b>[nameless ? "Default designation" : "Name"]:</b>"
+					dat += "<b>[nameless ? "Default designation" : "Name"]:</b><br>"
 					dat += "<a href='?_src_=prefs;preference=name;task=input'>[real_name]</a><BR>"
+					dat += "<a style='display:block;width:100px' href='?_src_=prefs;preference=name;task=random'>Random Name</a><br>"
 					dat += "<a href='?_src_=prefs;preference=nameless'>Be nameless: [nameless ? "Yes" : "No"]</a><BR>"
+					dat += "<b>Always Random Name:</b><a style='display:block;width:30px' href='?_src_=prefs;preference=name'>[be_random_name ? "Yes" : "No"]</a><BR>"
 
 					dat += "<b>Gender:</b> <a href='?_src_=prefs;preference=gender;task=input'>[gender == MALE ? "Male" : (gender == FEMALE ? "Female" : (gender == PLURAL ? "Non-binary" : "Object"))]</a><BR>"
 					dat += "<b>Age:</b> <a style='display:block;width:30px' href='?_src_=prefs;preference=age;task=input'>[age]</a><BR>"
+					dat += "<a href='?_src_=prefs;preference=hide_ckey;task=input'><b>Hide ckey: [hide_ckey ? "Enabled" : "Disabled"]</b></a><br>"
+					dat += "</td>"
 
+					dat += "<td valign='top'>"
 					dat += "<b>Special Names:</b><BR>"
 					var/old_group
 					for(var/custom_name_id in GLOB.preferences_custom_names)
@@ -436,49 +471,80 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 					dat += "<b>Custom job preferences:</b><BR>"
 					dat += "<a href='?_src_=prefs;preference=ai_core_icon;task=input'><b>Preferred AI Core Display:</b> [preferred_ai_core_display]</a><br>"
-					dat += "<a href='?_src_=prefs;preference=sec_dept;task=input'><b>Preferred Security Department:</b> [prefered_security_department]</a><BR></td>"
-					dat += "<br><a href='?_src_=prefs;preference=hide_ckey;task=input'><b>Hide ckey: [hide_ckey ? "Enabled" : "Disabled"]</b></a><br>"
-					dat += "</tr></table>"
+					dat += "<a href='?_src_=prefs;preference=sec_dept;task=input'><b>Preferred Security Department:</b> [prefered_security_department]</a><BR>"
 
-				//Character Appearance
-				if(APPEARANCE_CHAR_TAB)
-					dat += "<table><tr><td width='20%' height='300px' valign='top'>"
+					dat += "<h2>Silicon preferences</h2>"
+					if(!CONFIG_GET(flag/allow_silicon_choosing_laws))
+						dat += "<i>The server has disabled choosing your own laws, you can still choose and save, but it won't do anything in-game.</i><br>"
+					dat += "<b>Starting lawset:</b> <a href='?_src_=prefs;task=input;preference=silicon_lawset'>[silicon_lawset ? silicon_lawset : "Server default"]</a><br>"
+
+					if(silicon_lawset)
+						var/list/config_laws = CONFIG_GET(keyed_list/choosable_laws)
+						var/datum/ai_laws/law_datum = GLOB.all_law_datums[config_laws[silicon_lawset]]
+						if(law_datum)
+							dat += "<i>[law_datum]</i><br>"
+							dat += english_list(law_datum.get_law_list(TRUE),
+								"I was unable to find the laws for your lawset, sorry  <font style='translate: rotate(90deg)'>:(</font>",
+								"<br>", "<br>")
+
+					dat += "</td></tr></table>"
+				//Character background
+				if(BACKGROUND_CHAR_TAB)
+					dat += "<table width='100%'><tr><td width='30%' valign='top'>"
+
 					dat += "<h2>Flavor Text</h2>"
 					dat += "<a href='?_src_=prefs;preference=flavor_text;task=input'><b>Set Examine Text</b></a><br>"
 					if(length(features["flavor_text"]) <= MAX_FLAVOR_PREVIEW_LEN)
 						if(!length(features["flavor_text"]))
-							dat += "\[...\]<BR>" //skyrat - adds <br> //come to brazil or brazil comes to you
+							dat += "\[...\]"
 						else
-							dat += "[html_encode(features["flavor_text"])]<BR>" //skyrat - adds <br> and uses html_encode
+							dat += "[features["flavor_text"]]"
 					else
-						dat += "[TextPreview(html_encode(features["flavor_text"]))]...<BR>" //skyrat edit, uses html_encode
+						dat += "[TextPreview(features["flavor_text"])]..."
 					dat += "<h2>Silicon Flavor Text</h2>"
 					dat += "<a href='?_src_=prefs;preference=silicon_flavor_text;task=input'><b>Set Silicon Examine Text</b></a><br>"
 					if(length(features["silicon_flavor_text"]) <= MAX_FLAVOR_PREVIEW_LEN)
 						if(!length(features["silicon_flavor_text"]))
-							dat += "\[...\]<BR>"
+							dat += "\[...\]"
 						else
-							dat += "[features["silicon_flavor_text"]]<BR>"
+							dat += "[features["silicon_flavor_text"]]"
 					else
-						dat += "[TextPreview(features["silicon_flavor_text"])]...<BR>"
+						dat += "[TextPreview(features["silicon_flavor_text"])]..."
 					dat += "<h2>OOC notes</h2>"
 					dat += "<a href='?_src_=prefs;preference=ooc_notes;task=input'><b>Set OOC notes</b></a><br>"
 					var/ooc_notes_len = length(features["ooc_notes"])
 					if(ooc_notes_len <= MAX_FLAVOR_PREVIEW_LEN)
 						if(!ooc_notes_len)
-							dat += "\[...\]<BR>"
+							dat += "\[...\]"
 						else
-							dat += "[features["ooc_notes"]]<BR>"
+							dat += "[features["ooc_notes"]]"
 					else
-						dat += "[TextPreview(features["ooc_notes"])]...<BR>"
-					//SKYRAT EDIT
-					dat += "<h2>Consent preferences</h2>"
-					dat += 	"ERP : <a href='?_src_=prefs;preference=erp_pref'>[erppref]</a><br>"
-					dat += 	"Non-Con : <a href='?_src_=prefs;preference=noncon_pref'>[nonconpref]</a><br>"
-					dat += 	"Vore : <a href='?_src_=prefs;preference=vore_pref'>[vorepref]</a><br>"
-					//END OF SKYRAT EDIT
+						dat += "[TextPreview(features["ooc_notes"])]..."
+					dat += "</td>"
 
-					dat += APPEARANCE_CATEGORY_COLUMN //body moves right sandstorm change
+					dat += "<td valign='top'>"
+					dat += "<h2>Records</h2>"
+					dat += "<a href='?_src_=prefs;preference=security_records;task=input'><b>Security Records</b></a><br>"
+					if(length_char(security_records) <= 40)
+						if(!length(security_records))
+							dat += "\[...\]"
+						else
+							dat += "[security_records]"
+					else
+						dat += "[TextPreview(security_records)]..."
+
+					dat += "<br><a href='?_src_=prefs;preference=medical_records;task=input'><b>Medical Records</b></a><br>"
+					if(length_char(medical_records) <= 40)
+						if(!length(medical_records))
+							dat += "\[...\]"
+						else
+							dat += "[medical_records]"
+					else
+						dat += "[TextPreview(medical_records)]..."
+					dat += "</td></tr></table>"
+				//Character Appearance
+				if(APPEARANCE_CHAR_TAB)
+					dat += "<table><tr><td width='20%' height='300px' valign='top'>"
 
 					dat += "<h2>Body</h2>"
 					dat += "<b>Gender:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=gender;task=input'>[gender == MALE ? "Male" : (gender == FEMALE ? "Female" : (gender == PLURAL ? "Non-binary" : "Object"))]</a><BR>"
@@ -498,7 +564,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "<b>Always Random Body:</b><a href='?_src_=prefs;preference=all'>[be_random_body ? "Yes" : "No"]</A><BR>"
 					dat += "<br><b>Cycle background:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=cycle_bg;task=input'>[bgstate]</a><BR>"
 
-					dat += "</td>" //body moves right sandstorm change
+					dat += "</td>"
 
 					var/use_skintones = pref_species.use_skintones
 					if(use_skintones)
@@ -650,7 +716,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "</td>"
 					dat += "<table><tr><td width='340px' height='300px' valign='top'>"
 					dat += "<h2>Clothing & Equipment</h2>"
-					/* skyrat change
+					/*
 					dat += "<b>Underwear:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=underwear;task=input'>[underwear]</a>"
 					if(GLOB.underwear_list[underwear]?.has_color)
 						dat += "<b>Underwear Color:</b> <span style='border:1px solid #161616; background-color: #[undie_color];'><font color='[color_hex2num(undie_color) < 200 ? "FFFFFF" : "000000"]'>#[undie_color]</font></span> <a href='?_src_=prefs;preference=undie_color;task=input'>Change</a><BR>"
@@ -665,16 +731,21 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "<b>Jumpsuit:</b><BR><a href ='?_src_=prefs;preference=suit;task=input'>[jumpsuit_style]</a><BR>"
 					if((HAS_FLESH in pref_species.species_traits) || (HAS_BONE in pref_species.species_traits))
 						dat += "<BR><b>Temporal Scarring:</b><BR><a href='?_src_=prefs;preference=persistent_scars'>[(persistent_scars) ? "Enabled" : "Disabled"]</A>"
-						dat += "<a href='?_src_=prefs;preference=clear_scars'>Clear scar slots</A><BR>"
+						dat += "<a href='?_src_=prefs;preference=clear_scars'>Clear scar slots</A>"
 					dat += "<b>Uplink Location:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=uplink_loc;task=input'>[uplink_spawn_loc]</a>"
+
+					dat += "<h2>Consent preferences</h2>"
+					dat += "ERP : <a href='?_src_=prefs;preference=erp_pref'>[erppref]</a><br>"
+					dat += "Non-Con : <a href='?_src_=prefs;preference=noncon_pref'>[nonconpref]</a><br>"
+					dat += "Vore : <a href='?_src_=prefs;preference=vore_pref'>[vorepref]</a><br>"
+
+					dat += "<h2>Lewd preferences</h2>"
+					dat += "<b>Lust tolerance:</b><a href='?_src_=prefs;preference=lust_tolerance;task=input'>[lust_tolerance]</a><br>"
+					dat += "<b>Sexual potency:</b><a href='?_src_=prefs;preference=sexual_potency;task=input'>[sexual_potency]</a>"
 					dat += "</td>"
 
-					dat += "<td width='220px' height='300px' valign='top'>"
-					dat += "<h3>Lewd preferences</h3>"
-					dat += "<b>Lust tolerance:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=lust_tolerance;task=input'>[lust_tolerance]</a>"
-					dat += "<b>Sexual potency:</b><a style='display:block;width:100px' href ='?_src_=prefs;preference=sexual_potency;task=input'>[sexual_potency]</a>"
-					dat += "</td>"
 					dat += APPEARANCE_CATEGORY_COLUMN
+
 					if(NOGENITALS in pref_species.species_traits)
 						dat += "<b>Your species ([pref_species.name]) does not support genitals!</b><br>"
 					else
@@ -699,6 +770,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							dat += "<b>Penis Shape:</b> <a style='display:block;width:120px' href='?_src_=prefs;preference=cock_shape;task=input'>[features["cock_shape"]][tauric_shape ? " (Taur)" : ""]</a>"
 							dat += "<b>Penis Length:</b> <a style='display:block;width:120px' href='?_src_=prefs;preference=cock_length;task=input'>[features["cock_length"]] inch(es)</a>"
 							dat += "<b>Penis Visibility:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=cock_visibility;task=input'>[features["cock_visibility"]]</a>"
+							dat += "<b>Penis Always Accessible:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=cock_accessible'>[features["cock_accessible"] ? "Yes" : "No"]</a>"
 							dat += "<b>Has Testicles:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=has_balls'>[features["has_balls"] == TRUE ? "Yes" : "No"]</a>"
 							if(features["has_balls"])
 								if(pref_species.use_skintones && features["genitals_use_skintone"] == TRUE)
@@ -709,6 +781,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 									dat += "<span style='border: 1px solid #161616; background-color: #[features["balls_color"]];'><font color='[color_hex2num(features["balls_color"]) < 200 ? "FFFFFF" : "000000"]'>#[features["balls_color"]]</font></span> <a href='?_src_=prefs;preference=balls_color;task=input'>Change</a><br>"
 								dat += "<b>Testicles Shape:</b> <a style='display:block;width:120px' href='?_src_=prefs;preference=balls_shape;task=input'>[features["balls_shape"]]</a>"
 								dat += "<b>Testicles Visibility:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=balls_visibility;task=input'>[features["balls_visibility"]]</a>"
+								dat += "<b>Testicles Always Accessible:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=balls_accessible'>[features["balls_accessible"] ? "Yes" : "No"]</a>"
 						dat += APPEARANCE_CATEGORY_COLUMN
 						dat += "<h3>Vagina</h3>"
 						dat += "<a style='display:block;width:50px' href='?_src_=prefs;preference=has_vag'>[features["has_vag"] == TRUE ? "Yes" : "No"]</a>"
@@ -721,6 +794,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 								dat += "<b>Vagina Color:</b></a><BR>"
 								dat += "<span style='border: 1px solid #161616; background-color: #[features["vag_color"]];'><font color='[color_hex2num(features["vag_color"]) < 200 ? "FFFFFF" : "000000"]'>#[features["vag_color"]]</font></span> <a href='?_src_=prefs;preference=vag_color;task=input'>Change</a><br>"
 							dat += "<b>Vagina Visibility:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=vag_visibility;task=input'>[features["vag_visibility"]]</a>"
+							dat += "<b>Vagina Always Accessible:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=vag_accessible'>[features["vag_accessible"] ? "Yes" : "No"]</a>"
 							dat += "<b>Has Womb:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=has_womb'>[features["has_womb"] == TRUE ? "Yes" : "No"]</a>"
 						dat += "</td>"
 						dat += APPEARANCE_CATEGORY_COLUMN
@@ -736,6 +810,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							dat += "<b>Cup Size:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=breasts_size;task=input'>[features["breasts_size"]]</a>"
 							dat += "<b>Breasts Shape:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=breasts_shape;task=input'>[features["breasts_shape"]]</a>"
 							dat += "<b>Breasts Visibility:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=breasts_visibility;task=input'>[features["breasts_visibility"]]</a>"
+							dat += "<b>Breasts Always Accessible:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=breasts_accessible'>[features["breasts_accessible"] ? "Yes" : "No"]</a>"
 							dat += "<b>Lactates:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=breasts_producing'>[features["breasts_producing"] == TRUE ? "Yes" : "No"]</a>"
 						dat += "</td>"
 						dat += APPEARANCE_CATEGORY_COLUMN
@@ -750,6 +825,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 								dat += "<span style='border: 1px solid #161616; background-color: #[features["butt_color"]];'><font color='[color_hex2num(features["butt_color"]) < 200 ? "FFFFFF" : "000000"]'>#[features["butt_color"]]</font></span> <a href='?_src_=prefs;preference=butt_color;task=input'>Change</a><br>"
 							dat += "<b>Butt Size:</b><a style='display:block;width:50px' href='?_src_=prefs;preference=butt_size;task=input'>[features["butt_size"]]</a>"
 							dat += "<b>Butt Visibility:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=butt_visibility;task=input'>[features["butt_visibility"]]</a>"
+							dat += "<b>Butt Always Accessible:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=butt_accessible'>[features["butt_accessible"] ? "Yes" : "No"]</a>"
+						dat += "</td>"
+						dat += "<td height='300px' valign='top'>"
+						dat += "<h3>Anus</h3>"
+						dat += "<b>Anus Always Accessible:</b><a style='display:block;width:100px' href='?_src_=prefs;preference=anus_accessible'>[features["anus_accessible"] ? "Yes" : "No"]</a>"
 						dat += "</td>"
 					dat += "</td>"
 					dat += "</tr></table>"
@@ -880,8 +960,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "<a style='display:block;width:100px' href='?_src_=prefs;preference=tongue;task=input'>[custom_tongue]</a><BR>"
 					//SANDSTORM EDIT - additional language + runechat color
 					dat += "<b>Additional Language</b><br>"
-					var/list/languages_sorted = sortList(language)
-					dat += "<a href='?_src_=prefs;preference=language;task=menu'>[language.len ? languages_sorted.Join(", ") : "None"]</a></center><br>"
+					dat += "<a href='?_src_=prefs;preference=language;task=menu'>[english_list(language, "None")]</a></center><br>"
 					dat += "<b>Custom runechat color:</b> <a href='?_src_=prefs;preference=enable_personal_chat_color'>[enable_personal_chat_color ? "Enabled" : "Disabled"]</a><br> [enable_personal_chat_color ? "<span style='border: 1px solid #161616; background-color: [personal_chat_color];'><font color='[color_hex2num(personal_chat_color) < 200 ? "FFFFFF" : "000000"]'>[personal_chat_color]</font></span> <a href='?_src_=prefs;preference=personal_chat_color;task=input'>Change</a>" : ""]<br>"
 					dat += "</td>"
 					//END OF SANDSTORM EDIT
@@ -896,27 +975,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "<BR><a href='?_src_=prefs;preference=barkpreview'>Preview Bark</a><BR>"
 					dat += "</td>"
 					dat += "</tr></table>"
-				if(BACKGROUND_CHAR_TAB)
-					dat += "<table><tr><td width='340px' height='300px' valign='top'>"
-					dat += "<h2>Records</h2><br>"
-					dat += "<a href='?_src_=prefs;preference=security_records;task=input'><b>Security Records</b></a><br>"
-					if(length_char(security_records) <= 40)
-						if(!length(security_records))
-							dat += "\[...\]"
-						else
-							dat += "[security_records]"
-					else
-						dat += "[TextPreview(security_records)]...<BR>"
-
-					dat += "<br><a href='?_src_=prefs;preference=medical_records;task=input'><b>Medical Records</b></a><br>"
-					if(length_char(medical_records) <= 40)
-						if(!length(medical_records))
-							dat += "\[...\]<br>"
-						else
-							dat += "[medical_records]"
-					else
-						dat += "[TextPreview(medical_records)]...<BR>"
-					dat += "</td></tr></table>"
 				if(LOADOUT_CHAR_TAB)
 					dat += "<table align='center' width='100%'>"
 					dat += "<tr><td colspan=4><center><i style=\"color: grey;\">You can only choose one item per category, unless it's an item that spawns in your backpack or hands.</center></td></tr>"
@@ -934,9 +992,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							else
 								dat += " |"
 							if(category == gear_category)
-								dat += " <span class='linkOn'>[category]</span> "
+								dat += " <span class='linkOn'>[(category == LOADOUT_CATEGORY_ERROR && loadout_errors) ? "[category] (<font color=\"red\">!</font>)" : category]</span> "
 							else
-								dat += " <a href='?_src_=prefs;preference=gear;select_category=[html_encode(category)]'>[category]</a> "
+								dat += " <a href='?_src_=prefs;preference=gear;select_category=[html_encode(category)]'>[(category == LOADOUT_CATEGORY_ERROR && loadout_errors) ? "[category] (<font color=\"red\">!</font>)" : category]</a> "
 
 						dat += "</b></center></td></tr>"
 						dat += "<tr><td colspan=4><hr></td></tr>"
@@ -962,74 +1020,97 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 									dat += " <a href='?_src_=prefs;preference=gear;select_subcategory=[html_encode(subcategory)]'>[subcategory]</a> "
 							dat += "</b></center></td></tr>"
 
-							dat += "<table align='center'; width='100%'; height='100%'; style='background-color:#13171C'>"
-							dat += "<center>"
-							dat += "<tr width=10% style='vertical-align:top;'><td width=15%><b>Name</b></td>"
-							dat += "<td style='vertical-align:top'><b>Cost</b></td>"
-							dat += "<td width=10%><font size=2><b>Restrictions</b></font></td>"
-							dat += "<td width=80%><font size=2><b>Description</b></font></td></tr>"
-							dat += "</center>"
-
 							var/even = FALSE
-							for(var/name in GLOB.loadout_items[gear_category][gear_subcategory])
-								var/datum/gear/gear = GLOB.loadout_items[gear_category][gear_subcategory][name]
-								var/donoritem = gear.donoritem
-								if(donoritem && !gear.donator_ckey_check(user.ckey))
-									continue
-								var/background_cl = "#23273C"
-								if(even)
-									background_cl = "#17191C"
-								even = !even
-								var/class_link = ""
-								var/list/loadout_item = has_loadout_gear(loadout_slot, "[gear.type]")
-								var/extra_loadout_data = ""
-								if(loadout_item)
-									class_link = "style='white-space:normal;' class='linkOn' href='?_src_=prefs;preference=gear;toggle_gear_path=[html_encode(name)];toggle_gear=0'"
-									if(gear.loadout_flags & LOADOUT_CAN_COLOR_POLYCHROMIC)
-										extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_color_polychromic=1;loadout_gear_name=[html_encode(gear.name)];'>Color</a>"
-										for(var/loadout_color in loadout_item[LOADOUT_COLOR])
-											extra_loadout_data += "<span style='border: 1px solid #161616; background-color: [loadout_color];'><font color='[color_hex2num(loadout_color) < 200 ? "FFFFFF" : "000000"]'>[loadout_color]</font></span>"
-									else
-										var/loadout_color_non_poly = "#FFFFFF"
-										if(length(loadout_item[LOADOUT_COLOR]))
-											loadout_color_non_poly = loadout_item[LOADOUT_COLOR][1]
-										extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_color=1;loadout_gear_name=[html_encode(gear.name)];'>Color</a>"
-										extra_loadout_data += "<span style='border: 1px solid #161616; background-color: [loadout_color_non_poly];'><font color='[color_hex2num(loadout_color_non_poly) < 200 ? "FFFFFF" : "000000"]'>[loadout_color_non_poly]</font></span>"
-									if(gear.loadout_flags & LOADOUT_CAN_NAME)
-										extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_rename=1;loadout_gear_name=[html_encode(gear.name)];'>Name</a> [loadout_item[LOADOUT_CUSTOM_NAME] ? loadout_item[LOADOUT_CUSTOM_NAME] : "N/A"]"
-									if(gear.loadout_flags & LOADOUT_CAN_DESCRIPTION)
-										extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_redescribe=1;loadout_gear_name=[html_encode(gear.name)];'>Description</a>"
-								else if((gear_points - gear.cost) < 0)
-									class_link = "style='white-space:normal;' class='linkOff'"
-								else if(donoritem)
-									class_link = "style='white-space:normal;background:#ebc42e;' href='?_src_=prefs;preference=gear;toggle_gear_path=[html_encode(name)];toggle_gear=1'"
-								else if(!istype(gear, /datum/gear/unlockable) || can_use_unlockable(gear))
-									class_link = "style='white-space:normal;' href='?_src_=prefs;preference=gear;toggle_gear_path=[html_encode(name)];toggle_gear=1'"
-								else
-									class_link = "style='white-space:normal;background:#eb2e2e;' class='linkOff'"
-								dat += "<tr style='vertical-align:top; background-color: [background_cl];'><td width=15%><a [class_link]>[name]</a>[extra_loadout_data]</td>"
-								dat += "<td width = 5% style='vertical-align:top'>[gear.cost]</td><td>"
-								if(islist(gear.restricted_roles))
-									if(gear.restricted_roles.len)
-										if(gear.restricted_desc)
-											dat += "<font size=2>"
-											dat += gear.restricted_desc
-											dat += "</font>"
+							if(gear_category != LOADOUT_CATEGORY_ERROR)
+								dat += "<table align='center'; width='100%'; height='100%'; style='background-color:#13171C'>"
+								dat += "<center>"
+								dat += "<tr width=10% style='vertical-align:top;'><td width=15%><b>Name</b></td>"
+								dat += "<td style='vertical-align:top'><b>Cost</b></td>"
+								dat += "<td width=10%><font size=2><b>Restrictions</b></font></td>"
+								dat += "<td width=80%><font size=2><b>Description</b></font></td></tr>"
+								dat += "</center>"
+
+								for(var/name in GLOB.loadout_items[gear_category][gear_subcategory])
+									var/datum/gear/gear = GLOB.loadout_items[gear_category][gear_subcategory][name]
+									var/donoritem = gear.donoritem
+									if(donoritem && !gear.donator_ckey_check(user.ckey))
+										continue
+									var/background_cl = "#23273C"
+									if(even)
+										background_cl = "#17191C"
+									even = !even
+									var/class_link = ""
+									var/list/loadout_item = has_loadout_gear(loadout_slot, "[gear.type]")
+									var/extra_loadout_data = ""
+									if(loadout_item)
+										class_link = "style='white-space:normal;' class='linkOn' href='?_src_=prefs;preference=gear;toggle_gear_path=[html_encode(name)];toggle_gear=0'"
+										if(gear.loadout_flags & LOADOUT_CAN_COLOR_POLYCHROMIC)
+											extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_color_polychromic=1;loadout_gear_name=[html_encode(gear.name)];'>Color</a>"
+											for(var/loadout_color in loadout_item[LOADOUT_COLOR])
+												extra_loadout_data += "<span style='border: 1px solid #161616; background-color: [loadout_color];'><font color='[color_hex2num(loadout_color) < 200 ? "FFFFFF" : "000000"]'>[loadout_color]</font></span>"
 										else
-											dat += "<font size=2>"
-											dat += gear.restricted_roles.Join(";")
-											dat += "</font>"
-								if(!istype(gear, /datum/gear/unlockable))
-									// the below line essentially means "if the loadout item is picked by the user and has a custom description, give it the custom description, otherwise give it the default description"
-									dat += "</td><td><font size=2><i>[loadout_item ? (loadout_item[LOADOUT_CUSTOM_DESCRIPTION] ? loadout_item[LOADOUT_CUSTOM_DESCRIPTION] : gear.description) : gear.description]</i></font></td></tr>"
-								else
-									//we add the user's progress to the description assuming they have progress
-									var/datum/gear/unlockable/unlockable = gear
-									var/progress_made = unlockable_loadout_data[unlockable.progress_key]
-									if(!progress_made)
-										progress_made = 0
-									dat += "</td><td><font size=2><i>[loadout_item ? (loadout_item[LOADOUT_CUSTOM_DESCRIPTION] ? loadout_item[LOADOUT_CUSTOM_DESCRIPTION] : gear.description) : gear.description] Progress: [min(progress_made, unlockable.progress_required)]/[unlockable.progress_required]</i></font></td></tr>"
-							dat += "</table>"
+											var/loadout_color_non_poly = "#FFFFFF"
+											if(length(loadout_item[LOADOUT_COLOR]))
+												loadout_color_non_poly = loadout_item[LOADOUT_COLOR][1]
+											extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_color=1;loadout_gear_name=[html_encode(gear.name)];'>Color</a>"
+											extra_loadout_data += "<span style='border: 1px solid #161616; background-color: [loadout_color_non_poly];'><font color='[color_hex2num(loadout_color_non_poly) < 200 ? "FFFFFF" : "000000"]'>[loadout_color_non_poly]</font></span>"
+										if(gear.loadout_flags & LOADOUT_CAN_NAME)
+											extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_rename=1;loadout_gear_name=[html_encode(gear.name)];'>Name</a> [loadout_item[LOADOUT_CUSTOM_NAME] ? loadout_item[LOADOUT_CUSTOM_NAME] : "N/A"]"
+										if(gear.loadout_flags & LOADOUT_CAN_DESCRIPTION)
+											extra_loadout_data += "<BR><a href='?_src_=prefs;preference=gear;loadout_redescribe=1;loadout_gear_name=[html_encode(gear.name)];'>Description</a>"
+									else if((gear_points - gear.cost) < 0)
+										class_link = "style='white-space:normal;' class='linkOff'"
+									else if(donoritem)
+										class_link = "style='white-space:normal;background:#ebc42e;' href='?_src_=prefs;preference=gear;toggle_gear_path=[html_encode(name)];toggle_gear=1'"
+									else if(!istype(gear, /datum/gear/unlockable) || can_use_unlockable(gear))
+										class_link = "style='white-space:normal;' href='?_src_=prefs;preference=gear;toggle_gear_path=[html_encode(name)];toggle_gear=1'"
+									else
+										class_link = "style='white-space:normal;background:#eb2e2e;' class='linkOff'"
+									dat += "<tr style='vertical-align:top; background-color: [background_cl];'><td width=15%><a [class_link]>[name]</a>[extra_loadout_data]</td>"
+									dat += "<td width = 5% style='vertical-align:top'>[gear.cost]</td><td>"
+									if(islist(gear.restricted_roles))
+										if(gear.restricted_roles.len)
+											if(gear.restricted_desc)
+												dat += "<font size=2>"
+												dat += gear.restricted_desc
+												dat += "</font>"
+											else
+												dat += "<font size=2>"
+												dat += gear.restricted_roles.Join(";")
+												dat += "</font>"
+									if(!istype(gear, /datum/gear/unlockable))
+										// the below line essentially means "if the loadout item is picked by the user and has a custom description, give it the custom description, otherwise give it the default description"
+										dat += "</td><td><font size=2><i>[loadout_item ? (loadout_item[LOADOUT_CUSTOM_DESCRIPTION] ? loadout_item[LOADOUT_CUSTOM_DESCRIPTION] : gear.description) : gear.description]</i></font></td></tr>"
+									else
+										//we add the user's progress to the description assuming they have progress
+										var/datum/gear/unlockable/unlockable = gear
+										var/progress_made = unlockable_loadout_data[unlockable.progress_key]
+										if(!progress_made)
+											progress_made = 0
+										dat += "</td><td><font size=2><i>[loadout_item ? (loadout_item[LOADOUT_CUSTOM_DESCRIPTION] ? loadout_item[LOADOUT_CUSTOM_DESCRIPTION] : gear.description) : gear.description] Progress: [min(progress_made, unlockable.progress_required)]/[unlockable.progress_required]</i></font></td></tr>"
+								dat += "</table>"
+							else
+								dat += "<table align='center'; width='100%'; height='100%'; style='background-color:#13171C'>"
+								dat += "<center>"
+								dat += "<tr width=10% style='vertical-align:top;'><td width=15%><b>Item type</b></td>"
+								dat += "<td><font size=2><b>Data contained</b></font></td></tr>"
+								dat += "</center>"
+								var/list/sanitize_current_slot = loadout_data["SAVE_[loadout_slot]"]
+								for(var/list/entry in sanitize_current_slot)
+									var/test_item = entry["loadout_item"]
+									if(text2path(test_item))
+										continue
+									var/background_cl = "#23273C"
+									if(even)
+										background_cl = "#17191C"
+									even = !even
+									dat += "<tr style='vertical-align:top; background-color: [background_cl];'><td width=15%><a \
+										\"style='white-space:normal;' href='?_src_=prefs;preference=gear;clear_invalid_gear=[html_encode(test_item)];'\" \
+											>[test_item ? test_item : "no path!!?! Report to an admin!"]</a></td>"
+									dat += "<td style='vertical-align:top'>"
+									var/list/other_data = entry["loadout_item"] ? entry - "loadout_item" : entry
+									dat += json_encode(other_data)
+									dat += "</td></tr>"
 					dat += "</table>"
 		if(PREFERENCES_TAB) // Game Preferences
 			dat += "<center>"
@@ -1051,15 +1132,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "<b>Screentip Color:</b> <span style='border:1px solid #161616; background-color: [screentip_color];'><font color='[color_hex2num(screentip_color) < 200 ? "FFFFFF" : "000000"]'>[screentip_color]</font></span> <a href='?_src_=prefs;preference=screentip_color'>Change</a><BR>"
 					dat += "<font style='border-bottom:2px dotted white; cursor:help;'\
 						title=\"This is an accessibility preference, if disabled, fallbacks to only text which colorblind people can understand better\">\
-						<b>Screentip context with images:</b></font> <a href='?_src_=prefs;preference=screentip_allow_images'>[screentip_allow_images ? "Allowed" : "Disallowed"]</a><br>"
+						<b>Screentip context with images:</b></font> <a href='?_src_=prefs;preference=screentip_images'>[screentip_images ? "Allowed" : "Disallowed"]</a><br>"
 					dat += "<b>tgui Monitors:</b> <a href='?_src_=prefs;preference=tgui_lock'>[(tgui_lock) ? "Primary" : "All"]</a><br>"
 					dat += "<b>tgui Style:</b> <a href='?_src_=prefs;preference=tgui_fancy'>[(tgui_fancy) ? "Fancy" : "No Frills"]</a><br>"
 					dat += "<b>Show Runechat Chat Bubbles:</b> <a href='?_src_=prefs;preference=chat_on_map'>[chat_on_map ? "Enabled" : "Disabled"]</a><br>"
 					dat += "<b>Runechat message char limit:</b> <a href='?_src_=prefs;preference=max_chat_length;task=input'>[max_chat_length]</a><br>"
 					dat += "<b>See Runechat for non-mobs:</b> <a href='?_src_=prefs;preference=see_chat_non_mob'>[see_chat_non_mob ? "Enabled" : "Disabled"]</a><br>"
-					//SKYRAT CHANGES BEGIN
+					//SANDSTORM CHANGES BEGIN
 					dat += "<b>See Runechat for emotes:</b> <a href='?_src_=prefs;preference=see_chat_emotes'>[see_chat_emotes ? "Enabled" : "Disabled"]</a><br>"
-					//SKYRAT CHANGES END
+					//SANDSTORM CHANGES END
 					dat += "<br>"
 					dat += "<b>Action Buttons:</b> <a href='?_src_=prefs;preference=action_buttons'>[(buttons_locked) ? "Locked In Place" : "Unlocked"]</a><br>"
 					dat += "<br>"
@@ -1257,7 +1338,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "<table><tr><td width='340px' height='300px' valign='top'>"
 					dat += "<h2>Fetish content prefs</h2>"
 					dat += "<b>Allow Lewd Verbs:</b> <a href='?_src_=prefs;preference=verb_consent'>[(toggles & VERB_CONSENT) ? "Yes":"No"]</a><br>" // Skyrat - ERP Mechanic Addition
-					dat += "<b>Mute Lewd Verb Sounds:</b> <a href='?_src_=prefs;preference=mute_lewd_verb_sounds'>[(toggles & LEWD_VERB_SOUNDS) ? "Yes":"No"]</a><br>" // Skyrat - ERP Mechanic Addition
+					dat += "<b>Mute Lewd Verb Sounds:</b> <a href='?_src_=prefs;preference=mute_lewd_verb_sounds'>[(toggles & LEWD_VERB_SOUNDS) ? "Yes":"No"]</a><br>" // Sandstorm - ERP Mechanic Addition
 					dat += "<b>Arousal:</b><a href='?_src_=prefs;preference=arousable'>[arousable == TRUE ? "Enabled" : "Disabled"]</a><BR>"
 					dat += "<b>Genital examine text</b>:<a href='?_src_=prefs;preference=genital_examine'>[(cit_toggles & GENITAL_EXAMINE) ? "Enabled" : "Disabled"]</a><BR>"
 					dat += "<b>Vore examine text</b>:<a href='?_src_=prefs;preference=vore_examine'>[(cit_toggles & VORE_EXAMINE) ? "Enabled" : "Disabled"]</a><BR>"
@@ -1278,11 +1359,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "<b>Hypno:</b> <a href='?_src_=prefs;preference=never_hypno'>[(cit_toggles & NEVER_HYPNO) ? "Disallowed" : "Allowed"]</a><br>"
 					dat += "<b>Aphrodisiacs:</b> <a href='?_src_=prefs;preference=aphro'>[(cit_toggles & NO_APHRO) ? "Disallowed" : "Allowed"]</a><br>"
 					dat += "<b>Ass Slapping:</b> <a href='?_src_=prefs;preference=ass_slap'>[(cit_toggles & NO_ASS_SLAP) ? "Disallowed" : "Allowed"]</a><br>"
-					//SKYRAT EDIT
+					//SANDSTORM EDIT
 					dat += 	"<b>Extreme ERP verbs :</b> <a href='?_src_=prefs;preference=extremepref'>[extremepref]</a><br>" // https://youtu.be/0YrU9ASVw6w
 					if(extremepref != "No")
 						dat += "<b><span style='color: #e60000;'>Harmful ERP verbs :</b> <a href='?_src_=prefs;preference=extremeharm'>[extremeharm]</a><br>"
-					//END OF SKYRAT EDIT
+					//END OF SANDSTORM EDIT
 					dat += "<b>Automatic Wagging:</b> <a href='?_src_=prefs;preference=auto_wag'>[(cit_toggles & NO_AUTO_WAG) ? "Disabled" : "Enabled"]</a><br>"
 					dat += "</tr></table>"
 
@@ -1427,7 +1508,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		//The job before the current job. I only use this to get the previous jobs color when I'm filling in blank rows.
 		var/datum/job/lastJob
 
-		for(var/datum/job/job in sortList(SSjob.occupations, /proc/cmp_job_display_asc))
+		for(var/datum/job/job in sort_list(SSjob.occupations, /proc/cmp_job_display_asc))
 
 			index += 1
 			if((index >= limit) || (job.title in splitJobs))
@@ -1801,18 +1882,17 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			if("close")
 				user << browse(null, "window=mob_occupation")
 				ShowChoices(user)
+				return TRUE
 			if("update")
 				var/lang = href_list["language"]
-				if(SSlanguage.languages_by_name[lang])
-					toggle_language(lang)
-					SetLanguage(user)
-				else
-					SetLanguage(user)
+				if(!SSlanguage.languages_by_name[lang])
+					return
+				if(!toggle_language(lang))
+					return
+				language = sort_list(language)
 			if("reset")
 				language = list()
-				SetLanguage(user)
-			else
-				SetLanguage(user)
+		SetLanguage(user)
 		return TRUE
 
 	switch(href_list["task"])
@@ -2526,7 +2606,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						features["cock_shape"] = new_shape
 
 				if("cock_visibility")
-					var/n_vis = input(user, "Penis Visibility", "Character Preference") as null|anything in CONFIG_GET(keyed_list/safe_visibility_toggles)
+					var/n_vis = input(user, "Penis Visibility", "Character Preference") as null|anything in CONFIG_GET(str_list/safe_visibility_toggles)
 					if(n_vis)
 						features["cock_visibility"] = n_vis
 
@@ -2548,7 +2628,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						features["balls_shape"] = new_shape
 
 				if("balls_visibility")
-					var/n_vis = input(user, "Testicles Visibility", "Character Preference") as null|anything in CONFIG_GET(keyed_list/safe_visibility_toggles)
+					var/n_vis = input(user, "Testicles Visibility", "Character Preference") as null|anything in CONFIG_GET(str_list/safe_visibility_toggles)
 					if(n_vis)
 						features["balls_visibility"] = n_vis
 
@@ -2575,7 +2655,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							to_chat(user,"<span class='danger'>Invalid color. Your color is not bright enough.</span>")
 
 				if("breasts_visibility")
-					var/n_vis = input(user, "Breasts Visibility", "Character Preference") as null|anything in CONFIG_GET(keyed_list/safe_visibility_toggles)
+					var/n_vis = input(user, "Breasts Visibility", "Character Preference") as null|anything in CONFIG_GET(str_list/safe_visibility_toggles)
 					if(n_vis)
 						features["breasts_visibility"] = n_vis
 
@@ -2597,7 +2677,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							to_chat(user,"<span class='danger'>Invalid color. Your color is not bright enough.</span>")
 
 				if("vag_visibility")
-					var/n_vis = input(user, "Vagina Visibility", "Character Preference") as null|anything in CONFIG_GET(keyed_list/safe_visibility_toggles)
+					var/n_vis = input(user, "Vagina Visibility", "Character Preference") as null|anything in CONFIG_GET(str_list/safe_visibility_toggles)
 					if(n_vis)
 						features["vag_visibility"] = n_vis
 
@@ -2620,7 +2700,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						features["butt_size"] = clamp(round(new_length), min_B, max_B)
 
 				if("butt_visibility")
-					var/n_vis = input(user, "Butt Visibility", "Character Preference") as null|anything in CONFIG_GET(keyed_list/safe_visibility_toggles)
+					var/n_vis = input(user, "Butt Visibility", "Character Preference") as null|anything in CONFIG_GET(str_list/safe_visibility_toggles)
 					if(n_vis)
 						features["butt_visibility"] = n_vis
 
@@ -2689,8 +2769,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					var/pickedui = input(user, "Choose your UI style.", "Character Preference", UI_style)  as null|anything in GLOB.available_ui_styles
 					if(pickedui)
 						UI_style = pickedui
-						if (parent && parent.mob && parent.mob.hud_used)
-							parent.mob.hud_used.update_ui_style(ui_style2icon(UI_style))
+						if (pickedui && parent && parent.mob && parent.mob.hud_used)
+							QDEL_NULL(parent.mob.hud_used)
+							parent.mob.create_mob_hud()
+							parent.mob.hud_used.show_hud(1, parent.mob)
 				if("pda_style")
 					var/pickedPDAStyle = input(user, "Choose your PDA style.", "Character Preference", pda_style)  as null|anything in GLOB.pda_styles
 					if(pickedPDAStyle)
@@ -2703,6 +2785,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					var/pickedPDASkin = input(user, "Choose your PDA reskin.", "Character Preference", pda_skin) as null|anything in GLOB.pda_reskins
 					if(pickedPDASkin)
 						pda_skin = pickedPDASkin
+				if("silicon_lawset")
+					var/picked_lawset = input(user, "Choose your preferred lawset", "Silicon preference", silicon_lawset) as null|anything in list("None") + CONFIG_GET(keyed_list/choosable_laws)
+					if(picked_lawset)
+						if(picked_lawset == "None")
+							picked_lawset = null
+						silicon_lawset = picked_lawset
 				if ("max_chat_length")
 					var/desiredlength = input(user, "Choose the max character length of shown Runechat messages. Valid range is 1 to [CHAT_MESSAGE_MAX_LENGTH] (default: [initial(max_chat_length)]))", "Character Preference", max_chat_length)  as null|num
 					if (!isnull(desiredlength))
@@ -2898,22 +2986,34 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					features["has_cock"] = !features["has_cock"]
 					if(features["has_cock"] == FALSE)
 						features["has_balls"] = FALSE
+				if("cock_accessible")
+					features["cock_accessible"] = !features["cock_accessible"]
 				if("has_balls")
 					features["has_balls"] = !features["has_balls"]
+				if("balls_accessible")
+					features["balls_accessible"] = !features["balls_accessible"]
 				if("has_breasts")
 					features["has_breasts"] = !features["has_breasts"]
 					if(features["has_breasts"] == FALSE)
 						features["breasts_producing"] = FALSE
 				if("breasts_producing")
 					features["breasts_producing"] = !features["breasts_producing"]
+				if("breasts_accessible")
+					features["breasts_accessible"] = !features["breasts_accessible"]
 				if("has_vag")
 					features["has_vag"] = !features["has_vag"]
 					if(features["has_vag"] == FALSE)
 						features["has_womb"] = FALSE
+				if("vag_accessible")
+					features["vag_accessible"] = !features["vag_accessible"]
 				if("has_womb")
 					features["has_womb"] = !features["has_womb"]
 				if("has_butt")
 					features["has_butt"] = !features["has_butt"]
+				if("butt_accessible")
+					features["butt_accessible"] = !features["butt_accessible"]
+				if("anus_accessible")
+					features["anus_accessible"] = !features["anus_accessible"]
 				if("widescreenpref")
 					widescreenpref = !widescreenpref
 					user.client.view_size.setDefault(getScreenSize(widescreenpref))
@@ -3087,7 +3187,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							if(!length(key_bindings[old_key]))
 								key_bindings -= old_key
 						key_bindings[full_key] += list(kb_name)
-						key_bindings[full_key] = sortList(key_bindings[full_key])
+						key_bindings[full_key] = sort_list(key_bindings[full_key])
 					if(href_list["special"])		// special keys need a full reset
 						user.client.ensure_keys_set(src)
 					user << browse(null, "window=capturekeypress")
@@ -3121,7 +3221,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					outline_enabled = !outline_enabled
 				if("outline_color")
 					var/pickedOutlineColor = input(user, "Choose your outline color.", "General Preference", outline_color) as color|null
-					if(pickedOutlineColor != pickedOutlineColor)
+					if(pickedOutlineColor != outline_color)
 						outline_color = pickedOutlineColor // nullable
 				if("screentip_pref")
 					var/choice = input(user, "Choose your screentip preference", "Screentipping?", screentip_pref) as null|anything in GLOB.screentip_pref_options
@@ -3131,8 +3231,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					var/pickedScreentipColor = input(user, "Choose your screentip color.", "General Preference", screentip_color) as color|null
 					if(pickedScreentipColor)
 						screentip_color = pickedScreentipColor
-				if("screentip_allow_images")
-					screentip_allow_images = !screentip_allow_images
+				if("screentip_images")
+					screentip_images = !screentip_images
 				if("tgui_lock")
 					tgui_lock = !tgui_lock
 				if("winflash")
@@ -3355,6 +3455,31 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(href_list["tab"])
 						preferences_tab = text2num(href_list["tab"])
 
+				if("export_slot")
+					var/savefile/S = save_character(export = TRUE)
+					if(istype(S, /savefile))
+						user.client.Export(S)
+						tgui_alert_async(user, "Successfully saved character slot")
+					else
+						tgui_alert_async(user, "Failed saving character slot")
+						return
+
+				if("import_slot")
+					var/savefile/S = new(user.client.Import())
+					if(istype(S, /savefile))
+						if(load_character(provided = S) == TRUE)
+							tgui_alert_async(user, "Successfully loaded character slot.")
+						else
+							tgui_alert_async(user, "Failed loading character slot")
+							return
+					else
+						tgui_alert_async(user, "Failed loading character slot")
+						return
+
+				if("delete_local_copy")
+					user.client.clear_export()
+					tgui_alert_async(user, "Local save data erased.")
+
 	if(href_list["preference"] == "gear")
 		if(href_list["clear_loadout"])
 			loadout_data["SAVE_[loadout_slot]"] = list()
@@ -3392,6 +3517,15 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						loadout_data["SAVE_[loadout_slot]"] += list(new_loadout_data) //double packed because it does the union of the CONTENTS of the lists
 					else
 						loadout_data["SAVE_[loadout_slot]"] = list(new_loadout_data) //double packed because you somehow had no save slot in your loadout?
+		if(href_list["clear_invalid_gear"])
+			var/thing_to_remove = html_decode(href_list["clear_invalid_gear"])
+			if(!thing_to_remove)
+				return
+			var/list/sanitize_current_slot = loadout_data["SAVE_[loadout_slot]"]
+			for(var/list/entry in sanitize_current_slot)
+				if(entry["loadout_item"] == thing_to_remove)
+					sanitize_current_slot.Remove(list(entry))
+					break
 
 		if(href_list["loadout_color"] || href_list["loadout_color_polychromic"] || href_list["loadout_rename"] || href_list["loadout_redescribe"])
 			//if the gear doesn't exist, or they don't have it, ignore the request
@@ -3540,6 +3674,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	character.dna.features["lust_tolerance"] = lust_tolerance
 	character.dna.features["sexual_potency"] = sexual_potency
+
+	if(features["anus_accessible"])
+		character.toggle_anus_always_accessible(TRUE)
 
 	character.give_genitals(TRUE) //character.update_genitals() is already called on genital.update_appearance()
 

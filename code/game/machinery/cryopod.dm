@@ -183,6 +183,7 @@ GLOBAL_LIST_EMPTY(cryopod_computers)
 		investigate_log("\The [src] closed with occupant [key_name(occupant)] by user [key_name(target)].", INVESTIGATE_CRYOGENICS)
 		if(mob_occupant && mob_occupant.stat != DEAD)
 			to_chat(occupant, span_notice("<b>You feel cool air surround you. You go numb as your senses turn inward.</b>"))
+
 		COOLDOWN_START(src, despawn_world_time, time_till_despawn)
 	icon_state = "cryopod"
 
