@@ -18,6 +18,8 @@
 	var/list/can_hold_extra							//if this is set, it will also be able to hold these.
 	var/list/cant_hold								//if this is set, anything in this typecache will not be able to fit.
 
+	var/can_hold_description // Nostra change
+
 	var/list/mob/is_using							//lazy list of mobs looking at the contents of this storage.
 
 	var/locked = FALSE								//when locked nothing can see inside or use it.

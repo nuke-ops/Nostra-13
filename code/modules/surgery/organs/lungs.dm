@@ -4,7 +4,7 @@
 	name = "lungs"
 	desc = "Looking at them makes you start manual breathing."
 	icon_state = "lungs"
-	w_class = WEIGHT_CLASS_SMALL
+	w_class = WEIGHT_CLASS_SMALL // Nostra change - small instead of normal
 	zone = BODY_ZONE_CHEST
 	slot = ORGAN_SLOT_LUNGS
 	gender = PLURAL

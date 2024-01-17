@@ -534,7 +534,7 @@
 	mineralType = "metal"
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 70)
 	resistance_flags = FIRE_PROOF
-	matter_amount = 1
+	matter_amount = 1 // Nostra change
 
 /obj/item/stack/tile/plasteel/cyborg
 	custom_materials = null // All other Borg versions of items have no Metal or Glass - RR
