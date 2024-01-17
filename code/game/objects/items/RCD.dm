@@ -590,11 +590,9 @@ RLD
 			airlock_electronics.ui_interact(user) // Nostra change - electronics instead of access
 			return
 		// Start of Nostra change
-		/*
 		if("Change Airlock Type")
 			change_airlock_setting(user)
 			return
-		*/
 		if("Change Window Glass")
 			toggle_window_glass(user)
 			return
