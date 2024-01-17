@@ -1,0 +1,5 @@
+author: maksxpl
+delete-after: true
+changes:
+  - bugfix: fixed a rcd icons
+  - refactor: refactored rcd code
