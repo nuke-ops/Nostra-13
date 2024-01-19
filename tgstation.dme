@@ -4015,6 +4015,7 @@
 #include "modular_nostra\code\__DEFINES\DNA.dm"
 #include "modular_nostra\code\__DEFINES\melee.dm"
 #include "modular_nostra\code\__DEFINES\dcs\signals.dm"
+#include "modular_nostra\code\__HELPERS\cmp.dm"
 #include "modular_nostra\code\__HELPERS\string_lists.dm"
 #include "modular_nostra\code\__HELPERS\unsorted.dm"
 #include "modular_nostra\code\controllers\subsystem\bluespace_locker.dm"
