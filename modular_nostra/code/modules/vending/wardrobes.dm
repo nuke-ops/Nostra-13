@@ -1,3 +1,3 @@
 /obj/machinery/vending/wardrobe/science_wardrobe/Initialize()
-	. = ..()
-	products += /obj/item/storage/backpack/duffelbag/sci = 3
+    . = ..()
+    products += list(/obj/item/storage/backpack/duffelbag/sci = 3)
