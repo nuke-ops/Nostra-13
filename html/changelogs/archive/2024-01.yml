@@ -2,3 +2,7 @@
   maksxpl:
   - bugfix: fixed a rcd icons
   - refactor: refactored rcd code
+2024-01-20:
+  maksxpl:
+  - refactor: Moved PR https://github.com/nuke-ops/Nostra-13/pull/200 to modular-nostra
+  - refactor: Moved PR https://github.com/nuke-ops/Nostra-13/pull/221 to modular-nostra
