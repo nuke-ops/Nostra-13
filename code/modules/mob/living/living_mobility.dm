@@ -170,8 +170,10 @@
 				limbless_slowdown += 6 - (has_arms * 3)
 		if(limbless_slowdown)
 			add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/limbless, multiplicative_slowdown = limbless_slowdown)
-		else
-			remove_movespeed_modifier(/datum/movespeed_modifier/limbless)
+	else
+		remove_movespeed_modifier(/datum/movespeed_modifier/limbless)
+
+		SEND_SIGNAL(src, COMSIG_LIVING_UPDATED_MOBILITY, mobility_flags) // Nostra change
 
 	update_movespeed()
 
