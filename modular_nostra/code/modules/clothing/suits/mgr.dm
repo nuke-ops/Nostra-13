@@ -121,7 +121,7 @@
 	else
 		action.button_icon_state = action_icon_state
 
-	action.UpdateButtonIcon()
+	action.UpdateButton()
 	return
 
 

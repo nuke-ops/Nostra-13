@@ -95,14 +95,12 @@
   * Multiplied to clickdelays
   */
 /datum/status_effect/proc/action_cooldown_mod()
-	return 1
-// Start of Nostra change
-//clickdelay/nextmove modifiers!
+	return TRUE
+// Start of Nostra change - clickdelay/nextmove modifiers!
 /datum/status_effect/proc/nextmove_modifier()
-	return 1
-
+	return TRUE
 /datum/status_effect/proc/nextmove_adjust()
-	return 0
+	return FALSE
 // End of Nostra change
 
 ////////////////
