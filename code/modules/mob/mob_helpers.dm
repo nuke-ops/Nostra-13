@@ -38,9 +38,9 @@
 /proc/above_neck(zone)
 	var/list/zones = list(BODY_ZONE_HEAD, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_EYES)
 	if(zones.Find(zone))
-		return 1
+		return TRUE
 	else
-		return 0
+		return FALSE
 
 /**
   * Convert random parts of a passed in message to stars
@@ -269,7 +269,7 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 		var/mob/M = i
 		if(M.real_name == msg)
 			return M
-	return 0
+	return FALSE
 
 /mob/proc/first_name()
 	var/static/regex/firstname = new("^\[^\\s-\]+") //First word before whitespace or "-"
@@ -364,7 +364,7 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 	return FALSE
 
 /mob/proc/reagent_check(datum/reagent/R) // utilized in the species code
-	return 1
+	return TRUE
 
 /proc/notify_ghosts(message, ghost_sound, enter_link, atom/source, mutable_appearance/alert_overlay, action = NOTIFY_JUMP, flashwindow = TRUE, ignore_mapload = TRUE, ignore_key, ignore_dnr_observers = FALSE, header) //Easy notification of ghosts.
 	if(ignore_mapload && SSatoms.initialized != INITIALIZATION_INNEW_REGULAR)	//don't notify for objects created during a map load
@@ -407,7 +407,7 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 				H.update_damage_overlays()
 			user.visible_message("[user] has fixed some of the [dam ? "dents on" : "burnt wires in"] [H]'s [affecting.name].", \
 			"<span class='notice'>You fix some of the [dam ? "dents on" : "burnt wires in"] [H]'s [affecting.name].</span>")
-			return 1 //successful heal
+			return TRUE //successful heal
 		else
 			to_chat(user, "<span class='warning'>[affecting] is already in good condition!</span>")
 
@@ -478,9 +478,9 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 
 /mob/proc/is_flying(mob/M = src)
 	if(M.movement_type & FLYING)
-		return 1
+		return TRUE
 	else
-		return 0
+		return FALSE
 
 /mob/proc/click_random_mob()
 	var/list/nearby_mobs = list()
@@ -600,3 +600,23 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 		return
 	return TRUE
 
+/mob/living/carbon/human/proc/load_client_appearance(client/client)
+	if(!client)
+		client = src.client
+	var/old_name = real_name
+	SEND_SOUND(src, 'sound/misc/server-ready.ogg')
+	to_chat(src, span_boldannounce("This ghost role allows you to select your loaded character's appearance."))
+	client.prefs.copy_to(src)
+	SSquirks.AssignQuirks(src, client, TRUE, FALSE, job, FALSE)//This Assigns the selected character's quirks
+	var/obj/item/card/id/id_card = get_idcard() //Time to change their ID card as well if they have one.
+	if(id_card)
+		id_card.registered_name = real_name
+		id_card.update_label(real_name, id_card.assignment)
+	fully_replace_character_name(old_name, real_name)
+	ADD_TRAIT(src, TRAIT_EXEMPT_HEALTH_EVENTS, GHOSTROLE_TRAIT) //Makes sure they are exempt from health events.
+	ADD_TRAIT(src, TRAIT_NO_MIDROUND_ANTAG, GHOSTROLE_TRAIT)
+	SEND_SOUND(src, 'sound/magic/charge.ogg') //Fluff
+	to_chat(src, "<span class='boldannounce'>Your head aches for a second. You feel like this is how things should have been.</span>")
+	log_game("[key_name(src)] has loaded their default appearance for a ghost role.")
+	message_admins("[ADMIN_LOOKUPFLW(src)] has loaded their default appearance for a ghost role.")
+	return

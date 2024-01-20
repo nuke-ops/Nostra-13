@@ -665,12 +665,12 @@ RLD
 
 /obj/item/construction/rcd/borg/useResource(amount, mob/user)
 	if(!iscyborg(user))
-		return 0
+		return FALSE
 	var/mob/living/silicon/robot/borgy = user
 	if(!borgy.cell)
 		if(user)
 			to_chat(user, no_ammo_message)
-		return 0
+		return FALSE
 	. = borgy.cell.use(amount * energyfactor) //borgs get 1.3x the use of their RCDs
 	if(!. && user)
 		to_chat(user, no_ammo_message)
@@ -678,12 +678,12 @@ RLD
 
 /obj/item/construction/rcd/borg/checkResource(amount, mob/user)
 	if(!iscyborg(user))
-		return 0
+		return FALSE
 	var/mob/living/silicon/robot/borgy = user
 	if(!borgy.cell)
 		if(user)
 			to_chat(user, no_ammo_message)
-		return 0
+		return FALSE
 	. = borgy.cell.charge >= (amount * energyfactor)
 	if(!. && user)
 		to_chat(user, no_ammo_message)
