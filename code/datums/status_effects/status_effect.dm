@@ -96,12 +96,6 @@
   */
 /datum/status_effect/proc/action_cooldown_mod()
 	return TRUE
-// Start of Nostra change - clickdelay/nextmove modifiers!
-/datum/status_effect/proc/nextmove_modifier()
-	return TRUE
-/datum/status_effect/proc/nextmove_adjust()
-	return FALSE
-// End of Nostra change
 
 ////////////////
 // ALERT HOOK //
