@@ -2,7 +2,7 @@
 	name = "black egg"
 	desc = "A finally shaped black egg, that seems to rattle to the touch."
 	icon_state = "blackegg"
-	icon = 'modular_nostra/icons/obj/food.dmi'
+	icon = 'modular_nostra/icons/obj/food/food.dmi'
 	throwforce = 10
 	list_reagents = list(/datum/reagent/consumable/eggyolk = 5)
 	//cooked_type = /obj/item/reagent_containers/food/snacks/boiledegg

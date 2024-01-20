@@ -1,8 +1,8 @@
 /obj/item/carrotglaive
 	icon_state = "carrotglaive0"
 	icon = 'modular_nostra/icons/obj/items_and_weapons.dmi'
-	lefthand_file = 'modular_nostra/icons/mob/inhands/weapons/polearm_lefthand.dmi'
-	righthand_file = 'modular_nostra/icons/mob/inhands/weapons/polearm_righthand.dmi'
+	lefthand_file = 'modular_nostra/icons/mob/inhands/weapons/polearms_lefthand.dmi'
+	righthand_file = 'modular_nostra/icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "carrot glaive"
 	desc = "So, you really thought that wrapping a carrot to a stick was a good idea? Well either way, you did, and... It's useful if your a madman."
 	force = 7
