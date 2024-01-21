@@ -80,7 +80,7 @@ GLOBAL_LIST_EMPTY(radial_menus)
 	var/py_shift = 0
 	var/entry_animation = TRUE
 
-	var/icon_path = 'icons/mob/radial.dmi' //Skyrat change
+	var/icon_path = 'icons/mob/radial.dmi' // Nostra change
 
 //If we swap to vis_contens inventory these will need a redo
 /datum/radial_menu/proc/check_screen_border(mob/user)
@@ -93,6 +93,8 @@ GLOBAL_LIST_EMPTY(radial_menus)
 		else
 			py_shift = 32
 			restrict_to_dir(NORTH) //I was going to parse screen loc here but that's more effort than it's worth.
+	else if(hudfix_method && AM.loc)
+		anchor = get_atom_on_turf(anchor)
 
 //Sets defaults
 //These assume 45 deg min_angle
@@ -123,6 +125,7 @@ GLOBAL_LIST_EMPTY(radial_menus)
 		var/elements_to_add = max_elements - elements.len
 		for(var/i in 1 to elements_to_add) //Create all elements
 			var/atom/movable/screen/radial/slice/new_element = new /atom/movable/screen/radial/slice
+			new_element.icon = icon_path // Nostra change
 			new_element.tooltips = use_tooltips
 			new_element.parent = src
 			elements += new_element
@@ -180,7 +183,7 @@ GLOBAL_LIST_EMPTY(radial_menus)
 		starting.Scale(0.1,0.1)
 		E.transform = starting
 		var/matrix/TM = matrix()
-		animate(E,pixel_x = px,pixel_y = py, transform = TM, time = timing)
+		animate(E,pixel_x = px,pixel_y = py, transform = TM, time = timing, easing = SINE_EASING | EASE_OUT)
 	else
 		E.pixel_y = py
 		E.pixel_x = px
@@ -261,7 +264,7 @@ GLOBAL_LIST_EMPTY(radial_menus)
 	//Blank
 	menu_holder = image(icon='icons/effects/effects.dmi',loc=anchor,icon_state="nothing",layer = ABOVE_HUD_LAYER)
 	menu_holder.plane = ABOVE_HUD_PLANE
-	menu_holder.appearance_flags |= KEEP_APART
+	menu_holder.appearance_flags |= APPEARANCE_UI_IGNORE_ALPHA | KEEP_APART
 	menu_holder.vis_contents += elements + close_button
 	current_user.images += menu_holder
 

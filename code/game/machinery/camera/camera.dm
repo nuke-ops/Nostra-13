@@ -81,15 +81,15 @@
 	if(can_use())
 		toggle_cam(null, 0) //kick anyone viewing out and remove from the camera chunks
 	GLOB.cameranet.cameras -= src
+	cancelCameraAlarm()
 	if(isarea(myarea))
-		LAZYREMOVE(myarea.cameras, src)
+		myarea.clear_camera(src)
 	QDEL_NULL(assembly)
 	if(bug)
-		bug.bugged_cameras -= src.c_tag
+		bug.bugged_cameras -= c_tag
 		if(bug.current == src)
 			bug.current = null
 		bug = null
-	cancelCameraAlarm()
 	return ..()
 
 /obj/machinery/camera/emp_act(severity)
@@ -274,7 +274,7 @@
 
 /obj/machinery/camera/run_obj_armor(damage_amount, damage_type, damage_flag = 0, attack_dir)
 	if(damage_flag == MELEE && damage_amount < 12 && !(stat & BROKEN))
-		return 0
+		return FALSE
 	. = ..()
 
 /obj/machinery/camera/obj_break(damage_flag)
@@ -417,4 +417,4 @@
 	else
 		user.sight = 0
 		user.see_in_dark = 2
-	return 1
+	return TRUE

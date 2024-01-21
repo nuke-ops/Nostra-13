@@ -47,7 +47,7 @@ SUBSYSTEM_DEF(job)
 	var/list/all_jobs = subtypesof(/datum/job)
 	if(!all_jobs.len)
 		to_chat(world, "<span class='boldannounce'>Error setting up jobs, no job datums found</span>")
-		return 0
+		return FALSE
 
 	for(var/J in all_jobs)
 		var/datum/job/job = new J()
@@ -65,7 +65,7 @@ SUBSYSTEM_DEF(job)
 		name_occupations[job.title] = job
 		type_occupations[J] = job
 
-	return 1
+	return TRUE
 
 
 /datum/controller/subsystem/job/proc/GetJob(rank)
@@ -199,8 +199,8 @@ SUBSYSTEM_DEF(job)
 				continue
 			var/mob/dead/new_player/candidate = pick(candidates)
 			if(AssignRole(candidate, command_position))
-				return 1
-	return 0
+				return TRUE
+	return FALSE
 
 
 //This proc is called at the start of the level loop of DivideOccupations() and will cause head jobs to be checked before any other jobs of the same level
@@ -222,7 +222,7 @@ SUBSYSTEM_DEF(job)
 	var/ai_selected = 0
 	var/datum/job/job = GetJob("AI")
 	if(!job)
-		return 0
+		return FALSE
 	for(var/i = job.total_positions, i > 0, i--)
 		for(var/level in level_order)
 			var/list/candidates = list()
@@ -233,8 +233,8 @@ SUBSYSTEM_DEF(job)
 					ai_selected++
 					break
 	if(ai_selected)
-		return 1
-	return 0
+		return TRUE
+	return FALSE
 
 
 /** Proc DivideOccupations
@@ -434,20 +434,7 @@ SUBSYSTEM_DEF(job)
 
 	//If we joined at roundstart we should be positioned at our workstation
 	if(!joined_late)
-		var/obj/S = null
-		for(var/obj/effect/landmark/start/sloc in GLOB.start_landmarks_list)
-			if(!sloc.job_spawnpoint)
-				continue
-			if(sloc.name != rank)
-				S = sloc //so we can revert to spawning them on top of eachother if something goes wrong
-				continue
-			if(locate(/mob/living) in sloc.loc)
-				continue
-			S = sloc
-			sloc.used = TRUE
-			break
-		if(length(GLOB.jobspawn_overrides[rank]))
-			S = pick(GLOB.jobspawn_overrides[rank])
+		var/atom/S = job.get_roundstart_spawn_point(H)
 		if(S)
 			S.JoinPlayerHere(H, FALSE)
 		if(!S) //if there isn't a spawnpoint send them to latejoin, if there's no latejoin go yell at your mapper
@@ -499,8 +486,10 @@ SUBSYSTEM_DEF(job)
 	if(job && H)
 		if(job.dresscodecompliant)// CIT CHANGE - dress code compliance
 			equip_loadout(N, H) // CIT CHANGE - allows players to spawn with loadout items
-		job.after_spawn(H, M, joined_late) // note: this happens before the mob has a key! M will always have a client, H might not.
-		equip_loadout(N, H, TRUE)//CIT CHANGE - makes players spawn with in-backpack loadout items properly. A little hacky but it works
+		job.after_spawn(H, M.client, joined_late) // note: this happens before the mob has a key! M will always have a client, H might not.
+		post_equip_loadout(N, H)//CIT CHANGE - makes players spawn with in-backpack loadout items properly. A little hacky but it works
+
+		handle_roundstart_items(H, M.ckey, H.mind.assigned_role, H.mind.special_role)
 
 	var/list/tcg_cards
 	if(ishuman(H))
@@ -617,8 +606,8 @@ SUBSYSTEM_DEF(job)
 	if(hpc || epc)
 		var/relevent_cap = max(hpc, epc)
 		if((initial_players_to_assign - unassigned.len) >= relevent_cap)
-			return 1
-	return 0
+			return TRUE
+	return FALSE
 
 /datum/controller/subsystem/job/proc/RejectPlayer(mob/dead/new_player/player)
 	if(player.mind && player.mind.special_role)
@@ -702,7 +691,7 @@ SUBSYSTEM_DEF(job)
 		message_admins(msg)
 		CRASH(msg)
 
-/datum/controller/subsystem/job/proc/equip_loadout(mob/dead/new_player/N, mob/living/M, equipbackpackstuff, bypass_prereqs = FALSE, can_drop = TRUE)
+/datum/controller/subsystem/job/proc/equip_loadout(mob/dead/new_player/N, mob/living/M, bypass_prereqs = FALSE, can_drop = TRUE)
 	var/mob/the_mob = N
 	if(!the_mob)
 		the_mob = M // cause this doesn't get assigned if player is a latejoiner
@@ -712,6 +701,8 @@ SUBSYSTEM_DEF(job)
 			return
 		for(var/i in chosen_gear)
 			var/datum/gear/G = istext(i[LOADOUT_ITEM]) ? text2path(i[LOADOUT_ITEM]) : i[LOADOUT_ITEM]
+			if(!ispath(G))
+				continue
 			G = GLOB.loadout_items[initial(G.category)][initial(G.subcategory)][initial(G.name)]
 			if(!G)
 				continue
@@ -720,9 +711,70 @@ SUBSYSTEM_DEF(job)
 				permitted = FALSE
 			if(G.donoritem && !G.donator_ckey_check(the_mob.client.ckey))
 				permitted = FALSE
-			if(!equipbackpackstuff && G.slot == ITEM_SLOT_BACKPACK)//snowflake check since plopping stuff in the backpack doesnt work for pre-job equip loadout stuffs
+			if(G.handle_post_equip)
 				permitted = FALSE
-			if(equipbackpackstuff && G.slot != ITEM_SLOT_BACKPACK)//ditto
+			if(!permitted)
+				continue
+			var/obj/item/I = new G.path
+			if(I)
+				if(length(i[LOADOUT_COLOR])) //handle loadout colors
+				 	//handle polychromic items
+					if((G.loadout_flags & LOADOUT_CAN_COLOR_POLYCHROMIC) && length(G.loadout_initial_colors))
+						var/datum/element/polychromic/polychromic = LAZYACCESS(I.comp_lookup, "item_worn_overlays") //stupid way to do it but GetElement does not work for this
+						if(polychromic && istype(polychromic))
+							var/list/polychromic_entry = polychromic.colors_by_atom[I]
+							if(polychromic_entry)
+								if(polychromic.suits_with_helmet_typecache[I.type]) //is this one of those toggleable hood/helmet things?
+									polychromic.connect_helmet(I,i[LOADOUT_COLOR])
+								polychromic.colors_by_atom[I] = i[LOADOUT_COLOR]
+								I.update_icon()
+					else
+						//handle non-polychromic items (they only have one color)
+						I.add_atom_colour(i[LOADOUT_COLOR][1], FIXED_COLOUR_PRIORITY)
+						I.update_icon()
+				//when inputting the data it's already sanitized
+				if(i[LOADOUT_CUSTOM_NAME])
+					var/custom_name = i[LOADOUT_CUSTOM_NAME]
+					I.name = custom_name
+				if(i[LOADOUT_CUSTOM_DESCRIPTION])
+					var/custom_description = i[LOADOUT_CUSTOM_DESCRIPTION]
+					I.desc = custom_description
+			if(!M.equip_to_slot_if_possible(I, G.slot, disable_warning = TRUE, bypass_equip_delay_self = TRUE)) // If the job's dresscode compliant, try to put it in its slot, first
+				if(iscarbon(M))
+					var/mob/living/carbon/C = M
+					var/obj/item/storage/backpack/B = C.back
+					if(!B || !SEND_SIGNAL(B, COMSIG_TRY_STORAGE_INSERT, I, null, TRUE, TRUE)) // Otherwise, try to put it in the backpack, for carbons.
+						if(can_drop)
+							I.forceMove(get_turf(C))
+						else
+							qdel(I)
+				else if(!M.equip_to_slot_if_possible(I, ITEM_SLOT_BACKPACK, disable_warning = TRUE, bypass_equip_delay_self = TRUE)) // Otherwise, try to put it in the backpack
+					if(can_drop)
+						I.forceMove(get_turf(M)) // If everything fails, just put it on the floor under the mob.
+					else
+						qdel(I)
+
+/datum/controller/subsystem/job/proc/post_equip_loadout(mob/dead/new_player/N, mob/living/M, bypass_prereqs = FALSE, can_drop = TRUE)
+	var/mob/the_mob = N
+	if(!the_mob)
+		the_mob = M // cause this doesn't get assigned if player is a latejoiner
+	var/list/chosen_gear = the_mob.client.prefs.loadout_data["SAVE_[the_mob.client.prefs.loadout_slot]"]
+	if(the_mob.client && the_mob.client.prefs && (chosen_gear && chosen_gear.len))
+		if(!ishuman(M))//no silicons allowed
+			return
+		for(var/i in chosen_gear)
+			var/datum/gear/G = istext(i[LOADOUT_ITEM]) ? text2path(i[LOADOUT_ITEM]) : i[LOADOUT_ITEM]
+			if(!ispath(G))
+				continue
+			G = GLOB.loadout_items[initial(G.category)][initial(G.subcategory)][initial(G.name)]
+			if(!G)
+				continue
+			var/permitted = TRUE
+			if(!bypass_prereqs && G.restricted_roles && G.restricted_roles.len && !(M.mind.assigned_role in G.restricted_roles))
+				permitted = FALSE
+			if(G.donoritem && !G.donator_ckey_check(the_mob.client.ckey))
+				permitted = FALSE
+			if(!G.handle_post_equip)
 				permitted = FALSE
 			if(!permitted)
 				continue
@@ -772,6 +824,35 @@ SUBSYSTEM_DEF(job)
 	if(!job)
 		return FALSE
 	job.current_positions = max(0, job.current_positions - 1)
+
+/datum/controller/subsystem/job/proc/get_last_resort_spawn_points()
+	//bad mojo
+	var/area/shuttle/arrival/arrivals_area = GLOB.areas_by_type[/area/shuttle/arrival]
+	if(arrivals_area)
+		//first check if we can find a chair
+		var/obj/structure/chair/shuttle_chair = locate() in arrivals_area
+		if(shuttle_chair)
+			return shuttle_chair
+
+		//last hurrah
+		var/list/turf/available_turfs = list()
+		for(var/turf/arrivals_turf in arrivals_area)
+			if(!is_blocked_turf(arrivals_turf, TRUE))
+				available_turfs += arrivals_turf
+		if(length(available_turfs))
+			return pick(available_turfs)
+
+	//pick an open spot on arrivals and dump em
+	var/list/arrivals_turfs = shuffle(get_area_turfs(/area/shuttle/arrival))
+	if(length(arrivals_turfs))
+		for(var/turf/arrivals_turf in arrivals_turfs)
+			if(!is_blocked_turf(arrivals_turf, TRUE))
+				return arrivals_turf
+		//last chance, pick ANY spot on arrivals and dump em
+		return pick(arrivals_turfs)
+
+	stack_trace("Unable to find last resort spawn point.")
+	return GET_ERROR_ROOM
 
 ///////////////////////////////////
 //Keeps track of all living heads//

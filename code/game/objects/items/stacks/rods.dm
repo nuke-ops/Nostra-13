@@ -25,7 +25,7 @@ GLOBAL_LIST_INIT(rod_recipes, list ( \
 	hitsound = 'sound/items/trayhit1.ogg'
 	embedding = list()
 	novariants = TRUE
-	matter_amount = 2
+	matter_amount = 2 // Nostra change
 
 /obj/item/stack/rods/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] begins to stuff \the [src] down [user.p_their()] throat! It looks like [user.p_theyre()] trying to commit suicide!</span>")//it looks like theyre ur mum
@@ -41,7 +41,7 @@ GLOBAL_LIST_INIT(rod_recipes, list ( \
 
 /obj/item/stack/rods/update_icon_state()
 	var/amount = get_amount()
-	if(amount <= 5)
+	if(amount <= 5 && amount >= 1)
 		icon_state = "rods-[amount]"
 	else
 		icon_state = "rods"
@@ -78,12 +78,9 @@ GLOBAL_LIST_INIT(rod_recipes, list ( \
 
 /obj/item/stack/rods/cyborg
 	custom_materials = null
-	is_cyborg = 1
-	cost = 250
-
-/obj/item/stack/rods/cyborg/ComponentInitialize()
-	. = ..()
-	AddElement(/datum/element/update_icon_blocker)
+	is_cyborg = TRUE
+	source = /datum/robot_energy_storage/medical
+	cost = MINERAL_MATERIAL_AMOUNT * 0.125
 
 /obj/item/stack/rods/ten
 	amount = 10

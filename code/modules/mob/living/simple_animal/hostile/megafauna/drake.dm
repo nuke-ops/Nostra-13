@@ -59,6 +59,8 @@ Difficulty: Medium
 	move_to_delay = 5
 	ranged = 1
 	pixel_x = -16
+	maptext_height = 64
+	maptext_width = 64
 	crusher_loot = list(/obj/structure/closet/crate/necropolis/dragon/crusher)
 	loot = list(/obj/structure/closet/crate/necropolis/dragon)
 	butcher_results = list(/obj/item/stack/ore/diamond = 5, /obj/item/stack/sheet/sinew = 5, /obj/item/stack/sheet/bone = 30, /obj/item/reagent_containers/food/snacks/meat/slab/dragon = 5)
@@ -201,7 +203,7 @@ Difficulty: Medium
 		if(!any_attack)
 			for(var/obj/effect/temp_visual/drakewall/D in drakewalls)
 				qdel(D)
-			return 0 // nothing to attack in the arena time for enraged attack if we still have a target
+			return FALSE // nothing to attack in the arena time for enraged attack if we still have a target
 		for(var/turf/T in turfs)
 			if(!(T in empty))
 				new /obj/effect/temp_visual/lava_warning(T)
@@ -209,7 +211,7 @@ Difficulty: Medium
 				new /obj/effect/temp_visual/lava_safe(T)
 		amount--
 		sleep(24)
-	return 1 // attack finished completely
+	return TRUE // attack finished completely
 
 /mob/living/simple_animal/hostile/megafauna/dragon/proc/arena_escape_enrage() // you ran somehow / teleported away from my arena attack now i'm mad fucker
 	SetRecoveryTime(80)

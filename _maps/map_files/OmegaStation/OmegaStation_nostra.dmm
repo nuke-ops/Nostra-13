@@ -3209,12 +3209,12 @@
 	req_access_txt = "20"
 	},
 /obj/structure/window/reinforced,
-/obj/item/aiModule/core/freeformcore{
+/obj/item/ai_module/core/freeformcore{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/aiModule/core/full/custom,
-/obj/item/aiModule/core/full/asimov{
+/obj/item/ai_module/core/full/custom,
+/obj/item/ai_module/core/full/asimov{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -3248,12 +3248,12 @@
 	req_access_txt = "20"
 	},
 /obj/structure/window/reinforced,
-/obj/item/aiModule/supplied/protectStation{
+/obj/item/ai_module/supplied/protectStation{
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/obj/item/aiModule/zeroth/oneHuman,
-/obj/item/aiModule/reset/purge{
+/obj/item/ai_module/zeroth/oneHuman,
+/obj/item/ai_module/reset/purge{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -4174,7 +4174,7 @@
 /area/command/bridge)
 "agX" = (
 /obj/structure/table/reinforced,
-/obj/item/aiModule/reset{
+/obj/item/ai_module/reset{
 	pixel_x = 3;
 	pixel_y = 3
 	},
@@ -4185,7 +4185,7 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/item/aiModule/supplied/freeform,
+/obj/item/ai_module/supplied/freeform,
 /obj/effect/turf_decal/tile/neutral,
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -4276,7 +4276,7 @@
 /area/ai_monitored/command/nuke_storage)
 "ahd" = (
 /obj/structure/table/reinforced,
-/obj/item/aiModule/supplied/quarantine,
+/obj/item/ai_module/supplied/quarantine,
 /obj/item/radio/intercom{
 	broadcasting = 1;
 	frequency = 1447;
@@ -5322,7 +5322,7 @@
 	lootcount = 2;
 	lootdoubles = 0
 	},
-/obj/item/aiModule/supplied/oxygen{
+/obj/item/ai_module/supplied/oxygen{
 	pixel_x = -3;
 	pixel_y = -3
 	},
@@ -7464,11 +7464,11 @@
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard/fore)
 "amv" = (
-/obj/machinery/computer/bounty{
-	dir = 4
-	},
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 10
+	},
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 4
 	},
 /turf/open/floor/plasteel,
 /area/cargo/storage)
@@ -9480,11 +9480,11 @@
 	name = "Cargo Office RC";
 	pixel_x = 32
 	},
-/obj/machinery/computer/bounty{
-	dir = 8
-	},
 /obj/effect/turf_decal/trimline/brown/filled/line{
 	dir = 4
+	},
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/cargo/storage)
@@ -11203,7 +11203,6 @@
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/starboard/fore)
 "ass" = (
-/obj/machinery/mineral/mint,
 /obj/structure/sign/poster/official/random{
 	pixel_y = 32
 	},
@@ -19936,7 +19935,7 @@
 	dir = 4;
 	light_color = "#e8eaff"
 	},
-/mob/living/simple_animal/parrot/Poly,
+/mob/living/simple_animal/parrot/Polly,
 /obj/effect/turf_decal/delivery,
 /obj/effect/turf_decal/stripes/line{
 	dir = 10
@@ -44768,9 +44767,6 @@
 /turf/open/floor/plasteel/dark,
 /area/science/mixing)
 "jdn" = (
-/obj/structure/chair{
-	dir = 1
-	},
 /obj/machinery/airalarm{
 	dir = 1;
 	pixel_y = -22
@@ -44779,6 +44775,7 @@
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
 	},
+/obj/machinery/piratepad/civilian,
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard/fore)
 "jfl" = (
@@ -46539,7 +46536,7 @@
 	charge = 100;
 	maxcharge = 15000
 	},
-/obj/item/aiModule/reset,
+/obj/item/ai_module/reset,
 /obj/item/flashlight{
 	pixel_x = 1;
 	pixel_y = 5
@@ -48249,6 +48246,16 @@
 /obj/item/circuitboard/machine/microwave,
 /turf/open/floor/wood,
 /area/maintenance/starboard/aft)
+"rEd" = (
+/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/tile/brown{
+	dir = 8
+	},
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/hallway/primary/starboard/fore)
 "rEx" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 4
@@ -101020,7 +101027,7 @@ amA
 atz
 aog
 apg
-xoE
+rEd
 abt
 abN
 acy

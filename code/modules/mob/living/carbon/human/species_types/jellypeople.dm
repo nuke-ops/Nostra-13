@@ -33,6 +33,11 @@
 	species_category = SPECIES_CATEGORY_JELLY
 	wings_icons = SPECIES_WINGS_JELLY
 	ass_image = 'icons/ass/assslime.png'
+	blacklisted_quirks = list(/datum/quirk/glass_bones)
+
+	family_heirlooms = list(
+		/obj/item/toy/plush/slimeplushie
+	)
 
 /datum/species/jelly/on_species_loss(mob/living/carbon/C)
 	C.faction -= "slime"
@@ -55,38 +60,46 @@
 	//update blood color to body color
 	exotic_blood_color = "#" + H.dna.features["mcolor"]
 
-/datum/species/jelly/spec_life(mob/living/carbon/human/H)
-	if(H.stat == DEAD || HAS_TRAIT(H, TRAIT_NOMARROW)) //can't farm slime jelly from a dead slime/jelly person indefinitely, and no regeneration for bloodsuckers
-		return
-	if(!H.blood_volume)
-		H.adjust_integration_blood(5)
-		H.adjustBruteLoss(5)
-		to_chat(H, "<span class='danger'>You feel empty!</span>")
+/datum/species/jelly/handle_blood(mob/living/carbon/human/H, delta_time, times_fired)
+	if(H.stat == DEAD) //can't farm slime jelly from a dead slime/jelly person indefinitely
+		return TRUE // we dont handle blood when dead
 
-	if(H.blood_volume < (BLOOD_VOLUME_NORMAL * H.blood_ratio))
+	if(H.blood_volume <= 0)
+		H.blood_volume += 2.5 * delta_time
+		H.adjustBruteLoss(2.5 * delta_time)
+		to_chat(H, span_danger("You feel empty!"))
+
+	if(H.blood_volume < BLOOD_VOLUME_NORMAL)
 		if(H.nutrition >= NUTRITION_LEVEL_STARVING)
-			H.adjust_integration_blood(3)
-			H.nutrition -= 2.5
-	if(H.blood_volume < (BLOOD_VOLUME_OKAY*H.blood_ratio))
-		if(prob(5))
-			to_chat(H, "<span class='danger'>You feel drained!</span>")
-	if(H.blood_volume < (BLOOD_VOLUME_BAD*H.blood_ratio))
+			H.blood_volume += 1.5 * delta_time
+			H.adjust_nutrition(-1.25 * delta_time)
+
+	if(H.blood_volume < BLOOD_VOLUME_OKAY)
+		if(DT_PROB(2.5, delta_time))
+			to_chat(H, span_danger("You feel drained!"))
+
+	if(H.blood_volume < BLOOD_VOLUME_BAD)
 		Cannibalize_Body(H)
-	..()
+
+	var/datum/action/innate/ability/regrowth = H.ability_actions[INNATE_ABILITY_LIMB_REGROWTH]
+	if(regrowth)
+		regrowth.UpdateButtons()
+
+	return FALSE // to let living/handle_blood know that the species is handling blood instead
 
 /datum/species/jelly/proc/Cannibalize_Body(mob/living/carbon/human/H)
 	var/list/limbs_to_consume = list(BODY_ZONE_R_ARM, BODY_ZONE_L_ARM, BODY_ZONE_R_LEG, BODY_ZONE_L_LEG) - H.get_missing_limbs()
 	var/obj/item/bodypart/consumed_limb
-	if(!limbs_to_consume.len)
+	if(!length(limbs_to_consume))
 		H.losebreath++
 		return
 	if(H.get_num_legs(FALSE)) //Legs go before arms
 		limbs_to_consume -= list(BODY_ZONE_R_ARM, BODY_ZONE_L_ARM)
 	consumed_limb = H.get_bodypart(pick(limbs_to_consume))
 	consumed_limb.drop_limb()
-	to_chat(H, "<span class='userdanger'>Your [consumed_limb] is drawn back into your body, unable to maintain its shape!</span>")
+	to_chat(H, span_userdanger("Your [consumed_limb] is drawn back into your body, unable to maintain its shape!"))
 	qdel(consumed_limb)
-	H.adjust_integration_blood(20)
+	H.blood_volume += 20
 
 ////////////////////////////////////////////////////////SLIMEPEOPLE///////////////////////////////////////////////////////////////////
 
@@ -171,8 +184,8 @@
 	if(..())
 		var/mob/living/carbon/human/H = owner
 		if(H.blood_volume >= BLOOD_VOLUME_SLIME_SPLIT)
-			return 1
-		return 0
+			return TRUE
+		return FALSE
 
 /datum/action/innate/split_body/Activate()
 	var/mob/living/carbon/human/H = owner
@@ -186,7 +199,7 @@
 
 	H.mob_transforming = TRUE
 
-	if(do_after(owner, delay=60, needhand=FALSE, target=owner, progress=TRUE))
+	if(do_after(owner, 6 SECONDS, owner))
 		if(H.blood_volume >= BLOOD_VOLUME_SLIME_SPLIT)
 			make_dupe()
 		else
@@ -415,7 +428,7 @@
 	coldmod = 3
 	heatmod = 1
 	burnmod = 1
-
+	balance_point_values = TRUE
 	allowed_limb_ids = list(SPECIES_SLIME,SPECIES_STARGAZER,SPECIES_SLIME_LUMI)
 
 ///////////////////////////////////LUMINESCENTS//////////////////////////////////////////
@@ -460,9 +473,9 @@
 
 /datum/species/jelly/luminescent/proc/update_slime_actions()
 	integrate_extract.update_name()
-	integrate_extract.UpdateButtonIcon()
-	extract_minor.UpdateButtonIcon()
-	extract_major.UpdateButtonIcon()
+	integrate_extract.UpdateButtons()
+	extract_minor.UpdateButtons()
+	extract_major.UpdateButtons()
 
 /datum/species/jelly/luminescent/proc/update_glow(mob/living/carbon/C, intensity)
 	if(intensity)
@@ -502,7 +515,7 @@
 		name = "Eject Extract"
 		desc = "Eject your current slime extract."
 
-/datum/action/innate/integrate_extract/UpdateButtonIcon(status_only, force)
+/datum/action/innate/integrate_extract/UpdateButton(atom/movable/screen/movable/action_button/button, status_only, force)
 	if(!species || !species.current_extract)
 		button_icon_state = "slimeconsume"
 	else

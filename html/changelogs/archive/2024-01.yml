@@ -1,0 +1,17 @@
+2024-01-17:
+  maksxpl:
+  - bugfix: fixed a rcd icons
+  - refactor: refactored rcd code
+2024-01-19:
+  SandPoot:
+  - bugfix: Some of the old push refs on reagent circuits didn't work, they now do.
+  - tweak: MMIs and pAIs circuits have been checked on.
+  - rscadd: Added quick button circuit! It uses actions buttons and are customizable.
+2024-01-20:
+  DetectiveEnotsky:
+  - tweak: Implements code to allow for using your character in ghost roles.
+  maksxpl:
+  - refactor: Moved PR https://github.com/nuke-ops/Nostra-13/pull/200 to modular-nostra
+  - refactor: Moved PR https://github.com/nuke-ops/Nostra-13/pull/221 to modular-nostra
+  - refactor: Moved PR https://github.com/nuke-ops/Nostra-13/pull/32 to modular-nostra
+  - refactor: Moved PR https://github.com/nuke-ops/Nostra-13/pull/105 to modular-nostra

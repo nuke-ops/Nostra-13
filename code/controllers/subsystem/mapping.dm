@@ -81,7 +81,6 @@ SUBSYSTEM_DEF(mapping)
 			to_chat(world, "<span class='boldannounce'>Unable to load next or default map config, defaulting to Box Station</span>")
 			config = old_config
 	GLOB.year_integer += config.year_offset
-	GLOB.announcertype = (config.announcertype == "standard" ? (prob(1) ? "medibot" : "classic") : config.announcertype)
 	initialize_biomes()
 	loadWorld()
 	repopulate_sorted_areas()
@@ -424,7 +423,7 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 	banned += generateMapList("[global.config.directory]/iceruinblacklist.txt")
 	banned += generateMapList("[global.config.directory]/stationruinblacklist.txt")
 
-	for(var/item in sortList(subtypesof(/datum/map_template/ruin), /proc/cmp_ruincost_priority))
+	for(var/item in sort_list(subtypesof(/datum/map_template/ruin), /proc/cmp_ruincost_priority))
 		var/datum/map_template/ruin/ruin_type = item
 		// screen out the abstract subtypes
 		if(!initial(ruin_type.id))
@@ -502,8 +501,9 @@ GLOBAL_LIST_EMPTY(the_station_areas)
 
 	var/away_name
 	var/datum/space_level/away_level
+	possible_options += "Custom"
 
-	var/answer = input("What kind ? ","Away/VR") as null|anything in list(possible_options + "Custom")
+	var/answer = input("What kind ? ","Away/VR") as null|anything in possible_options
 	switch(answer)
 		if(null)
 			return

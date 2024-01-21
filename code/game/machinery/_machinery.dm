@@ -104,6 +104,10 @@ Class Procs:
 	anchored = TRUE
 	interaction_flags_atom = INTERACT_ATOM_ATTACK_HAND | INTERACT_ATOM_UI_INTERACT
 
+	vocal_bark_id = "synth"
+	vocal_pitch = 0.6
+	vocal_volume = 40
+
 	var/stat = 0
 	var/use_power = IDLE_POWER_USE
 		//0 = dont run the auto
@@ -145,10 +149,11 @@ Class Procs:
 		circuit = new circuit(src)
 		circuit.apply_default_parts(src)
 
-	if(!speed_process && init_process)
-		START_PROCESSING(SSmachines, src)
-	else
-		START_PROCESSING(SSfastprocess, src)
+	if(init_process) // Required to prevent non-speed non-init machines from running
+		if(speed_process)
+			START_PROCESSING(SSfastprocess, src)
+		else
+			START_PROCESSING(SSmachines, src)
 	RegisterSignal(src, COMSIG_ENTER_AREA, .proc/power_change)
 
 	if (occupant_typecache)
@@ -504,8 +509,8 @@ Class Procs:
 		I.play_tool_sound(src, 50)
 		setDir(turn(dir,-90))
 		to_chat(user, "<span class='notice'>You rotate [src].</span>")
-		return 1
-	return 0
+		return TRUE
+	return FALSE
 
 /obj/proc/can_be_unfasten_wrench(mob/user, silent) //if we can unwrench this object; returns SUCCESSFUL_UNFASTEN and FAILED_UNFASTEN, which are both TRUE, or CANT_UNFASTEN, which isn't.
 	if(!(isfloorturf(loc) || istype(loc, /turf/open/indestructible)) && !anchored)

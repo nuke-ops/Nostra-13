@@ -80,9 +80,27 @@
 	item_state = "hostrench"
 	flags_inv = 0
 	strip_delay = 80
-	unique_reskin = list("Coat" = "hostrench",
-						"Cloak" = "trenchcloak"
-						)
+	unique_reskin = list(
+		"Coat" = list("icon_state" = "hostrench"),
+		"Cloak" = list("icon_state" = "trenchcloak")
+	)
+
+/obj/item/clothing/suit/armor/hos/platecarrier
+	name = "plate carrier"
+	desc = "An armor vest with attached pockets for holding and sorting equipment or ammo."
+	icon_state = "platecarrier"
+	item_state = "platecarrier"
+	body_parts_covered = CHEST|GROIN|ARMS
+	armor = list (MELEE = 30, BULLET = 40, LASER = 30, ENERGY = 10, BOMB = 25, BIO = 0, RAD = 0, FIRE = 50, ACID = 70, WOUND = 10)
+	cold_protection = CHEST|ARMS
+	heat_protection = CHEST|ARMS
+	strip_delay = 80
+	mutantrace_variation = STYLE_DIGITIGRADE
+
+/obj/item/clothing/suit/armor/hos/platecarrier/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/concrete/storage = AddComponent(/datum/component/storage/concrete)
+	storage.max_items = 5
 
 /obj/item/clothing/suit/armor/vest/warden
 	name = "warden's jacket"

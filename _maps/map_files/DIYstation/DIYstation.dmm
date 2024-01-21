@@ -1182,6 +1182,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/piratepad/civilian,
 /turf/open/floor/plating{
 	icon_state = "platingdmg1"
 	},
@@ -2422,12 +2423,12 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/computer/cargo{
-	dir = 8
-	},
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes/end{
 	dir = 1
+	},
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
@@ -4187,7 +4188,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/bot,
-/obj/machinery/computer/bounty,
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/decal/cleanable/cobweb,
 /obj/machinery/light/broken{
@@ -4196,6 +4196,7 @@
 /obj/machinery/status_display/supply{
 	pixel_y = 32
 	},
+/obj/machinery/computer/piratepad_control/civilian,
 /turf/open/floor/plasteel/dark,
 /area/cargo/qm)
 "wM" = (
@@ -5013,14 +5014,14 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/computer/bounty{
-	dir = 8
-	},
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
 /obj/machinery/light/broken,
+/obj/machinery/computer/piratepad_control/civilian{
+	dir = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)
 "AS" = (
@@ -6673,7 +6674,7 @@
 	name = "Chief Engineer Locker";
 	req_access_txt = "56"
 	},
-/mob/living/simple_animal/parrot/Poly,
+/mob/living/simple_animal/parrot/Polly,
 /obj/item/tank/jetpack/suit,
 /obj/item/circuitboard/machine/protolathe/department/engineering,
 /obj/item/circuitboard/machine/protolathe/department/engineering,
@@ -9508,9 +9509,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/computer/bounty{
-	dir = 4
-	},
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -9518,6 +9516,9 @@
 /obj/machinery/light,
 /obj/machinery/status_display/supply{
 	pixel_x = -32
+	},
+/obj/machinery/computer/cargo{
+	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/cargo/storage)

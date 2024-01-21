@@ -79,16 +79,18 @@
 			to_chat(user, "<span class='warning'>With [src] off of your arms, you feel less ready to punch things.</span>")
 
 /obj/item/clothing/gloves/fingerless/pugilist/crafted
-	unique_reskin = list("Short" = "armwraps",
-						"Extended" = "armwraps_extended"
-						)
+	unique_reskin = list(
+		"Short" = list("icon_state" = "armwraps"),
+		"Extended" = list("icon_state" = "armwraps_extended")
+	)
 
 /obj/item/clothing/gloves/fingerless/pugilist/crafted/reskin_obj(mob/M)
 	. = ..()
-	if(icon_state == "armwraps_extended")
-		item_state = "armwraps_extended"
-	else
-		return
+	switch(current_skin)
+		if("Short")
+			item_state = "armwraps"
+		if("Extended")
+			item_state = "armwraps_extended"
 
 /obj/item/clothing/gloves/fingerless/pugilist/chaplain
 	name = "armwraps of unyielding resolve"
@@ -360,3 +362,12 @@
 	desc = "Thin, pretty gloves intended for use in sexy feminine attire. A tag on the hem claims they pair great with black stockings."
 	icon_state = "eveningblack"
 	item_state = "eveningblack"
+
+/obj/item/clothing/gloves/polymaid
+	name = "polychromic maid gloves"
+	desc = "Colourable maid gloves!"
+	icon_state = "maid_arms"
+
+/obj/item/clothing/gloves/polymaid/ComponentInitialize()
+	. = ..()
+	AddElement(/datum/element/polychromic, list("#333333", "#FFFFFF"), 2)

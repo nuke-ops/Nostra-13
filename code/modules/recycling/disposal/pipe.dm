@@ -54,7 +54,7 @@
 	if(H)
 		H.active = FALSE
 		expel(H, get_turf(src), 0)
-	QDEL_NULL(stored)
+	stored = null //The qdel is handled in expel()
 	return ..()
 
 // returns the direction of the next pipe object, given the entrance dir
@@ -140,7 +140,7 @@
 
 /obj/structure/disposalpipe/run_obj_armor(damage_amount, damage_type, damage_flag = 0, attack_dir)
 	if(damage_flag == MELEE && damage_amount < 10)
-		return 0
+		return FALSE
 	return ..()
 
 

@@ -51,9 +51,9 @@
 		if(RCD_DECONSTRUCT)
 			return list("mode" = RCD_DECONSTRUCT, "delay" = 20, "cost" = 5)
 		if(RCD_WINDOWGRILLE)
-			if(the_rcd.window_glass == RCD_WINDOW_REINFORCED)
+			if(the_rcd.window_glass == RCD_WINDOW_REINFORCED) // Nostra change
 				return list("mode" = RCD_WINDOWGRILLE, "delay" = 40, "cost" = 12)
-			return list("mode" = RCD_WINDOWGRILLE, "delay" = 20, "cost" = 8)
+			return list("mode" = RCD_WINDOWGRILLE, "delay" = 20, "cost" = 8) // Nostra change
 
 	return FALSE
 
@@ -64,14 +64,16 @@
 			qdel(src)
 			return TRUE
 		if(RCD_WINDOWGRILLE)
+			// Start of Nostra change
 			if(!isturf(loc))
 				return FALSE
 			var/turf/T = loc
 			var/window_dir = the_rcd.window_size == RCD_WINDOW_FULLTILE ? FULLTILE_WINDOW_DIR : user.dir
 			if(!valid_window_location(T, window_dir))
+			// End of Nostra change
 				return FALSE
 			to_chat(user, "<span class='notice'>You construct the window.</span>")
-			var/obj/structure/window/WD = new the_rcd.window_type(T, window_dir)
+			var/obj/structure/window/WD = new the_rcd.window_type(T, window_dir) // Nostra change
 			WD.setAnchored(TRUE)
 			return TRUE
 	return FALSE
@@ -272,7 +274,7 @@
 				var/turf/T = get_turf(src)
 				var/obj/structure/cable/C = T.get_cable_node()
 				if(C)
-					playsound(src, 'sound/magic/lightningshock.ogg', 100, 1, extrarange = 5)
+					playsound(src, 'sound/magic/lightningshock.ogg', 100, TRUE, extrarange = 5)
 					tesla_zap(src, 3, C.newavail() * 0.01, ZAP_MOB_DAMAGE | ZAP_OBJ_DAMAGE | ZAP_MOB_STUN | ZAP_ALLOW_DUPLICATES) //Zap for 1/100 of the amount of power. At a million watts in the grid, it will be as powerful as a tesla revolver shot.
 					C.add_delayedload(C.newavail() * 0.0375) // you can gain up to 3.5 via the 4x upgrades power is halved by the pole so thats 2x then 1X then .5X for 3.5x the 3 bounces shock.
 	return ..()

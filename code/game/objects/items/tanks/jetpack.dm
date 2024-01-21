@@ -19,6 +19,10 @@
 	ion_trail = new
 	ion_trail.set_up(src)
 
+/obj/item/tank/jetpack/Destroy()
+	QDEL_NULL(ion_trail)
+	return ..()
+
 /obj/item/tank/jetpack/populate_gas()
 	if(gas_type)
 		air_contents.set_moles(gas_type, ((6 * ONE_ATMOSPHERE) * volume / (R_IDEAL_GAS_EQUATION * T20C)))
@@ -46,7 +50,7 @@
 		to_chat(user, "<span class='notice'>You turn the jetpack off.</span>")
 	for(var/X in actions)
 		var/datum/action/A = X
-		A.UpdateButtonIcon()
+		A.UpdateButtons()
 
 /obj/item/tank/jetpack/proc/turn_on(mob/user)
 	on = TRUE
@@ -235,9 +239,13 @@
 	return
 
 /mob/living/carbon/get_jetpack()
-	var/obj/item/tank/jetpack/J = back
-	if(istype(J))
-		return J
+	var/obj/item/I = back
+	if(istype(I, /obj/item/tank/jetpack))
+		return I
+	else if(istype(I, /obj/item/mod/control))
+		var/obj/item/mod/control/C = I
+		for(var/obj/item/mod/module/jetpack/J in C.modules)
+			return J
 
 /mob/living/carbon/human/get_jetpack()
 	var/obj/item/tank/jetpack/J = ..()

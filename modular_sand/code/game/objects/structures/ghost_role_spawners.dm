@@ -24,6 +24,7 @@
 	skip_reentry_check = TRUE
 	banType = ROLE_GHOSTCAFE
 	mob_type = /mob/living/silicon/robot/modules/roleplay
+	can_load_appearance = 2
 
 /obj/effect/mob_spawn/robot/ghostcafe/special(mob/living/silicon/robot/new_spawn)
 	if(new_spawn.client)
@@ -36,7 +37,7 @@
 		ADD_TRAIT(new_spawn, TRAIT_SIXTHSENSE, GHOSTROLE_TRAIT)
 		ADD_TRAIT(new_spawn, TRAIT_EXEMPT_HEALTH_EVENTS, GHOSTROLE_TRAIT)
 		ADD_TRAIT(new_spawn, TRAIT_NO_MIDROUND_ANTAG, GHOSTROLE_TRAIT) //The mob can't be made into a random antag, they are still eligible for ghost roles popups.
-		to_chat(new_spawn,"<span class='boldwarning'>Ghosting is free!</span>")
+		to_chat(new_spawn,span_boldwarning("Ghosting is free!"))
 		var/datum/action/toggle_dead_chat_mob/D = new(new_spawn)
 		D.Grant(new_spawn)
 		var/datum/action/disguise/disguise_action = new(new_spawn)

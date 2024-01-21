@@ -65,7 +65,7 @@
 /datum/crafting_recipe/food/lizard_escargot
 	name = "Desert snail cocleas"
 	reqs = list(
-		/obj/item/reagent_containers/food/snacks/desert_snails = 1,
+		/obj/item/reagent_containers/food/snacks/canned_desert_snails = 1,
 		/obj/item/reagent_containers/food/snacks/grown/garlic = 1,
 		/datum/reagent/consumable/lemonjuice = 3,
 		/datum/reagent/consumable/blackpepper = 2,
@@ -129,7 +129,7 @@
 /datum/crafting_recipe/food/nectar_larvae
 	name = "Nectar larvae"
 	reqs = list(
-		/obj/item/reagent_containers/food/snacks/larvae = 1,
+		/obj/item/reagent_containers/food/snacks/canned_larvae = 1,
 		/obj/item/reagent_containers/food/snacks/grown/tomato = 1,
 		/obj/item/reagent_containers/food/snacks/grown/chili = 1,
 		/datum/reagent/consumable/korta_nectar = 5
@@ -185,7 +185,7 @@
 /datum/crafting_recipe/food/snail_nizaya
 	name = "Desert snail nizaya"
 	reqs = list(
-		/obj/item/reagent_containers/food/snacks/desert_snails = 1,
+		/obj/item/reagent_containers/food/snacks/canned_desert_snails = 1,
 		/obj/item/reagent_containers/food/snacks/spaghetti/nizaya = 1,
 		/obj/item/reagent_containers/food/snacks/grown/garlic = 1,
 		/datum/reagent/consumable/ethanol/wine = 5

@@ -2,7 +2,7 @@
 /obj/item/seeds/syndieseeds
 	name = "pack of suspicious seeds"
 	desc = "These seeds grow..."
-	icon = 'modular_nostra/icons/obj/seeds.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/seeds.dmi'
 	icon_state = "seed-syndiefruit"
 	species = "unusual plant"
 	plantname = "unusual plant"
@@ -22,7 +22,7 @@
 
 /obj/item/reagent_containers/food/snacks/grown/shell/syndieseeds
 	seed = /obj/item/seeds/syndieseeds
-	icon = 'modular_nostra/icons/obj/harvest.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/harvest.dmi'
 	name = "unusual fruit"
 	desc = "It smells like sourness and lead."
 	icon_state = "unusualfruit"
@@ -36,7 +36,7 @@
 	name = "pack of aloevereturn seeds"
 	desc = "These seeds grow boomerang shaped leafs."
 	icon_state = "seed-aloevereturn"
-	icon = 'modular_nostra/icons/obj/seeds.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/seeds.dmi'
 	species = "aloe"
 	plantname = "Aloevereturn"
 	product = /obj/item/reagent_containers/food/snacks/grown/aloerang
@@ -55,7 +55,7 @@
 	seed = /obj/item/seeds/aloevereturn
 	name = "aloevereturn"
 	desc = "A plant barbed with nettles in the shape of a boomerang, perhaps you can throw it..."
-	icon = 'modular_nostra/icons/obj/harvest.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/harvest.dmi'
 	icon_state = "aloevereturn"
 	force = 5
 	throwforce = 15
@@ -89,7 +89,7 @@
 	name = "pack of olive seeds"
 	desc = "The perfect side dish to any-course."
 	icon_state = "seed-olive"
-	icon = 'modular_nostra/icons/obj/seeds.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/seeds.dmi'
 	species = "olive"
 	plantname = "Olive Tree"
 	product = /obj/item/reagent_containers/food/snacks/grown/olive
@@ -98,7 +98,7 @@
 	yield = 6
 	instability = 40
 	potency = 2
-	growing_icon = 'modular_nostra/icons/obj/growing_fruits.dmi'
+	growing_icon = 'modular_nostra/icons/obj/hydroponics/growing_fruits.dmi'
 	icon_grow = "olive-grow"
 	icon_harvest = "olive-harvest"
 	icon_dead = "apple-dead"
@@ -110,7 +110,7 @@
 	seed = /obj/item/seeds/olives
 	name = "olive"
 	desc = "Perfect on salads and pizza!"
-	icon = 'modular_nostra/icons/obj/harvest.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/harvest.dmi'
 	icon_state = "olive"
 	filling_color = "#A4795A"
 	bitesize = 100
@@ -137,7 +137,7 @@
 	seed = /obj/item/seeds/olives/green
 	name = "green olive"
 	desc = "The more sinister olive."
-	icon = 'modular_nostra/icons/obj/harvest.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/harvest.dmi'
 	icon_state = "greenolive"
 	filling_color = "#A4795A"
 	distill_reagent = null
@@ -155,14 +155,14 @@
 	name = "pack of korta nut seeds"
 	desc = "These seeds grow into korta nut bushes, native to Tizira."
 	icon_state = "seed-korta"
-	icon = 'modular_nostra/icons/obj/lizards/seeds.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/seeds.dmi'
 	species = "kortanut"
 	plantname = "Korta Nut Bush"
 	product = /obj/item/reagent_containers/food/snacks/grown/korta_nut
 	lifespan = 55
 	endurance = 35
 	yield = 5
-	growing_icon = 'modular_nostra/icons/obj/lizards/growing_fruits.dmi'
+	growing_icon = 'modular_nostra/icons/obj/hydroponics/growing_fruits.dmi'
 	icon_grow = "kortanut-grow"
 	icon_dead = "kortanut-dead"
 	genes = list(/datum/plant_gene/trait/repeated_harvest)
@@ -174,7 +174,7 @@
 	name = "korta nut"
 	desc = "A little nut of great importance. Has a peppery shell which can be ground into flour and a soft, pulpy interior that produces a milky fluid when juiced. Or you can eat them whole, as a quick snack."
 	icon_state = "korta_nut"
-	icon = 'modular_nostra/icons/obj/lizards/harvest.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/harvest.dmi'
 	foodtype = NUTS
 	grind_results = list(/datum/reagent/consumable/korta_flour = 0.2)
 	juice_results = list(/datum/reagent/consumable/korta_milk = 0.2)
@@ -186,7 +186,7 @@
 	name = "pack of sweet korta nut seeds"
 	desc = "These seeds grow into sweet korta nuts, a mutation of the original species that produces a thick syrup that Tizirans use for desserts."
 	icon_state = "seed-sweetkorta"
-	icon = 'modular_nostra/icons/obj/lizards/seeds.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/seeds.dmi'
 	species = "kortanut"
 	plantname = "Sweet Korta Nut Bush"
 	product = /obj/item/reagent_containers/food/snacks/grown/korta_nut/sweet
@@ -200,7 +200,7 @@
 	seed = /obj/item/seeds/korta_nut/sweet
 	name = "sweet korta nut"
 	desc = "A sweet treat lizards love to eat."
-	icon = 'modular_nostra/icons/obj/lizards/harvest.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/harvest.dmi'
 	icon_state = "korta_nut"
 	grind_results = list(/datum/reagent/consumable/korta_flour = 0.2)
 	juice_results = list(/datum/reagent/consumable/korta_milk = 0.2, /datum/reagent/consumable/korta_nectar = 0.2)
@@ -233,7 +233,7 @@
 	name = "pack of kronkus seeds"
 	desc = "A pack of highly illegal kronkus seeds.\nPossession of these seeds carries the death penalty in 7 sectors."
 	icon_state = "seed-kronkus"
-	icon = 'modular_nostra/icons/obj/lizards/seeds.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/seeds.dmi'
 	species = "kronkus"
 	plantname = "Kronkus Vine"
 	product = /obj/item/reagent_containers/food/snacks/grown/kronkus
@@ -244,7 +244,7 @@
 	production = 4
 	yield = 3
 	growthstages = 3
-	growing_icon = 'modular_nostra/icons/obj/lizards/growing.dmi'
+	growing_icon = 'modular_nostra/icons/obj/hydroponics/growing.dmi'
 	reagents_add = list(/datum/reagent/consumable/nutriment = 0.05)
 
 /obj/item/reagent_containers/food/snacks/grown/kronkus
@@ -252,7 +252,7 @@
 	name = "kronkus vine segment"
 	desc = "A piece of mature kronkus vine. It exudes a sharp and noxious odor."
 	icon_state = "kronkus"
-	icon = 'modular_nostra/icons/obj/lizards/harvest.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/harvest.dmi'
 	filling_color = "#37946e"
 	foodtype = VEGETABLES | TOXIC
 	distill_reagent = /datum/reagent/kronkus_extract
@@ -274,13 +274,13 @@
 	name = "pack of barrelmelon seeds"
 	desc = "These seeds grow into barrelmelon plants."
 	icon_state = "seed-barrelmelon"
-	icon = 'modular_nostra/icons/obj/lizards/seeds.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/seeds.dmi'
 	species = "barrelmelon"
 	plantname = "Barrel Melon Vines"
 	product = /obj/item/reagent_containers/food/snacks/grown/barrelmelon
 	genes = list(/datum/plant_gene/trait/brewing)
 	mutatelist = null
-	growing_icon = 'modular_nostra/icons/obj/lizards/growing_fruits.dmi'
+	growing_icon = 'modular_nostra/icons/obj/hydroponics/growing_fruits.dmi'
 	reagents_add = list(/datum/reagent/consumable/ethanol/ale = 0.2, /datum/reagent/consumable/nutriment = 0.1)
 	rarity = 10
 
@@ -290,5 +290,5 @@
 	name = "barrelmelon"
 	desc = "The nutriments within this melon have been compressed and fermented into rich alcohol."
 	icon_state = "barrelmelon"
-	icon = 'modular_nostra/icons/obj/lizards/harvest.dmi'
+	icon = 'modular_nostra/icons/obj/hydroponics/harvest.dmi'
 	distill_reagent = /datum/reagent/medicine/antihol //You can call it a integer overflow.

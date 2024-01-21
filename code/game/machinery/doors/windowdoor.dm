@@ -129,7 +129,7 @@
 	if(get_dir(loc, T) == dir)
 		return !density
 	else
-		return 1
+		return TRUE
 
 //used in the AStar algorithm to determinate if the turf the door is on is passable
 /obj/machinery/door/window/CanAStarPass(obj/item/card/id/ID, to_dir)
@@ -144,13 +144,13 @@
 
 /obj/machinery/door/window/open(forced=0)
 	if (src.operating == 1) //doors can still open when emag-disabled
-		return 0
+		return FALSE
 	if(!forced)
 		if(!hasPower())
-			return 0
+			return FALSE
 	if(forced < 2)
 		if(obj_flags & EMAGGED)
-			return 0
+			return FALSE
 	if(!src.operating) //in case of emag
 		operating = TRUE
 	do_animate("opening")
@@ -171,13 +171,13 @@
 
 /obj/machinery/door/window/close(forced=0)
 	if (src.operating)
-		return 0
+		return FALSE
 	if(!forced)
 		if(!hasPower())
-			return 0
+			return FALSE
 	if(forced < 2)
 		if(obj_flags & EMAGGED)
-			return 0
+			return FALSE
 	operating = TRUE
 	do_animate("closing")
 	playsound(src.loc, 'sound/machines/windowdoor.ogg', 100, 1)
@@ -355,20 +355,6 @@
 		if("touch")
 			INVOKE_ASYNC(src, .proc/open_and_close)
 
-/obj/machinery/door/window/rcd_vals(mob/user, obj/item/construction/rcd/the_rcd)
-	switch(the_rcd.mode)
-		if(RCD_DECONSTRUCT)
-			return list("mode" = RCD_DECONSTRUCT, "delay" = 50, "cost" = 32)
-	return FALSE
-
-/obj/machinery/door/window/rcd_act(mob/user, obj/item/construction/rcd/the_rcd, passed_mode)
-	switch(passed_mode)
-		if(RCD_DECONSTRUCT)
-			to_chat(user, "<span class='notice'>You deconstruct the windoor.</span>")
-			qdel(src)
-			return TRUE
-	return FALSE
-
 /obj/machinery/door/window/brigdoor
 	name = "secure door"
 	icon_state = "leftsecure"
@@ -437,8 +423,8 @@
 
 /obj/machinery/door/window/clockwork/allowed(mob/M)
 	if(is_servant_of_ratvar(M))
-		return 1
-	return 0
+		return TRUE
+	return FALSE
 
 /obj/machinery/door/window/northleft
 	dir = NORTH

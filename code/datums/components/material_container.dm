@@ -328,9 +328,9 @@
 /// For spawning mineral sheets at a specific location. Used by machines to output sheets.
 /datum/component/material_container/proc/retrieve_sheets(sheet_amt, var/datum/material/M, target = null)
 	if(!M.sheet_type)
-		return 0 //Add greyscale sheet handling here later
+		return FALSE //Add greyscale sheet handling here later
 	if(sheet_amt <= 0)
-		return 0
+		return FALSE
 
 	if(!target)
 		target = get_turf(parent)
@@ -373,12 +373,12 @@
 				req_mat = SSmaterials.GetMaterialRef(req_mat) //Get the ref
 
 			else // Its a category. (For example MAT_CATEGORY_RIGID)
-				if(!has_enough_of_category(req_mat, mats[x], multiplier)) //Do we have enough of this category?
+				if(!has_enough_of_category(req_mat, mats[req_mat], multiplier)) //Do we have enough of this category?
 					return FALSE
 				else
 					continue
 
-		if(!has_enough_of_material(req_mat, mats[x], multiplier))//Not a category, so just check the normal way
+		if(!has_enough_of_material(req_mat, mats[req_mat], multiplier))//Not a category, so just check the normal way
 			return FALSE
 
 	return TRUE

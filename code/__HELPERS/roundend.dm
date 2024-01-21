@@ -275,7 +275,7 @@
 		if(CONFIG_GET(string/chat_reboot_role))
 			broadcastmessage += "\n\n<@&[CONFIG_GET(string/chat_reboot_role)]>, the server will reboot shortly!"
 
-		send2chat(broadcastmessage, CONFIG_GET(string/chat_roundend_notice_tag))
+		send2chat(new /datum/tgs_message_content(broadcastmessage), CONFIG_GET(string/chat_roundend_notice_tag))
 
 	CHECK_TICK
 
@@ -379,6 +379,8 @@
 
 	parts += "[FOURSPACES]Shift Duration: <B>[DisplayTimeText(world.time - SSticker.round_start_time)]</B>"
 	parts += "[FOURSPACES]Station Integrity: <B>[mode.station_was_nuked ? "<span class='redtext'>Destroyed</span>" : "[popcount["station_integrity"]]%"]</B>"
+	if(mode.station_was_nuked && SSevents.holidays && SSevents.holidays[PRIDE_MONTH])
+		parts += "[FOURSPACES]Gender revealed: <B>[pick(500; "Male", 500; "Female", "Bigender", "Agender", "Demiboy", "Demigirl", "Genderfluid", "Pangender", "Xenogender", "Clown", 50; "What", 50; "Oh no.", 50; "Excuse me?")]</B>"
 	var/total_players = GLOB.joined_player_list.len
 	if(total_players)
 		parts+= "[FOURSPACES]Total Population: <B>[total_players]</B>"
@@ -666,7 +668,7 @@
 		SSticker.show_roundend_report(owner.client)
 
 /datum/action/report/IsAvailable()
-	return 1
+	return TRUE
 
 /datum/action/report/Topic(href,href_list)
 	if(usr != owner)

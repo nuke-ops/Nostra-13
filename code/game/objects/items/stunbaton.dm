@@ -54,14 +54,17 @@
 			cell = new preload_cell_type(src)
 	update_icon()
 
+	register_item_context()
+
 /obj/item/melee/baton/DoRevenantThrowEffects(atom/target)
 	switch_status()
 
 /obj/item/melee/baton/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	..()
+	var/mob/thrown_by = thrownby?.resolve()
 	//Only mob/living types have stun handling
-	if(turned_on && prob(throw_hit_chance) && iscarbon(hit_atom) && thrownby)
-		baton_stun(hit_atom, thrownby, shoving = TRUE)
+	if(turned_on && prob(throw_hit_chance) && iscarbon(hit_atom) && thrown_by)
+		baton_stun(hit_atom, thrown_by, shoving = TRUE)
 
 /obj/item/melee/baton/loaded //this one starts with a cell pre-installed.
 	preload_cell_type = /obj/item/stock_parts/cell/high/plus
@@ -154,6 +157,26 @@
 	var/interrupt = common_baton_melee(M, user, FALSE)
 	if(!interrupt)
 		return ..()
+
+/obj/item/melee/baton/add_item_context(datum/source, list/context, atom/target, mob/living/user)
+	if (isturf(target))
+		return NONE
+
+	if (isobj(target))
+		LAZYSET(context[SCREENTIP_CONTEXT_LMB], INTENT_ANY, "Attack")
+	else
+		if (turned_on)
+			LAZYSET(context[SCREENTIP_CONTEXT_RMB], INTENT_ANY, "Knockdown")
+
+			LAZYSET(context[SCREENTIP_CONTEXT_LMB], INTENT_ANY, "Stun")
+			LAZYSET(context[SCREENTIP_CONTEXT_LMB], INTENT_HARM, "Harmful stun")
+		else
+			LAZYSET(context[SCREENTIP_CONTEXT_RMB], INTENT_ANY, "Knockdown") // DON'T TELL EM, PRANKED.
+
+			LAZYSET(context[SCREENTIP_CONTEXT_LMB], INTENT_ANY, "Stun") // STILL DO NOT DARE TELLING THEM
+			LAZYSET(context[SCREENTIP_CONTEXT_LMB], INTENT_HARM, "Attack") // It's fine i guess...?
+
+	return CONTEXTUAL_SCREENTIP_SET
 
 /obj/item/melee/baton/alt_pre_attack(atom/A, mob/living/user, params)
 	if(!user.CheckActionCooldown(CLICK_CD_MELEE))
@@ -365,8 +388,9 @@
 /obj/item/melee/baton/boomerang/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	if(turned_on)
 		var/caught = hit_atom.hitby(src, FALSE, FALSE, throwingdatum=throwingdatum)
-		if(ishuman(hit_atom) && !caught && prob(throw_hit_chance) && thrownby)//if they are a carbon and they didn't catch it
-			baton_stun(hit_atom, thrownby, shoving = TRUE)
+		var/mob/thrown_by = thrownby?.resolve()
+		if(ishuman(hit_atom) && !caught && prob(throw_hit_chance) && thrown_by)//if they are a carbon and they didn't catch it
+			baton_stun(hit_atom, thrown_by, shoving = TRUE)
 		if(thrownby && !caught)
 			throw_back()
 	else
@@ -375,8 +399,9 @@
 /obj/item/melee/baton/boomerang/proc/throw_back()
 	set waitfor = FALSE
 	sleep(1)
+	var/mob/thrown_by = thrownby?.resolve()
 	if(!QDELETED(src))
-		throw_at(thrownby, throw_range+2, throw_speed, null, TRUE)
+		throw_at(thrown_by, throw_range+2, throw_speed, null, TRUE)
 
 /obj/item/melee/baton/boomerang/update_icon()
 	if(turned_on)

@@ -290,6 +290,13 @@
 		set_machine_stat(stat | MAINT)
 		update_appearance()
 		addtimer(CALLBACK(src, .proc/update), 5)
+	register_context()
+
+/obj/machinery/power/apc/add_context(atom/source, list/context, obj/item/held_item, mob/living/user)
+	. = ..()
+	if(operating)
+		LAZYSET(context[SCREENTIP_CONTEXT_ALT_LMB], INTENT_ANY, locked ? "Unlock" : "Lock")
+		return CONTEXTUAL_SCREENTIP_SET
 
 /obj/machinery/power/apc/Destroy()
 	GLOB.apcs_list -= src
@@ -300,7 +307,7 @@
 	area.power_equip = FALSE
 	area.power_environ = FALSE
 	area.power_change()
-	area.poweralert(TRUE, src)
+	area.poweralert(FALSE, src)
 	if(occupier)
 		malfvacate(1)
 	qdel(wires)
@@ -853,7 +860,7 @@
 
 /obj/machinery/power/apc/run_obj_armor(damage_amount, damage_type, damage_flag = 0, attack_dir)
 	if(damage_flag == MELEE && damage_amount < 10 && (!(stat & BROKEN) || malfai))
-		return 0
+		return FALSE
 	. = ..()
 
 
@@ -1336,7 +1343,7 @@
 	if(terminal)
 		return terminal.surplus()
 	else
-		return 0
+		return FALSE
 
 /obj/machinery/power/apc/add_load(amount)
 	if(terminal && terminal.powernet)
@@ -1346,7 +1353,7 @@
 	if(terminal)
 		return terminal.avail(amount)
 	else
-		return 0
+		return FALSE
 
 /obj/machinery/power/apc/process()
 	if(icon_update_needed)

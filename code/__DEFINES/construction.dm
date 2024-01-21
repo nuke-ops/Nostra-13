@@ -105,7 +105,7 @@
 #define CAT_SPAGHETTI	"Spaghettis"
 #define CAT_ICE	"Frozen"
 
-// these aren't even used as bitflags so who even knows why they are treated like them
+// Start of Nostra change - these aren't even used as bitflags so who even knows why they are treated like them
 #define RCD_FLOORWALL (1<<0)
 #define RCD_AIRLOCK (1<<1)
 #define RCD_DECONSTRUCT (1<<2)
@@ -123,6 +123,7 @@
 #define RCD_WINDOW_DIRECTIONAL "directional"
 #define RCD_WINDOW_NORMAL "glass"
 #define RCD_WINDOW_REINFORCED "reinforced glass"
+// End of Nostra change
 
 //Electrochromatic window defines.
 #define NOT_ELECTROCHROMATIC		0

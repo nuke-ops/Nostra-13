@@ -18,7 +18,7 @@
 	var/list/can_hold_extra							//if this is set, it will also be able to hold these.
 	var/list/cant_hold								//if this is set, anything in this typecache will not be able to fit.
 
-	var/can_hold_description
+	var/can_hold_description // Nostra change
 
 	var/list/mob/is_using							//lazy list of mobs looking at the contents of this storage.
 
@@ -130,24 +130,6 @@
 /datum/component/storage/PreTransfer()
 	update_actions()
 
-/datum/component/storage/proc/set_holdable(can_hold_list, cant_hold_list)
-	can_hold_description = generate_hold_desc(can_hold_list)
-
-	if (can_hold_list != null)
-		can_hold = string_list(typecacheof(can_hold_list))
-
-	if (cant_hold_list != null)
-		cant_hold = string_list(typecacheof(cant_hold_list))
-
-/datum/component/storage/proc/generate_hold_desc(can_hold_list)
-	var/list/desc = list()
-
-	for(var/valid_type in can_hold_list)
-		var/obj/item/valid_item = valid_type
-		desc += "\a [initial(valid_item.name)]"
-
-	return "\n\t<span class='notice'>[desc.Join("\n\t")]</span>"
-
 /datum/component/storage/proc/update_actions()
 	QDEL_NULL(modeswitch_action)
 	if(!isitem(parent) || !allow_quick_gather)
@@ -233,7 +215,7 @@
 		return
 	var/datum/progressbar/progress = new(M, len, I.loc)
 	var/list/rejections = list()
-	while(do_after(M, 10, TRUE, parent, FALSE, CALLBACK(src, .proc/handle_mass_pickup, things, I.loc, rejections, progress)))
+	while(do_after(M, 1 SECONDS, parent, NONE, FALSE, CALLBACK(src, .proc/handle_mass_pickup, things, I.loc, rejections, progress)))
 		stoplag(1)
 	progress.end_progress()
 	to_chat(M, "<span class='notice'>You put everything you could [insert_preposition] [parent].</span>")
@@ -291,7 +273,7 @@
 	var/turf/T = get_turf(A)
 	var/list/things = contents()
 	var/datum/progressbar/progress = new(M, length(things), T)
-	while (do_after(M, 10, TRUE, T, FALSE, CALLBACK(src, .proc/mass_remove_from_storage, T, things, progress, TRUE, M)))
+	while(do_after(M, 1 SECONDS, T, NONE, FALSE, CALLBACK(src, .proc/mass_remove_from_storage, T, things, progress, TRUE, M)))
 		stoplag(1)
 	progress.end_progress()
 	A.do_squish(0.8, 1.2)
@@ -452,25 +434,26 @@
 	if(M.incapacitated() || !M.canUseStorage())
 		return
 	var/atom/A = parent
-	A.add_fingerprint(M)
 	// this must come before the screen objects only block, dunno why it wasn't before
 	if(over_object == M)
 		user_show_to_mob(M, trigger_on_found = TRUE)
 	if(isrevenant(M))
 		INVOKE_ASYNC(GLOBAL_PROC, .proc/RevenantThrow, over_object, M, source)
 		return
+	if(check_locked(null, M) || !M.CanReach(A))
+		return
+	playsound(A, "rustle", 50, TRUE, -5)
+	A.do_jiggle()
+	A.add_fingerprint(M)
 	if(!istype(over_object, /atom/movable/screen))
 		INVOKE_ASYNC(src, .proc/dump_content_at, over_object, M)
 		return
 	if(A.loc != M)
 		return
-	playsound(A, "rustle", 50, TRUE, -5)
-	A.do_jiggle()
 	if(istype(over_object, /atom/movable/screen/inventory/hand))
 		var/atom/movable/screen/inventory/hand/H = over_object
 		M.putItemFromInventoryInHandIfPossible(A, H.held_index)
 		return
-	A.add_fingerprint(M)
 
 /datum/component/storage/proc/user_show_to_mob(mob/M, force = FALSE, trigger_on_found = FALSE)
 	var/atom/A = parent
@@ -505,7 +488,7 @@
 					var/atom/A = parent
 					A.do_squish()
 
-//This proc return 1 if the item can be picked up and 0 if it can't.
+//This proc return TRUE if the item can be picked up and 0 if it can't.
 //Set the stop_messages to stop it from printing messages
 /datum/component/storage/proc/can_be_inserted(obj/item/I, stop_messages = FALSE, mob/M)
 	if(!istype(I) || (I.item_flags & ABSTRACT))
@@ -693,7 +676,7 @@
 	var/atom/A = parent
 	update_actions()
 	for(var/mob/M in range(1, A))
-		if(M.active_storage == src)
+		if(M.active_storage == src && (M != user))
 			close(M)
 
 /datum/component/storage/proc/signal_take_obj(datum/source, atom/movable/AM, new_loc, force = FALSE)

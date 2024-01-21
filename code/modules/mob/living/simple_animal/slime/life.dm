@@ -8,7 +8,7 @@
 
 	typing_indicator_state = /obj/effect/overlay/typing_indicator/slime
 
-/mob/living/simple_animal/slime/BiologicalLife(seconds, times_fired)
+/mob/living/simple_animal/slime/BiologicalLife(delta_time, times_fired)
 	if(!(. = ..()))
 		return
 	if(buckled)
@@ -620,11 +620,11 @@
 
 /mob/living/simple_animal/slime/proc/will_hunt(hunger = -1) // Check for being stopped from feeding and chasing
 	if (docile)
-		return 0
+		return FALSE
 	if (hunger == 2 || rabid || attacked)
-		return 1
+		return TRUE
 	if (Leader)
-		return 0
+		return FALSE
 	if (holding_still)
-		return 0
-	return 1
+		return FALSE
+	return TRUE

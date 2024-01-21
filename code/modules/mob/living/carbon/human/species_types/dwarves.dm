@@ -20,6 +20,11 @@ GLOBAL_LIST_INIT(dwarf_last, world.file2list("strings/names/dwarf_last.txt")) //
 	species_language_holder = /datum/language_holder/dwarf
 	species_category = SPECIES_CATEGORY_BASIC //a kind of human
 
+	family_heirlooms = list(
+		// Dwarves get a dwarf mug as their heirloom (normal container but has manly dorf icon)
+		/obj/item/reagent_containers/food/drinks/dwarf_mug
+	)
+
 /mob/living/carbon/human/species/dwarf //species admin spawn path
 	race = /datum/species/dwarf //and the race the path is set to.
 
@@ -34,10 +39,8 @@ GLOBAL_LIST_INIT(dwarf_last, world.file2list("strings/names/dwarf_last.txt")) //
 	H.AddElement(/datum/element/dwarfism, COMSIG_SPECIES_LOSS, src)
 	RegisterSignal(C, COMSIG_MOB_SAY, .proc/handle_speech) //We register handle_speech is being used.
 
-/datum/species/dwarf/on_species_loss(mob/living/carbon/C, datum/species/new_species)
+/datum/species/dwarf/on_species_loss(mob/living/carbon/H, datum/species/new_species)
 	. = ..()
-	var/mob/living/carbon/human/H = C
-	H.RemoveElement(/datum/element/dwarfism, COMSIG_SPECIES_LOSS, src)
 	UnregisterSignal(H, COMSIG_MOB_SAY) //We register handle_speech is not being used.
 
 //Dwarf Name stuff

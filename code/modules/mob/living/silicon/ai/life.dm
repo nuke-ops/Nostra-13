@@ -3,7 +3,7 @@
 #define POWER_RESTORATION_SEARCH_APC 2
 #define POWER_RESTORATION_APC_FOUND 3
 
-/mob/living/silicon/ai/BiologicalLife(seconds, times_fired)
+/mob/living/silicon/ai/BiologicalLife(delta_time, times_fired)
 	if(!(. = ..()))
 		return
 	//I'm not removing that shitton of tabs, unneeded as they are. -- Urist
@@ -28,11 +28,15 @@
 	// Handle power damage (oxy)
 	if(aiRestorePowerRoutine)
 		// Lost power
-		adjustOxyLoss(1)
+		if (!battery)
+			to_chat(src, span_warning("Your backup battery's output drops below usable levels. It takes only a moment longer for your systems to fail, corrupted and unusable."))
+			adjustOxyLoss(200)
+		else
+			battery--
 	else
 		// Gain Power
-		if(getOxyLoss())
-			adjustOxyLoss(-1)
+		if (battery < 200)
+			battery++
 
 	if(!lacks_power())
 		var/area/home = get_area(src)

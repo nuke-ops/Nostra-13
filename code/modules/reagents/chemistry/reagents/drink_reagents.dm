@@ -1034,7 +1034,7 @@
 	M.update_transform()
 	..()
 
-/datum/reagent/consumable/pinkmilk
+/datum/reagent/consumable/milk/pinkmilk
 	name = "Strawberry Milk"
 	description = "A drink of a bygone era of milk and artificial sweetener back on a rock."
 	color = "#f76aeb"//rgb(247, 106, 235)
@@ -1045,13 +1045,13 @@
 	glass_desc = "Delicious flavored strawberry syrup mixed with milk."
 	value = REAGENT_VALUE_VERY_COMMON
 
-/datum/reagent/consumable/tea/pinkmilk/on_mob_life(mob/living/carbon/M)
+/datum/reagent/consumable/milk/pinkmilk/on_mob_life(mob/living/carbon/M)
 	if(prob(15))
 		to_chat(M, "<span class = 'notice'>[pick("You cant help to smile.","You feel nostalgia all of sudden.","You remember to relax.")]</span>")
 	..()
 	. = 1
 
-/datum/reagent/consumable/pinktea //Tiny Tim song
+/datum/reagent/consumable/tea/pinktea //Tiny Tim song
 	name = "Strawberry Tea"
 	description = "A timeless classic!"
 	color = "#f76aeb"//rgb(247, 106, 235)
@@ -1088,7 +1088,7 @@
 		var/list/adjusted = H.adjust_arousal(5,aphro = TRUE)
 		for(var/g in adjusted)
 			var/obj/item/organ/genital/G = g
-			to_chat(M, "<span class='userlove'>You feel like playing with your [G.name]!</span>")
+			to_chat(M, span_userlove("You feel like playing with your [G.name]!"))
 	..()
 
 /datum/reagent/consumable/monkey_energy
@@ -1152,3 +1152,14 @@
 	taste_description = "bitter powder"
 	glass_name = "glass of banana peel powder"
 	description = "You took a banana peel... pulped it... baked it... Where are you going with this?"
+
+/datum/reagent/consumable/eggnog
+	name = "Eggnog"
+	description = "A creamy, rich beverage made out of whisked eggs, milk and sugar, for when you feel like celebrating the winter holidays."
+	color = "#fcfdc6" // rgb: 252, 253, 198
+	nutriment_factor = 2 * REAGENTS_METABOLISM
+	quality = DRINK_VERYGOOD
+	taste_description = "custard"
+	glass_icon_state = "nog3"
+	glass_name = "eggnog"
+	glass_desc = "You can't egg-nore the holiday cheer all around you"

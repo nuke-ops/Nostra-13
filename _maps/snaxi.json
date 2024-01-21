@@ -10,10 +10,10 @@
    "space_ruin_levels":0,
    "space_empty_levels":0,
    "shuttles":{
-       "emergency": "emergency_box",
-       "ferry": "ferry_fancy",
-       "cargo": "cargo_box",
-       "whiteship": "whiteship_box"
+      "cargo":"cargo_box",
+      "ferry":"ferry_fancy",
+      "whiteship":"whiteship_box",
+      "emergency":"emergency_box"
    },
    "traits":[
       {

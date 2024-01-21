@@ -63,7 +63,7 @@
 
 /atom/movable/screen/human/equip/Click()
 	if(ismecha(usr.loc)) // stops inventory actions in a mech
-		return 1
+		return TRUE
 	var/mob/living/carbon/human/H = usr
 	H.quick_equip()
 
@@ -78,7 +78,7 @@
 
 /atom/movable/screen/devil/soul_counter/proc/update_counter(souls = 0)
 	invisibility = 0
-	maptext = "<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='#FF0000'>[souls]</font></div>"
+	maptext = MAPTEXT("<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='#FF0000'>[souls]</font></div>")
 	switch(souls)
 		if(0,null)
 			icon_state = "Devil-1"
@@ -137,7 +137,7 @@
 	..()
 	var/valuecolor = "#ff2525"
 	if(owner.stat == DEAD)
-		maptext = "<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='[valuecolor]'>ERR-0F</font></div>"
+		maptext = MAPTEXT("<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='[valuecolor]'>ERR-0F</font></div>")
 		icon_state = "coolant-3-1"
 		return
 	var/coolant_efficiency
@@ -157,7 +157,7 @@
 		valuecolor =  "#dd8109"
 	else if(coolant > BLOOD_VOLUME_SURVIVE * owner.blood_ratio)
 		valuecolor = "#e7520d"
-	maptext = "<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='[valuecolor]'>[round((coolant / (BLOOD_VOLUME_NORMAL * owner.blood_ratio)) * 100, 1)]</font></div>"
+	maptext = MAPTEXT("<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='[valuecolor]'>[round((coolant / (BLOOD_VOLUME_NORMAL * owner.blood_ratio)) * 100, 1)]</font></div>")
 
 	var/efficiency_suffix
 	var/state_suffix
@@ -358,11 +358,11 @@
 	using.hud = src
 	hotkeybuttons += using
 
-	using = new /atom/movable/screen/rest()
-	using.icon = ui_style
-	using.screen_loc = ui_pull_resist
-	using.hud = src
-	static_inventory += using
+	rest_icon = new /atom/movable/screen/rest()
+	rest_icon.icon = ui_style
+	rest_icon.screen_loc = ui_pull_resist
+	rest_icon.hud = src
+	static_inventory += rest_icon
 	//END OF CIT CHANGES
 
 	using = new /atom/movable/screen/human/toggle()
@@ -550,6 +550,9 @@
 	zone_select.hud = src
 	zone_select.update_icon()
 	static_inventory += zone_select
+
+	combo_display = new /atom/movable/screen/combo()
+	infodisplay += combo_display
 
 	for(var/atom/movable/screen/inventory/inv in (static_inventory + toggleable_inventory + extra_inventory)) // Sandstorm edit
 		if(inv.slot_id)

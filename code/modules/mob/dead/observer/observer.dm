@@ -121,7 +121,8 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 		remove_verb(src, /mob/dead/observer/verb/boo)
 		remove_verb(src, /mob/dead/observer/verb/possess)
 
-	animate(src, pixel_y = 2, time = 10, loop = -1)
+	animate(src, pixel_z = 2, time = 10, loop = -1, flags = ANIMATION_RELATIVE)
+	animate(pixel_z = -4, time = 10, loop = -1, flags = ANIMATION_RELATIVE)
 
 	add_to_dead_mob_list()
 
@@ -136,11 +137,6 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 	grant_all_languages()
 	show_data_huds()
 	data_huds_on = 1
-
-	// Skyrat change START
-	RegisterSignal(src, COMSIG_CLICK_CTRL_SHIFT, .proc/on_click_ctrl_shift)
-	RegisterSignal(src, COMSIG_CLICK_CTRL, .proc/on_click_ctrl)
-	// Skyrat change END
 
 /mob/dead/observer/get_photo_description(obj/item/camera/camera)
 	if(!invisibility || camera.see_ghosts)
@@ -237,7 +233,7 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 	var/g_val
 	var/color_format = length(input_color)
 	if(color_format != length_char(input_color))
-		return 0
+		return FALSE
 	if(color_format == 3)
 		r_val = hex2num(copytext(input_color, 1, 2)) * 16
 		g_val = hex2num(copytext(input_color, 2, 3)) * 16
@@ -247,7 +243,7 @@ GLOBAL_VAR_INIT(observer_default_invisibility, INVISIBILITY_OBSERVER)
 		g_val = hex2num(copytext(input_color, 3, 5))
 		b_val = hex2num(copytext(input_color, 5, 7))
 	else
-		return 0 //If the color format is not 3 or 6, you're using an unexpected way to represent a color.
+		return FALSE //If the color format is not 3 or 6, you're using an unexpected way to represent a color.
 
 	r_val += (255 - r_val) * 0.4
 	if(r_val > 255)
@@ -286,7 +282,7 @@ Works together with spawning an observer, noted above.
 			P.respawn_time_of_death = world.time
 			P.respawn_did_cryo = cryo
 	transfer_ckey(ghost, FALSE)
-	ghost.client.init_verbs()
+	ghost.client?.init_verbs()
 	if(penalize)
 		var/penalty = CONFIG_GET(number/suicide_reenter_round_timer) MINUTES
 		var/roundstart_quit_limit = CONFIG_GET(number/roundstart_suicide_time_limit) MINUTES
@@ -539,8 +535,9 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 /mob/dead/observer/stop_orbit(datum/component/orbiter/orbits)
 	. = ..()
 	//restart our floating animation after orbit is done.
-	pixel_y = 0
-	animate(src, pixel_y = 2, time = 10, loop = -1)
+	pixel_z = 0
+	animate(src, pixel_z = 2, time = 10, loop = -1, flags = ANIMATION_RELATIVE)
+	animate(pixel_z = -4, time = 10, loop = -1, flags = ANIMATION_RELATIVE)
 
 /mob/dead/observer/verb/jumptomob() //Moves the ghost instead of just changing the ghosts's eye -Nodrak
 	set category = "Ghost"
@@ -696,32 +693,32 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	var/mob/living/target = input("Your new life begins today!", "Possess Mob", null, null) as null|anything in possessible
 
 	if(!target)
-		return 0
+		return FALSE
 
 	if(ismegafauna(target))
 		to_chat(src, "<span class='warning'>This creature is too powerful for you to possess!</span>")
-		return 0
+		return FALSE
 
 	if(can_reenter_corpse && mind && mind.current)
 		if(alert(src, "Your soul is still tied to your former life as [mind.current.name], if you go forward there is no going back to that life. Are you sure you wish to continue?", "Move On", "Yes", "No") == "No")
-			return 0
+			return FALSE
 	if(target.key)
 		to_chat(src, "<span class='warning'>Someone has taken this body while you were choosing!</span>")
-		return 0
+		return FALSE
 
 	transfer_ckey(target, FALSE)
 	target.AddElement(/datum/element/ghost_role_eligibility, penalize_on_ghost = FALSE, free_ghosting = TRUE)
 	target.faction = list("neutral")
-	return 1
+	return TRUE
 
 //this is a mob verb instead of atom for performance reasons
 //see /mob/verb/examinate() in mob.dm for more info
 //overridden here and in /mob/living for different point span classes and sanity checks
 /mob/dead/observer/pointed(atom/A as mob|obj|turf in fov_view())
 	if(!..())
-		return 0
+		return FALSE
 	usr.visible_message("<span class='deadsay'><b>[src]</b> points to [A].</span>")
-	return 1
+	return TRUE
 
 /mob/dead/observer/verb/view_manifest()
 	set name = "View Crew Manifest"
@@ -838,11 +835,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 	update_icon()
 
-/mob/dead/observer/canUseTopic(atom/movable/M, be_close=FALSE, no_dextery=FALSE, no_tk=FALSE)
+/mob/dead/observer/canUseTopic(atom/movable/M, be_close=FALSE, no_dextery=FALSE, no_tk=FALSE, check_resting=FALSE)
 	return IsAdminGhost(usr)
 
 /mob/dead/observer/is_literate()
-	return 1
+	return TRUE
 
 /mob/dead/observer/vv_edit_var(var_name, var_value)
 	. = ..()
@@ -933,12 +930,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		game = create_mafia_game("mafia")
 	game.ui_interact(usr)
 
-// Skyrat change - moved to modular/signals.
-/*
 /mob/dead/observer/CtrlShiftClick(mob/user)
 	if(isobserver(user) && check_rights(R_SPAWN))
 		change_mob_type( /mob/living/carbon/human , null, null, TRUE) //always delmob, ghosts shouldn't be left lingering
-*/
+	else
+		return ..()
 
 /mob/dead/observer/examine(mob/user)
 	. = ..()
@@ -954,7 +950,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 // Ghosts have no momentum, being massless ectoplasm
 /mob/dead/observer/Process_Spacemove(movement_dir)
-	return 1
+	return TRUE
 
 /mob/dead/observer/vv_edit_var(var_name, var_value)
 	. = ..()

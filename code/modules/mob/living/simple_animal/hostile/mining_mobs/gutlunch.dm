@@ -10,7 +10,7 @@
 	speak_emote = list("warbles", "quavers")
 	emote_hear = list("trills.")
 	emote_see = list("sniffs.", "burps.")
-	weather_immunities = list("lava","ash")
+	weather_immunities = list(TRAIT_LAVA_IMMUNE, TRAIT_ASHSTORM_IMMUNE)
 	faction = list("mining", "ashwalker")
 	density = FALSE
 	speak_chance = 1
@@ -114,7 +114,7 @@
 	name = "guthen"
 	gender = FEMALE
 
-/mob/living/simple_animal/hostile/asteroid/gutlunch/guthen/BiologicalLife(seconds, times_fired)
+/mob/living/simple_animal/hostile/asteroid/gutlunch/guthen/BiologicalLife(delta_time, times_fired)
 	if(!(. = ..()))
 		return
 	if(udder.reagents.total_volume == udder.reagents.maximum_volume) //Only breed when we're full.

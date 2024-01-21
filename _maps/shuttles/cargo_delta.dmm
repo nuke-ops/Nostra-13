@@ -70,7 +70,6 @@
 	id = "cargounload";
 	name = "supply dock unloading door"
 	},
-/obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/shuttle/supply)
 "l" = (
@@ -143,15 +142,14 @@
 /turf/open/floor/plating,
 /area/shuttle/supply)
 "s" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "cargoload"
-	},
 /obj/machinery/door/poddoor{
 	id = "cargoload";
 	name = "supply dock loading door"
 	},
-/obj/structure/fans/tiny,
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "cargoload"
+	},
 /turf/open/floor/plating,
 /area/shuttle/supply)
 "t" = (

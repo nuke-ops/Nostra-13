@@ -111,21 +111,21 @@
 		if(isturf(user.loc))
 			toggle(user)
 		else
-			to_chat(user, "<span class='warning'>You can't use [src] while inside something!</span>")
+			to_chat(user, span_warning("You can't use [src] while inside something!"))
 	else
-		to_chat(user, "<span class='warning'>You need at least [activationCost] charge in your cell to use [src]!</span>")
+		to_chat(user, span_warning("You need at least [activationCost] charge in your cell to use [src]!"))
 
 /obj/item/borg_shapeshifter/proc/toggle(mob/living/silicon/robot/user)
 	if(active)
 		playsound(src, 'sound/effects/pop.ogg', 100, TRUE, -6)
-		to_chat(user, "<span class='notice'>You deactivate \the [src].</span>")
+		to_chat(user, span_notice("You deactivate \the [src]."))
 		deactivate(user)
 	else
 		if(animation_playing)
-			to_chat(user, "<span class='notice'>\the [src] is recharging.</span>")
+			to_chat(user, span_notice("\the [src] is recharging."))
 			return
 		var/mob/living/silicon/robot/R = loc
-		var/static/list/module_icons = sortList(list(
+		var/static/list/module_icons = sort_list(list(
 		"Standard" = image(icon = 'icons/mob/robots.dmi', icon_state = "robot"),
 		"Medical" = image(icon = 'icons/mob/robots.dmi', icon_state = "medical"),
 		"Engineer" = image(icon = 'icons/mob/robots.dmi', icon_state = "engineer"),
@@ -142,7 +142,7 @@
 
 		switch(module_selection)
 			if("Standard")
-				var/static/list/standard_icons = sortList(list(
+				var/static/list/standard_icons = sort_list(list(
 					"Default" = image(icon = 'icons/mob/robots.dmi', icon_state = "robot")
 				))
 				var/borg_icon = show_radial_menu(R, R , standard_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
@@ -170,7 +170,7 @@
 					var/image/wide = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = L[a])
 					wide.pixel_x = -16
 					med_icons[a] = wide
-				med_icons = sortList(med_icons)
+				med_icons = sort_list(med_icons)
 				var/borg_icon = show_radial_menu(R, R , med_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 				if(!borg_icon)
 					return FALSE
@@ -234,7 +234,7 @@
 					var/image/wide = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = L[a])
 					wide.pixel_x = -16
 					engi_icons[a] = wide
-				engi_icons = sortList(engi_icons)
+				engi_icons = sort_list(engi_icons)
 				var/borg_icon = show_radial_menu(R, R , engi_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 				if(!borg_icon)
 					return FALSE
@@ -304,7 +304,7 @@
 					var/image/wide = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = L[a])
 					wide.pixel_x = -16
 					sec_icons[a] = wide
-				sec_icons = sortList(sec_icons)
+				sec_icons = sort_list(sec_icons)
 				var/borg_icon = show_radial_menu(R, R , sec_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 				if(!borg_icon)
 					return FALSE
@@ -379,7 +379,7 @@
 					var/image/wide = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = L[a])
 					wide.pixel_x = -16
 					service_icons[a] = wide
-				service_icons = sortList(service_icons)
+				service_icons = sort_list(service_icons)
 				var/borg_icon = show_radial_menu(R, R , service_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 				if(!borg_icon)
 					return FALSE
@@ -463,7 +463,7 @@
 					var/image/wide = image(icon = 'modular_citadel/icons/mob/widerobot.dmi', icon_state = L[a])
 					wide.pixel_x = -16
 					mining_icons[a] = wide
-				mining_icons = sortList(mining_icons)
+				mining_icons = sort_list(mining_icons)
 				var/borg_icon = show_radial_menu(R, R , mining_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
 				if(!borg_icon)
 					return FALSE
@@ -510,7 +510,7 @@
 					else
 						return FALSE
 			if("Peacekeeper")
-				var/static/list/peace_icons = sortList(list(
+				var/static/list/peace_icons = sort_list(list(
 					"Default" = image(icon = 'icons/mob/robots.dmi', icon_state = "peace"),
 					"Borgi" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "borgi"),
 					"Spider" = image(icon = 'modular_citadel/icons/mob/robots.dmi', icon_state = "whitespider"),
@@ -537,7 +537,7 @@
 					else
 						return FALSE
 			if("Clown")
-				var/static/list/clown_icons = sortList(list(
+				var/static/list/clown_icons = sort_list(list(
 					"Default" = image(icon = 'icons/mob/robots.dmi', icon_state = "clown")
 				))
 				var/borg_icon = show_radial_menu(R, R , clown_icons, custom_check = CALLBACK(src, .proc/check_menu, R), radius = 42, require_near = TRUE)
@@ -550,7 +550,7 @@
 					else
 						return FALSE
 			if("Syndicate")
-				var/static/list/syndicatejack_icons = sortList(list(
+				var/static/list/syndicatejack_icons = sort_list(list(
 					"Saboteur" = image(icon = 'icons/mob/robots.dmi', icon_state = "synd_engi"),
 					"Medical" = image(icon = 'icons/mob/robots.dmi', icon_state = "synd_medical"),
 					"Assault" = image(icon = 'icons/mob/robots.dmi', icon_state = "synd_sec")
@@ -574,7 +574,7 @@
 				return FALSE
 
 		animation_playing = TRUE
-		to_chat(user, "<span class='notice'>You activate \the [src].</span>")
+		to_chat(user, span_notice("You activate \the [src]."))
 		playsound(src, 'sound/effects/seedling_chargeup.ogg', 100, TRUE, -6)
 		var/start = user.filters.len
 		var/X,Y,rsq,i,f
@@ -589,12 +589,12 @@
 			f = user.filters[start+i]
 			animate(f, offset=f:offset, time=0, loop=3, flags=ANIMATION_PARALLEL)
 			animate(offset=f:offset-1, time=rand()*20+10)
-		if (do_after(user, 50, target=user) && user.cell.use(activationCost))
+		if (do_after(user, 5 SECONDS, user) && user.cell.use(activationCost))
 			playsound(src, 'sound/effects/bamf.ogg', 100, TRUE, -6)
-			to_chat(user, "<span class='notice'>You are now disguised as the Nanotrasen cyborg \"[friendlyName]\".</span>")
+			to_chat(user, span_notice("You are now disguised as the Nanotrasen cyborg \"[friendlyName]\"."))
 			activate(user, module_selection)
 		else
-			to_chat(user, "<span class='warning'>The chameleon field fizzles.</span>")
+			to_chat(user, span_warning("The chameleon field fizzles."))
 			do_sparks(3, FALSE, user)
 			for(i=1, i<=min(7, user.filters.len), ++i) // removing filters that are animating does nothing, we gotta stop the animations first
 				f = user.filters[start+i]
@@ -656,7 +656,7 @@
 
 /obj/item/borg_shapeshifter/proc/disrupt(mob/living/silicon/robot/user)
 	if(active)
-		to_chat(user, "<span class='danger'>Your chameleon field deactivates.</span>")
+		to_chat(user, span_danger("Your chameleon field deactivates."))
 		deactivate(user)
 
 /obj/item/borg_shapeshifter/stable

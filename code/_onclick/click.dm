@@ -1,40 +1,4 @@
 /*
-	Click code cleanup
-	~Sayu
-*/
-
-// 1 decisecond click delay (above and beyond mob/next_move)
-//This is mainly modified by click code, to modify click delays elsewhere, use next_move and changeNext_move()
-/mob/var/next_click	= 0
-
-// THESE DO NOT EFFECT THE BASE 1 DECISECOND DELAY OF NEXT_CLICK
-/mob/var/next_move_adjust = 0 //Amount to adjust action/click delays by, + or -
-/mob/var/next_move_modifier = 1 //Value to multiply action/click delays by
-
-
-//Delays the mob's next click/action by num deciseconds
-// eg: 10-3 = 7 deciseconds of delay
-// eg: 10*0.5 = 5 deciseconds of delay
-// DOES NOT EFFECT THE BASE 1 DECISECOND DELAY OF NEXT_CLICK
-
-/mob/proc/timeToNextMove()
-	return max(0, next_move - world.time)
-
-/mob/proc/changeNext_move(num)
-	next_move = world.time + ((num+next_move_adjust)*next_move_modifier)
-
-/mob/living/changeNext_move(num)
-	last_click_move = next_move
-	var/mod = next_move_modifier
-	var/adj = next_move_adjust
-	for(var/i in status_effects)
-		var/datum/status_effect/S = i
-		mod *= S.nextmove_modifier()
-		adj += S.nextmove_adjust()
-	next_move = world.time + ((num + adj)*mod)
-	// ^^^ Nostra change
-
-/*
 	Before anything else, defer these calls to a per-mobtype handler.  This allows us to
 	remove istype() spaghetti code, but requires the addition of other handler procs to simplify it.
 
@@ -90,11 +54,14 @@
 
 	var/list/modifiers = params2list(params)
 	if(modifiers["shift"] && modifiers["middle"])
-		return ShiftMiddleClickOn(A)
+		return ShiftMiddleClickOn(A, params)
 	if(modifiers["shift"] && modifiers["ctrl"])
 		return CtrlShiftClickOn(A)
 	if(modifiers["middle"])
-		return MiddleClickOn(A)
+		if(modifiers["ctrl"])
+			return CtrlMiddleClickOn(A)
+		else
+			return MiddleClickOn(A)
 	if(modifiers["shift"] && (client && client.show_popup_menus || modifiers["right"])) //CIT CHANGE - makes shift-click examine use right click instead of left click in combat mode
 		return ShiftClickOn(A)
 	if(modifiers["alt"]) // alt and alt-gr (rightalt)
@@ -122,7 +89,7 @@
 		DelayNextAction(CLICK_CD_HANDCUFFED)
 		return RestrainedClickOn(A)
 
-	if(in_throw_mode)
+	if(throw_mode)
 		throw_item(A)
 		return
 
@@ -392,6 +359,14 @@
 		return TRUE
 	else
 		return ..()
+
+/mob/proc/CtrlMiddleClickOn(atom/A)
+	if(check_rights_for(client, R_ADMIN))
+		client.toggle_tag_datum(A)
+	else
+		A.CtrlClick(src)
+	return
+
 /*
 	Alt click
 	Used as an alternate way to interact with things.
@@ -433,15 +408,17 @@
 	Unused except for AI
 */
 /mob/proc/CtrlShiftClickOn(atom/A)
+	. = SEND_SIGNAL(src, COMSIG_MOB_CTRLSHIFTCLICKON, A)
+	if(. & COMSIG_MOB_CANCEL_CLICKON)
+		return
 	A.CtrlShiftClick(src)
-	return
 
-/mob/proc/ShiftMiddleClickOn(atom/A)
-	src.pointed(A)
+/mob/proc/ShiftMiddleClickOn(atom/A, params)
+	pointed(A, params)
 	return
 
 /atom/proc/CtrlShiftClick(mob/user)
-	SEND_SIGNAL(src, COMSIG_CLICK_CTRL_SHIFT)
+	SEND_SIGNAL(src, COMSIG_CLICK_CTRL_SHIFT, user)
 	return
 
 /*

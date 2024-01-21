@@ -15,7 +15,10 @@
 
 	var/area_flags = VALID_TERRITORY | BLOBS_ALLOWED | UNIQUE_AREA | CULT_PERMITTED
 
-	var/fire = null
+	///Do we have an active fire alarm?
+	var/fire = FALSE
+	///How many fire alarm sources do we have?
+	var/triggered_firealarms = 0
 	///Whether there is an atmos alarm in this area
 	var/atmosalm = FALSE
 	var/poweralm = FALSE
@@ -123,6 +126,10 @@
 
 	/// Color on minimaps, if it's null (which is default) it makes one at random.
 	var/minimap_color
+
+	var/minimap_color2 // if this isn't null, then this will show as a checkerboard pattern mixed in with the above. works even if the above is null (for better or worse)
+
+	var/minimap_show_walls = TRUE
 
 /**
   * These two vars allow for multiple unique areas to be linked to a master area
@@ -315,7 +322,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 				A.power_light = FALSE
 				A.power_equip = FALSE
 				A.power_environ = FALSE
-			INVOKE_ASYNC(A, .proc/power_change)
+			A.power_change()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
@@ -439,7 +446,18 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	START_PROCESSING(SSobj, src)
 
 /area/proc/firereset(obj/source)
-	if (fire)
+	var/should_reset_alarms = fire
+	if(source)
+		if(istype(source, /obj/machinery/firealarm))
+			var/obj/machinery/firealarm/alarm = source
+			if(alarm.triggered)
+				alarm.triggered = FALSE
+				triggered_firealarms -= 1
+		if(triggered_firealarms > 0)
+			should_reset_alarms = FALSE
+		should_reset_alarms = should_reset_alarms & power_environ //No resetting if there's no power
+
+	if (should_reset_alarms) // if there's a source, make sure there's no fire alarms left
 		set_fire_alarm_effects(FALSE)
 		ModifyFiredoors(TRUE)
 
@@ -458,6 +476,18 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 			p.cancelAlarm("Fire", src, source)
 
 	STOP_PROCESSING(SSobj, src)
+
+///Get rid of any dangling camera refs
+/area/proc/clear_camera(obj/machinery/camera/cam)
+	LAZYREMOVE(cameras, cam)
+	for (var/mob/living/silicon/aiPlayer as anything in GLOB.silicon_mobs)
+		aiPlayer.freeCamera(src, cam)
+	for (var/obj/machinery/computer/station_alert/comp as anything in GLOB.alert_consoles)
+		comp.freeCamera(src, cam)
+	for (var/mob/living/simple_animal/drone/drone_on as anything in GLOB.drones_list)
+		drone_on.freeCamera(src, cam)
+	for(var/datum/computer_file/program/alarm_monitor/monitor as anything in GLOB.alarmdisplay)
+		monitor.freeCamera(src, cam)
 
 /area/process()
 	if(firedoors_last_closed_on + 100 < world.time)	//every 10 seconds
@@ -530,9 +560,9 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 /area/proc/powered(chan)		// return true if the area has power to given channel
 
 	if(!requires_power)
-		return 1
+		return TRUE
 	if(always_unpowered)
-		return 0
+		return FALSE
 	switch(chan)
 		if(EQUIP)
 			return power_equip
@@ -541,23 +571,28 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 		if(ENVIRON)
 			return power_environ
 
-	return 0
+	return FALSE
 
 /area/space/powered(chan) //Nope.avi
-	return 0
+	return FALSE
 
 // called when power status changes
 
 /area/proc/power_change()
-	for(var/obj/machinery/M in src)	// for each machine in the area
-		M.power_change()				// reverify power status (to update icons etc.)
-	if(sub_areas)
-		for(var/i in sub_areas)
-			var/area/A = i
-			A.power_light = power_light
-			A.power_equip = power_equip
-			A.power_environ = power_environ
-			INVOKE_ASYNC(A, .proc/power_change)
+	SHOULD_NOT_SLEEP(TRUE)
+	if(contents.len < GLOB.machines.len) // it would be faster to loop over contents
+		for(var/obj/machinery/M in src) // for each machine in the area
+			M.power_change() // reverify power status (to update icons etc.)
+	else // it would be faster to loop over the machines list
+		for(var/obj/machinery/M as anything in GLOB.machines) // for each machine
+			if(get_area(M) != src) // in the area
+				continue
+			M.power_change() // reverify power status (to update icons etc.)
+	for(var/area/A as anything in sub_areas)
+		A.power_light = power_light
+		A.power_equip = power_equip
+		A.power_environ = power_environ
+		A.power_change()
 	update_appearance()
 
 /area/proc/usage(chan)

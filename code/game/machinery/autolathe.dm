@@ -62,13 +62,14 @@
 	if(!is_operational())
 		return
 
-	if(shocked && !(stat & NOPOWER))
-		shock(user,50)
-
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
 		ui = new(user, src, "Autolathe", capitalize(src.name))
 		ui.open()
+
+	if(shocked && !(stat & NOPOWER))
+		if(shock(user,50))
+			ui.close() //close the window if they got zapped successfully as to prevent them from getting zapped infinitely.
 
 /obj/machinery/autolathe/ui_data(mob/user)
 	var/list/data = list()
@@ -209,7 +210,7 @@
 						if(materials.materials[i] > 0)
 							list_to_show += i
 
-					used_material = tgui_input_list(usr, "Choose [used_material]", "Custom Material", sortList(list_to_show, /proc/cmp_typepaths_asc))
+					used_material = tgui_input_list(usr, "Choose [used_material]", "Custom Material", sort_list(list_to_show, /proc/cmp_typepaths_asc))
 					if(isnull(used_material))
 						return //Didn't pick any material, so you can't build shit either.
 					custom_materials[used_material] += amount_needed
@@ -289,6 +290,16 @@
 		return STOP_ATTACK_PROC_CHAIN
 
 /obj/machinery/autolathe/multitool_act(mob/living/user, obj/item/I)
+	. = ..()
+	if(busy)
+		balloon_alert(user, "it's busy!")
+		return STOP_ATTACK_PROC_CHAIN
+
+	if(panel_open)
+		wires.interact(user)
+		return STOP_ATTACK_PROC_CHAIN
+
+/obj/machinery/autolathe/wirecutter_act(mob/living/user, obj/item/I)
 	. = ..()
 	if(busy)
 		balloon_alert(user, "it's busy!")

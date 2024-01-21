@@ -237,6 +237,9 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	///For custom overrides for species ass images
 	var/icon/ass_image
 
+	/// List of family heirlooms this species can get with the family heirloom quirk. List of types.
+	var/list/family_heirlooms
+
 ///////////
 // PROCS //
 ///////////
@@ -324,8 +327,8 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 //Please override this locally if you want to define when what species qualifies for what rank if human authority is enforced.
 /datum/species/proc/qualifies_for_rank(rank, list/features) //SPECIES JOB RESTRICTIONS
 	//if(rank in GLOB.command_positions) Left as an example: The format qualifies for rank takes.
-	//	return 0 //It returns false when it runs the proc so they don't get jobs from the global list.
-	return 1 //It returns 1 to say they are a-okay to continue.
+	//	return FALSE //It returns false when it runs the proc so they don't get jobs from the global list.
+	return TRUE //It returns 1 to say they are a-okay to continue.
 
 /**
  * Corrects organs in a carbon, removing ones it doesn't need and adding ones it does.
@@ -351,11 +354,11 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/obj/item/organ/stomach/stomach = C.getorganslot(ORGAN_SLOT_STOMACH)
 	var/obj/item/organ/tail/tail = C.getorganslot(ORGAN_SLOT_TAIL)
 
-	var/should_have_brain = TRUE
+	var/should_have_brain = !(HAS_TRAIT(C, TRAIT_DULLAHAN)) // do not mess with a dullahans brain
 	var/should_have_heart = !(NOBLOOD in species_traits)
 	var/should_have_lungs = ((TRAIT_AUXILIARY_LUNGS in inherent_traits) || !(TRAIT_NOBREATH in inherent_traits))
 	var/should_have_appendix = !(TRAIT_NOHUNGER in inherent_traits)
-	var/should_have_eyes = TRUE
+	var/should_have_eyes = !(HAS_TRAIT(C, TRAIT_DULLAHAN)) // .. or their eyes
 	var/should_have_ears = TRUE
 	var/should_have_tongue = TRUE
 	var/should_have_liver = !(NOLIVER in species_traits)
@@ -611,6 +614,10 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		for(var/obj/item/bodypart/B in C.bodyparts)
 			B.change_bodypart_status(initial(B.status), FALSE, TRUE)
 
+	if((TRAIT_ROBOTIC_ORGANISM in inherent_traits) && C.hud_used)
+		C.hud_used.coolant_display.clear()
+
+	SEND_SIGNAL(C, COMSIG_SPECIES_LOSS, src)
 
 // shamelessly inspired by antag_datum.remove_blacklisted_quirks()
 /datum/species/proc/remove_blacklisted_quirks(mob/living/carbon/C)
@@ -705,6 +712,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				fhair_file = 'icons/mob/facialhair_extensions.dmi'
 
 			var/mutable_appearance/facial_overlay = mutable_appearance(fhair_file, fhair_state, -HAIR_LAYER)
+			facial_overlay.category = "HEAD"
 
 			if(!forced_colour)
 				if(hair_color)
@@ -742,8 +750,10 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 	if(!hair_hidden || dynamic_hair_suffix)
 		var/mutable_appearance/hair_overlay = mutable_appearance(layer = -HAIR_LAYER)
+		hair_overlay.category = "HEAD"
 		var/mutable_appearance/gradient_overlay = mutable_appearance(layer = -HAIR_LAYER)
-		if(!hair_hidden && !H.getorgan(/obj/item/organ/brain)) //Applies the debrained overlay if there is no brain
+		gradient_overlay.category = "HEAD"
+		if(!hair_hidden && !H.getorgan(/obj/item/organ/brain) && !H.GetComponent(/datum/component/dullahan)) //Applies the debrained overlay if there is no brain (ignore if they are dullahan)
 			if(!(NOBLOOD in species_traits))
 				hair_overlay.icon = 'icons/mob/human_parts.dmi'
 				hair_overlay.icon_state = "debrained"
@@ -808,7 +818,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 	H.apply_overlay(HAIR_LAYER)
 
-/datum/species/proc/handle_body(mob/living/carbon/human/H)
+/datum/species/proc/handle_body(mob/living/carbon/human/H, block_recursive_calls = FALSE)
 	H.remove_overlay(BODY_LAYER)
 
 	var/list/standing = list()
@@ -819,6 +829,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		// lipstick
 		if(H.lip_style && (LIPS in species_traits))
 			var/mutable_appearance/lip_overlay = mutable_appearance('icons/mob/lips.dmi', "lips_[H.lip_style]", -BODY_LAYER)
+			lip_overlay.category = "HEAD"
 			lip_overlay.color = H.lip_color
 
 			if(OFFSET_LIPS in H.dna.species.offset_features)
@@ -829,20 +840,22 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 		// eyes
 		if(!(NOEYES in species_traits))
-			var/has_eyes = H.getorganslot(ORGAN_SLOT_EYES)
+			var/has_eyes = H.getorganslot(ORGAN_SLOT_EYES) || HAS_TRAIT(H, TRAIT_DULLAHAN) // if they are a dullahan just assume eyes exist
 			if(!has_eyes)
 				standing += mutable_appearance('icons/mob/eyes.dmi', "eyes_missing", -BODY_LAYER)
 			else
 				var/left_state = DEFAULT_LEFT_EYE_STATE
 				var/right_state = DEFAULT_RIGHT_EYE_STATE
 				if(eye_type in GLOB.eye_types)
-					left_state = eye_type + "_left_eye"
-					right_state = eye_type + "_right_eye"
+					left_state = "[eye_type]_left_eye"
+					right_state = "[eye_type]_right_eye"
 				var/mutable_appearance/left_eye = mutable_appearance('icons/mob/eyes.dmi', left_state, -BODY_LAYER)
 				var/mutable_appearance/right_eye = mutable_appearance('icons/mob/eyes.dmi', right_state, -BODY_LAYER)
+				left_eye.category = "HEAD"
+				right_eye.category = "HEAD"
 				if((EYECOLOR in species_traits) && has_eyes)
-					left_eye.color = "#" + H.left_eye_color
-					right_eye.color = "#" + H.right_eye_color
+					left_eye.color = "#[H.left_eye_color]"
+					right_eye.color = "#[H.right_eye_color]"
 				if(OFFSET_EYES in offset_features)
 					left_eye.pixel_x += offset_features[OFFSET_EYES][1]
 					left_eye.pixel_y += offset_features[OFFSET_EYES][2]
@@ -902,9 +915,9 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		H.overlays_standing[BODY_LAYER] = standing
 
 	H.apply_overlay(BODY_LAYER)
-	handle_mutant_bodyparts(H)
+	handle_mutant_bodyparts(H, null, block_recursive_calls)
 
-/datum/species/proc/handle_mutant_bodyparts(mob/living/carbon/human/H, forced_colour)
+/datum/species/proc/handle_mutant_bodyparts(mob/living/carbon/human/H, forced_colour, block_recursive_calls = FALSE)
 	var/list/bodyparts_to_add = mutant_bodyparts.Copy()
 
 	H.remove_overlay(BODY_BEHIND_LAYER)
@@ -1030,6 +1043,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		for(var/bodypart in relevant_layers[layer])
 			var/datum/sprite_accessory/S = bodypart
 			var/mutable_appearance/accessory_overlay = mutable_appearance(S.icon, layer = -layernum)
+			accessory_overlay.category = S.mutable_category
 			bodypart = S.mutant_part_string || dna_feature_as_text_string[S]
 
 			if(S.gender_specific)
@@ -1134,6 +1148,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 			if(S.extra) //apply the extra overlay, if there is one
 				var/mutable_appearance/extra_accessory_overlay = mutable_appearance(S.icon, layer = -layernum)
+				extra_accessory_overlay.category = S.mutable_category
 				if(S.gender_specific)
 					extra_accessory_overlay.icon_state = "[g]_[bodypart]_extra_[S.icon_state]_[layertext]"
 				else
@@ -1180,6 +1195,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 
 			if(S.extra2) //apply the extra overlay, if there is one
 				var/mutable_appearance/extra2_accessory_overlay = mutable_appearance(S.icon, layer = -layernum)
+				extra2_accessory_overlay.category = S.mutable_category
 				if(S.gender_specific)
 					extra2_accessory_overlay.icon_state = "[g]_[bodypart]_extra2_[S.icon_state]_[layertext]"
 				else
@@ -1226,6 +1242,11 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	H.apply_overlay(BODY_ADJ_UPPER_LAYER)
 	H.apply_overlay(BODY_FRONT_LAYER)
 	H.apply_overlay(HORNS_LAYER)
+
+	if(!block_recursive_calls)
+		var/datum/component/dullahan/D = H.GetComponent(/datum/component/dullahan)
+		if(D && D.dullahan_head)
+			D.dullahan_head.update_appearance()
 
 /*
  * Equip the outfit required for life. Replaces items currently worn.
@@ -1496,6 +1517,39 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				if(SEND_SIGNAL(H.back, COMSIG_TRY_STORAGE_CAN_INSERT, I, H, TRUE))
 					return TRUE
 			return FALSE
+		if(ITEM_SLOT_ACCESSORY)
+			if(istype(I, /obj/item/clothing/accessory/ring))
+				if(istype(H.gloves))
+					var/obj/item/clothing/gloves/attaching_target = H.gloves
+					if(length(attaching_target.attached_accessories) > attaching_target.max_accessories)
+						if(return_warning)
+							return_warning[1] = "\The [attaching_target] is at maximum capacity!"
+						return FALSE
+					if(attaching_target.dummy_thick)
+						if(return_warning)
+							return_warning[1] = "\The [attaching_target] are too bulky and cannot have accessories attached to it!"
+						return FALSE
+					else
+						return TRUE
+				else if(return_warning)
+					return_warning[1] = "\The [H.w_uniform] cannot have any attachments."
+				return FALSE
+			else
+				if(istype(H.w_uniform, /obj/item/clothing/under))
+					var/obj/item/clothing/under/attaching_target = H.w_uniform
+					if(length(attaching_target.attached_accessories) > attaching_target.max_accessories)
+						if(return_warning)
+							return_warning[1] = "\The [attaching_target] is at maximum capacity!"
+						return FALSE
+					if(attaching_target.dummy_thick)
+						if(return_warning)
+							return_warning[1] = "\The [attaching_target] is too bulky and cannot have accessories attached to it!"
+						return FALSE
+					else
+						return TRUE
+				else if(return_warning)
+					return_warning[1] = "\The [H.w_uniform] cannot have any attachments."
+				return FALSE
 	return FALSE //Unsupported slot
 
 /datum/species/proc/equip_delay_self_check(obj/item/I, mob/living/carbon/human/H, bypass_equip_delay_self)
@@ -1625,7 +1679,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			H.throw_alert("nutrition", /atom/movable/screen/alert/starving)
 
 /datum/species/proc/update_health_hud(mob/living/carbon/human/H)
-	return 0
+	return FALSE
 
 /datum/species/proc/handle_mutations_and_radiation(mob/living/carbon/human/H)
 	. = FALSE
@@ -1681,7 +1735,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		target.help_shake_act(user)
 		if(target != user)
 			log_combat(user, target, "shaked")
-		return 1
+		return TRUE
 	else
 		var/we_breathe = !HAS_TRAIT(user, TRAIT_NOBREATH)
 		var/we_lung = user.getorganslot(ORGAN_SLOT_LUNGS)
@@ -1697,12 +1751,12 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	if(target.check_martial_melee_block())
 		target.visible_message("<span class='warning'>[target] blocks [user]'s grab attempt!</span>", target = user, \
 			target_message = "<span class='warning'>[target] blocks your grab attempt!</span>")
-		return 0
+		return FALSE
 	if(attacker_style && attacker_style.grab_act(user,target))
-		return 1
+		return TRUE
 	else
 		target.grabbedby(user)
-		return 1
+		return TRUE
 
 /datum/species/proc/harm(mob/living/carbon/human/user, mob/living/carbon/human/target, datum/martial_art/attacker_style, attackchain_flags = NONE)
 	if(!attacker_style && HAS_TRAIT(user, TRAIT_PACIFISM))
@@ -1973,11 +2027,11 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	if(user != H)
 		var/list/block_return = list()
 		if(H.mob_run_block(I, totitemdamage, "the [I.name]", ((attackchain_flags & ATTACK_IS_PARRY_COUNTERATTACK)? ATTACK_TYPE_PARRY_COUNTERATTACK : NONE) | ATTACK_TYPE_MELEE, I.armour_penetration, user, affecting.body_zone, block_return) & BLOCK_SUCCESS)
-			return 0
+			return FALSE
 		totitemdamage = block_calculate_resultant_damage(totitemdamage, block_return)
 	if(H.check_martial_melee_block())
 		H.visible_message("<span class='warning'>[H] blocks [I]!</span>")
-		return 0
+		return FALSE
 
 	var/hit_area
 
@@ -2002,7 +2056,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	I.do_stagger_action(H, user, totitemdamage)
 
 	if(!totitemdamage)
-		return 0 //item force is zero
+		return FALSE //item force is zero
 
 	var/bloody = 0
 	if(((I.damtype == BRUTE) && I.force && prob(25 + (I.force * 2))))
@@ -2230,7 +2284,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	var/hit_percent = (100-(blocked+armor))/100
 	hit_percent = (hit_percent * (100-H.physiology.damage_resistance))/100
 	if(!forced && hit_percent <= 0)
-		return 0
+		return FALSE
 
 	var/obj/item/bodypart/BP = null
 	if(!spread_damage)
@@ -2287,7 +2341,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 		if(BRAIN)
 			var/damage_amount = forced ? damage : damage * hit_percent * H.physiology.brain_mod
 			H.adjustOrganLoss(ORGAN_SLOT_BRAIN, damage_amount)
-	return 1
+	return TRUE
 
 /datum/species/proc/on_hit(obj/item/projectile/P, mob/living/carbon/human/H)
 	// called when hit by a projectile
@@ -2581,6 +2635,13 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 	if(H.movement_type & FLYING)
 		return TRUE
 	return FALSE
+
+////////////////
+//Blood Stuff///
+////////////////
+// true = handle blood normally, false = do not (and then handle blood in this proc instead please!!)
+/datum/species/proc/handle_blood(mob/living/carbon/human/H, delta_time, times_fired)
+	return TRUE
 
 ////////////////
 //Tail Wagging//

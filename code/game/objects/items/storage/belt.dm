@@ -75,7 +75,7 @@
 		/obj/item/pipe_dispenser,
 		/obj/item/inducer,
 		/obj/item/plunger
-		))
+		)) // Nostra change - added lightreplacer, rcd, pipe_dispenser, inducer and plunger
 	STR.can_hold = can_hold
 
 /obj/item/storage/belt/utility/chief
@@ -195,7 +195,7 @@
 		/obj/item/plunger,
 		/obj/item/reagent_containers/chem_pack,
 		/obj/item/stack/sticky_tape //surgical tape
-		))
+		)) // Nostra change - added medical, plumbing and plumber
 
 /obj/item/storage/belt/medical/surgery_belt_adv
 	name = "surgical supply belt"
@@ -301,6 +301,7 @@
 		/obj/item/stack/ore,
 		/obj/item/reagent_containers/food/drinks,
 		/obj/item/organ/regenerative_core,
+		/obj/item/hivelordstabilizer,
 		/obj/item/wormhole_jaunter,
 		/obj/item/storage/bag/plants,
 		/obj/item/stack/marker_beacon
@@ -520,7 +521,7 @@
 		/obj/item/grenade/plastic/c4,
 		/obj/item/reagent_containers/food/snacks/grown/cherry_bomb,
 		/obj/item/reagent_containers/food/snacks/grown/firelemon
-		))
+		)) // Nostra change - added cherry_bomb and firelemon
 
 /obj/item/storage/belt/grenade/full/PopulateContents()
 	new /obj/item/grenade/flashbang(src)

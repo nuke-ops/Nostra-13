@@ -22,11 +22,11 @@
 	var/adjusted = NORMAL_STYLE
 	var/alt_covers_chest = FALSE // for adjusted/rolled-down jumpsuits, FALSE = exposes chest and arms, TRUE = exposes arms only
 	var/dummy_thick = FALSE // is able to hold accessories on its item
-	//SKYRAT EDIT - Removed the old attached accessory system. We use a list of accessories instead.
-	var/list/obj/item/clothing/accessory/attached_accessories = list()
+	//SANDSTORM EDIT - Removed the old attached accessory system. We use a list of accessories instead.
 	var/max_accessories = 3
-	//SKYRAT EDIT END
-	var/mutable_appearance/accessory_overlay
+	var/list/obj/item/clothing/accessory/attached_accessories = list()
+	var/list/mutable_appearance/accessory_overlays = list()
+	//SANDSTORM EDIT END
 
 /obj/item/clothing/under/worn_overlays(isinhands = FALSE, icon_file, used_state, style_flags = NONE)
 	. = ..()
@@ -36,21 +36,21 @@
 		. += mutable_appearance('icons/effects/item_damage.dmi', "damageduniform")
 	if(blood_DNA)
 		. += mutable_appearance('icons/effects/blood.dmi', "uniformblood", color = blood_DNA_to_color(), blend_mode = blood_DNA_to_blend())
-	if(accessory_overlay)
-		. += accessory_overlay
+	if(length(accessory_overlays))
+		. += accessory_overlays
 
 /obj/item/clothing/under/attackby(obj/item/I, mob/user, params)
 	if((sensordamage || (has_sensor < HAS_SENSORS && has_sensor != NO_SENSORS)) && istype(I, /obj/item/stack/cable_coil))
 		if(damaged_clothes == CLOTHING_SHREDDED)
 			to_chat(user,"<span class='warning'>[src] is too damaged to have its suit sensors repaired! Repair it first.</span>")
-			return 0
+			return FALSE
 		var/obj/item/stack/cable_coil/C = I
 		I.use_tool(src, user, 0, 1)
 		has_sensor = HAS_SENSORS
 		sensordamage = 0
 		sensor_mode = sensor_mode_intended
 		to_chat(user,"<span class='notice'>You repair the suit sensors on [src] with [C].</span>")
-		return 1
+		return TRUE
 
 	if(!attach_accessory(I, user))
 		return ..()
@@ -112,6 +112,10 @@
 	sensor_mode_intended = sensor_mode
 	..()
 
+/obj/item/clothing/under/Initialize(mapload)
+	. = ..()
+	register_context()
+
 /obj/item/clothing/under/equipped(mob/user, slot)
 	..()
 	if(adjusted)
@@ -164,14 +168,18 @@
 			if((flags_inv & HIDEACCESSORY) || (A.flags_inv & HIDEACCESSORY))
 				return TRUE
 
-			//SKYRAT EDIT
-			accessory_overlay = mutable_appearance('icons/mob/clothing/accessories.dmi', "blank")
+			//SANDSTORM EDIT
+			accessory_overlays = list(mutable_appearance('icons/mob/clothing/accessories.dmi', "blank"))
 			for(var/obj/item/clothing/accessory/attached_accessory in attached_accessories)
-				var/mutable_appearance/Y = mutable_appearance(attached_accessory.mob_overlay_icon, attached_accessory.icon_state, ABOVE_HUD_LAYER)
-				Y.alpha = attached_accessory.alpha
-				Y.color = attached_accessory.color
-				accessory_overlay.add_overlay(Y)
-			//SKYRAT EDIT END
+				var/datum/element/polychromic/polychromic = LAZYACCESS(attached_accessory.comp_lookup, "item_worn_overlays")
+				if(!polychromic)
+					var/mutable_appearance/accessory_overlay = mutable_appearance(attached_accessory.mob_overlay_icon, attached_accessory.item_state || attached_accessory.icon_state, ABOVE_HUD_LAYER)
+					accessory_overlay.alpha = attached_accessory.alpha
+					accessory_overlay.color = attached_accessory.color
+					accessory_overlays += accessory_overlay
+				else
+					polychromic.apply_worn_overlays(attached_accessory, FALSE, attached_accessory.mob_overlay_icon, attached_accessory.item_state || attached_accessory.icon_state, NONE, accessory_overlays)
+			//SANDSTORM EDIT END
 
 			if(ishuman(loc))
 				var/mob/living/carbon/human/H = loc
@@ -242,13 +250,13 @@
 		return
 	if(src.has_sensor == BROKEN_SENSORS)
 		to_chat(usr, "The sensors have shorted out!")
-		return 0
+		return FALSE
 	if(src.sensor_flags & SENSOR_LOCKED)
 		to_chat(usr, "The controls are locked.")
-		return 0
+		return FALSE
 	if(src.has_sensor <= NO_SENSORS)
 		to_chat(usr, "This suit does not have any sensors.")
-		return 0
+		return FALSE
 
 	var/list/modes = list("Off", "Binary vitals", "Exact vitals", "Tracking beacon")
 	var/switchMode = input("Select a sensor mode:", "Suit Sensor Mode", modes[sensor_mode + 1]) in modes
@@ -301,10 +309,10 @@
 
 	if(src.has_sensor == BROKEN_SENSORS)
 		to_chat(usr, "The sensors have shorted out!")
-		return 0
+		return FALSE
 	if(src.sensor_flags & SENSOR_LOCKED)
 		to_chat(usr, "The controls are locked.")
-		return 0
+		return FALSE
 	if(has_sensor <= NO_SENSORS)
 		to_chat(user, "This suit does not have any sensors.")
 		return
@@ -372,6 +380,21 @@
 				mutantrace_variation |= USE_TAUR_CLIP_MASK
 
 	return TRUE
+
+/obj/item/clothing/under/add_context(atom/source, list/context, obj/item/held_item, mob/living/user)
+	. = ..()
+	if (!(item_flags & IN_INVENTORY))
+		return
+
+	if(!isliving(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+		return
+
+	LAZYSET(context[SCREENTIP_CONTEXT_CTRL_LMB], INTENT_ANY, "Set to highest sensor")
+	if(length(attached_accessories))
+		LAZYSET(context[SCREENTIP_CONTEXT_ALT_LMB], INTENT_ANY, "Remove [attached_accessories[length(attached_accessories)]]")
+	else
+		LAZYSET(context[SCREENTIP_CONTEXT_ALT_LMB], INTENT_ANY, "Adjust [src]")
+	return CONTEXTUAL_SCREENTIP_SET
 
 /obj/item/clothing/under/rank
 	dying_key = DYE_REGISTRY_UNDER

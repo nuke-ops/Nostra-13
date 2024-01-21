@@ -13,8 +13,6 @@
 	level = 1
 	layer = GAS_SCRUBBER_LAYER
 
-	interacts_with_air = TRUE
-
 	var/id_tag = null
 	var/scrubbing = SCRUBBING //0 = siphoning, 1 = scrubbing
 
@@ -196,7 +194,7 @@
 
 /obj/machinery/atmospherics/components/unary/vent_scrubber/receive_signal(datum/signal/signal)
 	if(!is_operational() || !signal.data["tag"] || (signal.data["tag"] != id_tag) || (signal.data["sigtype"]!="command"))
-		return 0
+		return FALSE
 
 	var/mob/signal_sender = signal.data["user"]
 

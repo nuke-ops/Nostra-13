@@ -1,3 +1,4 @@
+/* Nostra Change
 /datum/reagent
 	var/hydration = 0 //does this hydrate your thirst?
 
@@ -14,3 +15,4 @@
 		. += water.hydration
 
 	. = min(., THIRST_LEVEL_THRESHOLD)
+*/

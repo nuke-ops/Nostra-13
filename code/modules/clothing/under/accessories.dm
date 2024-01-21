@@ -7,7 +7,8 @@
 	//
 	icon_state = "plasma"
 	item_state = ""	//no inhands
-	slot_flags = 0
+	slot_flags = ITEM_SLOT_ACCESSORY
+	slot_equipment_priority = list(ITEM_SLOT_ACCESSORY)
 	w_class = WEIGHT_CLASS_SMALL
 	var/above_suit = FALSE
 	var/minimize_when_attached = TRUE // TRUE if shown as a small icon in corner, FALSE if overlayed
@@ -48,9 +49,9 @@
 		TakeComponent(detached_pockets)
 
 	U.armor = U.armor.detachArmor(armor)
-	//SKYRAT EDIT
+	//SANDSTORM EDIT
 	current_uniform = null
-	//SKYRAT EDIT END
+	//SANDSTORM EDIT END
 
 	if(isliving(user))
 		on_uniform_dropped(U, user)
@@ -61,18 +62,23 @@
 		pixel_y = 0
 	layer = initial(layer)
 	plane = initial(plane)
-	U.accessory_overlay = null
 	U.cut_overlays()
 	U.attached_accessories -= src
+	U.accessory_overlays = list()
 	if(length(U.attached_accessories))
-		U.accessory_overlay = mutable_appearance('icons/mob/clothing/accessories.dmi', "blank", WRISTS_LAYER, U.plane)
+		U.accessory_overlays = list(mutable_appearance('icons/mob/clothing/accessories.dmi', "blank"))
 		for(var/obj/item/clothing/accessory/attached_accessory in U.attached_accessories)
 			attached_accessory.force_unto(U)
-			var/mutable_appearance/Y = mutable_appearance(attached_accessory.mob_overlay_icon, attached_accessory.icon_state, WRISTS_LAYER, U.plane)
-			Y.alpha = attached_accessory.alpha
-			Y.color = attached_accessory.color
-			U.accessory_overlay.add_overlay(Y)
-//SKYRAT EDIT
+			var/datum/element/polychromic/polychromic = LAZYACCESS(attached_accessory.comp_lookup, "item_worn_overlays")
+			if(!polychromic)
+				var/mutable_appearance/accessory_overlay = mutable_appearance(attached_accessory.mob_overlay_icon, attached_accessory.item_state || attached_accessory.icon_state, ABOVE_HUD_LAYER)
+				accessory_overlay.alpha = attached_accessory.alpha
+				accessory_overlay.color = attached_accessory.color
+				U.accessory_overlays += accessory_overlay
+			else
+				polychromic.apply_worn_overlays(attached_accessory, FALSE, attached_accessory.mob_overlay_icon, attached_accessory.item_state || attached_accessory.icon_state, NONE, U.accessory_overlays)
+
+//SANDSTORM EDIT
 /obj/item/clothing/accessory/proc/force_unto(obj/item/clothing/under/U)
 	layer = FLOAT_LAYER
 	plane = FLOAT_PLANE
@@ -98,7 +104,7 @@
 					pixel_x += rand(-16, 16)
 					pixel_y += rand(-16, 16)
 	U.add_overlay(src)
-//SKYRAT EDIT END
+//SANDSTORM EDIT END
 
 /obj/item/clothing/accessory/proc/on_uniform_equip(obj/item/clothing/under/U, user)
 	return
@@ -106,7 +112,7 @@
 /obj/item/clothing/accessory/proc/on_uniform_dropped(obj/item/clothing/under/U, user)
 	return
 
-/obj/item/clothing/accessory/AltClick(mob/user)
+/obj/item/clothing/accessory/CtrlClick(mob/user)
 	. = ..()
 	if(istype(user) && user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
 		if(initial(above_suit))
@@ -118,7 +124,7 @@
 	. = ..()
 	. += "<span class='notice'>\The [src] can be attached to [istype(src, /obj/item/clothing/accessory/ring) ? "gloves" : "a uniform"]. Alt-click to remove it once attached.</span>"
 	if(initial(above_suit))
-		. += "<span class='notice'>\The [src] can be worn above or below your suit. Alt-click to toggle.</span>"
+		. += "<span class='notice'>\The [src] can be worn above or below your suit. Ctrl-click to toggle.</span>"
 
 //////////////
 //Waistcoats//
@@ -295,6 +301,15 @@
 	icon_state = "maidapron"
 	item_state = "maidapron"
 	minimize_when_attached = FALSE
+
+/obj/item/clothing/accessory/maidapron/polychromic
+	name = "polychromic maid apron"
+	icon_state = "polymaidapron"
+	item_state = "polymaidapron"
+
+/obj/item/clothing/accessory/maidapron/polychromic/ComponentInitialize()
+	. = ..()
+	AddElement(/datum/element/polychromic, list("#333333", "#FFFFFF"), 2)
 
 /obj/item/clothing/accessory/sleevecrop
 	name = "one sleeved crop top"
@@ -589,3 +604,23 @@
 	obj_flags = UNIQUE_RENAME
 	custom_materials = list(/datum/material/iron=100)
 	resistance_flags = FIRE_PROOF
+
+
+/obj/item/clothing/accessory/pride
+	name = "pride pin"
+	desc = "A Nanotrasen Diversity & Inclusion Center-sponsored holographic pin to show off your pride of sexuality or gender identity, reminding the crew of their unwavering commitment to equity, diversity, and inclusion!"
+	icon_state = "pride"
+	above_suit = TRUE
+	obj_flags = UNIQUE_RENAME
+	unique_reskin = list(
+		"Rainbow Pride"     = list("icon_state" = "pride"),
+		"Bisexual Pride"    = list("icon_state" = "pride_bi"),
+		"Pansexual Pride"   = list("icon_state" = "pride_pan"),
+		"Asexual Pride"     = list("icon_state" = "pride_ace"),
+		"Non-binary Pride"  = list("icon_state" = "pride_enby"),
+		"Transgender Pride" = list("icon_state" = "pride_trans")
+	)
+
+/obj/item/clothing/accessory/pride/reskin_obj(mob/M)
+	. = ..()
+	name = "[current_skin] pin"

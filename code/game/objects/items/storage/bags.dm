@@ -241,7 +241,7 @@
 		/obj/item/grown,
 		/obj/item/reagent_containers/honeycomb,
 		/obj/item/disk/plantgene
-		))
+		)) // Nostra change - removed typecacheof
 
 ////////
 
@@ -284,7 +284,7 @@
 		list(
 			/obj/item/stack/sheet/mineral/sandstone,
 			/obj/item/stack/sheet/mineral/wood
-			))
+			)) // Nostra change - removed typecacheof
 	STR.cant_hold = typecacheof(list(/obj/item/stack/sheet/mineral/sandstone, /obj/item/stack/sheet/mineral/wood))
 	STR.max_combined_stack_amount = 300
 
@@ -325,7 +325,7 @@
 		/obj/item/book,
 		/obj/item/storage/book,
 		/obj/item/spellbook
-		))
+		)) // Nostra change - removed typecacheof
 
 /*
  * Trays - Agouri
@@ -431,7 +431,7 @@
 		/obj/item/reagent_containers/dropper,
 		/obj/item/reagent_containers/syringe/dart,
 		/obj/item/reagent_containers/chem_pack
-		))
+		)) // Nostra change - removed typecacheof
 
 /*
  *  Biowaste bag (mostly for xenobiologists)
@@ -465,7 +465,7 @@
 		/obj/item/reagent_containers/food/snacks/deadmouse,
 		/obj/item/reagent_containers/food/snacks/cube/monkey,
 		/obj/item/reagent_containers/food/snacks/meat/slab
-		))
+		)) // Nostra change - removed typecacheof
 
 /obj/item/storage/bag/bio/holding
 	name = "bio bag of holding"

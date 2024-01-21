@@ -4,6 +4,7 @@
 	icon_state = "syringegun"
 	item_state = "syringegun"
 	w_class = WEIGHT_CLASS_NORMAL
+	recoil = 0.1
 	throw_speed = 3
 	throw_range = 7
 	force = 4
@@ -37,18 +38,18 @@
 /obj/item/gun/syringe/attack_self(mob/living/user)
 	if(!syringes.len)
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
-		return 0
+		return FALSE
 
 	var/obj/item/reagent_containers/syringe/S = syringes[syringes.len]
 
 	if(!S)
-		return 0
+		return FALSE
 	S.forceMove(user.loc)
 
 	syringes.Remove(S)
 	to_chat(user, "<span class='notice'>You unload [S] from \the [src].</span>")
 
-	return 1
+	return TRUE
 
 /obj/item/gun/syringe/attackby(obj/item/A, mob/user, params, show_msg = TRUE)
 	if(istype(A, /obj/item/reagent_containers/syringe))

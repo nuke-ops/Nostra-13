@@ -91,6 +91,11 @@ GENETICS SCANNER
 	var/scanmode = SCANMODE_HEALTH
 	var/advanced = FALSE
 
+/obj/item/healthanalyzer/Initialize(mapload)
+	. = ..()
+
+	register_item_context()
+
 /obj/item/healthanalyzer/suicide_act(mob/living/carbon/user)
 	user.visible_message("<span class='suicide'>[user] begins to analyze [user.p_them()]self with [src]! The display shows that [user.p_theyre()] dead!</span>")
 	return BRUTELOSS
@@ -130,6 +135,24 @@ GENETICS SCANNER
 
 	add_fingerprint(user)
 
+/obj/item/healthanalyzer/add_item_context(
+	obj/item/source,
+	list/context,
+	atom/target,
+)
+	if (!isliving(target))
+		return NONE
+
+	switch (scanmode)
+		if (SCANMODE_HEALTH)
+			LAZYSET(context[SCREENTIP_CONTEXT_LMB], INTENT_ANY, "Scan health")
+		if (SCANMODE_CHEMICAL)
+			LAZYSET(context[SCREENTIP_CONTEXT_LMB], INTENT_ANY, "Scan chemicals")
+		if (SCANMODE_WOUND)
+			LAZYSET(context[SCREENTIP_CONTEXT_LMB], INTENT_ANY, "Scan wounds")
+
+	return CONTEXTUAL_SCREENTIP_SET
+
 // Used by the PDA medical scanner too
 /proc/healthscan(mob/user, mob/living/M, mode = 1, advanced = FALSE)
 	if(isliving(user) && (user.incapacitated() || user.eye_blind))
@@ -149,21 +172,21 @@ GENETICS SCANNER
 
 	// Damage descriptions
 	if(brute_loss > 10)
-		msg += "\n\t<span class='alert'>[brute_loss > 50 ? "Severe" : "Minor"] tissue damage detected.</span>"
+		msg += "\n<span class='alert'>[brute_loss > 50 ? "Severe" : "Minor"] tissue damage detected.</span>"
 	if(fire_loss > 10)
-		msg += "\n\t<span class='alert'>[fire_loss > 50 ? "Severe" : "Minor"] burn damage detected.</span>"
+		msg += "\n<span class='alert'>[fire_loss > 50 ? "Severe" : "Minor"] burn damage detected.</span>"
 	if(oxy_loss > 10)
-		msg += "\n\t<span class='info'><span class='alert'>[oxy_loss > 50 ? "Severe" : "Minor"] oxygen deprivation detected.</span>"
+		msg += "\n<span class='info'><span class='alert'>[oxy_loss > 50 ? "Severe" : "Minor"] oxygen deprivation detected.</span>"
 	if(tox_loss > 10)
-		msg += "\n\t<span class='alert'>[tox_loss > 50 ? "Severe" : "Minor"] amount of [HAS_TRAIT(M, TRAIT_ROBOTIC_ORGANISM) ? "system corruption" : "toxin damage"] detected.</span>"
+		msg += "\n<span class='alert'>[tox_loss > 50 ? "Severe" : "Minor"] amount of [HAS_TRAIT(M, TRAIT_ROBOTIC_ORGANISM) ? "system corruption" : "toxin damage"] detected.</span>"
 	if(M.getStaminaLoss())
-		msg += "\n\t<span class='alert'>Subject appears to be suffering from fatigue.</span>"
+		msg += "\n<span class='alert'>Subject appears to be suffering from fatigue.</span>"
 		if(advanced)
-			msg += "\n\t<span class='info'>Fatigue Level: [M.getStaminaLoss()]%.</span>"
+			msg += "\n<span class='info'>Fatigue Level: [M.getStaminaLoss()]%.</span>"
 	if (M.getCloneLoss())
-		msg += "\n\t<span class='alert'>Subject appears to have [M.getCloneLoss() > 30 ? "Severe" : "Minor"] cellular damage.</span>"
+		msg += "\n<span class='alert'>Subject appears to have [M.getCloneLoss() > 30 ? "Severe" : "Minor"] cellular damage.</span>"
 		if(advanced)
-			msg += "\n\t<span class='info'>Cellular Damage Level: [M.getCloneLoss()].</span>"
+			msg += "\n<span class='info'>Cellular Damage Level: [M.getCloneLoss()].</span>"
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(advanced && H.has_dna())
@@ -175,7 +198,7 @@ GENETICS SCANNER
 		var/mob/living/carbon/C = M
 		var/list/damaged = C.get_damaged_bodyparts(1,1)
 		if(length(damaged)>0 || oxy_loss>0 || tox_loss>0 || fire_loss>0)
-			dmgreport += "<table style='margin-left:33px'><tr><font face='Verdana'>\
+			dmgreport += "<table><tr><font face='Verdana'>\
 							<td style='width: 90px;'><font color='#0000CC'>Damage:</font></td>\
 							<td style='width: 55px;'><font color='red'><b>Brute</b></font></td>\
 							<td style='width: 45px;'><font color='orange'><b>Burn</b></font></td>\
@@ -315,7 +338,7 @@ GENETICS SCANNER
 					damage_message += " <font color='red'>Minor [O.name] failure detected.</span>"
 
 			if(temp_message || damage_message)
-				msg += "\t<b><span class='info'>[uppertext(O.name)]:</b></span> [damage_message] [temp_message]\n"
+				msg += "\n<b><span class='info'>[uppertext(O.name)]:</b></span> [damage_message] [temp_message]\n"
 
 
 
@@ -330,24 +353,24 @@ GENETICS SCANNER
 		var/has_liver = C.dna && !(NOLIVER in C.dna.species.species_traits)
 		var/has_stomach = C.dna && !(NOSTOMACH in C.dna.species.species_traits)
 		if(!M.getorganslot(ORGAN_SLOT_EYES))
-			msg += "\t<span class='alert'><b>Subject does not have eyes.</b></span>\n"
+			msg += "<span class='alert'><b>Subject does not have eyes.</b></span>\n"
 		if(!M.getorganslot(ORGAN_SLOT_EARS))
-			msg += "\t<span class='alert'><b>Subject does not have ears.</b></span>\n"
+			msg += "<span class='alert'><b>Subject does not have ears.</b></span>\n"
 		if(!M.getorganslot(ORGAN_SLOT_BRAIN))
-			msg += "\t<span class='alert'><b>Subject's brain function is non-existent!</b></span>\n"
+			msg += "<span class='alert'><b>Subject's brain function is non-existent!</b></span>\n"
 		if(has_liver && !M.getorganslot(ORGAN_SLOT_LIVER))
-			msg += "\t<span class='alert'><b>Subject's liver is missing!</b></span>\n"
+			msg += "<span class='alert'><b>Subject's liver is missing!</b></span>\n"
 		if(blooded && !M.getorganslot(ORGAN_SLOT_HEART))
-			msg += "\t<span class='alert'><b>Subject's heart is missing!</b></span>\n"
+			msg += "<span class='alert'><b>Subject's heart is missing!</b></span>\n"
 		if(breathes && !M.getorganslot(ORGAN_SLOT_LUNGS))
-			msg += "\t<span class='alert'><b>Subject's lungs have collapsed from trauma!</b></span>\n"
+			msg += "<span class='alert'><b>Subject's lungs have collapsed from trauma!</b></span>\n"
 		if(has_stomach && !M.getorganslot(ORGAN_SLOT_STOMACH))
-			msg += "\t<span class='alert'><b>Subject's stomach is missing!</span>\n"
+			msg += "<span class='alert'><b>Subject's stomach is missing!</span>\n"
 
 
 		if(M.radiation)
-			msg += "\t<span class='alert'>Subject is irradiated.</span>\n"
-			msg += "\t<span class='info'>Radiation Level: [M.radiation] rad</span>\n"
+			msg += "<span class='alert'>Subject is irradiated.</span>\n"
+			msg += "<span class='info'>Radiation Level: [M.radiation] rad</span>\n"
 
 
 
@@ -381,11 +404,11 @@ GENETICS SCANNER
 		else if (S.flying_species != initial(S.flying_species))
 			mutant = TRUE
 
-		msg += "\t<span class='info'>Reported Species: [H.spec_trait_examine_font()][H.dna.custom_species ? H.dna.custom_species : S.name]</font></span>\n"
-		msg += "\t<span class='info'>Base Species: [H.spec_trait_examine_font()][S.name]</font></span>\n"
+		msg += "\n<span class='info'>Reported Species: [H.spec_trait_examine_font()][H.dna.custom_species ? H.dna.custom_species : S.name]</font></span>\n"
+		msg += "<span class='info'>Base Species: [H.spec_trait_examine_font()][S.name]</font></span>\n"
 		if(mutant)
-			msg += "\t<span class='info'>Subject has mutations present.</span>\n"
-	msg += "\t<span class='info'>Body temperature: [round(M.bodytemperature-T0C,0.1)] &deg;C ([round(M.bodytemperature*1.8-459.67,0.1)] &deg;F)</span>\n"
+			msg += "<span class='info'>Subject has mutations present.</span>\n"
+	msg += "<span class='info'>Body temperature: [round(M.bodytemperature-T0C,0.1)] &deg;C ([round(M.bodytemperature*1.8-459.67,0.1)] &deg;F)</span>\n"
 
 	// Time of death
 	if(M.tod && (M.stat == DEAD || ((HAS_TRAIT(M, TRAIT_FAKEDEATH)) && !advanced)))
@@ -526,12 +549,14 @@ GENETICS SCANNER
 
 	var/render_list = ""
 	for(var/i in patient.get_wounded_bodyparts())
+		if(render_list == "")
+			render_list += "<blockquote class='warning'>"
 		var/obj/item/bodypart/wounded_part = i
 		render_list += "<span class='alert ml-1'><b>Warning: Physical trauma[LAZYLEN(wounded_part.wounds) > 1? "s" : ""] detected in [wounded_part.name]</b>"
 		for(var/k in wounded_part.wounds)
 			var/datum/wound/W = k
 			render_list += "<div class='ml-2'>[W.get_scanner_description()]</div>\n"
-		render_list += "</span>"
+		render_list += "</blockquote>"
 
 	if(render_list == "")
 		if(istype(scanner))
@@ -547,6 +572,7 @@ GENETICS SCANNER
 	name = "first aid analyzer"
 	icon_state = "adv_spectrometer"
 	desc = "A prototype MeLo-Tech medical scanner used to diagnose injuries and recommend treatment for serious wounds, but offers no further insight into the patient's health. You hope the final version is less annoying to read!"
+	scanmode = SCANMODE_WOUND // Forces context to give correct tip.
 	var/next_encouragement
 	var/greedy
 
@@ -955,7 +981,7 @@ GENETICS SCANNER
 	for(var/A in buffer)
 		options += get_display_name(A)
 
-	var/answer = input(user, "Analyze Potential", "Sequence Analyzer")  as null|anything in sortList(options)
+	var/answer = input(user, "Analyze Potential", "Sequence Analyzer")  as null|anything in sort_list(options)
 	if(answer && ready && user.canUseTopic(src, BE_CLOSE, FALSE, NO_TK))
 		var/sequence
 		for(var/A in buffer) //this physically hurts but i dont know what anything else short of an assoc list

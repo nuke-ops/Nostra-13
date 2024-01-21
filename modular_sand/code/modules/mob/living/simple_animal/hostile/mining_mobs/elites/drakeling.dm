@@ -42,37 +42,43 @@
 								/datum/action/innate/elite_attack/lavaaround,
 								/datum/action/innate/elite_attack/firespew,
 								/datum/action/innate/elite_attack/firemoat)
-	glorymessageshand = list("rips off the little dragon's horns, then shoves them into their mouth!", "grabs the drakeling's head and rips it off violently from their neck with their bare hands!")
-	glorymessagescrusher = list("slashes the drakeling's head in half with their crusher, dividing it in two!")
-	glorymessagespka = list("hits the drakeling's maw repeatedly with the stock of their PKA until it breaks off, then shoots it in the head for good measure!", "grabs the drakeling's neck, and shoots it's head off with their PKA!")
-	glorymessagespkabayonet = list("kicks the drakeling onto the ground belly up, then slices their tummy open with the bayonet as it screams in agony!")
+
+/mob/living/simple_animal/hostile/asteroid/elite/drakeling/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/glory_kill, \
+		messages_unarmed = list("rips off the little dragon's horns, then shoves them into their mouth!", "grabs the drakeling's head and rips it off violently from their neck with their bare hands!"), \
+		messages_crusher = list("slashes the drakeling's head in half with their crusher, dividing it in two!"), \
+		messages_pka = list("hits the drakeling's maw repeatedly with the stock of their PKA until it breaks off, then shoots it in the head for good measure!", "grabs the drakeling's neck, and shoots it's head off with their PKA!"), \
+		messages_pka_bayonet = list("kicks the drakeling onto the ground belly up, then slices their tummy open with the bayonet as it screams in agony!"), \
+		health_given = 50, \
+		threshold = (maxHealth/10 * 0.625))
 
 /datum/action/innate/elite_attack/lavamoat
 	name = "Lava Moat"
 	icon_icon = 'modular_sand/icons/mob/actions/actions_elites.dmi'
 	button_icon_state = "lava_moat"
-	chosen_message = "<span class='boldwarning'>You will attempt to create a lava moat around you.</span>"
+	chosen_message = span_boldwarning("You will attempt to create a lava moat around you.")
 	chosen_attack_num = LAVA_MOAT
 
 /datum/action/innate/elite_attack/lavaaround
 	name = "Lava Rivers"
 	icon_icon = 'modular_sand/icons/mob/actions/actions_elites.dmi'
 	button_icon_state = "lava_around"
-	chosen_message = "<span class='boldwarning'>You will now create lava rivers at your cardinal directions.</span>"
+	chosen_message = span_boldwarning("You will now create lava rivers at your cardinal directions.")
 	chosen_attack_num = LAVA_AROUND
 
 /datum/action/innate/elite_attack/firespew
 	name = "Fire Spew"
 	icon_icon = 'modular_sand/icons/mob/actions/actions_elites.dmi'
 	button_icon_state = "fire_spew"
-	chosen_message = "<span class='boldwarning'>You will now spew fire at your target.</span>"
+	chosen_message = span_boldwarning("You will now spew fire at your target.")
 	chosen_attack_num = FIRE_SPEW
 
 /datum/action/innate/elite_attack/firemoat
 	name = "Fire Moat"
 	icon_icon = 'modular_sand/icons/mob/actions/actions_elites.dmi'
 	button_icon_state = "fire_moat"
-	chosen_message = "<span class='boldwarning'>You will now spew fire at all cardinal directions.</span>"
+	chosen_message = span_boldwarning("You will now spew fire at all cardinal directions.")
 	chosen_attack_num = FIRE_MOAT
 
 /mob/living/simple_animal/hostile/asteroid/elite/drakeling/OpenFire()
@@ -101,9 +107,9 @@
 //Drakeling actions
 /mob/living/simple_animal/hostile/asteroid/elite/drakeling/proc/lava_moat()
 	ranged_cooldown = world.time + 25
-	visible_message("<span class='boldwarning'>[src] spews lava around themselves! Get back!</span>")
+	visible_message(span_boldwarning("[src] spews lava around themselves! Get back!"))
 	for(var/turf/T in oview(1, src))
-		new /obj/effect/temp_visual/lava_warning(T)
+		new /obj/effect/temp_visual/lava_warning/drakeling(T, 40)
 
 /mob/living/simple_animal/hostile/asteroid/elite/drakeling/proc/lava_around()
 	ranged_cooldown = world.time + 50
@@ -112,7 +118,7 @@
 
 /mob/living/simple_animal/hostile/asteroid/elite/drakeling/proc/fire_spew()
 	ranged_cooldown = world.time + 25
-	visible_message("<span class='boldwarning'>[src] spews fire!</span>")
+	visible_message(span_boldwarning("[src] spews fire!"))
 	playsound(src,'sound/magic/Fireball.ogg', 200, 1)
 	sleep(5)
 	fire_wall(src.dir, 10)
@@ -120,7 +126,7 @@
 /mob/living/simple_animal/hostile/asteroid/elite/drakeling/proc/fire_moat()
 	ranged_cooldown = world.time + 100
 	playsound(src,'sound/magic/Fireball.ogg', 200, 1)
-	visible_message("<span class='boldwarning'>[src] violently puffs smoke!They're going to make a fire moat!</span>")
+	visible_message(span_boldwarning("[src] violently puffs smoke!They're going to make a fire moat!"))
 	sleep(5)
 	for(var/d in GLOB.alldirs)
 		INVOKE_ASYNC(src, .proc/fire_wall, d, 10)
@@ -139,28 +145,16 @@
 			else
 				hitlist += L
 				L.adjustFireLoss(20)
-				to_chat(L, "<span class='userdanger'>You're hit by [src]'s fire breath!</span>")
+				to_chat(L, span_userdanger("You're hit by [src]'s fire breath!"))
 		T = get_step(T, dir)
 		sleep(1)
 
 /mob/living/simple_animal/hostile/asteroid/elite/drakeling/proc/lava_wall(dir, range)
 	var/turf/T = get_turf(src)
 	for(var/i in 1 to range)
-		new /obj/effect/temp_visual/lava_warning(T)
+		new /obj/effect/temp_visual/lava_warning/drakeling(T, 40)
 		T = get_step(T, dir)
 		sleep(2)
 
-/obj/effect/temp_visual/lava_warning
-	icon_state = "lavastaff_warn"
-	layer = BELOW_MOB_LAYER
-	light_range = 2
+/obj/effect/temp_visual/lava_warning/drakeling
 	duration = 7
-
-/obj/effect/temp_visual/lava_warning/ex_act()
-	return
-
-/obj/effect/temp_visual/lava_warning/Initialize(mapload, reset_time = 40)
-	. = ..()
-	INVOKE_ASYNC(src, .proc/fall, reset_time)
-	src.alpha = 63.75
-	animate(src, alpha = 255, time = duration)

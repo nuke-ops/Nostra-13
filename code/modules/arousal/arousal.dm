@@ -72,15 +72,44 @@
 	var/turfing = isturf(target)
 	G.generate_fluid(R)
 	log_message("Climaxed using [G] with [target]", LOG_EMOTE)
-	if(spill && R.total_volume >= 5)
-		R.reaction(turfing ? target : target.loc, TOUCH, 1, 0)
+	if(spill && R.total_volume > 0)
+		var/turf/location = get_turf(target)
+
+		var/obj/effect/decal/cleanable/semen/S = locate(/obj/effect/decal/cleanable/semen) in location
+		if(S)
+			if(R.trans_to(S, R.total_volume))
+				S.blood_DNA |= get_blood_dna_list()
+				S.update_icon()
+				return
+
+		var/obj/effect/decal/cleanable/semendrip/drip = (locate(/obj/effect/decal/cleanable/semendrip) in location) || new(location)
+		if(R.trans_to(drip, R.total_volume))
+			drip.blood_DNA |= get_blood_dna_list()
+			drip.update_icon()
+			if(drip.reagents.total_volume >= 10)
+				S = new(location)
+				drip.reagents.trans_to(S, drip.reagents.total_volume)
+				S.blood_DNA |= drip.blood_DNA
+				S.update_icon()
+				qdel(drip)
+			return
+
 	if(!turfing)
-		R.trans_to(target, R.total_volume * (spill ? G.fluid_transfer_factor : 1), log = TRUE)
+		// sandstorm edit - advanced cum drip
+		var/amount_to_transfer = R.total_volume * (spill ? G.fluid_transfer_factor : 1)
+		var/mob/living/carbon/human/cummed_on = target
+		if(istype(cummed_on))
+			var/datum/reagents/copy = new()
+			R.copy_to(copy, R.total_volume)
+			// Nope, on the mouth doesn't count.
+			if(istype(last_genital, /obj/item/organ/genital/penis) && (last_orifice == CUM_TARGET_VAGINA || last_orifice == CUM_TARGET_ANUS))
+				if(copy.total_volume > 0)
+					cummed_on.apply_status_effect(STATUS_EFFECT_DRIPPING_CUM, copy, get_blood_dna_list())
+		R.trans_to(target, amount_to_transfer, log = TRUE)
+		//
 	G.last_orgasmed = world.time
 	R.clear_reagents()
-	//skyrat edit - chock i am going to beat you to death
-	//this is not a joke i am actually going to break your
-	//ribcage
+	//sandstorm edit - gain momentum from dirty deeds.
 	if(!Process_Spacemove(turn(dir, 180)))
 		newtonian_move(turn(dir, 180))
 	//
@@ -91,10 +120,10 @@
 		to_chat(src,"<span class='userdanger'>Your [G.name] cannot cum.</span>")
 		return
 	if(mb_time) //as long as it's not instant, give a warning
-		to_chat(src,"<span class='userlove'>You feel yourself about to orgasm.</span>")
+		to_chat(src, span_userlove("You feel yourself about to orgasm."))
 		if(!do_after(src, mb_time, target = src) || !G.climaxable(src, TRUE))
 			return
-	to_chat(src,"<span class='userlove'>You climax[isturf(loc) ? " onto [loc]" : ""] with your [G.name].</span>")
+	to_chat(src, span_userlove("You climax[isturf(loc) ? " onto [loc]" : ""] with your [G.name]."))
 	do_climax(fluid_source, loc, G)
 
 /mob/living/carbon/human/proc/mob_climax_partner(obj/item/organ/genital/G, mob/living/L, spillage = TRUE, mb_time = 30, obj/item/organ/genital/Lgen = null) //Used for climaxing with any living thing
@@ -102,16 +131,16 @@
 	if(!fluid_source)
 		return
 	if(mb_time) //Skip warning if this is an instant climax.
-		to_chat(src,"<span class='userlove'>You're about to climax [(Lgen) ? "in [L]'s [Lgen.name]" : "with [L]"]!</span>")
-		to_chat(L,"<span class='userlove'>[src] is about to climax [(Lgen) ? "in your [Lgen.name]" : "with you"]!</span>")
+		to_chat(src, span_userlove("You're about to climax [(Lgen) ? "in [L]'s [Lgen.name]" : "with [L]"]!"))
+		to_chat(L, span_userlove("[src] is about to climax [(Lgen) ? "in your [Lgen.name]" : "with you"]!"))
 		if(!do_after(src, mb_time, target = src) || !in_range(src, L) || !G.climaxable(src, TRUE))
 			return
 	if(spillage)
-		to_chat(src,"<span class='userlove'>You orgasm with [L], spilling out of [(Lgen) ? "[L.p_their()] [Lgen.name]" : "[L.p_them()]"], using your [G.name].</span>")
-		to_chat(L,"<span class='userlove'>[src] climaxes [(Lgen) ? "in your [Lgen.name]" : "with you"], overflowing and spilling, using [p_their()] [G.name]!</span>")
+		to_chat(src, span_userlove("You orgasm with [L], spilling out of [(Lgen) ? "[L.p_their()] [Lgen.name]" : "[L.p_them()]"], using your [G.name]."))
+		to_chat(L, span_userlove("[src] climaxes [(Lgen) ? "in your [Lgen.name]" : "with you"], overflowing and spilling, using [p_their()] [G.name]!"))
 	else //knots and other non-spilling orgasms
-		to_chat(src,"<span class='userlove'>You climax [(Lgen) ? "in [L]'s [Lgen.name]" : "with [L]"], your [G.name] spilling nothing.</span>")
-		to_chat(L,"<span class='userlove'>[src] climaxes [(Lgen) ? "in your [Lgen.name]" : "with you"], [p_their()] [G.name] spilling nothing!</span>")
+		to_chat(src, span_userlove("You climax [(Lgen) ? "in [L]'s [Lgen.name]" : "with [L]"], your [G.name] spilling nothing."))
+		to_chat(L, span_userlove("[src] climaxes [(Lgen) ? "in your [Lgen.name]" : "with you"], [p_their()] [G.name] spilling nothing!"))
 	//SEND_SIGNAL(L, COMSIG_ADD_MOOD_EVENT, "orgasm", /datum/mood_event/orgasm) //Sandstorm edit
 	do_climax(fluid_source, spillage ? loc : L, G, spillage)
 	L.receive_climax(src, Lgen, G, spillage)
@@ -121,11 +150,12 @@
 	if(!fluid_source)
 		return
 	if(mb_time)
-		to_chat(src,"<span class='userlove'>You start to [G.masturbation_verb] your [G.name] over [container].</span>")
+		to_chat(src, span_userlove("You start to [G.masturbation_verb] your [G.name] over [container]."))
 		if(!do_after(src, mb_time, target = src) || !in_range(src, container) || !G.climaxable(src, TRUE))
 			return
-	to_chat(src,"<span class='userlove'>You used your [G.name] to fill [container].</span>")
-	message_admins("[src] used their [G.name] to fill [container].")
+	to_chat(src, span_userlove("You used your [G.name] to fill [container]."))
+	message_admins("[ADMIN_LOOKUPFLW(src)] used their [G.name] to fill [container].")
+	log_consent("[key_name(src)] used their [G.name] to fill [container].")
 	do_climax(fluid_source, container, G, FALSE)
 
 /mob/living/carbon/human/proc/pick_climax_genitals(silent = FALSE)
@@ -167,8 +197,8 @@
 		if(consenting == "Yes")
 			return target
 		else
-			message_admins("[src] tried to climax with [target], but [target] did not consent.")
-			log_consent("[src] tried to climax with [target], but [target] did not consent.")
+			message_admins("[ADMIN_LOOKUPFLW(src)] tried to climax with [target], but [target] did not consent.")
+			log_consent("[key_name(src)] tried to climax with [target], but [target] did not consent.")
 
 /mob/living/carbon/human/proc/pick_climax_container(silent = FALSE)
 	var/list/containers_list = list()
@@ -213,8 +243,13 @@
 			to_chat(src, "<span class='warning'>You need to wait [DisplayTimeText((mb_cd_timer - world.time), TRUE)] before you can do that again!</span>")
 		return
 
-	if(!client?.prefs.arousable || !has_dna())
+	if(!(client?.prefs.arousable || !ckey) || !has_dna())
 		return
+
+	if(HAS_TRAIT(src, TRAIT_NEVERBONER))
+		to_chat(src, span_warning("You don't feel like it at all."))
+		return
+
 	if(stat == DEAD)
 		if(!forced_climax)
 			to_chat(src, "<span class='warning'>You can't do that while dead!</span>")

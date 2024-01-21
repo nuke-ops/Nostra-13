@@ -11,18 +11,20 @@
 			if(BODY_ZONE_PRECISE_GROIN)
 				switch(hole)
 					if(CUM_TARGET_VAGINA)
-						if(M.has_vagina(REQUIRE_EXPOSED))
+						var/has_vagina = M.has_vagina()
+						if(has_vagina == TRUE || has_vagina == HAS_EXPOSED_GENITAL)
 							message = (user == M) ? pick("fucks [possessive_verb] own pussy with \the [src]","shoves \the [src] into [possessive_verb] pussy", "jams \the [src] into [possessive_verb] pussy") : pick("fucks [M] right in the pussy with \the [src]", "jams \the [src] right into [M]'s pussy")
 							lust_amt = NORMAL_LUST
 					if(CUM_TARGET_ANUS)
-						if(M.has_anus(REQUIRE_EXPOSED))
+						var/has_anus = M.has_anus()
+						if(has_anus == TRUE || has_anus == HAS_EXPOSED_GENITAL)
 							message = (user == M) ? pick("fucks [possessive_verb] own ass with \the [src]","shoves \the [src] into [possessive_verb] ass", "jams \the [src] into [possessive_verb] ass") : pick("fucks [M]'s asshole with \the [src]", "jams \the [src] into [M]'s ass")
 							lust_amt = NORMAL_LUST
 			if(BODY_ZONE_PRECISE_MOUTH)
 				if(M.has_mouth() && !M.is_mouth_covered())
 					message = (user == M) ? pick("fucks [possessive_verb] own mouth with \the [src]", "shoves \the [src] into [possessive_verb] mouth", "jams \the [src] into [possessive_verb] mouth") : pick("fucks [M]'s mouth with \the [src]", "jams \the [src] into [M]'s mouth")
 	if(message)
-		user.visible_message("<span class='lewd'>[user] [message].</span>")
+		user.visible_message(span_lewd("[user] [message]."))
 		M.handle_post_sex(lust_amt, null, user)
 		playsound(loc, pick('modular_sand/sound/interactions/bang4.ogg',
 							'modular_sand/sound/interactions/bang5.ogg',
@@ -32,7 +34,7 @@
 
 /obj/item/dildo/attack_self(mob/living/carbon/human/user as mob)
 	hole = hole == CUM_TARGET_VAGINA ? CUM_TARGET_ANUS : CUM_TARGET_VAGINA
-	to_chat(user, "<span class='notice'>Now targetting \the [hole].</span>")
+	to_chat(user, span_notice("Now targetting \the [hole]."))
 
 //begin redds code
 /obj/item/dildo/cyborg

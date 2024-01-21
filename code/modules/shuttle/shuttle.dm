@@ -76,7 +76,7 @@
 /obj/docking_port/singularity_pull()
 	return
 /obj/docking_port/singularity_act()
-	return 0
+	return FALSE
 /obj/docking_port/shuttleRotate()
 	return //we don't rotate with shuttles via this code.
 
@@ -298,6 +298,16 @@
 			qdel(reserved_area)
 		reserved_area = null
 	return ..()
+
+/obj/docking_port/stationary/picked/whiteship
+	name = "Deep Space"
+	id = "whiteship_away"
+	dheight = 0
+	dir = 2
+	dwidth = 11
+	height = 22
+	width = 35
+	shuttlekeys = list("whiteship_meta", "whiteship_pubby", "whiteship_box", "whiteship_cere", "whiteship_kilo", "whiteship_donut", "whiteship_delta")
 
 /obj/docking_port/stationary/picked
 	///Holds a list of map name strings for the port to pick from
@@ -891,7 +901,7 @@
 	var/range = (engine_coeff * max(width, height))
 	var/long_range = range * 2.5
 	var/atom/distant_source
-	if(engine_list[1])
+	if(length(engine_list))
 		distant_source = engine_list[1]
 	else
 		for(var/A in areas)
@@ -944,7 +954,7 @@
 /obj/docking_port/mobile/proc/get_engine_coeff(current,engine_mod)
 	var/new_value = max(0,current + engine_mod)
 	if(new_value == initial_engines)
-		return 1
+		return TRUE
 	if(new_value > initial_engines)
 		var/delta = new_value - initial_engines
 		var/change_per_engine = (1 - ENGINE_COEFF_MIN) / ENGINE_DEFAULT_MAXSPEED_ENGINES // 5 by default

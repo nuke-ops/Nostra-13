@@ -16,6 +16,7 @@
 /mob/living/proc/update_resting(update_mobility = TRUE)
 	if(update_mobility)
 		update_mobility()
+	update_rest_hud_icon()
 
 //Force mob to rest, does NOT do stamina damage.
 //It's really not recommended to use this proc to give feedback, hence why silent is defaulting to true.
@@ -107,8 +108,10 @@
 		mobility_flags |= MOBILITY_STAND
 		lying = 0
 
-	if(should_be_lying || restrained || incapacitated())
-		mobility_flags &= ~(MOBILITY_UI|MOBILITY_PULL)
+	if(restrained || incapacitated())
+		mobility_flags &= ~MOBILITY_UI
+		if(should_be_lying)
+			mobility_flags &= ~MOBILITY_PULL
 	else
 		mobility_flags |= MOBILITY_UI|MOBILITY_PULL
 
@@ -167,8 +170,10 @@
 				limbless_slowdown += 6 - (has_arms * 3)
 		if(limbless_slowdown)
 			add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/limbless, multiplicative_slowdown = limbless_slowdown)
-		else
-			remove_movespeed_modifier(/datum/movespeed_modifier/limbless)
+	else
+		remove_movespeed_modifier(/datum/movespeed_modifier/limbless)
+
+		SEND_SIGNAL(src, COMSIG_LIVING_UPDATED_MOBILITY, mobility_flags) // Nostra change
 
 	update_movespeed()
 

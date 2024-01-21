@@ -3,9 +3,9 @@
     "map_path": "map_files/SmolStation",
 	"map_file": "SmolStation_nostra.dmm",
     "shuttles": {
-	    "emergency": "emergency_box",
-	    "ferry": "ferry_fancy",
 	    "cargo": "cargo_delta",
-	    "whiteship": "whiteship_meta"
+	    "ferry": "ferry_fancy",
+	    "whiteship": "whiteship_meta",
+	    "emergency": "emergency_box"
     }
 }

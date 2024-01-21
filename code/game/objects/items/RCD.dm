@@ -33,18 +33,29 @@ RLD
 	var/has_ammobar = FALSE	//controls whether or not does update_icon apply ammo indicator overlays
 	var/ammo_sections = 10	//amount of divisions in the ammo indicator overlay/number of ammo indicator states
 	var/custom_range = 7
+	// Start of Nostra change
+	/*
+	var/sheetmultiplier	= 4 //Controls the amount of matter added for each glass/metal sheet, triple for plasteel
+	var/plasteelmultiplier = 3 //Plasteel is worth 3 times more than glass or metal
+	var/plasmarglassmultiplier = 2 //50% less plasma than in plasteel
+	var/rglassmultiplier = 1.5 //One metal sheet, half a glass sheet
+	var/upgrade = FALSE
+	*/
 	var/upgrade = NONE // Bitflags for upgrades
 	var/banned_upgrades = NONE // Bitflags for banned upgrades
 	var/datum/component/remote_materials/silo_mats //remote connection to the silo
 	var/silo_link = FALSE //switch to use internal or remote storage
+	// End of Nostra change
 
-/obj/item/construction/Initialize(mapload)
+/obj/item/construction/Initialize(mapload) // Nostra change - adde mapload
 	. = ..()
 	spark_system = new /datum/effect_system/spark_spread
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
+	// Start of Nostra change
 	if(upgrade & RCD_UPGRADE_SILO_LINK)
 		silo_mats = AddComponent(/datum/component/remote_materials, "RCD", mapload, FALSE)
+	// End of Nostra change
 
 /obj/item/construction/examine(mob/user)
 	. = ..()
@@ -53,10 +64,12 @@ RLD
 		. += "It contains the design for machine frames, computer frames and deconstruction."
 	if(upgrade & RCD_UPGRADE_SIMPLE_CIRCUITS)
 		. += "It contains the design for firelock, air alarm, fire alarm, apc circuits and crap power cells."
+	// Start of Nostra change
 	if(upgrade & RCD_UPGRADE_SILO_LINK)
 		. += "Remote storage link state: [silo_link ? "[silo_mats.on_hold() ? "ON HOLD" : "ON"]" : "OFF"]."
 		if(silo_link && silo_mats.mat_container && !silo_mats.on_hold())
 			. += "Remote connection has iron in equivalent to [silo_mats.mat_container.get_material_amount(/datum/material/iron)/500] RCD unit\s." //1 matter for 1 floor tile, as 4 tiles are produced from 1 metal
+	// End of Nostra change
 
 /obj/item/construction/Destroy()
 	QDEL_NULL(spark_system)
@@ -141,6 +154,7 @@ RLD
 		spark_system.start()
 
 /obj/item/construction/proc/useResource(amount, mob/user)
+   // Start of Nostra change
 	if(!silo_mats || !silo_link)
 		if(matter < amount)
 			if(user)
@@ -172,7 +186,10 @@ RLD
 	if(!istype(user))
 		return FALSE
 	if(user.incapacitated() || !user.Adjacent(src))
+	// End of Nostra change
 		return FALSE
+	// matter -= amount // Nostra change
+	// update_icon()
 	return TRUE
 
 /obj/item/construction/proc/checkResource(amount, mob/user)
@@ -189,6 +206,15 @@ RLD
 		if(has_ammobar)
 			flick("[icon_state]_empty", src)	//somewhat hacky thing to make RCDs with ammo counters actually have a blinking yellow light
 	return .
+
+/* Nostra change
+/obj/item/construction/proc/check_menu(mob/living/user)
+	if(!istype(user))
+		return FALSE
+	if(user.incapacitated() || !user.Adjacent(src))
+		return FALSE
+	return TRUE
+*/
 
 /obj/item/construction/proc/range_check(atom/A, mob/user)
 	if(!(A in range(custom_range, get_turf(user))))
@@ -209,52 +235,32 @@ RLD
 	icon_state = "rcd"
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
-	custom_premium_price = PAYCHECK_HARD * 10
+	// custom_price = PRICE_ABOVE_EXPENSIVE // Nostra change
+	custom_premium_price = PAYCHECK_HARD * 10 // Nostra change
 	max_matter = 160
-	slot_flags = ITEM_SLOT_BELT
+	slot_flags = ITEM_SLOT_BELT // Nostra change
 	item_flags = NO_MAT_REDEMPTION | NOBLUDGEON
 	has_ammobar = TRUE
-	var/mode = RCD_FLOORWALL
+	var/mode = RCD_FLOORWALL // Nostra change
 	var/ranged = FALSE
 	var/computer_dir = 1
 	var/airlock_type = /obj/machinery/door/airlock
 	var/airlock_glass = FALSE // So the floor's rcd_act knows how much ammo to use
 	var/window_type = /obj/structure/window/fulltile
+	// Start of Nostra change
 	var/window_glass = RCD_WINDOW_NORMAL
 	var/window_size = RCD_WINDOW_FULLTILE
 	var/furnish_type = /obj/structure/chair
 	var/furnish_cost = 8
 	var/furnish_delay = 10
+	// var/list/conf_access = null
+	// var/use_one_access = 0
+	// End of Nostra change
 	var/advanced_airlock_setting = 1 //Set to 1 if you want more paintjobs available
 	var/delay_mod = 1
 	var/canRturf = FALSE //Variable for R walls to deconstruct them
 	/// Integrated airlock electronics for setting access to a newly built airlocks
 	var/obj/item/electronics/airlock/airlock_electronics
-
-/obj/item/construction/rcd/suicide_act(mob/living/user)
-	var/turf/T = get_turf(user)
-
-	if(!isopenturf(T)) // Oh fuck
-		user.visible_message("<span class='suicide'>[user] is beating [user.p_them()]self to death with [src]! It looks like [user.p_theyre()] trying to commit suicide!</span>")
-		return BRUTELOSS
-
-	mode = RCD_FLOORWALL
-	user.visible_message("<span class='suicide'>[user] sets the RCD to 'Wall' and points it down [user.p_their()] throat! It looks like [user.p_theyre()] trying to commit suicide!</span>")
-	if(checkResource(16, user)) // It takes 16 resources to construct a wall
-		var/success = T.rcd_act(user, src, RCD_FLOORWALL)
-		T = get_turf(user)
-		// If the RCD placed a floor instead of a wall, having a wall without plating under it is cursed
-		// There isn't an easy programmatical way to check if rcd_act will place a floor or a wall, so just repeat using it for free
-		if(success && isopenturf(T))
-			T.rcd_act(user, src, RCD_FLOORWALL)
-		useResource(16, user)
-		activate()
-		playsound(src.loc, 'sound/machines/click.ogg', 50, 1)
-		user.gib()
-		return MANUAL_SUICIDE
-
-	user.visible_message("<span class='suicide'>[user] pulls the trigger... But there is not enough ammo!</span>")
-	return SHAME
 
 /obj/item/construction/rcd/verb/toggle_window_glass_verb()
 	set name = "RCD : Toggle Window Glass"
@@ -283,13 +289,6 @@ RLD
 		return
 	set_window_type(user, RCD_WINDOW_NORMAL, window_size)
 
-/// Toggles the usage of directional or full tile windows
-/obj/item/construction/rcd/proc/toggle_window_size(mob/user)
-	if (window_size != RCD_WINDOW_DIRECTIONAL)
-		set_window_type(user, window_glass, RCD_WINDOW_DIRECTIONAL)
-		return
-	set_window_type(user, window_glass, RCD_WINDOW_FULLTILE)
-
 /// Sets the window type to be created based on parameters
 /obj/item/construction/rcd/proc/set_window_type(mob/user, glass, size)
 	window_glass = glass
@@ -306,16 +305,6 @@ RLD
 			window_type = /obj/structure/window/fulltile
 
 	to_chat(user, "<span class='notice'>You change \the [src]'s window mode to [window_size] [window_glass] window.</span>")
-
-/obj/item/construction/rcd/proc/toggle_silo_link(mob/user)
-	if(silo_mats)
-		if(!silo_mats.mat_container)
-			to_chat(user, "<span class='alert'>No silo link detected. Connect to silo via multitool.</span>")
-			return FALSE
-		silo_link = !silo_link
-		to_chat(user, "<span class='notice'>You change \the [src]'s storage link state: [silo_link ? "ON" : "OFF"].</span>")
-	else
-		to_chat(user, "<span class='warning'>\the [src] doesn't have remote storage connection.</span>")
 
 /obj/item/construction/rcd/proc/get_airlock_image(airlock_type)
 	var/obj/machinery/door/airlock/proto = airlock_type
@@ -355,9 +344,9 @@ RLD
 	var/list/solid_or_glass_choices = list(
 		"Solid" = get_airlock_image(/obj/machinery/door/airlock),
 		"Glass" = get_airlock_image(/obj/machinery/door/airlock/glass),
-		"Windoor" = image(icon = 'icons/mob/radial.dmi', icon_state = "windoor"),
-		"Secure Windoor" = image(icon = 'icons/mob/radial.dmi', icon_state = "secure_windoor")
-	)
+		"Windoor" = image(icon = 'modular_nostra/icons/mob/radial.dmi', icon_state = "windoor"),
+		"Secure Windoor" = image(icon = 'modular_nostra/icons/mob/radial.dmi', icon_state = "secure_windoor")
+	) // Nostra change - added windroors
 
 	var/list/solid_choices = list(
 		"Standard" = get_airlock_image(/obj/machinery/door/airlock),
@@ -483,46 +472,17 @@ RLD
 			else
 				airlock_type = /obj/machinery/door/airlock/glass
 				airlock_glass = TRUE
+		// Start of Nostra change
 		if("Windoor")
 			airlock_type = /obj/machinery/door/window
 			airlock_glass = TRUE
 		if("Secure Windoor")
 			airlock_type = /obj/machinery/door/window/brigdoor
 			airlock_glass = TRUE
+		// End of Nostra change
 		else
 			airlock_type = /obj/machinery/door/airlock
 			airlock_glass = FALSE
-
-/// Radial menu for choosing the object you want to be created with the furnishing mode
-/obj/item/construction/rcd/proc/change_furnishing_type(mob/user)
-	if(!user)
-		return
-	var/static/list/choices = list(
-		"Chair" = image(icon = 'icons/mob/radial.dmi', icon_state = "chair"),
-		"Stool" = image(icon = 'icons/mob/radial.dmi', icon_state = "stool"),
-		"Table" = image(icon = 'icons/mob/radial.dmi', icon_state = "table"),
-		"Glass Table" = image(icon = 'icons/mob/radial.dmi', icon_state = "glass_table")
-		)
-	var/choice = show_radial_menu(user, src, choices, custom_check = CALLBACK(src, .proc/check_menu, user), require_near = TRUE, tooltips = TRUE)
-	if(!check_menu(user))
-		return
-	switch(choice)
-		if("Chair")
-			furnish_type = /obj/structure/chair
-			furnish_cost = 8
-			furnish_delay = 10
-		if("Stool")
-			furnish_type = /obj/structure/chair/stool
-			furnish_cost = 8
-			furnish_delay = 10
-		if("Table")
-			furnish_type = /obj/structure/table
-			furnish_cost = 16
-			furnish_delay = 20
-		if("Glass Table")
-			furnish_type = /obj/structure/table/glass
-			furnish_cost = 16
-			furnish_delay = 20
 
 /obj/item/construction/rcd/proc/rcd_create(atom/A, mob/user)
 	var/list/rcd_results = A.rcd_vals(user, src)
@@ -530,6 +490,7 @@ RLD
 		return FALSE
 	var/delay = rcd_results["delay"] * delay_mod
 	var/obj/effect/constructing_effect/rcd_effect = new(get_turf(A), delay, src.mode)
+	// Start of Nostra change
 	if(!checkResource(rcd_results["cost"], user))
 		qdel(rcd_effect)
 		return FALSE
@@ -553,18 +514,16 @@ RLD
 	activate()
 	playsound(src.loc, 'sound/machines/click.ogg', 50, TRUE)
 	return TRUE
+	// End of Nostra change
 
 /obj/item/construction/rcd/Initialize(mapload)
 	. = ..()
+	// Start of Nostra change
 	airlock_electronics = new(src)
 	airlock_electronics.name = "Access Control"
 	airlock_electronics.holder = src
+	// End of Nostra change
 	GLOB.rcd_list += src
-
-/obj/item/construction/rcd/Destroy()
-	QDEL_NULL(airlock_electronics)
-	GLOB.rcd_list -= src
-	. = ..()
 
 /obj/item/construction/rcd/attack_self(mob/user)
 	..()
@@ -573,20 +532,22 @@ RLD
 		"Deconstruct" = image(icon= 'icons/mob/radial.dmi', icon_state = "delete"),
 		"Grilles & Windows" = image(icon = 'icons/mob/radial.dmi', icon_state = "grillewindow"),
 		"Floors & Walls" = image(icon = 'icons/mob/radial.dmi', icon_state = "wallfloor")
-	)
+	) // Nostra change - added deconstruct
 	if(upgrade & RCD_UPGRADE_FRAMES)
 		choices += list(
 		"Machine Frames" = image(icon = 'icons/mob/radial.dmi', icon_state = "machine"),
 		"Computer Frames" = image(icon = 'icons/mob/radial.dmi', icon_state = "computer_dir"),
-		)
+		) // Nostra change - removed deconstruct
+	// Start of Nostra change
 	if(upgrade & RCD_UPGRADE_SILO_LINK)
 		choices += list(
 		"Silo Link" = image(icon = 'icons/obj/mining.dmi', icon_state = "silo"),
 		)
 	if(upgrade & RCD_UPGRADE_FURNISHING)
 		choices += list(
-		"Furnishing" = image(icon = 'icons/mob/radial.dmi', icon_state = "chair")
+		"Furnishing" = image(icon = 'modular_nostra/icons/mob/radial.dmi', icon_state = "chair")
 		)
+	// End of Nostra change
 	if(mode == RCD_AIRLOCK)
 		choices += list(
 		"Change Access" = image(icon = 'icons/mob/radial.dmi', icon_state = "access"),
@@ -595,13 +556,15 @@ RLD
 	else if(mode == RCD_WINDOWGRILLE)
 		choices += list(
 		"Change Window Glass" = image(icon = 'icons/mob/radial.dmi', icon_state = "windowtype"),
-		"Change Window Size" = image(icon = 'icons/mob/radial.dmi', icon_state = "windowsize")
-		)
+		"Change Window Size" = image(icon = 'modular_nostra/icons/mob/radial.dmi', icon_state = "windowsize")
+		) // Nostra change - icon path
+	// Start of Nostra change
 	else if(mode == RCD_FURNISHING)
 		choices += list(
-		"Change Furnishing Type" = image(icon = 'icons/mob/radial.dmi', icon_state = "chair")
+		"Change Furnishing Type" = image(icon = 'modular_nostra/icons/mob/radial.dmi', icon_state = "chair")
 		)
 	var/choice = show_radial_menu(user, src, choices, custom_check = CALLBACK(src, .proc/check_menu, user), require_near = TRUE, tooltips = TRUE)
+	// End of Nostra change
 	if(!check_menu(user))
 		return
 	switch(choice)
@@ -615,15 +578,18 @@ RLD
 			mode = RCD_WINDOWGRILLE
 		if("Machine Frames")
 			mode = RCD_MACHINE
+		// Start of Nostra change
 		if("Furnishing")
 			mode = RCD_FURNISHING
+		// End of Nostra change
 		if("Computer Frames")
 			mode = RCD_COMPUTER
 			change_computer_dir(user)
 			return
 		if("Change Access")
-			airlock_electronics.ui_interact(user)
+			airlock_electronics.ui_interact(user) // Nostra change - electronics instead of access
 			return
+		// Start of Nostra change
 		if("Change Airlock Type")
 			change_airlock_setting(user)
 			return
@@ -639,13 +605,14 @@ RLD
 		if("Silo Link")
 			toggle_silo_link(user)
 			return
+		// End of Nostra change
 		else
 			return
 	playsound(src, 'sound/effects/pop.ogg', 50, FALSE)
 	to_chat(user, "<span class='notice'>You change RCD's mode to '[choice]'.</span>")
 
 /obj/item/construction/rcd/Destroy()
-	QDEL_NULL(airlock_electronics)
+	QDEL_NULL(airlock_electronics) // Nostra change
 	GLOB.rcd_list -= src
 	. = ..()
 
@@ -698,12 +665,12 @@ RLD
 
 /obj/item/construction/rcd/borg/useResource(amount, mob/user)
 	if(!iscyborg(user))
-		return 0
+		return FALSE
 	var/mob/living/silicon/robot/borgy = user
 	if(!borgy.cell)
 		if(user)
 			to_chat(user, no_ammo_message)
-		return 0
+		return FALSE
 	. = borgy.cell.use(amount * energyfactor) //borgs get 1.3x the use of their RCDs
 	if(!. && user)
 		to_chat(user, no_ammo_message)
@@ -711,12 +678,12 @@ RLD
 
 /obj/item/construction/rcd/borg/checkResource(amount, mob/user)
 	if(!iscyborg(user))
-		return 0
+		return FALSE
 	var/mob/living/silicon/robot/borgy = user
 	if(!borgy.cell)
 		if(user)
 			to_chat(user, no_ammo_message)
-		return 0
+		return FALSE
 	. = borgy.cell.charge >= (amount * energyfactor)
 	if(!. && user)
 		to_chat(user, no_ammo_message)
@@ -992,7 +959,7 @@ RLD
 	has_ammobar = FALSE
 	matter = 200
 	max_matter = 200
-	slot_flags = ITEM_SLOT_BELT
+	slot_flags = ITEM_SLOT_BELT // Nostra change
 
 	///type of the plumbing machine
 	var/blueprint = null
@@ -1029,7 +996,7 @@ RLD
 
 	if(checkResource(machinery_data["cost"][blueprint], user) && blueprint)
 		//"cost" is relative to delay at a rate of 10 matter/second  (1matter/decisecond) rather than playing with 2 different variables since everyone set it to this rate anyways.
-		if(do_after(user, machinery_data["cost"][blueprint], target = A))
+		if(do_after(user, machinery_data["cost"][blueprint], target = A)) // Nostra change
 			if(checkResource(machinery_data["cost"][blueprint], user) && canPlace(A))
 				useResource(machinery_data["cost"][blueprint], user)
 				activate()

@@ -22,8 +22,8 @@ GLOBAL_LIST_INIT(glass_recipes, list ( \
 		new/datum/stack_recipe("spout flask", /obj/item/glasswork/glass_base/spouty, 20), \
 		new/datum/stack_recipe("small bulb flask", /obj/item/glasswork/glass_base/flask_small, 5), \
 		new/datum/stack_recipe("large bottle flask", /obj/item/glasswork/glass_base/flask_large, 15), \
-		new/datum/stack_recipe("tea cup", /obj/item/glasswork/glass_base/tea_plate, 5), \
-		new/datum/stack_recipe("tea plate", /obj/item/glasswork/glass_base/tea_cup, 5), \
+		new/datum/stack_recipe("tea cup", /obj/item/glasswork/glass_base/tea_cup, 5), \
+		new/datum/stack_recipe("tea plate", /obj/item/glasswork/glass_base/tea_plate, 5), \
 	)), \
 ))
 
@@ -41,7 +41,7 @@ GLOBAL_LIST_INIT(glass_recipes, list ( \
 	material_type = /datum/material/glass
 	point_value = 1
 	tableVariant = /obj/structure/table/glass
-	matter_amount = 4
+	matter_amount = 4 // Nostra change
 	cost = 500
 	shard_type = /obj/item/shard
 
@@ -51,8 +51,9 @@ GLOBAL_LIST_INIT(glass_recipes, list ( \
 
 /obj/item/stack/sheet/glass/cyborg
 	custom_materials = null
-	is_cyborg = 1
-	cost = 500
+	is_cyborg = TRUE
+	source = /datum/robot_energy_storage/glass
+	cost = MINERAL_MATERIAL_AMOUNT * 0.25
 
 /obj/item/stack/sheet/glass/fifty
 	amount = 50
@@ -166,7 +167,7 @@ GLOBAL_LIST_INIT(reinforced_glass_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/rglass
 	grind_results = list(/datum/reagent/silicon = 20, /datum/reagent/iron = 10)
 	point_value = 4
-	matter_amount = 6
+	matter_amount = 6 // Nostra change
 	shard_type = /obj/item/shard
 
 /obj/item/stack/sheet/rglass/attackby(obj/item/W, mob/user, params)
@@ -178,9 +179,16 @@ GLOBAL_LIST_INIT(reinforced_glass_recipes, list ( \
 
 /obj/item/stack/sheet/rglass/cyborg
 	custom_materials = null
-	var/datum/robot_energy_storage/glasource
-	var/metcost = 250
-	var/glacost = 500
+	is_cyborg = TRUE
+	source = /datum/robot_energy_storage/metal
+	var/datum/robot_energy_storage/glasource = /datum/robot_energy_storage/glass
+	var/metcost = MINERAL_MATERIAL_AMOUNT * 0.125
+	var/glacost = MINERAL_MATERIAL_AMOUNT * 0.25
+
+/obj/item/stack/sheet/rglass/cyborg/prepare_estorage(obj/item/robot_module/module)
+	. = ..()
+	if(glasource)
+		glasource = module.get_or_create_estorage(glasource)
 
 /obj/item/stack/sheet/rglass/cyborg/get_amount()
 	return min(round(source.energy / metcost), round(glasource.energy / glacost))
@@ -188,10 +196,12 @@ GLOBAL_LIST_INIT(reinforced_glass_recipes, list ( \
 /obj/item/stack/sheet/rglass/cyborg/use(used, transfer = FALSE) // Requires special checks, because it uses two storages
 	source.use_charge(used * metcost)
 	glasource.use_charge(used * glacost)
+	update_icon()
 
 /obj/item/stack/sheet/rglass/cyborg/add(amount)
 	source.add_charge(amount * metcost)
 	glasource.add_charge(amount * glacost)
+	update_icon()
 
 /obj/item/stack/sheet/rglass/get_main_recipes()
 	. = ..()
@@ -214,7 +224,7 @@ GLOBAL_LIST_INIT(prglass_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/plasmarglass
 	grind_results = list(/datum/reagent/silicon = 20, /datum/reagent/toxin/plasma = 10, /datum/reagent/iron = 10)
 	point_value = 23
-	matter_amount = 8
+	matter_amount = 8 // Nostra change
 	shard_type = /obj/item/shard/plasma
 
 /obj/item/stack/sheet/plasmarglass/get_main_recipes()

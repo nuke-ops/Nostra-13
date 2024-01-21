@@ -1,55 +1,67 @@
+// Configuration defines
+#define AUTODOC_TIME_BASE	CONFIG_GET(number/autodoc_time_surgery_base)
+
 /obj/machinery/autodoc
 	name = "autodoc"
 	desc = "An advanced machine used for inserting organs and implants into the occupant."
 	density = TRUE
-	state_open = FALSE
 	icon = 'modular_sand/icons/obj/machines/autodoc.dmi'
 	icon_state = "autodoc_machine"
 	verb_say = "states"
 	idle_power_usage = 50
 	circuit = /obj/item/circuitboard/machine/autodoc
-	var/obj/item/organ/storedorgan
+
+	var/obj/item/organ/stored_organ
 	var/organ_type = /obj/item/organ
 	var/processing = FALSE
-	var/surgerytime = 300
+	var/surgery_time = 30 SECONDS
 
 /obj/machinery/autodoc/Initialize(mapload)
 	. = ..()
 	update_icon()
 
+	occupant_typecache = single_path_typecache_immutable(/mob/living/carbon)
+
+/obj/machinery/autodoc/on_deconstruction()
+	. = ..()
+	if(stored_organ)
+		stored_organ.forceMove(drop_location())
+		stored_organ = null
+
 /obj/machinery/autodoc/RefreshParts()
-	var/max_time = 350
+	var/max_time = AUTODOC_TIME_BASE
 	for(var/obj/item/stock_parts/L in component_parts)
-		max_time -= (L.rating*10)
-	surgerytime = max(max_time,10)
+		max_time -= (L.rating * 10)
+	surgery_time = max(max_time, 1 SECONDS)
 
 /obj/machinery/autodoc/examine(mob/user)
 	. = ..()
-	if((obj_flags & EMAGGED) && panel_open)
-		. += "<span class='warning'>[src]'s surgery protocols have been corrupted!</span>"
-	if(processing)
-		. += "<span class='notice'>[src] is currently inserting [storedorgan] into [occupant].</span>"
-	else if(storedorgan)
-		. += "<span class='notice'>[src] is prepared to insert [storedorgan].</span>"
+	if(get_dist(src, user) <= 1 || isobserver(user))
+		. += span_notice("A small screen on \the [src] displays, \"Surgery time: [surgery_time] second\s\"")
+		if(processing)
+			. += span_notice("[src] is currently inserting [stored_organ] into [occupant].")
+		else if(stored_organ)
+			. += span_notice("[src] is prepared to insert [stored_organ].")
+		if((obj_flags & EMAGGED) && panel_open)
+			. += span_warning("[src]'s surgery protocols have been corrupted!")
+	else
+		. += span_warning("You need to get closer to see more information!")
 
 /obj/machinery/autodoc/close_machine(mob/user)
 	..()
 	playsound(src, 'sound/machines/click.ogg', 50)
 	if(occupant)
-		if(!iscarbon(occupant))
-			occupant.forceMove(drop_location())
-			occupant = null
-			return
-		to_chat(occupant, "<span class='notice'>You enter [src].</span>")
+		to_chat(occupant, span_notice("You enter [src]."))
 
-		dosurgery()
+		do_surgery()
 
-/obj/machinery/autodoc/proc/dosurgery()
-	if(!storedorgan && !(obj_flags & EMAGGED))
-		to_chat(occupant, "<span class='notice'>[src] currently has no implant stored.</span>")
+/obj/machinery/autodoc/proc/do_surgery()
+	if(!stored_organ && !(obj_flags & EMAGGED))
+		to_chat(occupant, span_notice("[src] currently has no implant stored."))
 		return
 
-	occupant.visible_message("<span class='notice'>[occupant] presses a button on [src], and you hear a mechanical noise.</span>", "<span class='notice'>You feel a sharp sting as [src] starts inserting the organ into your body.</span>")
+	occupant.visible_message(span_notice("[occupant] presses a button on [src], and you hear a mechanical noise."), \
+							span_notice("You feel a sharp sting as [src] starts inserting the organ into your body."))
 	playsound(get_turf(occupant), 'sound/weapons/circsawhit.ogg', 50, 1)
 	processing = TRUE
 	update_icon()
@@ -62,39 +74,35 @@
 				BP.dismember()
 			else
 				C.apply_damage(40, BRUTE, BP)
-			sleep(5) //2 seconds to get outta there before dying
-			if(!processing)
+			//2 seconds to get outta there before dying
+			if(!do_after(occupant, 0.5 SECONDS, src, IGNORE_HELD_ITEM|IGNORE_INCAPACITATED|IGNORE_TARGET_LOC_CHANGE, extra_checks = CALLBACK(src, PROC_REF(check_surgery))))
 				return
 
-		occupant.visible_message("<span class='warning'>[src] dismembers [occupant]!", "<span class='warning'>[src] saws up your body!</span>")
+		occupant.visible_message(span_warning("[src] dismembers [occupant]!"), span_warning("[src] saws up your body!"))
 
 	else
-		sleep(surgerytime)
-		if(!processing)
+		if(!do_after(occupant, surgery_time, src, IGNORE_HELD_ITEM|IGNORE_INCAPACITATED|IGNORE_TARGET_LOC_CHANGE, extra_checks = CALLBACK(src, PROC_REF(check_surgery))))
 			return
-		var/obj/item/organ/currentorgan = C.getorganslot(storedorgan.slot)
+		var/obj/item/organ/currentorgan = C.getorganslot(stored_organ.slot)
 		if(currentorgan)
 			currentorgan.Remove(C)
 			currentorgan.forceMove(get_turf(src))
-		storedorgan.Insert(occupant)//insert stored organ into the user
-		storedorgan = null
-		occupant.visible_message("<span class='notice'>[src] completes the surgery procedure.", "<span class='notice'>[src] inserts the organ into your body.</span>")
+		stored_organ.Insert(occupant)//insert stored organ into the user
+		stored_organ = null
+		occupant.visible_message(span_notice("[src] completes the surgery procedure."), span_notice("[src] inserts the organ into your body."))
 	playsound(src, 'sound/machines/microwave/microwave-end.ogg', 100, 0)
 	processing = FALSE
 	open_machine()
 
 /obj/machinery/autodoc/open_machine(mob/user)
 	if(processing)
-		occupant.visible_message("<span class='notice'>[user] cancels [src]'s procedure.", "<span class='notice'>[src] stops inserting the organ into your body.</span>")
+		occupant.visible_message(span_notice("[user] cancels [src]'s procedure."), span_notice("[src] stops inserting the organ into your body."))
 		processing = FALSE
-	if(occupant)
-		occupant.forceMove(drop_location())
-		occupant = null
-	..(FALSE)
+	..()
 
 /obj/machinery/autodoc/interact(mob/user)
 	if(panel_open)
-		to_chat(user, "<span class='notice'>Close the maintenance panel first.</span>")
+		to_chat(user, span_notice("Close the maintenance panel first."))
 		return
 
 	if(state_open)
@@ -105,14 +113,14 @@
 
 /obj/machinery/autodoc/attackby(obj/item/I, mob/user, params)
 	if(istype(I, organ_type))
-		if(storedorgan)
-			to_chat(user, "<span class='notice'>[src] already has an implant stored.</span>")
+		if(stored_organ)
+			to_chat(user, span_notice("[src] already has an implant stored."))
 			return
-		if(!user.transferItemToLoc(I, src))
+		if(!user.temporarilyRemoveItemFromInventory(I))
 			return
-		storedorgan = I
-		I.forceMove(src)
-		to_chat(user, "<span class='notice'>You insert the [I] into [src].</span>")
+		stored_organ = I
+		I.moveToNullspace()
+		to_chat(user, span_notice("You insert the [I] into [src]."))
 	else
 		return ..()
 
@@ -121,15 +129,15 @@
 	if(..())
 		return
 	if(occupant)
-		to_chat(user, "<span class='warning'>[src] is currently occupied!</span>")
+		to_chat(user, span_warning("[src] is currently occupied!"))
 		return
 	if(state_open)
-		to_chat(user, "<span class='warning'>[src] must be closed to [panel_open ? "close" : "open"] its maintenance hatch!</span>")
+		to_chat(user, span_warning("[src] must be closed to [panel_open ? "close" : "open"] its maintenance hatch!"))
 		return
 	if(default_deconstruction_screwdriver(user, icon_state, icon_state, I))
-		if(storedorgan)
-			storedorgan.forceMove(drop_location())
-			storedorgan = null
+		if(stored_organ)
+			stored_organ.forceMove(drop_location())
+			stored_organ = null
 		update_icon()
 		return
 	return FALSE
@@ -137,7 +145,6 @@
 /obj/machinery/autodoc/crowbar_act(mob/living/user, obj/item/I)
 	if(default_deconstruction_crowbar(I))
 		return TRUE
-
 
 /obj/machinery/autodoc/update_icon()
 	overlays.Cut()
@@ -164,4 +171,18 @@
 	if(obj_flags & EMAGGED)
 		return
 	obj_flags |= EMAGGED
-	to_chat(user, "<span class='warning'>You reprogram [src]'s surgery procedures.</span>")
+	to_chat(user, span_warning("You reprogram [src]'s surgery procedures."))
+
+/obj/machinery/autodoc/relaymove(mob/living/user)
+	container_resist(user)
+
+/obj/machinery/autodoc/container_resist(mob/living/user)
+	. = ..()
+	if(user.stat)
+		return
+	open_machine(user)
+
+/obj/machinery/autodoc/proc/check_surgery()
+	return processing
+
+#undef AUTODOC_TIME_BASE

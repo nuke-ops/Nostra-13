@@ -43,7 +43,6 @@
 	//Wrist slot because you're epic
 	if(wrists && !(ITEM_SLOT_WRISTS in obscured))
 		. += "[t_He] [t_is] wearing [wrists.get_examine_string(user)]."
-	//End of skyrat changes
 
 	//uniform
 	if(w_uniform && !(ITEM_SLOT_ICLOTHING in obscured))
@@ -441,14 +440,14 @@
 		if(7 to INFINITY)
 			msg += "<span class='notice'><b><i>[t_He] [t_is] just absolutely fucked up, you can look again to take a closer look...</i></b></span>\n"
 
-	//Skyrat changes begin
+	// Start of Nostra changes
 	if(gunpointing)
 		msg += "<b>[t_He] [t_is] holding [gunpointing.target.name] at gunpoint with [gunpointing.aimed_gun.name]!</b>\n"
 	if(gunpointed.len)
 		for(var/datum/gunpoint/GP in gunpointed)
 			msg += "<b>[GP.source.name] [GP.source.p_are()] holding [t_him] at gunpoint with [GP.aimed_gun.name]!</b>\n"
-	//Skyrat changes end
-	
+	// End of Nostra changes
+
 	if (length(msg))
 		. += "<span class='warning'>[msg.Join("")]</span>"
 
@@ -504,10 +503,10 @@
 	else if(isobserver(user) && traitstring)
 		. += "<span class='info'><b>Traits:</b> [traitstring]</span>"
 
-	SEND_SIGNAL(src, COMSIG_PARENT_EXAMINE, user, .) //This also handles flavor texts now
+	if(LAZYLEN(.) > 2) //Want this to appear after species text
+		.[2] += "<hr>"
 
-	if(length(.) > 1)
-		.[1] += "<hr>"
+	SEND_SIGNAL(src, COMSIG_PARENT_EXAMINE, user, .) //This also handles flavor texts now
 
 /mob/living/proc/status_effect_examines(pronoun_replacement) //You can include this in any mob's examine() to show the examine texts of status effects!
 	var/list/dat = list()

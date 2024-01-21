@@ -32,7 +32,6 @@
 	var/special = FALSE
 	wander = FALSE
 	faction = list("mining", "boss")
-	weather_immunities = list("lava","ash")
 	blood_volume = 0
 	var/min_sparks = 1
 	var/max_sparks = 4
@@ -170,7 +169,7 @@
 	if(path > 2)
 		if(!target)
 			return
-		visible_message("<span class='boldwarning'>[src] raises it's plasma cutter!</span>")
+		visible_message(span_boldwarning("[src] raises it's plasma cutter!"))
 		sleep(3)
 		var/turf/startloc = get_turf(src)
 		var/obj/item/projectile/P = new /obj/item/projectile/plasma/rogue(startloc)
@@ -186,7 +185,7 @@
 	if(theline > 2)
 		if(!target)
 			return
-		visible_message("<span class='boldwarning'>[src] raises it's tri-shot plasma cutter!</span>")
+		visible_message(span_boldwarning("[src] raises it's tri-shot plasma cutter!"))
 		var/ogangle = Get_Angle(src, target)
 		sleep(7)
 		var/turf/startloc = get_turf(src)
@@ -212,7 +211,7 @@
 		Y.fire(otherangle2)
 
 /mob/living/simple_animal/hostile/megafauna/rogueprocess/proc/knockdown(range = 2)
-	visible_message("<span class='boldwarning'>[src] smashes into the ground!</span>")
+	visible_message(span_boldwarning("[src] smashes into the ground!"))
 	playsound(src,'sound/misc/crunch.ogg', 200, 1)
 	var/list/hit_things = list()
 	sleep(7)
@@ -231,7 +230,7 @@
 	sleep(3)
 
 /mob/living/simple_animal/hostile/megafauna/rogueprocess/proc/shockwave(direction, range, wave_duration = 1.5)
-	visible_message("<span class='boldwarning'>[src] smashes the ground in a general direction!!</span>")
+	visible_message(span_boldwarning("[src] smashes the ground in a general direction!!"))
 	playsound(src,'sound/misc/crunch.ogg', 200, 1)
 	sleep(7)
 	var/list/hit_things = list()
@@ -272,7 +271,7 @@
 		sleep(wave_duration)
 
 /mob/living/simple_animal/hostile/megafauna/rogueprocess/proc/ultishockwave(range, iteration_duration = 5)
-	visible_message("<span class='boldwarning'>[src] smashes the ground around them!!</span>")
+	visible_message(span_boldwarning("[src] smashes the ground around them!!"))
 	playsound(src,'sound/misc/crunch.ogg', 200, 1)
 	sleep(10)
 	var/list/hit_things = list()

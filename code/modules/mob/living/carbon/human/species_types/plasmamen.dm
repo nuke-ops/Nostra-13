@@ -27,6 +27,8 @@
 	wings_icons = SPECIES_WINGS_SKELETAL
 
 	ass_image = 'icons/ass/assplasma.png'
+	balance_point_values = TRUE
+	blacklisted_quirks = list(/datum/quirk/paper_skin)
 
 /datum/species/plasmaman/spec_life(mob/living/carbon/human/H)
 	var/datum/gas_mixture/environment = H.loc.return_air()
@@ -69,7 +71,7 @@
 	H.equipOutfit(O, visualsOnly)
 	H.internal = H.get_item_for_held_index(2)
 	H.update_internals_hud_icon(1)
-	return 0
+	return FALSE
 
 /datum/species/plasmaman/random_name(gender,unique,lastname)
 	if(unique)

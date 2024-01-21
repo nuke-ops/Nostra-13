@@ -5,14 +5,39 @@
 
 	RegisterSignal(target, COMSIG_CLICK_ALT, .proc/mob_try_pickup_micro, TRUE)
 	RegisterSignal(target, COMSIG_MICRO_PICKUP_FEET, .proc/mob_pickup_micro_feet)
+	RegisterSignal(target, COMSIG_MOB_RESIZED, .proc/on_resize)
 
 /datum/element/mob_holder/micro/Detach(datum/source, force)
 	. = ..()
 	UnregisterSignal(source, COMSIG_MICRO_PICKUP_FEET)
 
+/datum/element/mob_holder/micro/proc/on_resize(mob/living/micro, new_size, old_size)
+	var/obj/item/clothing/head/mob_holder/holder = micro.loc
+	if(istype(holder))
+		var/mob/living/living = get_atom_on_turf(micro.loc, /mob/living)
+		if(living && (COMPARE_SIZES(living, micro)) < 2.0)
+			living.visible_message(span_warning("\The [living] drops [micro] as [micro.p_they()] grow\s too big to carry."),
+								span_warning("You drop \The [living] as [living.p_they()] grow\s too big to carry."),
+								target=micro,
+								target_message=span_notice("\The [living] drops you as you grow too big to carry."))
+			holder.release()
+		else if(!istype(living)) // Somehow a inside a mob_holder and the mob_holder isn't inside any livings? release.
+			holder.release()
+
 /datum/element/mob_holder/micro/on_examine(mob/living/source, mob/user, list/examine_list)
-	if(ishuman(user) && !istype(source.loc, /obj/item/clothing/head/mob_holder) && (abs(get_size(user)/get_size(source)) >= 2.0))
-		examine_list += "<span class='notice'>Looks like [source.p_they(FALSE)] can be picked up using <b>Alt+Click and grab intent</b>!</span>"
+	if(ishuman(user) && !istype(source.loc, /obj/item/clothing/head/mob_holder) && (COMPARE_SIZES(user, source)) >= 2.0)
+		examine_list += span_notice("Looks like [source.p_they(FALSE)] can be picked up using <b>Alt+Click and grab intent</b>!")
+
+/// Do not inherit from /mob_holder, interactions are different.
+/datum/element/mob_holder/micro/on_requesting_context_from_item(
+	obj/source,
+	list/context,
+	obj/item/held_item,
+	mob/living/user,
+)
+
+	LAZYSET(context[SCREENTIP_CONTEXT_ALT_LMB], INTENT_GRAB, "Pick up")
+	return CONTEXTUAL_SCREENTIP_SET
 
 /datum/element/mob_holder/micro/proc/mob_pickup_micro(mob/living/source, mob/user)
 	var/obj/item/clothing/head/mob_holder/micro/holder = new(get_turf(source), source, worn_state, alt_worn, right_hand, left_hand, inv_slots)
@@ -36,41 +61,41 @@
 	if(!ishuman(user) || !user.Adjacent(source) || user.incapacitated())
 		return FALSE
 	if(source == user)
-		to_chat(user, "<span class='warning'>You can't pick yourself up.</span>")
+		to_chat(user, span_warning("You can't pick yourself up."))
 		source.balloon_alert(user, "cannot pick yourself!")
 		return FALSE
-	if(abs(get_size(user)/get_size(source)) < 2.0 )
-		to_chat(user, "<span class='warning'>They're too big to pick up!</span>")
+	if(COMPARE_SIZES(user, source) < 2.0)
+		to_chat(user, span_warning("They're too big to pick up!"))
 		source.balloon_alert(user, "too big to pick up!")
 		return FALSE
 	if(user.get_active_held_item())
-		to_chat(user, "<span class='warning'>Your hands are full!</span>")
+		to_chat(user, span_warning("Your hands are full!"))
 		source.balloon_alert(user, "hands are full!")
 		return FALSE
 	if(source.buckled)
-		to_chat(user, "<span class='warning'>[source] is buckled to something!</span>")
+		to_chat(user, span_warning("[source] is buckled to something!"))
 		source.balloon_alert(user, "buckled to something!")
 		return FALSE
-	source.visible_message("<span class='warning'>[user] starts picking up [source].</span>", \
-					"<span class='userdanger'>[user] starts picking you up!</span>")
+	source.visible_message(span_warning("[user] starts picking up [source]."), \
+					span_userdanger("[user] starts picking you up!"))
 	source.balloon_alert(user, "picking up")
-	var/p = abs(get_size(source)/get_size(user) * 40) //Scale how fast the pickup will be depending on size difference
-	if(!do_after(user, p, target = source))
+	var/time_required = COMPARE_SIZES(source, user) * 4 SECONDS //Scale how fast the pickup will be depending on size difference
+	if(!do_after(user, time_required, source))
 		return FALSE
 
 	if(user.get_active_held_item())
-		to_chat(user, "<span class='warning'>Your hands are full!</span>")
+		to_chat(user, span_warning("Your hands are full!"))
 		source.balloon_alert(user, "hands full!")
 		return FALSE
 	if(source.buckled)
-		to_chat(user, "<span class='warning'>[source] is buckled to something!</span>")
+		to_chat(user, span_warning("[source] is buckled to something!"))
 		source.balloon_alert(user, "buckled!")
 		return FALSE
 
-	source.visible_message("<span class='warning'>[user] picks up [source]!</span>",
-					"<span class='userdanger'>[user] picks you up!</span>",
+	source.visible_message(span_warning("[user] picks up [source]!"),
+					span_userdanger("[user] picks you up!"),
 					target = user,
-					target_message = "<span class='notice'>You pick [source] up.</span>")
+					target_message = span_notice("You pick [source] up."))
 	source.drop_all_held_items()
 	mob_pickup_micro(source, user)
 	return TRUE
@@ -83,17 +108,17 @@
 	slot_flags = ITEM_SLOT_FEET | ITEM_SLOT_HEAD | ITEM_SLOT_ID | ITEM_SLOT_BACK | ITEM_SLOT_NECK
 	w_class = null //handled by their size
 
-//TODO: add a timer to escape someone's grip dependant on size diff
 /obj/item/clothing/head/mob_holder/micro/container_resist(mob/living/user)
 	if(user.incapacitated())
-		to_chat(user, "<span class='warning'>You can't escape while you're restrained like this!</span>")
+		to_chat(user, span_warning("You can't escape while you're restrained like this!"))
 		return
-	var/mob/living/L = loc
-	visible_message("<span class='warning'>[src] begins to squirm in [L]'s grasp!</span>")
-	if(!do_after(user, 12 SECONDS, target = src, required_mobility_flags = MOBILITY_RESIST))
+	var/mob/living/L = get_atom_on_turf(src, /mob/living)
+	visible_message(span_warning("[src] begins to squirm in [L]'s grasp!"))
+	var/time_required = COMPARE_SIZES(L, user) / 4 SECONDS //Scale how fast the resisting will be depending on size difference
+	if(!do_after(user, time_required, L, IGNORE_TARGET_LOC_CHANGE|IGNORE_HELD_ITEM))
 		if(!user || user.stat != CONSCIOUS || user.loc != src)
 			return
-		to_chat(loc, "<span class='warning'>[src] stops resisting.</span>")
+		to_chat(loc, span_warning("[src] stops resisting."))
 		return
 	visible_message("<span class='warning'>[src] escapes [L]!")
 	release()
@@ -119,17 +144,17 @@
 	var/mob/living/carbon/human/M = held_mob
 	if(istype(M))
 		if(user.a_intent == "harm") //TO:DO, rework all of these interactions to be a lot more in depth
-			visible_message("<span class='danger'>[user] slams their fist down on [M]!</span>", runechat_popup = TRUE, rune_msg = " slams their fist down on [M]!")
+			visible_message(span_danger("[user] slams their fist down on [M]!"), runechat_popup = TRUE, rune_msg = " slams their fist down on [M]!")
 			playsound(loc, 'sound/weapons/punch1.ogg', 50, 1)
 			M.adjustBruteLoss(5)
 			return
 		if(user.a_intent == "disarm")
-			visible_message("<span class='danger'>[user] pins [M] down with a finger!</span>", runechat_popup = TRUE, rune_msg = " pins [M] down with a finger!")
+			visible_message(span_danger("[user] pins [M] down with a finger!"), runechat_popup = TRUE, rune_msg = " pins [M] down with a finger!")
 			playsound(loc, 'sound/effects/bodyfall1.ogg', 50, 1)
 			M.adjustStaminaLoss(10)
 			return
 		if(user.a_intent == "grab")
-			visible_message("<span class='danger'>[user] squeezes their fist around [M]!</span>", runechat_popup = TRUE, rune_msg = " squeezes their fist around [M]!")
+			visible_message(span_danger("[user] squeezes their fist around [M]!"), runechat_popup = TRUE, rune_msg = " squeezes their fist around [M]!")
 			playsound(loc, 'sound/weapons/thudswoosh.ogg', 50, 1)
 			M.adjustOxyLoss(5)
 			return
@@ -147,3 +172,23 @@
 /obj/item/clothing/head/mob_holder/micro/attack(mob/living/pred, mob/living/user)
 	user.vore_attack(user, held_mob, pred)
 	return STOP_ATTACK_PROC_CHAIN
+
+/obj/item/clothing/head/mob_holder/micro/GetAccess()
+	. = ..()
+	var/obj/item/held = held_mob.get_active_held_item()
+	if(held)
+		. += held.GetAccess()
+	var/mob/living/carbon/human/human_micro = held_mob
+	if(istype(human_micro))
+		. += human_micro.wear_id?.GetAccess()
+
+/obj/item/clothing/head/mob_holder/micro/GetID()
+	. = ..()
+	if(.)
+		return
+	var/obj/item/held = held_mob.get_active_held_item()
+	if(isidcard(held))
+		return held
+	var/mob/living/carbon/human/human_micro = held_mob
+	if(istype(human_micro) && isidcard(human_micro.wear_id))
+		return human_micro.wear_id

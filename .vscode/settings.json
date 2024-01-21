@@ -10,10 +10,10 @@
 		"**/.pnp.*": true
 	},
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
+		"source.fixAll.eslint": "explicit"
 	},
 	"workbench.editorAssociations": {
-		"*.dmi": "imagePreview.previewEditor"
+		"*.dmi": "dmiEditor.dmiEditor"
 	},
 	"files.eol": "\n",
 	"gitlens.advanced.blame.customArguments": ["-w"],

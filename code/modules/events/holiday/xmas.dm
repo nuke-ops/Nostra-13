@@ -29,7 +29,7 @@
 		other_half.icon_state = "cracker2"
 		target.put_in_active_hand(other_half)
 		playsound(user, 'sound/effects/snap.ogg', 50, 1)
-		return 1
+		return TRUE
 	return ..()
 
 /obj/item/clothing/head/festive
@@ -68,6 +68,8 @@
 	weight = 20
 	max_occurrences = 1
 	earliest_start = 30 MINUTES
+	category = EVENT_CATEGORY_HOLIDAY
+	description = "Spawns santa, who shall roam the station, handing out gifts."
 
 /datum/round_event/santa
 	var/mob/living/carbon/human/santa //who is our santa?

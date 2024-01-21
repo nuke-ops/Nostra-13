@@ -5,6 +5,7 @@
 	item_state = "walkietalkie"
 	desc = "A basic handheld radio that communicates with local telecommunication networks."
 	dog_fashion = /datum/dog_fashion/back
+	var/list/extra_channels = list() //Allows indivudal channels, used for borgs
 
 	flags_1 = CONDUCT_1 | HEAR_1
 	slot_flags = ITEM_SLOT_BELT
@@ -68,6 +69,11 @@
 			syndie = TRUE
 		if(keyslot.independent)
 			independent = TRUE
+
+	if(extra_channels)
+		for(var/ch_name in extra_channels)
+			if(!(ch_name in channels))
+				channels[ch_name] = extra_channels[ch_name]
 
 	for(var/ch_name in channels)
 		secure_radio_connections[ch_name] = add_radio(src, GLOB.radiochannels[ch_name])
@@ -196,7 +202,7 @@
 		spans = list(M.speech_span)
 	if(!language)
 		language = M.get_selected_language()
-	SEND_SIGNAL(M, COMSIG_MOVABLE_RADIO_TALK_INTO, src, message, channel, spans, language) //Skyrat change
+	SEND_SIGNAL(M, COMSIG_MOVABLE_RADIO_TALK_INTO, src, message, channel, spans, language) // Nostra change
 	INVOKE_ASYNC(src, .proc/talk_into_impl, M, message, channel, spans.Copy(), language)
 	return ITALICS | REDUCE_RANGE
 

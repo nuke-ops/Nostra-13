@@ -109,7 +109,6 @@
 #define CLICK_CD_RANGE 4
 #define CLICK_CD_RAPID 2
 #define CLICK_CD_CLICK_ABILITY 6
-#define CLICK_CD_BREAKOUT 100 // Nostra change
 #define CLICK_CD_HANDCUFFED 10
 #define CLICK_CD_RESIST 20
 #define CLICK_CD_GRABBING 10
@@ -207,6 +206,19 @@
 ///Time to spend without clicking on other things required for your shots to become accurate.
 #define GUN_AIMING_TIME (2 SECONDS)
 
+//Autofire component
+/// Compatible firemode is in the gun. Wait until it's held in the user hands.
+#define AUTOFIRE_STAT_IDLE (1<<0)
+/// Gun is active and in the user hands. Wait until user does a valid click.
+#define AUTOFIRE_STAT_ALERT	(1<<1)
+/// Gun is shooting.
+#define AUTOFIRE_STAT_FIRING (1<<2)
+
+#define COMSIG_AUTOFIRE_ONMOUSEDOWN "autofire_onmousedown"
+	#define COMPONENT_AUTOFIRE_ONMOUSEDOWN_BYPASS (1<<0)
+#define COMSIG_AUTOFIRE_SHOT "autofire_shot"
+	#define COMPONENT_AUTOFIRE_SHOT_SUCCESS (1<<0)
+
 //Object/Item sharpness
 #define SHARP_NONE			0
 #define SHARP_EDGED			1
@@ -262,3 +274,4 @@
   * a "inefficiently" prefix will be added to the message.
   */
 #define FEEBLE_ATTACK_MSG_THRESHOLD 0.5
+

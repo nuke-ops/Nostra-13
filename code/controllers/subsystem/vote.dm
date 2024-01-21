@@ -32,8 +32,6 @@ SUBSYSTEM_DEF(vote)
 
 	var/list/stored_modetier_results = list() // The aggregated tier list of the modes available in secret.
 
-	var/transfer_votes_done = 0
-
 /datum/controller/subsystem/vote/fire()	//called by master_controller
 	if(mode)
 		if(end_time < world.time)
@@ -250,18 +248,8 @@ SUBSYSTEM_DEF(vote)
 	if(vote_system == SCORE_VOTING)
 		calculate_scores(vote_title_text)
 	if(vote_system == HIGHEST_MEDIAN_VOTING)
-		calculate_highest_median(vote_title_text)
-	var/list/winners = list()
-	if(mode == "transfer")
-		var/amount_required = 3 + transfer_votes_done
-		transfer_votes_done += 1
-		text += "\nExtending requires at least [amount_required] votes to win."
-		if(choices[VOTE_CONTINUE] < amount_required || choices[VOTE_TRANSFER] >= choices[VOTE_CONTINUE])
-			winners = list(VOTE_TRANSFER)
-		else
-			winners = list(VOTE_CONTINUE)
-	else
-		winners = vote_system == INSTANT_RUNOFF_VOTING ? get_runoff_results() : get_result()
+		calculate_highest_median(vote_title_text) // nothing uses this at the moment
+	var/list/winners = vote_system == INSTANT_RUNOFF_VOTING ? get_runoff_results() : get_result()
 	var/was_roundtype_vote = mode == "roundtype" || mode == "dynamic"
 	if(winners.len > 0)
 		if(was_roundtype_vote)
@@ -317,14 +305,14 @@ SUBSYSTEM_DEF(vote)
 			if(vote_system == SCHULZE_VOTING)
 				admintext += "\nIt should be noted that this is not a raw tally of votes (impossible in ranked choice) but the score determined by the schulze method of voting, so the numbers will look weird!"
 			else if(vote_system == HIGHEST_MEDIAN_VOTING)
-				admintext += "\nIt should be noted that this is not a raw tally of votes but rather the median score plus a tiebreaker!"
+				admintext += "\nIt should be noted that this is not a raw tally of votes but the number of runoffs done by majority judgement!"
 			for(var/i=1,i<=choices.len,i++)
 				var/votes = choices[choices[i]]
-				admintext += "\n<b>[choices[i]]:</b> [votes]"
+				admintext += "\n<b>[choices[i]]:</b> [votes ? votes : "0"]" //This is raw data, but the raw data is null by default. If ya don't compensate for it, then it'll look weird!
 		else
 			for(var/i=1,i<=scores.len,i++)
 				var/score = scores[scores[i]]
-				admintext += "\n<b>[scores[i]]:</b> [score]"
+				admintext += "\n<b>[scores[i]]:</b> [score ? score : "0"]"
 		message_admins(admintext)
 	return .
 
@@ -373,7 +361,7 @@ SUBSYSTEM_DEF(vote)
 /datum/controller/subsystem/vote/proc/submit_vote(vote, score = 0)
 	if(mode)
 		if(CONFIG_GET(flag/no_dead_vote) && usr.stat == DEAD && !usr.client.holder)
-			return 0
+			return FALSE
 		if(vote && ISINRANGE(vote, 1, choices.len))
 			switch(vote_system)
 				if(PLURALITY_VOTING)
@@ -415,7 +403,7 @@ SUBSYSTEM_DEF(vote)
 						voted[usr.ckey] = list()
 					voted[usr.ckey][choices[vote]] = score
 					saved -= usr.ckey
-	return 0
+	return FALSE
 
 /datum/controller/subsystem/vote/proc/initiate_vote(vote_type, initiator_key, display = display_votes, votesystem = PLURALITY_VOTING, forced = FALSE,vote_time = -1)//CIT CHANGE - adds display argument to votes to allow for obfuscated votes
 	vote_system = votesystem
@@ -424,7 +412,7 @@ SUBSYSTEM_DEF(vote)
 			var/next_allowed_time = (started_time + CONFIG_GET(number/vote_delay))
 			if(mode)
 				to_chat(usr, "<span class='warning'>There is already a vote in progress! please wait for it to finish.</span>")
-				return 0
+				return FALSE
 
 			var/admin = FALSE
 			var/ckey = ckey(initiator_key)
@@ -433,7 +421,7 @@ SUBSYSTEM_DEF(vote)
 
 			if(next_allowed_time > world.time && !admin)
 				to_chat(usr, "<span class='warning'>A vote was initiated recently, you must wait [DisplayTimeText(next_allowed_time-world.time)] before a new vote can be started!</span>")
-				return 0
+				return FALSE
 
 		SEND_SOUND(world, sound('sound/misc/notice2.ogg'))
 		reset()
@@ -464,7 +452,7 @@ SUBSYSTEM_DEF(vote)
 			if("custom")
 				question = stripped_input(usr,"What is the vote for?")
 				if(!question)
-					return 0
+					return FALSE
 				var/system_string = input(usr,"Which voting type?",GLOB.vote_type_names[1]) in GLOB.vote_type_names
 				vote_system = GLOB.vote_type_names[system_string]
 				for(var/i=1,i<=10,i++)
@@ -488,7 +476,7 @@ SUBSYSTEM_DEF(vote)
 						toggles ^= choices[chosen]
 				display_votes = toggles
 			else
-				return 0
+				return FALSE
 		mode = vote_type
 		initiator = initiator_key ? initiator_key : "the Server" // austation -- Crew autotransfer vote
 		started_time = world.time
@@ -521,8 +509,8 @@ SUBSYSTEM_DEF(vote)
 				popup.set_window_options("can_close=0")
 				popup.set_content(SSvote.interface(C))
 				popup.open(0)
-		return 1
-	return 0
+		return TRUE
+	return FALSE
 
 /datum/controller/subsystem/vote/proc/interface(client/C)
 	if(!C)
@@ -736,7 +724,7 @@ SUBSYSTEM_DEF(vote)
 		Remove(owner)
 
 /datum/action/vote/IsAvailable(silent = FALSE)
-	return 1
+	return TRUE
 
 /datum/action/vote/proc/remove_from_client()
 	if(!owner)

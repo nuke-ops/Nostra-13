@@ -4,6 +4,8 @@
 	weight = 15
 	max_occurrences = 3
 	min_players = 20
+	category = EVENT_CATEGORY_ENTITIES
+	description = "Kudzu begins to overtake the station. Might spawn man-traps."
 
 /datum/round_event/spacevine
 	fakeable = FALSE
@@ -122,7 +124,7 @@
 	quality = MINOR_NEGATIVE
 
 /datum/spacevine_mutation/fire_proof/process_temperature(obj/structure/spacevine/holder, temp, volume)
-	return 1
+	return TRUE
 
 /datum/spacevine_mutation/fire_proof/on_hit(obj/structure/spacevine/holder, mob/hitter, obj/item/I, expected_damage)
 	if(I && I.damtype == "fire")

@@ -203,7 +203,7 @@
 
 /obj/item/clothing/head/fedora/suicide_act(mob/user)
 	if(user.gender == FEMALE)
-		return 0
+		return FALSE
 	var/mob/living/carbon/human/H = user
 	user.visible_message("<span class='suicide'>[user] is donning [src]! It looks like [user.p_theyre()] trying to be nice to girls.</span>")
 	user.say("M'lady.", forced = "fedora suicide")
@@ -440,6 +440,16 @@
 	icon_state = "cowboyhat_sec"
 	item_state= "cowboyhat_sec"
 
+/obj/item/clothing/head/cowboyhat/polychromic
+	name = "polychromic cowboy hat"
+	desc = "A polychromic cowboy hat, perfect for your indecisive rancher"
+	icon_state = "cowboyhat_poly"
+	item_state= "cowboyhat_poly"
+
+/obj/item/clothing/head/cowboyhat/polychromic/ComponentInitialize()
+	. = ..()
+	AddElement(/datum/element/polychromic, list("#5F5F5F", "#DDDDDD"), 2)
+
 /obj/item/clothing/head/squatter_hat
 	name = "slav squatter hat"
 	icon_state = "squatter_hat"
@@ -476,6 +486,15 @@
 	icon_state = "maid"
 	item_state = "maid"
 	dynamic_hair_suffix = ""
+
+/obj/item/clothing/head/maid/polychromic
+	name = "polychromic maid headband"
+	icon_state = "polymaid"
+	item_state = "polymaid"
+
+/obj/item/clothing/head/maid/polychromic/ComponentInitialize()
+	. = ..()
+	AddElement(/datum/element/polychromic, list("#333333", "#FFFFFF"), 2)
 
 /obj/item/clothing/head/widered
 	name = "Wide red hat"

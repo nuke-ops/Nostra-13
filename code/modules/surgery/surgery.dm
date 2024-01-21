@@ -68,6 +68,15 @@
 		var/obj/item/surgical_processor/SP = locate() in R.module.modules
 		if(SP)
 			advanced_surgeries |= SP.advanced_surgeries
+	else
+		var/obj/item/surgical_processor/SP
+		for(var/obj/item/surgical_processor/processor in user.held_items)
+			SP = processor
+			break
+		if(!SP)
+			SP = locate(/obj/item/surgical_processor) in get_turf(user)
+		if(SP)
+			advanced_surgeries |= SP.advanced_surgeries
 
 	var/turf/T = get_turf(patient)
 	var/obj/structure/table/optable/table = locate(/obj/structure/table/optable, T)
@@ -85,7 +94,7 @@
 
 /datum/surgery/proc/next_step(mob/user, intent)
 	if(step_in_progress)
-		return 1
+		return TRUE
 
 	var/try_to_fail = FALSE
 	if(intent == INTENT_DISARM)
@@ -123,6 +132,8 @@
 
 	if(locate(/obj/structure/table/optable, T))
 		propability = 1
+	else if(locate(/obj/machinery/stasis))
+		propability = 0.9
 	else if(locate(/obj/structure/table, T))
 		propability = 0.8
 	else if(locate(/obj/structure/bed, T))

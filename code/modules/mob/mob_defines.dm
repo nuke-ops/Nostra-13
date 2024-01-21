@@ -55,6 +55,8 @@
 	var/resting = 0			//Carbon
 	var/lying = 0
 	var/lying_prev = 0
+
+	/// Whether the mob is pixel shifted or not
 	var/is_shifted = FALSE
 
 	/// List of movement speed modifiers applying to this mob
@@ -101,7 +103,7 @@
 
 	var/research_scanner = 0 //For research scanner equipped mobs. Enable to show research data when examining.
 
-	var/in_throw_mode = 0
+	var/throw_mode = 0
 
 	var/job = null//Living
 

@@ -406,6 +406,8 @@
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	chemical_flags = REAGENT_ALL_PROCESS
 	overdose_threshold = 60
+	boiling_point = T0C+100
+	gas = GAS_H2O
 	taste_description = "sweetness and salt"
 	var/extra_regen = 0.25 // in addition to acting as temporary blood, also add this much to their actual blood per tick
 	var/last_added = 0
@@ -693,6 +695,7 @@
 	description = "Rapidly restores oxygen deprivation as well as preventing more of it to an extent. Causes jittering."
 	reagent_state = LIQUID
 	color = "#00FFFF"
+	boiling_point = 300
 	metabolization_rate = 0.25 * REAGENTS_METABOLISM
 	chemical_flags = REAGENT_ALL_PROCESS
 	pH = 2
@@ -1089,6 +1092,13 @@
 	else
 		B.gain_trauma_type(BRAIN_TRAUMA_SPECIAL)
 
+/datum/reagent/medicine/neurine/reaction_obj(obj/O, reac_volume)
+	if(istype(O, /obj/item/dullahan_head))
+		var/obj/item/dullahan_head/head = O
+		if(head.B)
+			head.B.applyOrganDamage(-20)
+		if(head.owner)
+			head.owner.cure_trauma_type(resilience = TRAUMA_RESILIENCE_SURGERY)
 
 /datum/reagent/medicine/neurine/on_mob_life(mob/living/carbon/C)
 	if(holder.has_reagent(/datum/reagent/consumable/ethanol/neurotoxin))

@@ -85,11 +85,15 @@ Difficulty: Medium
 	var/stageThree = FALSE
 	var/currentPower = 0 //Every few seconds this variable gets higher, when it gets high
 						 //enough it will use a special attack then reset the variable to 0w
-	glorymessageshand = list("climbs atop the wolf's head as it dangles weakly near the ground, ripping its left eye off and jumping down before punching through it's cranium!", "goes around the wolf and rips off their tail, using it as whip on the fiend")
-	glorymessagescrusher = list("chops off the wolf's head by it's neck!")
-	glorymessagespka = list("shoots at the wolf's eyes with their PKA, exploding them into giblets!")
-	glorymessagespkabayonet = list("slides down below Sif, using their bayonet to rip it's stomach open!")
 	var/list/hit_things = list()
+
+/mob/living/simple_animal/hostile/megafauna/sif/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/glory_kill, \
+		messages_unarmed = list("climbs atop the wolf's head as it dangles weakly near the ground, ripping its left eye off and jumping down before punching through it's cranium!", "goes around the wolf and rips off their tail, using it as whip on the fiend"), \
+		messages_crusher = list("chops off the wolf's head by it's neck!"), \
+		messages_pka = list("shoots at the wolf's eyes with their PKA, exploding them into giblets!"), \
+		messages_pka_bayonet = list("slides down below Sif, using their bayonet to rip it's stomach open!"))
 
 /obj/item/gps/internal/sif
 	icon_state = null
@@ -122,7 +126,7 @@ Difficulty: Medium
 	spawn(30)
 		if(!QDELETED(src))
 			new /mob/living/simple_animal/hostile/megafauna/sif(get_turf(src.loc))
-			visible_message("<span class='notice'>The ground shakes.</span>")
+			visible_message(span_notice("The ground shakes."))
 			playsound(get_turf(src.loc), 'sound/effects/curse3.ogg', 100, 1)
 			playsound(get_turf(src.loc), 'sound/effects/meteorimpact.ogg', 100, 1)
 			qdel(src)
@@ -223,9 +227,9 @@ Difficulty: Medium
 			else
 
 	if(passed == 1)
-		visible_message("<span class='danger'>[src] dodged the projectile!</span>", "<span class='userdanger'>You dodge the projectile!</span>")
+		visible_message(span_danger("[src] dodged the projectile!"), span_userdanger("You dodge the projectile!"))
 		playsound(src, pick('sound/weapons/bulletflyby.ogg', 'sound/weapons/bulletflyby2.ogg', 'sound/weapons/bulletflyby3.ogg'), 300, 1)
-		return 0
+		return FALSE
 
 	return ..()
 
@@ -233,7 +237,7 @@ Difficulty: Medium
 /mob/living/simple_animal/hostile/megafauna/sif/proc/angered()
 	src.angered = TRUE
 	src.stageTwo = TRUE
-	src.visible_message("<span class='userdanger'>[src] lets out a ear ripping howl!</span>", "<span class='userdanger'>[src] lets out an ear ripping roar!</span>")
+	src.visible_message(span_userdanger("[src] lets out a ear ripping howl!"), span_userdanger("[src] lets out an ear ripping roar!"))
 	playsound(src, 'modular_sand/sound/sif/howl.ogg', 100, 1)
 	var/mob/living/L = target
 	shake_camera(L, 4, 3)
@@ -247,7 +251,7 @@ Difficulty: Medium
 /mob/living/simple_animal/hostile/megafauna/sif/proc/enraged()
 	src.stageThree = TRUE
 	src.enraged = TRUE
-	src.visible_message("<span class='userdanger'>[src] lets out a ear ripping yelp!</span>", "<span class='userdanger'>[src] lets out an ear ripping yelp!</span>")
+	src.visible_message(span_userdanger("[src] lets out a ear ripping yelp!"), span_userdanger("[src] lets out an ear ripping yelp!"))
 	playsound(src, 'modular_sand/sound/sif/howl.ogg', 100, 1)
 	var/mob/living/L = target
 	shake_camera(L, 8, 6)
@@ -300,7 +304,7 @@ Difficulty: Medium
 
 //Immune to explosions when spinning or charging
 /mob/living/simple_animal/hostile/megafauna/sif/ex_act(severity, target, origin)
-	return 0
+	return FALSE
 
 //stop spinning if you lose the target
 /mob/living/simple_animal/hostile/megafauna/sif/LoseTarget()
@@ -355,7 +359,7 @@ Difficulty: Medium
 		DestroySurroundings()
 		if(isliving(A))
 			var/mob/living/L = A
-			L.visible_message("<span class='danger'>[src] stomps on [L]!</span>", "<span class='userdanger'>[src] stomps on you!</span>")
+			L.visible_message(span_danger("[src] stomps on [L]!"), span_userdanger("[src] stomps on you!"))
 			src.forceMove(get_turf(L))
 			L.apply_damage(20, BRUTE)
 			playsound(get_turf(L), 'modular_sand/sound/sif/sif_stomp.ogg', 400, 1)

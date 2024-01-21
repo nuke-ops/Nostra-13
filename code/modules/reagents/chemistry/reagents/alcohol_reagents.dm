@@ -1489,15 +1489,15 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	..()
 
 /datum/reagent/consumable/ethanol/eggnog
-	name = "Eggnog"
+	name = "Spiked Eggnog"
 	description = "The traditional way to get absolutely hammered at a Christmas party."
 	color = "#fcfdc6" // rgb: 252, 253, 198
 	nutriment_factor = 2 * REAGENTS_METABOLISM
-	boozepwr = 1
+	boozepwr = 20
 	quality = DRINK_VERYGOOD
 	taste_description = "custard and alcohol"
 	glass_icon_state = "nog3"
-	glass_name = "eggnog"
+	glass_name = "spiked eggnog"
 	glass_desc = "The traditional way to get absolutely hammered at a Christmas party."
 
 /datum/reagent/consumable/ethanol/narsour
@@ -1696,14 +1696,14 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	var/heal_points = 10
 	if(L.health <= 0)
 		heal_points = 20 //heal more if we're in softcrit
-	for(var/i in 1 to min(volume, heal_points)) //only heals 1 point of damage per unit on add, for balance reasons
-		L.adjustBruteLoss(-1)
-		L.adjustFireLoss(-1)
-		L.adjustToxLoss(-1)
-		L.adjustOxyLoss(-1)
-		L.adjustStaminaLoss(-1)
+	heal_points = min(volume, heal_points)
+	L.adjustBruteLoss(-heal_points)
+	L.adjustFireLoss(-heal_points)
+	L.adjustToxLoss(-heal_points)
+	L.adjustOxyLoss(-heal_points)
+	L.adjustStaminaLoss(-heal_points)
 	L.visible_message("<span class='warning'>[L] shivers with renewed vigor!</span>", "<span class='notice'>One taste of [lowertext(name)] fills you with energy!</span>")
-	if(!L.stat && heal_points == 20) //brought us out of softcrit
+	if(!L.stat && L.health > 0) //brought us out of softcrit
 		L.visible_message("<span class='danger'>[L] lurches to [L.p_their()] feet!</span>", "<span class='boldnotice'>Up and at 'em, kid.</span>")
 
 /datum/reagent/consumable/ethanol/bastion_bourbon/on_mob_life(mob/living/L)
