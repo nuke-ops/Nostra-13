@@ -35,8 +35,10 @@
 	if(buckled)
 		buckled.unbuckle_mob(src,force=1)
 	QDEL_LIST_ASSOC_VAL(ability_actions)
-
+	QDEL_LIST(abilities)
+	QDEL_LIST(implants)
 	remove_from_all_data_huds()
+	cleanse_trait_datums()
 	GLOB.mob_living_list -= src
 	QDEL_LIST(diseases)
 	return ..()
@@ -275,12 +277,18 @@
 		dir_to_target = dir
 
 	var/push_anchored = FALSE
-	if((AM.move_resist * MOVE_FORCE_CRUSH_RATIO) <= force)
-		if(move_crush(AM, move_force, dir_to_target))
-			push_anchored = TRUE
-	if((AM.move_resist * MOVE_FORCE_FORCEPUSH_RATIO) <= force) //trigger move_crush and/or force_push regardless of if we can push it normally
-		if(force_push(AM, move_force, dir_to_target, push_anchored))
-			push_anchored = TRUE
+
+	// Sandstorm change - stop breaking structures for no raisin!!
+	var/mob/living/simple_animal/hostile/angry_fella = src
+	if(client || (istype(angry_fella) && angry_fella.target))
+		if((AM.move_resist * MOVE_FORCE_CRUSH_RATIO) <= force)
+			if(move_crush(AM, move_force, dir_to_target))
+				push_anchored = TRUE
+		if((AM.move_resist * MOVE_FORCE_FORCEPUSH_RATIO) <= force) //trigger move_crush and/or force_push regardless of if we can push it normally
+			if(force_push(AM, move_force, dir_to_target, push_anchored))
+				push_anchored = TRUE
+	//
+
 	if(ismob(AM))
 		var/mob/mob_to_push = AM
 		var/atom/movable/mob_buckle = mob_to_push.buckled
@@ -656,7 +664,7 @@
 		remove_from_dead_mob_list()
 		add_to_alive_mob_list()
 		suiciding = 0
-		stat = UNCONSCIOUS //the mob starts unconscious,
+		set_stat(UNCONSCIOUS) //the mob starts unconscious,
 		if(!eye_blind)
 			blind_eyes(1)
 		updatehealth() //then we check if the mob should wake up.
@@ -942,7 +950,7 @@
 	else
 		throw_alert("gravity", /atom/movable/screen/alert/weightless)
 	if(!override && !is_flying())
-		INVOKE_ASYNC(src, /atom/movable.proc/float, !has_gravity)
+		float(!has_gravity)
 
 /mob/living/float(on)
 	if(throwing)
@@ -1357,10 +1365,10 @@
 			return FALSE
 		if(NAMEOF(src, resize))
 			update_size(var_value)
-			return FALSE
+			return TRUE
 		if(NAMEOF(src, size_multiplier))
 			update_size(var_value)
-			return FALSE
+			return TRUE
 	. = ..()
 	switch(var_name)
 		if(NAMEOF(src, eye_blind))

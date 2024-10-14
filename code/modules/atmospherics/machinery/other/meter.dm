@@ -27,14 +27,14 @@
 	id_tag = ATMOS_GAS_MONITOR_LOOP_DISTRIBUTION
 
 /obj/machinery/meter/Destroy()
-	SSair.atmos_machinery -= src
+	SSair.stop_processing_machine(src)
 	target = null
 	return ..()
 
 /obj/machinery/meter/Initialize(mapload, new_piping_layer)
 	if(!isnull(new_piping_layer))
 		target_layer = new_piping_layer
-	SSair.atmos_machinery += src
+	SSair.start_processing_machine(src)
 	if(!target)
 		reattach_to_layer()
 	return ..()
@@ -59,7 +59,7 @@
 		icon_state = "meterX"
 		return FALSE
 
-	if(stat & (BROKEN|NOPOWER))
+	if(machine_stat & (BROKEN|NOPOWER))
 		icon_state = "meter0"
 		return FALSE
 
@@ -129,7 +129,7 @@
 	qdel(src)
 
 /obj/machinery/meter/interact(mob/user)
-	if(stat & (NOPOWER|BROKEN))
+	if(machine_stat & (NOPOWER|BROKEN))
 		return
 	else
 		to_chat(user, status())

@@ -17,7 +17,6 @@
 	QDEL_LIST(internal_organs)
 	QDEL_LIST(stomach_contents)
 	QDEL_LIST(bodyparts)
-	QDEL_LIST(implants)
 	hand_bodyparts = null		//Just references out bodyparts, don't need to delete twice.
 	remove_from_all_data_huds()
 	QDEL_NULL(dna)
@@ -267,7 +266,7 @@
 		MarkResistTime()
 		visible_message("<span class='warning'>[src] attempts to unbuckle [p_them()]self!</span>", \
 					"<span class='notice'>You attempt to unbuckle yourself... (This will take around [round(buckle_cd/600,1)] minute\s, and you need to stay still.)</span>")
-		if(do_after(src, buckle_cd, src, timed_action_flags = IGNORE_HELD_ITEM | IGNORE_INCAPACITATED, extra_checks = CALLBACK(src, .proc/cuff_resist_check)))
+		if(do_after(src, buckle_cd, src, timed_action_flags = IGNORE_HELD_ITEM | IGNORE_INCAPACITATED, extra_checks = CALLBACK(src, PROC_REF(cuff_resist_check))))
 			if(!buckled)
 				return
 			buckled.user_unbuckle_mob(src, src)
@@ -809,16 +808,16 @@
 			death()
 			return
 		if(IsUnconscious() || IsSleeping() || getOxyLoss() > 50 || (HAS_TRAIT(src, TRAIT_DEATHCOMA)) || (health <= HEALTH_THRESHOLD_FULLCRIT && !HAS_TRAIT(src, TRAIT_NOHARDCRIT)))
-			stat = UNCONSCIOUS
+			set_stat(UNCONSCIOUS)
 			SEND_SIGNAL(src, COMSIG_DISABLE_COMBAT_MODE)
 			if(!eye_blind)
 				blind_eyes(1)
 		else
 			if(health <= crit_threshold && !HAS_TRAIT(src, TRAIT_NOSOFTCRIT))
-				stat = SOFT_CRIT
+				set_stat(SOFT_CRIT)
 				SEND_SIGNAL(src, COMSIG_DISABLE_COMBAT_MODE)
 			else
-				stat = CONSCIOUS
+				set_stat(CONSCIOUS)
 			if(eye_blind <= 1)
 				adjust_blindness(-1)
 		update_mobility()

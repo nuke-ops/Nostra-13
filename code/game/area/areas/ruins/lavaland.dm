@@ -105,7 +105,6 @@
 	power_environ = FALSE
 	power_equip = FALSE
 	power_light = FALSE
-	poweralm = FALSE
 
 //ash walker nest
 /area/ruin/lavaland/unpowered/ash_walkers

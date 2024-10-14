@@ -5,7 +5,7 @@
 //	You do not need to raise this if you are adding new values that have sane defaults.
 //	Only raise this value when changing the meaning/format/name/layout of an existing value
 //	where you would want the updater procs below to run
-#define SAVEFILE_VERSION_MAX	58
+#define SAVEFILE_VERSION_MAX	59.1
 
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
@@ -47,7 +47,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		outline_color = COLOR_THEME_MIDNIGHT
 	if(current_version < 46)	//If you remove this, remove force_reset_keybindings() too.
 		force_reset_keybindings_direct(TRUE)
-		addtimer(CALLBACK(src, .proc/force_reset_keybindings), 30)	//No mob available when this is run, timer allows user choice.
+		addtimer(CALLBACK(src, PROC_REF(force_reset_keybindings)), 30)	//No mob available when this is run, timer allows user choice.
 	if(current_version < 55) //Bitflag toggles don't set their defaults when they're added, always defaulting to off instead.
 		toggles |= SOUND_BARK
 	if(current_version < 56)
@@ -62,6 +62,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		else
 			// Let's give it a little chance okay, change if you don't like still.
 			screentip_pref = SCREENTIP_PREFERENCE_CONTEXT_ONLY
+	// Input had a bad reception anyways, this way people won't even have to look into it.
+	if(current_version < 59)
+		hotkeys = TRUE
 
 /datum/preferences/proc/update_character(current_version, savefile/S)
 	if(current_version < 19)
@@ -580,7 +583,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		max_save_slots = old_max_save_slots
 		save_preferences(TRUE)
 
-	return TRUE
+	return S
 
 /datum/preferences/proc/verify_keybindings_valid()
 	// Sanitize the actual keybinds to make sure they exist.
@@ -689,7 +692,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(parent && !silent)
 		to_chat(parent, span_notice("Saved preferences!"))
 
-	return TRUE
+	return S
 
 /datum/preferences/proc/queue_save_pref(save_in, silent)
 	if(parent && !silent)
@@ -937,6 +940,30 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//gear loadout
 	if(S["loadout"])
 		loadout_data = safe_json_decode(S["loadout"])
+		var/list/sanitize_current_slot = loadout_data["SAVE_[loadout_slot]"]
+		if(LAZYLEN(sanitize_current_slot))
+			for(var/list/entry in sanitize_current_slot)
+				for(var/setting in entry)
+					switch(setting)
+						if(LOADOUT_ITEM)
+							if(!ispath(entry[setting]))
+								continue
+						if(LOADOUT_COLOR)
+							if(islist(entry[setting]))
+								for(var/polychromic in entry[setting])
+									if(!findtext(polychromic, GLOB.is_color))
+										polychromic = "#FFFFFF"
+							else
+								entry -= setting
+
+						if(LOADOUT_CUSTOM_NAME)
+							entry[setting] = trim(html_encode(entry[setting]), MAX_NAME_LEN)
+						if(LOADOUT_CUSTOM_DESCRIPTION)
+							entry[setting] = trim(html_encode(entry[setting]), 500)
+
+			loadout_data["SAVE_[loadout_slot]"] = sanitize_current_slot.Copy()
+		else
+			loadout_data["SAVE_[loadout_slot]"] = list()
 	else
 		loadout_data = list()
 
@@ -1146,7 +1173,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	cit_character_pref_load(S)
 
-	return TRUE
+	return S
 
 /datum/preferences/proc/save_character(bypass_cooldown = FALSE, silent = FALSE, export = FALSE)
 	if(!path)

@@ -99,7 +99,7 @@
 		"button name" = IC_PINTYPE_STRING,
 		"button style" = IC_PINTYPE_STRING
 	)
-	activators = list("on pressed" = IC_PINTYPE_PULSE_IN)
+	activators = list("on pressed" = IC_PINTYPE_PULSE_OUT)
 	var/static/list/button_styles = list("blank","one","two","three","four","five","plus","minus","exclamation","question","cross","info","heart","skull","brain","brain_damage","injection","blood","shield","reaction","network","power","radioactive","electricity","magnetism","scan","repair","id","wireless","say","sleep","bomb")
 	var/datum/action/circuit_action/circuit
 
@@ -109,7 +109,7 @@
 	extended_desc += english_list(button_styles)
 	circuit = new(src)
 	update_button_style()
-	RegisterSignal(circuit, COMSIG_ACTION_TRIGGER, .proc/on_action_trigger)
+	RegisterSignal(circuit, COMSIG_ACTION_TRIGGER, PROC_REF(on_action_trigger))
 
 /obj/item/integrated_circuit/input/quick_button/Destroy()
 	UnregisterSignal(circuit, COMSIG_ACTION_TRIGGER)
@@ -142,7 +142,7 @@
 	var/mob/user
 	if(istype(user_container, /obj/item/mmi))
 		var/obj/item/mmi/mmi = user_container
-		if(!istype(loc, /obj/item/integrated_circuit/input/mmi_tank)) // Must be inside an MMI tank.
+		if(!istype(mmi.loc, /obj/item/integrated_circuit/input/mmi_tank)) // Must be inside an MMI tank.
 			return
 
 		var/obj/item/integrated_circuit/input/mmi_tank/mmi_tank = mmi.loc
@@ -155,7 +155,7 @@
 		user = mmi.brainmob
 	else if (istype(user_container, /obj/item/paicard))
 		var/obj/item/paicard/paicard = user_container
-		if(!istype(loc, /obj/item/integrated_circuit/input/pAI_connector)) // Must be a pAI connector.
+		if(!istype(paicard.loc, /obj/item/integrated_circuit/input/pAI_connector)) // Must be a pAI connector.
 			return
 
 		var/obj/item/integrated_circuit/input/pAI_connector/pai_connector = paicard.loc

@@ -1,22 +1,23 @@
 {
     "map_name": "Lambda Station",
     "map_path": "map_files/LambdaStation",
-    "map_file":[
+    "map_file": [
         "lambda_nostra.dmm",
         "dorms_nostra.dmm"
-	],
+    ],
     "shuttles": {
         "emergency": "emergency_meta",
         "ferry": "ferry_fancy",
         "cargo": "cargo_box",
         "whiteship": "whiteship_meta"
     },
-    "traits":[
+    "traits": [
         {
-            "Up":1
+            "Up": 1,
+            "Baseturf": "/turf/open/openspace"
         },
         {
-            "Down":-1
+            "Down": -1
         }
     ]
 }
