@@ -254,7 +254,7 @@
 	if (. & EMP_PROTECT_SELF)
 		return
 	if(prob(severity/5) && (istype(src, /obj/machinery/door/airlock) || istype(src, /obj/machinery/door/window)) )
-		INVOKE_ASYNC(src, .proc/open)
+		INVOKE_ASYNC(src, PROC_REF(open))
 
 /obj/machinery/door/proc/unelectrify()
 	secondsElectrified = MACHINE_NOT_ELECTRIFIED
@@ -278,7 +278,7 @@
 			else
 				flick("doorc1", src)
 		if("deny")
-			if(!stat)
+			if(!machine_stat)
 				flick("door_deny", src)
 
 
@@ -377,13 +377,13 @@
 		close()
 
 /obj/machinery/door/proc/autoclose_in(wait)
-	addtimer(CALLBACK(src, .proc/autoclose), wait, TIMER_UNIQUE | TIMER_NO_HASH_WAIT | TIMER_OVERRIDE)
+	addtimer(CALLBACK(src, PROC_REF(autoclose)), wait, TIMER_UNIQUE | TIMER_NO_HASH_WAIT | TIMER_OVERRIDE)
 
 /obj/machinery/door/proc/requiresID()
 	return TRUE
 
 /obj/machinery/door/proc/hasPower()
-	return !(stat & NOPOWER)
+	return !(machine_stat & NOPOWER)
 
 /obj/machinery/door/proc/update_freelook_sight()
 	if(!glass && GLOB.cameranet)
@@ -407,11 +407,11 @@
 	return
 
 /obj/machinery/door/proc/hostile_lockdown(mob/origin)
-	if(!stat) //So that only powered doors are closed.
+	if(!machine_stat) //So that only powered doors are closed.
 		close() //Close ALL the doors!
 
 /obj/machinery/door/proc/disable_lockdown()
-	if(!stat) //Opens only powered doors.
+	if(!machine_stat) //Opens only powered doors.
 		open() //Open everything!
 
 /obj/machinery/door/ex_act(severity, target, origin)

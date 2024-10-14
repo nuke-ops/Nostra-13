@@ -109,7 +109,7 @@
 /mob/living/hitby(atom/movable/AM, skipcatch, hitpush = TRUE, blocked = FALSE, datum/thrownthing/throwingdatum)
 	if(!isitem(AM))
 		// Filled with made up numbers for non-items.
-		if(mob_run_block(AM, 30, "\the [AM.name]", ATTACK_TYPE_PROJECTILE, 0, throwingdatum.thrower, throwingdatum.thrower.zone_selected, list()))
+		if(mob_run_block(AM, 30, "\the [AM.name]", ATTACK_TYPE_THROWN, 0, throwingdatum.thrower, throwingdatum.thrower.zone_selected, list()))
 			hitpush = FALSE
 			skipcatch = TRUE
 			blocked = TRUE
@@ -121,13 +121,13 @@
 	if(thrown_item.thrownby == WEAKREF(src)) //No throwing stuff at yourself to trigger hit reactions
 		return ..()
 
-	if(mob_run_block(AM, thrown_item.throwforce, "\the [thrown_item.name]", ATTACK_TYPE_PROJECTILE, 0, throwingdatum.thrower, throwingdatum.thrower.zone_selected, list()))
+	if(mob_run_block(AM, thrown_item.throwforce, "\the [thrown_item.name]", ATTACK_TYPE_THROWN, 0, throwingdatum.thrower, throwingdatum.thrower.zone_selected, list()))
 		hitpush = FALSE
 		skipcatch = TRUE
 		blocked = TRUE
 
 	var/zone = ran_zone(BODY_ZONE_CHEST, 65)//Hits a random part of the body, geared towards the chest
-	var/nosell_hit = SEND_SIGNAL(thrown_item, COMSIG_MOVABLE_IMPACT_ZONE, src, zone, blocked, throwingdatum) // TODO: find a better way to handle hitpush and skipcatch for humans
+	var/nosell_hit = SEND_SIGNAL(thrown_item, COMSIG_MOVABLE_IMPACT_ZONE, src, zone, throwingdatum, blocked, FALSE)
 	if(nosell_hit)
 		skipcatch = TRUE
 		hitpush = FALSE
@@ -470,8 +470,8 @@
 		if((GLOB.cult_narsie.souls == GLOB.cult_narsie.soul_goal) && (GLOB.cult_narsie.resolved == FALSE))
 			GLOB.cult_narsie.resolved = TRUE
 			sound_to_playing_players('sound/machines/alarm.ogg')
-			addtimer(CALLBACK(GLOBAL_PROC, .proc/cult_ending_helper, 1), 120)
-			addtimer(CALLBACK(GLOBAL_PROC, .proc/ending_helper), 270)
+			addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(cult_ending_helper), 1), 120)
+			addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(ending_helper)), 270)
 	if(client)
 		makeNewConstruct(/mob/living/simple_animal/hostile/construct/harvester, src, cultoverride = TRUE)
 	else
@@ -512,7 +512,7 @@
 /mob/living/proc/flash_act(intensity = 1, override_blindness_check = 0, affect_silicon = 0, visual = 0, type = /atom/movable/screen/fullscreen/tiled/flash, override_protection = 0)
 	if((override_protection || get_eye_protection() < intensity) && (override_blindness_check || !(HAS_TRAIT(src, TRAIT_BLIND))))
 		overlay_fullscreen("flash", type)
-		addtimer(CALLBACK(src, .proc/clear_fullscreen, "flash", 25), 25)
+		addtimer(CALLBACK(src, PROC_REF(clear_fullscreen), "flash", 25), 25)
 		return TRUE
 	return FALSE
 

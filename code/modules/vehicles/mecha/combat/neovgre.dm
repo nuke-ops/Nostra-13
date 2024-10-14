@@ -49,11 +49,12 @@
 		M.dust()
 	playsound(src, 'sound/effects/neovgre_exploding.ogg', 100, 0)
 	src.visible_message("<span class = 'userdanger'>The reactor has gone critical, its going to blow!</span>")
-	addtimer(CALLBACK(src,.proc/go_critical),breach_time)
+	addtimer(CALLBACK(src,PROC_REF(go_critical)),breach_time)
 
 /obj/vehicle/sealed/mecha/combat/neovgre/proc/go_critical()
 	explosion(get_turf(loc), 3, 5, 10, 20, 30)
-	Destroy(src)
+	if(!QDELETED(src))
+		qdel(src)
 
 /obj/vehicle/sealed/mecha/combat/neovgre/container_resist(mob/living/user)
 	to_chat(user, "<span class='brass'>Neovgre requires a lifetime commitment friend, no backing out now!</span>")

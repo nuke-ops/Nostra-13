@@ -109,7 +109,7 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 		set_security_level("delta")
 		max_blob_points = INFINITY
 		blob_points = INFINITY
-		addtimer(CALLBACK(src, .proc/victory), 450)
+		addtimer(CALLBACK(src, PROC_REF(victory)), 450)
 	else if(!free_strain_rerolls && (last_reroll_time + BLOB_REROLL_TIME<world.time))
 		to_chat(src, "<b><span class='big'><font color=\"#EE4000\">You have gained another free strain re-roll.</font></span></b>")
 		free_strain_rerolls = 1
@@ -177,6 +177,9 @@ GLOBAL_LIST_EMPTY(blob_nodes)
 	blob_mobs = null
 	resource_blobs = null
 	blobs_legit = null
+	blob_core = null
+	if(blobstrain)
+		QDEL_NULL(blobstrain)
 
 	SSshuttle.clearHostileEnvironment(src)
 	STOP_PROCESSING(SSobj, src)
